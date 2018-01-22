@@ -1,0 +1,54 @@
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 22, 2018 - 15:26:22
+Django version 1.8, using settings 'phxweb.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[22/Jan/2018 15:27:25]"GET / HTTP/1.1" 200 1767
+[22/Jan/2018 15:27:27]"GET / HTTP/1.1" 200 1767
+[22/Jan/2018 15:27:32]"GET / HTTP/1.1" 200 1767
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 22, 2018 - 15:26:59
+Django version 1.8, using settings 'phxweb.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/pythonenv/monitor/lib/python2.7/site-packages/django/core/management/__init__.py", line 338, in execute_from_command_line
+    utility.execute()
+  File "/pythonenv/monitor/lib/python2.7/site-packages/django/core/management/__init__.py", line 312, in execute
+    django.setup()
+  File "/pythonenv/monitor/lib/python2.7/site-packages/django/__init__.py", line 18, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/pythonenv/monitor/lib/python2.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/pythonenv/monitor/lib/python2.7/site-packages/django/apps/config.py", line 198, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/local/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/pythonenv/monitor/lib/python2.7/site-packages/django/contrib/auth/models.py", line 41, in <module>
+    class Permission(models.Model):
+  File "/pythonenv/monitor/lib/python2.7/site-packages/django/db/models/base.py", line 139, in __new__
+    new_class.add_to_class('_meta', Options(meta, **kwargs))
+  File "/pythonenv/monitor/lib/python2.7/site-packages/django/db/models/base.py", line 324, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "/pythonenv/monitor/lib/python2.7/site-packages/django/db/models/options.py", line 250, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "/pythonenv/monitor/lib/python2.7/site-packages/django/db/__init__.py", line 36, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "/pythonenv/monitor/lib/python2.7/site-packages/django/db/utils.py", line 240, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "/pythonenv/monitor/lib/python2.7/site-packages/django/db/utils.py", line 111, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "/usr/local/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/pythonenv/monitor/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 27, in <module>
+    raise ImproperlyConfigured("Error loading MySQLdb module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module: No module named MySQLdb
+Error: That port is already in use.
+[22/Jan/2018 15:51:13]"GET / HTTP/1.1" 200 1767
+[22/Jan/2018 15:51:25]"GET / HTTP/1.1" 200 1767
