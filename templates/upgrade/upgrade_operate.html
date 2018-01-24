@@ -1,0 +1,249 @@
+{% if title %}
+    <title>{{title}}</title>
+{% else %}
+    <title>管理中心</title>
+{% endif %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">升级-基本操作</h4>
+    </div>
+    <div class="col-xs-5 col-sm-5 col-md-5">
+        <form id="toolbar" class="form-group form-inline" role="form" name="upgradeform">
+            <div class="input-group">
+                <span class="input-group-addon">项目名</span>
+                <div class="input-group-btn">
+                    <select class="selectpicker show-tick" data-live-search="true" id="project_active" name="project_active" title="[默认所有]" data-actions-box="true"  multiple data-width="auto">
+                    </select>
+                </div>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">升级状态</span>
+                <div class="input-group-btn">
+                    <select class="selectpicker show-tick" onchange="operate.setHandleUser()" id="cur_status_sel" title="[默认所有]" data-actions-box="true" multiple name="cur_status_sel" data-width="auto"> 
+                        <option value="done">已升级</option>
+                        <option value="undone">未升级</option>
+                        <option value="rollback">已回退</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">删除状态</span>
+                <div class="input-group-btn">
+                    <select class="selectpicker show-tick" id="deleted" name="deleted" title="[默认所有]" data-actions-box="true" data-width="auto" multiple> 
+                        <option value="0" selected>未删除</option>
+                        <option value="1">已删除</option>
+                    </select>
+                </div>
+            </div>
+            {% comment %}
+            <div class="input-group">
+                <span class="input-group-addon">升级人</span>
+                <div class="input-group-btn">
+                    <select class="selectpicker show-tick" id="handle_user" name="handle_user" title="[默认所有]" data-actions-box="true" data-width="auto" multiple> 
+                        <option value="ali">ali</option>
+                        <option value="arno">arno</option>
+                    </select>
+                </div>
+            </div>
+            {% endcomment %}
+            <input id="btn_op_search" class="btn btn-default" type="button" id="arguments" value="查询">
+        </form>
+    </div>
+    <table id="upgrade_op_table" class="table table-condensed" data-bind="myBootstrapTable:$root">
+    </table>
+
+    <div class="modal fade" id="choose_envir_modal" tabindex="-1" role="dialog"   
+       aria-labelledby="runprogressLabel" aria-hidden="true" data-backdrop="static">   
+       <div class="modal-dialog">  
+           <div class="modal-content" >
+                <div class="modal-header" style="text-align:center;">
+                    <span style="text-align:center;color:blue" id="progress_head">请选择环境</span>
+                </div>
+                <div class="modal-body" id="choose_envir_body">
+
+                </div>
+                <div class="modal-footer" style="margin: 5px; padding: 5px;">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+                </div>
+           </div>  
+       </div>  
+    </div>  
+
+    <div class="modal fade" id="update_upgrade_status_modal" tabindex="-1" role="dialog"   
+       aria-labelledby="runprogressLabel" aria-hidden="true" data-backdrop="static">   
+       <div class="modal-dialog">  
+           <div class="modal-content" >
+                <div class="modal-header" style="text-align:center;">
+                    <span style="text-align:center;color:blue" id="progress_head">请正确提交</span>
+                </div>
+                <div class="modal-body" id="update_upgrade_status_body">
+                    <input type="text" id="upgrade_status_id" hidden>
+                    <form class="form-group form-inline" role="form" style="margin-bottom: 0;">
+                        <div class="input-group" style="padding-top: 15px;">
+                            <label class="input-group-addon">测试环境</label>
+                            <span class="radio form-control">
+                                <label>
+                                    <input type="radio" name="uat_upgrade_status" id="uat_upgrade_done" value="done" style="margin-left: 10px;"> 已升级
+                                </label>
+                                <label>
+                                    <input type="radio" name="uat_upgrade_status" id="uat_upgrade_rollback" value="rollback" style="margin-left: 10px;"> 已回退
+                                </label>
+                            </span>
+                        </div>
+                    </form>
+                    <form class="form-group form-inline" role="form" style="margin-bottom: 0;">
+                        <div class="input-group" style="padding-top: 15px;">
+                            <label class="input-group-addon">运营环境</label>
+                            <span class="radio form-control">
+                                <label>
+                                    <input type="radio" name="online_upgrade_status" id="online_upgrade_done" value="done" style="margin-left: 10px;"> 已升级
+                                </label>
+                                <label>
+                                    <input type="radio" name="online_upgrade_status" id="online_upgrade_rollback" value="rollback" style="margin-left: 10px;"> 已回退
+                                </label>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer" style="margin: 5px; padding: 5px;">
+                    <button type="button" id="btn_close_update_upgrade_status_modal" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+                    <button type="button" id="btn_update_upgrade_status_submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>保存</button>
+                </div>
+           </div>  
+       </div>  
+    </div>  
+
+    <div class="modal fade" id="edit_config_modal" tabindex="-1" role="dialog"   
+       aria-labelledby="runprogressLabel" aria-hidden="true" data-backdrop="static">   
+       <div class="modal-dialog">  
+           <div class="modal-content" >
+                <div class="modal-header" style="text-align:center;">
+                    <span style="text-align:center;color:blue" id="edit_config_head">请选择要编辑的文件</span>
+                </div>
+                <div class="modal-body" id="edit_config_body">
+                    <form class="form-group form-inline" role="form">
+                        <div class="input-group" style="width: 400px;">
+                            <label class="input-group-addon" style="width: 67px;">文件</label>
+                            <span class="radio form-control" style="height: auto;min-height: 30px;max-height: 75px; overflow-y: scroll;" id="radio_config_list">
+                            </span>
+                        </div>
+                        <button id="btn_add_config" class="btn btn-info" style="margin-left: 15px;">新增</button>
+                        <button id="btn_delete_config" class="btn btn-info" style="margin-left: 15px;">删除</button>
+                    </form>
+                    <form class="form-inline" id="add_config" name="add_config" role="form">
+                        <div class="input-group" style="width: 400px; margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 67px;">文件名</label>
+                            <input type="text" name="config_name" class="form-control" id="config_name" onchange="operate.updateConfig(this)" placeholder="请填写文件名称">
+                        </div>
+                        <button id="btn_save_new_config" class="btn btn-info" style="margin-bottom: 10px;margin-left: 15px; display: none;">+</button>
+                        <button id="btn_confirm_delete_config" class="btn btn-info" style="margin-bottom: 10px;margin-left: 15px; display: none;">-</button>
+                    </form>
+                    <textarea class="textarea_e" id="config_content" name="" onchange="operate.updateConfig(this)" display="none"></textarea>
+                </div>
+                <div class="modal-footer" style="margin: 5px; padding: 5px;">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+                    <button type="button" id="btn_submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>保存</button>
+                </div>
+           </div>  
+       </div>  
+    </div> 
+
+        <div class="modal fade" id="upgrade_modal" tabindex="-1" role="dialog" aria-labelledby="upgrade_modalLabel" aria-hidden="true" data-backdrop="static">
+            <div class="modal-dialog" role="document" style="width: 1000px;">
+                <div class="modal-content">
+                    <div class="modal-header" id="upgrade_modal_head">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="upgrade_modal_head_close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title text-center" id="upgrade_modal_head_content">请选择升级参数</h4>
+                    </div>
+                    <div class="modal-body" style="height: 400px; width: 900px; padding: 5px;">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div id="upgrade_modal_body">
+                                <form class="form-group form-inline" role="form" style="padding-bottom: 15px;">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        版本时间：<span id="id_time" data-bind="text:$data.id_time" style="font-weight:bold;"></span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        版本ID：<span id="svn_id" data-bind="text:$data.svn_id" style="font-weight:bold;"></span>
+                                    </div>
+                                </form>
+                                <form class="form-group form-inline" role="form"  style="padding-bottom: 15px;">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        项目：<span id="project" data-bind="text:$data.project" style="font-weight:bold;"></span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        标签：<span id="tag" data-bind="text:$data.tag" style="font-weight:bold;"></span>
+                                    </div>
+                                </form>
+                                <form class="form-group form-inline" role="form">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        测试环境：<span id="envir_uat" data-bind="text:$data.envir_uat" style="font-weight:bold;"></span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        运营环境：<span id="envir_online" data-bind="text:$data.envir_online" style="font-weight:bold;"></span>
+                                    </div>
+                                </form>
+                            </div>
+                            <form class="form-group form-inline" role="form" style="margin-bottom: 0;">
+                                <div class="input-group" style="padding-top: 15px;">
+                                    <label class="input-group-addon">环境</label>
+                                    <span class="radio form-control">
+                                        <label>
+                                            <input type="radio" name="upgrade_envir" id="upgrade_envir_uat" value="UAT" onclick="operate.setupIp(this)" style="margin-left: 10px;"> UAT
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="upgrade_envir" id="upgrade_envir_online" value="ONLINE" onclick="operate.setupIp(this)" style="margin-left: 10px;"> ONLINE
+                                        </label>
+                                    </span>
+                                </div>
+                                <div class="input-group" style="padding-top: 15px;">
+                                    <label class="input-group-addon">重启</label>
+                                    <span class="radio form-control">
+                                        <label>
+                                            <input type="radio" name="upgrade_restart" value="true" style="margin-left: 10px;"> 是
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="upgrade_restart" value="false" style="margin-left: 10px;"> 否
+                                        </label>
+                                    </span>
+                                </div>
+                            </form>
+                            <div class="input-group" style="padding-top: 15px;">
+                                <label class="input-group-addon" style="width: 120px;">IP</label>
+                                <div class="input-group-btn">
+                                    <select class="selectpicker show-tick" type="text" id="upgrade_ip" title="[默认所有]" multiple data-actions-box="true" onchange="operate.DisSelectedIp()" name="upgrade_ip" data-width="388">
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="selected_ip" style="padding-top: 15px;">
+                                所选IP地址： <span id="selected_ip_list" style="font-weight:bold;" data-bind="text:$data">ALL</span>
+                            </div>
+                            <div style="padding-top: 30px;" id="upgrade_progress_head">
+                                
+                            </div>
+                            <div class="progress progress-striped active" style="margin-top: 15px;" id="upgrade_progress_body" hidden>
+                                <div class="progress-bar progress-bar-success" role="progressbar" id="upgrade_progress_bar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6" style="border-left: 2px solid #ccc; height: 350px;">
+                            <pre id="upgrade_results" class="pre-scrollable" style="width: 530px; max-height: 390px; height: 390px;"></pre>
+                        </div>
+                        <div>
+                            <form id="selectmalform" class="form-inline" role="form" style="padding-left: 45px;">
+                                <button id="upgrade_deploy" type="button" class="btn btn-default active" style="margin-right: 30px;">升级</button>
+                                <button id="upgrade_diff" type="button" class="btn btn-default active" style="margin-right: 30px;">比对代码</button>
+                                <button id="upgrade_rollback" type="button" class="btn btn-default active" style="margin-right: 30px;" hidden>回退</button>
+                                <button id="upgrade_interrupt" type="button" class="btn btn-default active" >中断</button>
+                                
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer" id="upgrade_modal_footer" hidden>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<script src="/static/custom/tablejs/upgrade_operate.js"></script>
+<script src="/static/custom/tablejs/public/get_project.js" type="text/javascript"></script>

@@ -1,0 +1,7 @@
+{% if role = 'cs' %}
+<li><a href="/"><i class="glyphicon glyphicon-tasks"></i>故障登记表</a></li>
+{% else %}
+<li><a href="/"><i class="glyphicon glyphicon-tasks"></i>故障登记表</a></li>
+<li><a href="/tomcat/index"><i class="glyphicon glyphicon-th"></i>TOMCAT</a></li>
+<li class="active"><a href="/saltstack/"><i class="glyphicon glyphicon-th-list"></i>SALTSTACK</a></li>
+{% endif %}

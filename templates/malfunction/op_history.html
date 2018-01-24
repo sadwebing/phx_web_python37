@@ -1,0 +1,13 @@
+{% if title %}
+    <title>{{title}}</title>
+{% else %}
+    <title>管理中心</title>
+{% endif %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">历史操作记录表</h4>
+    </div>
+    <table id="op_history" class="table table-condensed" data-bind="myBootstrapTable:$root" style="word-break:break-all; word-wrap:break-all;">
+    </table>
+</div>
+<script src="/static/custom/tablejs/mal_op_history.js" type="text/javascript"></script>

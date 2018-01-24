@@ -1,0 +1,66 @@
+{% if title %}
+    <title>{{title}}</title>
+{% else %}
+    <title>管理中心</title>
+{% endif %}
+
+<div>
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading" style="padding: 5px;">
+				<span class="glyphicon glyphicon-list-alt"></span><b>待处理的事项</b>
+			</div>
+			<div class="panel-body" style="padding-top: 0; padding-bottom: 0;">
+				<div class="row">
+					<div class="col-xs-10">
+						<ul class="notification">
+							<li class="news-item">
+								测试测试
+							</li>
+							<li class="news-item">
+								<table cellpadding="4">
+									<tr>
+										
+										<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></td>
+									</tr>
+								</table>
+							</li>
+							<li class="news-item">
+								<table cellpadding="4">
+									<tr>
+										
+										<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... <a href="#">Read more...</a></td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+					</div>
+					<div class="col-xs-2" style="position: relative; margin:0 auto;">
+						<div class="Navigation"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+    <p>{{ group }}</p>
+    <p>{{ auth }}</p>
+</div>
+
+<script src="/static/bootstrapNews/js/jquery.bootstrap.newsbox.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".notification").bootstrapNews({
+            newsPerPage: 2,
+            autoplay: true,
+            navigation: true,
+			pauseOnHover:true,
+            direction: 'down',
+            newsTickerInterval: 4000,
+            onToDo: function () {
+                //console.log(this);
+            }
+        });
+    });
+</script>

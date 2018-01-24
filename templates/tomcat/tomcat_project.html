@@ -1,0 +1,152 @@
+{% if title %}
+    <title>{{title}}</title>
+{% else %}
+    <title>管理中心</title>
+{% endif %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">工程信息列表</h4>
+    </div>
+    <div>
+        <form id="selectmalform" class="form-inline" role="form">
+            <button id="tomcat_project_active" type="button" class="btn btn-default active">启用</button>
+            <button id="tomcat_project_inactive" type="button" class="btn btn-default active">暂停</button>
+            <button id="tomcat_project_all" type="button" class="btn btn-default active" disabled>全部</button>
+        </form>
+    </div>
+    <div id="toolbar" class="btn-group">
+        <button id="btn_add" type="button" class="btn btn-default" >
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+        </button>
+        {% comment %}
+        <button id="btn_edit" type="button" class="btn btn-default" >
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改
+        </button>
+        {% endcomment %}
+        <button id="btn_confirm_delete" type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
+        </button>
+    </div>
+    <table id="project_table" class="table table-condensed" data-bind="myBootstrapTable:$root">
+    </table>
+
+        <div class="modal fade" id="mytomcatproductModal" tabindex="-1" role="dialog" aria-labelledby="mytomcatproductModalLabel" aria-hidden="true" data-backdrop="static">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title text-center" id="mytomcatproductModalLabel">操作</h4>
+                    </div>
+                    <div class="modal-body">
+                    <form class="form-inline">
+                        <div class="input-group" style="margin-bottom: 10px; margin-right: 30px;">
+                            <label class="input-group-addon" style="width: 85px;">服务类型</label>
+                            <select type="text" name="txt_server_type" data-bind="value:server_type" class="form-control" id="txt_server_type" placeholder="服务类型" style="width: 150px;">
+                                <option value="tomcat">tomcat</option>
+                                <option value="nginx+php">nginx+php</option>
+                                <option value="app">app</option>
+                                <option value="nginx">nginx</option>
+                            </select>
+                        </div>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 85px;">状态</label>
+                            <select type="text" name="txt_status" data-bind="value:status_" class="form-control" id="txt_status" placeholder="默认为active，可不填" style="width: 150px;"> 
+                                <option value="active">active</option>
+                                <option value="inactive">inactive</option>
+                            </select>
+                        </div>
+                    </form>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 85px;">产品</label>
+                            <input type="text" name="txt_product" data-bind="value:product" class="form-control" id="txt_product" placeholder="所属产品[不能为空]" style="width: 450px;">
+                        </div>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 85px;">项目名</label>
+                            <input type="text" name="txt_project" data-bind="value:project" class="form-control" id="txt_project" placeholder="项目名[不能为空，且唯一]" style="width: 450px;">
+                        </div>
+                        
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 85px;">代码目录</label>
+                            <input type="text" name="txt_code_dir" data-bind="value:code_dir" class="form-control" id="txt_code_dir" placeholder="代码目录[不能为空]" style="width: 450px;">
+                        </div>
+                    <form class="form-inline">
+                        <div class="input-group" style="margin-bottom: 10px; margin-right: 30px;">
+                            <label class="input-group-addon" style="width: 85px;">T版本</label>
+                            <select type="text" name="txt_tomcat_version" data-bind="value:tomcat_version" class="form-control" id="txt_tomcat_version" placeholder="tomcat版本[7 8]" style="width: 150px;">
+                                <option value=""></option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </div>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 85px;">jdk</label>
+                            <select type="text" name="txt_jdk" data-bind="value:jdk" class="form-control" id="txt_jdk" placeholder="jdk版本[jdk1.6 jdk1.7 jdk1.8]" style="width: 150px;">
+                                <option value=""></option>
+                                <option value="jdk1.6">jdk1.6</option>
+                                <option value="jdk1.7">jdk1.7</option>
+                                <option value="jdk1.8">jdk1.8</option>
+                            </select>
+                        </div>
+                    </form>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 85px;">tomcat</label>
+                            <input type="text" name="txt_tomcat" data-bind="value:tomcat" class="form-control" id="txt_tomcat" placeholder="tomcat名称" style="width: 450px;">
+                        </div>
+                        
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 85px;">服务端口</label>
+                            <input type="text" name="txt_main_port" data-bind="value:main_port" class="form-control" id="txt_main_port" placeholder="主服务端口" style="width: 450px;">
+                        </div>
+                        
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 85px;">重启脚本</label>
+                            <input type="text" name="txt_script" data-bind="value:script" class="form-control" id="txt_script" placeholder="重启脚本" style="width: 450px;">
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+                        <button type="button" id="btn_submit" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade text-center" id="confirmDeleteModal" role="dialog" aria-labelledby="confirmDeleteModalLabel">
+            <div class="modal-dialog" style="display:inline-block; width: auto;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="confirmDeleteModalLabel">请确认</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <td>id</td>
+                                    <td>产品</td>
+                                    <td>项目名</td>
+                                    <td>服务类型</td>
+                                    <td>代码目录</td>
+                                    <td>tomcat</td>
+                                    <td>T版本</td>
+                                    <td>服务端口</td>
+                                    <td>jdk</td>
+                                    <td>重启脚本</td>
+                                    <td>状态</td>
+                                </tr>
+                            </thead>
+                            <tbody id="DeleteDatas" style="text-align: left">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <p style="text-align: left">删除记录总数：<span data-bind="text: datas().length"></span></p>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+                        <button type="button" id="btn_delete" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>确认删除</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<script src="/static/custom/tablejs/tomcat_project.js"></script>

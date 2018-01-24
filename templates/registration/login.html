@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="TCBS ops login">
+    <meta name="author" content="Arno">
+    <link rel='icon' href="/static/images/meng.ico" type="image/x-icon" />
+
+    <title>登陆-TCBS自动化运维平台</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/static/otherjs/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+  </head>
+
+<body>
+<style>
+    body {
+        color: #fff;
+        background-color: #333;
+        text-align: center;
+    }
+
+    #head-title {
+        top:3%;
+    }
+
+    #alert-title {
+        position:absolute;
+        left: 20%;
+        right: 20%;
+        top: 20%;
+        bottom: 70%;
+    }
+
+    #form-head {
+        height: 15%;
+        line-height: 15%;
+        width: 100%;
+        text-align: center;
+        text-shadow: 0 1px 3px #333;
+        background-color: #E6E6FA;
+        border-radius: 4px;
+        border-bottom: 1px solid #ccc;
+        position:absolute;
+    }
+
+    #form-body {
+        background-color: #eee;
+        border-radius: 4px;
+        border: 1px #ccc;
+        display: block;
+        position:absolute;
+        left: 35%;
+        right: 35%;
+        top: 30%;
+        bottom: 35%; 
+    }
+
+    #foot-title {
+        left: 20%;
+        right: 20%;
+        position:absolute;
+        bottom: 15px;
+    }
+
+
+</style>
+
+<div>
+    {% if form.errors %}
+    <div id="alert-title">
+        <h4>用户名或密码错误！</h>
+    </div>
+    {% endif %}
+    <div id="form-body">
+        <div id="form-head">
+            <h4>Sign In</h>
+        </div>
+        <form class="form-signin" action="" method="post" style="margin-top: 15%; margin-left: 20%;margin-right: 20%;">
+            {% csrf_token %}
+            <div class="input-group" style="margin-bottom: 7%;">
+                <span class="input-group-addon" title="username"><i class="glyphicon glyphicon-user"></i></span>
+                <label for="username" class="sr-only">账号</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="账号" required="" autofocus="">
+            </div>
+            <div class="input-group" style="margin-bottom: 12%;">
+                <span class="input-group-addon" title="password"><i class="glyphicon glyphicon-lock"></i></span>
+                <label for="password" class="sr-only">密码</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="密码" required="">
+            </div>
+            <button class="btn btn-info btn-block" type="submit">登录</button>
+        </form>
+    </div>
+
+    <div id="foot-title">
+        <p><a target="_blank">TCBS</a> &copy; 2017. All rights reserved. </p>
+    </div>
+</div>
+</body>
+</html>

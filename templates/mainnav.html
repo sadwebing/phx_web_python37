@@ -1,0 +1,73 @@
+<div class="row">
+    <div id="left" >
+    	<div id="sui_nav" class="sui-nav">
+    		<div class="sui-nav-wrapper nav-border nav-line">
+            	<ul>
+					<li id="malfunction">
+						<i class="glyphicon glyphicon-home text-primary"> <span>故障登记</span> </i>
+						<ul>  
+							<li><a ui-sref="malfunction_all"><i class="glyphicon glyphicon-edit"></i> 故障列表</a></li>  
+						    <li><a ui-sref="malfunction_op_history"><i class="glyphicon glyphicon-check"></i> 操作记录</a></li>  
+						</ul>
+					</li>
+					{% if role = 'sa' %}
+					<li id='tomcat_saltstack'>
+						<i class="glyphicon glyphicon-list-alt text-primary"> <span> 监控与部署 </span></i>
+						<ul>
+							<li id="tomcat">
+								<i class="glyphicon glyphicon-text-height text-primary"> <span> Tomcat </span></i>
+								<ul>
+								    <li><a ui-sref="tomcat_tomcat_url"><i class="glyphicon glyphicon-edit"></i>   假死监控</a></li>  
+								    <li><a ui-sref="tomcat_project"><i class="glyphicon glyphicon-edit"></i>   工程列表</a></li>
+								</ul>
+							</li>
+							<li id="saltstack">
+								<i class="glyphicon glyphicon-tasks text-primary"> <span>Saltstack</span></i>
+								<ul>  
+								    <li><a ui-sref="saltstack_command"><i class="glyphicon glyphicon-align-right"></i>   基础命令</a></li>  
+								    <li><a ui-sref="saltstack_deploy"><i class="glyphicon glyphicon-align-right"></i>   模块部署</a></li> 
+								    {% comment %}
+								    <li><a ui-sref="saltstack_saltstack_id"><i class="glyphicon glyphicon-check"></i>   ID管理</a></li>  
+								    {% endcomment %}
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li id="upgrade">
+						<i class="glyphicon glyphicon-sort text-primary"> <span>升级中心</span></i>
+						<ul>  
+						    <li><a ui-sref="upgrade_operate"><i class="glyphicon glyphicon-align-right"></i>   基本操作</a></li>  
+						    <li><a ui-sref="upgrade_op_history"><i class="glyphicon glyphicon-check"></i> 操作记录</a></li>
+						</ul>
+					</li>
+					<li id="detect">
+						<i class="glyphicon glyphicon-bullhorn text-primary"> <span>检测中心</span></i>
+						<ul>  
+						    <li><a ui-sref="detect_index"><i class="glyphicon glyphicon-align-right"></i>   Ip检测</a></li>
+						</ul>
+					</li>
+					{% endif %}
+            	</ul>
+    		</div>
+		</div>
+    </div>
+    <div id="right" ui-view="">
+    </div>
+</div>
+<script type="text/javascript">
+    $('#sui_nav').SuiNav({
+        toggleName: '.MenuToggle', // 控制菜单开关类
+        direction: 'left', // 菜单切换方向
+        trigger: 'click', // 展开方式，单击展示下层或是悬浮展示
+        openingSpeed: 400, // 打开菜单动画时间
+        closingSpeed: 400, // 关闭菜单动画时间
+        closingCascade: true, // 级联关闭所有菜单，仅对垂直导航菜单有效
+        destroy: true // 切换菜单时是否释放控件占用资源
+    });
+    $('#tomcat_saltstack').children('ul').slideDown();
+    $('#malfunction').children('ul').slideDown();
+    $('#tomcat').children('ul').slideDown();
+    $('#saltstack').children('ul').slideDown();
+    $('#upgrade').children('ul').slideDown();
+    //$('#detect').children('ul').slideDown();
+</script>

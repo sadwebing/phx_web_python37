@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        {% load staticfiles %}
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+        <link rel='icon' href="/static/images/meng.ico" type="image/x-icon" />
+        <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="/static/bootstrap/css/bootstrap-datetimepicker.css" rel="stylesheet"/>
+        <link href="/static/bootstrap-table/src/bootstrap-table.css" rel="stylesheet">
+
+        <link href="/static/bootstrap-select/css/bootstrap-select.css" rel="stylesheet">
+        <link href="/static/custom/custom.css" rel="stylesheet">
+        <script src="/static/otherjs/jquery.min.js"></script>
+        <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/static/bootstrap-select/js/bootstrap-select.js"></script>
+        <script src="/static/bootstrap-select/js/i18n/defaults-zh_CN.min.js"></script>
+
+        <script src="/static/bootstrap/js/bootstrap-datetimepicker.js"></script>
+        <script src="/static/bootstrap/js/bootstrap-datetimepicker.zh-CN.js"></script>
+        <script src="/static/bootstrap-table/src/bootstrap-table.js"></script>
+        <script src="/static/bootstrap-table/src/locale/bootstrap-table-zh-CN.js"></script>
+        <script src="/static/otherjs/knockout-3.4.2.js"></script>
+        <script src="/static/otherjs/knockout.mapping.js"></script>
+        {% comment %}
+        <script src="/static/fckeditor.js"></script>
+        {% endcomment %}
+        
+        <!-- toastr 消息提示插件 -->
+        <link href="/static/toastr/toastr.css" rel="stylesheet">
+        <script src="/static/toastr/toastr.js"></script>
+
+        <!-- titatoggle checkbox样式 -->
+        <link href="/static/bootstrap/css/titatoggle-dist.css" rel="stylesheet">
+
+        <!-- sui_nav  用于导航栏 -->
+        <link href="/static/sui_nav/sui.nav.min.css" rel="stylesheet">
+        <script src="/static/sui_nav/sui.nav.min.js"></script>
+
+        <!-- bootstrapValidator  用于form表单验证 -->
+        <link href="/static/bootstrapValidator/bootstrapValidator.css" rel="stylesheet">
+        <script src="/static/bootstrapValidator/bootstrapValidator.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="/static/bootstrapNews/css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="/static/bootstrapNews/css/default.css">
+        <link href="/static/bootstrapNews/css/site.css" rel="stylesheet" type="text/css" />
+
+        <script src="/static/custom/tablejs/kobootstraptable.js"></script> 
+
+
+    </head>
+    <body  data-ng-app="TcbsApp">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="max-height: 50px;">
+            <div class="container-fluid"> 
+                <div class="navbar-header">
+                    <a class="navbar-brand">TCBS</a>
+                </div>
+                {% comment %}
+                <div>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">提交</button>
+                    </form>
+                </div>
+                {% endcomment %}
+                <div>
+                    <p class="navbar-text">本机地址: {{ clientip }}</p>
+                </div>
+                <div>
+                    <p class="navbar-text"><span class="glyphicon glyphicon-user"></span></p>
+                </div>
+                <div>
+                    <a class="navbar-brand" href="/admin" title="点击进入后台">{{ username }}</a>
+                </div>
+                <div>
+                    <a class="navbar-brand font_ui" ui-sref="home" title="点击进入主页面" style="margin-left: 20px;">主页</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right"> 
+                    <li><a href="#" id="logout" onclick="Logout(this)" title="点击退出"><span class="glyphicon glyphicon-log-out"></span> 退出</a></li> 
+                </ul> 
+            </div>
+        </nav>
+        <div class="container-fluid">
+            {% include "mainnav.html" %}
+        </div>
+    </body>
+    <script src="/static/angular/angular.min.js"></script>
+    <script src="/static/angular/angular-ui-router.js"></script>
+    <script src="/static/angular/angular-animate.js"></script>
+    <script src="/static/angular/TcbsApp.js"></script>
+    <script type="text/javascript">
+        //console.log(document.location.hash)
+        function Logout(obj) {
+            var redirct_to = window.location.hash;
+            //console.log(redirct_to)
+            $('#logout').attr("href", "/accounts/logout?url=" + redirct_to);
+        }
+    </script>
+</html>

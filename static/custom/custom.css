@@ -1,0 +1,119 @@
+pre{
+    width:100%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+.pre-scrollable {
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+xmp {
+	font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  	margin-bottom: 10px;
+  	overflow: auto;
+  	width: auto;
+  	padding: 5px;
+  	background-color: #eee;
+  	width: 650px!ie7;
+  	padding-bottom: 20px!ie7;
+	width:100%;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+#top{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:50px;
+    width:150px;
+    background-color: #F0F8FF;
+    /*
+    border-top:1px solid rgba(42, 171, 210, 0.36);
+    */
+    overflow-x:hidden;
+    overflow-y:auto;
+    z-index: 100;
+}
+
+#left{
+    position:absolute;
+    top:55px;
+    left:0;
+    bottom:0;
+    width:150px;
+    background-color: #F0F8FF;
+    /*
+    border-top:1px solid rgba(42, 171, 210, 0.36);
+    */
+    overflow-x:hidden;
+    overflow-y:auto;
+    z-index: 100;
+}
+
+#right{
+    position:absolute;
+    background-color: #F0F8FF;
+    top:55px;
+    left:155px;
+    bottom:0;
+    right:0;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.right-head {
+    position:absolute;
+    width: 100%;
+    margin-left;
+    float:left;
+    top:0;
+    bottom:0;
+    right:0;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+.right-body {
+    position:absolute;
+    top:240px;
+    width: 100%;
+    bottom:0;
+    right:0;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.textarea_e {
+    height:300px;
+    width: 570px;
+    max-height: 500px;
+    max-width: 570px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.label_e {
+    width: auto;
+}
+
+.demo_line{
+    letter-spacing: -1px;
+    color: #ddd;
+}
+.demo_line span{
+    letter-spacing: 0;
+    color: #222;
+    margin:0 20px;
+}
+
+.font_ui {
+    font-weight: 600;
+    font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+}

@@ -52,3 +52,163 @@ django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module: No mo
 Error: That port is already in use.
 [22/Jan/2018 15:51:13]"GET / HTTP/1.1" 200 1767
 [22/Jan/2018 15:51:25]"GET / HTTP/1.1" 200 1767
+[22/Jan/2018 20:07:59]"GET / HTTP/1.1" 200 1767
+[22/Jan/2018 21:19:30]"GET / HTTP/1.1" 200 1767
+[23/Jan/2018 03:15:47]"GET / HTTP/1.1" 200 1767
+[23/Jan/2018 03:30:00]"GET / HTTP/1.1" 200 1767
+[23/Jan/2018 05:05:57]code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+[23/Jan/2018 05:05:57]
+[23/Jan/2018 05:05:58]code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+[23/Jan/2018 05:05:58]
+[23/Jan/2018 05:16:35]"GET / HTTP/1.1" 200 1767
+[23/Jan/2018 07:13:16]code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+[23/Jan/2018 07:13:16]
+[23/Jan/2018 07:13:17]code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+[23/Jan/2018 07:13:17]
+[23/Jan/2018 07:13:51]"GET / HTTP/1.1" 200 1767
+[23/Jan/2018 08:09:27]code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+[23/Jan/2018 08:09:27]
+[23/Jan/2018 08:09:28]code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+[23/Jan/2018 08:09:28]
+[23/Jan/2018 09:38:17]"GET / HTTP/1.1" 200 1767
+[23/Jan/2018 10:08:26]code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+[23/Jan/2018 10:08:26]
+[23/Jan/2018 10:08:27]code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+[23/Jan/2018 10:08:27]
+[23/Jan/2018 10:34:30]"GET / HTTP/1.0" 200 1767
+[23/Jan/2018 11:05:07]code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+[23/Jan/2018 11:05:07]
+[23/Jan/2018 11:05:14]"GET / HTTP/1.1" 200 1767
+[23/Jan/2018 11:05:17]code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+[23/Jan/2018 11:05:17]
+[23/Jan/2018 12:08:37]code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+[23/Jan/2018 12:08:37]
+[23/Jan/2018 12:08:57]code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+[23/Jan/2018 12:08:57]
+[23/Jan/2018 14:08:17]"GET / HTTP/1.1" 200 1767
+[23/Jan/2018 16:19:47]"GET / HTTP/1.1" 200 1767
+[23/Jan/2018 18:38:14]"GET / HTTP/1.1" 200 1767
+[23/Jan/2018 21:13:22]"GET / HTTP/1.1" 200 1767
+[24/Jan/2018 00:29:17]"GET / HTTP/1.1" 200 1767
+[24/Jan/2018 05:00:20]"GET / HTTP/1.1" 200 1767
+[24/Jan/2018 06:49:32]"GET / HTTP/1.1" 200 1767
+[24/Jan/2018 07:19:54]"GET / HTTP/1.1" 200 1767
+[24/Jan/2018 07:31:32]"GET / HTTP/1.1" 200 1767
+[24/Jan/2018 08:13:41]"GET / HTTP/1.1" 200 1767
+[24/Jan/2018 11:02:22]"GET / HTTP/1.1" 200 1767
+[24/Jan/2018 12:55:35]"GET / HTTP/1.1" 200 1767
+[24/Jan/2018 12:55:40]"GET /admin HTTP/1.1" 301 0
+[24/Jan/2018 12:55:41]"GET /admin/ HTTP/1.1" 302 0
+[24/Jan/2018 12:55:41]"GET /admin/login/?next=/admin/ HTTP/1.1" 200 1915
+[24/Jan/2018 12:55:41]"GET /static/admin/css/base.css HTTP/1.1" 200 14049
+[24/Jan/2018 12:55:41]"GET /static/admin/css/login.css HTTP/1.1" 200 940
+[24/Jan/2018 12:55:41]"GET /static/admin/img/nav-bg.gif HTTP/1.1" 200 265
+[24/Jan/2018 12:59:52]"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[24/Jan/2018 12:59:52]"GET /static/admin/img/nav-bg-reverse.gif HTTP/1.1" 200 178
+Traceback (most recent call last):
+  File "/usr/local/python27/lib/python2.7/SocketServer.py", line 596, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/python27/lib/python2.7/SocketServer.py", line 331, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/python27/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 102, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/python27/lib/python2.7/SocketServer.py", line 652, in __init__
+    self.handle()
+  File "/usr/local/python27/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 167, in handle
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/local/python27/lib/python2.7/socket.py", line 480, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+[24/Jan/2018 12:59:52]"GET /admin/ HTTP/1.1" 200 3024
+[24/Jan/2018 12:59:52]"GET /static/admin/css/dashboard.css HTTP/1.1" 200 434
+[24/Jan/2018 12:59:52]"GET /static/admin/img/default-bg.gif HTTP/1.1" 200 836
+[24/Jan/2018 12:59:52]"GET /static/admin/img/icon_changelink.gif HTTP/1.1" 200 119
+[24/Jan/2018 12:59:52]"GET /static/admin/img/icon_addlink.gif HTTP/1.1" 200 119
+[24/Jan/2018 13:00:04]"GET /admin/auth/group/add/ HTTP/1.1" 200 6361
+[24/Jan/2018 13:00:04]"GET /static/admin/css/forms.css HTTP/1.1" 200 6266
+[24/Jan/2018 13:00:04]"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 4464
+[24/Jan/2018 13:00:04]"GET /static/admin/js/core.js HTTP/1.1" 200 7522
+[24/Jan/2018 13:00:04]"GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[24/Jan/2018 13:00:04]"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 326
+[24/Jan/2018 13:00:05]"GET /static/admin/js/actions.js HTTP/1.1" 200 4910
+[24/Jan/2018 13:00:05]"GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4222
+[24/Jan/2018 13:00:05]"GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 10127
+[24/Jan/2018 13:00:05]"GET /static/admin/js/related-widget-wrapper.js HTTP/1.1" 200 857
+[24/Jan/2018 13:00:05]"GET /static/admin/css/widgets.css HTTP/1.1" 200 10430
+[24/Jan/2018 13:00:07]"GET /static/admin/js/jquery.js HTTP/1.1" 200 284184
+[24/Jan/2018 13:00:08]"GET /static/admin/img/icon-unknown.gif HTTP/1.1" 200 130
+[24/Jan/2018 13:00:08]"GET /static/admin/img/selector-search.gif HTTP/1.1" 200 552
+[24/Jan/2018 13:00:08]"GET /static/admin/img/selector-icons.gif HTTP/1.1" 200 2771
+[24/Jan/2018 13:00:11]"GET /admin/auth/ HTTP/1.1" 200 2938
+[24/Jan/2018 13:00:13]"GET /admin/auth/user/add/ HTTP/1.1" 200 5448
+[24/Jan/2018 13:00:13]"GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[24/Jan/2018 13:00:15]"GET /admin/auth/ HTTP/1.1" 200 2938
+[24/Jan/2018 13:00:16]"GET /admin/auth/user/ HTTP/1.1" 200 6619
+[24/Jan/2018 13:00:16]"GET /static/admin/css/changelists.css HTTP/1.1" 200 5254
+[24/Jan/2018 13:00:16]"GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[24/Jan/2018 13:00:16]"GET /static/admin/img/icon_searchbox.png HTTP/1.1" 200 368
+[24/Jan/2018 13:00:16]"GET /static/admin/img/icon-yes.gif HTTP/1.1" 200 299
+[24/Jan/2018 13:00:16]"GET /static/admin/img/changelist-bg.gif HTTP/1.1" 200 50
+[24/Jan/2018 13:00:16]"GET /static/admin/img/tooltag-add.png HTTP/1.1" 200 119
+[24/Jan/2018 13:00:16]"GET /static/admin/img/sorting-icons.gif HTTP/1.1" 200 369
+[24/Jan/2018 13:00:16]"GET /static/admin/img/nav-bg-selected.gif HTTP/1.1" 200 265
+Traceback (most recent call last):
+  File "/usr/local/python27/lib/python2.7/SocketServer.py", line 596, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/python27/lib/python2.7/SocketServer.py", line 331, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/python27/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 102, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/python27/lib/python2.7/SocketServer.py", line 652, in __init__
+    self.handle()
+  File "/usr/local/python27/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 167, in handle
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/local/python27/lib/python2.7/socket.py", line 480, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+[24/Jan/2018 13:00:23]"GET /admin/ HTTP/1.1" 200 3024
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have unapplied migrations; your app may not work properly until they are applied.
+Run 'python manage.py migrate' to apply them.
+January 22, 2018 - 15:51:09
+Django version 1.8, using settings 'phxweb.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+----------------------------------------
+Exception happened during processing of request from ('222.127.25.27', 1776)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('222.127.25.27', 2586)
+----------------------------------------
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 24, 2018 - 13:01:26
+Django version 1.8, using settings 'phxweb.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/usr/local/python27/lib/python2.7/site-packages/django/core/management/__init__.py", line 338, in execute_from_command_line
+    utility.execute()
+  File "/usr/local/python27/lib/python2.7/site-packages/django/core/management/__init__.py", line 312, in execute
+    django.setup()
+  File "/usr/local/python27/lib/python2.7/site-packages/django/__init__.py", line 18, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/python27/lib/python2.7/site-packages/django/apps/registry.py", line 115, in populate
+    app_config.ready()
+  File "/usr/local/python27/lib/python2.7/site-packages/django/contrib/admin/apps.py", line 22, in ready
+    self.module.autodiscover()
+  File "/usr/local/python27/lib/python2.7/site-packages/django/contrib/admin/__init__.py", line 24, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/usr/local/python27/lib/python2.7/site-packages/django/utils/module_loading.py", line 74, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/usr/local/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/pythonenv/monitor/phx_web/accounts/admin.py", line 2, in <module>
+    from models import UserProfile
+ImportError: cannot import name UserProfile

@@ -1,0 +1,209 @@
+{% if title %}
+    <title>{{title}}</title>
+{% else %}
+    <title>管理中心</title>
+{% endif %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">假死监控列表</h4>
+    </div>
+    <div>
+        <form id="selectmalform" class="form-inline" role="form">
+            <button id="tomcat_url_active" type="button" class="btn btn-default active">启用</button>
+            <button id="tomcat_url_inactive" type="button" class="btn btn-default active">暂停</button>
+            <button id="tomcat_url_all" type="button" class="btn btn-default active" disabled>全部</button>
+            <div class="input-group" style="margin-left: 15px;">
+                <label class="input-group-addon" style="line-height: 1.42857143;">假死监控</label>
+                <span class="form-control">
+                    <div class="checkbox checkbox-slider--a" style="padding-left: 15px;">
+                        <label>
+                            <input type="checkbox" id='check_services' style="line-height: 1.42857143;"><span></span>
+                        </label>
+                    </div>
+                </span>
+                {% comment %}
+                <span class="input-group-addon glyphicon glyphicon-pencil" style="line-height: 1.42857143; top:0;"><input type="button" id="edit_check_services" value="修改" style="border-style:none; background-color: #eee;"></span>
+                {% endcomment %}
+            </div>
+            <div class="input-group" style="margin-left: 15px;">
+                <label class="input-group-addon" style="line-height: 1.42857143;">salt minion监控</label>
+                <span class="form-control">
+                    <div class="checkbox checkbox-slider--a" style="padding-left: 15px;">
+                        <label>
+                            <input type="checkbox" id='check_salt_minion' style="line-height: 1.42857143;"><span></span>
+                        </label>
+                    </div>
+                </span>
+                {% comment %}
+                <span class="input-group-addon glyphicon glyphicon-pencil" style="line-height: 1.42857143; top:0;"><input type="button" id="edit_check_salt_minion" value="修改" style="border-style:none; background-color: #eee;"></span>
+                {% endcomment %}
+            </div>
+            <button id="edit_mail" type="button" class="btn btn-default" style="margin-left: 15px;">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>更新报警邮件
+            </button>
+        </form>
+    </div>
+    <div id="toolbar" class="btn-group">
+        <button id="btn_add" type="button" class="btn btn-default" >
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+        </button>
+        {% comment %}
+        <button id="btn_edit" type="button" class="btn btn-default" >
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改
+        </button>
+        {% endcomment %}
+        <button id="btn_confirm_delete" type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
+        </button>
+    </div>
+    <table id="tomcat_table" class="table table-condensed" data-bind="myBootstrapTable:$root">
+    </table>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title text-center" id="myModalLabel">操作</h4>
+                    </div>
+                    <div class="modal-body">
+                    <form class="form-inline">
+                        <div class="input-group" style="margin-bottom: 10px;margin-right: 30px;">
+                            <label class="input-group-addon" style="width: 85px;">环境</label>
+                            <select name="txt_envir" data-bind="value:envir" class="form-control" id="txt_envir" placeholder="环境" style="width: 150px;"> 
+                                <option value="ONLINE">运营</option>
+                                <option value="UAT">测试</option>
+                            </select>
+                        </div>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 85px;">状态</label>
+                            <select type="text" name="txt_status" data-bind="value:status_" class="form-control" id="txt_status" placeholder="默认为active，可不填"  style="width: 150px;"> 
+                                <option value="active">active</option>
+                                <option value="inactive">inactive</option>
+                            </select>
+                        </div>
+                    </form>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 85px;">项目名</label>
+                            <input type="text" name="txt_project" data-bind="value:project" class="form-control" id="txt_project" placeholder="项目名" style="width: 450px;">
+                        </div>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 85px;">Minion Id</label>
+                            <input type="text" name="txt_minion_id" data-bind="value:minion_id" class="form-control" id="txt_minion_id" placeholder="Minion Id" style="width: 450px;">
+                        </div>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 85px;">Ip地址</label>
+                            <input type="text" name="txt_ip_addr" data-bind="value:ip_addr" class="form-control" id="txt_ip_addr" placeholder="Ip地址" style="width: 450px;">
+                        </div>
+                        <form class="form-inline">
+                        <div class="input-group" style="margin-bottom: 10px;margin-right: 30px;">
+                            <label class="input-group-addon" style="width: 85px;">服务类型</label>
+                            <select type="text" name="txt_server_type" data-bind="value:server_type" class="form-control" id="txt_server_type" placeholder="服务类型"  style="width: 150px;"> 
+                                <option value="tomcat">tomcat</option>
+                                <option value="nginx+php">nginx+php</option>
+                                <option value="app">app</option>
+                                <option value="nginx">nginx</option>
+                            </select>
+                        </div>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 85px;">角色</label>
+                            <select type="text" name="txt_role" data-bind="value:role" class="form-control" id="txt_role" placeholder=""  style="width: 150px;"> 
+                                <option value="main">main</option>
+                                <option value="backup">backup</option>
+                            </select>
+                        </div>
+                        </form>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 85px;">域名</label>
+                            <input type="text" name="txt_domain" data-bind="value:domain" class="form-control" id="txt_domain" placeholder="域名" style="width: 450px;">
+                        </div>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 85px;">检测地址</label>
+                            <input type="text" name="txt_url" data-bind="value:url" class="form-control" id="txt_url" placeholder="检测地址" style="width: 450px;">
+                        </div>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 85px;">备注</label>
+                            <input type="text" name="txt_info" data-bind="value:info" class="form-control" id="txt_info" placeholder="备注" style="width: 450px;">
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+                        <button type="button" id="btn_submit" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modifyMail" role="dialog" aria-labelledby="modifyMailLabel" aria-hidden="true" data-backdrop="static">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title text-center" id="modifyMailLabel">请修改</h4>
+                    </div>
+                    <div class="modal-body">  
+                        <table id="mail_table" class="table table-condensed" data-bind="myBootstrapTable:$root">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade text-center" id="confirmDeleteModal" role="dialog" aria-labelledby="confirmDeleteModalLabel">
+            <div class="modal-dialog" style="display:inline-block; width: auto;">
+                <div class="modal-content" style="width:auto;">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="confirmDeleteModalLabel">请确认</h4>
+                    </div>
+                    <div class="modal-body">  
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <td>id</td>
+                                    <td>环境</td>
+                                    <td>项目名</td>
+                                    <td>Minion Id</td>
+                                    <td>Ip地址</td>
+                                    <td>服务类型</td>
+                                    <td>角色</td>
+                                    <td>域名</td>
+                                    <td>检测地址</td>
+                                    <td>状态</td>
+                                    <td>备注</td>
+                                </tr>
+                            </thead>
+                            <tbody id="DeleteDatas" style="text-align: left">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <p style="text-align: left">删除记录总数：<span data-bind="text: datas().length"></span></p>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+                        <button type="button" id="btn_delete" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>确认删除</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+    <div class="modal fade" id="runprogress" tabindex="-1" role="dialog"   
+       aria-labelledby="runprogressLabel" aria-hidden="true" data-backdrop="static">   
+       <div class="modal-dialog">  
+           <div class="modal-content" >
+                <div class="modal-header">
+                    <span style="text-align:center;color:blue" id="progress_head">操作进行中，请勿刷新页面......</span><br/>
+                </div>
+                <div class="modal-body">
+                    <div class="progress progress-striped active" id="progress_bar_div">  
+                        <div class="progress-bar progress-bar-success" role="progressbar" id="progress_bar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                        </div>
+                    </div>
+                    <pre class="pre-scrollable" id="Checkresults"></pre>
+                </div>
+                <div class="modal-footer" id="progressFooter">
+                </div>
+           </div>  
+       </div>  
+    </div>  
+<script src="/static/custom/tablejs/tomcat_url.js"></script>

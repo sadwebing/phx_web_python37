@@ -1,0 +1,24 @@
+<li>
+	<a href="#dashboard-menu-mal" class="nav-header" data-toggle="collapse" style="background: grey; color: black;"><i class="glyphicon glyphicon-tasks"></i>  故障登记表</a>  
+	<ul id="dashboard-menu-mal" class="nav nav-list collapse in ">  
+	    <li><a href="/">   未处理</a></li>  
+	    <li><a href="/malfunction/done">   已处理</a></li>  
+	</ul>
+</li>
+{% if role = 'sa' %}
+<li>
+	<a href="#dashboard-menu-tomcat" class="nav-header" data-toggle="collapse" style="background: grey; color: black;"><i class="glyphicon glyphicon-th"></i>  TOMCAT</a>  
+	<ul id="dashboard-menu-tomcat" class="nav nav-list collapse">  
+	    <li><a href="/tomcat/index">   假死监控</a></li>  
+	    <li><a href="/tomcat/project">   工程信息</a></li>  
+	</ul>
+</li>
+<li>
+	<a href="#dashboard-menu-saltstack" class="nav-header" data-toggle="collapse" style="background: grey; color: black;"><i class="glyphicon glyphicon-list"></i>  SALTSTACK</a>  
+	<ul id="dashboard-menu-saltstack" class="nav nav-list collapse">  
+	    <li><a href="/saltstack/command">   命令管理</a></li>  
+	    <li><a href="/saltstack/restart">   服务重启</a></li> 
+	    <li><a href="/saltstack/saltstack_id">   ID管理</a></li>  
+	</ul>
+</li>
+{% endif %}

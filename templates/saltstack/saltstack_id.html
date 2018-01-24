@@ -1,0 +1,44 @@
+{% if title %}
+    <title>{{title}}</title>
+{% else %}
+    <title>管理中心</title>
+{% endif %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">ID信息列表</h4>
+    </div>
+    <div id="toolbar" class="btn-group">
+        <button data-toggle="modal" data-target="btn_query_minion" id="btn_query_minion" type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>查询
+        </button>
+        {% comment %}
+        <button id="btn_cancel_select" type="button" class="btn btn-default">
+            <span aria-hidden="true"></span>取消所选
+        </button>
+        {% endcomment %}
+    </div>
+    <table id="saltstack_id" class="table table-bordered" data-bind="myBootstrapTable:$root">
+        <thead>
+            <tr>
+                <th data-checkbox="true"></th>
+                <th data-sortable="true" data-field="minion_id">minion_id</th>
+                <th data-sortable="true" data-field="minion_status">minion_status</th>
+            </tr>
+        </thead>
+    </table>
+    <div class="modal fade text-center" id="modal_query_minion" role="dialog" aria-labelledby="modal_query_minion">
+        <div class="modal-dialog" style="display:inline-block; width: auto;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="modal_query_minion">主机信息</h4>
+                </div>
+                <div class="modal-body">
+            		<div id="queryresults">
+            		</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/custom/tablejs/saltstack_id.js"></script>

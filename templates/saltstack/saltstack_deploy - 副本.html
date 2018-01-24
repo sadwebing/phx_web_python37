@@ -1,0 +1,59 @@
+{% if title %}
+    <title>{{title}}</title>
+{% else %}
+    <title>管理中心</title>
+{% endif %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">模块部署</h4>
+            </div>
+            <div class="panel-body">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button id="restart_panel" class="btn btn-default" type="submit" title="展开" style="width: 35px;">+</button>
+                    </span>
+                    <span class="form-control" style="width: auto;background-color: #B0C4DE;">服务重启操作</span>
+                </div>
+
+                <form id="projectreform" name="projectreform" class="form-inline" role="form" style="display: none;">
+                    <hr>
+                    <select class="form-control selectpicker show-tick" data-live-search="true" onchange="operate.GetProjectServers()" id="project_active" name="project_active" title="请选择项目名">
+                        <option>test</option>
+                    </select>
+                    <select class="form-control selectpicker show-tick" id="servers_id" name="servers_id" title="请选择服务器地址">
+                    </select>
+                    <button id="btn_submit" type="submit" class="btn btn-default">重启</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">结果</h4>
+            </div>
+            <div class="panel-body">
+                <pre class="pre-scrollable" id="commandresults"></pre>
+            </div>
+        </div>
+
+    <div class="modal fade" id="runprogress" tabindex="-1" role="dialog"   
+       aria-labelledby="runprogressLabel" aria-hidden="true" data-backdrop="static">   
+       <div class="modal-dialog">  
+           <div class="modal-content" >
+                <div class="modal-header">
+                    <span style="text-align:center;color:blue" id="progress_head">操作进行中，请勿刷新页面......</span><br/>
+                </div>
+                <div class="modal-body">
+                    <div class="progress progress-striped active">  
+                        <div class="progress-bar progress-bar-success" role="progressbar" id="progress_bar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                        </div>
+                    </div>
+                    <pre class="pre-scrollable" id="OperateRestartresults"></pre>
+                </div>
+                <div class="modal-footer" id="progressFooter">
+                </div>
+           </div>  
+       </div>  
+    </div>  
+
+<script src="/static/custom/tablejs/saltstack_deploy.js" type="text/javascript"></script>
