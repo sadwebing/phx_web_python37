@@ -31,6 +31,8 @@ class minion_t(models.Model):
     minion_id = models.CharField(max_length=32, null=True)
     ip_addr = models.CharField(max_length=32, null=True)
     status = models.IntegerField(default=1)
+    class Meta:
+        unique_together = ('minion_id' ,'ip_addr')
 
     def __str__(self):
     	if self.status == 1:
