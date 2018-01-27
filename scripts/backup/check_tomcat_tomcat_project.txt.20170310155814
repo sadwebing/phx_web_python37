@@ -1,0 +1,65 @@
+id	product	project	code_dir	tomcat	main_port	jdk	script	status
+1	P02	P02_NEW_WEB_V3	P02_NEW_WEB_V3	tomcat-8.0_p02_new_web_v3_5020	5020	jdk1.8	tomcat8_p02newwebv3	active
+2	P02	P02_WEB_WS_V3	P02_WEB_WS_V3	tomcat-8.0_p02_web_ws_v3_5050	5050	jdk1.8	tomcat8_p02webwsv3	active
+3	P02	P02_STATIC_V3	P02_STATIC_V3					active
+4	P02	P02_BBS	P02_BBS					active
+5	P02	P02_GI	P02_GI	tomcat-7.0_p02_gi_5040	5040	jdk1.8	tomcat7_p02gi	active
+6	P02	P02_OFFICE	P02_OFFICE	tomcat-7.0_p02_office_5100	5100	jdk1.6	tomcat7_p02office	active
+7	P02	P02_OFFICE_WS	P02_OFFICE_WS	tomcat-7.0_p02_office_ws_5080	5080	jdk1.6	tomcat7_p02officews	active
+8	P02	P02_YTSIGHT	P02_YTSIGHT	tomcat-7.0_p02_ytsight_6070	6070	jdk1.7	tomcat7_p02ytsight	active
+9	P02	P02_PARTNER	P02_PARTNER	tomcat-7.0_p02_partner_6120	6120	jdk1.6	tomcat7_p02partner	active
+10	P02	P02_OFFICE_APP	P02_OFFICE_APP					active
+11	PUBLIC	ALL_GOLDENCMS_142	ALL_GOLDENCMS_142	tomcat-7.0_all_goldencms_142_1180	1180	jdk1.6	tomcat7_allgoldencms142	active
+12	PUBLIC	ALL_GOLDENCMS_145	ALL_GOLDENCMS_145	tomcat-7.0_all_goldencms_145_1170	1170	jdk1.6	tomcat7_allgoldencms145	active
+13	PUBLIC	ALL_COMMONWALLET_OFFICE	ALL_COMMONWALLET_OFFICE	tomcat-7.0_all_commonwallet_office_1190	1190	jdk1.6	tomcat7_allcommonwalletoffice	active
+14	PUBLIC	ALL_COMMONWALLET_API	ALL_COMMONWALLET_API	tomcat-7.0_all_commonwallet_api_1200	1200	jdk1.6	tomcat7_allcommonwalletapi	active
+15	PUBLIC	ALL_COMMONWALLET_DATACENTER	ALL_COMMONWALLET_DATACENTER	tomcat-7.0_all_commonwallet_datacenter_1210	1210	jdk1.6	tomcat7_allcommonwalletdatacenter	active
+16	PUBLIC	ALL_DATACENTER_WEB	ALL_DATACENTER_WEB	tomcat-7.0_all_datacenter_web_1230	1230	jdk1.8	tomcat7_alldatacenterweb	active
+17	PUBLIC	ALL_DATACENTER_APP	ALL_DATACENTER_APP					active
+18	PUBLIC	ALL_EMAIL_API	ALL_EMAIL_API	tomcat-7.0_all_email_api_1250	1250	jdk1.6	tomcat7_allemailapi	active
+19	PUBLIC	ALL_PAYMENT_FRONT	ALL_PAYMENT_FRONT	tomcat-7.0_all_payment_front_1270	1270	jdk1.6	tomcat7_allpaymentfront	active
+20	PUBLIC	ALL_PAYMENT_OFFICE	ALL_PAYMENT_OFFICE	tomcat-7.0_all_payment_office_1280	1280	jdk1.6	tomcat7_allpaymentoffice	active
+21	PUBLIC	ALL_PAYMENT_CALLBACK	ALL_PAYMENT_CALLBACK	tomcat-7.0_all_payment_callback_1290	1290	jdk1.6	tomcat7_allpaymentcallback	active
+22	PUBLIC	ALL_SMS_EMAIL_OFFICE	ALL_SMS_EMAIL_OFFICE	tomcat-7.0_all_sms_email_office_1300	1300	jdk1.6	tomcat7_allsmsemailoffice	active
+23	PUBLIC	ALL_SMS_API	ALL_SMS_API	tomcat-7.0_all_sms_api_1310	1310	jdk1.6	tomcat7_allsmsapi	active
+24	PUBLIC	ALL_TSD_WS	ALL_TSD_WS	tomcat-7.0_all_tsd_ws_1320	1320	jdk1.6	tomcat7_alltsdws	active
+25	PUBLIC	ALL_ACTIVITY_DC	ALL_ACTIVITY_DC					active
+26	PUBLIC	ALL_ACTIVITY_API	ALL_ACTIVITY_API	tomcat-7.0_all_activity_api_1120	1120	jdk1.6	tomcat7_allactivityapi	active
+27	PUBLIC	ALL_ACTIVITY_OFFICE	ALL_ACTIVITY_OFFICE	tomcat-7.0_all_activity_office_1130	1130	jdk1.6	tomcat7_allactivityoffice	active
+28	PUBLIC	ALL_ACTIVITY_BUSINESS	ALL_ACTIVITY_BUSINESS					active
+29	B79	B79_NEW_WEB	B79_NEW_WEB	tomcat-7.0_b79_new_web_7010	7010	jdk1.7	tomcat7_b79newweb	active
+30	B79	B79_MOBILE	B79_MOBILE	tomcat-8.0_b79_mobile_7030	7030	jdk1.7	tomcat8_b79mobile	active
+31	B79	B79_GI_NEW	B79_GI_NEW	tomcat-7.0_b79_new_gi_7040	7040	jdk1.7	tomcat7_b79newgi	active
+32	B79	B79_GIFW	B79_GI_NEW	tomcat-7.0_b79_gifw_7050	7050	jdk1.7	tomcat7_b79gifw	active
+33	B79	B79_GCI_NEW	B79_GCI_NEW	tomcat-7.0_b79_gci_7060	7060	jdk1.7	tomcat7_b79gci	active
+34	B79	B79_FENGCAI	FENGCAI	tomcat-7.0_b79_fengcai_7070	7070	jdk1.7	tomcat7_b79fengcai	active
+35	B79	B79_WEB_VIP	B79_WEB_VIP	tomcat-7.0_b79_vipweb_7090	7090	jdk1.7	tomcat7_b79vipweb	active
+36	B79	B79_STATIC	B79_STATIC					active
+37	B79	B79_BBS	B79_BBS					active
+38	B79	B79_WEB_WS	WEB_WS	tomcat-7.0_b79_web_ws_7080	7080	jdk1.7	tomcat7_b79webws	active
+39	B79	B79_OFFICE	B79_OFFICE	tomcat-7.0_b79_office_7100	7100	jdk1.7	tomcat7_b79office	active
+40	B79	B79_OFFICE_WS	OFFICE_WS	tomcat-7.0_b79_office_ws_7110	7110	jdk1.7	tomcat7_b79officews	active
+41	B79	B79_BRIDGE	ONLINE_PAY	tomcat-7.0	8080	jdk1.6	tomcat7_b79_bridge	active
+42	PUBLIC	ALL_GDC	ALL_GDC	tomcat-8.0_all_gdc_8010	8010	jdk1.8	tomcat8_allgdc	active
+43	PUBLIC	ALL_GDC_API	ALL_GDC_API	tomcat-8.0_all_gdc_api_8020	8020	jdk1.8	tomcat8_allgdcapi	active
+44	PUBLIC	ALL_GDC_OLD	GDC_OLD	tomcat-8.0_old_gdc_8020	8020	jdk1.8	tomcat8_oldgdc	active
+45	PUBLIC	ALL_MESSAGE	ALL_MESSAGE	tomcat-7.0_all_message_8030	8030	jdk1.7	tomcat7_allmessage	active
+46	PUBLIC	ALL_ZXZF_WS	ALL_ZXZF_WS	tomcat-7.0_all_zxzf_ws_8040	8040	jdk1.7	tomcat7_allzxzfws	active
+47	PUBLIC	ALL_ZJ_CASH	ZJ_CASH	tomcat-7.0_zj_cash_8050	8050	jdk1.7	tomcat7_zjcash	active
+48	PUBLIC	ALL_OA	ALL_OA	tomcat-7.0_all_oa_8060	8060	jdk1.7	tomcat7_alloa	active
+49	PUBLIC	ALL_AGENT	ALL_AGENT	tomcat-7.0_all_agent_8070	8070	jdk1.7	tomcat7_allagent	active
+50	P02_OLD	P02_WEB	P02_WEB	tomcat-7.0_p02_web_6010	6010	jdk1.7	tomcat7_p02web	inactive
+51	P02_OLD	P02_NEW_WEB	P02_NEW_WEB	tomcat-8.0_p02_new_web_6020	6020	jdk1.7	tomcat8_p02newweb	inactive
+52	P02_OLD	P02_MOBILE	P02_MOBILE	tomcat-8.0_p02_mobile_6030	6030	jdk1.7	tomcat8_p02mobile	inactive
+53	P02_OLD	P02_NEW_GI	P02_GI_NEW	tomcat-7.0_p02_new_gi_6040	6040	jdk1.7	tomcat8_p02ginew	inactive
+54	P02_OLD	P02_GIFW	P02_GI_NEW	tomcat-7.0_p02_gifw_6050	6050	jdk1.7	tomcat7_p02gifw	inactive
+55	P02_OLD	P02_GCI	P02_GCI_NEW	tomcat-7.0_p02_gci_6060	6060	jdk1.7	tomcat7_p02gci	inactive
+56	P02_OLD	P02_YTSIGHT	P02_YTSIGHT	tomcat-7.0_p02_ytsight_6070	6070	jdk1.6	tomcat7_p02ytsight	inactive
+57	P02_OLD	P02_VIP_WEB	P02_VIP_WEB	tomcat-7.0_p02_vipweb_6090	6090	jdk1.7	tomcat7_p02vipweb	inactive
+58	P02_OLD	P02_PARTNER	P02_PARTNER	tomcat-7.0_p02_partner_6120	6120	jdk1.6	tomcat7_p02partner	inactive
+59	P02_OLD	P02_WEB_WS	P02_WEB_WS	tomcat-7.0_p02_web_ws_6080	6080	jdk1.7	tomcat7_p02webws	inactive
+60	P02_OLD	P02_OFFICE	P02_OFFICE	tomcat-7.0_p02_office_6100	6100	jdk1.7	tomcat7_p02office	inactive
+61	P02_OLD	P02_OFFICE_WS	P02_OFFICE_WS	tomcat-7.0_p02_office_ws_6110	6110	jdk1.7	tomcat7_p02officews	inactive
+62	E02	E02_OFFICE	E02_OFFICE	tomcat-7.0_e02_office_2100	2100	jdk1.6	tomcat7_e02office	active
+63	E02	E02_WS	E02_WS	tomcat-7.0_e02_ws_2080	2080	jdk1.6	tomcat7_e02ws	active
+64	NWF	NWF_GI	NWF_GI	tomcat-7.0_NWF_GI_2040	2040	jdk1.7	tomcat7_nwfgi	active

@@ -1,0 +1,5 @@
+id	name	mail_address	status	role
+1	arno	Arno@ag866.com	active	admin
+2	sa	sa@ag866.com	active	public
+3	vincent	vincent@ag866.com	inactive	
+4	jeffery	jeffery@ag866.com	inactive	

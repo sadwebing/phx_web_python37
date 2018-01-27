@@ -36,6 +36,13 @@ LOGIN_REDIRECT_URL = '/'
 
 LOGIN_URL = '/accounts/login'
 
+#telegram api
+TG_API = {
+    'url': 'https://api.telegram.org/bot471691674:AAFx1MQ3VwXdWUYyh4CaErzwoUNswG9XDsU',
+    'chat_id': {
+        'salt_minion_alert': '-275535278',
+    }
+}
 # Application definition
 
 INSTALLED_APPS = (

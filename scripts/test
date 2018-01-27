@@ -1,0 +1,10 @@
+B79|B79_WEB_WS|tomcat-7.0_b79_web_ws_7080|7080 |tomcat7_b79webws|jdk1.7
+B79|B79_OFFICE|tomcat-7.0_b79_office_7100|7100 |tomcat7_b79office|jdk1.7
+B79|B79_OFFICE_WS|tomcat-7.0_b79_office_ws_7110|7110|tomcat7_b79officews|jdk1.7
+PUBLIC|B79_GDC|tomcat-7.0_all_gdc_8010|8010|tomcat7_allgdc|jdk1.8.0_91
+PUBLIC|GDC_OLD|tomcat-7.0_old_gdc_8020|8020|tomcat7_oldgdc|jdk1.8.0_91
+PUBLIC|MESSAGE|tomcat-7.0_all_message_8030|8030|tomcat7_allmessage|jdk1.7
+PUBLIC|P02_ZXZF_WS|tomcat-7.0_all_zxzf_ws_8040|8040|tomcat7_allzxzfws|jdk1.7
+PUBLIC|ZJ_CASH|tomcat-7.0_zj_cash_8050|8050|tomcat7_zjcash|jdk1.6.0_45
+PUBLIC|ALL_OA|tomcat-7.0_all_oa_8060|8060|tomcat7_alloa|jdk1.7
+PUBLIC|ALL_AGENT|tomcat-7.0_all_agent_8070|8070|tomcat7_allagent|jdk1.7
