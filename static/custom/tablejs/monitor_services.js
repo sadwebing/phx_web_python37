@@ -14,7 +14,7 @@ var tableInit = {
         this.dbclick();
         //绑定table的viewmodel
         this.myViewModel = new ko.bootstrapTableViewModel({
-            url: '/tomcat/tomcat_url/Query',         //请求后台的URL（*）
+            url: '/monitor/project/Query',         //请求后台的URL（*）
             method: 'post',                      //请求方式（*）
             dataType: "json",
             toolbar: '#toolbar',                //工具按钮用哪个容器
@@ -39,23 +39,23 @@ var tableInit = {
                     width:'5%',
                     //align: 'center'
                 },{
+                    field: 'product',
+                    title: '产品',
+                    sortable: true,
+                    width:'9%',
+                    //align: 'center'
+                },{
                     field: 'project',
                     title: '项目名',
                     sortable: true,
-                    width:'18%',
+                    width:'9%',
                     //align: 'center'
                 },{
                     field: 'minion_id',
                     title: 'Minion Id',
                     sortable: true,
                     //align: 'center',
-                    width:'9%',
-                },{
-                    field: 'ip_addr',
-                    title: 'Ip地址',
-                    sortable: true,
-                    //align: 'center',
-                    width:'9%',
+                    width:'18%',
                 },{
                     field: 'server_type',
                     title: '服务类型',
@@ -77,11 +77,11 @@ var tableInit = {
                     //events: this.cur_statusEvents,
                     formatter: this.cur_statusFormatter
                 },{
-                    field: 'url',
+                    field: 'uri',
                     title: '检测地址',
                     sortable: true,
                     //align: 'center',
-                    width:'18%',
+                    width:'auto',
                 },{
                     field: 'status_',
                     title: '状态',
@@ -145,7 +145,7 @@ var tableInit = {
                 '</label>',
             '</div>'
             ].join('');
-        }else {
+        }else if (row.status_ == 'inactive'){
             content = [
             '<div class="checkbox checkbox-slider--a" style="margin:0px;">',
                 '<label>',
@@ -153,6 +153,8 @@ var tableInit = {
                 '</label>',
             '</div>'
             ].join('');
+        }else {
+            content = ['<p>unknown</p>']
         }
         return content;
     },
@@ -321,8 +323,8 @@ window.operateMailEvents = {
 var operate = {
     //初始化按钮事件
     operateInit: function () {
-        this.operateCheckStatus();
-        this.operateEditMail();
+        //this.operateCheckStatus();
+        //this.operateEditMail();
         this.selectpicker();
         this.operateAdd();
         this.operateUpdate();

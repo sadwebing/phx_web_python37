@@ -17,9 +17,9 @@ TcbsApp.config(function ($stateProvider, $urlRouterProvider) {
             url:"/op_history",
             templateUrl: "/malfunction/op_history"
         })
-        .state("tomcat_tomcat_url", {
-            url:"/tomcat_url",
-            templateUrl: "/tomcat/tomcat_url"
+        .state("monitor_services", {
+            url:"/services",
+            templateUrl: "/monitor/services"
         })
         .state("tomcat_project", {
             url:"/tomcat_project",

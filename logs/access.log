@@ -1,0 +1,858 @@
+2018-01-24 22:16:29,473 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 13, in <module>
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+NameError: name 'settings' is not defined
+2018-01-24 22:16:30,967 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 13, in <module>
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+NameError: name 'settings' is not defined
+2018-01-24 22:17:39,921 base.py [django.request:170] [WARNING]- Not Found: /
+2018-01-24 22:17:54,940 base.py [django.request:170] [WARNING]- Not Found: /
+2018-01-24 23:11:14,657 base.py [django.request:256] [ERROR]- Internal Server Error: /admin
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\pythonenv\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 16, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 13
+SyntaxError: Non-ASCII character '\xe7' in file J:\arno\pythonenv\phx_web\monitor\views.py on line 13, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2018-01-24 23:11:14,861 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\pythonenv\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 16, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 13
+SyntaxError: Non-ASCII character '\xe7' in file J:\arno\pythonenv\phx_web\monitor\views.py on line 13, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2018-01-24 23:11:17,888 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 16, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 13
+SyntaxError: Non-ASCII character '\xe7' in file J:\arno\pythonenv\phx_web\monitor\views.py on line 13, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2018-01-24 23:11:18,035 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\pythonenv\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 16, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 13
+SyntaxError: Non-ASCII character '\xe7' in file J:\arno\pythonenv\phx_web\monitor\views.py on line 13, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2018-01-24 23:11:38,625 base.py [django.request:170] [WARNING]- Not Found: /favicon.ico
+2018-01-24 23:26:06,299 views.py [django:22] [INFO]- 127.0.0.1 is requesting /
+2018-01-24 23:29:22,096 views.py [django:22] [INFO]- 127.0.0.1 is requesting /
+2018-01-24 23:30:09,773 views.py [django:22] [INFO]- 127.0.0.1 is requesting /
+2018-01-24 23:32:19,976 views.py [django:22] [INFO]- 127.0.0.1 is requesting /
+2018-01-24 23:32:20,736 base.py [django.request:170] [WARNING]- Not Found: /home
+2018-01-24 23:32:58,256 views.py [django:22] [INFO]- 127.0.0.1 is requesting /
+2018-01-24 23:32:58,561 base.py [django.request:170] [WARNING]- Not Found: /home
+2018-01-24 23:33:09,055 base.py [django.request:170] [WARNING]- Not Found: /malfunction/all
+2018-01-24 23:33:12,381 base.py [django.request:170] [WARNING]- Not Found: /malfunction/op_history
+2018-01-24 23:33:14,229 base.py [django.request:170] [WARNING]- Not Found: /malfunction/op_history
+2018-01-24 23:33:14,819 base.py [django.request:170] [WARNING]- Not Found: /malfunction/op_history
+2018-01-24 23:36:16,114 views.py [django:22] [INFO]- 127.0.0.1 is requesting /
+2018-01-24 23:36:16,404 base.py [django.request:170] [WARNING]- Not Found: /home
+2018-01-24 23:38:28,243 base.py [django.request:170] [WARNING]- Not Found: /home
+2018-01-24 23:39:40,822 base.py [django.request:170] [WARNING]- Not Found: /home
+2018-01-24 23:39:46,539 base.py [django.request:170] [WARNING]- Not Found: /home
+2018-01-24 23:39:49,710 views.py [django:22] [INFO]- 127.0.0.1 is requesting /
+2018-01-24 23:39:49,997 base.py [django.request:170] [WARNING]- Not Found: /home
+2018-01-24 23:40:24,434 views.py [django:22] [INFO]- 127.0.0.1 is requesting /
+2018-01-24 23:40:24,721 base.py [django.request:170] [WARNING]- Not Found: /home
+2018-01-24 23:41:12,188 views.py [django:22] [INFO]- 127.0.0.1 is requesting /
+2018-01-24 23:41:12,190 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 30, in index
+    'username': username,
+  File "J:\arno\pythonenv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\loader_tags.py", line 151, in render
+    template = context.template.engine.get_template(template)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\loaders\base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\engine.py", line 261, in compile_string
+    return parser.parse()
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\defaulttags.py", line 1010, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 339, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 394, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'endcomment', expected 'elif', 'else' or 'endif'
+2018-01-24 23:41:35,243 views.py [django:22] [INFO]- 127.0.0.1 is requesting /
+2018-01-24 23:41:35,549 base.py [django.request:170] [WARNING]- Not Found: /home
+2018-01-24 23:42:17,734 views.py [django:22] [INFO]- 127.0.0.1 is requesting /
+2018-01-24 23:42:18,036 base.py [django.request:170] [WARNING]- Not Found: /home
+2018-01-24 23:42:49,742 views.py [django:22] [INFO]- 127.0.0.1 is requesting /
+2018-01-24 23:42:50,023 base.py [django.request:170] [WARNING]- Not Found: /home
+2018-01-24 23:42:52,915 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url
+2018-01-24 23:47:44,305 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 7, in <module>
+    url('^services$', views.services, name='services'),
+AttributeError: 'module' object has no attribute 'services'
+2018-01-24 23:50:00,009 views.py [django:22] [INFO]- 127.0.0.1 is requesting /
+2018-01-24 23:50:02,161 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2018-01-24 23:50:20,506 views.py [django:45] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-24 23:50:20,507 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/services
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 48, in services
+    LimitAccess(role, 'monitor/monitor_index.html'),
+NameError: global name 'LimitAccess' is not defined
+2018-01-24 23:51:02,052 views.py [django:23] [INFO]- 127.0.0.1 is requesting /
+2018-01-24 23:51:04,013 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2018-01-24 23:51:05,153 views.py [django:46] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-24 23:51:05,242 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/Query
+2018-01-24 23:51:05,244 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-24 23:51:05,259 base.py [django.request:170] [WARNING]- Not Found: /tomcat/mail/Query
+2018-01-24 23:51:10,499 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-24 23:51:13,578 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-24 23:51:16,641 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-24 23:51:19,986 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-24 23:52:03,920 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/Query
+2018-01-24 23:52:04,818 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/Query
+2018-01-24 23:52:05,950 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/Query
+2018-01-24 23:52:11,648 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/Query
+2018-01-24 23:52:12,871 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/Query
+2018-01-24 23:52:13,494 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/Query
+2018-01-24 23:52:24,961 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-24 23:52:29,082 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-24 23:52:38,857 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-24 23:52:44,411 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-24 23:56:03,267 views.py [django:23] [INFO]- 127.0.0.1 is requesting /
+2018-01-24 23:56:04,834 views.py [django:46] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-24 23:56:19,375 views.py [django:23] [INFO]- 127.0.0.1 is requesting /
+2018-01-24 23:56:20,918 views.py [django:46] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-24 23:56:20,993 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/Query
+2018-01-24 23:56:21,000 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-24 23:56:21,006 base.py [django.request:170] [WARNING]- Not Found: /tomcat/mail/Query
+2018-01-26 20:42:20,224 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-26 20:42:23,555 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-26 21:37:41,265 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-26 21:38:00,167 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-26 21:38:02,104 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-26 21:38:04,578 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-26 21:38:06,730 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-26 21:38:44,632 views.py [django:23] [INFO]- 127.0.0.1 is requesting /
+2018-01-26 21:38:46,694 views.py [django:46] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-26 21:38:46,775 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/Query
+2018-01-26 21:38:46,779 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-26 21:38:46,789 base.py [django.request:170] [WARNING]- Not Found: /tomcat/mail/Query
+2018-01-26 21:39:01,930 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2018-01-26 22:47:27,082 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/Query
+2018-01-26 22:47:27,082 base.py [django.request:170] [WARNING]- Not Found: /tomcat/mail/Query
+2018-01-26 22:47:27,082 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-26 23:25:04,601 views.py [django:23] [INFO]- 127.0.0.1 is requesting /
+2018-01-26 23:25:06,703 views.py [django:46] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-26 23:25:06,778 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/Query
+2018-01-26 23:25:06,782 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-26 23:25:06,790 base.py [django.request:170] [WARNING]- Not Found: /tomcat/mail/Query
+2018-01-26 23:25:09,216 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-27 14:49:55,072 views.py [django:23] [INFO]- 127.0.0.1 is requesting /
+2018-01-27 14:49:57,227 views.py [django:46] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-27 14:49:57,306 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/Query
+2018-01-27 14:49:57,311 base.py [django.request:170] [WARNING]- Not Found: /tomcat/UpdateCheckStatus
+2018-01-27 14:49:57,322 base.py [django.request:170] [WARNING]- Not Found: /tomcat/mail/Query
+2018-01-27 14:58:08,927 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\pythonenv\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\pythonenv\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 1271, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 320, in result_list
+    'results': list(results(cl))}
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 296, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 287, in __init__
+    super(ResultList, self).__init__(*items)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 199, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\admin\utils.py", line 282, in lookup_field
+    value = attr()
+  File "J:\arno\pythonenv\phx_web\monitor\models.py", line 21, in __str__
+    return " - ".join([product, project, minion_id])
+NameError: global name 'product' is not defined
+2018-01-27 15:07:00,203 views.py [django:23] [INFO]- 127.0.0.1 is requesting /
+2018-01-27 15:07:02,265 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2018-01-27 15:07:05,548 views.py [django:46] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-27 15:07:05,627 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/Query
+2018-01-27 15:07:05,645 base.py [django.request:170] [WARNING]- Not Found: /tomcat/mail/Query
+2018-01-27 15:08:56,615 views.py [django:23] [INFO]- 127.0.0.1 is requesting /
+2018-01-27 15:08:58,683 views.py [django:46] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-27 15:08:58,760 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/Query
+2018-01-27 15:08:58,786 base.py [django.request:170] [WARNING]- Not Found: /tomcat/mail/Query
+2018-01-27 15:23:11,904 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 44
+    tmp_dict = {}
+                ^
+IndentationError: unindent does not match any outer indentation level
+2018-01-27 15:23:54,954 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 43
+    tmp_dict = {}
+                ^
+IndentationError: unindent does not match any outer indentation level
+2018-01-27 15:23:56,046 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 43
+    tmp_dict = {}
+                ^
+IndentationError: unindent does not match any outer indentation level
+2018-01-27 15:24:22,332 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 56
+    return HttpResponse(json.dumps(project_list))
+                                                ^
+IndentationError: unindent does not match any outer indentation level
+2018-01-27 15:24:23,424 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 56
+    return HttpResponse(json.dumps(project_list))
+                                                ^
+IndentationError: unindent does not match any outer indentation level
+2018-01-27 15:24:43,838 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 56
+    return HttpResponse(json.dumps(project_list))
+                                                ^
+IndentationError: unindent does not match any outer indentation level
+2018-01-27 15:24:44,655 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 56
+    return HttpResponse(json.dumps(project_list))
+                                                ^
+IndentationError: unindent does not match any outer indentation level
+2018-01-27 15:25:06,832 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 56
+    return HttpResponse(json.dumps(project_list))
+                                                ^
+IndentationError: unindent does not match any outer indentation level
+2018-01-27 15:25:07,551 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 56
+    return HttpResponse(json.dumps(project_list))
+                                                ^
+IndentationError: unindent does not match any outer indentation level
+2018-01-27 15:25:08,003 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 56
+    return HttpResponse(json.dumps(project_list))
+                                                ^
+IndentationError: unindent does not match any outer indentation level
+2018-01-27 15:25:08,391 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 56
+    return HttpResponse(json.dumps(project_list))
+                                                ^
+IndentationError: unindent does not match any outer indentation level
+2018-01-27 15:25:08,624 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 56
+    return HttpResponse(json.dumps(project_list))
+                                                ^
+IndentationError: unindent does not match any outer indentation level
+2018-01-27 15:25:41,467 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 56
+    return HttpResponse(json.dumps(project_list))
+                                                ^
+IndentationError: unindent does not match any outer indentation level
+2018-01-27 15:25:42,312 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 56
+    return HttpResponse(json.dumps(project_list))
+                                                ^
+IndentationError: unindent does not match any outer indentation level
+2018-01-27 15:27:02,453 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-01-27 15:27:34,829 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 7, in <module>
+    from models import project_t, monion_t
+ImportError: cannot import name monion_t
+2018-01-27 15:27:46,994 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 9, in <module>
+    import json, logging, requests, re, datetime
+ImportError: No module named requests
+2018-01-27 15:28:20,361 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-27 15:28:22,523 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-27 15:28:22,607 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-27 15:28:22,607 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/Query
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 27, in ProjectQuery
+    datas = tomcat_url.objects.all()
+NameError: global name 'tomcat_url' is not defined
+2018-01-27 15:29:09,506 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-27 15:29:11,638 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-27 15:29:11,717 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-27 15:29:11,717 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/Query
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 34, in ProjectQuery
+    logger.info('æŸ¥è¯¢å‚æ•°ï¼š%s' %act)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe6 in position 0: ordinal not in range(128)
+2018-01-27 15:32:53,448 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-27 15:32:56,335 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-27 15:32:56,418 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-27 15:32:56,418 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-27 15:33:05,280 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/UpdateStatus
+2018-01-27 15:33:08,290 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/CheckServer
+2018-01-27 15:33:10,677 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/CheckServer
+2018-01-27 15:33:13,388 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/CheckServer
+2018-01-27 15:33:18,420 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/CheckServer
+2018-01-27 15:34:19,112 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-27 15:34:20,940 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-27 15:34:21,026 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-27 15:34:21,026 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-27 15:36:53,734 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-27 15:36:53,736 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-27 15:37:01,303 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-27 15:37:03,444 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-27 15:37:03,516 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-27 15:37:03,516 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-27 15:37:27,013 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-27 15:37:27,013 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-27 15:37:28,644 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/UpdateStatus

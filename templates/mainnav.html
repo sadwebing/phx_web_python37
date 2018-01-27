@@ -3,6 +3,7 @@
     	<div id="sui_nav" class="sui-nav">
     		<div class="sui-nav-wrapper nav-border nav-line">
             	<ul>
+            		{% comment %}
 					<li id="malfunction">
 						<i class="glyphicon glyphicon-home text-primary"> <span>故障登记</span> </i>
 						<ul>  
@@ -10,29 +11,34 @@
 						    <li><a ui-sref="malfunction_op_history"><i class="glyphicon glyphicon-check"></i> 操作记录</a></li>  
 						</ul>
 					</li>
+					{% endcomment %}
 					{% if role = 'sa' %}
 					<li id='tomcat_saltstack'>
 						<i class="glyphicon glyphicon-list-alt text-primary"> <span> 监控与部署 </span></i>
 						<ul>
 							<li id="tomcat">
-								<i class="glyphicon glyphicon-text-height text-primary"> <span> Tomcat </span></i>
+								<i class="glyphicon glyphicon-text-height text-primary"> <span> Monitor </span></i>
 								<ul>
-								    <li><a ui-sref="tomcat_tomcat_url"><i class="glyphicon glyphicon-edit"></i>   假死监控</a></li>  
+								    <li><a ui-sref="monitor_services"><i class="glyphicon glyphicon-edit"></i>   services</a></li>{% comment %}
 								    <li><a ui-sref="tomcat_project"><i class="glyphicon glyphicon-edit"></i>   工程列表</a></li>
+								    {% endcomment %}
 								</ul>
 							</li>
+							{% comment %}
 							<li id="saltstack">
 								<i class="glyphicon glyphicon-tasks text-primary"> <span>Saltstack</span></i>
 								<ul>  
 								    <li><a ui-sref="saltstack_command"><i class="glyphicon glyphicon-align-right"></i>   基础命令</a></li>  
 								    <li><a ui-sref="saltstack_deploy"><i class="glyphicon glyphicon-align-right"></i>   模块部署</a></li> 
-								    {% comment %}
+								    
 								    <li><a ui-sref="saltstack_saltstack_id"><i class="glyphicon glyphicon-check"></i>   ID管理</a></li>  
-								    {% endcomment %}
+								    
 								</ul>
 							</li>
+							{% endcomment %}
 						</ul>
 					</li>
+					{% comment %}
 					<li id="upgrade">
 						<i class="glyphicon glyphicon-sort text-primary"> <span>升级中心</span></i>
 						<ul>  
@@ -46,6 +52,7 @@
 						    <li><a ui-sref="detect_index"><i class="glyphicon glyphicon-align-right"></i>   Ip检测</a></li>
 						</ul>
 					</li>
+					{% endcomment %}
 					{% endif %}
             	</ul>
     		</div>
