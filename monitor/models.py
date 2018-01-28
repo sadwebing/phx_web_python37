@@ -11,7 +11,7 @@ class project_t(models.Model):
     server_type = models.CharField(max_length=10, default='nginx')
     role = models.CharField(max_length=16, default='main')
     domain = models.CharField(max_length=128)
-    uri = models.CharField(max_length=128, null=True)
+    uri = models.CharField(max_length=128, default='/')
     status = models.IntegerField(default=1)
     info = models.CharField(max_length=128, null=True)
     class Meta:

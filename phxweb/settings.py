@@ -43,6 +43,15 @@ TG_API = {
         'salt_minion_alert': '-275535278',
     }
 }
+
+#saltstack api
+SALT_API = {
+    'url':"https://103.99.62.71:8000/",
+    #'url_glb':"https://172.20.10.109:8000/",
+    'user':"api",
+    'password':"phexus666",
+}
+
 # Application definition
 
 INSTALLED_APPS = (
@@ -54,6 +63,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'accounts',
     'monitor',
+    'saltstack',
 )
 
 MIDDLEWARE_CLASSES = (

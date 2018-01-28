@@ -20,39 +20,71 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phxweb.settings")
 #django.setup()
 from monitor.models import project_t, minion_t
 from color_print import ColorP
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+# 禁用安全请求警告
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 basedir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 server = 'http://103.99.62.71:5000/'
 requests.adapters.DEFAULT_RETRIES = 3
 logger = logging.getLogger('django')
 error_status = 'null'
+code_list = ['200', '301', '302', '303', '405']
+rewrite_list = ['301', '302', '303']
+normal_list = ['200']
 
-def get_result(result, project_info, code_list, content_body):
+
+class ColorT(object):
+    def __init__(self, product, project, server_type, domain, url):
+        self.__product     = product
+        self.__project     = project
+        self.__server_type = server_type
+        self.__domain      = domain
+        self.__url         = url
+
+    def content_p(self, code, fore='red'):
+        if fore == 'white':
+            content = str(code) + "\t" + '_'.join([self.__product, self.__project, self.__server_type]) + "[%s]:  "%self.__domain +  self.__url + '\n'
+        else:
+            content = ColorP(str(code), fore = fore) + "\t" + '_'.join([self.__product, self.__project, self.__server_type]) + "[%s]:  "%self.__domain +  self.__url + '\n'
+        return content
+
+def get_result(result, project_info, content_body):
+    color_t = ColorT(project_info.product, project_info.project, project_info.server_type, project_info.domain, result['url'])
     try:
         ret = requests.head(result['url'], headers={'Host': result['domain']}, timeout=16)
-        if project_info.project =='ALL_TSD_WS' and ret.status_code == 500:
-            result['code'] = '200'
+        code = str(ret.status_code)
+        if code not in code_list:
+            content_body += color_t.content_p(code, fore='white')
+            content = color_t.content_p(code)
         else:
-            result['code'] = '%s' %ret.status_code
-        try:
-            title = re.search('<title>.*?</title>', ret.content)
-            result['info'] = title.group().replace('<title>', '').replace('</title>', '')
-        except AttributeError:
-            if result['code'] in code_list:
-                result['info'] = '正常'
-            else:
-                result['info'] = '失败'
+            if code in rewrite_list:
+                content = color_t.content_p(code, fore='white')
+                url = ret.headers['Location'].replace(project_info.domain, result['ip'])
+                color_t = ColorT(project_info.product, project_info.project, project_info.server_type, project_info.domain, url)
+                try:
+                    ret_r = requests.head(url, headers={'Host': project_info.domain}, verify=False, timeout=16)
+                    #print ret.headers['Location']
+                    code = str(ret_r.status_code)
+                    if code not in code_list:
+                        content_body += content + color_t.content_p(code, fore='white')
+                        content = content + color_t.content_p(code)
+                    else:
+                        content = content + color_t.content_p(code, fore='white')
+                except:
+                    result['code'] = error_status
+                    result['info'] = '失败'
+                    content_body += content + color_t.content_p(result['code'], fore='white')
+                    content = content + color_t.content_p(result['code'])
+            elif code in normal_list:
+                content = color_t.content_p(code, fore='white')
     except:
         result['code'] = error_status
         result['info'] = '失败'
+        content_body += color_t.content_p(result['code'], fore='white')
+        content = color_t.content_p(result['code'])
 
-    if result['code'] not in code_list:
-        content = ColorP(result['code'], fore = 'red') + "\t" + '_'.join([result['product'], result['project'], result['server_type']]) + ":  " +  result['url']
-        #content_body = content_body + "<tr style=\"font-size:15px\"><td >%s</td><td >%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" %(result['access_time'],result['product'] , result['project'], result['server_type'], result['domain'], result['url'], result['code'], result['info'])
-        content_body = content_body + '\n' + result['code'] + "\t" + '_'.join([result['product'], result['project'], result['server_type']]) + "[%s]:  " %project_info.domain +  result['url']
-    else:
-        content = result['code'] + "\t" + '_'.join([result['product'], result['project'], result['server_type']]) + ":  " +  result['url']
-    print content
+    print content,
 
     #logger.info(MIMEText(str(result), 'utf-8'))
     return content_body
@@ -92,7 +124,6 @@ def check_services():
     content = ""
     pool = multiprocessing.Pool(processes=25)
     project_all = project_t.objects.filter(status=1).all()
-    code_list = ['200', '302', '303', '405']
     for project_info in project_all:
         global result
         result = {}
@@ -103,12 +134,13 @@ def check_services():
         result['server_type'] = project_info.server_type
         minion_all = minion_t.objects.filter(minion_id=project_info.minion_id, status=1).all()
         for minion in minion_all:
+            result['ip']  = minion.ip_addr
             result['url'] = 'http://' + minion.ip_addr + project_info.uri
 
             if len(result['url']) == 0:
                 continue
 
-            content_body = pool.apply_async(get_result, (result, project_info, code_list, content_body, )).get()
+            content_body = pool.apply_async(get_result, (result, project_info, content_body, )).get()
         #result['code'], result['info'] = get_result(result, project_info, code_list)
         
         #if content_body != "":
