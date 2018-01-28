@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 #-_- coding:utf-8 -_-
 #author: Arno
-#update: 2017/07/07 add multiprocessing pool
-#        2017/07/11 optimize send_mail
-#        2017/07/13 update check app server
-#        2017/07/22 add color print
+#update: 2018/01/27 add check_services and get_result
+#        2018/01/28 add ColorT
 
 import re,os,sys,smtplib,requests,datetime,logging,multiprocessing
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
