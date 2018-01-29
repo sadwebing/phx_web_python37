@@ -856,3 +856,553 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xe6 in position 0: ordinal 
 2018-01-27 15:37:27,013 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
 2018-01-27 15:37:27,013 project.py [django:34] [INFO]- 查询参数：query_all
 2018-01-27 15:37:28,644 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/UpdateStatus
+2018-01-28 18:14:53,385 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 18:14:55,888 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 18:14:55,977 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 18:14:55,979 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 18:15:06,134 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/Query
+2018-01-28 18:15:07,309 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/Query
+2018-01-28 18:18:31,720 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 18:18:33,707 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 18:18:33,773 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 18:18:33,773 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 18:18:43,961 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 18:18:43,961 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/Query
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 31, in ProjectQuery
+    datas = project_t.objects.filter(status='inactive')
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 679, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 697, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\query.py", line 1301, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\query.py", line 1328, in _add_q
+    current_negated=current_negated, connector=connector, allow_joins=allow_joins)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\query.py", line 1200, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\query.py", line 1096, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 96, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 134, in get_prep_lookup
+    return self.lhs.output_field.get_prep_lookup(self.lookup_name, self.rhs)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\fields\__init__.py", line 1874, in get_prep_lookup
+    return super(IntegerField, self).get_prep_lookup(lookup_type, value)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\fields\__init__.py", line 727, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\fields\__init__.py", line 1868, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'inactive'
+2018-01-28 18:24:51,615 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/UpdateStatus
+2018-01-28 18:29:26,243 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/UpdateStatus
+2018-01-28 18:31:12,069 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 18:31:16,571 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 18:31:16,641 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 18:31:16,641 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 18:31:18,263 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 18:31:18,263 project.py [django:34] [INFO]- 查询参数：query_active
+2018-01-28 18:31:20,010 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 18:31:20,012 project.py [django:34] [INFO]- 查询参数：query_inactive
+2018-01-28 18:31:23,153 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 18:31:23,154 project.py [django:34] [INFO]- 查询参数：query_active
+2018-01-28 18:31:29,020 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/UpdateStatus
+2018-01-28 18:32:09,714 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/UpdateStatus
+2018-01-28 18:36:13,779 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 18:36:15,845 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 18:36:15,914 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 18:36:15,914 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 18:36:17,348 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 0, u'id': 1}
+2018-01-28 18:36:54,792 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 18:36:54,793 project.py [django:34] [INFO]- 查询参数：query_inactive
+2018-01-28 18:36:57,256 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 18:36:57,256 project.py [django:34] [INFO]- 查询参数：query_active
+2018-01-28 18:37:00,128 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 18:37:00,130 project.py [django:34] [INFO]- 查询参数：query_inactive
+2018-01-28 18:37:02,434 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 1, u'id': 1}
+2018-01-28 18:37:52,556 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 18:37:54,121 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 18:37:54,187 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 18:37:54,187 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 18:39:03,028 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 0, u'id': 1}
+2018-01-28 18:39:08,122 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 1, u'id': 1}
+2018-01-28 18:39:13,115 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 0, u'id': 1}
+2018-01-28 18:39:15,963 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 1, u'id': 1}
+2018-01-28 18:40:17,382 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 18:40:18,927 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 18:40:19,003 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 18:40:19,005 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 18:40:20,542 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 0, u'id': 1}
+2018-01-28 18:40:25,346 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 1, u'id': 1}
+2018-01-28 18:40:44,770 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 0, u'id': 1}
+2018-01-28 18:40:45,497 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 1, u'id': 1}
+2018-01-28 18:41:18,848 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/CheckServer
+2018-01-28 18:41:36,542 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/CheckServer
+2018-01-28 18:41:40,127 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/CheckServer
+2018-01-28 18:45:56,865 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 10, in <module>
+    url('^project/CheckServer$', views.ProjectCheckServer, name='ProjectCheckServer'),
+AttributeError: 'module' object has no attribute 'ProjectCheckServer'
+2018-01-28 18:46:18,492 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 18:46:20,642 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 18:46:20,706 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 18:46:20,706 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 18:46:22,694 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 0, u'id': 1}
+2018-01-28 18:46:26,986 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 1, u'id': 1}
+2018-01-28 18:46:34,533 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 98, in ProjectCheckServer
+    logger.info('%s is requesting. %s æ‰§è¡Œå‚æ•°ï¼š%s' %(clientip, request.get_full_path(), data))
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe6 in position 3: ordinal not in range(128)
+2018-01-28 18:47:09,039 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 18:47:10,903 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 18:47:10,979 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 18:47:10,979 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 18:47:15,786 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 98, in ProjectCheckServer
+    logger.info('%s is requesting. %s æ‰§è¡Œå‚æ•°ï¼š%s' %(clientip, request.get_full_path(), data))
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe6 in position 3: ordinal not in range(128)
+2018-01-28 18:50:09,187 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 18:50:11,176 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 18:50:11,246 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 18:50:11,246 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 18:50:14,638 project.py [django:98] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'url': u'/', u'domain': u'hg6668a.com', u'server_type': u'nginx', u'minion_id': u'SP_NG_HK_153_113'}
+2018-01-28 18:50:14,661 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 140, in ProjectCheckServer
+    commandexe = Command(data['minion_id'], 'test.ping')
+NameError: global name 'Command' is not defined
+2018-01-28 18:51:02,108 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 7, in <module>
+    from saltstack.command import Command
+ImportError: No module named saltstack.command
+2018-01-28 19:05:57,572 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 19:05:59,529 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 19:06:01,836 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 19:06:01,914 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 19:06:01,914 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 19:06:04,084 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/UpdateStatus
+2018-01-28 19:08:39,256 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 19:08:41,388 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 19:08:41,459 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 19:08:41,459 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 19:08:43,227 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 0, u'id': 1}
+2018-01-28 19:08:44,947 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/UpdateStatus
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 68, in ProjectUpdateStatus
+    info = tomcat_url.objects.get(id=data['id'])
+NameError: global name 'tomcat_url' is not defined
+2018-01-28 19:09:10,561 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 0, u'id': 1}
+2018-01-28 19:09:16,634 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 1, u'id': 1}
+2018-01-28 19:09:47,371 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 19:09:49,302 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 19:09:49,378 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 19:09:49,378 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 19:09:50,717 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 0, u'id': 1}
+2018-01-28 19:09:54,273 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 1, u'id': 1}
+2018-01-28 19:10:07,888 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 19:10:09,937 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 19:10:10,009 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 19:10:10,009 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 19:10:11,434 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 0, u'id': 1}
+2018-01-28 19:10:16,198 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 1, u'id': 1}
+2018-01-28 19:10:25,552 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/CheckServer
+2018-01-28 19:34:33,924 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 19:34:33,924 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 19:34:35,961 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/CheckServer
+2018-01-28 19:34:41,463 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 0, u'id': 1}
+2018-01-28 19:34:44,246 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 1, u'id': 1}
+2018-01-28 19:35:01,828 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/CheckServer
+2018-01-28 19:35:08,594 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/CheckServer
+2018-01-28 19:35:14,470 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 0, u'id': 1}
+2018-01-28 19:35:17,464 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 1, u'id': 1}
+2018-01-28 19:42:57,785 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 0, u'id': 1}
+2018-01-28 19:43:00,206 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 1, u'id': 1}
+2018-01-28 19:43:13,707 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/CheckServer
+2018-01-28 21:08:42,487 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 21:08:44,627 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 21:08:44,701 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 21:08:44,701 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 21:08:48,546 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/CheckServer
+2018-01-28 21:08:50,855 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 0, u'id': 1}
+2018-01-28 21:08:53,625 project.py [django:65] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 1, u'id': 1}
+2018-01-28 21:09:05,381 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2018-01-28 21:09:34,273 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 21:09:34,275 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 21:15:01,131 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 21:15:03,309 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 21:15:03,378 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 21:15:03,378 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 21:15:06,727 project.py [django:98] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'url': u'/', u'domain': u'hg6668a.com', u'server_type': u'nginx', u'minion_id': u'SP_NG_HK_153_113'}
+2018-01-28 21:15:06,730 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 140, in ProjectCheckServer
+    commandexe = Command(data['minion_id'], 'test.ping')
+NameError: global name 'Command' is not defined
+2018-01-28 21:15:54,668 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 21:15:56,667 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 21:15:56,743 project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 21:15:56,743 project.py [django:34] [INFO]- 查询参数：query_all
+2018-01-28 21:15:59,845 project.py [django:98] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'url': u'/', u'domain': u'hg6668a.com', u'server_type': u'nginx', u'minion_id': u'SP_NG_HK_153_113'}
+2018-01-28 21:15:59,845 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 140, in ProjectCheckServer
+    commandexe = Command(data['minion_id'], 'test.ping')
+NameError: global name 'Command' is not defined
+2018-01-28 21:18:33,118 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 8, in <module>
+    from saltstack.command import Command
+  File "J:\arno\pythonenv\phx_web\saltstack\command.py", line 5, in <module>
+    from monitor import settings
+ImportError: cannot import name settings
+2018-01-28 21:19:25,960 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 8, in <module>
+    from saltstack.command import Command
+  File "J:\arno\pythonenv\phx_web\saltstack\command.py", line 7, in <module>
+    import json, logging, yaml
+ImportError: No module named yaml
+2018-01-28 21:20:45,348 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 21:20:47,576 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 21:20:47,668 project.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 21:20:47,670 project.py [django:35] [INFO]- 查询参数：query_all
+2018-01-28 21:20:51,414 project.py [django:99] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'url': u'/', u'domain': u'hg6668a.com', u'server_type': u'nginx', u'minion_id': u'SP_NG_HK_153_113'}
+2018-01-28 21:31:57,996 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 21:31:59,971 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 21:32:00,042 project.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 21:32:00,043 project.py [django:35] [INFO]- 查询参数：query_all
+2018-01-28 21:32:03,354 project.py [django:99] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'url': u'/', u'domain': u'hg6668a.com', u'server_type': u'nginx', u'minion_id': u'SP_NG_HK_153_113'}
+2018-01-28 21:32:03,438 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 111, in ProjectCheckServer
+    info_final['url'] = "http://" + minion.ip_addr + data['uri']
+KeyError: 'uri'
+2018-01-28 21:32:42,000 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 21:32:43,627 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 21:32:43,697 project.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 21:32:43,698 project.py [django:35] [INFO]- 查询参数：query_all
+2018-01-28 21:32:46,561 project.py [django:99] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'hg6668a.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'SP_NG_HK_153_113'}
+2018-01-28 21:42:42,529 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 21:42:44,658 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 21:42:44,729 project.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 21:42:44,729 project.py [django:35] [INFO]- 查询参数：query_all
+2018-01-28 21:42:48,115 project.py [django:99] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'hg6668a.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'SP_NG_HK_153_113'}
+2018-01-28 21:43:31,348 project.py [django:99] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'hg6668a.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'SP_NG_HK_153_113'}
+2018-01-28 21:43:39,625 project.py [django:99] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'hg6668a.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'SP_NG_HK_91_122'}
+2018-01-28 21:44:04,809 project.py [django:99] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'hg6668a.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'SP_NG_HK_162_91'}
+2018-01-28 21:44:23,461 project.py [django:99] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'uc22.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'CP_NG_HK_34_106'}
+2018-01-28 21:50:04,372 project.py [django:100] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'uc22.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'CP_NG_HK_85_10'}
+2018-01-28 21:50:29,565 project.py [django:100] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'uc22.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'CP_NG_HK_83_36'}
+2018-01-28 21:52:54,994 project.py [django:100] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'uc22.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'CP_NG_HK_83_36'}
+2018-01-28 21:53:35,617 project.py [django:100] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'uc22.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'CP_NG_HK_83_36'}
+2018-01-28 21:55:59,364 project.py [django:100] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'uc22.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'CP_NG_HK_83_36'}
+2018-01-28 21:56:27,480 project.py [django:100] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'uc22.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'CP_NG_HK_224_181'}
+2018-01-28 21:57:55,875 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 21:57:55,887 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 95, in ProjectCheckServer
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-01-28 21:57:55,888 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 95, in ProjectCheckServer
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-01-28 21:57:58,160 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 21:57:58,229 project.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 21:57:58,229 project.py [django:35] [INFO]- 查询参数：query_all
+2018-01-28 21:59:22,036 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 21:59:23,747 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 21:59:23,815 project.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 21:59:23,816 project.py [django:35] [INFO]- 查询参数：query_all
+2018-01-28 22:00:02,859 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 22:00:04,381 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 22:00:04,450 project.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 22:00:04,450 project.py [django:35] [INFO]- 查询参数：query_all
+2018-01-28 22:01:11,885 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 22:01:13,417 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 22:01:13,483 project.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 22:01:13,483 project.py [django:35] [INFO]- 查询参数：query_all
+2018-01-28 22:01:25,092 project.py [django:100] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'uc22.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'CP_NG_HK_224_181'}
+2018-01-28 22:02:14,608 base.py [django.request:170] [WARNING]- Not Found: /tomcat/tomcat_url/Query
+2018-01-28 22:06:37,352 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 22:06:37,361 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 95, in ProjectCheckServer
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-01-28 22:06:39,005 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 22:06:39,069 project.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 22:06:39,069 project.py [django:35] [INFO]- 查询参数：query_all
+2018-01-28 22:07:37,388 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 22:07:38,959 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 22:07:39,026 project.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 22:07:39,026 project.py [django:35] [INFO]- 查询参数：query_all
+2018-01-28 22:07:41,888 project.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 22:07:41,888 project.py [django:35] [INFO]- 查询参数：query_inactive
+2018-01-28 22:07:43,888 project.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 22:07:43,888 project.py [django:35] [INFO]- 查询参数：query_active
+2018-01-28 22:07:46,108 project.py [django:66] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 0, u'id': 1}
+2018-01-28 22:07:47,543 project.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 22:07:47,543 project.py [django:35] [INFO]- 查询参数：query_active
+2018-01-28 22:07:54,618 project.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 22:07:54,618 project.py [django:35] [INFO]- 查询参数：query_inactive
+2018-01-28 22:07:56,299 project.py [django:66] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 1, u'id': 1}
+2018-01-28 22:07:58,857 project.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 22:07:58,858 project.py [django:35] [INFO]- 查询参数：query_active
+2018-01-28 22:08:41,717 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2018-01-28 22:08:42,905 project.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 22:08:42,905 project.py [django:35] [INFO]- 查询参数：query_all
+2018-01-28 22:08:50,115 project.py [django:100] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'hg6668a.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'SP_NG_HK_55_122'}
+2018-01-28 22:08:54,335 project.py [django:100] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'uc22.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'CP_NG_HK_34_106'}
+2018-01-28 22:46:33,345 project.py [django:100] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'hg6668a.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'SP_NG_HK_118_42'}
+2018-01-28 22:46:37,765 project.py [django:100] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'uc22.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'CP_NG_HK_50_4'}
+2018-01-28 22:47:08,950 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 95, in ProjectCheckServer
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-01-28 22:47:08,950 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 95, in ProjectCheckServer
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-01-28 22:47:08,950 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 95, in ProjectCheckServer
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-01-28 22:47:08,950 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 95, in ProjectCheckServer
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-01-28 22:48:44,107 views.py [django:24] [INFO]- 127.0.0.1 is requesting /
+2018-01-28 22:48:45,983 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2018-01-28 22:48:49,267 views.py [django:47] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-01-28 22:48:49,322 project.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-01-28 22:48:49,322 project.py [django:35] [INFO]- 查询参数：query_all
+2018-01-28 22:48:57,290 project.py [django:100] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'uc22.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'CP_NG_HK_50_4'}
+2018-01-28 22:50:15,017 project.py [django:100] [INFO]- 127.0.0.1 is requesting. /monitor/project/CheckServer 执行参数：{u'domain': u'uc22.com', u'server_type': u'nginx', u'uri': u'/', u'minion_id': u'CP_NG_HK_50_4'}

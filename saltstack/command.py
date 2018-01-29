@@ -2,7 +2,7 @@
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
-from monitor import settings
+from phxweb import settings
 from saltstack.saltapi import SaltAPI
 import json, logging, yaml
 

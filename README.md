@@ -4,3 +4,4 @@
 20180122 yum install mysql-devel |pip install mysql-python
 20180127 add monitor project_t minion_t and modify the js, html, views. new add project.py
 20180127 add scripts and check_services
+20180128 create check_services web

@@ -11,21 +11,22 @@ window.modal_head = document.getElementById("progress_head");
 //初始化表格
 var tableInit = {
     Init: function () {
-        this.dbclick();
+        //this.dbclick();
         //绑定table的viewmodel
         this.myViewModel = new ko.bootstrapTableViewModel({
             url: '/monitor/project/Query',         //请求后台的URL（*）
             method: 'post',                      //请求方式（*）
             dataType: "json",
             toolbar: '#toolbar',                //工具按钮用哪个容器
+            clickToSelect: false,
             queryParams: function (param) {
                 return { limit: param.limit, offset: param.offset, 'act':'query_all' };
             },//传递参数（*）
             columns: [
-                {
-                    checkbox: true,
-                    width:'2%',
-                },
+                //{
+                //    checkbox: true,
+                //    width:'2%',
+                //},
                 {
                     field: 'id',
                     title: 'id',
@@ -72,7 +73,7 @@ var tableInit = {
                     field: 'domain',
                     title: '域名',
                     sortable: true,
-                    width:'15%',
+                    width:'auto',
                     //align: 'center',
                     //events: this.cur_statusEvents,
                     formatter: this.cur_statusFormatter
@@ -176,21 +177,21 @@ window.operateStatusEvents = {
             status,
         };
         if (document.getElementById(row.id).checked){
-            postData.status = 'active';
+            postData.status = 1;
             //console.log(postData);
         }else {
-            postData.status = 'inactive';
+            postData.status = 0;
             //console.log(postData);
         }
         $.ajax({
-            url: "/tomcat/tomcat_url/UpdateStatus",
+            url: "/monitor/project/UpdateStatus",
             type: "post",
             data: JSON.stringify(postData),
             success: function (data, status) {
-                if (postData.status == 'active'){
-                    toastr.success(row.project+": "+row.url, '监控项已启用');
+                if (postData.status == 1){
+                    toastr.success(row.product+"_"+row.project+": "+row.domain, '监控项已启用');
                 }else {
-                    toastr.warning(row.project+": "+row.url, '监控项已禁用');
+                    toastr.warning(row.product+"_"+row.project+": "+row.domain, '监控项已禁用');
                 }
                 
                 //ko.cleanNode(document.getElementById("tomcat_table"));
@@ -199,7 +200,7 @@ window.operateStatusEvents = {
                 //tableInit.myViewModel.refresh();
             },
             error: function(XMLHttpRequest, textStatus, errorThrown){
-                if (postData.status == 'active'){
+                if (postData.status == 1){
                     document.getElementById(row.id).checked = false;
                 }else {
                     document.getElementById(row.id).checked = true;
@@ -224,7 +225,7 @@ window.operateEvents = {
             minion_id:row.minion_id,
             server_type:row.server_type,
             domain:row.domain,
-            url:row.url,
+            uri:row.uri,
         };
         modal_results.innerHTML = "";
         modal_footer.innerHTML = "";
@@ -232,7 +233,7 @@ window.operateEvents = {
         $("#progress_bar").css("width", "30%");
         modal_head.style.color = 'blue';
         modal_head.innerHTML = "操作进行中，请勿刷新页面......";
-        var socket = new WebSocket("ws://" + window.location.host + "/tomcat/tomcat_url/CheckServer");
+        var socket = new WebSocket("ws://" + window.location.host + "/monitor/project/CheckServer");
         socket.onopen = function () {
             //console.log('WebSocket open');//成功连接上Websocket
             socket.send(JSON.stringify(postData));
@@ -248,24 +249,25 @@ window.operateEvents = {
             //console.log('message: ' + data);//打印服务端返回的数据
             if (data.step == 'one'){
                 $("#progress_bar").css("width", "50%");
+                $('#Checkresults').append('<p> 产品名:&thinsp;<strong>' + row.product + '</strong></p>' );
                 $('#Checkresults').append('<p> 项目名:&thinsp;<strong>' + row.project + '</strong></p>' );
                 $('#Checkresults').append('<p> 服务器地址:&thinsp;<strong>' + row.minion_id + '</strong></p>' );
                 $('#Checkresults').append('<p> 服务类型:&thinsp;<strong>' + row.server_type + '</strong></p>' );
                 $('#Checkresults').append('<p> 角色:&thinsp;<strong>' + row.role + '</strong></p>' );
                 $('#Checkresults').append('<p> 域名:&thinsp;<strong>' + row.domain + '</strong></p>' );
-                $('#Checkresults').append('<p> 检测地址:&thinsp;<strong>' + row.url + '</strong></p>' );
+                $('#Checkresults').append('<p> 检测地址:&thinsp;<strong>' + row.uri + '</strong></p>' );
                 $('#Checkresults').append('<hr>' );
             }else if (data.step == 'final'){
                 $("#progress_bar").css("width", "100%");
                 modal_head.innerHTML = "检测完成！";
                 $('#Checkresults').append('<p> 检测时间:&thinsp;<strong>' + data.access_time + '</strong></p>' );
                 $('#Checkresults').append('<p> 检测状态:&thinsp;<strong>' + data.code + '</strong></p>' );
-                $('#Checkresults').append('<p> 备注:&thinsp;<strong>' + data.info + '</strong></p>' );
+                //$('#Checkresults').append('<p> 备注:&thinsp;<strong>' + data.info + '</strong></p>' );
                 //setTimeout("document.getElementById('progress_bar_div').hidden = true;", 1000)
                 //console.log('websocket已关闭');
                 modal_footer.innerHTML = '<button id="close_modal" type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>'
             }
-        }; 
+        };
         return false;
     },
 }; 
@@ -329,7 +331,7 @@ var operate = {
         this.operateAdd();
         this.operateUpdate();
         this.operateconfirmDelete();
-        this.operateTomcatUrlSelect();
+        this.operateMonitorPorjectSelect();
         //this.operateDelete();
         this.DepartmentModel = {
             id: ko.observable(),
@@ -355,13 +357,13 @@ var operate = {
         });
     },
 
-    operateTomcatUrlSelect: function(){
-        $('#tomcat_url_active').on("click", function () {
-            document.getElementById('tomcat_url_active').disabled = true;
-            document.getElementById('tomcat_url_inactive').disabled = false;
-            document.getElementById('tomcat_url_all').disabled = false;
+    operateMonitorPorjectSelect: function(){
+        $('#project_active').on("click", function () {
+            document.getElementById('project_active').disabled = true;
+            document.getElementById('project_inactive').disabled = false;
+            document.getElementById('project_all').disabled = false;
             var params = {
-                url: '/tomcat/tomcat_url/Query',
+                url: '/monitor/project/Query',
                 method: 'post',
                 singleSelect: false,
                 queryParams: function (param) {
@@ -370,12 +372,12 @@ var operate = {
             }
             tableInit.myViewModel.refresh(params);
         });
-        $('#tomcat_url_inactive').on("click", function () {
-            document.getElementById('tomcat_url_active').disabled = false;
-            document.getElementById('tomcat_url_inactive').disabled = true;
-            document.getElementById('tomcat_url_all').disabled = false;
+        $('#project_inactive').on("click", function () {
+            document.getElementById('project_active').disabled = false;
+            document.getElementById('project_inactive').disabled = true;
+            document.getElementById('project_all').disabled = false;
             var params = {
-                url: '/tomcat/tomcat_url/Query',
+                url: '/monitor/project/Query',
                 method: 'post',
                 singleSelect: false,                                                
                 queryParams: function (param) {
@@ -384,12 +386,12 @@ var operate = {
             }
             tableInit.myViewModel.refresh(params);
         });
-        $('#tomcat_url_all').on("click", function () {
-            document.getElementById('tomcat_url_active').disabled = false;
-            document.getElementById('tomcat_url_inactive').disabled = false;
-            document.getElementById('tomcat_url_all').disabled = true;
+        $('#project_all').on("click", function () {
+            document.getElementById('project_active').disabled = false;
+            document.getElementById('project_inactive').disabled = false;
+            document.getElementById('project_all').disabled = true;
             var params = {
-                url: '/tomcat/tomcat_url/Query',
+                url: '/monitor/project/Query',
                 method: 'post',
                 singleSelect: false,
                 queryParams: function (param) {
@@ -402,7 +404,7 @@ var operate = {
 
     operateCheckStatus: function () {
         $.ajax({
-            url: "/tomcat/UpdateCheckStatus",
+            url: "/monitor/UpdateCheckStatus",
             type: "get",
             success: function (datas, status) {
                 var data = eval(datas);
@@ -689,7 +691,7 @@ var operate = {
         $('#btn_delete').on("click", function () {
             var arrselectedData = tableInit.myViewModel.getSelections();
             $.ajax({
-                url: "/tomcat/tomcat_url/Delete",
+                url: "/tomcat/project/Delete",
                 type: "post",
                 contentType: 'application/json',
                 data: JSON.stringify(arrselectedData),
@@ -740,7 +742,7 @@ var operate = {
             var oDataModel = ko.toJS(oViewModel);
             //var funcName = oDataModel.id?"Update":"Add";
             $.ajax({
-                url: "/tomcat/tomcat_url/"+funcName,
+                url: "/tomcat/project/"+funcName,
                 type: "post",
                 data: oDataModel,
                 success: function (data, status) {

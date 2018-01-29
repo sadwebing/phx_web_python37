@@ -731,3 +731,342 @@ Traceback (most recent call last):
   File "J:\arno\pythonenv\phx_web\monitor\project.py", line 34, in ProjectQuery
     logger.info('æŸ¥è¯¢å‚æ•°ï¼š%s' %act)
 UnicodeDecodeError: 'ascii' codec can't decode byte 0xe6 in position 0: ordinal not in range(128)
+2018-01-28 18:18:43,961 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/Query
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 31, in ProjectQuery
+    datas = project_t.objects.filter(status='inactive')
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 679, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 697, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\query.py", line 1301, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\query.py", line 1328, in _add_q
+    current_negated=current_negated, connector=connector, allow_joins=allow_joins)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\query.py", line 1200, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\query.py", line 1096, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 96, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 134, in get_prep_lookup
+    return self.lhs.output_field.get_prep_lookup(self.lookup_name, self.rhs)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\fields\__init__.py", line 1874, in get_prep_lookup
+    return super(IntegerField, self).get_prep_lookup(lookup_type, value)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\fields\__init__.py", line 727, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\fields\__init__.py", line 1868, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'inactive'
+2018-01-28 18:45:56,865 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 10, in <module>
+    url('^project/CheckServer$', views.ProjectCheckServer, name='ProjectCheckServer'),
+AttributeError: 'module' object has no attribute 'ProjectCheckServer'
+2018-01-28 18:46:34,533 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 98, in ProjectCheckServer
+    logger.info('%s is requesting. %s æ‰§è¡Œå‚æ•°ï¼š%s' %(clientip, request.get_full_path(), data))
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe6 in position 3: ordinal not in range(128)
+2018-01-28 18:47:15,786 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 98, in ProjectCheckServer
+    logger.info('%s is requesting. %s æ‰§è¡Œå‚æ•°ï¼š%s' %(clientip, request.get_full_path(), data))
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe6 in position 3: ordinal not in range(128)
+2018-01-28 18:50:14,661 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 140, in ProjectCheckServer
+    commandexe = Command(data['minion_id'], 'test.ping')
+NameError: global name 'Command' is not defined
+2018-01-28 18:51:02,108 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 7, in <module>
+    from saltstack.command import Command
+ImportError: No module named saltstack.command
+2018-01-28 19:08:44,947 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/UpdateStatus
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 68, in ProjectUpdateStatus
+    info = tomcat_url.objects.get(id=data['id'])
+NameError: global name 'tomcat_url' is not defined
+2018-01-28 21:15:06,730 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 140, in ProjectCheckServer
+    commandexe = Command(data['minion_id'], 'test.ping')
+NameError: global name 'Command' is not defined
+2018-01-28 21:15:59,845 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 140, in ProjectCheckServer
+    commandexe = Command(data['minion_id'], 'test.ping')
+NameError: global name 'Command' is not defined
+2018-01-28 21:18:33,118 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 8, in <module>
+    from saltstack.command import Command
+  File "J:\arno\pythonenv\phx_web\saltstack\command.py", line 5, in <module>
+    from monitor import settings
+ImportError: cannot import name settings
+2018-01-28 21:19:25,960 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\pythonenv\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\pythonenv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\pythonenv\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\pythonenv\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 8, in <module>
+    from saltstack.command import Command
+  File "J:\arno\pythonenv\phx_web\saltstack\command.py", line 7, in <module>
+    import json, logging, yaml
+ImportError: No module named yaml
+2018-01-28 21:32:03,438 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 111, in ProjectCheckServer
+    info_final['url'] = "http://" + minion.ip_addr + data['uri']
+KeyError: 'uri'
+2018-01-28 21:57:55,887 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 95, in ProjectCheckServer
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-01-28 21:57:55,888 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 95, in ProjectCheckServer
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-01-28 22:06:37,361 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 95, in ProjectCheckServer
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-01-28 22:47:08,950 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 95, in ProjectCheckServer
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-01-28 22:47:08,950 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 95, in ProjectCheckServer
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-01-28 22:47:08,950 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 95, in ProjectCheckServer
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-01-28 22:47:08,950 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/CheckServer
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\monitor\project.py", line 95, in ProjectCheckServer
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
