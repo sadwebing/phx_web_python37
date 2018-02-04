@@ -46,7 +46,7 @@ TG_API = {
 
 #saltstack api
 SALT_API = {
-    'url':"https://103.99.62.71:8000/",
+    'url':"https://58.64.145.50:8000/",
     #'url_glb':"https://172.20.10.109:8000/",
     'user':"api",
     'password':"phexus666",
@@ -109,7 +109,7 @@ DATABASES = {
         # The following settings are not used with sqlite3:
         'USER': 'phxweb',
         'PASSWORD': 'phexus666',
-        'HOST': '103.99.62.71',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'HOST': '58.64.145.50',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
         'OPTIONS': {
             #'init_command': 'SET sql_mode=STRICT_TRANS_TABLES',
