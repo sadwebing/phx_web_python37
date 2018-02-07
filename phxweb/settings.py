@@ -64,6 +64,7 @@ INSTALLED_APPS = (
     'accounts',
     'monitor',
     'saltstack',
+    'cfapi',
 )
 
 MIDDLEWARE_CLASSES = (
