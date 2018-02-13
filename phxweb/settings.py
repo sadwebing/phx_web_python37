@@ -32,7 +32,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/home'
 
 LOGIN_URL = '/accounts/login'
 
@@ -43,6 +43,9 @@ TG_API = {
         'salt_minion_alert': '-275535278',
     }
 }
+
+#cloudflare api
+CF_URL = 'https://api.cloudflare.com/client/v4/zones'
 
 #saltstack api
 SALT_API = {
@@ -64,7 +67,7 @@ INSTALLED_APPS = (
     'accounts',
     'monitor',
     'saltstack',
-    'cfapi',
+    'dns',
 )
 
 MIDDLEWARE_CLASSES = (

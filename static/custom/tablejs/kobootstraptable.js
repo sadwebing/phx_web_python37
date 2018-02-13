@@ -66,6 +66,9 @@ ko.bindingHandlers.myBootstrapTable = {
         this.refreshOptions = function () {
             that.bootstrapTable("refreshOptions");
         };
+        this.hidecolumn = function (params) {
+            that.bootstrapTable("hideColumn", params);
+        };
     };
 })(jQuery);
 

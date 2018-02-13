@@ -13,15 +13,13 @@
 					</li>
 					{% endcomment %}
 					{% if role = 'sa' %}
-					<li id='tomcat_saltstack'>
+					<li id='monitor_saltstack'>
 						<i class="glyphicon glyphicon-list-alt text-primary"> <span> 监控与部署 </span></i>
 						<ul>
-							<li id="tomcat">
+							<li id="monitor">
 								<i class="glyphicon glyphicon-text-height text-primary"> <span> Monitor </span></i>
 								<ul>
-								    <li><a ui-sref="monitor_services"><i class="glyphicon glyphicon-edit"></i>   services</a></li>{% comment %}
-								    <li><a ui-sref="tomcat_project"><i class="glyphicon glyphicon-edit"></i>   工程列表</a></li>
-								    {% endcomment %}
+								    <li><a ui-sref="monitor_services"><i class="glyphicon glyphicon-edit"></i>   services</a></li>
 								</ul>
 							</li>
 							{% comment %}
@@ -36,6 +34,12 @@
 								</ul>
 							</li>
 							{% endcomment %}
+						</ul>
+					</li>
+					<li id="dns">
+						<i class="glyphicon glyphicon-sort text-primary"> <span>域名中心</span></i>
+						<ul>  
+						    <li><a ui-sref="dns_cloudflare"><i class="glyphicon glyphicon-align-right"></i>   CloudFlare</a></li>
 						</ul>
 					</li>
 					{% comment %}
@@ -71,8 +75,8 @@
         closingCascade: true, // 级联关闭所有菜单，仅对垂直导航菜单有效
         destroy: true // 切换菜单时是否释放控件占用资源
     });
-    $('#tomcat_saltstack').children('ul').slideDown();
-    $('#malfunction').children('ul').slideDown();
+    $('#monitor_saltstack').children('ul').slideDown();
+    $('#dns').children('ul').slideDown();
     $('#tomcat').children('ul').slideDown();
     $('#saltstack').children('ul').slideDown();
     $('#upgrade').children('ul').slideDown();

@@ -20,7 +20,10 @@ def index(request):
         role = request.user.userprofile.role
     except:
         role = 'none'
-    clientip = request.META['REMOTE_ADDR']
+    if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+        clientip = request.META['HTTP_X_FORWARDED_FOR']
+    else:
+        clientip = request.META['REMOTE_ADDR']
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
     return render(
         request,
@@ -43,7 +46,10 @@ def Services(request):
         role = request.user.userprofile.role
     except:
         role = 'none'
-    clientip = request.META['REMOTE_ADDR']
+    if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+        clientip = request.META['HTTP_X_FORWARDED_FOR']
+    else:
+        clientip = request.META['REMOTE_ADDR']
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
     return render(
         request,

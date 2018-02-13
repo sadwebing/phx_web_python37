@@ -21,9 +21,9 @@ TcbsApp.config(function ($stateProvider, $urlRouterProvider) {
             url:"/services",
             templateUrl: "/monitor/services"
         })
-        .state("tomcat_project", {
-            url:"/tomcat_project",
-            templateUrl: "/tomcat/project/"
+        .state("dns_cloudflare", {
+            url:"/dns/cloudflare",
+            templateUrl: "/dns/cloudflare/index"
         })
         .state("saltstack_command", {
             url:"/saltstack_command",
