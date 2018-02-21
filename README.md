@@ -7,3 +7,4 @@
 20180128 create check_services web
 20180207 add cfapi
 20180213 dns-cloudflare online
+20180221 add /dns/cloudflare/update_api_route

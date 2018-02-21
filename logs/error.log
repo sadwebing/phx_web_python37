@@ -3703,3 +3703,21 @@ Traceback (most recent call last):
   File "c:\python27\Lib\json\decoder.py", line 364, in decode
     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
 TypeError: expected string or buffer
+2018-02-18 20:12:04,351 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\dns\cf.py", line 31, in GetProductRecords
+    total_pages = result['result_info']['total_pages']
+KeyError: 'result_info'
+2018-02-18 20:16:29,437 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\dns\cf.py", line 32, in GetProductRecords
+    total_pages = result['result_info']['total_pages']
+KeyError: 'result_info'

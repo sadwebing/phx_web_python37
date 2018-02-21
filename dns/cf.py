@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseForbidden
 from dwebsocket import require_websocket
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
-from models import cf_account
+from models import cf_account, domain_info
 from cf_api import CfApi
 from accounts.views import HasPermission
 from phxweb.settings import CF_URL
@@ -56,6 +56,7 @@ def GetZoneRecords(request):
             clientip = request.META['REMOTE_ADDR']
         logger.info('[POST]%s is requesting. %s' %(clientip, request.get_full_path()))
         data = json.loads(request.body)['postdata']
+        logger.info(data)
         record_list = []
         for zone in data:
             cf_acc = cf_account.objects.filter(name=zone['product']).first()
@@ -121,3 +122,46 @@ def UpdateRecords(request):
 
         ### close websocket ###
         request.websocket.close()
+
+@csrf_exempt
+def UpdateApiRoute(request):
+    if request.method == 'POST':
+        clientip = request.META['REMOTE_ADDR']
+        data = json.loads(request.body)
+        logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
+
+        domain_l = domain_info.objects.filter(domain=data['domain']).all()
+        zone_id = domain_l[0].zone_id
+        record_id = domain_l[0].record_id
+        return_info = {}
+        product = domain_l[0].product
+
+        cf_acc = cf_account.objects.filter(name=product).first()
+        cfapi = CfApi(CF_URL, cf_acc.email, cf_acc.key)
+
+        if data['route'] == 'cloudflare':
+            proxied = True
+        else:
+            proxied = False
+
+        if data['route'] == 'nginx':
+            r_type = 'A'
+            content = [domain_i.content for domain_i in domain_l if domain_i.route == 'nginx' ]
+        elif data['route'] == 'cloudflare':
+            r_type = 'A'
+            content = [domain_i.content for domain_i in domain_l if domain_i.route == 'cloudflare' ]
+        elif data['route'] == 'aegins':
+            r_type = 'CNAME'
+            content = [domain_i.content for domain_i in domain_l if domain_i.route == 'aegins' ]
+
+        result = cfapi.UpdateDnsRecords(zone_id, r_type, data['domain'], content[0], proxied=proxied, record_id=record_id)
+
+        #logger.info(result)
+
+        if not result['success']:
+            return_info['result'] = False
+            logger.info(result)
+        else:
+            return_info['result'] = True
+        #logger.info(return_info)
+        return HttpResponse(json.dumps(return_info))

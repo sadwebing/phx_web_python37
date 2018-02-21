@@ -150,7 +150,7 @@ var tableInit = {
 var operate = {
     //初始化按钮事件
     operateInit: function () {
-        tableInit.myViewModel.hidecolumn('zone_id');
+        //tableInit.myViewModel.hidecolumn('zone_id');
         //this.operateCheckStatus();
         this.isIp();
         this.selectpicker();
