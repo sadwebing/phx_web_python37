@@ -133,10 +133,11 @@ def UpdateApiRoute(request):
         domain_l = domain_info.objects.filter(domain=data['domain']).all()
         zone_id = domain_l[0].zone_id
         record_id = domain_l[0].record_id
+        cf_account_name = domain_l[0].cf_account_name
         return_info = {}
-        product = domain_l[0].product
+        r_type = 'CNAME'
 
-        cf_acc = cf_account.objects.filter(name=product).first()
+        cf_acc = cf_account.objects.filter(name=cf_account_name).first()
         cfapi = CfApi(CF_URL, cf_acc.email, cf_acc.key)
 
         if data['route'] == 'cloudflare':
@@ -145,13 +146,10 @@ def UpdateApiRoute(request):
             proxied = False
 
         if data['route'] == 'nginx':
-            r_type = 'A'
             content = [domain_i.content for domain_i in domain_l if domain_i.route == 'nginx' ]
         elif data['route'] == 'cloudflare':
-            r_type = 'A'
             content = [domain_i.content for domain_i in domain_l if domain_i.route == 'cloudflare' ]
         elif data['route'] == 'aegins':
-            r_type = 'CNAME'
             content = [domain_i.content for domain_i in domain_l if domain_i.route == 'aegins' ]
 
         result = cfapi.UpdateDnsRecords(zone_id, r_type, data['domain'], content[0], proxied=proxied, record_id=record_id)
@@ -160,8 +158,26 @@ def UpdateApiRoute(request):
 
         if not result['success']:
             return_info['result'] = False
-            logger.info(result)
+            logger.error(result)
         else:
             return_info['result'] = True
         #logger.info(return_info)
+        return HttpResponse(json.dumps(return_info))
+
+@csrf_exempt
+def GetApiRoute(request):
+    if request.method == 'GET':
+        clientip = request.META['REMOTE_ADDR']
+        data = json.loads(request.body)
+        logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
+
+        return_info = {}
+        api_list = domain_info.objects.filter(domain=data['product'], status=1).all()
+        for info in api_list:
+            return_info['product'] = info.product
+            return_info['client'] = info.client
+            return_info['domain'] = info.domain
+            return_info['content'] = info.content
+            return_info['route_status'] = info.route_status
+            return_info['route'] = info.route
         return HttpResponse(json.dumps(return_info))

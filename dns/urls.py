@@ -9,4 +9,5 @@ urlpatterns = [
     url('^cloudflare/get_zone_records$', views.GetZoneRecords, name='GetZoneRecords'),
     url('^cloudflare/update_records$', views.UpdateRecords, name='UpdateRecords'),
     url('^cloudflare/update_api_route$', views.UpdateApiRoute, name='UpdateApiRoute'),
+    url('^cloudflare/get_api_route$', views.GetApiRoute, name='GetApiRoute'),
 ]

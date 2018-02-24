@@ -1,0 +1,21 @@
+################  富豪/三德/668  ################
+###  android  ###
+sd android 668android.7557b.com lebo 	nginx 		api.ng.cdnlebo.com
+sd android 668android.7557b.com lebo 	cloudflare 	668.cf.cdnlebo.com
+sd android 668android.7557b.com lebo 	aegins 		70887_v1.aegins.cc
+sd android asd.208608.com 		richer 	nginx 		api.ng.cdnlebo.com
+sd android asd.208608.com 		richer 	cloudflare 	668.cf.cdnlebo.com
+
+###  ios  ###
+sd ios sdios.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com
+sd ios sdios.7557b.com 	lebo 	cloudflare 	668.cf.cdnlebo.com
+sd ios sdios.7557b.com 	lebo 	aegins 		70887_v1.aegins.cc
+sd ios api.668cp.me 	richer 	nginx 		api.ng.cdnlebo.com
+sd ios api.668cp.me 	richer 	cloudflare 	668.cf.cdnlebo.com
+
+###  pc/wap  ###
+#sd pc 668api.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com
+sd pc 668api.7557b.com 	lebo 	cloudflare 	668.cf.cdnlebo.com
+sd pc 668api.7557b.com 	lebo 	aegins 		70887_v1.aegins.cc
+sd pc app.97bei.com		richer 	nginx 		api.ng.cdnlebo.com
+sd pc app.97bei.com		richer 	cloudflare 	668.cf.cdnlebo.com

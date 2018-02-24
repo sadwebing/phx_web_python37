@@ -8,3 +8,4 @@
 20180207 add cfapi
 20180213 dns-cloudflare online
 20180221 add /dns/cloudflare/update_api_route
+20180224 add /dns/cloudflare/get_api_route

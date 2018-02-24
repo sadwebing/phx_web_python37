@@ -5441,3 +5441,266 @@ KeyError: 'result_info'
 2018-02-21 17:08:22,463 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
 2018-02-21 17:08:35,933 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
 2018-02-21 17:08:35,933 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-21 17:23:41,187 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-21 17:23:41,187 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-21 17:24:01,404 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-21 17:24:01,404 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-21 18:00:51,193 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-21 18:00:51,193 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-21 18:01:30,697 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-21 18:01:30,697 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-22 16:52:33,285 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-02-22 16:52:34,428 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-02-22 16:52:34,486 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',)]
+2018-02-22 16:52:35,226 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-22 16:52:37,404 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-02-22 16:52:39,055 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-02-22 16:52:39,101 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',)]
+2018-02-22 16:52:39,230 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-22 17:01:46,892 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-22 17:02:01,131 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-22 17:02:01,744 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-22 17:02:26,378 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-22 17:02:27,543 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-22 17:05:12,364 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-22 17:05:17,967 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-22 17:05:17,969 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-22 17:06:40,535 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-02-22 17:06:40,582 cf_api.py [django:57] [INFO]- record_id: c9971d242c5ff1b950bc186b025a110e
+2018-02-22 17:06:40,582 cf_api.py [django:68] [INFO]- https://api.cloudflare.com/client/v4/zones/0ff175e252bdc8141ad3bf320b4d9522/dns_records/c9971d242c5ff1b950bc186b025a110e: {'content': u'668.cf.cdnlebo.com', 'proxied': True, 'type': u'CNAME', 'name': u'668android.7557b.com'}
+2018-02-22 17:06:40,960 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'668android.7557b.com', u'zone': u'7557b.com', u'proxied': True, u'content': u'202.65.216.195', u'0': True, u'record_id': u'c9971d242c5ff1b950bc186b025a110e', u'type': u'A', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}, 'step': 1, 'result': True}
+2018-02-22 17:06:40,960 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-02-22 17:06:44,734 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-22 17:06:44,734 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-22 17:08:01,996 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-22 17:08:07,536 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-22 17:08:07,536 cf.py [django:59] [INFO]- [{u'product': u'richer', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115', u'name': u'208608.com'}]
+2018-02-22 17:08:42,451 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-02-22 17:08:42,519 cf_api.py [django:57] [INFO]- record_id: 5a518f230102d57270af8128645e592e
+2018-02-22 17:08:42,519 cf_api.py [django:68] [INFO]- https://api.cloudflare.com/client/v4/zones/5d92f0bc9749f7fc90e627d528607115/dns_records/5a518f230102d57270af8128645e592e: {'content': u'668.cf.cdnlebo.com', 'proxied': True, 'type': u'CNAME', 'name': u'asd.208608.com'}
+2018-02-22 17:08:42,977 cf.py [django:120] [INFO]- {'record': {u'product': u'richer', u'name': u'asd.208608.com', u'zone': u'208608.com', u'proxied': True, u'content': u'202.65.216.195', u'0': True, u'record_id': u'5a518f230102d57270af8128645e592e', u'type': u'A', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115'}, 'step': 1, 'result': True}
+2018-02-22 17:08:42,980 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-02-22 17:08:46,569 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-22 17:08:46,569 cf.py [django:59] [INFO]- [{u'product': u'richer', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115', u'name': u'208608.com'}]
+2018-02-22 17:09:47,012 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-02-22 17:09:47,059 cf_api.py [django:57] [INFO]- record_id: 426aa5afd929a7b5a1c64ecc9b664469
+2018-02-22 17:09:47,059 cf_api.py [django:68] [INFO]- https://api.cloudflare.com/client/v4/zones/5d92f0bc9749f7fc90e627d528607115/dns_records/426aa5afd929a7b5a1c64ecc9b664469: {'content': u'668.cf.cdnlebo.com', 'proxied': True, 'type': u'CNAME', 'name': u'208608.com'}
+2018-02-22 17:09:47,403 cf.py [django:120] [INFO]- {'record': {u'product': u'richer', u'name': u'208608.com', u'zone': u'208608.com', u'proxied': True, u'content': u'202.65.216.195', u'0': True, u'record_id': u'426aa5afd929a7b5a1c64ecc9b664469', u'type': u'A', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115'}, 'step': 1, 'result': True}
+2018-02-22 17:09:47,450 cf_api.py [django:57] [INFO]- record_id: dd437e51aeae0911cf649ef4df996074
+2018-02-22 17:09:47,450 cf_api.py [django:68] [INFO]- https://api.cloudflare.com/client/v4/zones/5d92f0bc9749f7fc90e627d528607115/dns_records/dd437e51aeae0911cf649ef4df996074: {'content': u'668.cf.cdnlebo.com', 'proxied': True, 'type': u'CNAME', 'name': u'ag.208608.com'}
+2018-02-22 17:09:47,753 cf.py [django:120] [INFO]- {'record': {u'product': u'richer', u'name': u'ag.208608.com', u'zone': u'208608.com', u'proxied': True, u'content': u'202.65.216.195', u'0': True, u'record_id': u'dd437e51aeae0911cf649ef4df996074', u'type': u'A', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115'}, 'step': 2, 'result': True}
+2018-02-22 17:09:47,802 cf_api.py [django:57] [INFO]- record_id: 97381c5b6b7ee4362ce512bb62cba27d
+2018-02-22 17:09:47,802 cf_api.py [django:68] [INFO]- https://api.cloudflare.com/client/v4/zones/5d92f0bc9749f7fc90e627d528607115/dns_records/97381c5b6b7ee4362ce512bb62cba27d: {'content': u'668.cf.cdnlebo.com', 'proxied': True, 'type': u'CNAME', 'name': u'm.208608.com'}
+2018-02-22 17:09:48,111 cf.py [django:120] [INFO]- {'record': {u'product': u'richer', u'name': u'm.208608.com', u'zone': u'208608.com', u'proxied': True, u'content': u'202.65.216.195', u'0': True, u'record_id': u'97381c5b6b7ee4362ce512bb62cba27d', u'type': u'A', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115'}, 'step': 3, 'result': True}
+2018-02-22 17:09:48,158 cf_api.py [django:57] [INFO]- record_id: fbf188ac1bf28bd0a82d38ad3aa1f12a
+2018-02-22 17:09:48,158 cf_api.py [django:68] [INFO]- https://api.cloudflare.com/client/v4/zones/5d92f0bc9749f7fc90e627d528607115/dns_records/fbf188ac1bf28bd0a82d38ad3aa1f12a: {'content': u'668.cf.cdnlebo.com', 'proxied': True, 'type': u'CNAME', 'name': u'vip.208608.com'}
+2018-02-22 17:09:48,555 cf.py [django:120] [INFO]- {'record': {u'product': u'richer', u'name': u'vip.208608.com', u'zone': u'208608.com', u'proxied': True, u'content': u'202.65.216.195', u'0': True, u'record_id': u'fbf188ac1bf28bd0a82d38ad3aa1f12a', u'type': u'A', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115'}, 'step': 4, 'result': True}
+2018-02-22 17:09:48,601 cf_api.py [django:57] [INFO]- record_id: f10931361700823a4112fccb02233aed
+2018-02-22 17:09:48,601 cf_api.py [django:68] [INFO]- https://api.cloudflare.com/client/v4/zones/5d92f0bc9749f7fc90e627d528607115/dns_records/f10931361700823a4112fccb02233aed: {'content': u'668.cf.cdnlebo.com', 'proxied': True, 'type': u'CNAME', 'name': u'www.208608.com'}
+2018-02-22 17:09:48,940 cf.py [django:120] [INFO]- {'record': {u'product': u'richer', u'name': u'www.208608.com', u'zone': u'208608.com', u'proxied': True, u'content': u'202.65.216.195', u'0': True, u'record_id': u'f10931361700823a4112fccb02233aed', u'type': u'A', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115'}, 'step': 5, 'result': True}
+2018-02-22 17:09:48,941 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-02-22 17:09:57,993 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-22 17:09:57,993 cf.py [django:59] [INFO]- [{u'product': u'richer', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115', u'name': u'208608.com'}]
+2018-02-22 17:16:41,578 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-22 17:16:41,578 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}, {u'product': u'richer', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115', u'name': u'208608.com'}]
+2018-02-22 17:17:01,391 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-22 17:17:01,391 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-24 13:59:57,517 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-24 13:59:58,016 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-24 13:59:59,378 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-24 14:01:37,121 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-24 14:01:49,457 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-24 14:01:49,457 cf.py [django:59] [INFO]- [{u'product': u'ali', u'zone_id': u'2b745f320d92ba524d60428f29222d71', u'name': u'alcp88.com'}, {u'product': u'lebo', u'zone_id': u'bc05428392269ea902a6d167d5e1bacc', u'name': u'alcp22.com'}]
+2018-02-24 14:02:15,559 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-24 14:02:15,559 cf.py [django:59] [INFO]- [{u'product': u'ali', u'zone_id': u'd6a1939265983a130434dd0c1872a7f7', u'name': u'alcp66.com'}, {u'product': u'ali', u'zone_id': u'2b745f320d92ba524d60428f29222d71', u'name': u'alcp88.com'}, {u'product': u'lebo', u'zone_id': u'bc05428392269ea902a6d167d5e1bacc', u'name': u'alcp22.com'}]
+2018-02-24 14:03:33,249 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-02-24 14:03:33,296 cf_api.py [django:57] [INFO]- record_id: e8cac0084b0929c8d003cd16e89652fa
+2018-02-24 14:03:33,296 cf_api.py [django:68] [INFO]- https://api.cloudflare.com/client/v4/zones/d6a1939265983a130434dd0c1872a7f7/dns_records/e8cac0084b0929c8d003cd16e89652fa: {'content': u'web2.l5ali.com', 'proxied': False, 'type': u'CNAME', 'name': u'alcp66.com'}
+2018-02-24 14:03:33,644 cf.py [django:120] [INFO]- {'record': {u'product': u'ali', u'name': u'alcp66.com', u'zone': u'alcp66.com', u'proxied': True, u'content': u'115.85.148.204', u'0': True, u'record_id': u'e8cac0084b0929c8d003cd16e89652fa', u'type': u'A', u'zone_id': u'd6a1939265983a130434dd0c1872a7f7'}, 'step': 1, 'result': True}
+2018-02-24 14:03:33,693 cf_api.py [django:57] [INFO]- record_id: c37f688d70b43bdd5a9c9722b8755c1b
+2018-02-24 14:03:33,693 cf_api.py [django:68] [INFO]- https://api.cloudflare.com/client/v4/zones/d6a1939265983a130434dd0c1872a7f7/dns_records/c37f688d70b43bdd5a9c9722b8755c1b: {'content': u'web2.l5ali.com', 'proxied': False, 'type': u'CNAME', 'name': u'wap.alcp66.com'}
+2018-02-24 14:03:33,950 cf.py [django:120] [INFO]- {'record': {u'product': u'ali', u'name': u'wap.alcp66.com', u'zone': u'alcp66.com', u'proxied': True, u'content': u'115.85.148.204', u'0': True, u'record_id': u'c37f688d70b43bdd5a9c9722b8755c1b', u'type': u'A', u'zone_id': u'd6a1939265983a130434dd0c1872a7f7'}, 'step': 2, 'result': True}
+2018-02-24 14:03:33,997 cf_api.py [django:57] [INFO]- record_id: c6c71d685516c5fdae7826ee66916e8e
+2018-02-24 14:03:33,997 cf_api.py [django:68] [INFO]- https://api.cloudflare.com/client/v4/zones/d6a1939265983a130434dd0c1872a7f7/dns_records/c6c71d685516c5fdae7826ee66916e8e: {'content': u'web2.l5ali.com', 'proxied': False, 'type': u'CNAME', 'name': u'www.alcp66.com'}
+2018-02-24 14:03:34,301 cf.py [django:120] [INFO]- {'record': {u'product': u'ali', u'name': u'www.alcp66.com', u'zone': u'alcp66.com', u'proxied': True, u'content': u'115.85.148.204', u'0': True, u'record_id': u'c6c71d685516c5fdae7826ee66916e8e', u'type': u'A', u'zone_id': u'd6a1939265983a130434dd0c1872a7f7'}, 'step': 3, 'result': True}
+2018-02-24 14:03:34,378 cf_api.py [django:57] [INFO]- record_id: 48295ebdb65dea113a62d9b096c992d8
+2018-02-24 14:03:34,378 cf_api.py [django:68] [INFO]- https://api.cloudflare.com/client/v4/zones/2b745f320d92ba524d60428f29222d71/dns_records/48295ebdb65dea113a62d9b096c992d8: {'content': u'web2.l5ali.com', 'proxied': False, 'type': u'CNAME', 'name': u'alcp88.com'}
+2018-02-24 14:03:34,736 cf.py [django:120] [INFO]- {'record': {u'product': u'ali', u'name': u'alcp88.com', u'zone': u'alcp88.com', u'proxied': True, u'content': u'115.85.148.204', u'0': True, u'record_id': u'48295ebdb65dea113a62d9b096c992d8', u'type': u'A', u'zone_id': u'2b745f320d92ba524d60428f29222d71'}, 'step': 4, 'result': True}
+2018-02-24 14:03:34,783 cf_api.py [django:57] [INFO]- record_id: bc7921435bbd84e7bdfdfeec244fd377
+2018-02-24 14:03:34,783 cf_api.py [django:68] [INFO]- https://api.cloudflare.com/client/v4/zones/2b745f320d92ba524d60428f29222d71/dns_records/bc7921435bbd84e7bdfdfeec244fd377: {'content': u'web2.l5ali.com', 'proxied': False, 'type': u'CNAME', 'name': u'wap.alcp88.com'}
+2018-02-24 14:03:35,053 cf.py [django:120] [INFO]- {'record': {u'product': u'ali', u'name': u'wap.alcp88.com', u'zone': u'alcp88.com', u'proxied': True, u'content': u'115.85.148.204', u'0': True, u'record_id': u'bc7921435bbd84e7bdfdfeec244fd377', u'type': u'A', u'zone_id': u'2b745f320d92ba524d60428f29222d71'}, 'step': 5, 'result': True}
+2018-02-24 14:03:35,102 cf_api.py [django:57] [INFO]- record_id: 1bf7654eb5720db68fd2b81f623127d3
+2018-02-24 14:03:35,102 cf_api.py [django:68] [INFO]- https://api.cloudflare.com/client/v4/zones/2b745f320d92ba524d60428f29222d71/dns_records/1bf7654eb5720db68fd2b81f623127d3: {'content': u'web2.l5ali.com', 'proxied': False, 'type': u'CNAME', 'name': u'www.alcp88.com'}
+2018-02-24 14:03:35,371 cf.py [django:120] [INFO]- {'record': {u'product': u'ali', u'name': u'www.alcp88.com', u'zone': u'alcp88.com', u'proxied': True, u'content': u'115.85.148.204', u'0': True, u'record_id': u'1bf7654eb5720db68fd2b81f623127d3', u'type': u'A', u'zone_id': u'2b745f320d92ba524d60428f29222d71'}, 'step': 6, 'result': True}
+2018-02-24 14:03:35,417 cf_api.py [django:57] [INFO]- record_id: 11a3f6a71d473e665c1e5d3e465ef30c
+2018-02-24 14:03:35,417 cf_api.py [django:68] [INFO]- https://api.cloudflare.com/client/v4/zones/bc05428392269ea902a6d167d5e1bacc/dns_records/11a3f6a71d473e665c1e5d3e465ef30c: {'content': u'web2.l5ali.com', 'proxied': False, 'type': u'CNAME', 'name': u'alcp22.com'}
+2018-02-24 14:03:35,726 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'alcp22.com', u'zone': u'alcp22.com', u'proxied': True, u'content': u'115.85.148.204', u'0': True, u'record_id': u'11a3f6a71d473e665c1e5d3e465ef30c', u'type': u'A', u'zone_id': u'bc05428392269ea902a6d167d5e1bacc'}, 'step': 7, 'result': True}
+2018-02-24 14:03:35,775 cf_api.py [django:57] [INFO]- record_id: 79283f0735da50896fe0ae519016df6b
+2018-02-24 14:03:35,775 cf_api.py [django:68] [INFO]- https://api.cloudflare.com/client/v4/zones/bc05428392269ea902a6d167d5e1bacc/dns_records/79283f0735da50896fe0ae519016df6b: {'content': u'web2.l5ali.com', 'proxied': False, 'type': u'CNAME', 'name': u'wap.alcp22.com'}
+2018-02-24 14:03:36,180 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'wap.alcp22.com', u'zone': u'alcp22.com', u'proxied': True, u'content': u'115.85.148.204', u'0': True, u'record_id': u'79283f0735da50896fe0ae519016df6b', u'type': u'A', u'zone_id': u'bc05428392269ea902a6d167d5e1bacc'}, 'step': 8, 'result': True}
+2018-02-24 14:03:36,229 cf_api.py [django:57] [INFO]- record_id: 4ca5e4984506553934a339fa90eaf4fb
+2018-02-24 14:03:36,229 cf_api.py [django:68] [INFO]- https://api.cloudflare.com/client/v4/zones/bc05428392269ea902a6d167d5e1bacc/dns_records/4ca5e4984506553934a339fa90eaf4fb: {'content': u'web2.l5ali.com', 'proxied': False, 'type': u'CNAME', 'name': u'www.alcp22.com'}
+2018-02-24 14:03:36,520 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'www.alcp22.com', u'zone': u'alcp22.com', u'proxied': True, u'content': u'115.85.148.204', u'0': True, u'record_id': u'4ca5e4984506553934a339fa90eaf4fb', u'type': u'A', u'zone_id': u'bc05428392269ea902a6d167d5e1bacc'}, 'step': 9, 'result': True}
+2018-02-24 14:03:36,523 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-02-24 14:03:39,897 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-24 14:03:39,897 cf.py [django:59] [INFO]- [{u'product': u'ali', u'zone_id': u'd6a1939265983a130434dd0c1872a7f7', u'name': u'alcp66.com'}, {u'product': u'ali', u'zone_id': u'2b745f320d92ba524d60428f29222d71', u'name': u'alcp88.com'}, {u'product': u'lebo', u'zone_id': u'bc05428392269ea902a6d167d5e1bacc', u'name': u'alcp22.com'}]
+2018-02-24 14:38:46,263 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-24 15:31:14,207 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/dns/domain_info/
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\pythonenv\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\pythonenv\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\pythonenv\lib\site-packages\django\template\base.py", line 1271, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 320, in result_list
+    'results': list(results(cl))}
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 296, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 287, in __init__
+    super(ResultList, self).__init__(*items)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 199, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\admin\utils.py", line 282, in lookup_field
+    value = attr()
+  File "J:\arno\pythonenv\phx_web\dns\models.py", line 28, in __str__
+    return " - ".join([self.cf_account_name, self.domain, self.route, self.status, self.route_status])
+TypeError: sequence item 3: expected string or Unicode, long found
+2018-02-24 15:33:37,161 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-24 15:40:34,812 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-24 15:40:35,142 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-24 15:49:01,664 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-24 15:49:01,665 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-24 15:52:25,638 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-02-24 15:52:25,684 cf_api.py [django:57] [INFO]- record_id: 1653cf828b4f4863337e2c67ddf054ce
+2018-02-24 15:52:25,684 cf_api.py [django:68] [INFO]- https://api.cloudflare.com/client/v4/zones/0ff175e252bdc8141ad3bf320b4d9522/dns_records/1653cf828b4f4863337e2c67ddf054ce: {'content': u'202.65.216.199', 'proxied': True, 'type': u'A', 'name': u'aliapi.7557b.com'}
+2018-02-24 15:52:26,700 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'aliapi.7557b.com', u'zone': u'7557b.com', u'proxied': False, u'content': u'api.ng.cdnlebo.com', u'0': True, u'record_id': u'1653cf828b4f4863337e2c67ddf054ce', u'type': u'CNAME', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}, 'step': 1, 'result': True}
+2018-02-24 15:52:26,700 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-02-24 15:52:28,448 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-24 15:52:28,448 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-24 16:02:30,075 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-24 16:02:30,075 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}, {u'product': u'richer', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115', u'name': u'208608.com'}]
+2018-02-24 16:02:35,244 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-24 16:02:35,246 cf.py [django:59] [INFO]- [{u'product': u'richer', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115', u'name': u'208608.com'}]
+2018-02-24 16:06:33,805 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-24 16:06:33,805 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}, {u'product': u'richer', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115', u'name': u'208608.com'}]
