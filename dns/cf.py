@@ -161,23 +161,32 @@ def UpdateApiRoute(request):
             logger.error(result)
         else:
             return_info['result'] = True
+            api_list = domain_info.objects.filter(domain=data['domain'], status=1).all()
+            for info in api_list:
+                if info.route == data['route']:
+                    info.route_status = 1
+                else:
+                    info.route_status = 0
+
         #logger.info(return_info)
         return HttpResponse(json.dumps(return_info))
 
 @csrf_exempt
 def GetApiRoute(request):
-    if request.method == 'GET':
+    if request.method == 'GET' or request.method == 'POST':
         clientip = request.META['REMOTE_ADDR']
         data = json.loads(request.body)
         logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
 
-        return_info = {}
-        api_list = domain_info.objects.filter(domain=data['product'], status=1).all()
+        return_info = []
+        api_list = domain_info.objects.filter(product=data['product'], status=1).all()
         for info in api_list:
-            return_info['product'] = info.product
-            return_info['client'] = info.client
-            return_info['domain'] = info.domain
-            return_info['content'] = info.content
-            return_info['route_status'] = info.route_status
-            return_info['route'] = info.route
+            temp = {}
+            temp['product'] = info.product
+            temp['client'] = info.client
+            temp['domain'] = info.domain
+            temp['content'] = info.content
+            temp['route_status'] = info.route_status
+            temp['route'] = info.route
+            return_info.append(temp)
         return HttpResponse(json.dumps(return_info))

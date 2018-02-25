@@ -5704,3 +5704,4 @@ TypeError: expected string or buffer
 2018-02-24 16:02:35,246 cf.py [django:59] [INFO]- [{u'product': u'richer', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115', u'name': u'208608.com'}]
 2018-02-24 16:06:33,805 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
 2018-02-24 16:06:33,805 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}, {u'product': u'richer', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115', u'name': u'208608.com'}]
+2018-02-24 17:17:54,844 cf.py [django:172] [INFO]- 127.0.0.1 is requesting. /dns/cloudflare/get_api_route data: {u'product': u'sd'}
