@@ -165,8 +165,10 @@ def UpdateApiRoute(request):
             for info in api_list:
                 if info.route == data['route']:
                     info.route_status = 1
+                    info.save()
                 else:
                     info.route_status = 0
+                    info.save()
 
         #logger.info(return_info)
         return HttpResponse(json.dumps(return_info))

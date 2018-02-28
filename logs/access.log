@@ -5705,3 +5705,1050 @@ TypeError: expected string or buffer
 2018-02-24 16:06:33,805 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
 2018-02-24 16:06:33,805 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}, {u'product': u'richer', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115', u'name': u'208608.com'}]
 2018-02-24 17:17:54,844 cf.py [django:172] [INFO]- 127.0.0.1 is requesting. /dns/cloudflare/get_api_route data: {u'product': u'sd'}
+2018-02-25 14:11:24,674 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-02-25 14:11:26,075 views.py [django:42] [INFO]- 127.0.0.1 is requesting /home
+2018-02-25 15:11:10,167 cf.py [django:181] [INFO]- 127.0.0.1 is requesting. /dns/cloudflare/get_api_route data: {u'product': u'sd'}
+2018-02-25 15:41:22,795 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-02-25 15:41:22,871 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',)]
+2018-02-25 15:41:23,036 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-25 15:41:25,230 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-25 15:41:34,293 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-25 15:41:34,293 cf.py [django:59] [INFO]- [{u'product': u'panda', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff', u'name': u'le079.com'}]
+2018-02-25 15:59:24,575 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-25 15:59:25,665 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-25 16:00:24,551 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-25 16:00:24,551 cf.py [django:59] [INFO]- [{u'product': u'panda', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff', u'name': u'le079.com'}]
+2018-02-25 16:41:09,390 cf_api.py [django:59] [INFO]- None
+2018-02-25 16:41:53,779 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:45:06,128 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'668android.7557b.com', u'proxied': True, u'content': u'668.cf.cdnlebo.com', u'created_on': u'2018-02-22T09:05:41.392271Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-22T09:05:41.392271Z', u'zone_name': u'7557b.com', u'type': u'CNAME', u'id': u'c9971d242c5ff1b950bc186b025a110e', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:45:29,642 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'668android.7557b.com', u'proxied': True, u'content': u'668.cf.cdnlebo.com', u'created_on': u'2018-02-22T09:05:41.392271Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-22T09:05:41.392271Z', u'zone_name': u'7557b.com', u'type': u'CNAME', u'id': u'c9971d242c5ff1b950bc186b025a110e', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:45:31,966 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'668android.7557b.com', u'proxied': True, u'content': u'668.cf.cdnlebo.com', u'created_on': u'2018-02-22T09:05:41.392271Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-22T09:05:41.392271Z', u'zone_name': u'7557b.com', u'type': u'CNAME', u'id': u'c9971d242c5ff1b950bc186b025a110e', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:45:33,706 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'668android.7557b.com', u'proxied': True, u'content': u'668.cf.cdnlebo.com', u'created_on': u'2018-02-22T09:05:41.392271Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-22T09:05:41.392271Z', u'zone_name': u'7557b.com', u'type': u'CNAME', u'id': u'c9971d242c5ff1b950bc186b025a110e', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:45:34,563 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'asd.208608.com', u'proxied': False, u'content': u'api.ng.cdnlebo.com', u'created_on': u'2018-02-25T08:08:43.694931Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-25T08:08:43.694931Z', u'zone_name': u'208608.com', u'type': u'CNAME', u'id': u'5a518f230102d57270af8128645e592e', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:45:35,427 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'asd.208608.com', u'proxied': False, u'content': u'api.ng.cdnlebo.com', u'created_on': u'2018-02-25T08:08:43.694931Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-25T08:08:43.694931Z', u'zone_name': u'208608.com', u'type': u'CNAME', u'id': u'5a518f230102d57270af8128645e592e', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:45:37,127 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'sdios.7557b.com', u'proxied': False, u'content': u'70887_v1.aegins.cc', u'created_on': u'2018-02-25T08:11:19.460448Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-25T08:11:19.460448Z', u'zone_name': u'7557b.com', u'type': u'CNAME', u'id': u'21334f1bc91d2800c179da09c85cc0fa', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:45:38,937 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'sdios.7557b.com', u'proxied': False, u'content': u'70887_v1.aegins.cc', u'created_on': u'2018-02-25T08:11:19.460448Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-25T08:11:19.460448Z', u'zone_name': u'7557b.com', u'type': u'CNAME', u'id': u'21334f1bc91d2800c179da09c85cc0fa', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:45:40,859 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'sdios.7557b.com', u'proxied': False, u'content': u'70887_v1.aegins.cc', u'created_on': u'2018-02-25T08:11:19.460448Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-25T08:11:19.460448Z', u'zone_name': u'7557b.com', u'type': u'CNAME', u'id': u'21334f1bc91d2800c179da09c85cc0fa', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:45:41,631 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:45:42,400 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:45:44,132 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'668api.7557b.com', u'proxied': True, u'content': u'202.65.216.195', u'created_on': u'2018-02-04T14:04:34.162945Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-04T14:04:34.162945Z', u'zone_name': u'7557b.com', u'type': u'A', u'id': u'00b4b479600d3b56dcd35d12cba1600b', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:45:45,895 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'668api.7557b.com', u'proxied': True, u'content': u'202.65.216.195', u'created_on': u'2018-02-04T14:04:34.162945Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-04T14:04:34.162945Z', u'zone_name': u'7557b.com', u'type': u'A', u'id': u'00b4b479600d3b56dcd35d12cba1600b', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:45:46,730 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:45:47,503 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:45:49,279 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'lyandroid.7557b.com', u'proxied': True, u'content': u'202.65.216.194', u'created_on': u'2018-02-04T13:55:22.014526Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-04T13:55:22.014526Z', u'zone_name': u'7557b.com', u'type': u'A', u'id': u'4cd9a7336d099fe9314ed668f31a78f5', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:45:50,953 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'lyandroid.7557b.com', u'proxied': True, u'content': u'202.65.216.194', u'created_on': u'2018-02-04T13:55:22.014526Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-04T13:55:22.014526Z', u'zone_name': u'7557b.com', u'type': u'A', u'id': u'4cd9a7336d099fe9314ed668f31a78f5', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:12,582 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'668android.7557b.com', u'proxied': True, u'content': u'668.cf.cdnlebo.com', u'created_on': u'2018-02-22T09:05:41.392271Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-22T09:05:41.392271Z', u'zone_name': u'7557b.com', u'type': u'CNAME', u'id': u'c9971d242c5ff1b950bc186b025a110e', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:14,467 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'668android.7557b.com', u'proxied': True, u'content': u'668.cf.cdnlebo.com', u'created_on': u'2018-02-22T09:05:41.392271Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-22T09:05:41.392271Z', u'zone_name': u'7557b.com', u'type': u'CNAME', u'id': u'c9971d242c5ff1b950bc186b025a110e', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:16,296 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'668android.7557b.com', u'proxied': True, u'content': u'668.cf.cdnlebo.com', u'created_on': u'2018-02-22T09:05:41.392271Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-22T09:05:41.392271Z', u'zone_name': u'7557b.com', u'type': u'CNAME', u'id': u'c9971d242c5ff1b950bc186b025a110e', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:17,158 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'asd.208608.com', u'proxied': False, u'content': u'api.ng.cdnlebo.com', u'created_on': u'2018-02-25T08:08:43.694931Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-25T08:08:43.694931Z', u'zone_name': u'208608.com', u'type': u'CNAME', u'id': u'5a518f230102d57270af8128645e592e', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:17,963 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'asd.208608.com', u'proxied': False, u'content': u'api.ng.cdnlebo.com', u'created_on': u'2018-02-25T08:08:43.694931Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-25T08:08:43.694931Z', u'zone_name': u'208608.com', u'type': u'CNAME', u'id': u'5a518f230102d57270af8128645e592e', u'zone_id': u'5d92f0bc9749f7fc90e627d528607115'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:19,792 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'sdios.7557b.com', u'proxied': False, u'content': u'70887_v1.aegins.cc', u'created_on': u'2018-02-25T08:11:19.460448Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-25T08:11:19.460448Z', u'zone_name': u'7557b.com', u'type': u'CNAME', u'id': u'21334f1bc91d2800c179da09c85cc0fa', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:22,265 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'sdios.7557b.com', u'proxied': False, u'content': u'70887_v1.aegins.cc', u'created_on': u'2018-02-25T08:11:19.460448Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-25T08:11:19.460448Z', u'zone_name': u'7557b.com', u'type': u'CNAME', u'id': u'21334f1bc91d2800c179da09c85cc0fa', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:24,726 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'sdios.7557b.com', u'proxied': False, u'content': u'70887_v1.aegins.cc', u'created_on': u'2018-02-25T08:11:19.460448Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-25T08:11:19.460448Z', u'zone_name': u'7557b.com', u'type': u'CNAME', u'id': u'21334f1bc91d2800c179da09c85cc0fa', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:25,506 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:46:26,335 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:46:28,069 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'668api.7557b.com', u'proxied': True, u'content': u'202.65.216.195', u'created_on': u'2018-02-04T14:04:34.162945Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-04T14:04:34.162945Z', u'zone_name': u'7557b.com', u'type': u'A', u'id': u'00b4b479600d3b56dcd35d12cba1600b', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:29,868 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'668api.7557b.com', u'proxied': True, u'content': u'202.65.216.195', u'created_on': u'2018-02-04T14:04:34.162945Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-04T14:04:34.162945Z', u'zone_name': u'7557b.com', u'type': u'A', u'id': u'00b4b479600d3b56dcd35d12cba1600b', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:30,671 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:46:31,490 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:46:33,197 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'lyandroid.7557b.com', u'proxied': True, u'content': u'202.65.216.194', u'created_on': u'2018-02-04T13:55:22.014526Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-04T13:55:22.014526Z', u'zone_name': u'7557b.com', u'type': u'A', u'id': u'4cd9a7336d099fe9314ed668f31a78f5', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:35,026 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'lyandroid.7557b.com', u'proxied': True, u'content': u'202.65.216.194', u'created_on': u'2018-02-04T13:55:22.014526Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-04T13:55:22.014526Z', u'zone_name': u'7557b.com', u'type': u'A', u'id': u'4cd9a7336d099fe9314ed668f31a78f5', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:36,857 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'lyandroid.7557b.com', u'proxied': True, u'content': u'202.65.216.194', u'created_on': u'2018-02-04T13:55:22.014526Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-04T13:55:22.014526Z', u'zone_name': u'7557b.com', u'type': u'A', u'id': u'4cd9a7336d099fe9314ed668f31a78f5', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:37,743 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'androidapi.le079.com', u'proxied': True, u'content': u'115.85.148.195', u'created_on': u'2018-01-30T22:40:43.867906Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-01-30T22:40:43.867906Z', u'zone_name': u'le079.com', u'type': u'A', u'id': u'eaf72366309824a2a2e8e50935f629d6', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:38,505 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'androidapi.le079.com', u'proxied': True, u'content': u'115.85.148.195', u'created_on': u'2018-01-30T22:40:43.867906Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-01-30T22:40:43.867906Z', u'zone_name': u'le079.com', u'type': u'A', u'id': u'eaf72366309824a2a2e8e50935f629d6', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:40,345 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'lyios.7557b.com', u'proxied': True, u'content': u'202.65.216.194', u'created_on': u'2018-02-24T08:17:28.836693Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-24T08:17:28.836693Z', u'zone_name': u'7557b.com', u'type': u'A', u'id': u'2890fc1fc1c0930c53b77b3b53c13e4c', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:42,168 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'lyios.7557b.com', u'proxied': True, u'content': u'202.65.216.194', u'created_on': u'2018-02-24T08:17:28.836693Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-24T08:17:28.836693Z', u'zone_name': u'7557b.com', u'type': u'A', u'id': u'2890fc1fc1c0930c53b77b3b53c13e4c', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:44,002 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'lyios.7557b.com', u'proxied': True, u'content': u'202.65.216.194', u'created_on': u'2018-02-24T08:17:28.836693Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-24T08:17:28.836693Z', u'zone_name': u'7557b.com', u'type': u'A', u'id': u'2890fc1fc1c0930c53b77b3b53c13e4c', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:45,308 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'apps.le079.com', u'proxied': True, u'content': u'115.85.148.195', u'created_on': u'2018-01-30T22:40:40.901804Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-01-30T22:40:40.901804Z', u'zone_name': u'le079.com', u'type': u'A', u'id': u'd53abd53b35377060d96b0dbb048c802', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:46,194 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'apps.le079.com', u'proxied': True, u'content': u'115.85.148.195', u'created_on': u'2018-01-30T22:40:40.901804Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-01-30T22:40:40.901804Z', u'zone_name': u'le079.com', u'type': u'A', u'id': u'd53abd53b35377060d96b0dbb048c802', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:48,546 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'668api.7557b.com', u'proxied': True, u'content': u'202.65.216.195', u'created_on': u'2018-02-04T14:04:34.162945Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-04T14:04:34.162945Z', u'zone_name': u'7557b.com', u'type': u'A', u'id': u'00b4b479600d3b56dcd35d12cba1600b', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:50,253 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'668api.7557b.com', u'proxied': True, u'content': u'202.65.216.195', u'created_on': u'2018-02-04T14:04:34.162945Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-02-04T14:04:34.162945Z', u'zone_name': u'7557b.com', u'type': u'A', u'id': u'00b4b479600d3b56dcd35d12cba1600b', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:51,148 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'apis.le079.com', u'proxied': True, u'content': u'115.85.148.195', u'created_on': u'2018-01-30T22:40:42.061291Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-01-30T22:40:42.061291Z', u'zone_name': u'le079.com', u'type': u'A', u'id': u'3845f99b2d74c201d9da6f622befe6b4', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:46:52,094 cf_api.py [django:59] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'proxiable': True, u'locked': False, u'name': u'apis.le079.com', u'proxied': True, u'content': u'115.85.148.195', u'created_on': u'2018-01-30T22:40:42.061291Z', u'meta': {u'managed_by_apps': False, u'auto_added': False}, u'ttl': 1, u'modified_on': u'2018-01-30T22:40:42.061291Z', u'zone_name': u'le079.com', u'type': u'A', u'id': u'3845f99b2d74c201d9da6f622befe6b4', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff'}], u'success': True, u'result_info': {u'count': 1, u'per_page': 100, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 16:47:26,009 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:26,585 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:27,142 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:27,638 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:28,183 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:28,752 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:29,267 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:29,838 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:30,352 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:30,908 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:32,826 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:33,351 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:33,875 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:34,395 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:34,920 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:35,483 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:36,055 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:36,680 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:37,211 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:37,740 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:38,292 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:38,836 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:39,351 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:39,861 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:40,381 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:40,990 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:41,828 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:47:42,354 cf_api.py [django:59] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:54:36,555 cf_api.py [django:51] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:54:58,375 cf_api.py [django:52] [INFO]- {u'errors': [{u'message': u'Could not route to /zones/None/dns_records, perhaps your object identifier is invalid?', u'code': 7003}, {u'message': u'No route for that URI', u'code': 7000}], u'messages': [], u'result': None, u'success': False}
+2018-02-25 16:57:20,891 cf_api.py [django:34] [INFO]- {u'errors': [], u'messages': [], u'result': [{u'status': u'active', u'original_name_servers': [u'f1g1ns1.dnspod.net', u'f1g1ns2.dnspod.net'], u'account': {u'id': u'164a699c41939b2083878a55149f0928', u'name': u'lebo.technical001@gmail.com'}, u'original_dnshost': None, u'name': u'7557b.com', u'owner': {u'type': u'user', u'id': u'dfd6b7802ab666b69a4c519f449c779c', u'email': u'lebo.technical001@gmail.com'}, u'original_registrar': None, u'paused': False, u'modified_on': u'2018-02-25T08:11:19.460448Z', u'created_on': u'2017-12-09T07:17:30.114698Z', u'meta': {u'page_rule_quota': 3, u'wildcard_proxiable': False, u'step': 4, u'phishing_detected': False, u'multiple_railguns_allowed': False, u'custom_certificate_quota': 0}, u'plan': {u'externally_managed': False, u'name': u'Free Website', u'price': 0, u'can_subscribe': False, u'currency': u'USD', u'frequency': u'', u'legacy_id': u'free', u'legacy_discount': False, u'id': u'0feeeeeeeeeeeeeeeeeeeeeeeeeeeeee', u'is_subscribed': True}, u'name_servers': [u'laura.ns.cloudflare.com', u'lex.ns.cloudflare.com'], u'development_mode': 0, u'type': u'full', u'id': u'0ff175e252bdc8141ad3bf320b4d9522', u'permissions': [u'#access:edit', u'#access:read', u'#analytics:read', u'#app:edit', u'#billing:edit', u'#billing:read', u'#cache_purge:edit', u'#dns_records:edit', u'#dns_records:read', u'#lb:edit', u'#lb:read', u'#logs:read', u'#member:edit', u'#member:read', u'#organization:edit', u'#organization:read', u'#ssl:edit', u'#ssl:read', u'#subscription:edit', u'#subscription:read', u'#waf:edit', u'#waf:read', u'#worker:edit', u'#worker:read', u'#zone:edit', u'#zone:read', u'#zone_settings:edit', u'#zone_settings:read']}], u'success': True, u'result_info': {u'count': 1, u'per_page': 20, u'total_pages': 1, u'page': 1, u'total_count': 1}}
+2018-02-25 17:23:58,323 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-25 17:23:58,325 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-25 18:08:17,000 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-25 18:08:17,000 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-25 18:15:00,888 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-25 18:15:00,888 cf.py [django:59] [INFO]- [{u'product': u'guangda', u'zone_id': u'd4b293a62f50358d4d63799652ffa3a4', u'name': u'gdcp188.com'}]
+2018-02-25 18:41:51,279 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-25 18:41:51,279 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-25 18:54:58,869 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-02-25 18:54:58,921 cf_api.py [django:68] [INFO]- record_id: f2306631fce7a3b29d2faf024579ccd7
+2018-02-25 18:54:58,921 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/0ff175e252bdc8141ad3bf320b4d9522/dns_records/f2306631fce7a3b29d2faf024579ccd7: {'content': u'202.65.216.199', 'proxied': True, 'type': u'A', 'name': u'aliios.7557b.com'}
+2018-02-25 18:54:59,233 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'aliios.7557b.com', u'zone': u'7557b.com', u'proxied': False, u'content': u'103.71.153.239', u'0': True, u'record_id': u'f2306631fce7a3b29d2faf024579ccd7', u'type': u'A', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}, 'step': 1, 'result': True}
+2018-02-25 18:54:59,234 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-02-25 18:55:01,438 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-25 18:55:01,438 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-25 18:58:07,618 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-02-25 18:58:07,665 cf_api.py [django:68] [INFO]- record_id: 4f4a006c01ed01f84d1ffbafbbebdf6f
+2018-02-25 18:58:07,665 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/0ff175e252bdc8141ad3bf320b4d9522/dns_records/4f4a006c01ed01f84d1ffbafbbebdf6f: {'content': u'202.65.216.217', 'proxied': True, 'type': u'A', 'name': u'lvandroid.7557b.com'}
+2018-02-25 18:58:09,282 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'lvandroid.7557b.com', u'zone': u'7557b.com', u'proxied': False, u'content': u'103.71.153.152', u'0': True, u'record_id': u'4f4a006c01ed01f84d1ffbafbbebdf6f', u'type': u'A', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}, 'step': 1, 'result': True}
+2018-02-25 18:58:09,283 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-02-25 18:58:12,144 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-25 18:58:12,144 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-25 18:58:34,671 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-02-25 18:58:34,719 cf_api.py [django:68] [INFO]- record_id: 0cbeebfa15ec91170851b61fad8421c1
+2018-02-25 18:58:34,719 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/0ff175e252bdc8141ad3bf320b4d9522/dns_records/0cbeebfa15ec91170851b61fad8421c1: {'content': u'202.65.216.217', 'proxied': True, 'type': u'A', 'name': u'lvapi.7557b.com'}
+2018-02-25 18:58:35,068 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'lvapi.7557b.com', u'zone': u'7557b.com', u'proxied': False, u'content': u'70887_v1.aegins.cc', u'0': True, u'record_id': u'0cbeebfa15ec91170851b61fad8421c1', u'type': u'CNAME', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}, 'step': 1, 'result': True}
+2018-02-25 18:58:35,069 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-02-25 18:58:37,177 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-25 18:58:37,177 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-25 19:15:41,673 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-25 19:15:41,674 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'969da702b036b1d38d214d44b6fddf54', u'name': u'uc22.com'}]
+2018-02-25 20:31:22,405 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-25 20:31:22,407 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'969da702b036b1d38d214d44b6fddf54', u'name': u'uc22.com'}, {u'product': u'panda', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff', u'name': u'le079.com'}]
+2018-02-25 20:31:32,217 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-25 20:31:32,217 cf.py [django:59] [INFO]- [{u'product': u'panda', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff', u'name': u'le079.com'}]
+2018-02-26 14:17:23,486 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-26 14:17:23,529 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-26 14:17:57,196 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-02-26 14:17:57,244 cf_api.py [django:68] [INFO]- record_id: f2306631fce7a3b29d2faf024579ccd7
+2018-02-26 14:17:57,246 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/0ff175e252bdc8141ad3bf320b4d9522/dns_records/f2306631fce7a3b29d2faf024579ccd7: {'content': u'202.65.216.199', 'proxied': True, 'type': u'A', 'name': u'aliios.7557b.com'}
+2018-02-26 14:17:57,551 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'aliios.7557b.com', u'zone': u'7557b.com', u'proxied': False, u'content': u'70887_v1.aegins.cc', u'0': True, u'record_id': u'f2306631fce7a3b29d2faf024579ccd7', u'type': u'CNAME', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522'}, 'step': 1, 'result': True}
+2018-02-26 14:17:57,552 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-02-26 14:18:00,302 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-26 14:18:00,302 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-26 20:02:04,526 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-26 20:02:04,528 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01', u'name': u'37373365.com'}, {u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-26 20:02:09,091 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-26 20:02:09,092 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01', u'name': u'37373365.com'}]
+2018-02-26 20:03:11,009 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-02-26 20:03:11,056 cf_api.py [django:68] [INFO]- record_id: 7283426182d5b2879fd66abdb4c73932
+2018-02-26 20:03:11,056 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/431fc4a4273cec2d128cc0ad25823d01/dns_records/7283426182d5b2879fd66abdb4c73932: {'content': u'le7.web.sportscdn.info', 'proxied': False, 'type': u'CNAME', 'name': u'ag.37373365.com'}
+2018-02-26 20:03:11,388 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'ag.37373365.com', u'zone': u'37373365.com', u'proxied': True, u'content': u'202.65.216.200', u'0': True, u'record_id': u'7283426182d5b2879fd66abdb4c73932', u'type': u'A', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01'}, 'step': 1, 'result': True}
+2018-02-26 20:03:11,438 cf_api.py [django:68] [INFO]- record_id: 880c2e2058bff2c52cdafc446ea8a216
+2018-02-26 20:03:11,438 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/431fc4a4273cec2d128cc0ad25823d01/dns_records/880c2e2058bff2c52cdafc446ea8a216: {'content': u'le7.web.sportscdn.info', 'proxied': False, 'type': u'CNAME', 'name': u'm.37373365.com'}
+2018-02-26 20:03:12,247 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'm.37373365.com', u'zone': u'37373365.com', u'proxied': True, u'content': u'202.65.216.200', u'0': True, u'record_id': u'880c2e2058bff2c52cdafc446ea8a216', u'type': u'A', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01'}, 'step': 2, 'result': True}
+2018-02-26 20:03:12,296 cf_api.py [django:68] [INFO]- record_id: ce5a38bed7b6c568ca360a398e096a45
+2018-02-26 20:03:12,296 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/431fc4a4273cec2d128cc0ad25823d01/dns_records/ce5a38bed7b6c568ca360a398e096a45: {'content': u'le7.web.sportscdn.info', 'proxied': False, 'type': u'CNAME', 'name': u'vip.37373365.com'}
+2018-02-26 20:03:13,108 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'vip.37373365.com', u'zone': u'37373365.com', u'proxied': True, u'content': u'202.65.216.200', u'0': True, u'record_id': u'ce5a38bed7b6c568ca360a398e096a45', u'type': u'A', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01'}, 'step': 3, 'result': True}
+2018-02-26 20:03:13,155 cf_api.py [django:68] [INFO]- record_id: 99e45316e918cc26b3575d2f67e1f2d6
+2018-02-26 20:03:13,155 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/431fc4a4273cec2d128cc0ad25823d01/dns_records/99e45316e918cc26b3575d2f67e1f2d6: {'content': u'le7.web.sportscdn.info', 'proxied': False, 'type': u'CNAME', 'name': u'wap.37373365.com'}
+2018-02-26 20:03:13,447 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'wap.37373365.com', u'zone': u'37373365.com', u'proxied': True, u'content': u'202.65.216.200', u'0': True, u'record_id': u'99e45316e918cc26b3575d2f67e1f2d6', u'type': u'A', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01'}, 'step': 4, 'result': True}
+2018-02-26 20:03:13,494 cf_api.py [django:68] [INFO]- record_id: 23201bebcd8f0c6542c46bb82c6b64f1
+2018-02-26 20:03:13,494 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/431fc4a4273cec2d128cc0ad25823d01/dns_records/23201bebcd8f0c6542c46bb82c6b64f1: {'content': u'le7.web.sportscdn.info', 'proxied': False, 'type': u'CNAME', 'name': u'www.37373365.com'}
+2018-02-26 20:03:14,229 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'www.37373365.com', u'zone': u'37373365.com', u'proxied': True, u'content': u'202.65.216.200', u'0': True, u'record_id': u'23201bebcd8f0c6542c46bb82c6b64f1', u'type': u'A', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01'}, 'step': 5, 'result': True}
+2018-02-26 20:03:14,230 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-02-26 20:06:24,532 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-26 20:06:24,532 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01', u'name': u'37373365.com'}]
+2018-02-26 20:06:49,298 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-02-26 20:06:49,346 cf_api.py [django:68] [INFO]- record_id: 4879385f5e0b1b6a9e1c372cc543aa9e
+2018-02-26 20:06:49,346 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/431fc4a4273cec2d128cc0ad25823d01/dns_records/4879385f5e0b1b6a9e1c372cc543aa9e: {'content': u'le7.web.sportscdn.info', 'proxied': False, 'type': u'CNAME', 'name': u'37373365.com'}
+2018-02-26 20:06:51,289 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'37373365.com', u'zone': u'37373365.com', u'proxied': True, u'content': u'202.65.216.200', u'0': True, u'record_id': u'4879385f5e0b1b6a9e1c372cc543aa9e', u'type': u'A', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01'}, 'step': 1, 'result': True}
+2018-02-26 20:06:51,338 cf_api.py [django:68] [INFO]- record_id: ce5a38bed7b6c568ca360a398e096a45
+2018-02-26 20:06:51,338 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/431fc4a4273cec2d128cc0ad25823d01/dns_records/ce5a38bed7b6c568ca360a398e096a45: {'content': u'le7.web.sportscdn.info', 'proxied': False, 'type': u'CNAME', 'name': u'vip.37373365.com'}
+2018-02-26 20:06:51,947 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'vip.37373365.com', u'zone': u'37373365.com', u'proxied': False, u'content': u'le7.web.sportscdn.info', u'0': True, u'record_id': u'ce5a38bed7b6c568ca360a398e096a45', u'type': u'CNAME', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01'}, 'step': 2, 'result': True}
+2018-02-26 20:06:51,947 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-02-26 20:06:53,694 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-26 20:06:53,694 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01', u'name': u'37373365.com'}]
+2018-02-26 22:06:54,447 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-26 22:06:54,448 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'0ff175e252bdc8141ad3bf320b4d9522', u'name': u'7557b.com'}]
+2018-02-27 16:27:27,581 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-27 16:27:27,582 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01', u'name': u'37373365.com'}]
+2018-02-27 16:28:34,022 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-02-27 16:28:34,071 cf_api.py [django:68] [INFO]- record_id: 4879385f5e0b1b6a9e1c372cc543aa9e
+2018-02-27 16:28:34,071 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/431fc4a4273cec2d128cc0ad25823d01/dns_records/4879385f5e0b1b6a9e1c372cc543aa9e: {'content': u'202.65.216.200', 'proxied': True, 'type': u'A', 'name': u'37373365.com'}
+2018-02-27 16:28:34,852 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'37373365.com', u'zone': u'37373365.com', u'proxied': False, u'content': u'le7.web.sportscdn.info', u'0': True, u'record_id': u'4879385f5e0b1b6a9e1c372cc543aa9e', u'type': u'CNAME', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01'}, 'step': 1, 'result': True}
+2018-02-27 16:28:34,901 cf_api.py [django:68] [INFO]- record_id: 7283426182d5b2879fd66abdb4c73932
+2018-02-27 16:28:34,901 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/431fc4a4273cec2d128cc0ad25823d01/dns_records/7283426182d5b2879fd66abdb4c73932: {'content': u'202.65.216.200', 'proxied': True, 'type': u'A', 'name': u'ag.37373365.com'}
+2018-02-27 16:28:35,634 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'ag.37373365.com', u'zone': u'37373365.com', u'proxied': False, u'content': u'le7.web.sportscdn.info', u'0': True, u'record_id': u'7283426182d5b2879fd66abdb4c73932', u'type': u'CNAME', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01'}, 'step': 2, 'result': True}
+2018-02-27 16:28:35,684 cf_api.py [django:68] [INFO]- record_id: 880c2e2058bff2c52cdafc446ea8a216
+2018-02-27 16:28:35,684 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/431fc4a4273cec2d128cc0ad25823d01/dns_records/880c2e2058bff2c52cdafc446ea8a216: {'content': u'202.65.216.200', 'proxied': True, 'type': u'A', 'name': u'm.37373365.com'}
+2018-02-27 16:28:36,523 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'm.37373365.com', u'zone': u'37373365.com', u'proxied': False, u'content': u'le7.web.sportscdn.info', u'0': True, u'record_id': u'880c2e2058bff2c52cdafc446ea8a216', u'type': u'CNAME', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01'}, 'step': 3, 'result': True}
+2018-02-27 16:28:36,572 cf_api.py [django:68] [INFO]- record_id: ce5a38bed7b6c568ca360a398e096a45
+2018-02-27 16:28:36,572 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/431fc4a4273cec2d128cc0ad25823d01/dns_records/ce5a38bed7b6c568ca360a398e096a45: {'content': u'202.65.216.200', 'proxied': True, 'type': u'A', 'name': u'vip.37373365.com'}
+2018-02-27 16:28:37,334 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'vip.37373365.com', u'zone': u'37373365.com', u'proxied': False, u'content': u'le7.web.sportscdn.info', u'0': True, u'record_id': u'ce5a38bed7b6c568ca360a398e096a45', u'type': u'CNAME', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01'}, 'step': 4, 'result': True}
+2018-02-27 16:28:37,381 cf_api.py [django:68] [INFO]- record_id: 99e45316e918cc26b3575d2f67e1f2d6
+2018-02-27 16:28:37,382 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/431fc4a4273cec2d128cc0ad25823d01/dns_records/99e45316e918cc26b3575d2f67e1f2d6: {'content': u'202.65.216.200', 'proxied': True, 'type': u'A', 'name': u'wap.37373365.com'}
+2018-02-27 16:28:38,154 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'wap.37373365.com', u'zone': u'37373365.com', u'proxied': False, u'content': u'le7.web.sportscdn.info', u'0': True, u'record_id': u'99e45316e918cc26b3575d2f67e1f2d6', u'type': u'CNAME', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01'}, 'step': 5, 'result': True}
+2018-02-27 16:28:38,203 cf_api.py [django:68] [INFO]- record_id: 23201bebcd8f0c6542c46bb82c6b64f1
+2018-02-27 16:28:38,204 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/431fc4a4273cec2d128cc0ad25823d01/dns_records/23201bebcd8f0c6542c46bb82c6b64f1: {'content': u'202.65.216.200', 'proxied': True, 'type': u'A', 'name': u'www.37373365.com'}
+2018-02-27 16:28:39,045 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'www.37373365.com', u'zone': u'37373365.com', u'proxied': False, u'content': u'le7.web.sportscdn.info', u'0': True, u'record_id': u'23201bebcd8f0c6542c46bb82c6b64f1', u'type': u'CNAME', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01'}, 'step': 6, 'result': True}
+2018-02-27 16:28:39,046 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-02-27 16:28:43,569 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-27 16:28:43,571 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'431fc4a4273cec2d128cc0ad25823d01', u'name': u'37373365.com'}]
+2018-02-28 15:11:06,328 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-28 15:11:06,332 cf.py [django:59] [INFO]- [{u'product': u'panda', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff', u'name': u'le079.com'}]
+2018-02-28 15:11:06,673 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/get_zone_records
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\dns\cf.py", line 62, in GetZoneRecords
+    cf_acc = cf_account.objects.filter(name=zone['product']).first()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 490, in first
+    objects = list((self if self.ordered else self.order_by('pk'))[:1])
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 162, in __iter__
+    self._fetch_all()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 818, in execute_sql
+    sql, params = self.as_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.query.where)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\where.py", line 104, in as_sql
+    sql, params = compiler.compile(child)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 205, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 198, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\fields\__init__.py", line 614, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 196, in data_types
+    if self.features.supports_microsecond_precision:
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\features.py", line 52, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 371, in mysql_version
+    with self.temporary_connection():
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 462, in temporary_connection
+    cursor = self.cursor()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1130, "Host '122.55.4.242' is not allowed to connect to this MySQL server")
+2018-02-28 15:12:31,834 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-28 15:12:31,834 cf.py [django:59] [INFO]- [{u'product': u'panda', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff', u'name': u'le079.com'}]
+2018-02-28 15:12:32,032 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/get_zone_records
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\dns\cf.py", line 62, in GetZoneRecords
+    cf_acc = cf_account.objects.filter(name=zone['product']).first()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 490, in first
+    objects = list((self if self.ordered else self.order_by('pk'))[:1])
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 162, in __iter__
+    self._fetch_all()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 818, in execute_sql
+    sql, params = self.as_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.query.where)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\where.py", line 104, in as_sql
+    sql, params = compiler.compile(child)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 205, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 198, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\fields\__init__.py", line 614, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 196, in data_types
+    if self.features.supports_microsecond_precision:
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\features.py", line 52, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 371, in mysql_version
+    with self.temporary_connection():
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 462, in temporary_connection
+    cursor = self.cursor()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1130, "Host '122.55.4.242' is not allowed to connect to this MySQL server")
+2018-02-28 15:13:22,226 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-28 15:13:22,226 cf.py [django:59] [INFO]- [{u'product': u'panda', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff', u'name': u'le079.com'}]
+2018-02-28 15:13:22,477 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/get_zone_records
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\pythonenv\phx_web\dns\cf.py", line 62, in GetZoneRecords
+    cf_acc = cf_account.objects.filter(name=zone['product']).first()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 490, in first
+    objects = list((self if self.ordered else self.order_by('pk'))[:1])
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 162, in __iter__
+    self._fetch_all()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 818, in execute_sql
+    sql, params = self.as_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.query.where)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\where.py", line 104, in as_sql
+    sql, params = compiler.compile(child)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 205, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 198, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\fields\__init__.py", line 614, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 196, in data_types
+    if self.features.supports_microsecond_precision:
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\features.py", line 52, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 371, in mysql_version
+    with self.temporary_connection():
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 462, in temporary_connection
+    cursor = self.cursor()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1130, "Host '122.55.4.242' is not allowed to connect to this MySQL server")
+2018-02-28 15:13:26,348 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    if test_func(request.user):
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 45, in <lambda>
+    lambda u: u.is_authenticated(),
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 359, in _setup
+    self._wrapped = self._setupfunc()
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\middleware.py", line 22, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\__init__.py", line 167, in get_user
+    user_id = _get_user_session_key(request)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\__init__.py", line 59, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\base.py", line 48, in __getitem__
+    return self._session[key]
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\base.py", line 181, in _get_session
+    self._session_cache = self.load()
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\db.py", line 21, in load
+    expire_date__gt=timezone.now()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 818, in execute_sql
+    sql, params = self.as_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.query.where)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\where.py", line 104, in as_sql
+    sql, params = compiler.compile(child)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 205, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 198, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\fields\__init__.py", line 614, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 196, in data_types
+    if self.features.supports_microsecond_precision:
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\features.py", line 52, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 371, in mysql_version
+    with self.temporary_connection():
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 462, in temporary_connection
+    cursor = self.cursor()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1130, "Host '122.55.4.242' is not allowed to connect to this MySQL server")
+2018-02-28 15:15:57,641 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    if test_func(request.user):
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 45, in <lambda>
+    lambda u: u.is_authenticated(),
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 359, in _setup
+    self._wrapped = self._setupfunc()
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\middleware.py", line 22, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\__init__.py", line 167, in get_user
+    user_id = _get_user_session_key(request)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\__init__.py", line 59, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\base.py", line 48, in __getitem__
+    return self._session[key]
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\base.py", line 181, in _get_session
+    self._session_cache = self.load()
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\db.py", line 21, in load
+    expire_date__gt=timezone.now()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 818, in execute_sql
+    sql, params = self.as_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.query.where)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\where.py", line 104, in as_sql
+    sql, params = compiler.compile(child)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 205, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 198, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\fields\__init__.py", line 614, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 196, in data_types
+    if self.features.supports_microsecond_precision:
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\features.py", line 52, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 371, in mysql_version
+    with self.temporary_connection():
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 462, in temporary_connection
+    cursor = self.cursor()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user 'phxweb'@'122.55.4.242' (using password: YES)")
+2018-02-28 15:17:54,094 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    if test_func(request.user):
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 45, in <lambda>
+    lambda u: u.is_authenticated(),
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 359, in _setup
+    self._wrapped = self._setupfunc()
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\middleware.py", line 22, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\__init__.py", line 167, in get_user
+    user_id = _get_user_session_key(request)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\__init__.py", line 59, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\base.py", line 48, in __getitem__
+    return self._session[key]
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\base.py", line 181, in _get_session
+    self._session_cache = self.load()
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\db.py", line 21, in load
+    expire_date__gt=timezone.now()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 818, in execute_sql
+    sql, params = self.as_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.query.where)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\where.py", line 104, in as_sql
+    sql, params = compiler.compile(child)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 205, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 198, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\fields\__init__.py", line 614, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 196, in data_types
+    if self.features.supports_microsecond_precision:
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\features.py", line 52, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 371, in mysql_version
+    with self.temporary_connection():
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 462, in temporary_connection
+    cursor = self.cursor()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user 'phxweb'@'122.55.4.242' (using password: YES)")
+2018-02-28 15:18:22,296 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    if test_func(request.user):
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 45, in <lambda>
+    lambda u: u.is_authenticated(),
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 359, in _setup
+    self._wrapped = self._setupfunc()
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\middleware.py", line 22, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\__init__.py", line 167, in get_user
+    user_id = _get_user_session_key(request)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\__init__.py", line 59, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\base.py", line 48, in __getitem__
+    return self._session[key]
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\base.py", line 181, in _get_session
+    self._session_cache = self.load()
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\db.py", line 21, in load
+    expire_date__gt=timezone.now()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 818, in execute_sql
+    sql, params = self.as_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.query.where)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\where.py", line 104, in as_sql
+    sql, params = compiler.compile(child)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 205, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 198, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\fields\__init__.py", line 614, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 196, in data_types
+    if self.features.supports_microsecond_precision:
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\features.py", line 52, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 371, in mysql_version
+    with self.temporary_connection():
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 462, in temporary_connection
+    cursor = self.cursor()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user 'phxweb'@'122.55.4.242' (using password: YES)")
+2018-02-28 15:18:57,753 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    if test_func(request.user):
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 45, in <lambda>
+    lambda u: u.is_authenticated(),
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 359, in _setup
+    self._wrapped = self._setupfunc()
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\middleware.py", line 22, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\__init__.py", line 167, in get_user
+    user_id = _get_user_session_key(request)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\__init__.py", line 59, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\base.py", line 48, in __getitem__
+    return self._session[key]
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\base.py", line 181, in _get_session
+    self._session_cache = self.load()
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\db.py", line 21, in load
+    expire_date__gt=timezone.now()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 818, in execute_sql
+    sql, params = self.as_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.query.where)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\where.py", line 104, in as_sql
+    sql, params = compiler.compile(child)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 205, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 198, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\fields\__init__.py", line 614, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 196, in data_types
+    if self.features.supports_microsecond_precision:
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\features.py", line 52, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 371, in mysql_version
+    with self.temporary_connection():
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 462, in temporary_connection
+    cursor = self.cursor()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user 'phxweb'@'122.55.4.242' (using password: YES)")
+2018-02-28 15:20:05,460 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\pythonenv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    if test_func(request.user):
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 45, in <lambda>
+    lambda u: u.is_authenticated(),
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 359, in _setup
+    self._wrapped = self._setupfunc()
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\middleware.py", line 22, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\__init__.py", line 167, in get_user
+    user_id = _get_user_session_key(request)
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\auth\__init__.py", line 59, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\base.py", line 48, in __getitem__
+    return self._session[key]
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\base.py", line 181, in _get_session
+    self._session_cache = self.load()
+  File "J:\arno\pythonenv\lib\site-packages\django\contrib\sessions\backends\db.py", line 21, in load
+    expire_date__gt=timezone.now()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 818, in execute_sql
+    sql, params = self.as_sql()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.query.where)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\where.py", line 104, in as_sql
+    sql, params = compiler.compile(child)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 205, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\lookups.py", line 198, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\models\fields\__init__.py", line 614, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 196, in data_types
+    if self.features.supports_microsecond_precision:
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\features.py", line 52, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "J:\arno\pythonenv\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 371, in mysql_version
+    with self.temporary_connection():
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 462, in temporary_connection
+    cursor = self.cursor()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\pythonenv\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user 'phxweb'@'122.55.4.242' (using password: YES)")

@@ -26,6 +26,16 @@ class CfApi(object):
         except:
             return {u'result': [], u'success': False}
 
+    def GetZoneId(self, zone):
+        url = self.__url + '?name=%s' %(zone)
+        try:
+            ret = requests.get(url, headers=self.__headers, verify=False)
+            zone_id = ret.json()['result'][0]['id']
+            #logger.info(ret.json())
+            return {u'zone_id': zone_id}
+        except:
+            return {u'zone_id': None}
+
     def GetZoneRecords(self, zone_id):
         url = self.__url + '/%s/' %zone_id + 'dns_records?per_page=100'
         try:
@@ -39,6 +49,7 @@ class CfApi(object):
         url = self.__url + '/%s/' %zone_id + 'dns_records?per_page=100&name=%s' %record_name
         try:
             ret = requests.get(url, headers=self.__headers, verify=False)
+            #logger.info(ret.json())
             if len(ret.json()['result']) == 0:
                 pass
             elif len(ret.json()['result']) == 1:

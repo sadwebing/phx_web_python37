@@ -1,21 +1,126 @@
 ################  富豪/三德/668  ################
 ###  android  ###
-sd android 668android.7557b.com lebo 	nginx 		api.ng.cdnlebo.com
-sd android 668android.7557b.com lebo 	cloudflare 	668.cf.cdnlebo.com
-sd android 668android.7557b.com lebo 	aegins 		70887_v1.aegins.cc
-sd android asd.208608.com 		richer 	nginx 		api.ng.cdnlebo.com
-sd android asd.208608.com 		richer 	cloudflare 	668.cf.cdnlebo.com
+sd android 668android.7557b.com lebo 	nginx 		api.ng.cdnlebo.com 0 0
+sd android 668android.7557b.com lebo 	cloudflare 	668.cf.cdnlebo.com 0 1
+sd android 668android.7557b.com lebo 	aegins 		70887_v1.aegins.cc 0 0
+sd android asd.208608.com 		richer 	nginx 		api.ng.cdnlebo.com 1 1
+sd android asd.208608.com 		richer 	cloudflare 	668.cf.cdnlebo.com 1 0
 
 ###  ios  ###
-sd ios sdios.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com
-sd ios sdios.7557b.com 	lebo 	cloudflare 	668.cf.cdnlebo.com
-sd ios sdios.7557b.com 	lebo 	aegins 		70887_v1.aegins.cc
-sd ios api.668cp.me 	richer 	nginx 		api.ng.cdnlebo.com
-sd ios api.668cp.me 	richer 	cloudflare 	668.cf.cdnlebo.com
+sd ios sdios.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com 0 0
+sd ios sdios.7557b.com 	lebo 	cloudflare 	668.cf.cdnlebo.com 1 1
+sd ios sdios.7557b.com 	lebo 	aegins 		70887_v1.aegins.cc 1 0
+sd ios api.668cp.me 	richer 	nginx 		api.ng.cdnlebo.com 0 1
+sd ios api.668cp.me 	richer 	cloudflare 	668.cf.cdnlebo.com 0 0
 
 ###  pc/wap  ###
-#sd pc 668api.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com
-sd pc 668api.7557b.com 	lebo 	cloudflare 	668.cf.cdnlebo.com
-sd pc 668api.7557b.com 	lebo 	aegins 		70887_v1.aegins.cc
-sd pc app.97bei.com		richer 	nginx 		api.ng.cdnlebo.com
-sd pc app.97bei.com		richer 	cloudflare 	668.cf.cdnlebo.com
+#sd pc 668api.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com 0 0
+sd pc 668api.7557b.com 	lebo 	cloudflare 	668.cf.cdnlebo.com 0 1
+sd pc 668api.7557b.com 	lebo 	aegins 		70887_v1.aegins.cc 0 0
+sd pc app.97bei.com		richer 	nginx 		api.ng.cdnlebo.com 1 1
+sd pc app.97bei.com		richer 	cloudflare 	668.cf.cdnlebo.com 1 0
+
+################  乐盈/熊猫  ################
+###  android  ###
+ly android lyandroid.7557b.com lebo 	nginx 		api.ng.cdnlebo.com 1 0
+ly android lyandroid.7557b.com lebo 	cloudflare 	ly.cf.cdnlebo.com 1 1
+ly android lyandroid.7557b.com lebo 	aegins 		70887_v1.aegins.cc 1 0
+ly android androidapi.le079.com panda nginx 		api.ng.cdnlebo.com 0 0
+ly android androidapi.le079.com panda cloudflare 	ly.cf.cdnlebo.com 0 1
+
+###  ios  ###
+ly ios lyios.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com 0 0
+ly ios lyios.7557b.com 	lebo 	cloudflare 	ly.cf.cdnlebo.com 1 1
+ly ios lyios.7557b.com 	lebo 	aegins 		70887_v1.aegins.cc 1 0
+ly ios apps.le079.com 	panda 	nginx 		api.ng.cdnlebo.com 0 0
+ly ios apps.le079.com 	panda 	cloudflare 	ly.cf.cdnlebo.com 0 1
+
+###  pc/wap  ###
+ly pc lyapi.7557b.com 	lebo 	cloudflare 	ly.cf.cdnlebo.com 0 1
+ly pc lyapi.7557b.com 	lebo 	aegins 		70887_v1.aegins.cc 0 0
+ly pc apis.le079.com	panda 	nginx 		api.ng.cdnlebo.com 1 1
+ly pc apis.le079.com	panda 	cloudflare 	ly.cf.cdnlebo.com 1 0
+
+################  光大  ################
+###  android  ###
+gd android gdandroid.7557b.com lebo 	nginx 		api.ng.cdnlebo.com 1 0
+gd android gdandroid.7557b.com lebo 	cloudflare 	gd.cf.cdnlebo.com 1 1
+gd android gdandroid.7557b.com lebo 	aegins 		70887_v1.aegins.cc 1 0
+gd android androidapi.gdcp188.com guangda nginx 		api.ng.cdnlebo.com 0 0
+gd android androidapi.gdcp188.com guangda cloudflare 	gd.cf.cdnlebo.com 0 1
+
+###  ios  ###
+gd ios gdios.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com 0 0
+gd ios gdios.7557b.com 	lebo 	cloudflare 	gd.cf.cdnlebo.com 1 1
+gd ios gdios.7557b.com 	lebo 	aegins 		70887_v1.aegins.cc 1 0
+gd ios iosapi.gdcp188.com 	guangda 	nginx 		api.ng.cdnlebo.com 0 0
+gd ios iosapi.gdcp188.com 	guangda 	cloudflare 	gd.cf.cdnlebo.com 0 1
+
+###  pc/wap  ###
+gd pc gdapi.7557b.com 	lebo 	cloudflare 	gd.cf.cdnlebo.com 0 1
+gd pc gdapi.7557b.com 	lebo 	aegins 		70887_v1.aegins.cc 0 0
+gd pc api.gdcp188.com	guangda 	nginx 		api.ng.cdnlebo.com 1 1
+gd pc api.gdcp188.com	guangda 	cloudflare 	gd.cf.cdnlebo.com 1 0
+
+################  阿里  ################
+###  android  ###
+ali android aliandroid.7557b.com lebo 	nginx 		api.ng.cdnlebo.com 1 0
+ali android aliandroid.7557b.com lebo 	cloudflare 	ali.cf.cdnlebo.com 1 1
+ali android aliandroid.7557b.com lebo 	aegins 		70887_v1.aegins.cc 1 0
+ali android androidapi.alcp188.com ali nginx 		api.ng.cdnlebo.com 0 0
+ali android androidapi.alcp188.com ali cloudflare 	ali.cf.cdnlebo.com 1 1
+
+###  ios  ###
+ali ios aliios.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com 0 0
+ali ios aliios.7557b.com 	lebo 	cloudflare 	ali.cf.cdnlebo.com 1 1
+ali ios aliios.7557b.com 	lebo 	aegins 		70887_v1.aegins.cc 1 0
+ali ios iosapi.alcp188.com ali nginx 		api.ng.cdnlebo.com 0 0
+ali ios iosapi.alcp188.com ali cloudflare 	ali.cf.cdnlebo.com 0 1
+
+###  pc/wap  ###
+ali pc aliapi.7557b.com 	lebo 	cloudflare 	ali.cf.cdnlebo.com 0 1
+ali pc aliapi.7557b.com 	lebo 	aegins 		70887_v1.aegins.cc 0 0
+ali pc api.alcp188.com 	ali 	nginx 	api.ng.cdnlebo.com 0 1
+ali pc api.alcp188.com 	ali 	cloudflare 		ali.cf.cdnlebo.com 0 0
+
+################  彩投/LV  ################
+###  android  ###
+ct android lvandroid.7557b.com lebo 	nginx 		api.ng.cdnlebo.com 1 0
+ct android lvandroid.7557b.com lebo 	cloudflare 	ct.cf.cdnlebo.com 1 1
+ct android lvandroid.7557b.com lebo 	aegins 		70887_v1.aegins.cc 1 0
+ct android androidapi.caitou999.com lebo nginx 		api.ng.cdnlebo.com 0 0
+ct android androidapi.caitou999.com lebo cloudflare 	ct.cf.cdnlebo.com 0 1
+
+###  ios  ###
+ct ios lvios.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com 0 0
+ct ios lvios.7557b.com 	lebo 	cloudflare 	ct.cf.cdnlebo.com 1 1
+ct ios lvios.7557b.com 	lebo 	aegins 		70887_v1.aegins.cc 1 0
+ct ios iosapi.caitou999.com 	lebo 	nginx 		api.ng.cdnlebo.com 0 0
+ct ios iosapi.caitou999.com 	lebo 	cloudflare 	ct.cf.cdnlebo.com 0 1
+
+###  pc/wap  ###
+ct pc lvapi.7557b.com 	lebo 	cloudflare 	ct.cf.cdnlebo.com 0 1
+ct pc lvapi.7557b.com 	lebo 	aegins 		70887_v1.aegins.cc 0 0
+ct pc api.caitou999.com	lebo 	nginx 		api.ng.cdnlebo.com 1 1
+ct pc api.caitou999.com	lebo 	cloudflare 	ct.cf.cdnlebo.com 1 0
+
+################  UC  ################
+###  android  ###
+uc android ucandroid.7557b.com lebo 	nginx 		api.ng.cdnlebo.com 1 0
+uc android ucandroid.7557b.com lebo 	cloudflare 	uc.cf.cdnlebo.com 1 1
+uc android ucandroid.7557b.com lebo 	aegins 		70887_v1.aegins.cc 1 0
+uc android androidapi.uc22.com lebo nginx 		api.ng.cdnlebo.com 0 0
+uc android androidapi.uc22.com lebo cloudflare 	uc.cf.cdnlebo.com 0 1
+
+###  ios  ###
+uc ios ucios.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com 0 0
+uc ios ucios.7557b.com 	lebo 	cloudflare 	uc.cf.cdnlebo.com 1 1
+uc ios ucios.7557b.com 	lebo 	aegins 		70887_v1.aegins.cc 1 0
+uc ios iosapi.uc22.com 	lebo 	nginx 		api.ng.cdnlebo.com 0 0
+uc ios iosapi.uc22.com 	lebo 	cloudflare 	uc.cf.cdnlebo.com 0 1
+
+###  pc/wap  ###
+uc pc ucapi.7557b.com 	lebo 	cloudflare 	uc.cf.cdnlebo.com 0 1
+uc pc ucapi.7557b.com 	lebo 	aegins 		70887_v1.aegins.cc 0 0
+uc pc api.uc22.com	lebo 	nginx 		api.ng.cdnlebo.com 1 0
+uc pc api.uc22.com	lebo 	cloudflare 	uc.cf.cdnlebo.com 1 1
