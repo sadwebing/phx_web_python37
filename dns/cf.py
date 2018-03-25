@@ -163,7 +163,8 @@ def UpdateApiRoute(request):
             logger.error(result)
         else:
             return_info['result'] = True
-            api_list = domain_info.objects.filter(domain=data['domain'], status=1).all()
+            #api_list = domain_info.objects.filter(domain=data['domain'], status=1).all()
+            api_list = domain_info.objects.filter(domain=data['domain']).all()
             for info in api_list:
                 if info.route == data['route']:
                     info.route_status = 1
