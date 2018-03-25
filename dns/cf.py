@@ -151,8 +151,8 @@ def UpdateApiRoute(request):
             content = [domain_i.content for domain_i in domain_l if domain_i.route == 'cloudflare' ]
         elif data['route'] == 'aegins':
             content = [domain_i.content for domain_i in domain_l if domain_i.route == 'aegins' ]
-        elif data['route'] == 'wangshu':
-            content = [domain_i.content for domain_i in domain_l if domain_i.route == 'wangshu' ]
+        elif data['route'] == 'wangsu':
+            content = [domain_i.content for domain_i in domain_l if domain_i.route == 'wangsu' ]
 
         result = cfapi.UpdateDnsRecords(zone_id, r_type, data['domain'], content[0], proxied=proxied, record_id=record_id)
 

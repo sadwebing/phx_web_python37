@@ -28,17 +28,18 @@ for info in contents:
 
 
         try:
-            #update = domain_info.objects.filter(product=info.split()[0], client=info.split()[1], domain=info.split()[2], route=info.split()[4]).first()
+            update = domain_info.objects.filter(product=info.split()[0], client=info.split()[1], domain=info.split()[2], route=info.split()[4]).first()
             #update.zone_id = zone_id
+            update.route = info.split()[4]
             #update.record_id = record_id
             #update.status = info.split()[6]
             #update.route_status = info.split()[7]
-            #update.save()
+            update.save()
             #print info.split()[0], info.split()[2], info.split()[4], 'update success.'
 
-            insert = domain_info(product=info.split()[0], client=info.split()[1], domain=info.split()[2], cf_account_name=info.split()[3], route=info.split()[4], content=info.split()[5], status=info.split()[6], route_status=info.split()[7], zone_id=zone_id , record_id=record_id)
-            insert.save()
-            print info.split()[0], info.split()[2], info.split()[4],'insert success.'
+            #insert = domain_info(product=info.split()[0], client=info.split()[1], domain=info.split()[2], cf_account_name=info.split()[3], route=info.split()[4], content=info.split()[5], status=info.split()[6], route_status=info.split()[7], zone_id=zone_id , record_id=record_id)
+            #insert.save()
+            #print info.split()[0], info.split()[2], info.split()[4],'insert success.'
         except:
-            #print info.split()[0], info.split()[2], info.split()[4], 'update failed.'
-            print info.split()[0], info.split()[2], info.split()[4], 'is already existing.'
+            print info.split()[0], info.split()[2], info.split()[4], 'update failed.'
+            #print info.split()[0], info.split()[2], info.split()[4], 'is already existing.'

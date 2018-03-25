@@ -71,15 +71,15 @@
 #ali android androidapi.alcp188.com ali cloudflare 	ali.cf.cdnlebo.com 1 1
 #
 
-ali android apiad.alcp168.net ali nginx 		api.ng.cdnlebo.com 0 0
-ali android apiad.alcp168.net ali cloudflare 	ali.cf.cdnlebo.com 1 0
-ali android apiad.alcp168.net ali wangshu 	ali.ws.cdnlebo.com 1 1
-ali ios apiios.alcp168.net ali nginx 		api.ng.cdnlebo.com 0 0
-ali ios apiios.alcp168.net ali cloudflare 	ali.cf.cdnlebo.com 0 0
-ali ios apiios.alcp168.net ali wangshu 	ali.ws.cdnlebo.com 0 1
-ali pc apiweb.alcp168.net 	ali 	nginx 	api.ng.cdnlebo.com 0 0
-ali pc apiweb.alcp168.net 	ali 	cloudflare 		ali.cf.cdnlebo.com 0 0
-ali pc apiweb.alcp168.net 	ali 	wangshu 		ali.ws.cdnlebo.com 0 1
+#ali android apiad.alcp168.net ali nginx 		api.ng.cdnlebo.com 0 0
+#ali android apiad.alcp168.net ali cloudflare 	ali.cf.cdnlebo.com 1 0
+ali android apiad.alcp168.net ali wangsu 	ali.ws.cdnlebo.com 1 1
+#ali ios apiios.alcp168.net ali nginx 		api.ng.cdnlebo.com 0 0
+#ali ios apiios.alcp168.net ali cloudflare 	ali.cf.cdnlebo.com 0 0
+ali ios apiios.alcp168.net ali wangsu 	ali.ws.cdnlebo.com 0 1
+#ali pc apiweb.alcp168.net 	ali 	nginx 	api.ng.cdnlebo.com 0 0
+#ali pc apiweb.alcp168.net 	ali 	cloudflare 		ali.cf.cdnlebo.com 0 0
+ali pc apiweb.alcp168.net 	ali 	wangsu 		ali.ws.cdnlebo.com 0 1
 
 ####  ios  ###
 #ali ios aliios.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com 0 0
