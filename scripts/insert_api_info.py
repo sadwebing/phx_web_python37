@@ -24,6 +24,9 @@ for info in contents:
         api = CfApi(CF_URL, cf_acc.email, cf_acc.key)
         zone_id = api.GetZoneId('.'.join(info.split()[2].split('.')[-2:]))['zone_id']
         record_id = api.GetDnsRecordId(zone_id, info.split()[2])
+
+
+
         try:
             #update = domain_info.objects.filter(product=info.split()[0], client=info.split()[1], domain=info.split()[2], route=info.split()[4]).first()
             #update.zone_id = zone_id

@@ -6752,3 +6752,49 @@ Traceback (most recent call last):
   File "J:\arno\pythonenv\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
     super(Connection, self).__init__(*args, **kwargs2)
 OperationalError: (1045, "Access denied for user 'phxweb'@'122.55.4.242' (using password: YES)")
+2018-02-28 15:24:29,197 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-02-28 15:24:31,709 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-02-28 15:24:32,118 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',)]
+2018-02-28 15:24:32,336 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-28 15:24:33,822 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-28 15:25:04,246 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-28 15:25:04,246 cf.py [django:59] [INFO]- [{u'product': u'panda', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff', u'name': u'le079.com'}]
+2018-02-28 15:53:06,214 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-28 15:53:06,216 cf.py [django:59] [INFO]- [{u'product': u'panda', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff', u'name': u'le079.com'}]
+2018-02-28 15:53:37,693 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-28 15:53:37,693 cf.py [django:59] [INFO]- [{u'product': u'panda', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff', u'name': u'le079.com'}]
+2018-02-28 15:53:38,732 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-28 15:53:38,732 cf.py [django:59] [INFO]- [{u'product': u'panda', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff', u'name': u'le079.com'}]
+2018-02-28 15:53:42,165 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-28 15:53:42,165 cf.py [django:59] [INFO]- [{u'product': u'panda', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff', u'name': u'le079.com'}]
+2018-02-28 15:53:45,131 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-28 15:53:45,131 cf.py [django:59] [INFO]- [{u'product': u'panda', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff', u'name': u'le079.com'}]
+2018-02-28 15:54:10,285 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-02-28 15:54:46,931 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-02-28 15:55:05,586 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-02-28 15:55:05,683 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',)]
+2018-02-28 15:55:06,173 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-28 15:55:29,848 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-02-28 15:55:31,634 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-02-28 15:55:31,711 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',)]
+2018-02-28 15:55:31,901 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-28 15:55:34,904 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-28 15:55:38,578 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-28 15:55:38,578 cf.py [django:59] [INFO]- [{u'product': u'panda', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff', u'name': u'le079.com'}]
+2018-02-28 15:55:49,201 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-28 15:55:49,203 cf.py [django:59] [INFO]- [{u'product': u'panda', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff', u'name': u'le079.com'}]
+2018-02-28 15:59:54,756 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-28 15:59:54,756 cf.py [django:59] [INFO]- [{u'product': u'panda', u'zone_id': u'af02fa31e28a719e54d8c242e9d1daff', u'name': u'le079.com'}]
+2018-02-28 17:02:57,012 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-02-28 17:03:25,164 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-02-28 17:04:04,579 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-02-28 17:04:19,055 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-02-28 17:04:19,128 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-02-28 17:04:19,292 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-28 17:04:50,788 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-28 17:04:51,601 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-02-28 17:05:05,448 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-02-28 17:05:05,450 cf.py [django:59] [INFO]- [{u'product': u'yongshi', u'zone_id': u'b96b774172af5a7024bce6ac602799aa', u'name': u'hg8868.ag'}]
+2018-03-01 21:55:39,246 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-03-01 21:55:39,247 cf.py [django:59] [INFO]- [{u'product': u'yongshi', u'zone_id': u'23b5272f9642f10b7e28c7e37260ff6d', u'name': u'hh99886.com'}]
+2018-03-02 16:51:10,121 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records

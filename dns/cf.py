@@ -151,6 +151,8 @@ def UpdateApiRoute(request):
             content = [domain_i.content for domain_i in domain_l if domain_i.route == 'cloudflare' ]
         elif data['route'] == 'aegins':
             content = [domain_i.content for domain_i in domain_l if domain_i.route == 'aegins' ]
+        elif data['route'] == 'wangshu':
+            content = [domain_i.content for domain_i in domain_l if domain_i.route == 'wangshu' ]
 
         result = cfapi.UpdateDnsRecords(zone_id, r_type, data['domain'], content[0], proxied=proxied, record_id=record_id)
 
@@ -181,7 +183,8 @@ def GetApiRoute(request):
         logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
 
         return_info = []
-        api_list = domain_info.objects.filter(product=data['product'], status=1).all()
+        #api_list = domain_info.objects.filter(product=data['product'], status=1).all()
+        api_list = domain_info.objects.filter(product=data['product']).all()
         for info in api_list:
             temp = {}
             temp['product'] = info.product
