@@ -203,13 +203,24 @@ var operate = {
         });
     },
 
-    isDomain: function (value) {
+    isDomain: function (value, proxied) {
         var regexp = /^.*[a-zA-Z0-9]+.*\.[a-zA-Z0-9]*[a-zA-Z]+[a-zA-Z0-9]*$/;
-                 
+        var regexp_tw = /^tw\..*$/;
+
         var valid = regexp.test(value);
         if(!valid){
             return false;
         }
+
+        if (proxied == 'false'){
+            var valid_tw = regexp_tw.test(value);
+
+            if(valid_tw){
+                return false;
+            }
+        }
+
+
         return true;
     },
 
@@ -329,11 +340,15 @@ var operate = {
                     return false;
                 }
             }else if (postdata['type'] == 'CNAME'){
-                if (! operate.isDomain(postdata['content'])){
+                if (! operate.isDomain(postdata['content'], postdata['proxied'])){
                     alert('Content for CNAME record is invalid.');
                     operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
                     return false;
                 }
+
+
+
+
             }
 
             postdata['records'] = arrselectedData;

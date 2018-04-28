@@ -18082,3 +18082,1491 @@ OperationalError: (1045, "Access denied for user 'phxweb'@'122.55.4.242' (using 
 2018-03-25 18:14:09,437 utils.py [django.db.backends:89] [DEBUG]- (0.162) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiweb.alcp168.net', 'cloudflare', 'ali', 'ali', 'pc', 'e348c479ad6bd899cc6df2ee66a62ccb', '4257bb4da1c4e126b706d544b5e01fbe', 'ali.cf.cdnlebo.com', 0, 0); args=['apiweb.alcp168.net', 'cloudflare', 'ali', 'ali', 'pc', u'e348c479ad6bd899cc6df2ee66a62ccb', u'4257bb4da1c4e126b706d544b5e01fbe', 'ali.cf.cdnlebo.com', 0, 0]
 2018-03-25 18:14:09,921 utils.py [django.db.backends:89] [DEBUG]- (0.161) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'ali' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('ali',)
 2018-03-25 18:14:10,834 utils.py [django.db.backends:89] [DEBUG]- (0.162) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiweb.alcp168.net', 'wangshu', 'ali', 'ali', 'pc', 'e348c479ad6bd899cc6df2ee66a62ccb', '4257bb4da1c4e126b706d544b5e01fbe', 'ali.ws.cdnlebo.com', 0, 1); args=['apiweb.alcp168.net', 'wangshu', 'ali', 'ali', 'pc', u'e348c479ad6bd899cc6df2ee66a62ccb', u'4257bb4da1c4e126b706d544b5e01fbe', 'ali.ws.cdnlebo.com', 0, 1]
+2018-03-25 18:34:58,812 utils.py [django.db.backends:89] [DEBUG]- (0.187) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-03-25 18:34:59,003 utils.py [django.db.backends:89] [DEBUG]- (0.187) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'ali' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('ali',)
+2018-03-25 18:35:01,098 utils.py [django.db.backends:89] [DEBUG]- (0.188) SELECT `dns_domain_info`.`id`, `dns_domain_info`.`domain`, `dns_domain_info`.`route`, `dns_domain_info`.`cf_account_name`, `dns_domain_info`.`product`, `dns_domain_info`.`client`, `dns_domain_info`.`zone_id`, `dns_domain_info`.`record_id`, `dns_domain_info`.`content`, `dns_domain_info`.`status`, `dns_domain_info`.`route_status` FROM `dns_domain_info` WHERE (`dns_domain_info`.`route` = 'wangsu' AND `dns_domain_info`.`client` = 'android' AND `dns_domain_info`.`product` = 'ali' AND `dns_domain_info`.`domain` = 'apiad.alcp168.net') ORDER BY `dns_domain_info`.`id` ASC LIMIT 1; args=('wangsu', 'android', 'ali', 'apiad.alcp168.net')
+2018-03-25 18:35:01,286 utils.py [django.db.backends:89] [DEBUG]- (0.187) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'ali' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('ali',)
+2018-03-25 18:35:01,976 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `dns_domain_info`.`id`, `dns_domain_info`.`domain`, `dns_domain_info`.`route`, `dns_domain_info`.`cf_account_name`, `dns_domain_info`.`product`, `dns_domain_info`.`client`, `dns_domain_info`.`zone_id`, `dns_domain_info`.`record_id`, `dns_domain_info`.`content`, `dns_domain_info`.`status`, `dns_domain_info`.`route_status` FROM `dns_domain_info` WHERE (`dns_domain_info`.`route` = 'wangsu' AND `dns_domain_info`.`client` = 'ios' AND `dns_domain_info`.`product` = 'ali' AND `dns_domain_info`.`domain` = 'apiios.alcp168.net') ORDER BY `dns_domain_info`.`id` ASC LIMIT 1; args=('wangsu', 'ios', 'ali', 'apiios.alcp168.net')
+2018-03-25 18:35:02,168 utils.py [django.db.backends:89] [DEBUG]- (0.187) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'ali' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('ali',)
+2018-03-25 18:35:03,441 utils.py [django.db.backends:89] [DEBUG]- (0.188) SELECT `dns_domain_info`.`id`, `dns_domain_info`.`domain`, `dns_domain_info`.`route`, `dns_domain_info`.`cf_account_name`, `dns_domain_info`.`product`, `dns_domain_info`.`client`, `dns_domain_info`.`zone_id`, `dns_domain_info`.`record_id`, `dns_domain_info`.`content`, `dns_domain_info`.`status`, `dns_domain_info`.`route_status` FROM `dns_domain_info` WHERE (`dns_domain_info`.`route` = 'wangsu' AND `dns_domain_info`.`client` = 'pc' AND `dns_domain_info`.`product` = 'ali' AND `dns_domain_info`.`domain` = 'apiweb.alcp168.net') ORDER BY `dns_domain_info`.`id` ASC LIMIT 1; args=('wangsu', 'pc', 'ali', 'apiweb.alcp168.net')
+2018-03-25 18:36:31,176 utils.py [django.db.backends:89] [DEBUG]- (0.162) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-03-25 18:36:31,339 utils.py [django.db.backends:89] [DEBUG]- (0.162) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'ali' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('ali',)
+2018-03-25 18:36:32,401 utils.py [django.db.backends:89] [DEBUG]- (0.163) SELECT `dns_domain_info`.`id`, `dns_domain_info`.`domain`, `dns_domain_info`.`route`, `dns_domain_info`.`cf_account_name`, `dns_domain_info`.`product`, `dns_domain_info`.`client`, `dns_domain_info`.`zone_id`, `dns_domain_info`.`record_id`, `dns_domain_info`.`content`, `dns_domain_info`.`status`, `dns_domain_info`.`route_status` FROM `dns_domain_info` WHERE (`dns_domain_info`.`content` = 'ali.ws.cdnlebo.com' AND `dns_domain_info`.`product` = 'ali' AND `dns_domain_info`.`client` = 'android' AND `dns_domain_info`.`domain` = 'apiad.alcp168.net') ORDER BY `dns_domain_info`.`id` ASC LIMIT 1; args=('ali.ws.cdnlebo.com', 'ali', 'android', 'apiad.alcp168.net')
+2018-03-25 18:36:32,726 utils.py [django.db.backends:89] [DEBUG]- (0.163) UPDATE `dns_domain_info` SET `domain` = 'apiad.alcp168.net', `route` = 'wangsu', `cf_account_name` = 'ali', `product` = 'ali', `client` = 'android', `zone_id` = 'e348c479ad6bd899cc6df2ee66a62ccb', `record_id` = '98cfb591f8a889ab78b849ce7054e3db', `content` = 'ali.ws.cdnlebo.com', `status` = 1, `route_status` = 1 WHERE `dns_domain_info`.`id` = 91; args=(u'apiad.alcp168.net', 'wangsu', u'ali', u'ali', u'android', u'e348c479ad6bd899cc6df2ee66a62ccb', u'98cfb591f8a889ab78b849ce7054e3db', u'ali.ws.cdnlebo.com', 1, 1, 91)
+2018-03-25 18:36:33,213 utils.py [django.db.backends:89] [DEBUG]- (0.163) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'ali' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('ali',)
+2018-03-25 18:36:34,769 utils.py [django.db.backends:89] [DEBUG]- (0.163) SELECT `dns_domain_info`.`id`, `dns_domain_info`.`domain`, `dns_domain_info`.`route`, `dns_domain_info`.`cf_account_name`, `dns_domain_info`.`product`, `dns_domain_info`.`client`, `dns_domain_info`.`zone_id`, `dns_domain_info`.`record_id`, `dns_domain_info`.`content`, `dns_domain_info`.`status`, `dns_domain_info`.`route_status` FROM `dns_domain_info` WHERE (`dns_domain_info`.`content` = 'ali.ws.cdnlebo.com' AND `dns_domain_info`.`product` = 'ali' AND `dns_domain_info`.`client` = 'ios' AND `dns_domain_info`.`domain` = 'apiios.alcp168.net') ORDER BY `dns_domain_info`.`id` ASC LIMIT 1; args=('ali.ws.cdnlebo.com', 'ali', 'ios', 'apiios.alcp168.net')
+2018-03-25 18:36:35,095 utils.py [django.db.backends:89] [DEBUG]- (0.164) UPDATE `dns_domain_info` SET `domain` = 'apiios.alcp168.net', `route` = 'wangsu', `cf_account_name` = 'ali', `product` = 'ali', `client` = 'ios', `zone_id` = 'e348c479ad6bd899cc6df2ee66a62ccb', `record_id` = 'f9df3f31bbbe33aedb1df664245cb08f', `content` = 'ali.ws.cdnlebo.com', `status` = 0, `route_status` = 1 WHERE `dns_domain_info`.`id` = 94; args=(u'apiios.alcp168.net', 'wangsu', u'ali', u'ali', u'ios', u'e348c479ad6bd899cc6df2ee66a62ccb', u'f9df3f31bbbe33aedb1df664245cb08f', u'ali.ws.cdnlebo.com', 0, 1, 94)
+2018-03-25 18:36:35,578 utils.py [django.db.backends:89] [DEBUG]- (0.162) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'ali' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('ali',)
+2018-03-25 18:36:36,701 utils.py [django.db.backends:89] [DEBUG]- (0.162) SELECT `dns_domain_info`.`id`, `dns_domain_info`.`domain`, `dns_domain_info`.`route`, `dns_domain_info`.`cf_account_name`, `dns_domain_info`.`product`, `dns_domain_info`.`client`, `dns_domain_info`.`zone_id`, `dns_domain_info`.`record_id`, `dns_domain_info`.`content`, `dns_domain_info`.`status`, `dns_domain_info`.`route_status` FROM `dns_domain_info` WHERE (`dns_domain_info`.`content` = 'ali.ws.cdnlebo.com' AND `dns_domain_info`.`product` = 'ali' AND `dns_domain_info`.`client` = 'pc' AND `dns_domain_info`.`domain` = 'apiweb.alcp168.net') ORDER BY `dns_domain_info`.`id` ASC LIMIT 1; args=('ali.ws.cdnlebo.com', 'ali', 'pc', 'apiweb.alcp168.net')
+2018-03-25 18:36:37,026 utils.py [django.db.backends:89] [DEBUG]- (0.163) UPDATE `dns_domain_info` SET `domain` = 'apiweb.alcp168.net', `route` = 'wangsu', `cf_account_name` = 'ali', `product` = 'ali', `client` = 'pc', `zone_id` = 'e348c479ad6bd899cc6df2ee66a62ccb', `record_id` = '4257bb4da1c4e126b706d544b5e01fbe', `content` = 'ali.ws.cdnlebo.com', `status` = 0, `route_status` = 1 WHERE `dns_domain_info`.`id` = 97; args=(u'apiweb.alcp168.net', 'wangsu', u'ali', u'ali', u'pc', u'e348c479ad6bd899cc6df2ee66a62ccb', u'4257bb4da1c4e126b706d544b5e01fbe', u'ali.ws.cdnlebo.com', 0, 1, 97)
+2018-03-30 19:47:03,049 utils.py [django.db.backends:89] [DEBUG]- (0.158) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-03-30 19:47:03,244 utils.py [django.db.backends:89] [DEBUG]- (0.159) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'gd' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('gd',)
+2018-03-30 19:48:01,960 utils.py [django.db.backends:89] [DEBUG]- (0.172) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-03-30 19:48:02,131 utils.py [django.db.backends:89] [DEBUG]- (0.169) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:04,200 utils.py [django.db.backends:89] [DEBUG]- (0.167) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiad.gdcp168.net', 'nginx', 'guangda', 'gd', 'android', '980485e3e0e4bc71a4f5e306fc6c868e', '0e3ecf24c6ff1c29510c70d071184379', 'api.ng.cdnlebo.com', 0, 0); args=['apiad.gdcp168.net', 'nginx', 'guangda', 'gd', 'android', u'980485e3e0e4bc71a4f5e306fc6c868e', u'0e3ecf24c6ff1c29510c70d071184379', 'api.ng.cdnlebo.com', 0, 0]
+2018-03-30 19:48:04,710 utils.py [django.db.backends:89] [DEBUG]- (0.173) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:06,694 utils.py [django.db.backends:89] [DEBUG]- (0.170) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiad.gdcp168.net', 'cloudflare', 'guangda', 'gd', 'android', '980485e3e0e4bc71a4f5e306fc6c868e', '0e3ecf24c6ff1c29510c70d071184379', 'gd.cf.cdnlebo.com', 1, 0); args=['apiad.gdcp168.net', 'cloudflare', 'guangda', 'gd', 'android', u'980485e3e0e4bc71a4f5e306fc6c868e', u'0e3ecf24c6ff1c29510c70d071184379', 'gd.cf.cdnlebo.com', 1, 0]
+2018-03-30 19:48:07,201 utils.py [django.db.backends:89] [DEBUG]- (0.168) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:08,490 utils.py [django.db.backends:89] [DEBUG]- (0.166) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiad.gdcp168.net', 'wangsu', 'guangda', 'gd', 'android', '980485e3e0e4bc71a4f5e306fc6c868e', '0e3ecf24c6ff1c29510c70d071184379', 'gd.ws.cdnlebo.com', 1, 1); args=['apiad.gdcp168.net', 'wangsu', 'guangda', 'gd', 'android', u'980485e3e0e4bc71a4f5e306fc6c868e', u'0e3ecf24c6ff1c29510c70d071184379', 'gd.ws.cdnlebo.com', 1, 1]
+2018-03-30 19:48:08,994 utils.py [django.db.backends:89] [DEBUG]- (0.168) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:10,349 utils.py [django.db.backends:89] [DEBUG]- (0.170) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiios.gdcp168.net', 'nginx', 'guangda', 'gd', 'ios', '980485e3e0e4bc71a4f5e306fc6c868e', '1527ee5733755cf156c08337c46e8c17', 'api.ng.cdnlebo.com', 0, 0); args=['apiios.gdcp168.net', 'nginx', 'guangda', 'gd', 'ios', u'980485e3e0e4bc71a4f5e306fc6c868e', u'1527ee5733755cf156c08337c46e8c17', 'api.ng.cdnlebo.com', 0, 0]
+2018-03-30 19:48:10,849 utils.py [django.db.backends:89] [DEBUG]- (0.167) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:11,770 utils.py [django.db.backends:89] [DEBUG]- (0.165) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiios.gdcp168.net', 'cloudflare', 'guangda', 'gd', 'ios', '980485e3e0e4bc71a4f5e306fc6c868e', '1527ee5733755cf156c08337c46e8c17', 'gd.cf.cdnlebo.com', 0, 0); args=['apiios.gdcp168.net', 'cloudflare', 'guangda', 'gd', 'ios', u'980485e3e0e4bc71a4f5e306fc6c868e', u'1527ee5733755cf156c08337c46e8c17', 'gd.cf.cdnlebo.com', 0, 0]
+2018-03-30 19:48:12,269 utils.py [django.db.backends:89] [DEBUG]- (0.167) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:13,138 utils.py [django.db.backends:89] [DEBUG]- (0.167) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiios.gdcp168.net', 'wangsu', 'guangda', 'gd', 'ios', '980485e3e0e4bc71a4f5e306fc6c868e', '1527ee5733755cf156c08337c46e8c17', 'gd.ws.cdnlebo.com', 0, 1); args=['apiios.gdcp168.net', 'wangsu', 'guangda', 'gd', 'ios', u'980485e3e0e4bc71a4f5e306fc6c868e', u'1527ee5733755cf156c08337c46e8c17', 'gd.ws.cdnlebo.com', 0, 1]
+2018-03-30 19:48:13,640 utils.py [django.db.backends:89] [DEBUG]- (0.167) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:16,821 utils.py [django.db.backends:89] [DEBUG]- (0.169) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiweb.gdcp168.net', 'nginx', 'guangda', 'gd', 'pc', '980485e3e0e4bc71a4f5e306fc6c868e', '32f6358eb990bee44eecbbbab35d1966', 'api.ng.cdnlebo.com', 0, 0); args=['apiweb.gdcp168.net', 'nginx', 'guangda', 'gd', 'pc', u'980485e3e0e4bc71a4f5e306fc6c868e', u'32f6358eb990bee44eecbbbab35d1966', 'api.ng.cdnlebo.com', 0, 0]
+2018-03-30 19:48:17,328 utils.py [django.db.backends:89] [DEBUG]- (0.169) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:19,213 utils.py [django.db.backends:89] [DEBUG]- (0.169) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiweb.gdcp168.net', 'cloudflare', 'guangda', 'gd', 'pc', '980485e3e0e4bc71a4f5e306fc6c868e', '32f6358eb990bee44eecbbbab35d1966', 'gd.cf.cdnlebo.com', 0, 0); args=['apiweb.gdcp168.net', 'cloudflare', 'guangda', 'gd', 'pc', u'980485e3e0e4bc71a4f5e306fc6c868e', u'32f6358eb990bee44eecbbbab35d1966', 'gd.cf.cdnlebo.com', 0, 0]
+2018-03-30 19:48:19,720 utils.py [django.db.backends:89] [DEBUG]- (0.170) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:20,631 utils.py [django.db.backends:89] [DEBUG]- (0.173) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiweb.gdcp168.net', 'wangsu', 'guangda', 'gd', 'pc', '980485e3e0e4bc71a4f5e306fc6c868e', '32f6358eb990bee44eecbbbab35d1966', 'gd.ws.cdnlebo.com', 0, 1); args=['apiweb.gdcp168.net', 'wangsu', 'guangda', 'gd', 'pc', u'980485e3e0e4bc71a4f5e306fc6c868e', u'32f6358eb990bee44eecbbbab35d1966', 'gd.ws.cdnlebo.com', 0, 1]
+2018-03-30 19:48:32,865 utils.py [django.db.backends:89] [DEBUG]- (0.179) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-03-30 19:48:33,046 utils.py [django.db.backends:89] [DEBUG]- (0.180) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:34,243 utils.py [django.db.backends:89] [DEBUG]- (0.188) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiad.gdcp168.net', 'nginx', 'guangda', 'gd', 'android', '980485e3e0e4bc71a4f5e306fc6c868e', '0e3ecf24c6ff1c29510c70d071184379', 'api.ng.cdnlebo.com', 0, 0); args=['apiad.gdcp168.net', 'nginx', 'guangda', 'gd', 'android', u'980485e3e0e4bc71a4f5e306fc6c868e', u'0e3ecf24c6ff1c29510c70d071184379', 'api.ng.cdnlebo.com', 0, 0]
+2018-03-30 19:48:34,782 utils.py [django.db.backends:89] [DEBUG]- (0.182) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:35,688 utils.py [django.db.backends:89] [DEBUG]- (0.183) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiad.gdcp168.net', 'cloudflare', 'guangda', 'gd', 'android', '980485e3e0e4bc71a4f5e306fc6c868e', '0e3ecf24c6ff1c29510c70d071184379', 'gd.cf.cdnlebo.com', 1, 0); args=['apiad.gdcp168.net', 'cloudflare', 'guangda', 'gd', 'android', u'980485e3e0e4bc71a4f5e306fc6c868e', u'0e3ecf24c6ff1c29510c70d071184379', 'gd.cf.cdnlebo.com', 1, 0]
+2018-03-30 19:48:36,230 utils.py [django.db.backends:89] [DEBUG]- (0.179) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:37,141 utils.py [django.db.backends:89] [DEBUG]- (0.181) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiad.gdcp168.net', 'wangsu', 'guangda', 'gd', 'android', '980485e3e0e4bc71a4f5e306fc6c868e', '0e3ecf24c6ff1c29510c70d071184379', 'gd.ws.cdnlebo.com', 1, 1); args=['apiad.gdcp168.net', 'wangsu', 'guangda', 'gd', 'android', u'980485e3e0e4bc71a4f5e306fc6c868e', u'0e3ecf24c6ff1c29510c70d071184379', 'gd.ws.cdnlebo.com', 1, 1]
+2018-03-30 19:48:37,678 utils.py [django.db.backends:89] [DEBUG]- (0.180) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:39,128 utils.py [django.db.backends:89] [DEBUG]- (0.179) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiios.gdcp168.net', 'nginx', 'guangda', 'gd', 'ios', '980485e3e0e4bc71a4f5e306fc6c868e', '1527ee5733755cf156c08337c46e8c17', 'api.ng.cdnlebo.com', 0, 0); args=['apiios.gdcp168.net', 'nginx', 'guangda', 'gd', 'ios', u'980485e3e0e4bc71a4f5e306fc6c868e', u'1527ee5733755cf156c08337c46e8c17', 'api.ng.cdnlebo.com', 0, 0]
+2018-03-30 19:48:39,674 utils.py [django.db.backends:89] [DEBUG]- (0.181) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:40,525 utils.py [django.db.backends:89] [DEBUG]- (0.180) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiios.gdcp168.net', 'cloudflare', 'guangda', 'gd', 'ios', '980485e3e0e4bc71a4f5e306fc6c868e', '1527ee5733755cf156c08337c46e8c17', 'gd.cf.cdnlebo.com', 0, 0); args=['apiios.gdcp168.net', 'cloudflare', 'guangda', 'gd', 'ios', u'980485e3e0e4bc71a4f5e306fc6c868e', u'1527ee5733755cf156c08337c46e8c17', 'gd.cf.cdnlebo.com', 0, 0]
+2018-03-30 19:48:41,065 utils.py [django.db.backends:89] [DEBUG]- (0.180) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:42,023 utils.py [django.db.backends:89] [DEBUG]- (0.179) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiios.gdcp168.net', 'wangsu', 'guangda', 'gd', 'ios', '980485e3e0e4bc71a4f5e306fc6c868e', '1527ee5733755cf156c08337c46e8c17', 'gd.ws.cdnlebo.com', 0, 1); args=['apiios.gdcp168.net', 'wangsu', 'guangda', 'gd', 'ios', u'980485e3e0e4bc71a4f5e306fc6c868e', u'1527ee5733755cf156c08337c46e8c17', 'gd.ws.cdnlebo.com', 0, 1]
+2018-03-30 19:48:42,566 utils.py [django.db.backends:89] [DEBUG]- (0.180) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:43,467 utils.py [django.db.backends:89] [DEBUG]- (0.182) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiweb.gdcp168.net', 'nginx', 'guangda', 'gd', 'pc', '980485e3e0e4bc71a4f5e306fc6c868e', '32f6358eb990bee44eecbbbab35d1966', 'api.ng.cdnlebo.com', 0, 0); args=['apiweb.gdcp168.net', 'nginx', 'guangda', 'gd', 'pc', u'980485e3e0e4bc71a4f5e306fc6c868e', u'32f6358eb990bee44eecbbbab35d1966', 'api.ng.cdnlebo.com', 0, 0]
+2018-03-30 19:48:44,009 utils.py [django.db.backends:89] [DEBUG]- (0.184) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:44,894 utils.py [django.db.backends:89] [DEBUG]- (0.184) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiweb.gdcp168.net', 'cloudflare', 'guangda', 'gd', 'pc', '980485e3e0e4bc71a4f5e306fc6c868e', '32f6358eb990bee44eecbbbab35d1966', 'gd.cf.cdnlebo.com', 0, 0); args=['apiweb.gdcp168.net', 'cloudflare', 'guangda', 'gd', 'pc', u'980485e3e0e4bc71a4f5e306fc6c868e', u'32f6358eb990bee44eecbbbab35d1966', 'gd.cf.cdnlebo.com', 0, 0]
+2018-03-30 19:48:45,437 utils.py [django.db.backends:89] [DEBUG]- (0.181) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'guangda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('guangda',)
+2018-03-30 19:48:46,875 utils.py [django.db.backends:89] [DEBUG]- (0.183) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiweb.gdcp168.net', 'wangsu', 'guangda', 'gd', 'pc', '980485e3e0e4bc71a4f5e306fc6c868e', '32f6358eb990bee44eecbbbab35d1966', 'gd.ws.cdnlebo.com', 0, 1); args=['apiweb.gdcp168.net', 'wangsu', 'guangda', 'gd', 'pc', u'980485e3e0e4bc71a4f5e306fc6c868e', u'32f6358eb990bee44eecbbbab35d1966', 'gd.ws.cdnlebo.com', 0, 1]
+2018-03-30 19:50:36,237 utils.py [django.db.backends:89] [DEBUG]- (0.186) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-03-30 19:50:36,428 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'panda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('panda',)
+2018-03-30 19:50:37,635 utils.py [django.db.backends:89] [DEBUG]- (0.184) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiad.lycp168.net', 'nginx', 'panda', 'ly', 'android', '569c6c8d53b0fb6cf85953186b0bdb0d', '2ca5376bf414218808e448c69e2cf0e9', 'api.ng.cdnlebo.com', 0, 0); args=['apiad.lycp168.net', 'nginx', 'panda', 'ly', 'android', u'569c6c8d53b0fb6cf85953186b0bdb0d', u'2ca5376bf414218808e448c69e2cf0e9', 'api.ng.cdnlebo.com', 0, 0]
+2018-03-30 19:50:38,180 utils.py [django.db.backends:89] [DEBUG]- (0.177) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'panda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('panda',)
+2018-03-30 19:50:39,033 utils.py [django.db.backends:89] [DEBUG]- (0.177) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiad.lycp168.net', 'cloudflare', 'panda', 'ly', 'android', '569c6c8d53b0fb6cf85953186b0bdb0d', '2ca5376bf414218808e448c69e2cf0e9', 'ly.cf.cdnlebo.com', 1, 0); args=['apiad.lycp168.net', 'cloudflare', 'panda', 'ly', 'android', u'569c6c8d53b0fb6cf85953186b0bdb0d', u'2ca5376bf414218808e448c69e2cf0e9', 'ly.cf.cdnlebo.com', 1, 0]
+2018-03-30 19:50:39,572 utils.py [django.db.backends:89] [DEBUG]- (0.179) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'panda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('panda',)
+2018-03-30 19:50:40,507 utils.py [django.db.backends:89] [DEBUG]- (0.178) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiad.lycp168.net', 'wangsu', 'panda', 'ly', 'android', '569c6c8d53b0fb6cf85953186b0bdb0d', '2ca5376bf414218808e448c69e2cf0e9', 'ly.ws.cdnlebo.com', 1, 1); args=['apiad.lycp168.net', 'wangsu', 'panda', 'ly', 'android', u'569c6c8d53b0fb6cf85953186b0bdb0d', u'2ca5376bf414218808e448c69e2cf0e9', 'ly.ws.cdnlebo.com', 1, 1]
+2018-03-30 19:50:41,061 utils.py [django.db.backends:89] [DEBUG]- (0.194) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'panda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('panda',)
+2018-03-30 19:50:41,992 utils.py [django.db.backends:89] [DEBUG]- (0.178) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiios.lycp168.net', 'nginx', 'panda', 'ly', 'ios', '569c6c8d53b0fb6cf85953186b0bdb0d', 'f07ec7d41007501e6f5ccc9a2273e58c', 'api.ng.cdnlebo.com', 0, 0); args=['apiios.lycp168.net', 'nginx', 'panda', 'ly', 'ios', u'569c6c8d53b0fb6cf85953186b0bdb0d', u'f07ec7d41007501e6f5ccc9a2273e58c', 'api.ng.cdnlebo.com', 0, 0]
+2018-03-30 19:50:42,529 utils.py [django.db.backends:89] [DEBUG]- (0.179) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'panda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('panda',)
+2018-03-30 19:50:43,380 utils.py [django.db.backends:89] [DEBUG]- (0.179) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiios.lycp168.net', 'cloudflare', 'panda', 'ly', 'ios', '569c6c8d53b0fb6cf85953186b0bdb0d', 'f07ec7d41007501e6f5ccc9a2273e58c', 'ly.cf.cdnlebo.com', 0, 0); args=['apiios.lycp168.net', 'cloudflare', 'panda', 'ly', 'ios', u'569c6c8d53b0fb6cf85953186b0bdb0d', u'f07ec7d41007501e6f5ccc9a2273e58c', 'ly.cf.cdnlebo.com', 0, 0]
+2018-03-30 19:50:43,923 utils.py [django.db.backends:89] [DEBUG]- (0.179) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'panda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('panda',)
+2018-03-30 19:50:44,766 utils.py [django.db.backends:89] [DEBUG]- (0.182) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiios.lycp168.net', 'wangsu', 'panda', 'ly', 'ios', '569c6c8d53b0fb6cf85953186b0bdb0d', 'f07ec7d41007501e6f5ccc9a2273e58c', 'ly.ws.cdnlebo.com', 0, 1); args=['apiios.lycp168.net', 'wangsu', 'panda', 'ly', 'ios', u'569c6c8d53b0fb6cf85953186b0bdb0d', u'f07ec7d41007501e6f5ccc9a2273e58c', 'ly.ws.cdnlebo.com', 0, 1]
+2018-03-30 19:50:45,305 utils.py [django.db.backends:89] [DEBUG]- (0.180) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'panda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('panda',)
+2018-03-30 19:50:46,252 utils.py [django.db.backends:89] [DEBUG]- (0.177) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiweb.lycp168.net', 'nginx', 'panda', 'ly', 'pc', '569c6c8d53b0fb6cf85953186b0bdb0d', 'fc8b643e9b59db52cdf8b871ef456e86', 'api.ng.cdnlebo.com', 0, 0); args=['apiweb.lycp168.net', 'nginx', 'panda', 'ly', 'pc', u'569c6c8d53b0fb6cf85953186b0bdb0d', u'fc8b643e9b59db52cdf8b871ef456e86', 'api.ng.cdnlebo.com', 0, 0]
+2018-03-30 19:50:46,806 utils.py [django.db.backends:89] [DEBUG]- (0.179) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'panda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('panda',)
+2018-03-30 19:50:47,729 utils.py [django.db.backends:89] [DEBUG]- (0.179) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiweb.lycp168.net', 'cloudflare', 'panda', 'ly', 'pc', '569c6c8d53b0fb6cf85953186b0bdb0d', 'fc8b643e9b59db52cdf8b871ef456e86', 'ly.cf.cdnlebo.com', 0, 0); args=['apiweb.lycp168.net', 'cloudflare', 'panda', 'ly', 'pc', u'569c6c8d53b0fb6cf85953186b0bdb0d', u'fc8b643e9b59db52cdf8b871ef456e86', 'ly.cf.cdnlebo.com', 0, 0]
+2018-03-30 19:50:48,269 utils.py [django.db.backends:89] [DEBUG]- (0.182) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'panda' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('panda',)
+2018-03-30 19:50:49,219 utils.py [django.db.backends:89] [DEBUG]- (0.178) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiweb.lycp168.net', 'wangsu', 'panda', 'ly', 'pc', '569c6c8d53b0fb6cf85953186b0bdb0d', 'fc8b643e9b59db52cdf8b871ef456e86', 'ly.ws.cdnlebo.com', 0, 1); args=['apiweb.lycp168.net', 'wangsu', 'panda', 'ly', 'pc', u'569c6c8d53b0fb6cf85953186b0bdb0d', u'fc8b643e9b59db52cdf8b871ef456e86', 'ly.ws.cdnlebo.com', 0, 1]
+2018-03-30 19:52:54,292 utils.py [django.db.backends:89] [DEBUG]- (0.161) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-03-30 19:52:54,463 utils.py [django.db.backends:89] [DEBUG]- (0.165) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'richer' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('richer',)
+2018-03-30 19:52:55,641 utils.py [django.db.backends:89] [DEBUG]- (0.164) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiad.fhcp168.net', 'nginx', 'richer', 'sd', 'android', '4c0ae8772853eee2d681bc7cc0e11072', '66257589e5c2bd5859d522aaad86ee0d', 'api.ng.cdnlebo.com', 0, 0); args=['apiad.fhcp168.net', 'nginx', 'richer', 'sd', 'android', u'4c0ae8772853eee2d681bc7cc0e11072', u'66257589e5c2bd5859d522aaad86ee0d', 'api.ng.cdnlebo.com', 0, 0]
+2018-03-30 19:52:56,131 utils.py [django.db.backends:89] [DEBUG]- (0.161) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'richer' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('richer',)
+2018-03-30 19:52:56,974 utils.py [django.db.backends:89] [DEBUG]- (0.163) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiad.fhcp168.net', 'cloudflare', 'richer', 'sd', 'android', '4c0ae8772853eee2d681bc7cc0e11072', '66257589e5c2bd5859d522aaad86ee0d', '668.cf.cdnlebo.com', 1, 0); args=['apiad.fhcp168.net', 'cloudflare', 'richer', 'sd', 'android', u'4c0ae8772853eee2d681bc7cc0e11072', u'66257589e5c2bd5859d522aaad86ee0d', '668.cf.cdnlebo.com', 1, 0]
+2018-03-30 19:52:57,463 utils.py [django.db.backends:89] [DEBUG]- (0.162) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'richer' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('richer',)
+2018-03-30 19:52:58,312 utils.py [django.db.backends:89] [DEBUG]- (0.163) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiad.fhcp168.net', 'wangsu', 'richer', 'sd', 'android', '4c0ae8772853eee2d681bc7cc0e11072', '66257589e5c2bd5859d522aaad86ee0d', '668.ws.cdnlebo.com', 1, 1); args=['apiad.fhcp168.net', 'wangsu', 'richer', 'sd', 'android', u'4c0ae8772853eee2d681bc7cc0e11072', u'66257589e5c2bd5859d522aaad86ee0d', '668.ws.cdnlebo.com', 1, 1]
+2018-03-30 19:52:58,809 utils.py [django.db.backends:89] [DEBUG]- (0.164) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'richer' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('richer',)
+2018-03-30 19:52:59,668 utils.py [django.db.backends:89] [DEBUG]- (0.162) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiios.fhcp168.net', 'nginx', 'richer', 'sd', 'ios', '4c0ae8772853eee2d681bc7cc0e11072', '8f5f7c0ef0e3c46a760a496517ebc026', 'api.ng.cdnlebo.com', 0, 0); args=['apiios.fhcp168.net', 'nginx', 'richer', 'sd', 'ios', u'4c0ae8772853eee2d681bc7cc0e11072', u'8f5f7c0ef0e3c46a760a496517ebc026', 'api.ng.cdnlebo.com', 0, 0]
+2018-03-30 19:53:00,163 utils.py [django.db.backends:89] [DEBUG]- (0.165) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'richer' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('richer',)
+2018-03-30 19:53:01,009 utils.py [django.db.backends:89] [DEBUG]- (0.165) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiios.fhcp168.net', 'cloudflare', 'richer', 'sd', 'ios', '4c0ae8772853eee2d681bc7cc0e11072', '8f5f7c0ef0e3c46a760a496517ebc026', '668.cf.cdnlebo.com', 0, 0); args=['apiios.fhcp168.net', 'cloudflare', 'richer', 'sd', 'ios', u'4c0ae8772853eee2d681bc7cc0e11072', u'8f5f7c0ef0e3c46a760a496517ebc026', '668.cf.cdnlebo.com', 0, 0]
+2018-03-30 19:53:01,497 utils.py [django.db.backends:89] [DEBUG]- (0.164) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'richer' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('richer',)
+2018-03-30 19:53:02,341 utils.py [django.db.backends:89] [DEBUG]- (0.161) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiios.fhcp168.net', 'wangsu', 'richer', 'sd', 'ios', '4c0ae8772853eee2d681bc7cc0e11072', '8f5f7c0ef0e3c46a760a496517ebc026', '668.ws.cdnlebo.com', 0, 1); args=['apiios.fhcp168.net', 'wangsu', 'richer', 'sd', 'ios', u'4c0ae8772853eee2d681bc7cc0e11072', u'8f5f7c0ef0e3c46a760a496517ebc026', '668.ws.cdnlebo.com', 0, 1]
+2018-03-30 19:53:02,831 utils.py [django.db.backends:89] [DEBUG]- (0.162) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'richer' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('richer',)
+2018-03-30 19:53:04,266 utils.py [django.db.backends:89] [DEBUG]- (0.162) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiweb.fhcp168.net', 'nginx', 'richer', 'sd', 'pc', '4c0ae8772853eee2d681bc7cc0e11072', '01d647dcf1b89a66a09786282a97f686', 'api.ng.cdnlebo.com', 0, 0); args=['apiweb.fhcp168.net', 'nginx', 'richer', 'sd', 'pc', u'4c0ae8772853eee2d681bc7cc0e11072', u'01d647dcf1b89a66a09786282a97f686', 'api.ng.cdnlebo.com', 0, 0]
+2018-03-30 19:53:04,756 utils.py [django.db.backends:89] [DEBUG]- (0.163) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'richer' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('richer',)
+2018-03-30 19:53:05,565 utils.py [django.db.backends:89] [DEBUG]- (0.161) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiweb.fhcp168.net', 'cloudflare', 'richer', 'sd', 'pc', '4c0ae8772853eee2d681bc7cc0e11072', '01d647dcf1b89a66a09786282a97f686', '668.cf.cdnlebo.com', 0, 0); args=['apiweb.fhcp168.net', 'cloudflare', 'richer', 'sd', 'pc', u'4c0ae8772853eee2d681bc7cc0e11072', u'01d647dcf1b89a66a09786282a97f686', '668.cf.cdnlebo.com', 0, 0]
+2018-03-30 19:53:06,055 utils.py [django.db.backends:89] [DEBUG]- (0.162) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'richer' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=('richer',)
+2018-03-30 19:53:06,871 utils.py [django.db.backends:89] [DEBUG]- (0.163) INSERT INTO `dns_domain_info` (`domain`, `route`, `cf_account_name`, `product`, `client`, `zone_id`, `record_id`, `content`, `status`, `route_status`) VALUES ('apiweb.fhcp168.net', 'wangsu', 'richer', 'sd', 'pc', '4c0ae8772853eee2d681bc7cc0e11072', '01d647dcf1b89a66a09786282a97f686', '668.ws.cdnlebo.com', 0, 1); args=['apiweb.fhcp168.net', 'wangsu', 'richer', 'sd', 'pc', u'4c0ae8772853eee2d681bc7cc0e11072', u'01d647dcf1b89a66a09786282a97f686', '668.ws.cdnlebo.com', 0, 1]
+2018-04-23 15:28:41,104 utils.py [django.db.backends:89] [DEBUG]- (0.166) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:28:42,576 utils.py [django.db.backends:89] [DEBUG]- (0.158) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:28:42,736 utils.py [django.db.backends:89] [DEBUG]- (0.160) SHOW FULL TABLES; args=None
+2018-04-23 15:28:42,903 utils.py [django.db.backends:89] [DEBUG]- (0.158) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-04-23 15:29:10,371 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:29:10,661 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:30:03,653 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:30:03,861 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:30:05,522 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:30:05,706 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:30:05,898 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:30:06,101 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:30:06,109 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:30:06,227 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:30:06,395 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:30:06,552 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:30:06,710 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:30:06,868 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:30:07,084 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:30:07,378 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:30:07,421 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:30:07,746 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 5, in <module>
+    from dwebsocket import require_websocket
+ImportError: No module named dwebsocket
+2018-04-23 15:30:21,635 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 8, in <module>
+    from saltstack.command import Command
+  File "J:\arno\test\phx_web\saltstack\command.py", line 6, in <module>
+    from saltstack.saltapi import SaltAPI
+  File "J:\arno\test\phx_web\saltstack\saltapi.py", line 3, in <module>
+    import requests,json
+ImportError: No module named requests
+2018-04-23 15:30:21,857 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 8, in <module>
+    from saltstack.command import Command
+  File "J:\arno\test\phx_web\saltstack\command.py", line 6, in <module>
+    from saltstack.saltapi import SaltAPI
+  File "J:\arno\test\phx_web\saltstack\saltapi.py", line 3, in <module>
+    import requests,json
+ImportError: No module named requests
+2018-04-23 15:30:39,513 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 8, in <module>
+    from saltstack.command import Command
+  File "J:\arno\test\phx_web\saltstack\command.py", line 7, in <module>
+    import json, logging, yaml
+ImportError: No module named yaml
+2018-04-23 15:30:39,740 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 8, in <module>
+    from saltstack.command import Command
+  File "J:\arno\test\phx_web\saltstack\command.py", line 7, in <module>
+    import json, logging, yaml
+ImportError: No module named yaml
+2018-04-23 15:31:55,147 utils.py [django.db.backends:89] [DEBUG]- (0.181) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:31:56,711 utils.py [django.db.backends:89] [DEBUG]- (0.194) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:31:56,908 utils.py [django.db.backends:89] [DEBUG]- (0.197) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'phexus_sa'; args=(u'phexus_sa',)
+2018-04-23 15:31:57,217 utils.py [django.db.backends:89] [DEBUG]- (0.249) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' LIMIT 1; args=(u'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0',)
+2018-04-23 15:31:57,608 utils.py [django.db.backends:89] [DEBUG]- (0.195) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', 'OWRkMTU0OGIzNjBjNjNhOWJkMWE4ZWQ5NDhlZDY0NDdmZmRlMGFkMTp7fQ==', '2018-05-07 15:31:57.219000'); args=(u'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'OWRkMTU0OGIzNjBjNjNhOWJkMWE4ZWQ5NDhlZDY0NDdmZmRlMGFkMTp7fQ==', u'2018-05-07 15:31:57.219000')
+2018-04-23 15:31:58,200 utils.py [django.db.backends:89] [DEBUG]- (0.197) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE `django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0'; args=(u'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0',)
+2018-04-23 15:31:58,589 utils.py [django.db.backends:89] [DEBUG]- (0.195) DELETE FROM `django_session` WHERE `django_session`.`session_key` IN ('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0'); args=(u'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0',)
+2018-04-23 15:31:59,372 utils.py [django.db.backends:89] [DEBUG]- (0.196) UPDATE `auth_user` SET `last_login` = '2018-04-23 15:31:58.979000' WHERE `auth_user`.`id` = 1; args=(u'2018-04-23 15:31:58.979000', 1)
+2018-04-23 15:32:00,151 utils.py [django.db.backends:89] [DEBUG]- (0.194) UPDATE `django_session` SET `session_data` = 'YzA4ZTc0OTg1ZmQ2ZTlmYWEyMzhhNzgxZGUyNDE1ZDljZDIwMGI1ODp7Il9hdXRoX3VzZXJfaGFzaCI6IjA5ZTBlOWI5YjZiOWNlMGE2Y2Q5YzBhODM5ZjViMWJhNDg1OTFjN2YiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=', `expire_date` = '2018-05-07 15:31:59.762000' WHERE `django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0'; args=(u'YzA4ZTc0OTg1ZmQ2ZTlmYWEyMzhhNzgxZGUyNDE1ZDljZDIwMGI1ODp7Il9hdXRoX3VzZXJfaGFzaCI6IjA5ZTBlOWI5YjZiOWNlMGE2Y2Q5YzBhODM5ZjViMWJhNDg1OTFjN2YiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=', u'2018-05-07 15:31:59.762000', u'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0')
+2018-04-23 15:32:00,348 utils.py [django.db.backends:89] [DEBUG]- (0.195) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', 'YzA4ZTc0OTg1ZmQ2ZTlmYWEyMzhhNzgxZGUyNDE1ZDljZDIwMGI1ODp7Il9hdXRoX3VzZXJfaGFzaCI6IjA5ZTBlOWI5YjZiOWNlMGE2Y2Q5YzBhODM5ZjViMWJhNDg1OTFjN2YiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=', '2018-05-07 15:31:59.762000'); args=(u'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'YzA4ZTc0OTg1ZmQ2ZTlmYWEyMzhhNzgxZGUyNDE1ZDljZDIwMGI1ODp7Il9hdXRoX3VzZXJfaGFzaCI6IjA5ZTBlOWI5YjZiOWNlMGE2Y2Q5YzBhODM5ZjViMWJhNDg1OTFjN2YiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=', u'2018-05-07 15:31:59.762000')
+2018-04-23 15:32:02,042 utils.py [django.db.backends:89] [DEBUG]- (0.181) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:32:03,306 utils.py [django.db.backends:89] [DEBUG]- (0.179) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:32:03,487 utils.py [django.db.backends:89] [DEBUG]- (0.180) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:32:00.749000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:32:00.749000')
+2018-04-23 15:32:03,670 utils.py [django.db.backends:89] [DEBUG]- (0.179) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-23 15:32:03,852 utils.py [django.db.backends:89] [DEBUG]- (0.182) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-23 15:32:03,852 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-23 15:32:05,736 utils.py [django.db.backends:89] [DEBUG]- (0.166) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:32:07,217 utils.py [django.db.backends:89] [DEBUG]- (0.183) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:32:07,401 utils.py [django.db.backends:89] [DEBUG]- (0.183) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:32:04.391000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:32:04.391000')
+2018-04-23 15:32:07,585 utils.py [django.db.backends:89] [DEBUG]- (0.183) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-23 15:32:07,769 utils.py [django.db.backends:89] [DEBUG]- (0.182) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-23 15:32:07,953 utils.py [django.db.backends:89] [DEBUG]- (0.184) SELECT `django_content_type`.`app_label`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON ( `auth_permission`.`content_type_id` = `django_content_type`.`id` ); args=()
+2018-04-23 15:32:07,953 views.py [django:42] [INFO]- 127.0.0.1 is requesting /home
+2018-04-23 15:32:11,529 utils.py [django.db.backends:89] [DEBUG]- (0.193) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:32:12,796 utils.py [django.db.backends:89] [DEBUG]- (0.178) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:32:12,976 utils.py [django.db.backends:89] [DEBUG]- (0.179) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:32:10.168000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:32:10.168000')
+2018-04-23 15:32:13,209 utils.py [django.db.backends:89] [DEBUG]- (0.229) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-23 15:32:13,390 utils.py [django.db.backends:89] [DEBUG]- (0.180) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-23 15:32:13,390 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-23 15:32:13,568 utils.py [django.db.backends:89] [DEBUG]- (0.177) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-23 15:32:13,569 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-23 15:32:13,749 utils.py [django.db.backends:89] [DEBUG]- (0.180) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-23 15:32:13,846 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-23 15:32:16,137 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-23 15:32:17,512 utils.py [django.db.backends:89] [DEBUG]- (0.194) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:32:18,805 utils.py [django.db.backends:89] [DEBUG]- (0.182) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:32:18,990 utils.py [django.db.backends:89] [DEBUG]- (0.183) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'ali' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'ali',)
+2018-04-23 15:32:23,150 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-04-23 15:32:23,150 cf.py [django:59] [INFO]- [{u'product': u'ali', u'zone_id': u'ae53ee004e5363f766ea51392480495e', u'name': u'alcp99.com'}]
+2018-04-23 15:32:24,507 utils.py [django.db.backends:89] [DEBUG]- (0.207) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:32:25,683 utils.py [django.db.backends:89] [DEBUG]- (0.164) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:32:25,851 utils.py [django.db.backends:89] [DEBUG]- (0.167) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'ali' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'ali',)
+2018-04-23 15:32:29,749 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-04-23 15:32:29,750 cf.py [django:59] [INFO]- [{u'product': u'ali', u'zone_id': u'ae53ee004e5363f766ea51392480495e', u'name': u'alcp99.com'}]
+2018-04-23 15:32:31,081 utils.py [django.db.backends:89] [DEBUG]- (0.189) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:32:32,355 utils.py [django.db.backends:89] [DEBUG]- (0.180) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:32:32,535 utils.py [django.db.backends:89] [DEBUG]- (0.179) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'ali' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'ali',)
+2018-04-23 15:41:29,719 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-23 15:41:52,947 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 27, in GetProductRecords
+    cf_acc = cf_account.objects.filter(name=name).first()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 490, in first
+    objects = list((self if self.ordered else self.order_by('pk'))[:1])
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 162, in __iter__
+    self._fetch_all()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 818, in execute_sql
+    sql, params = self.as_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.query.where)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\where.py", line 104, in as_sql
+    sql, params = compiler.compile(child)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 205, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 198, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 614, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 196, in data_types
+    if self.features.supports_microsecond_precision:
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\features.py", line 52, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 371, in mysql_version
+    with self.temporary_connection():
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 462, in temporary_connection
+    cursor = self.cursor()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\test\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2013, "Lost connection to MySQL server at 'waiting for initial communication packet', system error: 0")
+2018-04-23 15:41:54,005 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-04-23 15:41:54,005 cf.py [django:59] [INFO]- [{u'product': u'ali', u'zone_id': u'fd54c944b605ff764b012e2455a96974', u'name': u'alcp188.com'}, {u'product': u'ali', u'zone_id': u'70132990d29ebc0c5278e2e603ecb0f0', u'name': u'alcp33.com'}, {u'product': u'ali', u'zone_id': u'ae53ee004e5363f766ea51392480495e', u'name': u'alcp99.com'}]
+2018-04-23 15:42:15,009 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/get_zone_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 62, in GetZoneRecords
+    cf_acc = cf_account.objects.filter(name=zone['product']).first()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 490, in first
+    objects = list((self if self.ordered else self.order_by('pk'))[:1])
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 162, in __iter__
+    self._fetch_all()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 818, in execute_sql
+    sql, params = self.as_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.query.where)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\where.py", line 104, in as_sql
+    sql, params = compiler.compile(child)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 205, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 198, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 614, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 196, in data_types
+    if self.features.supports_microsecond_precision:
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\features.py", line 52, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 371, in mysql_version
+    with self.temporary_connection():
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 462, in temporary_connection
+    cursor = self.cursor()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\test\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '58.64.145.50' (10060)")
+2018-04-23 15:42:48,959 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    if test_func(request.user):
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 45, in <lambda>
+    lambda u: u.is_authenticated(),
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 359, in _setup
+    self._wrapped = self._setupfunc()
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 22, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\__init__.py", line 167, in get_user
+    user_id = _get_user_session_key(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\__init__.py", line 59, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\base.py", line 48, in __getitem__
+    return self._session[key]
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\base.py", line 181, in _get_session
+    self._session_cache = self.load()
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\db.py", line 21, in load
+    expire_date__gt=timezone.now()
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 818, in execute_sql
+    sql, params = self.as_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.query.where)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\where.py", line 104, in as_sql
+    sql, params = compiler.compile(child)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 205, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 198, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 614, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 196, in data_types
+    if self.features.supports_microsecond_precision:
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\features.py", line 52, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 371, in mysql_version
+    with self.temporary_connection():
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 462, in temporary_connection
+    cursor = self.cursor()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\test\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '58.64.145.50' (10060)")
+2018-04-23 15:43:37,733 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    if test_func(request.user):
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 45, in <lambda>
+    lambda u: u.is_authenticated(),
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 359, in _setup
+    self._wrapped = self._setupfunc()
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 22, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\__init__.py", line 167, in get_user
+    user_id = _get_user_session_key(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\__init__.py", line 59, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\base.py", line 48, in __getitem__
+    return self._session[key]
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\base.py", line 181, in _get_session
+    self._session_cache = self.load()
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\db.py", line 21, in load
+    expire_date__gt=timezone.now()
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 818, in execute_sql
+    sql, params = self.as_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.query.where)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\where.py", line 104, in as_sql
+    sql, params = compiler.compile(child)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 205, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 198, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 614, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 196, in data_types
+    if self.features.supports_microsecond_precision:
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\features.py", line 52, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 371, in mysql_version
+    with self.temporary_connection():
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 462, in temporary_connection
+    cursor = self.cursor()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\test\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '58.64.145.50' (10060)")
+2018-04-23 15:43:40,940 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    if test_func(request.user):
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 45, in <lambda>
+    lambda u: u.is_authenticated(),
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 359, in _setup
+    self._wrapped = self._setupfunc()
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 22, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\__init__.py", line 167, in get_user
+    user_id = _get_user_session_key(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\__init__.py", line 59, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\base.py", line 48, in __getitem__
+    return self._session[key]
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\base.py", line 181, in _get_session
+    self._session_cache = self.load()
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\db.py", line 21, in load
+    expire_date__gt=timezone.now()
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 818, in execute_sql
+    sql, params = self.as_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.query.where)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\where.py", line 104, in as_sql
+    sql, params = compiler.compile(child)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 205, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 198, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 614, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 196, in data_types
+    if self.features.supports_microsecond_precision:
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\features.py", line 52, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 371, in mysql_version
+    with self.temporary_connection():
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 462, in temporary_connection
+    cursor = self.cursor()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\test\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2013, "Lost connection to MySQL server at 'waiting for initial communication packet', system error: 0")
+2018-04-23 15:44:06,747 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/services
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    if test_func(request.user):
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 45, in <lambda>
+    lambda u: u.is_authenticated(),
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 359, in _setup
+    self._wrapped = self._setupfunc()
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 22, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\__init__.py", line 167, in get_user
+    user_id = _get_user_session_key(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\__init__.py", line 59, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\base.py", line 48, in __getitem__
+    return self._session[key]
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\base.py", line 181, in _get_session
+    self._session_cache = self.load()
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\db.py", line 21, in load
+    expire_date__gt=timezone.now()
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 818, in execute_sql
+    sql, params = self.as_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.query.where)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\where.py", line 104, in as_sql
+    sql, params = compiler.compile(child)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 205, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 198, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 614, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 196, in data_types
+    if self.features.supports_microsecond_precision:
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\features.py", line 52, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 371, in mysql_version
+    with self.temporary_connection():
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 462, in temporary_connection
+    cursor = self.cursor()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\test\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 221, in __init__
+    self.set_character_set(charset)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 312, in set_character_set
+    super(Connection, self).set_character_set(charset)
+OperationalError: (2013, 'Lost connection to MySQL server during query')
+2018-04-23 15:44:06,782 utils.py [django.db.backends:89] [DEBUG]- (0.180) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:44:09,096 utils.py [django.db.backends:89] [DEBUG]- (0.158) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:44:09,316 utils.py [django.db.backends:89] [DEBUG]- (0.167) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:44:09,483 utils.py [django.db.backends:89] [DEBUG]- (0.166) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:44:01.993000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:44:01.993000')
+2018-04-23 15:44:09,674 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-23 15:44:09,855 utils.py [django.db.backends:89] [DEBUG]- (0.627) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:44:09,910 utils.py [django.db.backends:89] [DEBUG]- (0.166) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:43:20.689000') LIMIT 21; args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:43:20.689000')
+2018-04-23 15:44:10,124 utils.py [django.db.backends:89] [DEBUG]- (0.213) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` LIMIT 21; args=()
+2018-04-23 15:44:10,296 utils.py [django.db.backends:89] [DEBUG]- (0.168) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:43:20.689000') LIMIT 21; args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:43:20.689000')
+2018-04-23 15:44:10,438 utils.py [django.db.backends:89] [DEBUG]- (0.183) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:44:10,466 utils.py [django.db.backends:89] [DEBUG]- (0.168) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:43:20.689000') LIMIT 21; args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:43:20.689000')
+2018-04-23 15:44:10,621 utils.py [django.db.backends:89] [DEBUG]- (0.183) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:44:06.793000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:44:06.793000')
+2018-04-23 15:44:10,632 utils.py [django.db.backends:89] [DEBUG]- (0.165) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:43:20.689000') LIMIT 21; args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:43:20.689000')
+2018-04-23 15:44:10,808 utils.py [django.db.backends:89] [DEBUG]- (0.185) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-23 15:44:10,987 base.py [django.request:170] [WARNING]- Not Found: /favicon.ico
+2018-04-23 15:44:11,036 utils.py [django.db.backends:89] [DEBUG]- (0.184) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:40:46.111000') LIMIT 21; args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:40:46.111000')
+2018-04-23 15:44:11,239 utils.py [django.db.backends:89] [DEBUG]- (0.207) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:44:11,240 utils.py [django.db.backends:89] [DEBUG]- (0.201) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` LIMIT 21; args=()
+2018-04-23 15:44:11,423 utils.py [django.db.backends:89] [DEBUG]- (0.183) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:40:46.111000') LIMIT 21; args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:40:46.111000')
+2018-04-23 15:44:11,427 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:43:58.789000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:43:58.789000')
+2018-04-23 15:44:11,608 utils.py [django.db.backends:89] [DEBUG]- (0.184) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:40:46.111000') LIMIT 21; args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:40:46.111000')
+2018-04-23 15:44:11,618 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-23 15:44:11,803 utils.py [django.db.backends:89] [DEBUG]- (0.195) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:40:46.111000') LIMIT 21; args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:40:46.111000')
+2018-04-23 15:44:11,848 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:43:16.731000') LIMIT 21; args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:43:16.731000')
+2018-04-23 15:44:12,043 utils.py [django.db.backends:89] [DEBUG]- (0.194) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` LIMIT 21; args=()
+2018-04-23 15:44:12,243 utils.py [django.db.backends:89] [DEBUG]- (0.199) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:43:16.731000') LIMIT 21; args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:43:16.731000')
+2018-04-23 15:44:12,436 utils.py [django.db.backends:89] [DEBUG]- (0.191) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:43:16.731000') LIMIT 21; args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:43:16.731000')
+2018-04-23 15:44:12,625 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:43:16.731000') LIMIT 21; args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:43:16.731000')
+2018-04-23 15:44:34,852 utils.py [django.db.backends:89] [DEBUG]- (0.192) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:44:36,061 utils.py [django.db.backends:89] [DEBUG]- (0.167) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:44:36,233 utils.py [django.db.backends:89] [DEBUG]- (0.172) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:42:49'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:42:49')
+2018-04-23 15:44:36,404 utils.py [django.db.backends:89] [DEBUG]- (0.167) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-23 15:44:36,645 utils.py [django.db.backends:89] [DEBUG]- (0.168) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:42:27.954000') LIMIT 21; args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:42:27.954000')
+2018-04-23 15:44:36,815 utils.py [django.db.backends:89] [DEBUG]- (0.168) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` LIMIT 21; args=()
+2018-04-23 15:44:36,986 utils.py [django.db.backends:89] [DEBUG]- (0.169) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:42:27.954000') LIMIT 21; args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:42:27.954000')
+2018-04-23 15:44:37,171 utils.py [django.db.backends:89] [DEBUG]- (0.181) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:42:27.954000') LIMIT 21; args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:42:27.954000')
+2018-04-23 15:44:37,342 utils.py [django.db.backends:89] [DEBUG]- (0.168) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:42:27.954000') LIMIT 21; args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:42:27.954000')
+2018-04-23 15:49:57,440 utils.py [django.db.backends:89] [DEBUG]- (0.216) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:50:04,747 utils.py [django.db.backends:89] [DEBUG]- (0.777) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:50:04,983 utils.py [django.db.backends:89] [DEBUG]- (0.234) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:49:22.288000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:49:22.288000')
+2018-04-23 15:50:05,220 utils.py [django.db.backends:89] [DEBUG]- (0.234) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-23 15:50:05,888 utils.py [django.db.backends:89] [DEBUG]- (0.666) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-23 15:50:05,888 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-23 15:50:24,904 utils.py [django.db.backends:89] [DEBUG]- (0.219) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:54:19,888 utils.py [django.db.backends:89] [DEBUG]- (192.319) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-23 15:54:20,128 utils.py [django.db.backends:89] [DEBUG]- (0.239) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-23 15:50:06.584000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-23 15:50:06.584000')
+2018-04-23 15:54:22,144 utils.py [django.db.backends:89] [DEBUG]- (2.014) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-23 15:54:22,385 utils.py [django.db.backends:89] [DEBUG]- (0.237) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-23 15:54:22,387 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-23 15:54:22,624 utils.py [django.db.backends:89] [DEBUG]- (0.235) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-23 15:54:22,625 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-23 15:54:23,336 utils.py [django.db.backends:89] [DEBUG]- (0.711) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-23 15:54:23,607 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-24 14:37:51,690 utils.py [django.db.backends:89] [DEBUG]- (0.192) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 14:37:53,493 utils.py [django.db.backends:89] [DEBUG]- (0.484) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 14:37:53,704 utils.py [django.db.backends:89] [DEBUG]- (0.211) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 14:37:50.147000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 14:37:50.147000')
+2018-04-24 14:37:53,897 utils.py [django.db.backends:89] [DEBUG]- (0.191) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 14:37:54,088 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 14:37:54,088 views.py [django:53] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-04-24 14:37:54,582 project.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-04-24 14:37:54,582 project.py [django:38] [INFO]- 查询参数：query_all
+2018-04-24 14:37:56,043 utils.py [django.db.backends:89] [DEBUG]- (0.167) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 14:37:56,213 utils.py [django.db.backends:89] [DEBUG]- (0.168) SELECT `monitor_project_t`.`id`, `monitor_project_t`.`envir`, `monitor_project_t`.`product`, `monitor_project_t`.`project`, `monitor_project_t`.`minion_id`, `monitor_project_t`.`server_type`, `monitor_project_t`.`role`, `monitor_project_t`.`domain`, `monitor_project_t`.`uri`, `monitor_project_t`.`status`, `monitor_project_t`.`info` FROM `monitor_project_t`; args=()
+2018-04-24 16:16:16,259 utils.py [django.db.backends:89] [DEBUG]- (0.182) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:16:17,938 utils.py [django.db.backends:89] [DEBUG]- (0.170) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:16:18,108 utils.py [django.db.backends:89] [DEBUG]- (0.170) SHOW FULL TABLES; args=None
+2018-04-24 16:16:18,311 utils.py [django.db.backends:89] [DEBUG]- (0.162) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-04-24 16:17:07,838 utils.py [django.db.backends:89] [DEBUG]- (0.190) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:17:09,457 utils.py [django.db.backends:89] [DEBUG]- (0.196) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:17:09,642 utils.py [django.db.backends:89] [DEBUG]- (0.185) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 16:17:05.158000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 16:17:05.158000')
+2018-04-24 16:17:09,892 utils.py [django.db.backends:89] [DEBUG]- (0.211) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 16:17:10,105 utils.py [django.db.backends:89] [DEBUG]- (0.209) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 16:17:10,105 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-24 16:17:12,005 utils.py [django.db.backends:89] [DEBUG]- (0.174) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:17:13,601 utils.py [django.db.backends:89] [DEBUG]- (0.229) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:17:13,842 utils.py [django.db.backends:89] [DEBUG]- (0.239) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 16:17:10.691000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 16:17:10.691000')
+2018-04-24 16:17:14,061 utils.py [django.db.backends:89] [DEBUG]- (0.217) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 16:17:14,282 utils.py [django.db.backends:89] [DEBUG]- (0.221) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 16:17:14,496 utils.py [django.db.backends:89] [DEBUG]- (0.212) SELECT `django_content_type`.`app_label`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON ( `auth_permission`.`content_type_id` = `django_content_type`.`id` ); args=()
+2018-04-24 16:17:14,496 views.py [django:42] [INFO]- 127.0.0.1 is requesting /home
+2018-04-24 16:17:17,362 utils.py [django.db.backends:89] [DEBUG]- (0.207) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:17:18,924 utils.py [django.db.backends:89] [DEBUG]- (0.245) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:17:19,132 utils.py [django.db.backends:89] [DEBUG]- (0.207) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 16:17:15.690000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 16:17:15.690000')
+2018-04-24 16:17:19,336 utils.py [django.db.backends:89] [DEBUG]- (0.201) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 16:17:19,542 utils.py [django.db.backends:89] [DEBUG]- (0.206) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 16:17:19,543 views.py [django:53] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-04-24 16:17:19,680 project.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-04-24 16:17:19,681 project.py [django:38] [INFO]- 查询参数：query_all
+2018-04-24 16:17:21,242 utils.py [django.db.backends:89] [DEBUG]- (0.210) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:17:21,444 utils.py [django.db.backends:89] [DEBUG]- (0.201) SELECT `monitor_project_t`.`id`, `monitor_project_t`.`envir`, `monitor_project_t`.`product`, `monitor_project_t`.`project`, `monitor_project_t`.`minion_id`, `monitor_project_t`.`server_type`, `monitor_project_t`.`role`, `monitor_project_t`.`domain`, `monitor_project_t`.`uri`, `monitor_project_t`.`status`, `monitor_project_t`.`info` FROM `monitor_project_t`; args=()
+2018-04-24 16:17:24,006 utils.py [django.db.backends:89] [DEBUG]- (0.203) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:17:25,543 utils.py [django.db.backends:89] [DEBUG]- (0.233) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:17:25,770 utils.py [django.db.backends:89] [DEBUG]- (0.227) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 16:17:22.504000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 16:17:22.504000')
+2018-04-24 16:17:26,020 utils.py [django.db.backends:89] [DEBUG]- (0.234) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 16:17:26,226 utils.py [django.db.backends:89] [DEBUG]- (0.203) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 16:17:26,226 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-24 16:17:26,434 utils.py [django.db.backends:89] [DEBUG]- (0.205) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-24 16:17:26,434 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-24 16:17:26,664 utils.py [django.db.backends:89] [DEBUG]- (0.228) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-24 16:17:26,819 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-24 16:17:30,473 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-24 16:17:31,937 utils.py [django.db.backends:89] [DEBUG]- (0.209) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:17:33,517 utils.py [django.db.backends:89] [DEBUG]- (0.207) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:17:33,724 utils.py [django.db.backends:89] [DEBUG]- (0.207) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'ali' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'ali',)
+2018-04-24 16:17:37,648 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-04-24 16:17:37,648 cf.py [django:59] [INFO]- [{u'product': u'ali', u'zone_id': u'3a1b0df4972a2050a6bbe8c0632a9ba5', u'name': u'alcp00.com'}]
+2018-04-24 16:17:39,164 utils.py [django.db.backends:89] [DEBUG]- (0.207) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:17:40,757 utils.py [django.db.backends:89] [DEBUG]- (0.221) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:17:40,984 utils.py [django.db.backends:89] [DEBUG]- (0.226) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'ali' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'ali',)
+2018-04-24 16:39:29,717 project.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-04-24 16:39:29,717 project.py [django:38] [INFO]- 查询参数：query_all
+2018-04-24 16:39:31,082 utils.py [django.db.backends:89] [DEBUG]- (0.167) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:39:31,250 utils.py [django.db.backends:89] [DEBUG]- (0.166) SELECT `monitor_project_t`.`id`, `monitor_project_t`.`envir`, `monitor_project_t`.`product`, `monitor_project_t`.`project`, `monitor_project_t`.`minion_id`, `monitor_project_t`.`server_type`, `monitor_project_t`.`role`, `monitor_project_t`.`domain`, `monitor_project_t`.`uri`, `monitor_project_t`.`status`, `monitor_project_t`.`info` FROM `monitor_project_t`; args=()
+2018-04-24 16:39:34,785 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-24 16:42:29,585 utils.py [django.db.backends:89] [DEBUG]- (0.186) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:42:30,914 utils.py [django.db.backends:89] [DEBUG]- (0.196) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:42:31,105 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 16:42:28.168000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 16:42:28.168000')
+2018-04-24 16:42:31,292 utils.py [django.db.backends:89] [DEBUG]- (0.185) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 16:42:31,500 utils.py [django.db.backends:89] [DEBUG]- (0.205) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 16:42:31,500 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-24 16:42:33,526 utils.py [django.db.backends:89] [DEBUG]- (0.216) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:42:34,901 utils.py [django.db.backends:89] [DEBUG]- (0.182) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:42:35,078 utils.py [django.db.backends:89] [DEBUG]- (0.176) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 16:42:31.816000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 16:42:31.816000')
+2018-04-24 16:42:35,288 utils.py [django.db.backends:89] [DEBUG]- (0.194) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 16:42:35,505 utils.py [django.db.backends:89] [DEBUG]- (0.215) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 16:42:35,506 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-24 16:42:35,696 utils.py [django.db.backends:89] [DEBUG]- (0.187) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-24 16:42:35,696 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-24 16:42:35,874 utils.py [django.db.backends:89] [DEBUG]- (0.176) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-24 16:42:35,999 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-24 16:43:47,352 utils.py [django.db.backends:89] [DEBUG]- (0.254) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:43:48,979 utils.py [django.db.backends:89] [DEBUG]- (0.181) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:43:49,161 utils.py [django.db.backends:89] [DEBUG]- (0.182) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 16:43:45.777000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 16:43:45.777000')
+2018-04-24 16:43:49,358 utils.py [django.db.backends:89] [DEBUG]- (0.194) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 16:43:49,542 utils.py [django.db.backends:89] [DEBUG]- (0.181) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 16:43:49,543 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-24 16:43:51,479 utils.py [django.db.backends:89] [DEBUG]- (0.184) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:43:52,690 utils.py [django.db.backends:89] [DEBUG]- (0.162) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:43:52,858 utils.py [django.db.backends:89] [DEBUG]- (0.168) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 16:43:49.862000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 16:43:49.862000')
+2018-04-24 16:43:53,042 utils.py [django.db.backends:89] [DEBUG]- (0.184) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 16:43:53,223 utils.py [django.db.backends:89] [DEBUG]- (0.179) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 16:43:53,224 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-24 16:43:53,413 utils.py [django.db.backends:89] [DEBUG]- (0.186) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-24 16:43:53,414 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-24 16:43:53,599 utils.py [django.db.backends:89] [DEBUG]- (0.185) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-24 16:43:53,706 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-24 16:44:32,891 utils.py [django.db.backends:89] [DEBUG]- (0.253) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:44:34,513 utils.py [django.db.backends:89] [DEBUG]- (0.243) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:44:34,733 utils.py [django.db.backends:89] [DEBUG]- (0.221) SHOW FULL TABLES; args=None
+2018-04-24 16:44:34,953 utils.py [django.db.backends:89] [DEBUG]- (0.217) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-04-24 16:47:36,088 utils.py [django.db.backends:89] [DEBUG]- (0.206) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:47:37,638 utils.py [django.db.backends:89] [DEBUG]- (0.208) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:47:37,846 utils.py [django.db.backends:89] [DEBUG]- (0.209) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 16:47:34.592000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 16:47:34.592000')
+2018-04-24 16:47:38,063 utils.py [django.db.backends:89] [DEBUG]- (0.213) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 16:47:38,272 utils.py [django.db.backends:89] [DEBUG]- (0.203) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 16:47:38,273 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-24 16:47:40,703 utils.py [django.db.backends:89] [DEBUG]- (0.166) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:47:42,187 utils.py [django.db.backends:89] [DEBUG]- (0.189) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:47:42,384 utils.py [django.db.backends:89] [DEBUG]- (0.196) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 16:47:39.198000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 16:47:39.198000')
+2018-04-24 16:47:42,568 utils.py [django.db.backends:89] [DEBUG]- (0.181) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 16:47:42,753 utils.py [django.db.backends:89] [DEBUG]- (0.182) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 16:47:42,755 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-24 16:47:42,930 utils.py [django.db.backends:89] [DEBUG]- (0.174) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-24 16:47:42,931 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-24 16:47:43,115 utils.py [django.db.backends:89] [DEBUG]- (0.183) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-24 16:47:43,246 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-24 16:47:55,703 utils.py [django.db.backends:89] [DEBUG]- (0.180) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:47:57,071 utils.py [django.db.backends:89] [DEBUG]- (0.182) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:47:57,279 utils.py [django.db.backends:89] [DEBUG]- (0.208) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 16:47:54.240000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 16:47:54.240000')
+2018-04-24 16:47:57,464 utils.py [django.db.backends:89] [DEBUG]- (0.184) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 16:47:57,660 utils.py [django.db.backends:89] [DEBUG]- (0.193) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 16:47:57,661 views.py [django:53] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-04-24 16:47:57,740 project.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-04-24 16:47:57,740 project.py [django:38] [INFO]- 查询参数：query_all
+2018-04-24 16:47:59,351 utils.py [django.db.backends:89] [DEBUG]- (0.203) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:47:59,548 utils.py [django.db.backends:89] [DEBUG]- (0.196) SELECT `monitor_project_t`.`id`, `monitor_project_t`.`envir`, `monitor_project_t`.`product`, `monitor_project_t`.`project`, `monitor_project_t`.`minion_id`, `monitor_project_t`.`server_type`, `monitor_project_t`.`role`, `monitor_project_t`.`domain`, `monitor_project_t`.`uri`, `monitor_project_t`.`status`, `monitor_project_t`.`info` FROM `monitor_project_t`; args=()
+2018-04-24 16:48:04,917 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-24 16:48:39,394 utils.py [django.db.backends:89] [DEBUG]- (0.199) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:48:40,763 utils.py [django.db.backends:89] [DEBUG]- (0.191) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:48:40,974 utils.py [django.db.backends:89] [DEBUG]- (0.210) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 16:48:38.095000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 16:48:38.095000')
+2018-04-24 16:48:41,174 utils.py [django.db.backends:89] [DEBUG]- (0.196) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 16:48:41,372 utils.py [django.db.backends:89] [DEBUG]- (0.196) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 16:48:41,375 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-24 16:48:43,180 utils.py [django.db.backends:89] [DEBUG]- (0.192) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:48:44,576 utils.py [django.db.backends:89] [DEBUG]- (0.208) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:48:44,782 utils.py [django.db.backends:89] [DEBUG]- (0.206) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 16:48:41.704000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 16:48:41.704000')
+2018-04-24 16:48:44,973 utils.py [django.db.backends:89] [DEBUG]- (0.238) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:48:45,002 utils.py [django.db.backends:89] [DEBUG]- (0.210) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 16:48:45,221 utils.py [django.db.backends:89] [DEBUG]- (0.218) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 16:48:45,223 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-24 16:48:45,404 utils.py [django.db.backends:89] [DEBUG]- (0.179) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-24 16:48:45,404 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-24 16:48:45,598 utils.py [django.db.backends:89] [DEBUG]- (0.194) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-24 16:48:46,390 utils.py [django.db.backends:89] [DEBUG]- (0.228) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:48:46,579 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 16:48:43.225000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 16:48:43.225000')
+2018-04-24 16:48:46,773 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 16:48:46,947 utils.py [django.db.backends:89] [DEBUG]- (0.171) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 16:48:46,961 nginx.py [django:28] [INFO]- 127.0.0.1 is requesting /dns/nginx
+2018-04-24 16:48:47,147 utils.py [django.db.backends:89] [DEBUG]- (0.185) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-24 16:48:47,147 nginx.py [django:31] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-24 16:48:47,351 utils.py [django.db.backends:89] [DEBUG]- (0.205) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-24 16:48:47,474 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-24 16:49:04,930 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-24 16:49:08,601 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-24 16:49:42,336 utils.py [django.db.backends:89] [DEBUG]- (0.190) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:49:43,723 utils.py [django.db.backends:89] [DEBUG]- (0.199) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:49:43,927 utils.py [django.db.backends:89] [DEBUG]- (0.203) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 16:49:40.945000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 16:49:40.945000')
+2018-04-24 16:49:44,122 utils.py [django.db.backends:89] [DEBUG]- (0.192) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 16:49:44,322 utils.py [django.db.backends:89] [DEBUG]- (0.197) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 16:49:44,325 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-24 16:49:46,190 utils.py [django.db.backends:89] [DEBUG]- (0.214) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:49:47,785 utils.py [django.db.backends:89] [DEBUG]- (0.214) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 16:49:48,026 utils.py [django.db.backends:89] [DEBUG]- (0.240) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 16:49:44.637000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 16:49:44.637000')
+2018-04-24 16:49:48,247 utils.py [django.db.backends:89] [DEBUG]- (0.219) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 16:49:48,480 utils.py [django.db.backends:89] [DEBUG]- (0.229) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 16:49:48,480 nginx.py [django:28] [INFO]- 127.0.0.1 is requesting /dns/nginx
+2018-04-24 16:49:48,704 utils.py [django.db.backends:89] [DEBUG]- (0.221) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-24 16:49:48,704 nginx.py [django:31] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-24 16:49:48,927 utils.py [django.db.backends:89] [DEBUG]- (0.221) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-24 16:49:49,038 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-24 17:00:11,328 utils.py [django.db.backends:89] [DEBUG]- (0.156) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 17:00:12,585 utils.py [django.db.backends:89] [DEBUG]- (0.164) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-24 17:00:12,767 utils.py [django.db.backends:89] [DEBUG]- (0.182) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'w9tzw86pbaw0l8h4lsr48mt8sggh9xf0' AND `django_session`.`expire_date` > '2018-04-24 17:00:10.128000'); args=('w9tzw86pbaw0l8h4lsr48mt8sggh9xf0', u'2018-04-24 17:00:10.128000')
+2018-04-24 17:00:12,950 utils.py [django.db.backends:89] [DEBUG]- (0.183) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-24 17:00:13,203 utils.py [django.db.backends:89] [DEBUG]- (0.237) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-24 17:00:13,203 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-24 17:00:13,385 utils.py [django.db.backends:89] [DEBUG]- (0.181) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-24 17:00:13,387 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-24 17:00:13,566 utils.py [django.db.backends:89] [DEBUG]- (0.179) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-24 17:00:13,673 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-24 17:00:33,311 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-24 18:28:34,200 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-24 18:28:35,562 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 19:15:37,667 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:15:38,486 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:15:38,536 utils.py [django.db.backends:89] [DEBUG]- (0.048) SHOW FULL TABLES; args=None
+2018-04-28 19:15:38,647 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()

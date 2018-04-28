@@ -6,6 +6,18 @@
 #sd android asd.208608.com 		richer 	nginx 		api.ng.cdnlebo.com 1 1
 #sd android asd.208608.com 		richer 	cloudflare 	668.cf.cdnlebo.com 1 0
 #
+
+#sd android apiad.fhcp168.net richer nginx 		api.ng.cdnlebo.com 0 0
+#sd android apiad.fhcp168.net richer cloudflare 	668.cf.cdnlebo.com 1 0
+#sd android apiad.fhcp168.net richer wangsu 	668.ws.cdnlebo.com 1 1
+#sd ios apiios.fhcp168.net richer nginx 		api.ng.cdnlebo.com 0 0
+#sd ios apiios.fhcp168.net richer cloudflare 	668.cf.cdnlebo.com 0 0
+#sd ios apiios.fhcp168.net richer wangsu 	668.ws.cdnlebo.com 0 1
+#sd pc apiweb.fhcp168.net 	richer 	nginx 	api.ng.cdnlebo.com 0 0
+#sd pc apiweb.fhcp168.net 	richer 	cloudflare 		668.cf.cdnlebo.com 0 0
+#sd pc apiweb.fhcp168.net 	richer 	wangsu 		668.ws.cdnlebo.com 0 1
+
+
 ####  ios  ###
 #sd ios sdios.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com 0 0
 #sd ios sdios.7557b.com 	lebo 	cloudflare 	668.cf.cdnlebo.com 1 1
@@ -28,6 +40,18 @@
 #ly android androidapi.le079.com panda nginx 		api.ng.cdnlebo.com 0 0
 #ly android androidapi.le079.com panda cloudflare 	ly.cf.cdnlebo.com 0 1
 #
+
+#ly android apiad.lycp168.net panda nginx 		api.ng.cdnlebo.com 0 0
+#ly android apiad.lycp168.net panda cloudflare 	ly.cf.cdnlebo.com 1 0
+#ly android apiad.lycp168.net panda wangsu 	ly.ws.cdnlebo.com 1 1
+#ly ios apiios.lycp168.net panda nginx 		api.ng.cdnlebo.com 0 0
+#ly ios apiios.lycp168.net panda cloudflare 	ly.cf.cdnlebo.com 0 0
+#ly ios apiios.lycp168.net panda wangsu 	ly.ws.cdnlebo.com 0 1
+#ly pc apiweb.lycp168.net 	panda 	nginx 	api.ng.cdnlebo.com 0 0
+#ly pc apiweb.lycp168.net 	panda 	cloudflare 		ly.cf.cdnlebo.com 0 0
+#ly pc apiweb.lycp168.net 	panda 	wangsu 		ly.ws.cdnlebo.com 0 1
+
+
 ####  ios  ###
 #ly ios lyios.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com 0 0
 #ly ios lyios.7557b.com 	lebo 	cloudflare 	ly.cf.cdnlebo.com 1 1
@@ -49,6 +73,18 @@
 #gd android androidapi.gdcp188.com guangda nginx 		api.ng.cdnlebo.com 0 0
 #gd android androidapi.gdcp188.com guangda cloudflare 	gd.cf.cdnlebo.com 0 1
 #
+#gd android apiad.gdcp168.net guangda nginx 		api.ng.cdnlebo.com 0 0
+#gd android apiad.gdcp168.net guangda cloudflare 	gd.cf.cdnlebo.com 1 0
+#gd android apiad.gdcp168.net guangda wangsu 	gd.ws.cdnlebo.com 1 1
+#gd ios apiios.gdcp168.net guangda nginx 		api.ng.cdnlebo.com 0 0
+#gd ios apiios.gdcp168.net guangda cloudflare 	gd.cf.cdnlebo.com 0 0
+#gd ios apiios.gdcp168.net guangda wangsu 	gd.ws.cdnlebo.com 0 1
+#gd pc apiweb.gdcp168.net 	guangda 	nginx 	api.ng.cdnlebo.com 0 0
+#gd pc apiweb.gdcp168.net 	guangda 	cloudflare 		gd.cf.cdnlebo.com 0 0
+#gd pc apiweb.gdcp168.net 	guangda 	wangsu 		gd.ws.cdnlebo.com 0 1
+
+
+
 ####  ios  ###
 #gd ios gdios.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com 0 0
 #gd ios gdios.7557b.com 	lebo 	cloudflare 	gd.cf.cdnlebo.com 1 1
@@ -73,13 +109,13 @@
 
 #ali android apiad.alcp168.net ali nginx 		api.ng.cdnlebo.com 0 0
 #ali android apiad.alcp168.net ali cloudflare 	ali.cf.cdnlebo.com 1 0
-ali android apiad.alcp168.net ali wangsu 	ali.ws.cdnlebo.com 1 1
+#ali android apiad.alcp168.net ali wangsu 	ali.ws.cdnlebo.com 1 1
 #ali ios apiios.alcp168.net ali nginx 		api.ng.cdnlebo.com 0 0
 #ali ios apiios.alcp168.net ali cloudflare 	ali.cf.cdnlebo.com 0 0
-ali ios apiios.alcp168.net ali wangsu 	ali.ws.cdnlebo.com 0 1
+#ali ios apiios.alcp168.net ali wangsu 	ali.ws.cdnlebo.com 0 1
 #ali pc apiweb.alcp168.net 	ali 	nginx 	api.ng.cdnlebo.com 0 0
 #ali pc apiweb.alcp168.net 	ali 	cloudflare 		ali.cf.cdnlebo.com 0 0
-ali pc apiweb.alcp168.net 	ali 	wangsu 		ali.ws.cdnlebo.com 0 1
+#ali pc apiweb.alcp168.net 	ali 	wangsu 		ali.ws.cdnlebo.com 0 1
 
 ####  ios  ###
 #ali ios aliios.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com 0 0

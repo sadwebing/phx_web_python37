@@ -25,6 +25,10 @@ TcbsApp.config(function ($stateProvider, $urlRouterProvider) {
             url:"/dns/cloudflare",
             templateUrl: "/dns/cloudflare/index"
         })
+        .state("dns_nginx", {
+            url:"/dns/nginx",
+            templateUrl: "/dns/nginx"
+        })
         .state("saltstack_command", {
             url:"/saltstack_command",
             templateUrl: "/saltstack/command"
