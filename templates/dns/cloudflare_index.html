@@ -85,6 +85,11 @@
                                 <label class="input-group-addon" style="width: 85px;">content</label>
                                 <input type="text" name="record_content" class="form-control" id="record_content" placeholder="解析记录" style="width: 420px;">
                             </div>
+                            {% comment %}
+                            <div class="input-group" style="margin-bottom: 10px;">
+                                <button id="detect_dns" type="button" class="btn btn-default">检测</button>
+                            </div>
+                            {% endcomment %}
                         </form>
                         <p id="update_record_finished_count" style="text-align: left">finished: 0  &emsp;  success: 0  &emsp;  failed: 0</p>
                         <div class="progress progress-striped active" id="progress_update_record">  

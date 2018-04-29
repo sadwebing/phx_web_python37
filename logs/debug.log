@@ -19570,3 +19570,640 @@ OperationalError: (2013, 'Lost connection to MySQL server during query')
 2018-04-28 19:15:38,486 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
 2018-04-28 19:15:38,536 utils.py [django.db.backends:89] [DEBUG]- (0.048) SHOW FULL TABLES; args=None
 2018-04-28 19:15:38,647 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-04-28 19:15:53,358 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:15:53,871 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:15:54,168 utils.py [django.db.backends:89] [DEBUG]- (0.297) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'phexus_sa'; args=(u'phexus_sa',)
+2018-04-28 19:15:54,242 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' LIMIT 1; args=(u'3oa852qwfrfw7z5xz17kuhqogbogrglo',)
+2018-04-28 19:15:54,336 utils.py [django.db.backends:89] [DEBUG]- (0.047) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('3oa852qwfrfw7z5xz17kuhqogbogrglo', 'OWRkMTU0OGIzNjBjNjNhOWJkMWE4ZWQ5NDhlZDY0NDdmZmRlMGFkMTp7fQ==', '2018-05-12 19:15:54.242000'); args=(u'3oa852qwfrfw7z5xz17kuhqogbogrglo', u'OWRkMTU0OGIzNjBjNjNhOWJkMWE4ZWQ5NDhlZDY0NDdmZmRlMGFkMTp7fQ==', u'2018-05-12 19:15:54.242000')
+2018-04-28 19:15:54,480 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE `django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo'; args=(u'3oa852qwfrfw7z5xz17kuhqogbogrglo',)
+2018-04-28 19:15:54,573 utils.py [django.db.backends:89] [DEBUG]- (0.047) DELETE FROM `django_session` WHERE `django_session`.`session_key` IN ('3oa852qwfrfw7z5xz17kuhqogbogrglo'); args=(u'3oa852qwfrfw7z5xz17kuhqogbogrglo',)
+2018-04-28 19:15:54,763 utils.py [django.db.backends:89] [DEBUG]- (0.047) UPDATE `auth_user` SET `last_login` = '2018-04-28 19:15:54.668000' WHERE `auth_user`.`id` = 1; args=(u'2018-04-28 19:15:54.668000', 1)
+2018-04-28 19:15:54,950 utils.py [django.db.backends:89] [DEBUG]- (0.048) UPDATE `django_session` SET `session_data` = 'YzA4ZTc0OTg1ZmQ2ZTlmYWEyMzhhNzgxZGUyNDE1ZDljZDIwMGI1ODp7Il9hdXRoX3VzZXJfaGFzaCI6IjA5ZTBlOWI5YjZiOWNlMGE2Y2Q5YzBhODM5ZjViMWJhNDg1OTFjN2YiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=', `expire_date` = '2018-05-12 19:15:54.857000' WHERE `django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo'; args=(u'YzA4ZTc0OTg1ZmQ2ZTlmYWEyMzhhNzgxZGUyNDE1ZDljZDIwMGI1ODp7Il9hdXRoX3VzZXJfaGFzaCI6IjA5ZTBlOWI5YjZiOWNlMGE2Y2Q5YzBhODM5ZjViMWJhNDg1OTFjN2YiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=', u'2018-05-12 19:15:54.857000', u'3oa852qwfrfw7z5xz17kuhqogbogrglo')
+2018-04-28 19:15:54,999 utils.py [django.db.backends:89] [DEBUG]- (0.048) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('3oa852qwfrfw7z5xz17kuhqogbogrglo', 'YzA4ZTc0OTg1ZmQ2ZTlmYWEyMzhhNzgxZGUyNDE1ZDljZDIwMGI1ODp7Il9hdXRoX3VzZXJfaGFzaCI6IjA5ZTBlOWI5YjZiOWNlMGE2Y2Q5YzBhODM5ZjViMWJhNDg1OTFjN2YiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=', '2018-05-12 19:15:54.857000'); args=(u'3oa852qwfrfw7z5xz17kuhqogbogrglo', u'YzA4ZTc0OTg1ZmQ2ZTlmYWEyMzhhNzgxZGUyNDE1ZDljZDIwMGI1ODp7Il9hdXRoX3VzZXJfaGFzaCI6IjA5ZTBlOWI5YjZiOWNlMGE2Y2Q5YzBhODM5ZjViMWJhNDg1OTFjN2YiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=', u'2018-05-12 19:15:54.857000')
+2018-04-28 19:15:55,450 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:15:55,963 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:15:56,012 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 19:15:55.100000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 19:15:55.100000')
+2018-04-28 19:15:56,061 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 19:15:56,109 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 19:15:56,109 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-28 19:15:56,960 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:15:57,302 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:15:57,348 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 19:15:56.613000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 19:15:56.613000')
+2018-04-28 19:15:57,398 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 19:15:57,446 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 19:15:57,493 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_content_type`.`app_label`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON ( `auth_permission`.`content_type_id` = `django_content_type`.`id` ); args=()
+2018-04-28 19:15:57,494 views.py [django:42] [INFO]- 127.0.0.1 is requesting /home
+2018-04-28 19:15:59,398 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:15:59,917 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:15:59,963 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 19:15:59.053000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 19:15:59.053000')
+2018-04-28 19:16:00,013 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 19:16:00,059 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 19:16:00,061 nginx.py [django:28] [INFO]- 127.0.0.1 is requesting /dns/nginx
+2018-04-28 19:16:00,109 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-28 19:16:00,109 nginx.py [django:31] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-28 19:16:00,157 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-28 19:16:00,263 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 19:16:04,736 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:16:05,082 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:16:05,132 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 19:16:04.391000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 19:16:04.391000')
+2018-04-28 19:16:05,183 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 19:16:05,230 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 19:16:05,230 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-28 19:16:05,276 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-28 19:16:05,276 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-28 19:16:05,323 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-28 19:16:05,454 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 19:20:33,151 utils.py [django.db.backends:89] [DEBUG]- (0.049) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:20:33,910 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:20:33,959 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 19:20:32.797000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 19:20:32.797000')
+2018-04-28 19:20:34,007 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 19:20:34,055 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 19:20:34,055 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-28 19:20:34,970 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:20:35,486 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:20:35,535 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 19:20:34.453000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 19:20:34.453000')
+2018-04-28 19:20:35,584 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 19:20:35,631 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 19:20:35,632 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-28 19:20:35,680 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-28 19:20:35,681 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-28 19:20:35,729 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-28 19:20:35,846 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 19:21:17,262 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:21:17,609 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:21:17,657 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 19:21:16.910000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 19:21:16.910000')
+2018-04-28 19:21:17,707 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 19:21:17,757 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 19:21:17,757 views.py [django:53] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-04-28 19:21:17,895 project.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-04-28 19:21:17,895 project.py [django:38] [INFO]- 查询参数：query_all
+2018-04-28 19:21:18,240 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 19:21:18,289 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `monitor_project_t`.`id`, `monitor_project_t`.`envir`, `monitor_project_t`.`product`, `monitor_project_t`.`project`, `monitor_project_t`.`minion_id`, `monitor_project_t`.`server_type`, `monitor_project_t`.`role`, `monitor_project_t`.`domain`, `monitor_project_t`.`uri`, `monitor_project_t`.`status`, `monitor_project_t`.`info` FROM `monitor_project_t`; args=()
+2018-04-28 19:21:23,894 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:18:20,384 utils.py [django.db.backends:89] [DEBUG]- (0.045) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:18:20,730 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:18:20,779 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:18:19.871000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:18:19.871000')
+2018-04-28 20:18:20,831 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:18:20,878 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:18:20,880 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-28 20:18:21,664 utils.py [django.db.backends:89] [DEBUG]- (0.045) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:18:22,454 utils.py [django.db.backends:89] [DEBUG]- (0.296) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:18:22,502 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:18:21.320000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:18:21.320000')
+2018-04-28 20:18:22,549 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:18:22,599 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:18:22,601 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-28 20:18:22,650 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-28 20:18:22,651 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-28 20:18:22,946 utils.py [django.db.backends:89] [DEBUG]- (0.294) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-28 20:18:23,052 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:18:27,161 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:18:27,506 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:18:27,848 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:18:27,897 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:18:42,776 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-04-28 20:18:42,776 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'490973e47c762e755b944931cb774dc4', u'name': u'1116668.com'}]
+2018-04-28 20:18:43,127 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:18:43,473 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:18:43,766 utils.py [django.db.backends:89] [DEBUG]- (0.293) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:19:02,461 utils.py [django.db.backends:89] [DEBUG]- (0.294) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:19:02,806 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:19:02,855 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:19:01.678000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:19:01.678000')
+2018-04-28 20:19:02,905 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:19:02,953 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:19:02,954 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-04-28 20:19:03,003 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:19:03,003 cf_api.py [django:68] [INFO]- record_id: 84686b9d854f173ad7e668604318b4fe
+2018-04-28 20:19:03,003 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records/84686b9d854f173ad7e668604318b4fe: {'content': u'tw.l5uc22.com', 'proxied': False, 'type': u'CNAME', 'name': u'test.1116668.com'}
+2018-04-28 20:19:03,496 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'test.1116668.com', u'zone': u'1116668.com', u'proxied': False, u'content': u'1116668.com.aegins.cc', u'0': True, u'record_id': u'84686b9d854f173ad7e668604318b4fe', u'type': u'CNAME', u'zone_id': u'490973e47c762e755b944931cb774dc4'}, 'step': 1, 'result': True}
+2018-04-28 20:19:03,497 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-04-28 20:19:08,792 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-04-28 20:19:08,792 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'490973e47c762e755b944931cb774dc4', u'name': u'1116668.com'}]
+2018-04-28 20:19:09,328 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:19:09,842 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:19:09,888 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:19:22,045 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:19:22,390 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:19:22,438 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:19:21.697000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:19:21.697000')
+2018-04-28 20:19:22,489 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:19:22,538 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:19:22,539 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-04-28 20:19:22,586 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:19:22,588 cf_api.py [django:68] [INFO]- record_id: 84686b9d854f173ad7e668604318b4fe
+2018-04-28 20:19:22,588 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records/84686b9d854f173ad7e668604318b4fe: {'content': u'1116668.com.aegins.cc', 'proxied': False, 'type': u'CNAME', 'name': u'test.1116668.com'}
+2018-04-28 20:19:22,959 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'test.1116668.com', u'zone': u'1116668.com', u'proxied': False, u'content': u'tw.l5uc22.com', u'0': True, u'record_id': u'84686b9d854f173ad7e668604318b4fe', u'type': u'CNAME', u'zone_id': u'490973e47c762e755b944931cb774dc4'}, 'step': 1, 'result': True}
+2018-04-28 20:19:22,960 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-04-28 20:19:26,207 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-04-28 20:19:26,207 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'490973e47c762e755b944931cb774dc4', u'name': u'1116668.com'}]
+2018-04-28 20:19:26,801 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:19:27,144 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:19:27,191 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:20:20,878 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:20:21,391 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:20:21,440 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:20:20.532000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:20:20.532000')
+2018-04-28 20:20:21,489 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:20:21,538 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:20:21,538 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-28 20:20:22,278 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:20:22,628 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:20:22,677 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:20:21.931000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:20:21.931000')
+2018-04-28 20:20:22,726 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:20:22,775 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:20:22,775 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-28 20:20:22,822 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-28 20:20:22,822 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-28 20:20:22,872 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-28 20:20:22,971 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:24:03,548 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:24:04,069 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:24:04,118 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:24:03.032000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:24:03.032000')
+2018-04-28 20:24:04,167 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:24:04,220 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:24:04,220 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-28 20:24:05,164 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:24:05,698 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:24:05,747 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:24:04.650000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:24:04.650000')
+2018-04-28 20:24:05,796 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:24:05,845 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:24:05,845 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-28 20:24:05,892 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-28 20:24:05,892 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-28 20:24:05,940 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-28 20:24:06,039 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:24:11,059 base.py [django.request:170] [WARNING]- Not Found: /favicon.ico
+2018-04-28 20:32:59,943 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:33:00,296 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:33:00,637 utils.py [django.db.backends:89] [DEBUG]- (0.045) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:33:00,684 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:33:08,818 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-04-28 20:33:08,818 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'490973e47c762e755b944931cb774dc4', u'name': u'1116668.com'}]
+2018-04-28 20:33:09,167 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:33:09,507 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:33:09,555 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:33:24,226 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:33:24,572 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:33:24,619 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:33:23.874000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:33:23.874000')
+2018-04-28 20:33:24,670 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:33:24,723 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:33:24,724 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-04-28 20:33:24,773 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:33:24,773 cf_api.py [django:68] [INFO]- record_id: 84686b9d854f173ad7e668604318b4fe
+2018-04-28 20:33:24,773 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records/84686b9d854f173ad7e668604318b4fe: {'content': u'tw.l5uc22.com', 'proxied': False, 'type': u'CNAME', 'name': u'test.1116668.com'}
+2018-04-28 20:33:25,157 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'test.1116668.com', u'zone': u'1116668.com', u'proxied': False, u'content': u'1116668.com.aegins.cc', u'0': True, u'record_id': u'84686b9d854f173ad7e668604318b4fe', u'type': u'CNAME', u'zone_id': u'490973e47c762e755b944931cb774dc4'}, 'step': 1, 'result': True}
+2018-04-28 20:33:25,158 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-04-28 20:33:30,391 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-04-28 20:33:30,391 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'490973e47c762e755b944931cb774dc4', u'name': u'1116668.com'}]
+2018-04-28 20:33:30,742 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:33:31,091 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:33:31,140 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:33:39,821 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:33:40,171 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:33:40,221 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:33:39.472000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:33:39.472000')
+2018-04-28 20:33:40,269 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:33:40,319 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:33:40,319 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-04-28 20:33:40,371 utils.py [django.db.backends:89] [DEBUG]- (0.051) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:33:40,371 cf_api.py [django:68] [INFO]- record_id: 84686b9d854f173ad7e668604318b4fe
+2018-04-28 20:33:40,371 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records/84686b9d854f173ad7e668604318b4fe: {'content': u'1116668.com.aegins.cc', 'proxied': False, 'type': u'CNAME', 'name': u'test.1116668.com'}
+2018-04-28 20:33:40,746 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'test.1116668.com', u'zone': u'1116668.com', u'proxied': False, u'content': u'tw.l5uc22.com', u'0': True, u'record_id': u'84686b9d854f173ad7e668604318b4fe', u'type': u'CNAME', u'zone_id': u'490973e47c762e755b944931cb774dc4'}, 'step': 1, 'result': True}
+2018-04-28 20:33:40,750 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-04-28 20:33:49,158 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-04-28 20:33:49,160 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'490973e47c762e755b944931cb774dc4', u'name': u'1116668.com'}]
+2018-04-28 20:33:49,513 utils.py [django.db.backends:89] [DEBUG]- (0.049) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:33:49,857 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:33:49,905 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:39:24,838 utils.py [django.db.backends:89] [DEBUG]- (0.049) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:39:25,190 utils.py [django.db.backends:89] [DEBUG]- (0.049) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:39:25,242 utils.py [django.db.backends:89] [DEBUG]- (0.051) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:39:24.485000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:39:24.485000')
+2018-04-28 20:39:25,292 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:39:25,341 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:39:25,342 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-28 20:39:26,242 utils.py [django.db.backends:89] [DEBUG]- (0.049) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:39:26,782 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:39:26,848 utils.py [django.db.backends:89] [DEBUG]- (0.066) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:39:25.890000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:39:25.890000')
+2018-04-28 20:39:26,900 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:39:26,947 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:39:26,948 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-28 20:39:26,996 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-28 20:39:26,996 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-28 20:39:27,045 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-28 20:39:27,246 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:41:22,683 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:41:23,035 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:41:23,381 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:41:23,428 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:42:01,723 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-04-28 20:42:01,723 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'490973e47c762e755b944931cb774dc4', u'name': u'1116668.com'}]
+2018-04-28 20:42:02,068 utils.py [django.db.backends:89] [DEBUG]- (0.045) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:42:02,411 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:42:02,460 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:43:25,992 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:43:26,332 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:43:26,381 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:43:25.647000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:43:25.647000')
+2018-04-28 20:43:26,430 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:43:26,477 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:43:26,479 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-28 20:43:27,364 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:43:27,710 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:43:27,759 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:43:27.021000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:43:27.021000')
+2018-04-28 20:43:28,059 utils.py [django.db.backends:89] [DEBUG]- (0.297) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:43:28,111 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:43:28,111 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-28 20:43:28,160 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-28 20:43:28,161 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-28 20:43:28,209 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-28 20:43:28,369 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:43:30,131 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:43:30,476 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:43:30,825 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:43:30,874 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:43:31,727 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:43:37,667 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:43:38,015 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:43:38,364 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:43:38,414 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:43:39,625 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-04-28 20:43:39,625 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'490973e47c762e755b944931cb774dc4', u'name': u'1116668.com'}]
+2018-04-28 20:43:39,967 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:43:40,315 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:43:40,362 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:43:50,684 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:43:51,046 utils.py [django.db.backends:89] [DEBUG]- (0.049) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:43:51,095 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:43:50.337000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:43:50.337000')
+2018-04-28 20:43:51,145 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:43:51,200 utils.py [django.db.backends:89] [DEBUG]- (0.052) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:43:51,200 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-04-28 20:43:51,250 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:43:51,250 cf_api.py [django:68] [INFO]- record_id: 84686b9d854f173ad7e668604318b4fe
+2018-04-28 20:43:51,250 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records/84686b9d854f173ad7e668604318b4fe: {'content': u'tw.l5uc22.com', 'proxied': False, 'type': u'CNAME', 'name': u'test.1116668.com'}
+2018-04-28 20:43:52,170 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'test.1116668.com', u'zone': u'1116668.com', u'proxied': False, u'content': u'1116668.com.aegins.cc', u'0': True, u'record_id': u'84686b9d854f173ad7e668604318b4fe', u'type': u'CNAME', u'zone_id': u'490973e47c762e755b944931cb774dc4'}, 'step': 1, 'result': True}
+2018-04-28 20:43:52,178 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-04-28 20:44:25,964 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:44:26,316 utils.py [django.db.backends:89] [DEBUG]- (0.049) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:44:26,367 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:44:25.609000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:44:25.609000')
+2018-04-28 20:44:26,417 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:44:26,470 utils.py [django.db.backends:89] [DEBUG]- (0.051) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:44:26,470 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-04-28 20:44:26,519 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:44:26,519 cf_api.py [django:68] [INFO]- record_id: 84686b9d854f173ad7e668604318b4fe
+2018-04-28 20:44:26,519 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records/84686b9d854f173ad7e668604318b4fe: {'content': u'1116668.com.aegins.cc', 'proxied': False, 'type': u'CNAME', 'name': u'test.1116668.com'}
+2018-04-28 20:44:26,924 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'test.1116668.com', u'zone': u'1116668.com', u'proxied': False, u'content': u'1116668.com.aegins.cc', u'0': True, u'record_id': u'84686b9d854f173ad7e668604318b4fe', u'type': u'CNAME', u'zone_id': u'490973e47c762e755b944931cb774dc4'}, 'step': 1, 'result': True}
+2018-04-28 20:44:26,930 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-04-28 20:44:28,575 utils.py [django.db.backends:89] [DEBUG]- (0.049) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:44:28,930 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:44:28,977 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:44:28.226000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:44:28.226000')
+2018-04-28 20:44:29,032 utils.py [django.db.backends:89] [DEBUG]- (0.052) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:44:29,082 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:44:29,084 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-28 20:44:30,091 utils.py [django.db.backends:89] [DEBUG]- (0.049) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:44:30,433 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:44:30,480 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:44:29.738000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:44:29.738000')
+2018-04-28 20:44:30,530 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:44:30,581 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:44:30,582 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-28 20:44:30,628 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-28 20:44:30,630 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-28 20:44:30,677 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-28 20:44:30,851 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:44:32,237 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:44:32,839 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:44:33,188 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:44:33,237 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:44:38,002 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-04-28 20:44:38,002 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'490973e47c762e755b944931cb774dc4', u'name': u'1116668.com'}]
+2018-04-28 20:44:38,364 utils.py [django.db.backends:89] [DEBUG]- (0.052) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:44:38,710 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:44:38,759 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:44:50,418 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:44:50,766 utils.py [django.db.backends:89] [DEBUG]- (0.045) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:44:50,818 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:44:49.897000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:44:49.897000')
+2018-04-28 20:44:50,871 utils.py [django.db.backends:89] [DEBUG]- (0.051) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:44:50,921 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:44:50,923 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-04-28 20:44:50,973 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:44:50,973 cf_api.py [django:68] [INFO]- record_id: 84686b9d854f173ad7e668604318b4fe
+2018-04-28 20:44:50,973 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records/84686b9d854f173ad7e668604318b4fe: {'content': u'tw.l5uc22.com', 'proxied': False, 'type': u'CNAME', 'name': u'test.1116668.com'}
+2018-04-28 20:44:51,417 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'test.1116668.com', u'zone': u'1116668.com', u'proxied': False, u'content': u'1116668.com.aegins.cc', u'0': True, u'record_id': u'84686b9d854f173ad7e668604318b4fe', u'type': u'CNAME', u'zone_id': u'490973e47c762e755b944931cb774dc4'}, 'step': 1, 'result': True}
+2018-04-28 20:44:51,421 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-04-28 20:45:30,891 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:45:31,243 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:45:31,296 utils.py [django.db.backends:89] [DEBUG]- (0.052) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:45:30.544000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:45:30.544000')
+2018-04-28 20:45:31,346 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:45:31,398 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:45:31,398 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-04-28 20:45:31,450 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:45:31,450 cf_api.py [django:68] [INFO]- record_id: 84686b9d854f173ad7e668604318b4fe
+2018-04-28 20:45:31,450 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records/84686b9d854f173ad7e668604318b4fe: {'content': u'1116668.com.aegins.cc', 'proxied': False, 'type': u'CNAME', 'name': u'test.1116668.com'}
+2018-04-28 20:45:33,341 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'test.1116668.com', u'zone': u'1116668.com', u'proxied': False, u'content': u'1116668.com.aegins.cc', u'0': True, u'record_id': u'84686b9d854f173ad7e668604318b4fe', u'type': u'CNAME', u'zone_id': u'490973e47c762e755b944931cb774dc4'}, 'step': 1, 'result': True}
+2018-04-28 20:45:33,344 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-04-28 20:45:35,743 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:45:36,345 utils.py [django.db.backends:89] [DEBUG]- (0.049) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:45:36,395 utils.py [django.db.backends:89] [DEBUG]- (0.051) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:45:35.394000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:45:35.394000')
+2018-04-28 20:45:36,446 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:45:36,499 utils.py [django.db.backends:89] [DEBUG]- (0.052) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:45:36,500 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-28 20:45:37,661 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:45:38,003 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:45:38,051 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:45:37.061000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:45:37.061000')
+2018-04-28 20:45:38,099 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:45:38,148 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:45:38,150 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-28 20:45:38,200 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-28 20:45:38,200 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-28 20:45:38,250 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-28 20:45:38,427 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:45:40,516 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:45:40,864 utils.py [django.db.backends:89] [DEBUG]- (0.049) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:45:41,210 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:45:41,256 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:45:45,987 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-04-28 20:45:45,989 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'490973e47c762e755b944931cb774dc4', u'name': u'1116668.com'}]
+2018-04-28 20:45:46,341 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:45:46,687 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:45:46,734 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:45:55,443 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:45:55,789 utils.py [django.db.backends:89] [DEBUG]- (0.045) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:45:55,838 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:45:55.089000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:45:55.089000')
+2018-04-28 20:45:55,890 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:45:55,940 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:45:55,940 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-04-28 20:45:55,990 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:45:55,990 cf_api.py [django:68] [INFO]- record_id: 84686b9d854f173ad7e668604318b4fe
+2018-04-28 20:45:55,990 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records/84686b9d854f173ad7e668604318b4fe: {'content': u'tw.l5uc22.com', 'proxied': False, 'type': u'CNAME', 'name': u'test.1116668.com'}
+2018-04-28 20:45:56,371 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'test.1116668.com', u'zone': u'1116668.com', u'proxied': False, u'content': u'1116668.com.aegins.cc', u'0': True, u'record_id': u'84686b9d854f173ad7e668604318b4fe', u'type': u'CNAME', u'zone_id': u'490973e47c762e755b944931cb774dc4'}, 'step': 1, 'result': True}
+2018-04-28 20:45:56,375 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-04-28 20:46:47,095 utils.py [django.db.backends:89] [DEBUG]- (0.295) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:46:47,447 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:46:47,496 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:46:46.490000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:46:46.490000')
+2018-04-28 20:46:47,546 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:46:47,596 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:46:47,598 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-04-28 20:46:47,648 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:46:47,648 cf_api.py [django:68] [INFO]- record_id: 84686b9d854f173ad7e668604318b4fe
+2018-04-28 20:46:47,648 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records/84686b9d854f173ad7e668604318b4fe: {'content': u'1116668.com.aegins.cc', 'proxied': False, 'type': u'CNAME', 'name': u'test.1116668.com'}
+2018-04-28 20:46:48,049 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'test.1116668.com', u'zone': u'1116668.com', u'proxied': False, u'content': u'1116668.com.aegins.cc', u'0': True, u'record_id': u'84686b9d854f173ad7e668604318b4fe', u'type': u'CNAME', u'zone_id': u'490973e47c762e755b944931cb774dc4'}, 'step': 1, 'result': True}
+2018-04-28 20:46:48,052 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-04-28 20:46:50,104 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-04-28 20:46:50,105 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'490973e47c762e755b944931cb774dc4', u'name': u'1116668.com'}]
+2018-04-28 20:46:50,454 utils.py [django.db.backends:89] [DEBUG]- (0.049) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:46:50,809 utils.py [django.db.backends:89] [DEBUG]- (0.052) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:46:50,857 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:46:51,213 utils.py [django.db.backends:89] [DEBUG]- (0.051) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:46:51,566 utils.py [django.db.backends:89] [DEBUG]- (0.049) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:46:51,617 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:46:50.860000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:46:50.860000')
+2018-04-28 20:46:51,665 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:46:51,714 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:46:51,716 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-28 20:46:52,783 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:46:53,138 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:46:53,187 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:46:52.436000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:46:52.436000')
+2018-04-28 20:46:53,243 utils.py [django.db.backends:89] [DEBUG]- (0.053) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:46:53,293 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:46:53,295 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-28 20:46:53,344 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-28 20:46:53,345 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-28 20:46:53,394 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-28 20:46:53,642 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:46:56,513 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-04-28 20:46:56,861 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:46:57,211 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:46:57,260 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:47:00,644 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-04-28 20:47:00,644 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'490973e47c762e755b944931cb774dc4', u'name': u'1116668.com'}]
+2018-04-28 20:47:00,992 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:47:01,339 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:47:01,388 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:47:55,711 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:47:56,055 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:47:56,104 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:47:55.361000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:47:55.361000')
+2018-04-28 20:47:56,154 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:47:56,203 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:47:56,203 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-04-28 20:47:56,253 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:47:56,253 cf_api.py [django:68] [INFO]- record_id: 84686b9d854f173ad7e668604318b4fe
+2018-04-28 20:47:56,255 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records/84686b9d854f173ad7e668604318b4fe: {'content': u'tw.l5uc22.com', 'proxied': True, 'type': u'CNAME', 'name': u'test.1116668.com'}
+2018-04-28 20:47:56,744 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'test.1116668.com', u'zone': u'1116668.com', u'proxied': False, u'content': u'1116668.com.aegins.cc', u'0': True, u'record_id': u'84686b9d854f173ad7e668604318b4fe', u'type': u'CNAME', u'zone_id': u'490973e47c762e755b944931cb774dc4'}, 'step': 1, 'result': True}
+2018-04-28 20:47:56,746 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-04-28 20:48:02,742 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:48:03,088 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:48:03,135 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:48:02.387000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:48:02.387000')
+2018-04-28 20:48:03,184 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:48:03,234 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:48:03,234 cf.py [django:97] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-04-28 20:48:03,285 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:48:03,286 cf_api.py [django:68] [INFO]- record_id: 84686b9d854f173ad7e668604318b4fe
+2018-04-28 20:48:03,286 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records/84686b9d854f173ad7e668604318b4fe: {'content': u'1116668.com.aegins.cc', 'proxied': False, 'type': u'CNAME', 'name': u'test.1116668.com'}
+2018-04-28 20:48:03,673 cf.py [django:120] [INFO]- {'record': {u'product': u'lebo', u'name': u'test.1116668.com', u'zone': u'1116668.com', u'proxied': False, u'content': u'1116668.com.aegins.cc', u'0': True, u'record_id': u'84686b9d854f173ad7e668604318b4fe', u'type': u'CNAME', u'zone_id': u'490973e47c762e755b944931cb774dc4'}, 'step': 1, 'result': True}
+2018-04-28 20:48:03,676 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 100, in UpdateRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-04-28 20:48:07,673 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-04-28 20:48:07,674 cf.py [django:59] [INFO]- [{u'product': u'lebo', u'zone_id': u'490973e47c762e755b944931cb774dc4', u'name': u'1116668.com'}]
+2018-04-28 20:48:08,025 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:48:09,569 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:48:09,618 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `dns_cf_account`.`id`, `dns_cf_account`.`name`, `dns_cf_account`.`email`, `dns_cf_account`.`key` FROM `dns_cf_account` WHERE `dns_cf_account`.`name` = 'lebo' ORDER BY `dns_cf_account`.`id` ASC LIMIT 1; args=(u'lebo',)
+2018-04-28 20:49:04,138 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:49:04,665 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:49:04,713 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:49:03.623000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:49:03.623000')
+2018-04-28 20:49:04,766 utils.py [django.db.backends:89] [DEBUG]- (0.051) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:49:04,819 utils.py [django.db.backends:89] [DEBUG]- (0.052) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:49:04,819 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-04-28 20:49:05,713 utils.py [django.db.backends:89] [DEBUG]- (0.056) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:49:06,076 utils.py [django.db.backends:89] [DEBUG]- (0.058) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-04-28 20:49:06,134 utils.py [django.db.backends:89] [DEBUG]- (0.057) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3oa852qwfrfw7z5xz17kuhqogbogrglo' AND `django_session`.`expire_date` > '2018-04-28 20:49:05.346000'); args=('3oa852qwfrfw7z5xz17kuhqogbogrglo', u'2018-04-28 20:49:05.346000')
+2018-04-28 20:49:06,183 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-04-28 20:49:06,233 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-04-28 20:49:06,234 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-04-28 20:49:06,285 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC LIMIT 21; args=()
+2018-04-28 20:49:06,285 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-04-28 20:49:06,335 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `dns_cf_account`.`name` FROM `dns_cf_account` ORDER BY `dns_cf_account`.`name` ASC; args=()
+2018-04-28 20:49:06,516 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records

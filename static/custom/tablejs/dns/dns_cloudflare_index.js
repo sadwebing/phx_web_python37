@@ -205,7 +205,7 @@ var operate = {
 
     isDomain: function (value, proxied) {
         var regexp = /^.*[a-zA-Z0-9]+.*\.[a-zA-Z0-9]*[a-zA-Z]+[a-zA-Z0-9]*$/;
-        var regexp_tw = /^tw\..*$/;
+        var regexp_tw = /^(tw|.*\.tw)\..*$/;
 
         var valid = regexp.test(value);
         if(!valid){
