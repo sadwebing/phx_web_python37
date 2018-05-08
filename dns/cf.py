@@ -94,7 +94,7 @@ def UpdateRecords(request):
             clientip = request.META['HTTP_X_FORWARDED_FOR']
         else:
             clientip = request.META['REMOTE_ADDR']
-        logger.info('[POST]%s is requesting. %s' %(clientip, request.get_full_path()))
+        logger.info('user:%s | [POST]%s is requesting. %s' %(username, clientip, request.get_full_path()))
         for postdata in request.websocket:
             #logger.info(type(postdata))
             data = json.loads(postdata)
@@ -117,7 +117,7 @@ def UpdateRecords(request):
                     return_info['result'] = False
                 else:
                     return_info['result'] = True
-                logger.info(return_info)
+                logger.info("req_ip: %s | user: %s | updaterecord: { 'type':%s, 'name': %s, 'content': %s, 'proxied':%s }" %(clientip, username, data['type'], record['name'], data['content'], proxied))
                 request.websocket.send(json.dumps(return_info))
 
         ### close websocket ###

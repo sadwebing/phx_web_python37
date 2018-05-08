@@ -156,6 +156,7 @@ var operate = {
         this.selectpicker();
         this.operateSearch();
         this.operateEdit();
+        this.detectDns();
         //this.operateCommitEdit();
         this.DepartmentModel = {
             id: ko.observable(),
@@ -180,6 +181,13 @@ var operate = {
             showSubtext:true,
         });
     },
+
+    detectDns: function () {
+        $('#detect_dns').on("click", function () {
+            
+        });
+    },
+
 
     isIp: function (value) {
         var regexp = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/;
