@@ -90,6 +90,10 @@ def UpdateRecords(request):
             role = request.user.userprofile.role
         except:
             role = 'none'
+        if not username:
+            request.websocket.send('userNone')
+            logger.info('user: 用户名未知 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
+
         if request.META.has_key('HTTP_X_FORWARDED_FOR'):
             clientip = request.META['HTTP_X_FORWARDED_FOR']
         else:
@@ -129,7 +133,7 @@ def UpdateRecords(request):
                         now_rec = "'type':%s, 'name': %s, 'content': %s, 'proxied':%s" %(data['type'], record['name'], data['content'], proxied)
                     )
 
-                insert_h.save()
+                #insert_h.save()
 
                 request.websocket.send(json.dumps(return_info))
 

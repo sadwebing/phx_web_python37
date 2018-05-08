@@ -375,6 +375,16 @@ var operate = {
                 operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
             };
             socket.onmessage = function (e) {
+
+                console.log(e.data);
+
+                if (e.data == 'userNone'){
+                    toastr.error('未获取用户名，请重新登陆！', '错误');
+                    operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
+                    socket.close();
+                    return false;
+                }
+
                 data = eval('('+ e.data +')');
                 var width = 100*(data.step)/count + "%";
                 if (data.result){

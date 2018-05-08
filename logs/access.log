@@ -8454,3 +8454,115 @@ TypeError: expected string or buffer
 2018-05-08 16:29:04,020 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
 2018-05-08 16:29:09,755 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
 2018-05-08 16:29:09,755 cf.py [django:59] [INFO]- [{u'product': u'guangda', u'zone_id': u'c61e81c22200f40f06512a6e7d787037', u'name': u'gdcp000.com'}]
+2018-05-08 16:37:29,743 cf.py [django:97] [INFO]- user:phexus_sa | [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-05-08 16:37:29,905 cf_api.py [django:68] [INFO]- record_id: 1e612d85e3dae113699652780db41962
+2018-05-08 16:37:29,907 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/c61e81c22200f40f06512a6e7d787037/dns_records/1e612d85e3dae113699652780db41962: {'content': u'tw.l5jiamei.com', 'proxied': True, 'type': u'CNAME', 'name': u'gdcp000.com'}
+2018-05-08 16:37:30,664 cf.py [django:122] [INFO]- req_ip: 127.0.0.1 | user: phexus_sa | updaterecord: { 'type':CNAME, 'name': gdcp000.com, 'content': tw.l5jiamei.com, 'proxied':True } ---> { 'type':CNAME, 'name': gdcp000.com, 'content': tw.l5jiamei.com, 'proxied':True }
+2018-05-08 16:37:45,108 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-08 16:37:48,849 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-05-08 16:37:49,032 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-05-08 16:37:49,283 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 16:37:57,349 base.py [django.request:170] [WARNING]- Not Found: /favicon.ico
+2018-05-08 16:38:46,463 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 16:38:47,693 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 16:38:47,924 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 16:38:54,022 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-05-08 16:38:54,023 cf.py [django:59] [INFO]- [{u'product': u'ali', u'zone_id': u'1a39ae48e5c94d834eaea9a7a05a851b', u'name': u'jmcp333.com'}]
+2018-05-08 16:38:54,236 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-05-08 16:38:54,236 cf.py [django:59] [INFO]- [{u'product': u'ali', u'zone_id': u'1a39ae48e5c94d834eaea9a7a05a851b', u'name': u'jmcp333.com'}]
+2018-05-08 16:38:56,250 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-05-08 16:38:56,250 cf.py [django:59] [INFO]- [{u'product': u'ali', u'zone_id': u'1a39ae48e5c94d834eaea9a7a05a851b', u'name': u'jmcp333.com'}]
+2018-05-08 16:39:22,683 cf.py [django:97] [INFO]- user:phexus_sa | [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-05-08 16:39:22,855 cf_api.py [django:68] [INFO]- record_id: bb63e2a42fbfef664c585b44eba426b2
+2018-05-08 16:39:22,855 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/1a39ae48e5c94d834eaea9a7a05a851b/dns_records/bb63e2a42fbfef664c585b44eba426b2: {'content': u'web1.l5ali.com', 'proxied': False, 'type': u'CNAME', 'name': u'wap.jmcp333.com'}
+2018-05-08 16:39:23,515 cf.py [django:122] [INFO]- req_ip: 127.0.0.1 | user: phexus_sa | updaterecord: { 'type':CNAME, 'name': wap.jmcp333.com, 'content': speed.l5ali.com, 'proxied':False } ---> { 'type':CNAME, 'name': wap.jmcp333.com, 'content': web1.l5ali.com, 'proxied':False }
+2018-05-08 18:01:17,905 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-08 18:01:18,908 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-05-08 18:01:18,946 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-05-08 18:01:19,078 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 18:01:36,013 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 18:01:42,451 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-05-08 18:01:42,451 cf.py [django:59] [INFO]- [{u'product': u'ali', u'zone_id': u'd6a1939265983a130434dd0c1872a7f7', u'name': u'alcp66.com'}]
+2018-05-08 18:01:56,213 cf.py [django:100] [INFO]- user: | [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-05-08 18:01:56,250 cf_api.py [django:68] [INFO]- record_id: c6366ac3de2c0728ef2c0cede1726f48
+2018-05-08 18:01:56,252 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/d6a1939265983a130434dd0c1872a7f7/dns_records/c6366ac3de2c0728ef2c0cede1726f48: {'content': u'tw.l5ali.com', 'proxied': True, 'type': u'CNAME', 'name': u'ag.alcp66.com'}
+2018-05-08 18:01:56,877 cf.py [django:125] [INFO]- req_ip: 127.0.0.1 | user:  | updaterecord: { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True } ---> { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True }
+2018-05-08 18:03:33,184 cf.py [django:100] [INFO]- user: | [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-05-08 18:03:33,227 cf_api.py [django:68] [INFO]- record_id: c6366ac3de2c0728ef2c0cede1726f48
+2018-05-08 18:03:33,229 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/d6a1939265983a130434dd0c1872a7f7/dns_records/c6366ac3de2c0728ef2c0cede1726f48: {'content': u'tw.l5ali.com', 'proxied': True, 'type': u'CNAME', 'name': u'ag.alcp66.com'}
+2018-05-08 18:03:34,144 cf.py [django:125] [INFO]- req_ip: 127.0.0.1 | user:  | updaterecord: { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True } ---> { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True }
+2018-05-08 18:05:43,263 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-08 18:05:44,262 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-05-08 18:05:44,295 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-05-08 18:05:44,414 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 18:05:46,244 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 18:06:05,323 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-05-08 18:06:05,323 cf.py [django:59] [INFO]- [{u'product': u'ali', u'zone_id': u'd6a1939265983a130434dd0c1872a7f7', u'name': u'alcp66.com'}]
+2018-05-08 18:06:17,826 cf.py [django:100] [INFO]- user:arno1 | [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-05-08 18:06:17,861 cf_api.py [django:68] [INFO]- record_id: c6366ac3de2c0728ef2c0cede1726f48
+2018-05-08 18:06:17,861 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/d6a1939265983a130434dd0c1872a7f7/dns_records/c6366ac3de2c0728ef2c0cede1726f48: {'content': u'tw.l5ali.com', 'proxied': True, 'type': u'CNAME', 'name': u'ag.alcp66.com'}
+2018-05-08 18:06:18,849 cf.py [django:125] [INFO]- req_ip: 127.0.0.1 | user: arno1 | updaterecord: { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True } ---> { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True }
+2018-05-08 18:06:40,822 cf.py [django:100] [INFO]- user: | [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-05-08 18:06:40,858 cf_api.py [django:68] [INFO]- record_id: c6366ac3de2c0728ef2c0cede1726f48
+2018-05-08 18:06:40,858 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/d6a1939265983a130434dd0c1872a7f7/dns_records/c6366ac3de2c0728ef2c0cede1726f48: {'content': u'tw.l5ali.com', 'proxied': True, 'type': u'CNAME', 'name': u'ag.alcp66.com'}
+2018-05-08 18:06:41,549 cf.py [django:125] [INFO]- req_ip: 127.0.0.1 | user:  | updaterecord: { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True } ---> { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True }
+2018-05-08 18:07:26,607 cf.py [django:102] [INFO]- user: | [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-05-08 18:07:26,642 cf_api.py [django:68] [INFO]- record_id: c6366ac3de2c0728ef2c0cede1726f48
+2018-05-08 18:07:26,642 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/d6a1939265983a130434dd0c1872a7f7/dns_records/c6366ac3de2c0728ef2c0cede1726f48: {'content': u'tw.l5ali.com', 'proxied': True, 'type': u'CNAME', 'name': u'ag.alcp66.com'}
+2018-05-08 18:07:27,743 cf.py [django:127] [INFO]- req_ip: 127.0.0.1 | user:  | updaterecord: { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True } ---> { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True }
+2018-05-08 18:10:04,180 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-08 18:10:05,230 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-05-08 18:10:05,263 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-05-08 18:10:05,398 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 20:22:12,483 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-08 20:22:13,523 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-05-08 20:22:13,559 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-05-08 20:22:13,723 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 20:22:17,522 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 20:22:22,615 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-05-08 20:22:22,615 cf.py [django:59] [INFO]- [{u'product': u'ali', u'zone_id': u'd6a1939265983a130434dd0c1872a7f7', u'name': u'alcp66.com'}]
+2018-05-08 20:22:33,325 cf.py [django:102] [INFO]- user:arno1 | [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-05-08 20:22:33,361 cf_api.py [django:68] [INFO]- record_id: 38bd9a7eeb1965822fd9e750699f050d
+2018-05-08 20:22:33,362 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/d6a1939265983a130434dd0c1872a7f7/dns_records/38bd9a7eeb1965822fd9e750699f050d: {'content': u'tw.l5ali.com', 'proxied': True, 'type': u'CNAME', 'name': u'androidapi.alcp66.com'}
+2018-05-08 20:22:34,032 cf.py [django:127] [INFO]- req_ip: 127.0.0.1 | user: arno1 | updaterecord: { 'type':CNAME, 'name': androidapi.alcp66.com, 'content': tw.l5ali.com, 'proxied':True } ---> { 'type':CNAME, 'name': androidapi.alcp66.com, 'content': tw.l5ali.com, 'proxied':True }
+2018-05-08 20:22:59,145 cf.py [django:102] [INFO]- user: | [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-05-08 20:22:59,184 cf_api.py [django:68] [INFO]- record_id: 38bd9a7eeb1965822fd9e750699f050d
+2018-05-08 20:22:59,186 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/d6a1939265983a130434dd0c1872a7f7/dns_records/38bd9a7eeb1965822fd9e750699f050d: {'content': u'tw.l5ali.com', 'proxied': True, 'type': u'CNAME', 'name': u'androidapi.alcp66.com'}
+2018-05-08 20:22:59,867 cf.py [django:127] [INFO]- req_ip: 127.0.0.1 | user:  | updaterecord: { 'type':CNAME, 'name': androidapi.alcp66.com, 'content': tw.l5ali.com, 'proxied':True } ---> { 'type':CNAME, 'name': androidapi.alcp66.com, 'content': tw.l5ali.com, 'proxied':True }
+2018-05-08 20:44:34,720 cf.py [django:102] [INFO]- user: | [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-05-08 20:44:34,763 cf_api.py [django:68] [INFO]- record_id: 38bd9a7eeb1965822fd9e750699f050d
+2018-05-08 20:44:34,763 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/d6a1939265983a130434dd0c1872a7f7/dns_records/38bd9a7eeb1965822fd9e750699f050d: {'content': u'tw.l5ali.com', 'proxied': True, 'type': u'CNAME', 'name': u'androidapi.alcp66.com'}
+2018-05-08 20:44:35,430 cf.py [django:127] [INFO]- req_ip: 127.0.0.1 | user:  | updaterecord: { 'type':CNAME, 'name': androidapi.alcp66.com, 'content': tw.l5ali.com, 'proxied':True } ---> { 'type':CNAME, 'name': androidapi.alcp66.com, 'content': tw.l5ali.com, 'proxied':True }
+2018-05-08 20:45:18,815 cf.py [django:102] [INFO]- user: | [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-05-08 20:45:18,855 cf_api.py [django:68] [INFO]- record_id: 38bd9a7eeb1965822fd9e750699f050d
+2018-05-08 20:45:18,855 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/d6a1939265983a130434dd0c1872a7f7/dns_records/38bd9a7eeb1965822fd9e750699f050d: {'content': u'tw.l5ali.com', 'proxied': True, 'type': u'CNAME', 'name': u'androidapi.alcp66.com'}
+2018-05-08 20:45:20,115 cf.py [django:127] [INFO]- req_ip: 127.0.0.1 | user:  | updaterecord: { 'type':CNAME, 'name': androidapi.alcp66.com, 'content': tw.l5ali.com, 'proxied':True } ---> { 'type':CNAME, 'name': androidapi.alcp66.com, 'content': tw.l5ali.com, 'proxied':True }
+2018-05-08 20:45:52,224 cf.py [django:102] [INFO]- user: | [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-05-08 20:48:01,891 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-08 20:48:02,947 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-05-08 20:48:02,980 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-05-08 20:48:03,124 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 20:48:06,740 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 20:49:08,306 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-08 20:49:09,882 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-05-08 20:49:09,915 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-05-08 20:49:10,048 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 20:49:12,255 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 20:49:16,595 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-05-08 20:49:16,595 cf.py [django:59] [INFO]- [{u'product': u'ali', u'zone_id': u'd6a1939265983a130434dd0c1872a7f7', u'name': u'alcp66.com'}]
+2018-05-08 20:49:28,724 cf.py [django:100] [INFO]- user:arno1 | [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-05-08 20:49:28,762 cf_api.py [django:68] [INFO]- record_id: c6366ac3de2c0728ef2c0cede1726f48
+2018-05-08 20:49:28,762 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/d6a1939265983a130434dd0c1872a7f7/dns_records/c6366ac3de2c0728ef2c0cede1726f48: {'content': u'tw.l5ali.com', 'proxied': True, 'type': u'CNAME', 'name': u'ag.alcp66.com'}
+2018-05-08 20:49:30,058 cf.py [django:125] [INFO]- req_ip: 127.0.0.1 | user: arno1 | updaterecord: { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True } ---> { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True }
+2018-05-08 20:49:45,371 cf.py [django:100] [INFO]- user: | [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-05-08 20:49:45,417 cf_api.py [django:68] [INFO]- record_id: c6366ac3de2c0728ef2c0cede1726f48
+2018-05-08 20:49:45,417 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/d6a1939265983a130434dd0c1872a7f7/dns_records/c6366ac3de2c0728ef2c0cede1726f48: {'content': u'tw.l5ali.com', 'proxied': True, 'type': u'CNAME', 'name': u'ag.alcp66.com'}
+2018-05-08 20:49:46,056 cf.py [django:125] [INFO]- req_ip: 127.0.0.1 | user:  | updaterecord: { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True } ---> { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True }
+2018-05-08 20:49:51,467 cf.py [django:100] [INFO]- user: | [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-05-08 20:49:51,509 cf_api.py [django:68] [INFO]- record_id: c6366ac3de2c0728ef2c0cede1726f48
+2018-05-08 20:49:51,509 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/d6a1939265983a130434dd0c1872a7f7/dns_records/c6366ac3de2c0728ef2c0cede1726f48: {'content': u'tw.l5ali.com', 'proxied': True, 'type': u'CNAME', 'name': u'ag.alcp66.com'}
+2018-05-08 20:49:52,134 cf.py [django:125] [INFO]- req_ip: 127.0.0.1 | user:  | updaterecord: { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True } ---> { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True }
+2018-05-08 20:49:58,510 cf.py [django:100] [INFO]- user: | [POST]127.0.0.1 is requesting. /dns/cloudflare/update_records
+2018-05-08 20:49:58,545 cf_api.py [django:68] [INFO]- record_id: c6366ac3de2c0728ef2c0cede1726f48
+2018-05-08 20:49:58,545 cf_api.py [django:79] [INFO]- https://api.cloudflare.com/client/v4/zones/d6a1939265983a130434dd0c1872a7f7/dns_records/c6366ac3de2c0728ef2c0cede1726f48: {'content': u'tw.l5ali.com', 'proxied': True, 'type': u'CNAME', 'name': u'ag.alcp66.com'}
+2018-05-08 20:49:59,313 cf.py [django:125] [INFO]- req_ip: 127.0.0.1 | user:  | updaterecord: { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True } ---> { 'type':CNAME, 'name': ag.alcp66.com, 'content': tw.l5ali.com, 'proxied':True }
