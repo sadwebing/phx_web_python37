@@ -117,7 +117,7 @@ def UpdateRecords(request):
                     return_info['result'] = False
                 else:
                     return_info['result'] = True
-                logger.info("req_ip: %s | user: %s | updaterecord: { 'type':%s, 'name': %s, 'content': %s, 'proxied':%s }" %(clientip, username, data['type'], record['name'], data['content'], proxied))
+                logger.info("req_ip: %s | user: %s | updaterecord: { 'type':%s, 'name': %s, 'content': %s, 'proxied':%s } ---> { 'type':%s, 'name': %s, 'content': %s, 'proxied':%s }" %(clientip, username, record['type'], record['type'], data['name'], record['content'], record['proxied'], record['name'], data['content'], proxied))
                 request.websocket.send(json.dumps(return_info))
 
         ### close websocket ###
