@@ -8446,3 +8446,11 @@ TypeError: expected string or buffer
 2018-05-03 22:41:02,986 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
 2018-05-03 22:41:02,987 cf.py [django:59] [INFO]- [{u'product': u'ali', u'zone_id': u'3a1b0df4972a2050a6bbe8c0632a9ba5', u'name': u'alcp00.com'}]
 2018-05-05 14:10:32,430 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 16:28:51,515 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-08 16:28:56,602 views.py [django:42] [INFO]- 127.0.0.1 is requesting /home
+2018-05-08 16:29:00,635 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-05-08 16:29:00,816 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-05-08 16:29:01,131 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 16:29:04,020 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-08 16:29:09,755 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-05-08 16:29:09,755 cf.py [django:59] [INFO]- [{u'product': u'guangda', u'zone_id': u'c61e81c22200f40f06512a6e7d787037', u'name': u'gdcp000.com'}]

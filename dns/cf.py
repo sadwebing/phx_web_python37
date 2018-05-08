@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseForbidden
 from dwebsocket import require_websocket
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
-from models import cf_account, domain_info
+from models import cf_account, domain_info, alter_history
 from cf_api import CfApi
 from accounts.views import HasPermission
 from phxweb.settings import CF_URL
@@ -97,16 +97,18 @@ def UpdateRecords(request):
         logger.info('user:%s | [POST]%s is requesting. %s' %(username, clientip, request.get_full_path()))
         for postdata in request.websocket:
             #logger.info(type(postdata))
+            if not postdata:
+                break
             data = json.loads(postdata)
             step = 0
 
             for record in data['records']:
                 step += 1
-                return_info = {}
+                return_info           = {}
                 return_info['record'] = record
-                return_info['step'] = step
+                return_info['step']   = step
                 cf_acc = cf_account.objects.filter(name=record['product']).first()
-                cfapi = CfApi(CF_URL, cf_acc.email, cf_acc.key)
+                cfapi  = CfApi(CF_URL, cf_acc.email, cf_acc.key)
                 if data['proxied'] == 'true':
                     proxied = True
                 else:
@@ -117,11 +119,23 @@ def UpdateRecords(request):
                     return_info['result'] = False
                 else:
                     return_info['result'] = True
-                logger.info("req_ip: %s | user: %s | updaterecord: { 'type':%s, 'name': %s, 'content': %s, 'proxied':%s } ---> { 'type':%s, 'name': %s, 'content': %s, 'proxied':%s }" %(clientip, username, record['type'], record['type'], data['name'], record['content'], record['proxied'], record['name'], data['content'], proxied))
+                logger.info("req_ip: %s | user: %s | updaterecord: { 'type':%s, 'name': %s, 'content': %s, 'proxied':%s } ---> { 'type':%s, 'name': %s, 'content': %s, 'proxied':%s }" %(clientip, username, record['type'], record['name'], record['content'], record['proxied'], data['type'], record['name'], data['content'], proxied))
+
+                insert_h = alter_history(
+                        time    = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                        req_ip  = clientip,
+                        user    = username,
+                        pre_rec = "'type':%s, 'name': %s, 'content': %s, 'proxied':%s" %(record['type'], record['name'], record['content'], record['proxied']),
+                        now_rec = "'type':%s, 'name': %s, 'content': %s, 'proxied':%s" %(data['type'], record['name'], data['content'], proxied)
+                    )
+
+                insert_h.save()
+
                 request.websocket.send(json.dumps(return_info))
 
-        ### close websocket ###
-        request.websocket.close()
+        else:
+            ### close websocket ###
+            request.websocket.close()
 
 @csrf_exempt
 def UpdateApiRoute(request):

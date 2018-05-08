@@ -7,7 +7,7 @@ class cf_account(models.Model):
     key = models.CharField(max_length=128, null=False)
 
     def __str__(self):
-    	return " - ".join([self.name, self.email])
+    	return " | ".join([self.name, self.email])
 
 class domain_info(models.Model):
     domain = models.CharField(max_length=128)
@@ -25,4 +25,14 @@ class domain_info(models.Model):
         unique_together = ('product', 'client', 'domain', 'route')
 
     def __str__(self):
-    	return " - ".join([self.product, self.client, self.cf_account_name, self.domain, self.route, str(self.status), str(self.route_status)])
+    	return " | ".join([self.product, self.client, self.cf_account_name, self.domain, self.route, str(self.status), str(self.route_status)])
+
+class alter_history(models.Model):
+    time = models.CharField(max_length=32, null=False)
+    req_ip = models.CharField(max_length=128, null=False)
+    user = models.CharField(max_length=32, null=False)
+    pre_rec = models.CharField(max_length=256, null=False)
+    now_rec = models.CharField(max_length=256, null=False)
+
+    def __str__(self):
+        return " | ".join([self.time, self.user, self.pre_rec, self.now_rec])
