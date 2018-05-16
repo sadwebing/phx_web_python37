@@ -83,7 +83,15 @@
 #gd pc apiweb.gdcp168.net 	guangda 	cloudflare 		gd.cf.cdnlebo.com 0 0
 #gd pc apiweb.gdcp168.net 	guangda 	wangsu 		gd.ws.cdnlebo.com 0 1
 
-
+gd android apiad.gdcpapi.com guangda nginx 		api.ng.cdnlebo.com 0 0
+gd android apiad.gdcpapi.com guangda cloudflare 	gd.cf.cdnlebo.com 1 0
+gd android apiad.gdcpapi.com guangda wangsu 	apiad.gdcpapi.com.whecloud.com 1 1
+gd ios apiios.gdcpapi.com guangda nginx 		api.ng.cdnlebo.com 0 0
+gd ios apiios.gdcpapi.com guangda cloudflare 	gd.cf.cdnlebo.com 0 0
+gd ios apiios.gdcpapi.com guangda wangsu 	apiios.gdcpapi.com.whecloud.com 0 1
+gd pc apiweb.gdcpapi.com 	guangda 	nginx 	api.ng.cdnlebo.com 0 0
+gd pc apiweb.gdcpapi.com 	guangda 	cloudflare 		gd.cf.cdnlebo.com 0 0
+gd pc apiweb.gdcpapi.com 	guangda 	wangsu 		apiweb.gdcpapi.com.whecloud.com 0 1
 
 ####  ios  ###
 #gd ios gdios.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com 0 0
@@ -106,6 +114,16 @@
 #ali android androidapi.alcp188.com ali nginx 		api.ng.cdnlebo.com 0 0
 #ali android androidapi.alcp188.com ali cloudflare 	ali.cf.cdnlebo.com 1 1
 #
+
+ali android apiad.alcpapi.com ali nginx 		api.ng.cdnlebo.com 0 0
+ali android apiad.alcpapi.com ali cloudflare 	ali.cf.cdnlebo.com 1 0
+ali android apiad.alcpapi.com ali wangsu 	apiad.alcpapi.com.whecloud.com 1 1
+ali ios apiios.alcpapi.com ali nginx 		api.ng.cdnlebo.com 0 0
+ali ios apiios.alcpapi.com ali cloudflare 	ali.cf.cdnlebo.com 0 0
+ali ios apiios.alcpapi.com ali wangsu 	apiios.alcpapi.com.whecloud.com 0 1
+ali pc apiweb.alcpapi.com 	ali 	nginx 	api.ng.cdnlebo.com 0 0
+ali pc apiweb.alcpapi.com 	ali 	cloudflare 		ali.cf.cdnlebo.com 0 0
+ali pc apiweb.alcpapi.com 	ali 	wangsu 		apiweb.alcpapi.com.whecloud.com 0 1
 
 #ali android apiad.alcp168.net ali nginx 		api.ng.cdnlebo.com 0 0
 #ali android apiad.alcp168.net ali cloudflare 	ali.cf.cdnlebo.com 1 0

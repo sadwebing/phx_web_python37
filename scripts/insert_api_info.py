@@ -5,9 +5,9 @@ import django
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phxweb.settings")
 django.setup()
-from dns.models import cf_account, domain_info
+from dns.models      import cf_account, domain_info
 from phxweb.settings import DATABASES as databases
-from dns.cf_api import CfApi
+from dns.cf_api      import CfApi
 from phxweb.settings import CF_URL
 
 #获取当前目录
@@ -20,9 +20,9 @@ with open('%s/api_info.txt' %current_dir, 'r') as f:
     contents = f.readlines()
 for info in contents:
     if not '#' in info and info.replace(' ', '') != '\n':
-        cf_acc = cf_account.objects.filter(name=info.split()[3]).first()
-        api = CfApi(CF_URL, cf_acc.email, cf_acc.key)
-        zone_id = api.GetZoneId('.'.join(info.split()[2].split('.')[-2:]))['zone_id']
+        cf_acc    = cf_account.objects.filter(name=info.split()[3]).first()
+        api       = CfApi(CF_URL, cf_acc.email, cf_acc.key)
+        zone_id   = api.GetZoneId('.'.join(info.split()[2].split('.')[-2:]))['zone_id']
         record_id = api.GetDnsRecordId(zone_id, info.split()[2])
 
 

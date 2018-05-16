@@ -9,7 +9,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardi
 from time import sleep
 #from saltstack.command import Command
 from email.mime.text import MIMEText
-from email.header import Header
+from email.header    import Header
 reload(sys)
 sys.setdefaultencoding('utf8')
 import django,json
@@ -17,19 +17,19 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'phxweb.settings'
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phxweb.settings")
 #django.setup()
 from monitor.models import project_t, minion_t
-from color_print import ColorP
+from color_print    import ColorP
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 # 禁用安全请求警告
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
-basedir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-server = 'http://103.99.62.71:5000/'
+basedir      = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+server       = 'http://103.99.62.71:5000/'
 requests.adapters.DEFAULT_RETRIES = 3
-logger = logging.getLogger('django')
+logger       = logging.getLogger('django')
 error_status = 'null'
-code_list = ['200', '301', '302', '303', '405']
+code_list    = ['200', '301', '302', '303', '405']
 rewrite_list = ['301', '302', '303']
-normal_list = ['200']
+normal_list  = ['200']
 
 
 class ColorT(object):
@@ -58,28 +58,28 @@ def get_result(result, project_info, content_body):
         else:
             if code in rewrite_list:
                 content = color_t.content_p(code, fore='white')
-                url = ret.headers['Location'].replace(project_info.domain, result['ip'])
+                url     = ret.headers['Location'].replace(project_info.domain, result['ip'])
                 color_t = ColorT(project_info.product, project_info.project, project_info.server_type, project_info.domain, url)
                 try:
                     ret_r = requests.head(url, headers={'Host': project_info.domain}, verify=False, timeout=16)
                     #print ret.headers['Location']
-                    code = str(ret_r.status_code)
+                    code  = str(ret_r.status_code)
                     if code not in code_list:
                         content_body += content + color_t.content_p(code, fore='white')
-                        content = content + color_t.content_p(code)
+                        content       = content + color_t.content_p(code)
                     else:
                         content = content + color_t.content_p(code, fore='white')
                 except:
                     result['code'] = error_status
                     result['info'] = '失败'
-                    content_body += content + color_t.content_p(result['code'], fore='white')
-                    content = content + color_t.content_p(result['code'])
+                    content_body  += content + color_t.content_p(result['code'], fore='white')
+                    content        = content + color_t.content_p(result['code'])
             elif code in normal_list:
                 content = color_t.content_p(code, fore='white')
     except:
         result['code'] = error_status
         result['info'] = '失败'
-        content_body += color_t.content_p(result['code'], fore='white')
+        content_body  += color_t.content_p(result['code'], fore='white')
         content = color_t.content_p(result['code'])
 
     print content,
@@ -119,18 +119,18 @@ def check_services():
     </tr>
     """
     content_body = ""
-    content = ""
-    pool = multiprocessing.Pool(processes=25)
-    project_all = project_t.objects.filter(status=1).all()
+    content      = ""
+    pool         = multiprocessing.Pool(processes=25)
+    project_all  = project_t.objects.filter(status=1).all()
     for project_info in project_all:
         global result
-        result = {}
+        result                = {}
         result['access_time'] = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')
-        result['product'] = project_info.product
-        result['project'] = project_info.project
-        result['domain'] = project_info.domain
+        result['product']     = project_info.product
+        result['project']     = project_info.project
+        result['domain']      = project_info.domain
         result['server_type'] = project_info.server_type
-        minion_all = minion_t.objects.filter(minion_id=project_info.minion_id, status=1).all()
+        minion_all            = minion_t.objects.filter(minion_id=project_info.minion_id, status=1).all()
         for minion in minion_all:
             result['ip']  = minion.ip_addr
             result['url'] = 'http://' + minion.ip_addr + project_info.uri
@@ -154,12 +154,22 @@ def time():
 def check_server_status():
     try:
         ret = requests.get(server,timeout=2)
-        record = server_status(access_time=time(), url=server, status=ret.status_code, info=ret.text)
+        record = server_status(
+                access_time = time(), 
+                url         = server, 
+                status      = ret.status_code, 
+                info        = ret.text
+            )
         record.save()
         logger.info('%s is running.' %server)
         return True
     except requests.exceptions.ConnectionError:
-        record = server_status(access_time=time(), url=server, status=error_status, info='null')
+        record = server_status(
+                access_time = time(), 
+                url         = server, 
+                status      = error_status, 
+                info        = 'null'
+            )
         record.save()
         logger.error('%s check failed.' %server)
         return False

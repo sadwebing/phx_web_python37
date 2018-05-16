@@ -68,6 +68,7 @@ INSTALLED_APPS = (
     'monitor',
     'saltstack',
     'dns',
+    'detect',
 )
 
 MIDDLEWARE_CLASSES = (
