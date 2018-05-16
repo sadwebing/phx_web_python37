@@ -6,6 +6,7 @@ from django.views.decorators.csrf   import csrf_exempt, csrf_protect
 from dwebsocket                     import require_websocket, accept_websocket
 from models                         import domains
 from accounts.limit                 import LimitAccess
+from telegram                       import sendTelegram
 import json, logging, requests, re
 
 logger = logging.getLogger('django')
@@ -20,7 +21,36 @@ def GetDomains(request):
     if request.method == 'POST':
         try:
             product  = json.loads(request.body)['product']
-            if product == 'all':
+            if product.lower() == 'all':
+                domain_l = domains.objects.filter(status=1).all()
+            else:
+                domain_l = domains.objects.filter(status=1, product=json.loads(request.body)['product']).all()
+        except Exception, e:
+            logger.error(e.message)
+            domain_l = []
+
+        for domain in domain_l:
+            tmp_dict = {}
+            tmp_dict['name']   = domain.name
+            tmp_dict['client'] = domain.group.client
+            tmp_dict['method'] = domain.group.method
+            tmp_dict['ssl']    = domain.group.ssl
+            domain_list.append(tmp_dict)
+        return HttpResponse(json.dumps(domain_list))
+    else:
+        return HttpResponse(status=403)
+
+@csrf_exempt
+def SendTelegram(request):
+    title = u'发送telegram信息'
+    clientip = request.META['REMOTE_ADDR']
+    logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
+    domain_list = []
+
+    if request.method == 'POST':
+        try:
+            product  = json.loads(request.body)['product']
+            if product.lower() == 'all':
                 domain_l = domains.objects.filter(status=1).all()
             else:
                 domain_l = domains.objects.filter(status=1, product=json.loads(request.body)['product']).all()

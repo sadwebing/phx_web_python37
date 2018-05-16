@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
     url('get_domains$', views.GetDomains, name='getDomains'),
+    url('send_telegram$', views.SendTelegram, name='SendTelegram'),
 ]
