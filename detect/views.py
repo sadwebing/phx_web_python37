@@ -36,3 +36,5 @@ def GetDomains(request):
             tmp_dict['ssl']    = domain.group.ssl
             domain_list.append(tmp_dict)
         return HttpResponse(json.dumps(domain_list))
+    else:
+        return HttpResponse(status=403)
