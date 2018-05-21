@@ -17,6 +17,7 @@
             <div class="panel-body" style="padding-top: 5px; padding-bottom: 5px;">
             <div class="row">
             <div class="col-xs-9 col-sm-9 col-md-9">
+                {% if manage = 0 %}
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <form class="form-group form-inline" role="form" style="margin-bottom: 5px;">
                         <div class="input-group">
@@ -28,10 +29,7 @@
                         <span class="form-control" style="margin-left: 20px;">执行用户
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="commandform_user" value="root" style="margin-left: 10px;"> root
-                                </label>
-                                <label>
-                                    <input type="radio" name="commandform_user" value="tomcat" style="margin-left: 10px;" checked> tomcat
+                                    <input type="radio" name="commandform_user" value="root" style="margin-left: 10px;" checked> root
                                 </label>
                             </div>
                         </span>
@@ -82,10 +80,7 @@
                         <span class="form-control" style="margin-left: 20px;">执行用户
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="commandform2_user" value="root" style="margin-left: 10px;"> root
-                                </label>
-                                <label>
-                                    <input type="radio" name="commandform2_user" value="tomcat" style="margin-left: 10px;" checked> tomcat
+                                    <input type="radio" name="commandform2_user" value="root" style="margin-left: 10px;" checked> root
                                 </label>
                             </div>
                         </span>
@@ -95,7 +90,7 @@
                     <br>
                     <div class="col-xs-11 col-sm-11 col-md-11">
                         <form class="form-group form-inline" role="form" id="projectreform" name="projectreform"> 
-                            <select class="form-control selectpicker show-tick" data-live-search="true" onchange="operate.GetProjectServers()" id="project_active" name="project_active" title="请选择项目名" data-actions-box="true" multiple data-width="45%">
+                            <select class="form-control selectpicker show-tick" data-live-search="true" onchange="gp.GetProjectServers(1, 'minions_id')" id="project_active" name="project_active" title="请选择项目名" data-actions-box="true" multiple data-width="45%">
                             </select>
                             <select class="form-control selectpicker show-tick" id="minions_id" name="minions_id" title="请选择服务器地址" multiple data-actions-box="true" data-width="35%">
                             </select>
@@ -116,29 +111,29 @@
                         </form>
                     </div>
                 </div>
+                {% endif %}
                 <div class="col-xs-12 col-sm-12 col-md-12" style="margin-bottom: 5px;">
                     <hr size=1>
                     <div class="input-group">
                         <span class="input-group-btn">
                             <button id="restart_panel" class="btn btn-info" type="submit" title="展开" style="width: 35px;">+</button>
                         </span>
-                        <span class="form-control" style="width: auto;">重启服务</span>
+                        <span class="form-control" style="width: auto;">配置推送</span>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12" id="restart_form" style="display: none; background-color: #F0F8FF;">
                     <br>
                     <div class="col-xs-11 col-sm-11 col-md-11">
                         <form id="restart_projectreform" name="restart_projectreform" class="form-inline" role="form">
-                            <select class="form-control selectpicker show-tick" data-live-search="true" onchange="operate.GetRestartProjectServers()" id="restart_project_active" name="restart_project_active" title="请选择项目名" data-width="45%">
-                                <option>test</option>
+                            <select class="form-control selectpicker show-tick" data-live-search="true" onchange="gp.GetProjectServers(2, 'restart_minion_id')" id="restart_project_active" name="restart_project_active" title="请选择项目名" data-width="45%">
                             </select>
-                            <select class="form-control selectpicker show-tick" id="restart_minion_id" name="restart_minion_id" title="请选择服务器地址" data-width="35%">
+                            <select class="form-control selectpicker show-tick" id="restart_minion_id" name="restart_minion_id" title="默认全选" data-width="35%" multiple data-actions-box="true">
                             </select>
                         </form>
                     </div>
                     <div class="col-xs-1 col-sm-1 col-md-1">
                         <form class="form-group form-inline" role="form">
-                            <button id="btn_submit_restart" type="submit" class="btn btn-default" style="width:100%;">重启</button>
+                            <button id="btn_submit_deploy" type="submit" class="btn btn-default" style="width:100%;">推送</button>
                         </form>
                     </div>
                 </div>

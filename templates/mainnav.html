@@ -22,18 +22,17 @@
 								    <li><a ui-sref="monitor_services"><i class="glyphicon glyphicon-edit"></i>   services</a></li>
 								</ul>
 							</li>
-							{% comment %}
 							<li id="saltstack">
 								<i class="glyphicon glyphicon-tasks text-primary"> <span>Saltstack</span></i>
 								<ul>  
-								    <li><a ui-sref="saltstack_command"><i class="glyphicon glyphicon-align-right"></i>   基础命令</a></li>  
+								    <li><a ui-sref="saltstack_command"><i class="glyphicon glyphicon-align-right"></i>   基础命令</a></li>
+								    {% comment %}  
 								    <li><a ui-sref="saltstack_deploy"><i class="glyphicon glyphicon-align-right"></i>   模块部署</a></li> 
 								    
 								    <li><a ui-sref="saltstack_saltstack_id"><i class="glyphicon glyphicon-check"></i>   ID管理</a></li>  
-								    
+								    {% endcomment %}
 								</ul>
 							</li>
-							{% endcomment %}
 						</ul>
 					</li>
 					<li id="dns">

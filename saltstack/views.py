@@ -3,10 +3,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.contrib.auth.decorators import login_required
-from monitor import settings
-from check_tomcat.models import tomcat_project, tomcat_url
+from phxweb import settings
 from saltstack.saltapi import SaltAPI
 from dwebsocket import require_websocket, accept_websocket
+from monitor.models import project_t, minion_t, minion_ip_t
 from command import Command
 import json, logging, time
 from accounts.limit import LimitAccess
@@ -18,13 +18,20 @@ logger = logging.getLogger('django')
 @csrf_exempt
 def GetProjectActive(request):
     if request.method == 'POST':
-        clientip = request.META['REMOTE_ADDR']
-        datas     = tomcat_project.objects.filter(status='active')
+        if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+            clientip = request.META['HTTP_X_FORWARDED_FOR']
+        else:
+            clientip = request.META['REMOTE_ADDR']
+
+        datas     = project_t.objects.filter(status=1)
         projectlist = []
         for data in datas:
             tmpdict = {}
-            tmpdict['product'] = data.product
-            tmpdict['project'] = data.project
+            tmpdict['envir']       = data.get_envir_display()
+            tmpdict['product']     = data.get_product_display()
+            tmpdict['project']     = data.get_project_display()
+            tmpdict['server_type'] = data.get_server_type_display()
+            tmpdict['minion_id']   = [minion.minion_id for minion in data.minion_id.filter(status=1).all()]
             projectlist.append(tmpdict)
         logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
         return HttpResponse(json.dumps(projectlist))
@@ -42,7 +49,7 @@ def GetProjectServers(request):
         clientip = request.META['REMOTE_ADDR']
         server_dict = {}
         for project in data['project']:
-            datas     = tomcat_url.objects.filter(project=project)
+            datas     = project_t.objects.filter(project=project)
             serverlist = []
             for data in datas:
                 tmpdict = {}
@@ -143,7 +150,7 @@ def CommandExecute(request):
 
 @require_websocket
 @csrf_exempt
-def CommandRestart(request):
+def CommandDeploy(request):
     if request.is_websocket():
         global username, role, clientip
         username = request.user.username
@@ -164,22 +171,16 @@ def CommandRestart(request):
             info_one['minion_id'] = data['minion_id']
             request.websocket.send(json.dumps(info_one))
             logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
-            #results = []
+
             ### final step ###
             info_final = {}
             info_final['step'] = 'final'
-            project = data['project']
-            restart = tomcat_project.objects.filter(project=project).first().script
-            if restart == '':
-                arg = "/web/%s/bin/restart.sh" %project
-            else:
-                arg = "%s restart" %restart
-            #logger.info(restart)
-            arglist = ["runas=tomcat"]
-            arglist.append(arg)
-            logger.info("重启参数：%s"%arglist)
-            commandexe = Command(data['minion_id'], 'cmd.run', arglist)
-            info_final['result'] = commandexe.CmdRun()[data['minion_id']]
+
+            commandexe = Command(data['minion_id'], 'state.sls', expr_form='list')
+            info_final['results'] = commandexe.StateSls('nginx.conf')
+            info_final['results'] = commandexe.StateSls('nginx.reload')
+            #info_final['results'] = dict(info_final['results'], **commandexe.StateSls('nginx.reload'))
+
             request.websocket.send(json.dumps(info_final))
         ### close websocket ###
         request.websocket.close()
@@ -250,6 +251,10 @@ def command(request):
         role = request.user.userprofile.role
     except:
         role = 'none'
+    try:
+        manage = request.user.userprofile.manage
+    except:
+        manage = 0
     clientip = request.META['REMOTE_ADDR']
     title = u'SALTSTACK-命令管理'
     logger.info('%s is requesting.' %clientip)
@@ -260,6 +265,7 @@ def command(request):
             'clientip':clientip,
             'title': title,
             'role': role,
+            'manage': manage,
             'username': username,
         }
     )

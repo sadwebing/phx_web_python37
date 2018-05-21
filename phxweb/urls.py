@@ -18,6 +18,7 @@ urlpatterns = [
     url(r'^monitor/', include('monitor.urls')),
     url(r'^dns/', include('dns.urls')),
     url(r'^detect/', include('detect.urls')),
+    url(r'^saltstack/', include('saltstack.urls')),
 
     url(r'^favicon$', lambda x: HttpResponseRedirect(settings.STATIC_URL+'images/favicon.ico')),
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),

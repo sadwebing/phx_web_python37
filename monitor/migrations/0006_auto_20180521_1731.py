@@ -7,12 +7,12 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('monitor', '0002_auto_20180127_1444'),
+        ('monitor', '0005_auto_20180521_1726'),
     ]
 
     operations = [
         migrations.AlterUniqueTogether(
-            name='minion_t',
-            unique_together=set([('minion_id', 'ip_addr')]),
+            name='project_t',
+            unique_together=set([('product', 'project', 'envir')]),
         ),
     ]

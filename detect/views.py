@@ -14,7 +14,10 @@ logger = logging.getLogger('django')
 @csrf_exempt
 def GetDomains(request):
     title = u'获取检测域名'
-    clientip = request.META['REMOTE_ADDR']
+    if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+        clientip = request.META['HTTP_X_FORWARDED_FOR']
+    else:
+        clientip = request.META['REMOTE_ADDR']
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
     domain_list = []
 
@@ -43,28 +46,28 @@ def GetDomains(request):
 @csrf_exempt
 def SendTelegram(request):
     title = u'发送telegram信息'
-    clientip = request.META['REMOTE_ADDR']
+    if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+        clientip = request.META['HTTP_X_FORWARDED_FOR']
+    else:
+        clientip = request.META['REMOTE_ADDR']
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
-    domain_list = []
 
     if request.method == 'POST':
         try:
-            product  = json.loads(request.body)['product']
-            if product.lower() == 'all':
-                domain_l = domains.objects.filter(status=1).all()
-            else:
-                domain_l = domains.objects.filter(status=1, product=json.loads(request.body)['product']).all()
+            message = json.loads(request.body)
         except Exception, e:
             logger.error(e.message)
-            domain_l = []
+            sendTelegram(clientip + ': 发送telegram信息失败！', chat_id='-204952096') #arno_test
+            return HttpResponse(content='参数错误！', status=500)
 
-        for domain in domain_l:
-            tmp_dict = {}
-            tmp_dict['name']   = domain.name
-            tmp_dict['client'] = domain.group.client
-            tmp_dict['method'] = domain.group.method
-            tmp_dict['ssl']    = domain.group.ssl
-            domain_list.append(tmp_dict)
-        return HttpResponse(json.dumps(domain_list))
+        try:
+            sendTelegram(message['text'], chat_id=message['chat_id'], doc=message['doc'])
+
+        except Exception, e:
+            logger.error(e.message)
+            sendTelegram(clientip + ': 发送telegram信息失败！' + str(message), chat_id='-204952096') #arno_test
+            return HttpResponse(content='参数错误: %s' %message, status=500)
+        else:
+            return HttpResponse('发送成功！')
     else:
         return HttpResponse(status=403)

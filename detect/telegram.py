@@ -31,10 +31,10 @@ def getDate():
 def sendTelegram(text, chat_id='-204952096' , doc=False, timeout=15):
     message['chat_id'] = chat_id
     if doc:
-        with open('domain.txt', 'w') as f:
+        with open('warning.txt', 'w') as f:
             for line in text.split('\n'):
                 f.writelines(line+'\r\n')
-        files = {'document': open('domain.txt', 'rb')}
+        files = {'document': open('warning.txt', 'rb')}
         try:
             ret = requests.post(tg_url.replace('sendMessage', 'sendDocument'), data=message, files=files, timeout=timeout)
         except Exception, e:

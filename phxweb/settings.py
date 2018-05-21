@@ -209,3 +209,20 @@ LOGGING = {
         #},
     }
 }     
+
+
+choices_prod = ( 
+            (0, 'pub'),
+            (1, 'ali'), 
+            (2, 'guangda'), 
+            (3, 'leying'), 
+            (4, 'caitou'), 
+            (5, 'tiantian'), 
+            (6, 'sande'), 
+            (7, 'uc'), 
+            (8, '9393'), 
+            (9, '3535'), 
+            (10, 'agcai'), 
+            (11, 'wanyou'),
+            (12, 'fh'),
+            )

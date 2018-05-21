@@ -7,13 +7,12 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('monitor', '0003_auto_20180127_2025'),
+        ('monitor', '0006_auto_20180521_1731'),
     ]
 
     operations = [
-        migrations.AlterField(
-            model_name='project_t',
-            name='uri',
-            field=models.CharField(default='/', max_length=128),
+        migrations.AlterUniqueTogether(
+            name='project_t',
+            unique_together=set([('product', 'project', 'envir', 'server_type')]),
         ),
     ]

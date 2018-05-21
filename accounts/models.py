@@ -1,10 +1,16 @@
+# coding: utf8
 from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
 class UserProfile(models.Model):
+    choices_mg = (
+                (1, '管理'), 
+                (0, '普通'),
+                )
     user = models.OneToOneField(User)    
     role = models.CharField(max_length=200, default='', blank=True)
+    manage = models.IntegerField(choices=choices_mg, default=0)
     #address = models.CharField(max_length=200,default='',blank=True)
 
     def __unicode__(self):

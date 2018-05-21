@@ -16,7 +16,6 @@ var operate = {
         //this.Submit();
         this.Results();
         this.selectpicker();
-        this.SubmitRestart();
         //this.showSelectedValue();
         //this.Exe();
     },
@@ -83,104 +82,6 @@ var operate = {
         })
     },
 
-    GetRestartProjectServers: function(){
-        var projectlist = []
-        //var project = document.getElementById("project_active").value;
-        var objSelectproject = document.restart_projectreform.restart_project_active; 
-        for(var i = 0; i < objSelectproject.options.length; i++) { 
-            if (objSelectproject.options[i].selected == true) 
-            projectlist.push(objSelectproject.options[i].value);
-        }
-        //console.log(projectlist);
-        var postData = {};
-        postData['project'] = projectlist;
-        $.ajax({
-            url: "/saltstack/restart/get_project_servers",
-            type: "post",
-            contentType: 'application/json',
-            dataType: 'json',
-            data: JSON.stringify(postData),
-            success: function (datas, status) {
-                //alert(datas);
-                var data = eval(datas);
-                //var html = "<option value=''></option>";
-                var html = "";
-                for (var project in data){
-                    html_tmp = "";
-                    $.each(data[project], function (index, item) { 
-                        //循环获取数据 
-                        var name = data[project][index];
-                        //html_name = "<option>"+name+"</option>";
-                        //console.log(name.role)
-                        if (name.status === 'inactive') {
-                            html_name = "<option value='"+name.minion_id+"' data-subtext='"+name.info+" "+name.role+"' disabled>"+name. minion_id+"</option>";
-                        }else {
-                            html_name = "<option value='"+name.minion_id+"' data-subtext='"+name.info+" "+name.role+"'>"+name.minion_id+"</ option>";
-                        }
-                        html_tmp = html_tmp + html_name
-                    }); 
-                    html_tmp = "<optgroup label='"+ project +"'>" + html_tmp + "</optgroup>";
-                    html = html + html_tmp;
-                }
-                document.getElementById('restart_minion_id').innerHTML=html;
-                //$('.selectpicker').selectpicker({title:"请选择服务器地址"});
-                $('.selectpicker').selectpicker('refresh');
-                return false;
-            },
-            error:function(msg){
-                alert("获取项目服务器地址失败！");
-                return false;
-            }
-        });
-    },
-
-    GetProjectServers: function(){
-        var projectlist = []
-        //var project = document.getElementById("project_active").value;
-        var objSelectproject = document.projectreform.project_active; 
-        for(var i = 0; i < objSelectproject.options.length; i++) { 
-            if (objSelectproject.options[i].selected == true) 
-            projectlist.push(objSelectproject.options[i].value);
-        }
-        //console.log(projectlist);
-        var postData = {};
-        postData['project'] = projectlist;
-        $.ajax({
-            url: "/saltstack/restart/get_project_servers",
-            type: "post",
-            contentType: 'application/json',
-            dataType: 'json',
-            data: JSON.stringify(postData),
-            success: function (datas, status) {
-                //alert(datas);
-                var data = eval(datas);
-                //var html = "<option value=''></option>";
-                var html = "";
-                for (var project in data){
-                    html_tmp = "";
-                    $.each(data[project], function (index, item) { 
-                        //循环获取数据 
-                        var name = data[project][index];
-                        //html_name = "<option>"+name+"</option>";
-                        //console.log(name.role)
-                        html_name = "<option value='"+name.minion_id+"' data-subtext='"+name.info+" "+name.role+"'>"+name.minion_id+"</ option>";
-                        html_tmp = html_tmp + html_name
-                    }); 
-                    html_tmp = "<optgroup label='"+ project +"'>" + html_tmp + "</optgroup>";
-                    html = html + html_tmp;
-                }
-                document.getElementById('minions_id').innerHTML=html;
-                //$('.selectpicker').selectpicker({title:"请选择服务器地址"});
-                $('.selectpicker').selectpicker('refresh');
-                return false;
-            },
-            error:function(msg){
-                alert("获取项目服务器地址失败！");
-                return false;
-            }
-        });
-    },
-
     selectpicker: function() {
         $('.selectpicker').selectpicker({
             style: 'btn-default',
@@ -198,65 +99,6 @@ var operate = {
             selectedValue.push(objSelect.options[i].value);
         }
         return selectedValue;
-    },
-
-    SubmitRestart: function(){
-        $("#btn_submit_restart").bind('click',function () {
-            //var postData=operate.Getform();
-            var postData = {
-                project:document.getElementById("restart_project_active").value,
-                minion_id:document.getElementById("restart_minion_id").value,
-            };
-            if (postData['project'].length == 0){
-                alert("请至少选择一个服务进行重启！")
-                return false;
-            }
-            if (postData['minion_id'].length == 0){
-                alert("请至少选择一个服务器进行重启！")
-                return false;
-            }
-            //alert("获取到的表单数据为:"+JSON.stringify(postData));
-            modal_results.innerHTML = "";
-            modal_footer.innerHTML = "";
-            $("#progress_bar").css("width", "30%");
-            modal_head.style.color = 'blue';
-            modal_head.innerHTML = "操作进行中，请勿刷新页面......";
-            var socket = new WebSocket("ws://" + window.location.host + "/saltstack/command/restart");
-            socket.onopen = function () {
-                //console.log('WebSocket open');//成功连接上Websocket
-                //socket.send($('#message').val());//发送数据到服务端
-                socket.send(JSON.stringify(postData))
-            };
-            $('#runprogress').modal('show');
-            socket.onerror = function (){
-                modal_head.innerHTML = "与服务器连接失败...";
-                $('#OperateRestartresults').append('<p>连接失败......</p>' );
-                setTimeout(function(){$('#runprogress').modal('hide');}, 1000);
-            };
-            socket.onmessage = function (e) {
-                //return false;
-                data = eval('('+ e.data +')')
-                //console.log('message: ' + data);//打印服务端返回的数据
-                if (data.step == 'one'){
-                    $("#progress_bar").css("width", "50%");
-                    $('#OperateRestartresults').append('<p>' + data['project'] + ':&thinsp;<strong>' + data['minion_id'] + '</strong></p>' );
-                }else if (data.step == 'final'){
-                    $("#progress_bar").css("width", "100%");
-                    if (data['result'] == 'not return'){
-                        modal_head.innerHTML = "服务重启失败！";
-                        modal_head.style.color = 'red';
-
-                    }else {
-                        modal_head.innerHTML = "服务重启完成...";
-                    }
-                    $('#OperateRestartresults').append('<pre>' + data['result'] + '</pre>');
-                    //console.log('websocket已关闭');
-                    modal_footer.innerHTML = '<button id="close_modal" type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>'
-                }
-            }; 
-
-            return false;
-        });
     },
 
     Getcommandform: function getEntity(commandform) {

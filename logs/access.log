@@ -9998,3 +9998,1771 @@ ValueError: No JSON object could be decoded
 2018-05-16 18:06:46,681 views.py [django:17] [INFO]- 127.0.0.1 is requesting /detect/get_domains
 2018-05-16 18:07:01,403 views.py [django:17] [INFO]- 127.0.0.1 is requesting /detect/get_domains
 2018-05-16 18:07:07,299 views.py [django:17] [INFO]- 127.0.0.1 is requesting /detect/get_domains
+2018-05-21 14:03:01,213 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 21, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\saltstack\views.py", line 6, in <module>
+    from monitor import settings
+ImportError: cannot import name settings
+2018-05-21 14:04:22,526 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 14:04:26,071 views.py [django:42] [INFO]- 127.0.0.1 is requesting /home
+2018-05-21 14:04:37,779 views.py [django:254] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 14:04:37,900 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/restart/get_project
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 21, in GetProjectActive
+    datas     = tomcat_project.objects.filter(status='active')
+NameError: global name 'tomcat_project' is not defined
+2018-05-21 14:05:14,536 views.py [django:118] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'SD_DBS_TW_148_220', u'exe_user': u'root', u'arguments': u'test.ping'}
+2018-05-21 14:05:35,576 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 130, in CommandExecute
+    commandexe = Command(data['target'], data['function'], arglist, data['expr_form'],)
+  File "J:\arno\test\phx_web\saltstack\command.py", line 25, in __init__
+    password = settings.SALT_API['password']
+  File "J:\arno\test\phx_web\saltstack\saltapi.py", line 13, in __init__
+    self.__token_id = self.saltLogin()
+  File "J:\arno\test\phx_web\saltstack\saltapi.py", line 18, in saltLogin
+    ret = requests.post(url, data=params, verify=False)
+  File "J:\arno\test\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "J:\arno\test\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "J:\arno\test\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "J:\arno\test\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "J:\arno\test\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='58.64.145.50', port=8000): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x07203D70>: Failed to establish a new connection: [Errno 10060] ',))
+2018-05-21 14:09:32,654 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 14:09:35,956 views.py [django:254] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 14:09:36,043 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/restart/get_project
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 21, in GetProjectActive
+    datas     = tomcat_project.objects.filter(status='active')
+NameError: global name 'tomcat_project' is not defined
+2018-05-21 14:10:19,361 views.py [django:118] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'SP_NG_HK_36_18', u'exe_user': u'root', u'arguments': u'test.ping'}
+2018-05-21 14:10:40,368 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 130, in CommandExecute
+    commandexe = Command(data['target'], data['function'], arglist, data['expr_form'],)
+  File "J:\arno\test\phx_web\saltstack\command.py", line 25, in __init__
+    password = settings.SALT_API['password']
+  File "J:\arno\test\phx_web\saltstack\saltapi.py", line 13, in __init__
+    self.__token_id = self.saltLogin()
+  File "J:\arno\test\phx_web\saltstack\saltapi.py", line 18, in saltLogin
+    ret = requests.post(url, data=params, verify=False)
+  File "J:\arno\test\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "J:\arno\test\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "J:\arno\test\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "J:\arno\test\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "J:\arno\test\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='58.64.145.50', port=8000): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0740B6B0>: Failed to establish a new connection: [Errno 10060] ',))
+2018-05-21 14:16:23,276 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 14:16:28,108 views.py [django:254] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 14:16:28,358 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/restart/get_project
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 21, in GetProjectActive
+    datas     = tomcat_project.objects.filter(status='active')
+NameError: global name 'tomcat_project' is not defined
+2018-05-21 14:16:41,700 views.py [django:118] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'LY_DBS_TW_148_223', u'exe_user': u'root', u'arguments': u'test.ping'}
+2018-05-21 14:16:44,072 saltapi.py [django:68] [INFO]- LY_DBS_TW_148_223 "[u'runas=root', u'test.ping', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2018-05-21 14:17:57,305 views.py [django:118] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'pcre', u'target': u'HT_*', u'exe_user': u'root', u'arguments': u'nginx.reload'}
+2018-05-21 14:18:01,950 saltapi.py [django:68] [INFO]- HT_* "[u'runas=root', u'nginx.reload']": 200
+2018-05-21 14:37:31,772 views.py [django:118] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'SPGGZ_NG_US_254_108', u'exe_user': u'root', u'arguments': u'test.ping'}
+2018-05-21 14:37:51,561 saltapi.py [django:68] [INFO]- SPGGZ_NG_US_254_108 "[u'runas=root', u'test.ping', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2018-05-21 14:52:03,089 views.py [django:278] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2018-05-21 14:52:03,461 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/restart/get_project
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 21, in GetProjectActive
+    datas     = tomcat_project.objects.filter(status='active')
+NameError: global name 'tomcat_project' is not defined
+2018-05-21 14:52:30,522 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/restart/get_project
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 21, in GetProjectActive
+    datas     = tomcat_project.objects.filter(status='active')
+NameError: global name 'tomcat_project' is not defined
+2018-05-21 14:53:10,351 views.py [django:53] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-05-21 14:53:10,477 project.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-05-21 14:53:10,477 project.py [django:38] [INFO]- 查询参数：query_all
+2018-05-21 15:07:08,553 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\test\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 1271, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 320, in result_list
+    'results': list(results(cl))}
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 296, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 287, in __init__
+    super(ResultList, self).__init__(*items)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 199, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\utils.py", line 282, in lookup_field
+    value = attr()
+  File "J:\arno\test\phx_web\monitor\models.py", line 47, in __str__
+    return " - ".join([self.product, self.project, self.minion_id, state])
+TypeError: sequence item 2: expected string or Unicode, ManyRelatedManager found
+2018-05-21 15:19:48,559 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1548, in changelist_view
+    self.list_max_show_all, self.list_editable, self)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\views\main.py", line 82, in __init__
+    self.get_results(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\views\main.py", line 177, in get_results
+    result_count = paginator.count
+  File "J:\arno\test\lib\site-packages\django\core\paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 318, in count
+    return self.query.get_count(using=self.db)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 464, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 445, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "J:\arno\test\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'phxweb.monitor_project_t' doesn't exist")
+2018-05-21 15:20:01,641 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/minion_t/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1548, in changelist_view
+    self.list_max_show_all, self.list_editable, self)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\views\main.py", line 82, in __init__
+    self.get_results(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\views\main.py", line 177, in get_results
+    result_count = paginator.count
+  File "J:\arno\test\lib\site-packages\django\core\paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 318, in count
+    return self.query.get_count(using=self.db)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 464, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 445, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "J:\arno\test\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'phxweb.monitor_minion_t' doesn't exist")
+2018-05-21 15:48:37,848 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/minion_t/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\test\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 1271, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 320, in result_list
+    'results': list(results(cl))}
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 296, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 287, in __init__
+    super(ResultList, self).__init__(*items)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 199, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\utils.py", line 282, in lookup_field
+    value = attr()
+  File "J:\arno\test\phx_web\monitor\models.py", line 21, in __str__
+    return " - ".join([self.minion_id, self.ip_addr, self.status])
+TypeError: sequence item 2: expected string or Unicode, long found
+2018-05-21 15:49:50,288 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/add/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\test\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 211, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 92, in render
+    output = force_text(output)
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 92, in force_text
+    s = six.text_type(s)
+  File "J:\arno\test\lib\site-packages\django\utils\html.py", line 390, in <lambda>
+    klass.__unicode__ = lambda self: mark_safe(klass_unicode(self))
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 543, in __str__
+    return self.as_widget()
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 599, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\widgets.py", line 292, in render
+    'widget': self.widget.render(name, value, *args, **kwargs),
+  File "J:\arno\test\lib\site-packages\django\forms\widgets.py", line 585, in render
+    options = self.render_options(choices, value)
+  File "J:\arno\test\lib\site-packages\django\forms\widgets.py", line 539, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 1103, in __iter__
+    yield self.choice(obj)
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 1110, in choice
+    return (self.field.prepare_value(obj), self.field.label_from_instance(obj))
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 1181, in label_from_instance
+    return smart_text(obj)
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 56, in smart_text
+    return force_text(s, encoding, strings_only, errors)
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 94, in force_text
+    s = six.text_type(bytes(s), encoding, errors)
+  File "J:\arno\test\phx_web\monitor\models.py", line 21, in __str__
+    return " - ".join([self.minion_id, self.ip_addr, self.status])
+TypeError: sequence item 2: expected string or Unicode, long found
+2018-05-21 15:52:46,815 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/minion_t/add/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1516, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1470, in changeform_view
+    self.log_addition(request, new_object)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 810, in log_addition
+    object_repr=force_text(object),
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 94, in force_text
+    s = six.text_type(bytes(s), encoding, errors)
+  File "J:\arno\test\phx_web\monitor\models.py", line 21, in __str__
+    return " - ".join([self.minion_id, self.ip_addr, self.status])
+TypeError: sequence item 2: expected string or Unicode, int found
+2018-05-21 15:53:27,029 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/add/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\test\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 211, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 92, in render
+    output = force_text(output)
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 92, in force_text
+    s = six.text_type(s)
+  File "J:\arno\test\lib\site-packages\django\utils\html.py", line 390, in <lambda>
+    klass.__unicode__ = lambda self: mark_safe(klass_unicode(self))
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 543, in __str__
+    return self.as_widget()
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 599, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\widgets.py", line 292, in render
+    'widget': self.widget.render(name, value, *args, **kwargs),
+  File "J:\arno\test\lib\site-packages\django\forms\widgets.py", line 585, in render
+    options = self.render_options(choices, value)
+  File "J:\arno\test\lib\site-packages\django\forms\widgets.py", line 539, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 1103, in __iter__
+    yield self.choice(obj)
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 1110, in choice
+    return (self.field.prepare_value(obj), self.field.label_from_instance(obj))
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 1181, in label_from_instance
+    return smart_text(obj)
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 56, in smart_text
+    return force_text(s, encoding, strings_only, errors)
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 94, in force_text
+    s = six.text_type(bytes(s), encoding, errors)
+  File "J:\arno\test\phx_web\monitor\models.py", line 21, in __str__
+    return " - ".join([self.minion_id, self.ip_addr, self.status])
+TypeError: sequence item 2: expected string or Unicode, long found
+2018-05-21 16:10:49,723 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/add/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 222, in inner
+    if not self.has_permission(request):
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 162, in has_permission
+    return request.user.is_active and request.user.is_staff
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 359, in _setup
+    self._wrapped = self._setupfunc()
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 22, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\__init__.py", line 167, in get_user
+    user_id = _get_user_session_key(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\__init__.py", line 59, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\base.py", line 48, in __getitem__
+    return self._session[key]
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\base.py", line 181, in _get_session
+    self._session_cache = self.load()
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\db.py", line 21, in load
+    expire_date__gt=timezone.now()
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 827, in execute_sql
+    cursor = self.connection.cursor()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\test\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2013, "Lost connection to MySQL server at 'reading authorization packet', system error: 0")
+2018-05-21 16:11:07,913 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/add/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 222, in inner
+    if not self.has_permission(request):
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 162, in has_permission
+    return request.user.is_active and request.user.is_staff
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 359, in _setup
+    self._wrapped = self._setupfunc()
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 22, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\__init__.py", line 167, in get_user
+    user_id = _get_user_session_key(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\__init__.py", line 59, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\base.py", line 48, in __getitem__
+    return self._session[key]
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\base.py", line 181, in _get_session
+    self._session_cache = self.load()
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\db.py", line 21, in load
+    expire_date__gt=timezone.now()
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 818, in execute_sql
+    sql, params = self.as_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.query.where)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\where.py", line 104, in as_sql
+    sql, params = compiler.compile(child)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 205, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 198, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 614, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 196, in data_types
+    if self.features.supports_microsecond_precision:
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\features.py", line 52, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 371, in mysql_version
+    with self.temporary_connection():
+  File "c:\python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 462, in temporary_connection
+    cursor = self.cursor()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\test\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '58.64.145.50' (10060)")
+2018-05-21 16:36:39,148 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/product_t/add/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1516, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1479, in changeform_view
+    form = ModelForm(initial=initial)
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 316, in __init__
+    self.instance = opts.model()
+  File "J:\arno\test\phx_web\monitor\models.py", line 26, in __init__
+    if ' ' in self.name:
+AttributeError: 'product_t' object has no attribute 'name'
+2018-05-21 16:36:39,216 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/product_t/add/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1516, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1479, in changeform_view
+    form = ModelForm(initial=initial)
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 316, in __init__
+    self.instance = opts.model()
+  File "J:\arno\test\phx_web\monitor\models.py", line 26, in __init__
+    if ' ' in self.name:
+AttributeError: 'product_t' object has no attribute 'name'
+2018-05-21 16:37:19,221 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/product_t/add/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1516, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1479, in changeform_view
+    form = ModelForm(initial=initial)
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 316, in __init__
+    self.instance = opts.model()
+  File "J:\arno\test\phx_web\monitor\models.py", line 26, in __init__
+    if ' ' in self.name:
+AttributeError: 'product_t' object has no attribute 'name'
+2018-05-21 17:04:13,604 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/add/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\test\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 211, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 92, in render
+    output = force_text(output)
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 92, in force_text
+    s = six.text_type(s)
+  File "J:\arno\test\lib\site-packages\django\utils\html.py", line 390, in <lambda>
+    klass.__unicode__ = lambda self: mark_safe(klass_unicode(self))
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 543, in __str__
+    return self.as_widget()
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 599, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\widgets.py", line 292, in render
+    'widget': self.widget.render(name, value, *args, **kwargs),
+  File "J:\arno\test\lib\site-packages\django\forms\widgets.py", line 585, in render
+    options = self.render_options(choices, value)
+  File "J:\arno\test\lib\site-packages\django\forms\widgets.py", line 539, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 1102, in __iter__
+    for obj in self.queryset.iterator():
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "J:\arno\test\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'phxweb.monitor_minion_t' doesn't exist")
+2018-05-21 17:26:34,265 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/add/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1516, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1470, in changeform_view
+    self.log_addition(request, new_object)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 810, in log_addition
+    object_repr=force_text(object),
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 94, in force_text
+    s = six.text_type(bytes(s), encoding, errors)
+  File "J:\arno\test\phx_web\monitor\models.py", line 64, in __str__
+    return " - ".join([self.product, self.project, self.minion_id, self.get_status_display()])
+TypeError: sequence item 0: expected string or Unicode, int found
+2018-05-21 17:28:43,430 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/add/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1516, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1470, in changeform_view
+    self.log_addition(request, new_object)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 810, in log_addition
+    object_repr=force_text(object),
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 94, in force_text
+    s = six.text_type(bytes(s), encoding, errors)
+  File "J:\arno\test\phx_web\monitor\models.py", line 64, in __str__
+    return " - ".join([self.product, self.project, self.get_status_display()])
+TypeError: sequence item 0: expected string or Unicode, int found
+2018-05-21 17:28:47,134 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/add/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1516, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1470, in changeform_view
+    self.log_addition(request, new_object)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 810, in log_addition
+    object_repr=force_text(object),
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 94, in force_text
+    s = six.text_type(bytes(s), encoding, errors)
+  File "J:\arno\test\phx_web\monitor\models.py", line 64, in __str__
+    return " - ".join([self.product, self.project, self.get_status_display()])
+TypeError: sequence item 0: expected string or Unicode, int found
+2018-05-21 17:28:49,035 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/add/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1516, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1470, in changeform_view
+    self.log_addition(request, new_object)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 810, in log_addition
+    object_repr=force_text(object),
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 94, in force_text
+    s = six.text_type(bytes(s), encoding, errors)
+  File "J:\arno\test\phx_web\monitor\models.py", line 64, in __str__
+    return " - ".join([self.product, self.project, self.get_status_display()])
+TypeError: sequence item 0: expected string or Unicode, int found
+2018-05-21 17:28:52,678 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\test\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 1271, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 320, in result_list
+    'results': list(results(cl))}
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 296, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 287, in __init__
+    super(ResultList, self).__init__(*items)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 199, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\utils.py", line 282, in lookup_field
+    value = attr()
+  File "J:\arno\test\phx_web\monitor\models.py", line 64, in __str__
+    return " - ".join([self.product, self.project, self.get_status_display()])
+TypeError: sequence item 0: expected string or Unicode, long found
+2018-05-21 17:29:51,786 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\test\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 1271, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 320, in result_list
+    'results': list(results(cl))}
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 296, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 287, in __init__
+    super(ResultList, self).__init__(*items)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 199, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\utils.py", line 282, in lookup_field
+    value = attr()
+  File "J:\arno\test\phx_web\monitor\models.py", line 64, in __str__
+    return " - ".join([self.get_product_display, self.get_project_display, self.server_type, self.get_status_display()])
+TypeError: sequence item 0: expected string or Unicode, instancemethod found
+2018-05-21 17:30:21,062 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\test\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 1271, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 320, in result_list
+    'results': list(results(cl))}
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 296, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 287, in __init__
+    super(ResultList, self).__init__(*items)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 199, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\utils.py", line 282, in lookup_field
+    value = attr()
+  File "J:\arno\test\phx_web\monitor\models.py", line 64, in __str__
+    return " - ".join([self.get_envir_display, self.get_product_display, self.get_project_display, self.server_type, self.get_status_display()])
+TypeError: sequence item 0: expected string or Unicode, instancemethod found
+2018-05-21 17:30:24,111 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\test\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 1271, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 320, in result_list
+    'results': list(results(cl))}
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 296, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 287, in __init__
+    super(ResultList, self).__init__(*items)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 199, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\utils.py", line 282, in lookup_field
+    value = attr()
+  File "J:\arno\test\phx_web\monitor\models.py", line 64, in __str__
+    return " - ".join([self.get_envir_display, self.get_product_display, self.get_project_display, self.server_type, self.get_status_display()])
+TypeError: sequence item 0: expected string or Unicode, instancemethod found
+2018-05-21 17:42:30,857 project.py [django:72] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 0, u'id': 1}
+2018-05-21 17:42:34,038 project.py [django:72] [INFO]- 127.0.0.1 is requesting. /monitor/project/UpdateStatus data: {u'status': 1, u'id': 1}
+2018-05-21 17:44:07,657 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/restart/get_project
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 21, in GetProjectActive
+    datas     = tomcat_project.objects.filter(status='active')
+NameError: global name 'tomcat_project' is not defined
+2018-05-21 17:45:10,885 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 17:45:11,799 views.py [django:254] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 17:45:11,891 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/restart/get_project
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 21, in GetProjectActive
+    datas     = tomcat_project.objects.filter(status='active')
+NameError: global name 'tomcat_project' is not defined
+2018-05-21 17:46:31,551 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 17:46:32,486 views.py [django:254] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 17:46:32,582 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/restart/get_project
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 21, in GetProjectActive
+    datas     = tomcat_project.objects.filter(status='active')
+NameError: global name 'tomcat_project' is not defined
+2018-05-21 17:53:05,809 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 17:53:07,446 views.py [django:259] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 17:53:08,055 views.py [django:33] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 17:54:27,325 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 17:54:28,263 views.py [django:259] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 17:54:28,848 views.py [django:33] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 17:55:19,447 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 17:55:20,437 views.py [django:259] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 17:55:21,072 views.py [django:33] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 17:56:29,405 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 17:56:30,392 views.py [django:259] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 17:56:31,160 views.py [django:33] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 17:57:15,948 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 17:57:16,869 views.py [django:259] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 17:57:17,427 views.py [django:33] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 17:57:21,243 views.py [django:45] [INFO]- {"project":["cp_ht"]}
+2018-05-21 17:57:21,244 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/restart/get_project_servers
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 49, in GetProjectServers
+    datas     = tomcat_url.objects.filter(project=project)
+NameError: global name 'tomcat_url' is not defined
+2018-05-21 17:57:26,032 views.py [django:45] [INFO]- {"project":["cp_ht","caipiao"]}
+2018-05-21 17:57:26,032 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/restart/get_project_servers
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 49, in GetProjectServers
+    datas     = tomcat_url.objects.filter(project=project)
+NameError: global name 'tomcat_url' is not defined
+2018-05-21 17:57:34,628 views.py [django:45] [INFO]- {"project":["caipiao"]}
+2018-05-21 17:57:34,628 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/restart/get_project_servers
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 49, in GetProjectServers
+    datas     = tomcat_url.objects.filter(project=project)
+NameError: global name 'tomcat_url' is not defined
+2018-05-21 17:57:38,447 views.py [django:45] [INFO]- {"project":[]}
+2018-05-21 17:57:38,447 views.py [django:61] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2018-05-21 18:02:04,029 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:02:05,719 views.py [django:260] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:02:06,282 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/restart/get_project
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 32, in GetProjectActive
+    tmpdict['minion_id'] = [minion.minion_id for minion in data.minion_id]
+TypeError: 'ManyRelatedManager' object is not iterable
+2018-05-21 18:03:55,210 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:03:56,780 views.py [django:260] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:03:57,443 views.py [django:34] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:13:01,681 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-05-21 18:13:01,707 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-05-21 18:13:01,851 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-21 18:13:12,073 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-05-21 18:13:15,836 cf.py [django:57] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_zone_records
+2018-05-21 18:13:15,836 cf.py [django:59] [INFO]- [{u'product': u'guangda', u'zone_id': u'd4b293a62f50358d4d63799652ffa3a4', u'name': u'gdcp188.com'}]
+2018-05-21 18:16:13,947 views.py [django:34] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:16:31,628 views.py [django:124] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'pcre', u'target': u'HT_*', u'exe_user': u'root', u'arguments': u'uptime'}
+2018-05-21 18:16:32,638 saltapi.py [django:68] [INFO]- HT_* "[u'runas=root', u'uptime', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2018-05-21 18:17:00,809 views.py [django:124] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'pcre', u'target': u'HT_*', u'exe_user': u'root', u'arguments': u'ifconfig'}
+2018-05-21 18:17:01,579 saltapi.py [django:68] [INFO]- HT_* "[u'runas=root', u'ifconfig', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2018-05-21 18:21:50,733 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:21:50,747 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 123, in CommandExecute
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-05-21 18:21:50,747 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 123, in CommandExecute
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-05-21 18:21:51,686 views.py [django:260] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:21:52,334 views.py [django:34] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:22:40,940 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:22:41,789 views.py [django:260] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:22:42,427 views.py [django:34] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:25:31,510 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:25:32,440 views.py [django:260] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:25:33,109 views.py [django:34] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:26:14,701 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:26:15,565 views.py [django:260] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:26:16,217 views.py [django:34] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:26:36,601 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:26:37,493 views.py [django:260] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:26:38,140 views.py [django:34] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:28:04,187 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:28:05,048 views.py [django:260] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:28:05,670 views.py [django:34] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:29:18,210 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:29:19,111 views.py [django:260] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:29:19,775 views.py [django:34] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:29:44,910 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:29:47,756 views.py [django:260] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:29:51,253 views.py [django:34] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:31:12,940 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:31:13,865 views.py [django:260] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:31:17,367 views.py [django:34] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:31:50,588 views.py [django:124] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'list', u'target': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], u'exe_user': u'root', u'arguments': u''}
+2018-05-21 18:32:00,793 views.py [django:46] [INFO]- {"project":["fh_cp_ht"]}
+2018-05-21 18:32:01,265 views.py [django:62] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2018-05-21 18:34:37,654 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:34:37,661 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 123, in CommandExecute
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-05-21 18:34:38,520 views.py [django:260] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:34:39,180 views.py [django:34] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:39:23,911 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:39:25,456 views.py [django:261] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:39:26,107 views.py [django:35] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:41:12,056 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:41:13,641 views.py [django:261] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:41:14,301 views.py [django:35] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:43:50,628 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:43:52,250 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:43:52,908 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:46:35,609 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:46:37,157 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:46:37,816 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:49:54,711 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:49:56,262 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:49:56,931 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:55:32,836 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:55:33,750 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:55:34,411 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 18:57:50,914 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 18:57:51,980 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 18:57:52,644 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 19:01:01,477 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 19:01:02,400 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 19:01:03,049 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 19:01:37,973 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 19:01:38,841 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 19:01:39,490 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 19:05:14,052 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 19:05:14,905 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 19:05:15,543 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 19:09:27,265 views.py [django:126] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_153_239', u'CP_NG_HK_153_1', u'CP_NG_HK_179_204', u'SP_NG_HK_36_18', u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], u'exe_user': u'root', u'arguments': u'uptime'}
+2018-05-21 19:09:29,447 saltapi.py [django:68] [INFO]- [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_153_239', u'CP_NG_HK_153_1', u'CP_NG_HK_179_204', u'SP_NG_HK_36_18', u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'] "[u'runas=root', u'uptime', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2018-05-21 19:10:00,026 views.py [django:126] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'list', u'target': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_153_239', u'CP_NG_HK_153_1', u'CP_NG_HK_179_204', u'SP_NG_HK_36_18', u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], u'exe_user': u'root', u'arguments': u'nginx.reload'}
+2018-05-21 19:10:03,318 saltapi.py [django:68] [INFO]- [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_153_239', u'CP_NG_HK_153_1', u'CP_NG_HK_179_204', u'SP_NG_HK_36_18', u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'] "[u'runas=root', u'nginx.reload']": 200
+2018-05-21 19:10:51,177 views.py [django:126] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'list', u'target': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_153_239', u'CP_NG_HK_153_1', u'CP_NG_HK_179_204', u'SP_NG_HK_36_18', u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], u'exe_user': u'root', u'arguments': u'nginx.reload'}
+2018-05-21 21:42:58,338 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 21:42:58,349 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 125, in CommandExecute
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-05-21 21:42:58,349 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 125, in CommandExecute
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-05-21 21:42:58,349 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 125, in CommandExecute
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-05-21 21:43:01,974 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 21:43:05,124 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 21:43:58,772 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 21:44:01,819 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 21:44:05,056 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 21:45:41,890 views.py [django:126] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'list', u'target': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50', u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_153_239', u'CP_NG_HK_153_1', u'CP_NG_HK_179_204'], u'exe_user': u'root', u'arguments': u''}
+2018-05-21 21:57:33,242 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 21:57:33,250 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 125, in CommandExecute
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-05-21 21:57:36,694 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 21:57:39,891 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 21:59:09,026 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 21:59:12,454 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 21:59:15,801 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 22:04:55,780 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 22:04:58,934 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 22:05:02,328 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 22:05:22,302 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 22:05:25,394 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 22:05:28,802 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 22:05:54,578 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 22:05:58,710 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 22:06:02,007 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 22:06:48,180 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 22:06:51,614 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 22:06:54,976 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 22:27:53,423 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 8, in <module>
+    from saltstack.command import Command
+  File "J:\arno\test\phx_web\saltstack\command.py", line 11, in <module>
+    class Command(object):
+  File "J:\arno\test\phx_web\saltstack\command.py", line 73, in Command
+    def StateSls(self, arg=self.__arg):
+NameError: name 'self' is not defined
+2018-05-21 22:29:40,671 views.py [django:126] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'list', u'target': [u'HT_NG_HK_84_74'], u'exe_user': u'root', u'arguments': u''}
+2018-05-21 22:34:47,309 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 22:34:51,266 views.py [django:255] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 22:34:54,474 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 22:35:01,296 views.py [django:162] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2018-05-21 22:35:01,296 views.py [django:173] [INFO]- 127.0.0.1 is requesting. /saltstack/command/deploy 执行参数：{u'project': u'fh_cp_ht', u'minion_id': [u'HT_NG_HK_84_74']}
+2018-05-21 22:35:02,421 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/deploy
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 181, in CommandDeploy
+    info_final['results'] += commandexe.StateSls('nginx.reload')
+KeyError: 'results'
+2018-05-21 22:36:10,230 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 22:36:15,467 views.py [django:255] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 22:36:19,236 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 22:36:26,108 views.py [django:162] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2018-05-21 22:36:26,108 views.py [django:173] [INFO]- 127.0.0.1 is requesting. /saltstack/command/deploy 执行参数：{u'project': u'fh_cp_ht', u'minion_id': [u'HT_NG_HK_84_74']}
+2018-05-21 22:36:29,266 saltapi.py [django:68] [INFO]- [u'HT_NG_HK_84_74'] "nginx.reload": 200
+2018-05-21 22:36:39,542 views.py [django:162] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2018-05-21 22:36:39,543 views.py [django:173] [INFO]- 127.0.0.1 is requesting. /saltstack/command/deploy 执行参数：{u'project': u'fh_cp_ht', u'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50']}
+2018-05-21 22:36:41,598 saltapi.py [django:68] [INFO]- [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'] "nginx.reload": 200
+2018-05-21 22:44:50,262 views.py [django:162] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2018-05-21 22:44:50,262 views.py [django:173] [INFO]- 127.0.0.1 is requesting. /saltstack/command/deploy 执行参数：{u'project': u'fh_cp_ht', u'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50']}
+2018-05-21 22:44:56,365 saltapi.py [django:68] [INFO]- [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'] "nginx.conf": 200
+2018-05-21 22:44:57,811 saltapi.py [django:68] [INFO]- [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'] "nginx.reload": 200
+2018-05-21 22:44:57,815 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/deploy
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 181, in CommandDeploy
+    info_final['results'] += commandexe.StateSls('nginx.reload')
+TypeError: unsupported operand type(s) for +=: 'dict' and 'dict'
+2018-05-21 22:51:21,247 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 22:51:25,473 views.py [django:254] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 22:51:28,744 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 22:51:36,984 views.py [django:162] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2018-05-21 22:51:36,984 views.py [django:173] [INFO]- 127.0.0.1 is requesting. /saltstack/command/deploy 执行参数：{u'project': u'fh_cp_ht', u'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50']}
+2018-05-21 22:51:43,846 saltapi.py [django:68] [INFO]- [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'] "nginx.conf": 200
+2018-05-21 22:51:45,326 saltapi.py [django:68] [INFO]- [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'] "nginx.reload": 200
+2018-05-21 22:52:27,694 views.py [django:162] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2018-05-21 22:52:27,694 views.py [django:173] [INFO]- 127.0.0.1 is requesting. /saltstack/command/deploy 执行参数：{u'project': u'fh_cp_ht', u'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50']}
+2018-05-21 22:52:33,573 saltapi.py [django:68] [INFO]- [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'] "nginx.conf": 200
+2018-05-21 22:52:35,007 saltapi.py [django:68] [INFO]- [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'] "nginx.reload": 200
+2018-05-21 22:54:07,779 views.py [django:162] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2018-05-21 22:54:07,779 views.py [django:173] [INFO]- 127.0.0.1 is requesting. /saltstack/command/deploy 执行参数：{u'project': u'fh_cp_ht', u'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50']}
+2018-05-21 22:54:13,680 saltapi.py [django:68] [INFO]- [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'] "nginx.conf": 200
+2018-05-21 23:03:29,602 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 23:03:32,944 views.py [django:256] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 23:03:36,072 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 23:06:51,494 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 23:06:55,312 views.py [django:260] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 23:06:58,661 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 23:11:21,407 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 23:11:24,499 views.py [django:260] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 23:11:27,770 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 23:11:47,773 views.py [django:162] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2018-05-21 23:11:47,775 views.py [django:173] [INFO]- 127.0.0.1 is requesting. /saltstack/command/deploy 执行参数：{u'project': u'fh_cp_ht', u'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50']}
+2018-05-21 23:11:54,658 saltapi.py [django:68] [INFO]- [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'] "nginx.conf": 200
+2018-05-21 23:11:56,094 saltapi.py [django:68] [INFO]- [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'] "nginx.reload": 200
+2018-05-21 23:19:05,127 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 23:19:05,134 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/deploy
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 166, in CommandDeploy
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-05-21 23:19:09,516 views.py [django:260] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 23:19:12,894 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project

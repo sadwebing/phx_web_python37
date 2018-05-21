@@ -9,7 +9,7 @@ urlpatterns = [
     url('^restart/get_project$', views.GetProjectActive),
     url('^restart/get_project_servers$', views.GetProjectServers),
     url('^command/execute$', views.CommandExecute),
-    url('^command/restart$', views.CommandRestart),
+    url('^command/deploy$', views.CommandDeploy),
     url('^deploy/deploy$', views.DeployExe),
     url('^saltstack_id$', views.Id),
     url('^saltstack_id/Query$', views.IdQuery),

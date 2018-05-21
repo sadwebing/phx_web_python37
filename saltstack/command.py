@@ -70,11 +70,11 @@ class Command(object):
                 self.info[minionid] = "not return"
         return self.info
 
-    def StateSls(self):
+    def StateSls(self, arg=''):
         results = sapi.ClientLocal(
             tgt       = self.__tgt,
             fun       = self.__fun,
-            arg       = self.__arg,
+            arg       = arg,
             expr_form = self.__expr_form,
             timeout   = self.__timeout,
             )
