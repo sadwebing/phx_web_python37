@@ -11,6 +11,16 @@ choices_s = (
         (0, '禁用'),
         )
 
+class telegram_user_id_t(models.Model):
+    user = models.CharField(max_length=32, null=False)
+    name = models.CharField(max_length=32, null=False)
+    user_id = models.IntegerField()
+    class Meta:
+        unique_together = ('user' ,'user_id')
+
+    def __str__(self):
+        return " | ".join([self.user, self.name, self.user_id])
+
 class minion_ip_t(models.Model):
     minion_id = models.CharField(max_length=32, null=False)
     ip_addr = models.GenericIPAddressField()
@@ -34,29 +44,31 @@ class project_t(models.Model):
         (0, '测试环境'),
         )
     choices_st = (
-        ('nginx', 'nginx'), 
+        ('nginx',  'nginx'), 
         ('apache', 'apache'),
+        ('vpn',    'vpn'),
         )
     choices_role = (
-        ('main', 'main'), 
+        ('main',   'main'), 
         ('backup', 'backup'),
         )
     choices_proj = (
         ('caipiao', 'caipiao'), 
-        ('sport', 'sport'),
-        ('cp_ht', 'cp_ht'),
+        ('sport',   'sport'),
+        ('cp_ht',   'cp_ht'),
+        ('vpn',     'vpn'),
         )
 
-    envir = models.IntegerField(choices=choices_env, default=1)
-    product = models.IntegerField(choices=choices_prod)
-    project = models.CharField(max_length=10, choices=choices_proj)
-    minion_id = models.ManyToManyField(minion_t)
+    envir       = models.IntegerField(choices=choices_env, default=1)
+    product     = models.IntegerField(choices=choices_prod)
+    project     = models.CharField(max_length=10, choices=choices_proj)
+    minion_id   = models.ManyToManyField(minion_t)
     server_type = models.CharField(max_length=10, choices=choices_st, default='nginx')
-    role = models.CharField(max_length=10, choices=choices_role, default='main')
-    domain = models.CharField(max_length=128)
-    uri = models.CharField(max_length=128, default='/')
-    status = models.IntegerField(choices=choices_s, default=1)
-    info = models.CharField(max_length=128, blank=True)
+    role        = models.CharField(max_length=10, choices=choices_role, default='main')
+    domain      = models.CharField(max_length=128)
+    uri         = models.CharField(max_length=128, default='/')
+    status      = models.IntegerField(choices=choices_s, default=1)
+    info        = models.CharField(max_length=128, blank=True)
     class Meta:
         unique_together = ('product' ,'project' ,'envir', 'server_type')
 

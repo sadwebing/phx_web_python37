@@ -122,6 +122,8 @@ def CommandExecute(request):
             role = 'none'
         clientip = request.META['REMOTE_ADDR']
         for postdata in request.websocket:
+            if not postdata:
+                break
             data = json.loads(postdata)
             logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
             #request.websocket.send(json.dumps(data))
@@ -141,7 +143,7 @@ def CommandExecute(request):
             elif data['function'] == 'cmd.run':
                 info_final['results'] = commandexe.CmdRun()
             elif data['function'] == 'state.sls':
-                info_final['results'] = commandexe.StateSls()
+                info_final['results'] = commandexe.StateSls(data['arguments'])
             #logger.info(json.dumps(info_final))
 
             request.websocket.send(json.dumps(info_final))
@@ -159,9 +161,11 @@ def CommandDeploy(request):
         except:
             role = 'none'
         clientip = request.META['REMOTE_ADDR']
-        logger.info(dir(request.websocket))
+        #logger.info(dir(request.websocket))
         #message = request.websocket.wait()
         for postdata in request.websocket:
+            if not postdata:
+                break
             #logger.info(type(postdata))
             data = json.loads(postdata)
             ### step one ###

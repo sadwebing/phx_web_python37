@@ -14,6 +14,7 @@ class groups(models.Model):
     client = models.CharField(max_length=12, null=False)
     method = models.CharField(max_length=12, null=False)
     ssl    = models.IntegerField(choices=choices_s, default=1)
+    retry  = models.IntegerField(default=3)
     def __str__(self):
         if self.ssl == 1:
             ssl = 'ssl'

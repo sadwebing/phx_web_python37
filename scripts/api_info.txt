@@ -83,15 +83,15 @@
 #gd pc apiweb.gdcp168.net 	guangda 	cloudflare 		gd.cf.cdnlebo.com 0 0
 #gd pc apiweb.gdcp168.net 	guangda 	wangsu 		gd.ws.cdnlebo.com 0 1
 
-gd android apiad.gdcpapi.com guangda nginx 		api.ng.cdnlebo.com 0 0
-gd android apiad.gdcpapi.com guangda cloudflare 	gd.cf.cdnlebo.com 1 0
-gd android apiad.gdcpapi.com guangda wangsu 	apiad.gdcpapi.com.whecloud.com 1 1
-gd ios apiios.gdcpapi.com guangda nginx 		api.ng.cdnlebo.com 0 0
-gd ios apiios.gdcpapi.com guangda cloudflare 	gd.cf.cdnlebo.com 0 0
-gd ios apiios.gdcpapi.com guangda wangsu 	apiios.gdcpapi.com.whecloud.com 0 1
-gd pc apiweb.gdcpapi.com 	guangda 	nginx 	api.ng.cdnlebo.com 0 0
-gd pc apiweb.gdcpapi.com 	guangda 	cloudflare 		gd.cf.cdnlebo.com 0 0
-gd pc apiweb.gdcpapi.com 	guangda 	wangsu 		apiweb.gdcpapi.com.whecloud.com 0 1
+#gd android apiad.gdcpapi.com guangda nginx 		api.ng.cdnlebo.com 0 0
+#gd android apiad.gdcpapi.com guangda cloudflare 	gd.cf.cdnlebo.com 1 0
+#gd android apiad.gdcpapi.com guangda wangsu 	apiad.gdcpapi.com.whecloud.com 1 1
+#gd ios apiios.gdcpapi.com guangda nginx 		api.ng.cdnlebo.com 0 0
+#gd ios apiios.gdcpapi.com guangda cloudflare 	gd.cf.cdnlebo.com 0 0
+#gd ios apiios.gdcpapi.com guangda wangsu 	apiios.gdcpapi.com.whecloud.com 0 1
+#gd pc apiweb.gdcpapi.com 	guangda 	nginx 	api.ng.cdnlebo.com 0 0
+#gd pc apiweb.gdcpapi.com 	guangda 	cloudflare 		gd.cf.cdnlebo.com 0 0
+#gd pc apiweb.gdcpapi.com 	guangda 	wangsu 		apiweb.gdcpapi.com.whecloud.com 0 1
 
 ####  ios  ###
 #gd ios gdios.7557b.com 	lebo 	nginx 		api.ng.cdnlebo.com 0 0
@@ -169,6 +169,15 @@ ali pc apiweb.alcpapi.com 	ali 	wangsu 		apiweb.alcpapi.com.whecloud.com 0 1
 #ct pc api.caitou999.com	lebo 	nginx 		api.ng.cdnlebo.com 1 1
 #ct pc api.caitou999.com	lebo 	cloudflare 	ct.cf.cdnlebo.com 1 0
 #
+
+ct android apiad.ctphoneapi.com lebo nginx 		api.ng.cdnlebo.com 0 0
+ct android apiad.ctphoneapi.com lebo cloudflare 	ct.cf.cdnlebo.com 1 0
+ct ios apiios.ctphoneapi.com lebo nginx 		api.ng.cdnlebo.com 0 0
+ct ios apiios.ctphoneapi.com lebo cloudflare 	ct.cf.cdnlebo.com 0 0
+ct pc apiweb.ctphoneapi.com 	lebo 	nginx 	api.ng.cdnlebo.com 0 0
+ct pc apiweb.ctphoneapi.com 	lebo 	cloudflare 		ct.cf.cdnlebo.com 0 0
+
+
 #################  UC  ################
 ####  android  ###
 #uc android ucandroid.7557b.com lebo 	nginx 		api.ng.cdnlebo.com 1 0

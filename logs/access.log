@@ -11766,3 +11766,107 @@ Traceback (most recent call last):
 TypeError: expected string or buffer
 2018-05-21 23:19:09,516 views.py [django:260] [INFO]- 127.0.0.1 is requesting.
 2018-05-21 23:19:12,894 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-21 23:21:15,713 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-21 23:21:18,842 views.py [django:260] [INFO]- 127.0.0.1 is requesting.
+2018-05-21 23:21:22,061 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-22 14:19:08,552 views.py [django:126] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'list', u'target': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50', u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_153_239', u'CP_NG_HK_153_1', u'CP_NG_HK_179_204', u'SP_NG_HK_36_18', u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], u'exe_user': u'root', u'arguments': u''}
+2018-05-22 14:24:42,875 views.py [django:162] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2018-05-22 14:24:42,875 views.py [django:173] [INFO]- 127.0.0.1 is requesting. /saltstack/command/deploy 执行参数：{u'project': u'fh_cp_ht', u'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50']}
+2018-05-22 14:24:48,638 saltapi.py [django:68] [INFO]- [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'] "nginx.conf": 200
+2018-05-22 14:24:50,184 saltapi.py [django:68] [INFO]- [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'] "nginx.reload": 200
+2018-05-22 16:35:30,401 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-22 16:35:31,154 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-22 16:35:31,822 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-22 16:35:35,351 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-22 16:35:36,207 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-22 16:35:36,887 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-22 16:35:58,852 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-22 16:35:59,736 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-22 16:36:00,424 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-22 16:36:39,926 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-22 16:36:40,848 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-22 16:36:41,549 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-22 16:37:36,835 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-22 16:37:37,710 views.py [django:262] [INFO]- 127.0.0.1 is requesting.
+2018-05-22 16:37:38,378 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-22 16:37:44,479 views.py [django:126] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'list', u'target': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], u'exe_user': u'root', u'arguments': u''}
+2018-05-22 16:37:53,684 views.py [django:126] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], u'exe_user': u'root', u'arguments': u'uptime'}
+2018-05-22 16:37:58,581 saltapi.py [django:68] [INFO]- [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'] "[u'runas=root', u'uptime', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2018-05-22 16:51:56,434 views.py [django:128] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'list', u'target': [u'SA-VPN-SH-101-236'], u'exe_user': u'root', u'arguments': u'detect'}
+2018-05-22 16:51:59,611 saltapi.py [django:68] [INFO]- [u'SA-VPN-SH-101-236'] "": 200
+2018-05-22 16:52:51,601 views.py [django:128] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'list', u'target': [u'HT_NG_HK_84_74'], u'exe_user': u'root', u'arguments': u'nginx.reload'}
+2018-05-22 16:52:53,940 saltapi.py [django:68] [INFO]- [u'HT_NG_HK_84_74'] "": 200
+2018-05-22 16:54:14,467 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 8, in <module>
+    from saltstack.command import Command
+  File "J:\arno\test\phx_web\saltstack\command.py", line 11, in <module>
+    class Command(object):
+  File "J:\arno\test\phx_web\saltstack\command.py", line 73, in Command
+    def StateSls(self, arg=self.__arg):
+NameError: name 'self' is not defined
+2018-05-22 16:54:16,901 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 17, in <module>
+    url(r'^', include('monitor.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\monitor\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\monitor\views.py", line 8, in <module>
+    from .project import *
+  File "J:\arno\test\phx_web\monitor\project.py", line 8, in <module>
+    from saltstack.command import Command
+  File "J:\arno\test\phx_web\saltstack\command.py", line 11, in <module>
+    class Command(object):
+  File "J:\arno\test\phx_web\saltstack\command.py", line 73, in Command
+    def StateSls(self, arg=self.__arg):
+NameError: name 'self' is not defined
+2018-05-22 18:49:27,638 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-22 18:49:29,275 views.py [django:264] [INFO]- 127.0.0.1 is requesting.
+2018-05-22 18:49:29,950 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-22 18:49:38,828 views.py [django:128] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'list', u'target': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], u'exe_user': u'root', u'arguments': u''}

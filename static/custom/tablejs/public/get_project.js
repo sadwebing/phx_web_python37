@@ -22,29 +22,38 @@ var gp = {
                 //alert(datas);
                 var data = eval(datas);
                 //var html = "<option value=''></option>";
-                var html_FH = "";
+                var html_dict = {};
                 $.each(data, function (index, item) { 
                     //循环获取数据 
                     var name = data[index];
+                    //console.log(name)
+                    if (typeof(html_dict[name.product]) == undefined){
+                        html_dict[name.product] == ''
+                    }
                     //console.log(data)
                     //html_name = "<option>"+name+"</option>";
-                    if (name.product === 'fh') {
-                        html_name = "<option value='fh_"+name.project+"' data-subtext='"+name.server_type+" "+name.envir+"'>"+name.project+"</option>";
-                        html_FH = html_FH + html_name
-                        project_minion_list['fh_'+name.project] = name
-                    }   
+                    html_name = "<option value='"+name.product+"_"+name.project+"' data-subtext='"+name.server_type+" "+name.envir+"'>"+name.project+"</option>";
+                    html_dict[name.product] = html_dict[name.product] + html_name
+                    project_minion_list[name.product+'_'+name.project] = name
                 }); 
                 //$("#project").html(html);
                 //$("#project_active").html(html);
-                var html = ['<optgroup label="凤凰">',
-                                html_FH,
-                            '</optgroup>',
-                            ].join("")
+                var html_project_active = ['<optgroup label="凤凰">',
+                                                html_dict['fh'],
+                                            '</optgroup>',
+                                            '<optgroup label="公共">',
+                                                html_dict['pub'],
+                                            '</optgroup>',
+                                            ].join("")
+                var html_restart_project_active = ['<optgroup label="凤凰">',
+                                                        html_dict['fh'],
+                                                    '</optgroup>',
+                                                    ].join("")
                 if (document.getElementById('project_active')){
-                    document.getElementById('project_active').innerHTML=html;
+                    document.getElementById('project_active').innerHTML=html_project_active;
                 }
                 if (document.getElementById('restart_project_active')){
-                    document.getElementById('restart_project_active').innerHTML=html;
+                    document.getElementById('restart_project_active').innerHTML=html_restart_project_active;
                 }
                 $('.selectpicker').selectpicker('refresh');
                 return false;
@@ -194,6 +203,7 @@ var gp = {
                             $(this).modal({keyboard: true});
                         });
                     }
+                    socket.close();
                 }
             }; 
 
