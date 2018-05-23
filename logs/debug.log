@@ -3961,3 +3961,269 @@ NameError: name 'self' is not defined
 2018-05-23 16:12:31,996 utils.py [django.db.backends:89] [DEBUG]- (0.165) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'domains' AND `django_content_type`.`app_label` = 'detect'); args=('domains', 'detect')
 2018-05-23 16:12:32,164 utils.py [django.db.backends:89] [DEBUG]- (0.167) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON ( `auth_permission`.`content_type_id` = `django_content_type`.`id` ) WHERE `auth_permission`.`content_type_id` IN (16, 15) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(16, 15)
 2018-05-23 16:12:32,332 utils.py [django.db.backends:89] [DEBUG]- (0.167) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'detect'; args=('detect',)
+2018-05-23 16:24:38,940 utils.py [django.db.backends:89] [DEBUG]- (0.163) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 16:24:40,141 utils.py [django.db.backends:89] [DEBUG]- (0.159) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 16:24:40,299 utils.py [django.db.backends:89] [DEBUG]- (0.159) SHOW FULL TABLES; args=None
+2018-05-23 16:24:40,461 utils.py [django.db.backends:89] [DEBUG]- (0.160) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-23 16:48:52,711 utils.py [django.db.backends:89] [DEBUG]- (0.165) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 16:48:53,924 utils.py [django.db.backends:89] [DEBUG]- (0.164) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 16:48:54,089 utils.py [django.db.backends:89] [DEBUG]- (0.166) SHOW FULL TABLES; args=None
+2018-05-23 16:48:54,259 utils.py [django.db.backends:89] [DEBUG]- (0.167) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-23 16:50:11,645 utils.py [django.db.backends:89] [DEBUG]- (0.181) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 16:50:12,842 utils.py [django.db.backends:89] [DEBUG]- (0.162) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 16:50:13,006 utils.py [django.db.backends:89] [DEBUG]- (0.164) SHOW FULL TABLES; args=None
+2018-05-23 16:50:13,176 utils.py [django.db.backends:89] [DEBUG]- (0.164) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-23 16:57:17,102 utils.py [django.db.backends:89] [DEBUG]- (0.164) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 16:57:18,325 utils.py [django.db.backends:89] [DEBUG]- (0.168) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 16:57:18,493 utils.py [django.db.backends:89] [DEBUG]- (0.167) SHOW FULL TABLES; args=None
+2018-05-23 16:57:18,660 utils.py [django.db.backends:89] [DEBUG]- (0.165) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-23 16:58:57,341 utils.py [django.db.backends:89] [DEBUG]- (0.165) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 16:58:58,667 utils.py [django.db.backends:89] [DEBUG]- (0.178) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 16:58:58,848 utils.py [django.db.backends:89] [DEBUG]- (0.180) SHOW FULL TABLES; args=None
+2018-05-23 16:58:59,030 utils.py [django.db.backends:89] [DEBUG]- (0.181) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-23 18:00:44,239 utils.py [django.db.backends:89] [DEBUG]- (0.164) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:00:45,602 utils.py [django.db.backends:89] [DEBUG]- (0.162) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:00:45,766 utils.py [django.db.backends:89] [DEBUG]- (0.163) SHOW FULL TABLES; args=None
+2018-05-23 18:00:45,930 utils.py [django.db.backends:89] [DEBUG]- (0.162) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-23 18:02:11,444 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 20, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\detect\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\detect\views.py", line 9, in <module>
+    from telegram                       import sendTelegram
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43
+    self.__url     = tg.['url'][bot] if tg.['url'].has_key(bot) else tg.['url']['sa_monitor_bot']
+                        ^
+SyntaxError: invalid syntax
+2018-05-23 18:03:26,710 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 20, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\detect\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\detect\views.py", line 9, in <module>
+    from telegram                       import sendTelegram
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43
+    self.__url     = tg['url'][bot] if tg.['url'].has_key(bot) else tg['url']['sa_monitor_bot']
+                                          ^
+SyntaxError: invalid syntax
+2018-05-23 18:03:45,240 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 20, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\detect\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\detect\views.py", line 9, in <module>
+    from telegram                       import sendTelegram
+  File "J:\arno\test\phx_web\detect\telegram.py", line 9, in <module>
+    from models import telegram_user_id_t
+ImportError: cannot import name telegram_user_id_t
+2018-05-23 18:04:08,325 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 20, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\detect\urls.py", line 8, in <module>
+    url('get_telegram_user_id$', views.GetTelegramUserId, name='GetTelegramUserId'),
+AttributeError: 'module' object has no attribute 'GetTelegramUserId'
+2018-05-23 18:04:25,908 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:04:25,908 views.py [django:66] [ERROR]- No JSON object could be decoded
+2018-05-23 18:04:25,908 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 67, in SendTelegram
+    s = sendTelegram({'text': clientip + ': 发送telegram信息失败！', 'bot': 'sa_monitor_bot', 'group': 'arno_test'}) #arno_test
+TypeError: __init__() takes exactly 1 argument (2 given)
+2018-05-23 18:04:56,266 utils.py [django.db.backends:89] [DEBUG]- (0.161) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:04:57,471 utils.py [django.db.backends:89] [DEBUG]- (0.172) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:04:57,634 utils.py [django.db.backends:89] [DEBUG]- (0.162) SHOW FULL TABLES; args=None
+2018-05-23 18:04:57,799 utils.py [django.db.backends:89] [DEBUG]- (0.163) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-23 18:05:44,434 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:05:44,434 views.py [django:66] [ERROR]- No JSON object could be decoded
+2018-05-23 18:05:44,434 telegram.py [django:38] [ERROR]- 'builtin_function_or_method' object has no attribute '__getitem__'
+2018-05-23 18:05:44,434 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 67, in SendTelegram
+    s = sendTelegram({'text': clientip + ': 发送telegram信息失败！', 'bot': 'sa_monitor_bot', 'group': 'arno_test'}) #arno_test
+  File "J:\arno\test\phx_web\detect\telegram.py", line 41, in __init__
+    self.__doc     = doc
+UnboundLocalError: local variable 'doc' referenced before assignment
+2018-05-23 18:06:32,503 utils.py [django.db.backends:89] [DEBUG]- (0.158) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:06:33,842 utils.py [django.db.backends:89] [DEBUG]- (0.163) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:06:34,003 utils.py [django.db.backends:89] [DEBUG]- (0.161) SHOW FULL TABLES; args=None
+2018-05-23 18:06:34,167 utils.py [django.db.backends:89] [DEBUG]- (0.160) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-23 18:06:35,948 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:06:35,950 views.py [django:66] [ERROR]- No JSON object could be decoded
+2018-05-23 18:06:35,950 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 67, in SendTelegram
+    s = sendTelegram({'text': clientip + ': 发送telegram信息失败！', 'bot': 'sa_monitor_bot', 'group': 'arno_test'}) #arno_test
+  File "J:\arno\test\phx_web\detect\telegram.py", line 31, in __init__
+    bot        = message['bot'] if message.has_key['bot'] else ''
+TypeError: 'builtin_function_or_method' object has no attribute '__getitem__'
+2018-05-23 18:07:00,842 utils.py [django.db.backends:89] [DEBUG]- (0.167) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:07:02,076 utils.py [django.db.backends:89] [DEBUG]- (0.165) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:07:02,242 utils.py [django.db.backends:89] [DEBUG]- (0.165) SHOW FULL TABLES; args=None
+2018-05-23 18:07:02,410 utils.py [django.db.backends:89] [DEBUG]- (0.166) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-23 18:07:27,881 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:07:27,881 views.py [django:66] [ERROR]- No JSON object could be decoded
+2018-05-23 18:07:27,881 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 67, in SendTelegram
+    s = sendTelegram({'text': clientip + ': 发送telegram信息失败！', 'bot': 'sa_monitor_bot', 'group': 'arno_test'}) #arno_test
+  File "J:\arno\test\phx_web\detect\telegram.py", line 31, in __init__
+    bot        = message['bot'] if message.has_key['bot'] else ''
+TypeError: 'builtin_function_or_method' object has no attribute '__getitem__'
+2018-05-23 18:09:42,905 utils.py [django.db.backends:89] [DEBUG]- (0.180) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:09:44,125 utils.py [django.db.backends:89] [DEBUG]- (0.165) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:09:44,290 utils.py [django.db.backends:89] [DEBUG]- (0.166) SHOW FULL TABLES; args=None
+2018-05-23 18:09:44,457 utils.py [django.db.backends:89] [DEBUG]- (0.165) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-23 18:11:28,979 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:11:28,979 views.py [django:66] [ERROR]- No JSON object could be decoded
+2018-05-23 18:11:28,980 telegram.py [django:56] [ERROR]- Attention: send message failed!
+2018-05-23 18:11:28,980 telegram.py [django:57] [ERROR]- 'sendTelegram' object has no attribute 'url'
+2018-05-23 18:11:52,316 utils.py [django.db.backends:89] [DEBUG]- (0.165) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:11:53,834 utils.py [django.db.backends:89] [DEBUG]- (0.180) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:11:54,016 utils.py [django.db.backends:89] [DEBUG]- (0.181) SHOW FULL TABLES; args=None
+2018-05-23 18:11:54,207 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-23 18:12:08,808 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:12:08,808 views.py [django:66] [ERROR]- No JSON object could be decoded
+2018-05-23 18:12:08,809 telegram.py [django:56] [ERROR]- Attention: send message failed!
+2018-05-23 18:12:08,809 telegram.py [django:57] [ERROR]- 'sendTelegram' object has no attribute '_sendTelegram__files'
+2018-05-23 18:12:45,512 utils.py [django.db.backends:89] [DEBUG]- (0.176) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:12:46,895 utils.py [django.db.backends:89] [DEBUG]- (0.171) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:12:47,069 utils.py [django.db.backends:89] [DEBUG]- (0.174) SHOW FULL TABLES; args=None
+2018-05-23 18:12:47,239 utils.py [django.db.backends:89] [DEBUG]- (0.166) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-23 18:12:47,595 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:12:47,596 views.py [django:66] [ERROR]- No JSON object could be decoded
+2018-05-23 18:12:49,551 telegram.py [django:61] [INFO]- send message failed!
+2018-05-23 18:13:06,061 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:13:06,062 views.py [django:66] [ERROR]- No JSON object could be decoded
+2018-05-23 18:13:07,470 telegram.py [django:61] [INFO]- send message failed!
+2018-05-23 18:14:23,503 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:14:23,503 views.py [django:66] [ERROR]- Expecting property name: line 2 column 2 (char 3)
+2018-05-23 18:14:24,822 telegram.py [django:61] [INFO]- send message failed!
+2018-05-23 18:14:29,648 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:14:29,648 views.py [django:66] [ERROR]- Expecting property name: line 2 column 2 (char 3)
+2018-05-23 18:14:30,868 telegram.py [django:61] [INFO]- send message failed!
+2018-05-23 18:16:01,259 utils.py [django.db.backends:89] [DEBUG]- (0.168) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:16:02,637 utils.py [django.db.backends:89] [DEBUG]- (0.164) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:16:02,803 utils.py [django.db.backends:89] [DEBUG]- (0.167) SHOW FULL TABLES; args=None
+2018-05-23 18:16:02,967 utils.py [django.db.backends:89] [DEBUG]- (0.162) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-23 18:16:16,671 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:16:16,673 views.py [django:66] [ERROR]- Expecting property name: line 2 column 2 (char 3)
+2018-05-23 18:16:18,387 telegram.py [django:61] [INFO]- send message successfull!
+2018-05-23 18:18:02,362 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:18:02,364 views.py [django:66] [ERROR]- Expecting property name: line 2 column 2 (char 3)
+2018-05-23 18:18:03,759 telegram.py [django:61] [INFO]- send message successfull!
+2018-05-23 18:19:15,963 utils.py [django.db.backends:89] [DEBUG]- (0.156) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:19:17,263 utils.py [django.db.backends:89] [DEBUG]- (0.177) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:19:17,441 utils.py [django.db.backends:89] [DEBUG]- (0.178) SHOW FULL TABLES; args=None
+2018-05-23 18:19:17,621 utils.py [django.db.backends:89] [DEBUG]- (0.178) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-23 18:19:38,411 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:19:38,411 views.py [django:66] [ERROR]- Expecting property name: line 2 column 2 (char 3)
+2018-05-23 18:19:40,203 telegram.py [django:61] [INFO]- send message successfull!
+2018-05-23 18:21:00,891 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:21:02,256 telegram.py [django:61] [INFO]- send message successfull!
+2018-05-23 18:21:30,015 utils.py [django.db.backends:89] [DEBUG]- (0.157) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:21:31,233 utils.py [django.db.backends:89] [DEBUG]- (0.164) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-23 18:21:31,407 utils.py [django.db.backends:89] [DEBUG]- (0.174) SHOW FULL TABLES; args=None
+2018-05-23 18:21:31,575 utils.py [django.db.backends:89] [DEBUG]- (0.167) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-23 18:21:42,447 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:21:44,075 telegram.py [django:61] [INFO]- send message successfull!

@@ -55,19 +55,26 @@ def SendTelegram(request):
     if request.method == 'POST':
         try:
             message = json.loads(request.body)
+            if not isinstance(message, dict): 
+                logger.error('%s is not dict.' %message)
+                s = sendTelegram({'text': clientip + ': 发送telegram信息失败，参数不是字典！', 'bot': 'sa_monitor_bot', 'group': 'arno_test'}) #arno_test
+                if s.send():
+                    return HttpResponse(content='参数错误！', status=500)
+                else: 
+                    return HttpResponse(content='telegram 发送失败！', status=502)
         except Exception, e:
             logger.error(e.message)
-            sendTelegram(clientip + ': 发送telegram信息失败！', chat_id='-204952096') #arno_test
-            return HttpResponse(content='参数错误！', status=500)
+            s = sendTelegram({'text': clientip + ': 发送telegram信息失败！\r\n' + e.message, 'bot': 'sa_monitor_bot', 'group': 'arno_test'}) #arno_test
+            if s.send():
+                return HttpResponse(content='参数错误！', status=500)
+            else: 
+                return HttpResponse(content='telegram 发送失败！', status=502)
 
-        try:
-            sendTelegram(message['text'], chat_id=message['chat_id'], doc=message['doc'])
 
-        except Exception, e:
-            logger.error(e.message)
-            sendTelegram(clientip + ': 发送telegram信息失败！' + str(message), chat_id='-204952096') #arno_test
-            return HttpResponse(content='参数错误: %s' %message, status=500)
-        else:
+        s = sendTelegram(message)
+        if s.send():
             return HttpResponse('发送成功！')
+        else: 
+            return HttpResponse(content='telegram 发送失败！', status=502)
     else:
         return HttpResponse(status=403)

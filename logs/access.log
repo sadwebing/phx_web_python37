@@ -11870,3 +11870,209 @@ NameError: name 'self' is not defined
 2018-05-22 18:49:29,275 views.py [django:264] [INFO]- 127.0.0.1 is requesting.
 2018-05-22 18:49:29,950 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
 2018-05-22 18:49:38,828 views.py [django:128] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'list', u'target': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], u'exe_user': u'root', u'arguments': u''}
+2018-05-23 18:02:11,444 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 20, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\detect\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\detect\views.py", line 9, in <module>
+    from telegram                       import sendTelegram
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43
+    self.__url     = tg.['url'][bot] if tg.['url'].has_key(bot) else tg.['url']['sa_monitor_bot']
+                        ^
+SyntaxError: invalid syntax
+2018-05-23 18:03:26,710 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 20, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\detect\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\detect\views.py", line 9, in <module>
+    from telegram                       import sendTelegram
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43
+    self.__url     = tg['url'][bot] if tg.['url'].has_key(bot) else tg['url']['sa_monitor_bot']
+                                          ^
+SyntaxError: invalid syntax
+2018-05-23 18:03:45,240 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 20, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\detect\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\detect\views.py", line 9, in <module>
+    from telegram                       import sendTelegram
+  File "J:\arno\test\phx_web\detect\telegram.py", line 9, in <module>
+    from models import telegram_user_id_t
+ImportError: cannot import name telegram_user_id_t
+2018-05-23 18:04:08,325 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 20, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\detect\urls.py", line 8, in <module>
+    url('get_telegram_user_id$', views.GetTelegramUserId, name='GetTelegramUserId'),
+AttributeError: 'module' object has no attribute 'GetTelegramUserId'
+2018-05-23 18:04:25,908 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:04:25,908 views.py [django:66] [ERROR]- No JSON object could be decoded
+2018-05-23 18:04:25,908 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 67, in SendTelegram
+    s = sendTelegram({'text': clientip + ': 发送telegram信息失败！', 'bot': 'sa_monitor_bot', 'group': 'arno_test'}) #arno_test
+TypeError: __init__() takes exactly 1 argument (2 given)
+2018-05-23 18:05:44,434 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:05:44,434 views.py [django:66] [ERROR]- No JSON object could be decoded
+2018-05-23 18:05:44,434 telegram.py [django:38] [ERROR]- 'builtin_function_or_method' object has no attribute '__getitem__'
+2018-05-23 18:05:44,434 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 67, in SendTelegram
+    s = sendTelegram({'text': clientip + ': 发送telegram信息失败！', 'bot': 'sa_monitor_bot', 'group': 'arno_test'}) #arno_test
+  File "J:\arno\test\phx_web\detect\telegram.py", line 41, in __init__
+    self.__doc     = doc
+UnboundLocalError: local variable 'doc' referenced before assignment
+2018-05-23 18:06:35,948 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:06:35,950 views.py [django:66] [ERROR]- No JSON object could be decoded
+2018-05-23 18:06:35,950 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 67, in SendTelegram
+    s = sendTelegram({'text': clientip + ': 发送telegram信息失败！', 'bot': 'sa_monitor_bot', 'group': 'arno_test'}) #arno_test
+  File "J:\arno\test\phx_web\detect\telegram.py", line 31, in __init__
+    bot        = message['bot'] if message.has_key['bot'] else ''
+TypeError: 'builtin_function_or_method' object has no attribute '__getitem__'
+2018-05-23 18:07:27,881 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:07:27,881 views.py [django:66] [ERROR]- No JSON object could be decoded
+2018-05-23 18:07:27,881 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 67, in SendTelegram
+    s = sendTelegram({'text': clientip + ': 发送telegram信息失败！', 'bot': 'sa_monitor_bot', 'group': 'arno_test'}) #arno_test
+  File "J:\arno\test\phx_web\detect\telegram.py", line 31, in __init__
+    bot        = message['bot'] if message.has_key['bot'] else ''
+TypeError: 'builtin_function_or_method' object has no attribute '__getitem__'
+2018-05-23 18:11:28,979 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:11:28,979 views.py [django:66] [ERROR]- No JSON object could be decoded
+2018-05-23 18:11:28,980 telegram.py [django:56] [ERROR]- Attention: send message failed!
+2018-05-23 18:11:28,980 telegram.py [django:57] [ERROR]- 'sendTelegram' object has no attribute 'url'
+2018-05-23 18:12:08,808 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:12:08,808 views.py [django:66] [ERROR]- No JSON object could be decoded
+2018-05-23 18:12:08,809 telegram.py [django:56] [ERROR]- Attention: send message failed!
+2018-05-23 18:12:08,809 telegram.py [django:57] [ERROR]- 'sendTelegram' object has no attribute '_sendTelegram__files'
+2018-05-23 18:12:47,595 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:12:47,596 views.py [django:66] [ERROR]- No JSON object could be decoded
+2018-05-23 18:12:49,551 telegram.py [django:61] [INFO]- send message failed!
+2018-05-23 18:13:06,061 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:13:06,062 views.py [django:66] [ERROR]- No JSON object could be decoded
+2018-05-23 18:13:07,470 telegram.py [django:61] [INFO]- send message failed!
+2018-05-23 18:14:23,503 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:14:23,503 views.py [django:66] [ERROR]- Expecting property name: line 2 column 2 (char 3)
+2018-05-23 18:14:24,822 telegram.py [django:61] [INFO]- send message failed!
+2018-05-23 18:14:29,648 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:14:29,648 views.py [django:66] [ERROR]- Expecting property name: line 2 column 2 (char 3)
+2018-05-23 18:14:30,868 telegram.py [django:61] [INFO]- send message failed!
+2018-05-23 18:16:16,671 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:16:16,673 views.py [django:66] [ERROR]- Expecting property name: line 2 column 2 (char 3)
+2018-05-23 18:16:18,387 telegram.py [django:61] [INFO]- send message successfull!
+2018-05-23 18:18:02,362 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:18:02,364 views.py [django:66] [ERROR]- Expecting property name: line 2 column 2 (char 3)
+2018-05-23 18:18:03,759 telegram.py [django:61] [INFO]- send message successfull!
+2018-05-23 18:19:38,411 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:19:38,411 views.py [django:66] [ERROR]- Expecting property name: line 2 column 2 (char 3)
+2018-05-23 18:19:40,203 telegram.py [django:61] [INFO]- send message successfull!
+2018-05-23 18:21:00,891 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:21:02,256 telegram.py [django:61] [INFO]- send message successfull!
+2018-05-23 18:21:42,447 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 18:21:44,075 telegram.py [django:61] [INFO]- send message successfull!

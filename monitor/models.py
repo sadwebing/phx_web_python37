@@ -19,7 +19,7 @@ class telegram_user_id_t(models.Model):
         unique_together = ('user' ,'user_id')
 
     def __str__(self):
-        return " | ".join([self.user, self.name, self.user_id])
+        return " | ".join([self.user, self.name, str(self.user_id)])
 
 class minion_ip_t(models.Model):
     minion_id = models.CharField(max_length=32, null=False)

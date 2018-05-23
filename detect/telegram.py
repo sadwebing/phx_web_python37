@@ -6,6 +6,8 @@
 
 import requests, sys, os
 import datetime, json, logging, re
+from monitor.models import telegram_user_id_t
+from phxweb import settings
 
 logger = logging.getLogger('django')
 
@@ -16,35 +18,49 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 #获取当前脚本路径
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-#telegram 参数
-tg_api  = '471691674:AAFx1MQ3VwXdWUYyh4CaErzwoUNswG9XDsU'  # @AuraAlertBot api
-tg_url  = 'https://api.telegram.org/bot%s/sendMessage' %tg_api
-message = {} # 信息主体
-message['chat_id'] = ''  # '-204952096': arno_test | '-275535278': chk_ng alert | '-317680977': 域名监控
-message['text']    = ''
-
 #获取当前时间，以特定的格式，如Wed, 09 May 2018 12:51:25 GMT
 def getDate():
     return datetime.datetime.utcnow().strftime('%a, %d %b %Y %H:%M:%S   GMT')
 
 #telegram 通知
-def sendTelegram(text, chat_id='-204952096' , doc=False, timeout=15):
-    message['chat_id'] = chat_id
-    if doc:
-        with open('warning.txt', 'w') as f:
-            for line in text.split('\n'):
-                f.writelines(line+'\r\n')
-        files = {'document': open('warning.txt', 'rb')}
-        try:
-            ret = requests.post(tg_url.replace('sendMessage', 'sendDocument'), data=message, files=files, timeout=timeout)
-        except Exception, e:
-            print 'Attention: send message failed!'
-            print e.message
 
-    else:
-        message['text'] = text
+class sendTelegram(object):
+    def __init__(self, message):
+        '''参数初始化'''
+        tg         = settings.TELEGRAM_API
+        bot        = message['bot'] if message.has_key('bot') else ''
+        doc        = message['doc'] if message.has_key('doc') else False
+        group      = message['group'] if message.has_key('group') else ''
+        parse_mode = message['parse_mode'] if message.has_key('parse_mode') else 'HTML'
+        timeout    = message['timeout'] if message.has_key('timeout') and isinstance(message['timeout'], int) else 15
+
+        self.__message = {}
+        self.__doc     = doc
+        self.__timeout = timeout
+        self.__url     = tg['url'][bot] if tg['url'].has_key(bot) else tg['url']['sa_monitor_bot']
+        self.__message['chat_id']    = tg['chat_id'][group] if tg['chat_id'].has_key(group) else tg['chat_id']['arno_test']
+        self.__message['parse_mode'] = parse_mode
+        self.__message['text']       = message['text'] if message.has_key('text') else ''
+
+    def send(self):
         try:
-            ret = requests.post(tg_url, data=message, timeout=timeout)
+            if self.__doc:
+                with open('warning.txt', 'w') as f:
+                    for line in text.split('\n'):
+                        f.writelines(line+'\r\n')
+                self.__files = {'document': open('warning.txt', 'rb')}
+                ret = requests.post(self.__url+'sendDocument', data=self.__message, files=self.__files, timeout=self.__timeout)
+            else:
+                ret = requests.post(self.__url+'sendMessage', data=self.__message, timeout=self.__timeout)
         except Exception, e:
-            print 'Attention: send message failed!'
-            print e.message
+            logger.error('Attention: send message failed!')
+            logger.error(e.message)
+            return False
+        else:
+            if ret.status_code == 200:
+                logger.info('send message successfull!')
+                return True
+            else:
+                logger.error('Attention: send message failed!')
+                logger.error('%s: %s' %(ret.status_code, ret.content))
+                return False

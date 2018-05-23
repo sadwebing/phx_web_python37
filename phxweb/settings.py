@@ -55,6 +55,21 @@ SALT_API = {
     'password':"phexus666",
 }
 
+#telegram api
+TELEGRAM_API = {
+    'url':{
+        'AuraAlertBot'  : 'https://api.telegram.org/bot471691674:AAFx1MQ3VwXdWUYyh4CaErzwoUNswG9XDsU/',
+        'sa_monitor_bot': 'https://api.telegram.org/bot422793714:AAGmueQN9m83Sj0-tbZVwXEC2TySdg8EHD0/',
+    },
+    'chat_id':{
+        'arno_test'   : '-204952096',
+        'chk_ng_alert': '-275535278',
+        'domain_alert': '-317680977',
+        'kindergarten': '-186348806',
+        'yunwei'      : '-306748551',
+    },
+}
+
 # Application definition
 
 INSTALLED_APPS = (
