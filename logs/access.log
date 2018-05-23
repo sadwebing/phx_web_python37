@@ -12076,3 +12076,221 @@ TypeError: 'builtin_function_or_method' object has no attribute '__getitem__'
 2018-05-23 18:21:02,256 telegram.py [django:61] [INFO]- send message successfull!
 2018-05-23 18:21:42,447 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
 2018-05-23 18:21:44,075 telegram.py [django:61] [INFO]- send message successfull!
+2018-05-23 19:01:33,892 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 19:01:33,892 views.py [django:66] [ERROR]- No JSON object could be decoded
+2018-05-23 19:01:36,059 telegram.py [django:63] [INFO]- send message successfull!
+2018-05-23 19:02:29,744 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 19:02:32,885 telegram.py [django:63] [INFO]- send message successfull!
+2018-05-23 19:03:23,289 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 19:03:26,480 telegram.py [django:62] [INFO]- send message successfull!
+2018-05-23 20:31:04,078 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 20, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\detect\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\detect\views.py", line 9, in <module>
+    from telegram                       import sendTelegram
+  File "J:\arno\test\phx_web\detect\telegram.py", line 59
+    if user_id_l.has_key(user)
+                             ^
+SyntaxError: invalid syntax
+2018-05-23 20:33:48,086 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:33:48,086 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 74, in SendTelegram
+    s = sendTelegram(message)
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43, in __init__
+    self.__message['text']       = getAtUsers(message['text']) if message.has_key('text') else ''
+NameError: global name 'getAtUsers' is not defined
+2018-05-23 20:34:39,144 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:34:40,654 telegram.py [django:87] [ERROR]- Attention: send message failed!
+2018-05-23 20:34:40,654 telegram.py [django:88] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: message text is empty"}
+2018-05-23 20:35:22,553 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:35:31,023 telegram.py [django:87] [ERROR]- Attention: send message failed!
+2018-05-23 20:35:31,023 telegram.py [django:88] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: message text is empty"}
+2018-05-23 20:37:06,431 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:37:07,984 telegram.py [django:85] [INFO]- send message successfull!
+2018-05-23 20:37:37,852 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:37:39,384 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 74, in SendTelegram
+    s = sendTelegram(message)
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43, in __init__
+    self.__message['text']       = self.getAtUsers(message['text']) if message.has_key('text') else ''
+  File "J:\arno\test\phx_web\detect\telegram.py", line 54, in getAtUsers
+    user_id_l[s.user] = {}
+AttributeError: 'QuerySet' object has no attribute 'user'
+2018-05-23 20:40:24,519 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:40:26,773 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 74, in SendTelegram
+    s = sendTelegram(message)
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43, in __init__
+    self.__message['text']       = self.getAtUsers(message['text']) if message.has_key('text') else ''
+  File "J:\arno\test\phx_web\detect\telegram.py", line 59, in getAtUsers
+    if user_id_l.has_key(user):
+TypeError: unhashable type: 'dict'
+2018-05-23 20:45:03,851 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:45:05,191 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 74, in SendTelegram
+    s = sendTelegram(message)
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43, in __init__
+    self.__message['text']       = self.getAtUsers(message['text']) if message.has_key('text') else ''
+  File "J:\arno\test\phx_web\detect\telegram.py", line 59, in getAtUsers
+    if user_id_l.has_key(user):
+TypeError: unhashable type: 'dict'
+2018-05-23 20:46:05,016 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:46:06,313 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 74, in SendTelegram
+    s = sendTelegram(message)
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43, in __init__
+    self.__message['text']       = self.getAtUsers(message['text']) if message.has_key('text') else ''
+  File "J:\arno\test\phx_web\detect\telegram.py", line 60, in getAtUsers
+    text.replace(user['user'], "<a href='tg://user?id=%s'>%s</a>" %(user_id_l[user]['user_id'], user_id_l[user]['name']))
+TypeError: unhashable type: 'dict'
+2018-05-23 20:46:58,474 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:47:01,540 telegram.py [django:85] [INFO]- send message successfull!
+2018-05-23 20:47:18,730 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:47:21,599 telegram.py [django:85] [INFO]- send message successfull!
+2018-05-23 20:48:08,121 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:48:08,122 telegram.py [django:50] [INFO]- [{'user': u'@arno', 'name': u'arno'}]
+2018-05-23 20:48:11,085 telegram.py [django:87] [INFO]- send message successfull!
+2018-05-23 20:48:25,569 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:48:25,569 telegram.py [django:50] [INFO]- [{'user': u'@Arno', 'name': u'arno'}]
+2018-05-23 20:48:29,994 telegram.py [django:87] [INFO]- send message successfull!
+2018-05-23 20:49:18,753 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:49:18,753 telegram.py [django:50] [INFO]- [{'user': u'@Arno', 'name': u'arno'}]
+2018-05-23 20:49:20,076 telegram.py [django:68] [INFO]- 这是文本内容@Arno
+2018-05-23 20:49:21,760 telegram.py [django:88] [INFO]- send message successfull!
+2018-05-23 20:50:27,321 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:50:27,321 telegram.py [django:50] [INFO]- [{'user': u'@Arno', 'name': u'arno'}]
+2018-05-23 20:50:28,788 telegram.py [django:59] [INFO]- {u'qiuge': {'user_id': 182587891L, 'name': u'\u4e18\u54e5'}, u'xiaoye': {'user_id': 359511473L, 'name': u'\u5c0f\u53f6'}, u'xiaoran': {'user_id': 344772090L, 'name': u'\u5c0f\u7136'}, u'alan': {'user_id': 468369327L, 'name': u'Alan'}, u'xiaoqi': {'user_id': 394594003L, 'name': u'\u5c0f\u4e03'}, u'xiaocao': {'user_id': 475349225L, 'name': u'\u5c0f\u8349'}, u'xiaoyu': {'user_id': 369712791L, 'name': u'\u5c0f\u9c7c'}, u'xiaoliu': {'user_id': 325937187L, 'name': u'\u5c0f\u516d'}, u'xiaowu': {'user_id': 379040163L, 'name': u'\u5c0f\u4e94'}, u'xiaoxuan': {'user_id': 357998555L, 'name': u'\u5c0f\u7384'}, u'docker': {'user_id': 568911465L, 'name': u'Docker'}, u'arno': {'user_id': 538338514L, 'name': u'Arno'}, u'wenwen': {'user_id': 471120806L, 'name': u'\u96ef\u96ef'}}
+2018-05-23 20:50:28,788 telegram.py [django:69] [INFO]- 这是文本内容@Arno
+2018-05-23 20:50:30,635 telegram.py [django:89] [INFO]- send message successfull!
+2018-05-23 20:51:32,601 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:51:32,601 telegram.py [django:50] [INFO]- [{'user': u'@Arno', 'name': u'arno'}]
+2018-05-23 20:51:34,102 telegram.py [django:59] [INFO]- {u'qiuge': {'user_id': 182587891L, 'name': u'\u4e18\u54e5'}, u'xiaoye': {'user_id': 359511473L, 'name': u'\u5c0f\u53f6'}, u'xiaoran': {'user_id': 344772090L, 'name': u'\u5c0f\u7136'}, u'alan': {'user_id': 468369327L, 'name': u'Alan'}, u'xiaoqi': {'user_id': 394594003L, 'name': u'\u5c0f\u4e03'}, u'xiaocao': {'user_id': 475349225L, 'name': u'\u5c0f\u8349'}, u'xiaoyu': {'user_id': 369712791L, 'name': u'\u5c0f\u9c7c'}, u'xiaoliu': {'user_id': 325937187L, 'name': u'\u5c0f\u516d'}, u'xiaowu': {'user_id': 379040163L, 'name': u'\u5c0f\u4e94'}, u'xiaoxuan': {'user_id': 357998555L, 'name': u'\u5c0f\u7384'}, u'docker': {'user_id': 568911465L, 'name': u'Docker'}, u'arno': {'user_id': 538338514L, 'name': u'Arno'}, u'wenwen': {'user_id': 471120806L, 'name': u'\u96ef\u96ef'}}
+2018-05-23 20:51:34,104 telegram.py [django:63] [INFO]- {'user_id': 538338514L, 'name': u'Arno'}
+2018-05-23 20:51:34,105 telegram.py [django:70] [INFO]- 这是文本内容@Arno
+2018-05-23 20:51:35,802 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 20:53:47,109 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:53:50,299 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 20:54:21,676 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:54:26,855 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 20:54:42,661 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:54:45,341 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 20:56:08,792 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:56:11,944 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 20:56:28,138 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:56:30,698 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 20:56:41,528 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:56:44,108 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 20:57:26,049 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:57:29,974 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 20:57:41,706 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:57:44,426 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 20:57:55,368 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:58:00,924 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 20:58:50,828 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:58:54,075 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 20:59:25,023 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:59:29,940 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 20:59:46,714 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 20:59:49,292 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:01:55,734 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:01:58,503 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:02:23,072 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:02:30,257 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:02:59,644 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:03:02,303 telegram.py [django:70] [INFO]- 这是文本内容
+<a href='tg://user?id=538338514'>Arno</a> <a href='tg://user?id=379040163'>小五</a>,<a href='tg://user?id=394594003'>小七</a> <a href='tg://user?id=357998555'>小玄</a> <a href='tg://user?id=468369327'>Alan</a> <a href='tg://user?id=182587891'>丘哥</a> <a href='tg://user?id=344772090'>小然</a> <a href='tg://user?id=568911465'>Docker</a>
+2018-05-23 21:03:04,072 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:03:33,252 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:03:34,546 telegram.py [django:70] [INFO]- 这是文本内容
+<a href='tg://user?id=538338514'>Arno</a> <a href='tg://user?id=379040163'>小五</a>,<a href='tg://user?id=394594003'>小七</a> <a href='tg://user?id=357998555'>小玄</a> <a href='tg://user?id=468369327'>Alan</a> <a href='tg://user?id=182587891'>丘哥</a> <a href='tg://user?id=344772090'>小然</a> <a href='tg://user?id=568911465'>Docker</a>
+2018-05-23 21:03:35,842 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:04:46,463 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:04:47,769 telegram.py [django:70] [INFO]- 这是文本内容
+[Arno](tg://user?id=538338514) [小五](tg://user?id=379040163),[小七](tg://user?id=394594003) [小玄](tg://user?id=357998555) [Alan](tg://user?id=468369327) [丘哥](tg://user?id=182587891) [小然](tg://user?id=344772090) [Docker](tg://user?id=568911465)
+2018-05-23 21:04:50,046 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:05:04,151 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:05:05,483 telegram.py [django:70] [INFO]- 这是文本内容
+[Arno](tg://user?id=538338514) [小五](tg://user?id=379040163),[小七](tg://user?id=394594003) [小玄](tg://user?id=357998555) [Alan](tg://user?id=468369327) [丘哥](tg://user?id=182587891) [小然](tg://user?id=344772090) [Docker](tg://user?id=568911465)
+2018-05-23 21:05:06,825 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:06:47,062 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:06:48,497 telegram.py [django:70] [INFO]- 这是文本内容
+[Arno](tg://user?id=538338514) [小五](tg://user?id=379040163),[小七](tg://user?id=394594003) [小玄](tg://user?id=357998555) [Alan](tg://user?id=468369327) [丘哥](tg://user?id=182587891) [小然](tg://user?id=344772090) [Docker](tg://user?id=568911465)
+2018-05-23 21:06:49,894 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:09:03,213 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:09:07,779 telegram.py [django:70] [INFO]- 这是文本内容
+[Arno](tg://user?id=538338514) [小五](tg://user?id=379040163),[小七](tg://user?id=394594003) [小玄](tg://user?id=357998555) [Alan](tg://user?id=468369327) [丘哥](tg://user?id=182587891) [小然](tg://user?id=344772090) [Docker](tg://user?id=568911465)
+2018-05-23 21:09:09,346 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:09:46,548 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:09:47,960 telegram.py [django:70] [INFO]- 这是文本内容
+[Arno](tg://user?id=538338514) [小五](tg://user?id=379040163),[小七](tg://user?id=394594003) [小玄](tg://user?id=357998555) [Alan](tg://user?id=468369327) [丘哥](tg://user?id=182587891) [小然](tg://user?id=344772090) [Docker](tg://user?id=568911465)
+2018-05-23 21:09:49,253 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:14:15,163 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:14:18,417 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:15:51,635 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:15:54,688 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:21:50,500 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:21:55,068 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:22:26,846 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:22:29,624 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:24:58,311 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:25:00,937 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:25:23,595 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:25:26,413 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:37:06,144 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:37:08,822 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:37:23,138 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:37:27,726 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:39:18,405 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:39:21,312 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:39:46,275 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:39:48,966 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-23 21:41:16,575 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-23 21:41:19,901 telegram.py [django:90] [INFO]- send message successfull!
