@@ -38,9 +38,9 @@ class Command(object):
             self.tgt_list = results[0].keys()
         for minionid in self.tgt_list:
             try:
-                self.info[minionid] = results[0][minionid]
+                self.info[minionid.strip()] = results[0][minionid]
             except:
-                self.info[minionid] = "not return"
+                self.info[minionid.strip()] = "not return"
 
         return self.info
 
@@ -65,9 +65,9 @@ class Command(object):
                 
         for minionid in self.tgt_list:
             try:
-                self.info[minionid] = results['return'][0][minionid]
+                self.info[minionid.strip()] = results['return'][0][minionid]
             except:
-                self.info[minionid] = "not return"
+                self.info[minionid.strip()] = "not return"
         return self.info
 
     def StateSls(self, arg=''):
@@ -87,7 +87,7 @@ class Command(object):
             self.tgt_list = results['return'][0].keys()
         for minionid in self.tgt_list:
             try:
-                self.info[minionid] = yaml.safe_dump(results['return'][0][minionid], default_flow_style=False, allow_unicode=True)
+                self.info[minionid.strip()] = yaml.safe_dump(results['return'][0][minionid], default_flow_style=False, allow_unicode=True)
             except:
-                self.info[minionid] = "not return"
+                self.info[minionid.strip()] = "not return"
         return self.info

@@ -104,13 +104,13 @@ var operate = {
     Getcommandform: function getEntity(commandform) {
         var formdata = {
             expr_form:document.getElementById("expr_form").value,
-            target:document.getElementById("target").value,
+            target:document.getElementById("target").value.replace(/[\s*]/g, ''),
             function:document.getElementById("function").value,
             arguments:document.getElementById("arguments").value,
         };
-        var target = document.getElementById("target").value;
+        var target = formdata['target'];
         if (formdata['expr_form'] == 'list'){
-            formdata['target'] = target.replace(/[\s*]/g, '').split(',');
+            formdata['target'] = target.split(',');
         }
         return formdata;
     },

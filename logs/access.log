@@ -12294,3 +12294,27 @@ TypeError: unhashable type: 'dict'
 2018-05-23 21:39:48,966 telegram.py [django:90] [INFO]- send message successfull!
 2018-05-23 21:41:16,575 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
 2018-05-23 21:41:19,901 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-26 15:57:49,986 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-26 15:59:12,444 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-26 15:59:17,915 views.py [django:264] [INFO]- 127.0.0.1 is requesting.
+2018-05-26 15:59:18,618 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-26 15:59:40,223 views.py [django:128] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u' SA-VPN-BJ-35-62', u'exe_user': u'root', u'arguments': u'/usr/bin/python3 /root/execute.py'}
+2018-05-26 15:59:40,667 saltapi.py [django:68] [INFO]-  SA-VPN-BJ-35-62 "[u'runas=root', u'/usr/bin/python3 /root/execute.py', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2018-05-26 15:59:55,970 views.py [django:128] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'glob', u'target': u' SA-VPN-BJ-35-62', u'exe_user': u'root', u'arguments': u'/usr/bin/python3 /root/execute.py'}
+2018-05-26 16:01:48,398 views.py [django:128] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'glob', u'target': u' SA-VPN-BJ-35-62', u'exe_user': u'root', u'arguments': u'/usr/bin/python3 /root/execute.py'}
+2018-05-26 16:03:03,983 views.py [django:128] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'list', u'target': [u'SA-VPN-BJ-35-62'], u'exe_user': u'root', u'arguments': u''}
+2018-05-26 16:10:56,003 views.py [django:128] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'glob', u'target': u' SA-VPN-BJ-35-62', u'exe_user': u'root', u'arguments': u'/usr/bin/python3 /root/execute.py'}
+2018-05-26 16:11:55,696 views.py [django:128] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'glob', u'target': u' SA-VPN-BJ-35-62', u'exe_user': u'root', u'arguments': u'/usr/bin/python3 /root/execute.py'}
+2018-05-26 16:12:11,052 views.py [django:128] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u' SA-VPN-BJ-35-62', u'exe_user': u'root', u'arguments': u'/usr/bin/python3 /root/execute.py'}
+2018-05-26 16:12:11,516 saltapi.py [django:68] [INFO]-  SA-VPN-BJ-35-62 "[u'runas=root', u'/usr/bin/python3 /root/execute.py', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2018-05-26 16:12:59,884 views.py [django:128] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'SA-VPN-BJ-35-62', u'exe_user': u'root', u'arguments': u'/usr/bin/python3 /root/execute.py'}
+2018-05-26 16:13:26,348 saltapi.py [django:68] [INFO]- SA-VPN-BJ-35-62 "[u'runas=root', u'/usr/bin/python3 /root/execute.py', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2018-05-26 16:22:40,713 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-26 16:22:42,289 views.py [django:264] [INFO]- 127.0.0.1 is requesting.
+2018-05-26 16:22:42,987 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-26 16:22:52,028 views.py [django:128] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'list', u'target': [u'SA-VPN-BJ-35-62'], u'exe_user': u'root', u'arguments': u''}
+2018-05-26 16:23:00,905 views.py [django:128] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'glob', u'target': u'  SA-VPN-BJ-35-62', u'exe_user': u'root', u'arguments': u''}
+2018-05-26 16:24:31,526 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-05-26 16:24:32,451 views.py [django:264] [INFO]- 127.0.0.1 is requesting.
+2018-05-26 16:24:33,121 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-05-26 16:24:36,930 views.py [django:128] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'glob', u'target': u'SA-VPN-BJ-35-62', u'exe_user': u'root', u'arguments': u''}
