@@ -59,7 +59,7 @@ SALT_API = {
 TELEGRAM_API = {
     'url':{
         'AuraAlertBot'  : 'https://api.telegram.org/bot471691674:AAFx1MQ3VwXdWUYyh4CaErzwoUNswG9XDsU/',
-        'sa_monitor_bot': 'https://api.telegram.org/bot422793714:AAGmueQN9m83Sj0-tbZVwXEC2TySdg8EHD0/',
+        'sa_monitor_bot': 'https://api.telegram.org/bot422793714:AAE8A-sLU1Usms2bJxiKWc3tUWaWYP98bSU/',
     },
     'chat_id':{
         'arno_test'   : '-204952096',

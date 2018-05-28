@@ -42,32 +42,32 @@ class sendTelegram(object):
         self.__message['doc_name']   = message['doc_name']   if message.has_key('doc_name')   else 'warning.txt'
         self.__message['caption']    = self.getAtUsers(message['caption']) if message.has_key('caption') else ''
         self.__message['text']       = self.getAtUsers(message['text'])    if message.has_key('text') else ''
+        self.__message['disable_web_page_preview'] = False if message.has_key('disable_web_page_preview') and message['disable_web_page_preview'].lower() == 'false' else True
 
     def getAtUsers(self, text):
         user_l = [ {'user': '@'+re.match('[a-z|A-Z]+(?![a-z])', user).group(), 
                     'name': re.match('[a-z]+(?![a-z])', user.lower()).group()} 
                     for user in text.split('@')[1:] if re.match('[a-z]+(?![a-z])', user.lower())]
 
-        #logger.info(user_l)
+        if self.__message['parse_mode'] == 'HTML':
+            text = text.replace("<", "&lt;").replace(">", "&gt;")
 
-        if self.__message['parse_mode'] == 'HTML' or self.__message['parse_mode'] == 'Markdown':
+        if user_l:
             user_id_l = {}
             s = telegram_user_id_t.objects.all()
             for i in s:
                 user_id_l[i.user] = {}
                 user_id_l[i.user]['name']    = i.name
                 user_id_l[i.user]['user_id'] = i.user_id
-        #logger.info(user_id_l)
-        if self.__message['parse_mode'] == 'HTML':
-            for user in user_l:
-                if user_id_l.has_key(user['name']):
-                    #logger.info(user_id_l[user['name']])
-                    text = text.replace(user['user'], "<a href='tg://user?id=%s'>%s</a>" %(user_id_l[user['name']]['user_id'], user_id_l[user['name']]['name']))
 
-        if self.__message['parse_mode'] == 'Markdown':
             for user in user_l:
                 if user_id_l.has_key(user['name']):
-                    text = text.replace(user['user'], "[%s](tg://user?id=%s)" %(user_id_l[user['name']]['name'], user_id_l[user['name']]['user_id']))
+                    if self.__message['parse_mode'] == 'HTML':
+                        atUser = "<a href='tg://user?id=%s'>%s</a>" %(user_id_l[user['name']]['user_id'], user_id_l[user['name']]['name'])
+                    elif self.__message['parse_mode'] == 'Markdown':
+                        atUser = "[%s](tg://user?id=%s)" %(user_id_l[user['name']]['name'], user_id_l[user['name']]['user_id'])
+                    text = text.replace(user['user'], atUser)
+
         #logger.info(text)
         return text
 

@@ -10007,3 +10007,114 @@ Traceback (most recent call last):
   File "J:\arno\test\lib\site-packages\dnsn\resolver.py", line 31, in <module>
     import dns.exception
 ImportError: No module named exception
+2018-05-28 20:23:28,417 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 74, in SendTelegram
+    s = sendTelegram(message)
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43, in __init__
+    self.__message['caption']    = self.getAtUsers(message['caption']) if message.has_key('caption') else ''
+  File "J:\arno\test\phx_web\detect\telegram.py", line 63, in getAtUsers
+    if user_id_l.has_key(user['name']):
+UnboundLocalError: local variable 'user_id_l' referenced before assignment
+2018-05-28 20:23:37,471 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 74, in SendTelegram
+    s = sendTelegram(message)
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43, in __init__
+    self.__message['caption']    = self.getAtUsers(message['caption']) if message.has_key('caption') else ''
+  File "J:\arno\test\phx_web\detect\telegram.py", line 63, in getAtUsers
+    if user_id_l.has_key(user['name']):
+UnboundLocalError: local variable 'user_id_l' referenced before assignment
+2018-05-28 20:27:14,526 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 74, in SendTelegram
+    s = sendTelegram(message)
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43, in __init__
+    self.__message['caption']    = self.getAtUsers(message['caption']) if message.has_key('caption') else ''
+  File "J:\arno\test\phx_web\detect\telegram.py", line 63, in getAtUsers
+    if user_id_l.has_key(user['name']):
+UnboundLocalError: local variable 'user_id_l' referenced before assignment
+2018-05-28 20:27:19,628 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 74, in SendTelegram
+    s = sendTelegram(message)
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43, in __init__
+    self.__message['caption']    = self.getAtUsers(message['caption']) if message.has_key('caption') else ''
+  File "J:\arno\test\phx_web\detect\telegram.py", line 63, in getAtUsers
+    if user_id_l.has_key(user['name']):
+UnboundLocalError: local variable 'user_id_l' referenced before assignment
+2018-05-28 20:42:51,115 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 20, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\detect\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\detect\views.py", line 9, in <module>
+    from telegram                       import sendTelegram
+  File "J:\arno\test\phx_web\detect\telegram.py", line 45
+    self.__message['disable_web_page_preview'] = False if message.has_key('disable_web_page_preview') and message.['disable_web_page_preview'].lower() == 'false' else True
+                                                                                                                  ^
+SyntaxError: invalid syntax
+2018-05-28 21:10:15,716 telegram.py [django:93] [ERROR]- Attention: send message failed!
+2018-05-28 21:10:15,717 telegram.py [django:94] [ERROR]- 401: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2018-05-28 21:11:15,473 telegram.py [django:85] [ERROR]- Attention: send message failed!
+2018-05-28 21:11:15,473 telegram.py [django:86] [ERROR]- HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=15)
+2018-05-28 22:01:57,887 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 74, in SendTelegram
+    s = sendTelegram(message)
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43, in __init__
+    self.__message['caption']    = self.getAtUsers(message['caption']) if message.has_key('caption') else ''
+  File "J:\arno\test\phx_web\detect\telegram.py", line 68, in getAtUsers
+    text = text.replace(user['user'], atUser)
+UnboundLocalError: local variable 'atUser' referenced before assignment
+2018-05-28 22:25:19,696 telegram.py [django:94] [ERROR]- Attention: send message failed!
+2018-05-28 22:25:19,697 telegram.py [django:95] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: can't parse entities: Unsupported start tag \"\u6ce8\u91ca\" at byte offset 0"}
+2018-05-28 22:25:30,553 telegram.py [django:94] [ERROR]- Attention: send message failed!
+2018-05-28 22:25:30,553 telegram.py [django:95] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: can't parse entities: Unsupported start tag \"\u6ce8\u91ca\" at byte offset 0"}
+2018-05-28 22:30:12,211 telegram.py [django:95] [ERROR]- Attention: send message failed!
+2018-05-28 22:30:12,211 telegram.py [django:96] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: MEDIA_CAPTION_TOO_LONG"}
+2018-05-28 22:30:54,668 telegram.py [django:95] [ERROR]- Attention: send message failed!
+2018-05-28 22:30:54,668 telegram.py [django:96] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: MEDIA_CAPTION_TOO_LONG"}
+2018-05-28 22:32:00,286 telegram.py [django:95] [ERROR]- Attention: send message failed!
+2018-05-28 22:32:00,288 telegram.py [django:96] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: MEDIA_CAPTION_TOO_LONG"}

@@ -5444,3 +5444,277 @@ ImportError: No module named exception
 2018-05-28 19:30:56,582 utils.py [django.db.backends:89] [DEBUG]- (0.193) SET SQL_AUTO_IS_NULL = 0; args=None
 2018-05-28 19:30:56,773 utils.py [django.db.backends:89] [DEBUG]- (0.191) SHOW FULL TABLES; args=None
 2018-05-28 19:30:56,967 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-28 20:23:28,414 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 20:23:28,417 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 74, in SendTelegram
+    s = sendTelegram(message)
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43, in __init__
+    self.__message['caption']    = self.getAtUsers(message['caption']) if message.has_key('caption') else ''
+  File "J:\arno\test\phx_web\detect\telegram.py", line 63, in getAtUsers
+    if user_id_l.has_key(user['name']):
+UnboundLocalError: local variable 'user_id_l' referenced before assignment
+2018-05-28 20:23:37,471 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 20:23:37,471 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 74, in SendTelegram
+    s = sendTelegram(message)
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43, in __init__
+    self.__message['caption']    = self.getAtUsers(message['caption']) if message.has_key('caption') else ''
+  File "J:\arno\test\phx_web\detect\telegram.py", line 63, in getAtUsers
+    if user_id_l.has_key(user['name']):
+UnboundLocalError: local variable 'user_id_l' referenced before assignment
+2018-05-28 20:27:14,525 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 20:27:14,526 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 74, in SendTelegram
+    s = sendTelegram(message)
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43, in __init__
+    self.__message['caption']    = self.getAtUsers(message['caption']) if message.has_key('caption') else ''
+  File "J:\arno\test\phx_web\detect\telegram.py", line 63, in getAtUsers
+    if user_id_l.has_key(user['name']):
+UnboundLocalError: local variable 'user_id_l' referenced before assignment
+2018-05-28 20:27:19,627 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 20:27:19,628 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 74, in SendTelegram
+    s = sendTelegram(message)
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43, in __init__
+    self.__message['caption']    = self.getAtUsers(message['caption']) if message.has_key('caption') else ''
+  File "J:\arno\test\phx_web\detect\telegram.py", line 63, in getAtUsers
+    if user_id_l.has_key(user['name']):
+UnboundLocalError: local variable 'user_id_l' referenced before assignment
+2018-05-28 20:28:58,157 utils.py [django.db.backends:89] [DEBUG]- (0.188) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 20:28:59,654 utils.py [django.db.backends:89] [DEBUG]- (0.177) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 20:28:59,835 utils.py [django.db.backends:89] [DEBUG]- (0.180) SHOW FULL TABLES; args=None
+2018-05-28 20:29:00,017 utils.py [django.db.backends:89] [DEBUG]- (0.180) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-28 20:30:26,825 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 20:30:28,170 utils.py [django.db.backends:89] [DEBUG]- (0.191) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 20:30:28,358 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 20:30:30,069 telegram.py [django:89] [INFO]- send message successfull!
+2018-05-28 20:31:55,107 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 20:31:56,391 utils.py [django.db.backends:89] [DEBUG]- (0.157) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 20:31:56,552 utils.py [django.db.backends:89] [DEBUG]- (0.159) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 20:31:57,651 telegram.py [django:89] [INFO]- send message successfull!
+2018-05-28 20:32:59,752 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 20:33:01,019 utils.py [django.db.backends:89] [DEBUG]- (0.181) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 20:33:01,200 utils.py [django.db.backends:89] [DEBUG]- (0.179) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 20:33:01,380 utils.py [django.db.backends:89] [DEBUG]- (0.180) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 20:33:02,592 telegram.py [django:89] [INFO]- send message successfull!
+2018-05-28 20:38:28,006 utils.py [django.db.backends:89] [DEBUG]- (0.179) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 20:38:29,243 utils.py [django.db.backends:89] [DEBUG]- (0.162) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 20:38:29,408 utils.py [django.db.backends:89] [DEBUG]- (0.164) SHOW FULL TABLES; args=None
+2018-05-28 20:38:29,579 utils.py [django.db.backends:89] [DEBUG]- (0.165) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-28 20:42:51,115 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 20, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\detect\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\detect\views.py", line 9, in <module>
+    from telegram                       import sendTelegram
+  File "J:\arno\test\phx_web\detect\telegram.py", line 45
+    self.__message['disable_web_page_preview'] = False if message.has_key('disable_web_page_preview') and message.['disable_web_page_preview'].lower() == 'false' else True
+                                                                                                                  ^
+SyntaxError: invalid syntax
+2018-05-28 20:43:41,556 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 20:43:42,710 utils.py [django.db.backends:89] [DEBUG]- (0.162) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 20:43:42,875 utils.py [django.db.backends:89] [DEBUG]- (0.164) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 20:43:44,523 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-28 20:44:08,914 utils.py [django.db.backends:89] [DEBUG]- (0.163) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 20:44:10,265 utils.py [django.db.backends:89] [DEBUG]- (0.158) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 20:44:10,424 utils.py [django.db.backends:89] [DEBUG]- (0.159) SHOW FULL TABLES; args=None
+2018-05-28 20:44:10,585 utils.py [django.db.backends:89] [DEBUG]- (0.160) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-28 20:44:16,332 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 20:44:17,454 utils.py [django.db.backends:89] [DEBUG]- (0.158) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 20:44:17,612 utils.py [django.db.backends:89] [DEBUG]- (0.158) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 20:44:19,499 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-28 20:44:30,607 utils.py [django.db.backends:89] [DEBUG]- (0.164) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 20:44:32,030 utils.py [django.db.backends:89] [DEBUG]- (0.192) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 20:44:32,223 utils.py [django.db.backends:89] [DEBUG]- (0.192) SHOW FULL TABLES; args=None
+2018-05-28 20:44:32,418 utils.py [django.db.backends:89] [DEBUG]- (0.194) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-28 20:44:49,183 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 20:44:50,530 utils.py [django.db.backends:89] [DEBUG]- (0.166) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 20:44:50,697 utils.py [django.db.backends:89] [DEBUG]- (0.166) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 20:44:52,453 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-28 20:45:01,663 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 20:45:02,997 utils.py [django.db.backends:89] [DEBUG]- (0.163) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 20:45:03,161 utils.py [django.db.backends:89] [DEBUG]- (0.164) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 20:45:04,378 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-28 21:10:13,030 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 21:10:14,569 utils.py [django.db.backends:89] [DEBUG]- (0.203) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 21:10:14,750 utils.py [django.db.backends:89] [DEBUG]- (0.180) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 21:10:15,716 telegram.py [django:93] [ERROR]- Attention: send message failed!
+2018-05-28 21:10:15,717 telegram.py [django:94] [ERROR]- 401: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2018-05-28 21:10:49,405 utils.py [django.db.backends:89] [DEBUG]- (0.493) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 21:10:50,625 utils.py [django.db.backends:89] [DEBUG]- (0.157) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 21:10:50,783 utils.py [django.db.backends:89] [DEBUG]- (0.159) SHOW FULL TABLES; args=None
+2018-05-28 21:10:50,947 utils.py [django.db.backends:89] [DEBUG]- (0.159) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-28 21:10:57,489 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 21:10:59,003 utils.py [django.db.backends:89] [DEBUG]- (0.190) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 21:10:59,193 utils.py [django.db.backends:89] [DEBUG]- (0.188) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 21:11:15,473 telegram.py [django:85] [ERROR]- Attention: send message failed!
+2018-05-28 21:11:15,473 telegram.py [django:86] [ERROR]- HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=15)
+2018-05-28 21:11:20,171 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 21:11:21,684 utils.py [django.db.backends:89] [DEBUG]- (0.190) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 21:11:21,877 utils.py [django.db.backends:89] [DEBUG]- (0.191) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 21:11:35,128 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-28 21:57:18,884 utils.py [django.db.backends:89] [DEBUG]- (0.190) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 21:57:20,368 utils.py [django.db.backends:89] [DEBUG]- (0.158) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 21:57:20,526 utils.py [django.db.backends:89] [DEBUG]- (0.158) SHOW FULL TABLES; args=None
+2018-05-28 21:57:20,693 utils.py [django.db.backends:89] [DEBUG]- (0.161) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-28 21:58:10,638 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 21:58:11,980 utils.py [django.db.backends:89] [DEBUG]- (0.165) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 21:58:12,138 utils.py [django.db.backends:89] [DEBUG]- (0.159) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 21:58:12,299 utils.py [django.db.backends:89] [DEBUG]- (0.160) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 21:58:14,082 telegram.py [django:90] [INFO]- send message successfull!
+2018-05-28 22:01:49,980 utils.py [django.db.backends:89] [DEBUG]- (0.159) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:01:51,391 utils.py [django.db.backends:89] [DEBUG]- (0.190) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:01:51,582 utils.py [django.db.backends:89] [DEBUG]- (0.191) SHOW FULL TABLES; args=None
+2018-05-28 22:01:51,776 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-28 22:01:56,516 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:01:57,720 utils.py [django.db.backends:89] [DEBUG]- (0.167) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:01:57,885 utils.py [django.db.backends:89] [DEBUG]- (0.165) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:01:57,887 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\detect\views.py", line 74, in SendTelegram
+    s = sendTelegram(message)
+  File "J:\arno\test\phx_web\detect\telegram.py", line 43, in __init__
+    self.__message['caption']    = self.getAtUsers(message['caption']) if message.has_key('caption') else ''
+  File "J:\arno\test\phx_web\detect\telegram.py", line 68, in getAtUsers
+    text = text.replace(user['user'], atUser)
+UnboundLocalError: local variable 'atUser' referenced before assignment
+2018-05-28 22:02:31,707 utils.py [django.db.backends:89] [DEBUG]- (0.167) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:02:33,134 utils.py [django.db.backends:89] [DEBUG]- (0.189) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:02:33,336 utils.py [django.db.backends:89] [DEBUG]- (0.202) SHOW FULL TABLES; args=None
+2018-05-28 22:02:33,538 utils.py [django.db.backends:89] [DEBUG]- (0.199) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-28 22:02:40,282 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:02:41,424 utils.py [django.db.backends:89] [DEBUG]- (0.174) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:02:41,584 utils.py [django.db.backends:89] [DEBUG]- (0.159) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:02:41,740 utils.py [django.db.backends:89] [DEBUG]- (0.157) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:02:43,421 telegram.py [django:91] [INFO]- send message successfull!
+2018-05-28 22:03:14,411 utils.py [django.db.backends:89] [DEBUG]- (0.205) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:03:16,015 utils.py [django.db.backends:89] [DEBUG]- (0.196) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:03:16,207 utils.py [django.db.backends:89] [DEBUG]- (0.193) SHOW FULL TABLES; args=None
+2018-05-28 22:03:16,401 utils.py [django.db.backends:89] [DEBUG]- (0.192) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-28 22:03:19,848 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:03:20,974 utils.py [django.db.backends:89] [DEBUG]- (0.160) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:03:21,134 utils.py [django.db.backends:89] [DEBUG]- (0.159) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:03:21,305 utils.py [django.db.backends:89] [DEBUG]- (0.171) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:03:22,996 telegram.py [django:91] [INFO]- send message successfull!
+2018-05-28 22:03:41,776 utils.py [django.db.backends:89] [DEBUG]- (0.177) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:03:42,953 utils.py [django.db.backends:89] [DEBUG]- (0.156) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:03:43,111 utils.py [django.db.backends:89] [DEBUG]- (0.159) SHOW FULL TABLES; args=None
+2018-05-28 22:03:43,279 utils.py [django.db.backends:89] [DEBUG]- (0.165) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-28 22:25:04,349 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:25:05,516 utils.py [django.db.backends:89] [DEBUG]- (0.161) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:25:05,680 utils.py [django.db.backends:89] [DEBUG]- (0.163) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:25:05,845 utils.py [django.db.backends:89] [DEBUG]- (0.164) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:25:07,983 telegram.py [django:91] [INFO]- send message successfull!
+2018-05-28 22:25:16,934 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:25:18,381 utils.py [django.db.backends:89] [DEBUG]- (0.178) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:25:18,559 utils.py [django.db.backends:89] [DEBUG]- (0.178) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:25:18,740 utils.py [django.db.backends:89] [DEBUG]- (0.180) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:25:19,696 telegram.py [django:94] [ERROR]- Attention: send message failed!
+2018-05-28 22:25:19,697 telegram.py [django:95] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: can't parse entities: Unsupported start tag \"\u6ce8\u91ca\" at byte offset 0"}
+2018-05-28 22:25:26,973 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:25:28,490 utils.py [django.db.backends:89] [DEBUG]- (0.190) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:25:28,680 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:25:28,868 utils.py [django.db.backends:89] [DEBUG]- (0.188) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:25:30,553 telegram.py [django:94] [ERROR]- Attention: send message failed!
+2018-05-28 22:25:30,553 telegram.py [django:95] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: can't parse entities: Unsupported start tag \"\u6ce8\u91ca\" at byte offset 0"}
+2018-05-28 22:27:10,390 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:27:11,644 utils.py [django.db.backends:89] [DEBUG]- (0.202) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:27:11,815 utils.py [django.db.backends:89] [DEBUG]- (0.171) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:27:11,984 utils.py [django.db.backends:89] [DEBUG]- (0.168) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:27:13,507 telegram.py [django:91] [INFO]- send message successfull!
+2018-05-28 22:27:44,618 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:27:45,880 utils.py [django.db.backends:89] [DEBUG]- (0.163) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:27:46,071 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:27:46,243 utils.py [django.db.backends:89] [DEBUG]- (0.173) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:27:47,910 telegram.py [django:91] [INFO]- send message successfull!
+2018-05-28 22:28:00,127 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:28:01,305 utils.py [django.db.backends:89] [DEBUG]- (0.158) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:28:01,464 utils.py [django.db.backends:89] [DEBUG]- (0.160) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:28:01,640 utils.py [django.db.backends:89] [DEBUG]- (0.174) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:28:03,289 telegram.py [django:91] [INFO]- send message successfull!
+2018-05-28 22:29:55,924 utils.py [django.db.backends:89] [DEBUG]- (0.204) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:29:57,631 utils.py [django.db.backends:89] [DEBUG]- (0.190) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:29:57,821 utils.py [django.db.backends:89] [DEBUG]- (0.190) SHOW FULL TABLES; args=None
+2018-05-28 22:29:58,016 utils.py [django.db.backends:89] [DEBUG]- (0.191) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-28 22:30:08,203 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:30:09,684 utils.py [django.db.backends:89] [DEBUG]- (0.180) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:30:09,868 utils.py [django.db.backends:89] [DEBUG]- (0.184) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:30:10,052 utils.py [django.db.backends:89] [DEBUG]- (0.183) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:30:12,211 telegram.py [django:95] [ERROR]- Attention: send message failed!
+2018-05-28 22:30:12,211 telegram.py [django:96] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: MEDIA_CAPTION_TOO_LONG"}
+2018-05-28 22:30:51,466 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:30:52,756 utils.py [django.db.backends:89] [DEBUG]- (0.204) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:30:52,926 utils.py [django.db.backends:89] [DEBUG]- (0.169) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:30:53,092 utils.py [django.db.backends:89] [DEBUG]- (0.166) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:30:54,668 telegram.py [django:95] [ERROR]- Attention: send message failed!
+2018-05-28 22:30:54,668 telegram.py [django:96] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: MEDIA_CAPTION_TOO_LONG"}
+2018-05-28 22:31:56,793 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:31:58,066 utils.py [django.db.backends:89] [DEBUG]- (0.179) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:31:58,246 utils.py [django.db.backends:89] [DEBUG]- (0.179) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:31:58,426 utils.py [django.db.backends:89] [DEBUG]- (0.178) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:32:00,286 telegram.py [django:95] [ERROR]- Attention: send message failed!
+2018-05-28 22:32:00,288 telegram.py [django:96] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: MEDIA_CAPTION_TOO_LONG"}
+2018-05-28 22:33:57,142 utils.py [django.db.backends:89] [DEBUG]- (0.162) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:33:58,509 utils.py [django.db.backends:89] [DEBUG]- (0.159) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:33:58,668 utils.py [django.db.backends:89] [DEBUG]- (0.159) SHOW FULL TABLES; args=None
+2018-05-28 22:33:58,831 utils.py [django.db.backends:89] [DEBUG]- (0.158) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-28 22:34:22,180 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:34:23,450 utils.py [django.db.backends:89] [DEBUG]- (0.179) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:34:23,631 utils.py [django.db.backends:89] [DEBUG]- (0.181) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:34:23,821 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:34:25,828 telegram.py [django:94] [INFO]- send message successfull!
+2018-05-28 22:36:08,499 utils.py [django.db.backends:89] [DEBUG]- (0.190) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:36:09,914 utils.py [django.db.backends:89] [DEBUG]- (0.191) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:36:10,105 utils.py [django.db.backends:89] [DEBUG]- (0.190) SHOW FULL TABLES; args=None
+2018-05-28 22:36:10,302 utils.py [django.db.backends:89] [DEBUG]- (0.196) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-28 22:40:38,901 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:40:40,059 utils.py [django.db.backends:89] [DEBUG]- (0.161) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:40:40,223 utils.py [django.db.backends:89] [DEBUG]- (0.164) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:40:40,390 utils.py [django.db.backends:89] [DEBUG]- (0.164) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:40:42,151 telegram.py [django:91] [INFO]- send message successfull!
