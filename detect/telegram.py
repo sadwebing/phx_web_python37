@@ -64,9 +64,10 @@ class sendTelegram(object):
                 if user_id_l.has_key(user['name']):
                     if self.__message['parse_mode'] == 'HTML':
                         atUser = "<a href='tg://user?id=%s'>%s</a>" %(user_id_l[user['name']]['user_id'], user_id_l[user['name']]['name'])
+                        text = text.replace(user['user'], atUser)
                     elif self.__message['parse_mode'] == 'Markdown':
                         atUser = "[%s](tg://user?id=%s)" %(user_id_l[user['name']]['name'], user_id_l[user['name']]['user_id'])
-                    text = text.replace(user['user'], atUser)
+                        text = text.replace(user['user'], atUser)
 
         #logger.info(text)
         return text

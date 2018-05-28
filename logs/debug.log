@@ -5718,3 +5718,7 @@ UnboundLocalError: local variable 'atUser' referenced before assignment
 2018-05-28 22:40:40,223 utils.py [django.db.backends:89] [DEBUG]- (0.164) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
 2018-05-28 22:40:40,390 utils.py [django.db.backends:89] [DEBUG]- (0.164) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
 2018-05-28 22:40:42,151 telegram.py [django:91] [INFO]- send message successfull!
+2018-05-28 22:45:55,088 utils.py [django.db.backends:89] [DEBUG]- (0.159) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:45:56,517 utils.py [django.db.backends:89] [DEBUG]- (0.195) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:45:56,713 utils.py [django.db.backends:89] [DEBUG]- (0.195) SHOW FULL TABLES; args=None
+2018-05-28 22:45:56,914 utils.py [django.db.backends:89] [DEBUG]- (0.198) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
