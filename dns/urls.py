@@ -2,8 +2,10 @@ from django.conf.urls import url, include
 from django.views.generic.base import RedirectView
 from . import views
 from . import nginx
+from . import httpdns
 
 urlpatterns = [
+    url('^getDns$', httpdns.GetDns, name='GetDns'),
     url('^updaterecord$', views.UpdateRecord, name='UpdateRecord'),
     url('^cloudflare/index$', views.Index, name='Index'),
     url('^cloudflare/get_product_records$', views.GetProductRecords, name='GetProductRecords'),
