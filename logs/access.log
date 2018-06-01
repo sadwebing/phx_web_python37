@@ -13106,3 +13106,11 @@ UnboundLocalError: local variable 'atUser' referenced before assignment
 2018-05-28 22:34:25,828 telegram.py [django:94] [INFO]- send message successfull!
 2018-05-28 22:40:38,901 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
 2018-05-28 22:40:42,151 telegram.py [django:91] [INFO]- send message successfull!
+2018-05-28 22:53:44,663 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:53:48,112 telegram.py [django:92] [INFO]- send message successfull!
+2018-05-28 22:54:54,950 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:54:57,808 telegram.py [django:92] [INFO]- send message successfull!
+2018-06-01 14:55:27,871 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-01 14:55:29,194 views.py [django:264] [INFO]- 127.0.0.1 is requesting.
+2018-06-01 14:55:30,732 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-01 14:55:38,835 views.py [django:27] [INFO]- 127.0.0.1 is requesting /

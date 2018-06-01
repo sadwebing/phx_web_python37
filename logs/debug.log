@@ -5722,3 +5722,21 @@ UnboundLocalError: local variable 'atUser' referenced before assignment
 2018-05-28 22:45:56,517 utils.py [django.db.backends:89] [DEBUG]- (0.195) SET SQL_AUTO_IS_NULL = 0; args=None
 2018-05-28 22:45:56,713 utils.py [django.db.backends:89] [DEBUG]- (0.195) SHOW FULL TABLES; args=None
 2018-05-28 22:45:56,914 utils.py [django.db.backends:89] [DEBUG]- (0.198) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-05-28 22:53:44,663 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:53:46,000 utils.py [django.db.backends:89] [DEBUG]- (0.188) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:53:46,191 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:53:46,382 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:53:48,112 telegram.py [django:92] [INFO]- send message successfull!
+2018-05-28 22:54:54,950 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-05-28 22:54:56,296 utils.py [django.db.backends:89] [DEBUG]- (0.189) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-05-28 22:54:56,486 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:54:56,678 utils.py [django.db.backends:89] [DEBUG]- (0.191) SELECT `monitor_telegram_user_id_t`.`id`, `monitor_telegram_user_id_t`.`user`, `monitor_telegram_user_id_t`.`name`, `monitor_telegram_user_id_t`.`user_id` FROM `monitor_telegram_user_id_t`; args=()
+2018-05-28 22:54:57,808 telegram.py [django:92] [INFO]- send message successfull!
+2018-06-01 14:15:25,971 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-06-01 14:15:26,674 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-06-01 14:15:26,721 utils.py [django.db.backends:89] [DEBUG]- (0.047) SHOW FULL TABLES; args=None
+2018-06-01 14:15:26,796 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-06-01 14:24:35,848 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-06-01 14:24:36,243 utils.py [django.db.backends:89] [DEBUG]- (0.045) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-06-01 14:24:36,292 utils.py [django.db.backends:89] [DEBUG]- (0.049) SHOW FULL TABLES; args=None
+2018-06-01 14:24:36,345 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()

@@ -41,12 +41,18 @@ var gp = {
                 var html_project_active = ['<optgroup label="凤凰">',
                                                 html_dict['fh'],
                                             '</optgroup>',
+                                            '<optgroup label="勇士">',
+                                                html_dict['ys'],
+                                            '</optgroup>',
                                             '<optgroup label="公共">',
                                                 html_dict['pub'],
                                             '</optgroup>',
                                             ].join("")
                 var html_restart_project_active = ['<optgroup label="凤凰">',
                                                         html_dict['fh'],
+                                                    '</optgroup>',
+                                                    '<optgroup label="勇士">',
+                                                        html_dict['ys'],
                                                     '</optgroup>',
                                                     ].join("")
                 if (document.getElementById('project_active')){

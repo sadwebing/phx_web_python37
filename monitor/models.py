@@ -55,7 +55,7 @@ class project_t(models.Model):
     choices_proj = (
         ('caipiao', 'caipiao'), 
         ('sport',   'sport'),
-        ('cp_ht',   'cp_ht'),
+        ('houtai',   'houtai'),
         ('vpn',     'vpn'),
         )
 
