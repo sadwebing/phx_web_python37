@@ -13114,3 +13114,75 @@ UnboundLocalError: local variable 'atUser' referenced before assignment
 2018-06-01 14:55:29,194 views.py [django:264] [INFO]- 127.0.0.1 is requesting.
 2018-06-01 14:55:30,732 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
 2018-06-01 14:55:38,835 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-01 14:57:15,038 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-01 14:57:22,448 views.py [django:264] [INFO]- 127.0.0.1 is requesting.
+2018-06-01 14:57:23,584 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-01 14:57:44,596 views.py [django:177] [INFO]- 127.0.0.1 is requesting. /saltstack/command/deploy 执行参数：{u'project': u'ys_houtai', u'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79']}
+2018-06-01 14:58:05,660 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/deploy
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 183, in CommandDeploy
+    commandexe = Command(data['minion_id'], 'state.sls', expr_form='list')
+  File "J:\arno\test\phx_web\saltstack\command.py", line 25, in __init__
+    password = settings.SALT_API['password']
+  File "J:\arno\test\phx_web\saltstack\saltapi.py", line 13, in __init__
+    self.__token_id = self.saltLogin()
+  File "J:\arno\test\phx_web\saltstack\saltapi.py", line 18, in saltLogin
+    ret = requests.post(url, data=params, verify=False)
+  File "J:\arno\test\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "J:\arno\test\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "J:\arno\test\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "J:\arno\test\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "J:\arno\test\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='58.64.145.50', port=8000): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0619BA90>: Failed to establish a new connection: [Errno 10060] ',))
+2018-06-01 14:59:27,950 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-01 14:59:29,098 views.py [django:264] [INFO]- 127.0.0.1 is requesting.
+2018-06-01 14:59:30,214 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-01 14:59:43,023 views.py [django:177] [INFO]- 127.0.0.1 is requesting. /saltstack/command/deploy 执行参数：{u'project': u'ys_houtai', u'minion_id': [u'YSHT_NG_HK_9_22']}
+2018-06-01 15:00:04,026 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/deploy
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 183, in CommandDeploy
+    commandexe = Command(data['minion_id'], 'state.sls', expr_form='list')
+  File "J:\arno\test\phx_web\saltstack\command.py", line 25, in __init__
+    password = settings.SALT_API['password']
+  File "J:\arno\test\phx_web\saltstack\saltapi.py", line 13, in __init__
+    self.__token_id = self.saltLogin()
+  File "J:\arno\test\phx_web\saltstack\saltapi.py", line 18, in saltLogin
+    ret = requests.post(url, data=params, verify=False)
+  File "J:\arno\test\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "J:\arno\test\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "J:\arno\test\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "J:\arno\test\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "J:\arno\test\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='58.64.145.50', port=8000): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x05FBF770>: Failed to establish a new connection: [Errno 10060] ',))
+2018-06-01 15:01:55,631 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-01 15:01:56,760 views.py [django:264] [INFO]- 127.0.0.1 is requesting.
+2018-06-01 15:01:57,884 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-01 15:02:05,957 views.py [django:177] [INFO]- 127.0.0.1 is requesting. /saltstack/command/deploy 执行参数：{u'project': u'ys_houtai', u'minion_id': [u'YSHT_NG_HK_9_22']}
+2018-06-01 15:02:15,819 saltapi.py [django:68] [INFO]- [u'YSHT_NG_HK_9_22'] "nginx.conf": 200
+2018-06-01 15:02:16,907 saltapi.py [django:68] [INFO]- [u'YSHT_NG_HK_9_22'] "nginx.reload": 200

@@ -57,10 +57,21 @@ SALT_API = {
 
 #telegram api
 TELEGRAM_API = {
+    'api':{
+        'AuraAlertBot'  : '471691674:AAFx1MQ3VwXdWUYyh4CaErzwoUNswG9XDsU',
+        'sa_monitor_bot': '422793714:AAE8A-sLU1Usms2bJxiKWc3tUWaWYP98bSU',
+    },
+
     'url':{
         'AuraAlertBot'  : 'https://api.telegram.org/bot471691674:AAFx1MQ3VwXdWUYyh4CaErzwoUNswG9XDsU/',
         'sa_monitor_bot': 'https://api.telegram.org/bot422793714:AAE8A-sLU1Usms2bJxiKWc3tUWaWYP98bSU/',
     },
+
+    'user_group':{
+        'all':['arno', 'qiuge', 'xiaoxuan', 'xiaoqi', 'xiaowu', 'xiaoye', 'docker', 'alan', 'xiaoran', 'v7', 'power', 'john', 'dennis', 'ray', 'xiaolong'],
+        'yunwei':['arno', 'xiaoxuan', 'xiaoqi', 'xiaowu', 'xiaoye', 'docker', 'alan', 'xiaoran', 'v7', 'power', 'john', 'dennis', 'ray', 'xiaolong'],
+    },
+
     'chat_id':{
         'arno_test'   : '-204952096',
         'chk_ng_alert': '-275535278',
