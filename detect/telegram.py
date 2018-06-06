@@ -27,19 +27,19 @@ def getDate():
 class sendTelegram(object):
     def __init__(self, message):
         '''
-			参数初始化:message
-		{
-			bot：       机器人的username
-			group：     聊天组名称[默认arno_test]
-			doc：       是否是以文件形式发送[True|False，默认False]
-			doc_name：  文件名称[默认warning.txt]
-			timeout：   发送超时时间[默认15s]
-			parse_mode：信息文本模式[HTML|Markdown， 默认无格式]
-			caption：   对文件的注释
-			text：      信息文本内容
-			disable_web_page_preview：是否关闭预览[True|False，默认True]
-		}
-		'''
+            参数初始化:message
+        {
+            bot：       机器人的username
+            group：     聊天组名称[默认arno_test]
+            doc：       是否是以文件形式发送[True|False，默认False]
+            doc_name：  文件名称[默认warning.txt]
+            timeout：   发送超时时间[默认15s]
+            parse_mode：信息文本模式[HTML|Markdown，默认无格式]
+            caption：   对文件的注释
+            text：      信息文本内容
+            disable_web_page_preview：是否关闭预览[True|False，默认True]
+        }
+        '''
         tg         = settings.TELEGRAM_API
         bot        = message['bot']     if message.has_key('bot')   else ''
         doc        = message['doc']     if message.has_key('doc')   else False
@@ -58,9 +58,9 @@ class sendTelegram(object):
         self.__message['disable_web_page_preview'] = False if message.has_key('disable_web_page_preview') and message['disable_web_page_preview'].lower() == 'false' else True
 
     def getAtUsers(self, text):
-        user_l = [ {'user': '@'+re.match('[A-Za-z0-9]+(?![A-Za-z0-9])', user).group(), 
-                    'name': re.match('[a-z0-9]+(?![a-z0-9])', user.lower()).group()} 
-                    for user in text.split('@')[1:] if re.match('[a-z0-9]+(?![a-z0-9])', user.lower())]
+        regCp  = re.compile('[A-Za-z0-9]+(?![A-Za-z0-9])', re.I)
+        user_l = [ {'user': '@'+regCp.match(user).group(),
+                    'name': regCp.match(user.lower()).group()} for user in text.split('@')[1:] if regCp.match(user.lower())]
 
         if self.__message['parse_mode'] == 'HTML':
             text = text.replace("<", "&lt;").replace(">", "&gt;")
