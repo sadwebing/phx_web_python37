@@ -13186,3 +13186,24 @@ ConnectionError: HTTPSConnectionPool(host='58.64.145.50', port=8000): Max retrie
 2018-06-01 15:02:05,957 views.py [django:177] [INFO]- 127.0.0.1 is requesting. /saltstack/command/deploy 执行参数：{u'project': u'ys_houtai', u'minion_id': [u'YSHT_NG_HK_9_22']}
 2018-06-01 15:02:15,819 saltapi.py [django:68] [INFO]- [u'YSHT_NG_HK_9_22'] "nginx.conf": 200
 2018-06-01 15:02:16,907 saltapi.py [django:68] [INFO]- [u'YSHT_NG_HK_9_22'] "nginx.reload": 200
+2018-06-06 15:30:10,844 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-06-06 15:30:14,137 telegram.py [django:92] [INFO]- send message successfull!
+2018-06-06 15:47:50,507 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-06-06 15:47:53,611 telegram.py [django:92] [INFO]- send message successfull!
+2018-06-06 15:48:03,290 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-06-06 15:48:09,503 telegram.py [django:92] [INFO]- send message successfull!
+2018-06-06 15:55:35,270 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-06-06 15:55:39,266 telegram.py [django:92] [INFO]- send message successfull!
+2018-06-06 15:58:42,586 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-06-06 15:58:47,926 telegram.py [django:92] [INFO]- send message successfull!
+2018-06-06 15:58:51,226 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-06-06 15:58:54,223 telegram.py [django:92] [INFO]- send message successfull!
+2018-06-06 16:15:47,355 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-06-06 16:15:50,898 telegram.py [django:102] [INFO]- send message successfull!
+2018-06-06 16:43:30,917 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-06-06 16:43:37,815 telegram.py [django:108] [ERROR]- Attention: send message failed!
+2018-06-06 16:43:37,832 telegram.py [django:109] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: unsupported parse_mode"}
+2018-06-06 16:44:53,292 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-06-06 16:44:56,125 telegram.py [django:105] [INFO]- send message successfull!
+2018-06-06 16:49:27,809 views.py [django:53] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-06-06 16:49:31,469 telegram.py [django:105] [INFO]- send message successfull!
