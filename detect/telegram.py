@@ -45,9 +45,9 @@ class sendTelegram(object):
         self.__message['disable_web_page_preview'] = False if message.has_key('disable_web_page_preview') and message['disable_web_page_preview'].lower() == 'false' else True
 
     def getAtUsers(self, text):
-        user_l = [ {'user': '@'+re.match('[a-z|A-Z]+(?![a-z])', user).group(), 
-                    'name': re.match('[a-z]+(?![a-z])', user.lower()).group()} 
-                    for user in text.split('@')[1:] if re.match('[a-z]+(?![a-z])', user.lower())]
+        user_l = [ {'user': '@'+re.match('[a-z|A-Z]+[a-z|0-9]*(?![a-z])', user).group(), 
+                    'name': re.match('[a-z]+[a-z|0-9]*(?![a-z])', user.lower()).group()} 
+                    for user in text.split('@')[1:] if re.match('[a-z]+[a-z|0-9]*(?![a-z])', user.lower())]
 
         if self.__message['parse_mode'] == 'HTML':
             text = text.replace("<", "&lt;").replace(">", "&gt;")

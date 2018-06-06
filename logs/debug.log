@@ -5912,3 +5912,11 @@ ConnectionError: HTTPSConnectionPool(host='58.64.145.50', port=8000): Max retrie
 2018-06-01 15:02:05,957 views.py [django:177] [INFO]- 127.0.0.1 is requesting. /saltstack/command/deploy 执行参数：{u'project': u'ys_houtai', u'minion_id': [u'YSHT_NG_HK_9_22']}
 2018-06-01 15:02:15,819 saltapi.py [django:68] [INFO]- [u'YSHT_NG_HK_9_22'] "nginx.conf": 200
 2018-06-01 15:02:16,907 saltapi.py [django:68] [INFO]- [u'YSHT_NG_HK_9_22'] "nginx.reload": 200
+2018-06-06 15:29:09,461 utils.py [django.db.backends:89] [DEBUG]- (0.166) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-06-06 15:29:11,655 utils.py [django.db.backends:89] [DEBUG]- (0.236) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-06-06 15:29:11,881 utils.py [django.db.backends:89] [DEBUG]- (0.225) SHOW FULL TABLES; args=None
+2018-06-06 15:29:12,150 utils.py [django.db.backends:89] [DEBUG]- (0.226) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-06-06 15:30:03,726 utils.py [django.db.backends:89] [DEBUG]- (0.181) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-06-06 15:30:04,903 utils.py [django.db.backends:89] [DEBUG]- (0.157) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-06-06 15:30:05,062 utils.py [django.db.backends:89] [DEBUG]- (0.159) SHOW FULL TABLES; args=None
+2018-06-06 15:30:05,223 utils.py [django.db.backends:89] [DEBUG]- (0.159) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()

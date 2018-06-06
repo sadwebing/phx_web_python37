@@ -26,7 +26,8 @@ def start(bot, update):
     #update.message.reply_text("Welcome to my awesome bot!")
     reply_keyboard = [['option1', 'option2', 'option3', 'exit']]
     #print dir(update.message.reply_markdown)
-    update.message.reply_text("开始选择",
+    update.message.reply_text(
+		"开始选择",
         reply_markup=ReplyKeyboardMarkup(reply_keyboard)
     )
     return 'option'
