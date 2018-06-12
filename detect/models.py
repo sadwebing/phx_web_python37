@@ -34,12 +34,12 @@ class domains(models.Model):
                 )
 
     #protocol = models.IntegerField(choices=choices_n, default=1) 
-    name     = models.CharField(max_length=128)
+    name     = models.CharField(max_length=128, unique=True)
     product  = models.IntegerField(choices=choices_prod)
     group    = models.ForeignKey(groups)
     content  = models.CharField(max_length=128, blank=True)
     status   = models.IntegerField(choices=choices_s, default=1)
-
+    
     def __str__(self):
         if self.group.ssl == 1:
             ssl = 'ssl'

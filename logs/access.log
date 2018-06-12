@@ -13766,3 +13766,16 @@ Traceback (most recent call last):
 SyntaxError: keyword can't be an expression
 2018-06-12 18:17:37,956 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/get_domains
 2018-06-12 18:17:37,956 views.py [django:33] [ERROR]- 'int' object has no attribute 'lower'
+2018-06-12 18:19:17,591 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/get_domains
+2018-06-12 18:20:03,121 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/get_domains
+2018-06-12 21:03:40,010 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-12 21:03:44,632 views.py [django:264] [INFO]- 127.0.0.1 is requesting.
+2018-06-12 21:03:48,951 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-12 21:06:40,878 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-12 21:06:44,834 views.py [django:264] [INFO]- 127.0.0.1 is requesting.
+2018-06-12 21:06:49,181 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-12 21:07:18,359 base.py [django.request:170] [WARNING]- Not Found: /favicon.ico
+2018-06-12 21:11:27,085 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-12 21:11:31,464 views.py [django:265] [INFO]- 127.0.0.1 is requesting.
+2018-06-12 21:11:35,638 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-12 21:11:35,640 views.py [django:37] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_153_239', u'CP_NG_HK_153_1', u'CP_NG_HK_179_204'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_76_165', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]

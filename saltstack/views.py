@@ -34,6 +34,7 @@ def GetProjectActive(request):
             tmpdict['minion_id']   = [minion.minion_id for minion in data.minion_id.filter(status=1).all()]
             projectlist.append(tmpdict)
         logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
+        logger.info(projectlist)
         return HttpResponse(json.dumps(projectlist))
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')

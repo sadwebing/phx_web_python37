@@ -62,8 +62,8 @@ class sendTelegram(object):
         user_l = [ {'user': '@'+regCp.match(user).group(),
                     'name': regCp.match(user.lower()).group()} for user in text.split('@')[1:] if regCp.match(user.lower())]
 
-        if self.__message['parse_mode'] == 'HTML':
-            text = text.replace("<", "&lt;").replace(">", "&gt;")
+        #if self.__message['parse_mode'] == 'HTML':
+        #    text = text.replace("<", "&lt;").replace(">", "&gt;")
 
         if user_l:
             user_id_l = {}

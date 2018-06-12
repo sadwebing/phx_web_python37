@@ -1,3 +1,917 @@
 2018-06-12 17:54:12,226 - ERROR - arno.com 443 ssl error
 2018-06-12 17:54:52,921 - ERROR - arno.com 443 ssl error
 2018-06-12 17:56:49,434 - ERROR - arno.com 443 ssl error
+2018-06-12 18:40:43,622 - ERROR - www.3030365.com 443 connection error: 
+ hostname u'www.3030365.com' doesn't match either of 'bet338.com', 'www.bet338.com', '3232365.com', '128365365.com', '3030365.com', '3131365.com'
+2018-06-12 18:42:45,579 - ERROR - www.3030365.com 443 connection error: 
+ hostname u'www.3030365.com' doesn't match either of 'bet338.com', 'www.bet338.com', '3232365.com', '128365365.com', '3030365.com', '3131365.com'
+2018-06-12 18:43:26,170 - ERROR - www.3030365.com 443 connection error: 
+ hostname u'www.3030365.com' doesn't match either of 'bet338.com', 'www.bet338.com', '3232365.com', '128365365.com', '3030365.com', '3131365.com'
+2018-06-12 18:45:17,918 - ERROR - www.3030365.com 443 connection error: 
+ hostname u'www.3030365.com' doesn't match either of 'bet338.com', 'www.bet338.com', '3232365.com', '128365365.com', '3030365.com', '3131365.com'
+2018-06-12 18:48:15,302 - ERROR - 3030365.com 443 connection error: 
+ [Errno 11002] getaddrinfo failed
+2018-06-12 18:48:18,378 - ERROR - www.3030365.com 443 connection error: 
+ hostname u'www.3030365.com' doesn't match either of 'bet338.com', 'www.bet338.com', '3232365.com', '128365365.com', '3030365.com', '3131365.com'
+2018-06-12 18:49:05,118 - ERROR - www.3030365.com 443 connection error: 
+ hostname u'www.3030365.com' doesn't match either of 'bet338.com', 'www.bet338.com', '3232365.com', '128365365.com', '3030365.com', '3131365.com'
+2018-06-12 18:49:32,221 - ERROR - www.3030365.com 443 connection error: 
+ hostname u'www.3030365.com' doesn't match either of 'bet338.com', 'www.bet338.com', '3232365.com', '128365365.com', '3030365.com', '3131365.com'
+2018-06-12 18:51:16,631 - ERROR - www.3030365.com 443 connection error: 
+ hostname 'www.3030365.com' doesn't match either of 'bet338.com', 'www.bet338.com', '3232365.com', '128365365.com', '3030365.com', '3131365.com'
+2018-06-12 18:51:27,226 - ERROR - www.3030365.com 443 connection error: 
+ hostname 'www.3030365.com' doesn't match either of 'bet338.com', 'www.bet338.com', '3232365.com', '128365365.com', '3030365.com', '3131365.com'
+2018-06-12 18:52:16,473 - ERROR - www.3030365.com 443 connection error: 
+ hostname 'www.3030365.com' doesn't match either of 'bet338.com', 'www.bet338.com', '3232365.com', '128365365.com', '3030365.com', '3131365.com'
+2018-06-12 18:52:30,012 - ERROR - www.3030365.com 443 connection error: 
+ hostname 'www.3030365.com' doesn't match either of 'bet338.com', 'www.bet338.com', '3232365.com', '128365365.com', '3030365.com', '3131365.com'
+2018-06-12 18:53:27,869 - ERROR - www.3030365.com 443 connection error: 
+ hostname 'www.3030365.com' doesn't match either of 'bet338.com', 'www.bet338.com', '3232365.com', '128365365.com', '3030365.com', '3131365.com'
+2018-06-12 18:55:30,359 - ERROR - www.3030365.com 443 ssl error
+2018-06-12 18:55:48,170 - ERROR - www.3030365.com 443 ssl error
+2018-06-12 18:55:59,882 - ERROR - www.3030365.com 443 ssl error
+2018-06-12 19:26:46,355 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:26:54,813 - ERROR - www.2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 19:26:58,217 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:27:04,805 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:27:04,805 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:27:11,203 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:27:13,239 - ERROR - 2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 19:27:18,056 - ERROR - m.2805s.com 443 ssl error
+2018-06-12 19:27:18,196 - ERROR - vip.cpn8.com 443 ssl error
+2018-06-12 19:27:18,321 - ERROR - asd.208608.com 443 ssl error
+2018-06-12 19:27:18,528 - ERROR - ct581.com 443 ssl error
+2018-06-12 19:27:18,648 - ERROR - www.ct66888.com 443 ssl error
+2018-06-12 19:27:18,799 - ERROR - caitou999.com 443 ssl error
+2018-06-12 19:27:18,915 - ERROR - m.caitou06.com 443 ssl error
+2018-06-12 19:27:19,141 - ERROR - m.caitou08.com 443 ssl error
+2018-06-12 19:27:19,571 - ERROR - le969.com 443 ssl error
+2018-06-12 19:27:19,795 - ERROR - 2805u.com 443 ssl error
+2018-06-12 19:27:19,892 - ERROR - ct860.com 443 ssl error
+2018-06-12 19:27:19,947 - ERROR - www.ct6801.com 443 ssl error
+2018-06-12 19:27:20,029 - ERROR - www.ct186.com 443 ssl error
+2018-06-12 19:27:20,140 - ERROR - www.caitou08.com 443 ssl error
+2018-06-12 19:27:20,242 - ERROR - m.caitou111.com 443 ssl error
+2018-06-12 19:27:20,344 - ERROR - ct66888.com 443 ssl error
+2018-06-12 19:27:20,365 - ERROR - m.caitou999.com 443 ssl error
+2018-06-12 19:27:20,398 - ERROR - www.ct581.com 443 ssl error
+2018-06-12 19:27:20,470 - ERROR - vip.le670.com 443 ssl error
+2018-06-12 19:27:20,507 - ERROR - www.le969.com 443 ssl error
+2018-06-12 19:27:20,601 - ERROR - m.uc22.cc 443 ssl error
+2018-06-12 19:27:20,726 - ERROR - 2805s.com 443 ssl error
+2018-06-12 19:27:20,822 - ERROR - vip.2805s.com 443 ssl error
+2018-06-12 19:27:20,947 - ERROR - 2805z.com 443 ssl error
+2018-06-12 19:27:21,055 - ERROR - m.2805z.com 443 ssl error
+2018-06-12 19:27:21,233 - ERROR - m.cpn8.com 443 ssl error
+2018-06-12 19:27:21,282 - ERROR - www.2805u.com 443 ssl error
+2018-06-12 19:27:21,382 - ERROR - ct6801.com 443 ssl error
+2018-06-12 19:27:21,476 - ERROR - www.ct991.com 443 ssl error
+2018-06-12 19:27:21,572 - ERROR - ct991.com 443 ssl error
+2018-06-12 19:27:21,753 - ERROR - caitou111.com 443 ssl error
+2018-06-12 19:27:21,848 - ERROR - www.caitou111.com 443 ssl error
+2018-06-12 19:27:21,963 - ERROR - m.uccp22.com 443 ssl error
+2018-06-12 19:27:22,010 - ERROR - vip.uc22.cc 443 ssl error
+2018-06-12 19:27:22,575 - ERROR - www.2805z.com 443 ssl error
+2018-06-12 19:27:22,727 - ERROR - vip.uc22222.com 443 ssl error
+2018-06-12 19:27:22,897 - ERROR - www.cpn8.com 443 ssl error
+2018-06-12 19:27:23,016 - ERROR - caitou08.com 443 ssl error
+2018-06-12 19:27:23,194 - ERROR - wap.le670.com 443 ssl error
+2018-06-12 19:27:23,299 - ERROR - vip.uccp22.com 443 ssl error
+2018-06-12 19:27:23,611 - ERROR - www.ct860.com 443 ssl error
+2018-06-12 19:27:23,694 - ERROR - m.ct186.com 443 ssl error
+2018-06-12 19:27:23,742 - ERROR - m.ct6801.com 443 ssl error
+2018-06-12 19:27:24,092 - ERROR - wap.le969.com 443 ssl error
+2018-06-12 19:27:24,148 - ERROR - m.ct991.com 443 ssl error
+2018-06-12 19:27:24,151 - ERROR - caitou06.com 443 ssl error
+2018-06-12 19:27:24,157 - ERROR - ct186.com 443 ssl error
+2018-06-12 19:27:24,227 - ERROR - www.caitou999.com 443 ssl error
+2018-06-12 19:27:24,572 - ERROR - vip.le969.com 443 ssl error
+2018-06-12 19:27:24,710 - ERROR - m.ct66888.com 443 ssl error
+2018-06-12 19:27:24,904 - ERROR - m.ct860.com 443 ssl error
+2018-06-12 19:27:25,161 - ERROR - cpn8.com 443 ssl error
+2018-06-12 19:27:25,256 - ERROR - www.caitou06.com 443 ssl error
+2018-06-12 19:27:25,305 - ERROR - m.ct581.com 443 ssl error
+2018-06-12 19:27:25,430 - ERROR - www.2805s.com 443 ssl error
+2018-06-12 19:27:25,632 - ERROR - m.2805u.com 443 ssl error
+2018-06-12 19:27:25,940 - ERROR - vip.caitou111.com 443 ssl error
+2018-06-12 19:31:46,503 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:31:48,323 - ERROR - www.2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 19:31:49,839 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:31:54,490 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:31:54,490 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:31:57,752 - ERROR - 2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 19:32:11,773 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:32:12,546 - ERROR - ct6801.com 443 ssl error
+2018-06-12 19:32:12,641 - ERROR - www.ct186.com 443 ssl error
+2018-06-12 19:32:12,753 - ERROR - www.ct991.com 443 ssl error
+2018-06-12 19:32:12,855 - ERROR - caitou06.com 443 ssl error
+2018-06-12 19:32:12,891 - ERROR - m.caitou111.com 443 ssl error
+2018-06-12 19:32:12,930 - ERROR - m.uccp22.com 443 ssl error
+2018-06-12 19:32:13,331 - ERROR - 2805z.com 443 ssl error
+2018-06-12 19:32:13,438 - ERROR - 2805u.com 443 ssl error
+2018-06-12 19:32:13,542 - ERROR - ct860.com 443 ssl error
+2018-06-12 19:32:13,576 - ERROR - www.ct6801.com 443 ssl error
+2018-06-12 19:32:13,680 - ERROR - m.ct66888.com 443 ssl error
+2018-06-12 19:32:13,729 - ERROR - ct991.com 443 ssl error
+2018-06-12 19:32:13,880 - ERROR - m.caitou08.com 443 ssl error
+2018-06-12 19:32:14,174 - ERROR - www.caitou08.com 443 ssl error
+2018-06-12 19:32:14,315 - ERROR - m.caitou999.com 443 ssl error
+2018-06-12 19:32:14,421 - ERROR - wap.le670.com 443 ssl error
+2018-06-12 19:32:14,450 - ERROR - m.uc22.cc 443 ssl error
+2018-06-12 19:32:14,536 - ERROR - caitou111.com 443 ssl error
+2018-06-12 19:32:14,948 - ERROR - 2805s.com 443 ssl error
+2018-06-12 19:32:15,026 - ERROR - vip.uc22.cc 443 ssl error
+2018-06-12 19:32:15,065 - ERROR - m.2805s.com 443 ssl error
+2018-06-12 19:32:15,111 - ERROR - vip.2805s.com 443 ssl error
+2018-06-12 19:32:15,234 - ERROR - www.2805z.com 443 ssl error
+2018-06-12 19:32:15,410 - ERROR - vip.cpn8.com 443 ssl error
+2018-06-12 19:32:15,512 - ERROR - www.cpn8.com 443 ssl error
+2018-06-12 19:32:15,543 - ERROR - www.2805u.com 443 ssl error
+2018-06-12 19:32:15,677 - ERROR - www.ct860.com 443 ssl error
+2018-06-12 19:32:15,892 - ERROR - m.ct860.com 443 ssl error
+2018-06-12 19:32:15,984 - ERROR - www.caitou111.com 443 ssl error
+2018-06-12 19:32:16,072 - ERROR - www.caitou999.com 443 ssl error
+2018-06-12 19:32:16,187 - ERROR - m.ct581.com 443 ssl error
+2018-06-12 19:32:16,506 - ERROR - le969.com 443 ssl error
+2018-06-12 19:32:16,586 - ERROR - wap.le969.com 443 ssl error
+2018-06-12 19:32:16,608 - ERROR - vip.le670.com 443 ssl error
+2018-06-12 19:32:16,701 - ERROR - vip.le969.com 443 ssl error
+2018-06-12 19:32:17,017 - ERROR - vip.uccp22.com 443 ssl error
+2018-06-12 19:32:17,140 - ERROR - m.cpn8.com 443 ssl error
+2018-06-12 19:32:17,253 - ERROR - ct581.com 443 ssl error
+2018-06-12 19:32:17,388 - ERROR - www.ct581.com 443 ssl error
+2018-06-12 19:32:17,520 - ERROR - vip.caitou111.com 443 ssl error
+2018-06-12 19:32:17,569 - ERROR - caitou08.com 443 ssl error
+2018-06-12 19:32:17,608 - ERROR - ct186.com 443 ssl error
+2018-06-12 19:32:17,773 - ERROR - m.ct991.com 443 ssl error
+2018-06-12 19:32:17,898 - ERROR - www.le969.com 443 ssl error
+2018-06-12 19:32:17,953 - ERROR - m.2805z.com 443 ssl error
+2018-06-12 19:32:18,052 - ERROR - m.2805u.com 443 ssl error
+2018-06-12 19:32:18,194 - ERROR - www.caitou06.com 443 ssl error
+2018-06-12 19:32:18,220 - ERROR - m.ct186.com 443 ssl error
+2018-06-12 19:32:18,358 - ERROR - vip.uc22222.com 443 ssl error
+2018-06-12 19:32:18,436 - ERROR - ct66888.com 443 ssl error
+2018-06-12 19:32:18,668 - ERROR - www.2805s.com 443 ssl error
+2018-06-12 19:32:18,937 - ERROR - m.ct6801.com 443 ssl error
+2018-06-12 19:32:19,236 - ERROR - caitou999.com 443 ssl error
+2018-06-12 19:32:19,237 - ERROR - www.ct66888.com 443 ssl error
+2018-06-12 19:32:19,493 - ERROR - cpn8.com 443 ssl error
+2018-06-12 19:32:19,630 - ERROR - m.caitou06.com 443 ssl error
+2018-06-12 19:32:19,688 - ERROR - asd.208608.com 443 ssl error
+2018-06-12 19:36:25,500 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:36:28,792 - ERROR - www.2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 19:36:30,059 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:36:30,059 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:36:36,559 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:36:51,015 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:36:51,674 - ERROR - 2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 19:36:52,865 - ERROR - www.cpn8.com 443 ssl error
+2018-06-12 19:36:52,960 - ERROR - ct860.com 443 ssl error
+2018-06-12 19:36:53,148 - ERROR - www.caitou06.com 443 ssl error
+2018-06-12 19:36:53,377 - ERROR - m.uccp22.com 443 ssl error
+2018-06-12 19:36:53,388 - ERROR - m.ct66888.com 443 ssl error
+2018-06-12 19:36:53,394 - ERROR - m.caitou111.com 443 ssl error
+2018-06-12 19:36:53,737 - ERROR - vip.2805s.com 443 ssl error
+2018-06-12 19:36:53,901 - ERROR - ct186.com 443 ssl error
+2018-06-12 19:36:54,002 - ERROR - m.ct860.com 443 ssl error
+2018-06-12 19:36:54,088 - ERROR - www.ct581.com 443 ssl error
+2018-06-12 19:36:54,194 - ERROR - ct6801.com 443 ssl error
+2018-06-12 19:36:54,196 - ERROR - m.ct991.com 443 ssl error
+2018-06-12 19:36:54,311 - ERROR - caitou06.com 443 ssl error
+2018-06-12 19:36:54,411 - ERROR - m.caitou06.com 443 ssl error
+2018-06-12 19:36:54,483 - ERROR - www.caitou999.com 443 ssl error
+2018-06-12 19:36:54,812 - ERROR - wap.le670.com 443 ssl error
+2018-06-12 19:36:55,016 - ERROR - www.le969.com 443 ssl error
+2018-06-12 19:36:55,140 - ERROR - m.uc22.cc 443 ssl error
+2018-06-12 19:36:55,631 - ERROR - www.2805s.com 443 ssl error
+2018-06-12 19:36:55,657 - ERROR - m.2805z.com 443 ssl error
+2018-06-12 19:36:55,713 - ERROR - 2805u.com 443 ssl error
+2018-06-12 19:36:55,733 - ERROR - m.2805u.com 443 ssl error
+2018-06-12 19:36:55,809 - ERROR - m.ct581.com 443 ssl error
+2018-06-12 19:36:55,927 - ERROR - www.ct991.com 443 ssl error
+2018-06-12 19:36:56,013 - ERROR - m.ct186.com 443 ssl error
+2018-06-12 19:36:56,079 - ERROR - www.2805u.com 443 ssl error
+2018-06-12 19:36:56,115 - ERROR - www.ct6801.com 443 ssl error
+2018-06-12 19:36:56,253 - ERROR - www.caitou111.com 443 ssl error
+2018-06-12 19:36:56,286 - ERROR - le969.com 443 ssl error
+2018-06-12 19:36:56,361 - ERROR - vip.le969.com 443 ssl error
+2018-06-12 19:36:56,486 - ERROR - 2805z.com 443 ssl error
+2018-06-12 19:36:56,723 - ERROR - vip.cpn8.com 443 ssl error
+2018-06-12 19:36:56,930 - ERROR - m.ct6801.com 443 ssl error
+2018-06-12 19:36:56,963 - ERROR - asd.208608.com 443 ssl error
+2018-06-12 19:36:57,036 - ERROR - m.cpn8.com 443 ssl error
+2018-06-12 19:36:57,069 - ERROR - ct991.com 443 ssl error
+2018-06-12 19:36:57,280 - ERROR - caitou08.com 443 ssl error
+2018-06-12 19:36:57,417 - ERROR - caitou111.com 443 ssl error
+2018-06-12 19:36:57,548 - ERROR - m.caitou999.com 443 ssl error
+2018-06-12 19:36:57,604 - ERROR - vip.caitou111.com 443 ssl error
+2018-06-12 19:36:57,721 - ERROR - www.ct66888.com 443 ssl error
+2018-06-12 19:36:57,780 - ERROR - vip.uc22.cc 443 ssl error
+2018-06-12 19:36:57,793 - ERROR - vip.le670.com 443 ssl error
+2018-06-12 19:36:57,940 - ERROR - vip.uc22222.com 443 ssl error
+2018-06-12 19:36:58,273 - ERROR - m.2805s.com 443 ssl error
+2018-06-12 19:36:58,404 - ERROR - www.2805z.com 443 ssl error
+2018-06-12 19:36:58,444 - ERROR - cpn8.com 443 ssl error
+2018-06-12 19:36:58,490 - ERROR - www.ct860.com 443 ssl error
+2018-06-12 19:36:58,736 - ERROR - m.caitou08.com 443 ssl error
+2018-06-12 19:36:58,767 - ERROR - ct66888.com 443 ssl error
+2018-06-12 19:36:59,194 - ERROR - 2805s.com 443 ssl error
+2018-06-12 19:36:59,224 - ERROR - ct581.com 443 ssl error
+2018-06-12 19:36:59,249 - ERROR - www.ct186.com 443 ssl error
+2018-06-12 19:36:59,315 - ERROR - vip.uccp22.com 443 ssl error
+2018-06-12 19:36:59,542 - ERROR - caitou999.com 443 ssl error
+2018-06-12 19:36:59,572 - ERROR - www.caitou08.com 443 ssl error
+2018-06-12 19:36:59,608 - ERROR - wap.le969.com 443 ssl error
+2018-06-12 19:42:30,548 - ERROR - vip.le670.com 443 ssl error
+2018-06-12 19:42:30,752 - ERROR - vip.le969.com 443 ssl error
+2018-06-12 19:42:30,868 - ERROR - www.le969.com 443 ssl error
+2018-06-12 19:42:30,901 - ERROR - wap.le670.com 443 ssl error
+2018-06-12 19:42:31,151 - ERROR - le969.com 443 ssl error
+2018-06-12 19:42:31,280 - ERROR - wap.le969.com 443 ssl error
+2018-06-12 19:43:57,375 - ERROR - m.uccp22.com 443 ssl error
+2018-06-12 19:43:57,470 - ERROR - m.uc22.cc 443 ssl error
+2018-06-12 19:43:57,594 - ERROR - vip.uccp22.com 443 ssl error
+2018-06-12 19:43:57,930 - ERROR - vip.uc22.cc 443 ssl error
+2018-06-12 19:43:58,108 - ERROR - vip.uc22222.com 443 ssl error
+2018-06-12 19:45:06,789 - ERROR - caitou06.com 443 ssl error
+2018-06-12 19:45:06,812 - ERROR - www.caitou111.com 443 ssl error
+2018-06-12 19:45:06,861 - ERROR - www.ct186.com 443 ssl error
+2018-06-12 19:45:06,934 - ERROR - www.ct66888.com 443 ssl error
+2018-06-12 19:45:07,196 - ERROR - caitou08.com 443 ssl error
+2018-06-12 19:45:07,263 - ERROR - m.caitou999.com 443 ssl error
+2018-06-12 19:45:07,391 - ERROR - ct581.com 443 ssl error
+2018-06-12 19:45:07,585 - ERROR - www.caitou06.com 443 ssl error
+2018-06-12 19:45:07,591 - ERROR - m.ct6801.com 443 ssl error
+2018-06-12 19:45:07,628 - ERROR - ct186.com 443 ssl error
+2018-06-12 19:45:07,773 - ERROR - ct6801.com 443 ssl error
+2018-06-12 19:45:07,831 - ERROR - www.caitou08.com 443 ssl error
+2018-06-12 19:45:07,956 - ERROR - ct991.com 443 ssl error
+2018-06-12 19:45:07,994 - ERROR - caitou111.com 443 ssl error
+2018-06-12 19:45:08,088 - ERROR - www.ct860.com 443 ssl error
+2018-06-12 19:45:08,200 - ERROR - ct860.com 443 ssl error
+2018-06-12 19:45:08,391 - ERROR - m.ct860.com 443 ssl error
+2018-06-12 19:45:08,398 - ERROR - caitou999.com 443 ssl error
+2018-06-12 19:45:08,601 - ERROR - m.ct581.com 443 ssl error
+2018-06-12 19:45:08,609 - ERROR - m.ct991.com 443 ssl error
+2018-06-12 19:45:08,726 - ERROR - m.ct66888.com 443 ssl error
+2018-06-12 19:45:08,780 - ERROR - www.ct6801.com 443 ssl error
+2018-06-12 19:45:09,132 - ERROR - www.ct581.com 443 ssl error
+2018-06-12 19:45:09,197 - ERROR - www.caitou999.com 443 ssl error
+2018-06-12 19:45:09,286 - ERROR - m.caitou111.com 443 ssl error
+2018-06-12 19:45:09,391 - ERROR - www.ct991.com 443 ssl error
+2018-06-12 19:45:09,431 - ERROR - vip.caitou111.com 443 ssl error
+2018-06-12 19:45:09,542 - ERROR - ct66888.com 443 ssl error
+2018-06-12 19:45:09,578 - ERROR - m.caitou06.com 443 ssl error
+2018-06-12 19:45:09,631 - ERROR - m.caitou08.com 443 ssl error
+2018-06-12 19:45:09,766 - ERROR - m.ct186.com 443 ssl error
+2018-06-12 19:46:28,273 - ERROR - www.2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 19:46:30,190 - ERROR - 2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 19:46:32,338 - ERROR - www.2805z.com 443 ssl error
+2018-06-12 19:46:32,371 - ERROR - vip.2805s.com 443 ssl error
+2018-06-12 19:46:32,523 - ERROR - www.2805s.com 443 ssl error
+2018-06-12 19:46:32,753 - ERROR - vip.cpn8.com 443 ssl error
+2018-06-12 19:46:32,776 - ERROR - 2805s.com 443 ssl error
+2018-06-12 19:46:33,015 - ERROR - m.cpn8.com 443 ssl error
+2018-06-12 19:46:33,101 - ERROR - www.2805u.com 443 ssl error
+2018-06-12 19:46:34,230 - ERROR - www.cpn8.com 443 ssl error
+2018-06-12 19:46:34,335 - ERROR - 2805u.com 443 ssl error
+2018-06-12 19:46:34,423 - ERROR - 2805z.com 443 ssl error
+2018-06-12 19:46:34,539 - ERROR - m.2805s.com 443 ssl error
+2018-06-12 19:46:34,578 - ERROR - cpn8.com 443 ssl error
+2018-06-12 19:46:34,674 - ERROR - m.2805u.com 443 ssl error
+2018-06-12 19:46:34,709 - ERROR - m.2805z.com 443 ssl error
+2018-06-12 19:46:34,819 - ERROR - asd.208608.com 443 ssl error
+2018-06-12 19:47:11,983 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:47:13,799 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:47:13,799 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:47:14,717 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:47:15,302 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:52:20,677 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:52:24,308 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:52:25,556 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:52:26,657 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:52:27,019 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:53:16,342 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:53:17,506 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:53:20,250 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:53:20,924 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:53:20,924 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:54:01,736 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:54:05,119 - ERROR - 2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 19:54:18,450 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:54:18,450 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:54:22,499 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:54:25,329 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:54:29,012 - ERROR - 2805z.com 443 ssl error
+2018-06-12 19:54:29,049 - ERROR - m.cpn8.com 443 ssl error
+2018-06-12 19:54:29,157 - ERROR - www.ct860.com 443 ssl error
+2018-06-12 19:54:29,394 - ERROR - ct186.com 443 ssl error
+2018-06-12 19:54:29,400 - ERROR - www.2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 19:54:29,598 - ERROR - www.caitou08.com 443 ssl error
+2018-06-12 19:54:29,798 - ERROR - ct991.com 443 ssl error
+2018-06-12 19:54:29,802 - ERROR - vip.caitou111.com 443 ssl error
+2018-06-12 19:54:29,934 - ERROR - www.ct581.com 443 ssl error
+2018-06-12 19:54:30,084 - ERROR - 2805s.com 443 ssl error
+2018-06-12 19:54:30,131 - ERROR - vip.2805s.com 443 ssl error
+2018-06-12 19:54:30,167 - ERROR - vip.cpn8.com 443 ssl error
+2018-06-12 19:54:30,217 - ERROR - www.2805u.com 443 ssl error
+2018-06-12 19:54:30,301 - ERROR - www.ct6801.com 443 ssl error
+2018-06-12 19:54:30,569 - ERROR - ct581.com 443 ssl error
+2018-06-12 19:54:30,703 - ERROR - www.caitou111.com 443 ssl error
+2018-06-12 19:54:30,736 - ERROR - www.ct66888.com 443 ssl error
+2018-06-12 19:54:30,772 - ERROR - m.caitou999.com 443 ssl error
+2018-06-12 19:54:30,990 - ERROR - vip.le670.com 443 ssl error
+2018-06-12 19:54:31,025 - ERROR - www.caitou06.com 443 ssl error
+2018-06-12 19:54:31,200 - ERROR - vip.le969.com 443 ssl error
+2018-06-12 19:54:31,361 - ERROR - www.2805s.com 443 ssl error
+2018-06-12 19:54:31,536 - ERROR - cpn8.com 443 ssl error
+2018-06-12 19:54:31,661 - ERROR - ct6801.com 443 ssl error
+2018-06-12 19:54:31,700 - ERROR - m.ct6801.com 443 ssl error
+2018-06-12 19:54:31,760 - ERROR - caitou08.com 443 ssl error
+2018-06-12 19:54:31,869 - ERROR - m.caitou06.com 443 ssl error
+2018-06-12 19:54:31,888 - ERROR - caitou999.com 443 ssl error
+2018-06-12 19:54:31,992 - ERROR - wap.le969.com 443 ssl error
+2018-06-12 19:54:32,164 - ERROR - wap.le670.com 443 ssl error
+2018-06-12 19:54:32,213 - ERROR - vip.uccp22.com 443 ssl error
+2018-06-12 19:54:32,249 - ERROR - m.uc22.cc 443 ssl error
+2018-06-12 19:54:32,703 - ERROR - www.2805z.com 443 ssl error
+2018-06-12 19:54:32,743 - ERROR - m.2805z.com 443 ssl error
+2018-06-12 19:54:32,871 - ERROR - www.cpn8.com 443 ssl error
+2018-06-12 19:54:32,905 - ERROR - m.ct186.com 443 ssl error
+2018-06-12 19:54:33,160 - ERROR - ct66888.com 443 ssl error
+2018-06-12 19:54:33,312 - ERROR - www.ct991.com 443 ssl error
+2018-06-12 19:54:33,456 - ERROR - ct860.com 443 ssl error
+2018-06-12 19:54:33,520 - ERROR - caitou06.com 443 ssl error
+2018-06-12 19:54:33,865 - ERROR - le969.com 443 ssl error
+2018-06-12 19:54:33,894 - ERROR - m.uccp22.com 443 ssl error
+2018-06-12 19:54:33,966 - ERROR - caitou111.com 443 ssl error
+2018-06-12 19:54:34,349 - ERROR - vip.uc22.cc 443 ssl error
+2018-06-12 19:54:34,773 - ERROR - m.2805u.com 443 ssl error
+2018-06-12 19:54:34,891 - ERROR - asd.208608.com 443 ssl error
+2018-06-12 19:54:35,013 - ERROR - m.ct991.com 443 ssl error
+2018-06-12 19:54:35,130 - ERROR - m.caitou08.com 443 ssl error
+2018-06-12 19:54:35,210 - ERROR - www.caitou999.com 443 ssl error
+2018-06-12 19:54:35,239 - ERROR - www.ct186.com 443 ssl error
+2018-06-12 19:54:35,565 - ERROR - m.2805s.com 443 ssl error
+2018-06-12 19:54:35,599 - ERROR - 2805u.com 443 ssl error
+2018-06-12 19:54:35,826 - ERROR - m.ct66888.com 443 ssl error
+2018-06-12 19:54:35,875 - ERROR - www.le969.com 443 ssl error
+2018-06-12 19:54:36,161 - ERROR - m.caitou111.com 443 ssl error
+2018-06-12 19:54:36,194 - ERROR - m.ct860.com 443 ssl error
+2018-06-12 19:54:36,319 - ERROR - m.ct581.com 443 ssl error
+2018-06-12 19:54:36,384 - ERROR - vip.uc22222.com 443 ssl error
+2018-06-12 19:55:23,891 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:55:23,891 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:55:25,115 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:55:26,130 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:55:27,244 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:57:05,424 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:57:09,539 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:57:09,539 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:57:23,197 - ERROR - www.2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 19:57:23,993 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:57:29,003 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:57:29,104 - ERROR - www.2805s.com 443 ssl error
+2018-06-12 19:57:29,171 - ERROR - www.2805z.com 443 ssl error
+2018-06-12 19:57:29,270 - ERROR - 2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 19:57:29,285 - ERROR - m.cpn8.com 443 ssl error
+2018-06-12 19:57:29,322 - ERROR - www.ct186.com 443 ssl error
+2018-06-12 19:57:29,404 - ERROR - www.ct6801.com 443 ssl error
+2018-06-12 19:57:29,515 - ERROR - www.ct991.com 443 ssl error
+2018-06-12 19:57:29,516 - ERROR - caitou999.com 443 ssl error
+2018-06-12 19:57:29,618 - ERROR - www.caitou06.com 443 ssl error
+2018-06-12 19:57:29,644 - ERROR - m.uccp22.com 443 ssl error
+2018-06-12 19:57:29,871 - ERROR - m.uc22.cc 443 ssl error
+2018-06-12 19:57:30,039 - ERROR - wap.le969.com 443 ssl error
+2018-06-12 19:57:30,121 - ERROR - 2805s.com 443 ssl error
+2018-06-12 19:57:30,187 - ERROR - cpn8.com 443 ssl error
+2018-06-12 19:57:30,352 - ERROR - vip.cpn8.com 443 ssl error
+2018-06-12 19:57:30,487 - ERROR - m.2805u.com 443 ssl error
+2018-06-12 19:57:30,571 - ERROR - m.ct860.com 443 ssl error
+2018-06-12 19:57:30,759 - ERROR - www.ct66888.com 443 ssl error
+2018-06-12 19:57:30,778 - ERROR - m.ct581.com 443 ssl error
+2018-06-12 19:57:30,898 - ERROR - m.ct991.com 443 ssl error
+2018-06-12 19:57:30,997 - ERROR - m.caitou08.com 443 ssl error
+2018-06-12 19:57:31,194 - ERROR - vip.le670.com 443 ssl error
+2018-06-12 19:57:31,407 - ERROR - vip.caitou111.com 443 ssl error
+2018-06-12 19:57:31,513 - ERROR - m.2805z.com 443 ssl error
+2018-06-12 19:57:31,540 - ERROR - www.2805u.com 443 ssl error
+2018-06-12 19:57:31,694 - ERROR - m.ct186.com 443 ssl error
+2018-06-12 19:57:31,726 - ERROR - ct66888.com 443 ssl error
+2018-06-12 19:57:31,834 - ERROR - ct860.com 443 ssl error
+2018-06-12 19:57:31,947 - ERROR - m.ct66888.com 443 ssl error
+2018-06-12 19:57:32,046 - ERROR - caitou111.com 443 ssl error
+2018-06-12 19:57:32,119 - ERROR - www.caitou111.com 443 ssl error
+2018-06-12 19:57:32,450 - ERROR - www.caitou999.com 443 ssl error
+2018-06-12 19:57:32,493 - ERROR - le969.com 443 ssl error
+2018-06-12 19:57:32,773 - ERROR - vip.uc22.cc 443 ssl error
+2018-06-12 19:57:33,019 - ERROR - www.le969.com 443 ssl error
+2018-06-12 19:57:33,233 - ERROR - vip.2805s.com 443 ssl error
+2018-06-12 19:57:33,456 - ERROR - ct581.com 443 ssl error
+2018-06-12 19:57:33,536 - ERROR - m.ct6801.com 443 ssl error
+2018-06-12 19:57:33,599 - ERROR - www.ct860.com 443 ssl error
+2018-06-12 19:57:33,622 - ERROR - www.caitou08.com 443 ssl error
+2018-06-12 19:57:34,000 - ERROR - vip.le969.com 443 ssl error
+2018-06-12 19:57:34,007 - ERROR - caitou06.com 443 ssl error
+2018-06-12 19:57:34,092 - ERROR - wap.le670.com 443 ssl error
+2018-06-12 19:57:34,494 - ERROR - 2805z.com 443 ssl error
+2018-06-12 19:57:34,757 - ERROR - www.ct581.com 443 ssl error
+2018-06-12 19:57:34,914 - ERROR - asd.208608.com 443 ssl error
+2018-06-12 19:57:34,917 - ERROR - caitou08.com 443 ssl error
+2018-06-12 19:57:35,115 - ERROR - m.2805s.com 443 ssl error
+2018-06-12 19:57:35,209 - ERROR - m.caitou999.com 443 ssl error
+2018-06-12 19:57:35,305 - ERROR - www.cpn8.com 443 ssl error
+2018-06-12 19:57:35,408 - ERROR - ct186.com 443 ssl error
+2018-06-12 19:57:35,444 - ERROR - ct6801.com 443 ssl error
+2018-06-12 19:57:35,655 - ERROR - 2805u.com 443 ssl error
+2018-06-12 19:57:35,822 - ERROR - m.caitou06.com 443 ssl error
+2018-06-12 19:57:35,825 - ERROR - m.caitou111.com 443 ssl error
+2018-06-12 19:57:35,934 - ERROR - vip.uccp22.com 443 ssl error
+2018-06-12 19:57:36,278 - ERROR - ct991.com 443 ssl error
+2018-06-12 19:57:36,302 - ERROR - vip.uc22222.com 443 ssl error
+2018-06-12 19:58:53,934 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:58:56,098 - ERROR - 2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 19:58:57,690 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:59:00,292 - ERROR - www.2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 19:59:07,581 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:59:07,581 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:59:13,288 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 19:59:15,686 - ERROR - 2805s.com 443 ssl error
+2018-06-12 19:59:15,724 - ERROR - ct581.com 443 ssl error
+2018-06-12 19:59:15,766 - ERROR - ct6801.com 443 ssl error
+2018-06-12 19:59:15,778 - ERROR - caitou999.com 443 ssl error
+2018-06-12 19:59:15,802 - ERROR - wap.le670.com 443 ssl error
+2018-06-12 19:59:16,132 - ERROR - caitou111.com 443 ssl error
+2018-06-12 19:59:16,151 - ERROR - 2805z.com 443 ssl error
+2018-06-12 19:59:16,305 - ERROR - www.cpn8.com 443 ssl error
+2018-06-12 19:59:16,411 - ERROR - www.2805u.com 443 ssl error
+2018-06-12 19:59:16,434 - ERROR - vip.cpn8.com 443 ssl error
+2018-06-12 19:59:16,660 - ERROR - ct186.com 443 ssl error
+2018-06-12 19:59:16,690 - ERROR - ct66888.com 443 ssl error
+2018-06-12 19:59:16,755 - ERROR - ct991.com 443 ssl error
+2018-06-12 19:59:16,855 - ERROR - ct860.com 443 ssl error
+2018-06-12 19:59:16,926 - ERROR - caitou06.com 443 ssl error
+2018-06-12 19:59:16,976 - ERROR - www.caitou111.com 443 ssl error
+2018-06-12 19:59:17,154 - ERROR - vip.uccp22.com 443 ssl error
+2018-06-12 19:59:17,161 - ERROR - wap.le969.com 443 ssl error
+2018-06-12 19:59:17,448 - ERROR - vip.2805s.com 443 ssl error
+2018-06-12 19:59:17,569 - ERROR - www.2805z.com 443 ssl error
+2018-06-12 19:59:17,691 - ERROR - 2805u.com 443 ssl error
+2018-06-12 19:59:17,730 - ERROR - m.2805u.com 443 ssl error
+2018-06-12 19:59:17,891 - ERROR - m.ct860.com 443 ssl error
+2018-06-12 19:59:18,180 - ERROR - m.ct66888.com 443 ssl error
+2018-06-12 19:59:18,233 - ERROR - m.ct581.com 443 ssl error
+2018-06-12 19:59:18,292 - ERROR - www.caitou08.com 443 ssl error
+2018-06-12 19:59:18,377 - ERROR - www.caitou06.com 443 ssl error
+2018-06-12 19:59:18,384 - ERROR - m.ct6801.com 443 ssl error
+2018-06-12 19:59:18,417 - ERROR - m.caitou111.com 443 ssl error
+2018-06-12 19:59:18,543 - ERROR - m.ct991.com 443 ssl error
+2018-06-12 19:59:18,670 - ERROR - vip.le969.com 443 ssl error
+2018-06-12 19:59:18,710 - ERROR - m.uccp22.com 443 ssl error
+2018-06-12 19:59:18,742 - ERROR - vip.uc22.cc 443 ssl error
+2018-06-12 19:59:18,895 - ERROR - m.uc22.cc 443 ssl error
+2018-06-12 19:59:19,249 - ERROR - m.2805s.com 443 ssl error
+2018-06-12 19:59:19,473 - ERROR - m.cpn8.com 443 ssl error
+2018-06-12 19:59:19,569 - ERROR - www.ct860.com 443 ssl error
+2018-06-12 19:59:19,651 - ERROR - www.ct186.com 443 ssl error
+2018-06-12 19:59:19,841 - ERROR - m.caitou08.com 443 ssl error
+2018-06-12 19:59:19,881 - ERROR - m.caitou999.com 443 ssl error
+2018-06-12 19:59:19,885 - ERROR - caitou08.com 443 ssl error
+2018-06-12 19:59:20,069 - ERROR - www.ct66888.com 443 ssl error
+2018-06-12 19:59:20,089 - ERROR - le969.com 443 ssl error
+2018-06-12 19:59:20,346 - ERROR - www.le969.com 443 ssl error
+2018-06-12 19:59:20,467 - ERROR - www.2805s.com 443 ssl error
+2018-06-12 19:59:20,503 - ERROR - www.ct6801.com 443 ssl error
+2018-06-12 19:59:20,582 - ERROR - www.ct991.com 443 ssl error
+2018-06-12 19:59:20,655 - ERROR - asd.208608.com 443 ssl error
+2018-06-12 19:59:20,700 - ERROR - vip.le670.com 443 ssl error
+2018-06-12 19:59:20,996 - ERROR - cpn8.com 443 ssl error
+2018-06-12 19:59:21,026 - ERROR - vip.uc22222.com 443 ssl error
+2018-06-12 19:59:21,042 - ERROR - www.ct581.com 443 ssl error
+2018-06-12 19:59:21,154 - ERROR - m.caitou06.com 443 ssl error
+2018-06-12 19:59:21,171 - ERROR - www.caitou999.com 443 ssl error
+2018-06-12 19:59:21,342 - ERROR - m.2805z.com 443 ssl error
+2018-06-12 19:59:21,476 - ERROR - m.ct186.com 443 ssl error
+2018-06-12 19:59:21,680 - ERROR - vip.caitou111.com 443 ssl error
+2018-06-12 20:00:17,631 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:00:19,852 - ERROR - 2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 20:00:20,891 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:00:23,042 - ERROR - www.2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 20:00:24,759 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:00:31,476 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:00:34,737 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:00:35,884 - ERROR - 2805z.com 443 ssl error
+2018-06-12 20:00:35,920 - ERROR - vip.cpn8.com 443 ssl error
+2018-06-12 20:00:36,049 - ERROR - www.cpn8.com 443 ssl error
+2018-06-12 20:00:36,295 - ERROR - m.ct66888.com 443 ssl error
+2018-06-12 20:00:36,466 - ERROR - caitou08.com 443 ssl error
+2018-06-12 20:00:36,477 - ERROR - m.ct860.com 443 ssl error
+2018-06-12 20:00:36,601 - ERROR - m.uccp22.com 443 ssl error
+2018-06-12 20:00:36,714 - ERROR - m.ct581.com 443 ssl error
+2018-06-12 20:00:36,753 - ERROR - vip.caitou111.com 443 ssl error
+2018-06-12 20:00:36,790 - ERROR - vip.le670.com 443 ssl error
+2018-06-12 20:00:36,849 - ERROR - vip.uc22222.com 443 ssl error
+2018-06-12 20:00:36,881 - ERROR - m.2805s.com 443 ssl error
+2018-06-12 20:00:36,921 - ERROR - www.2805u.com 443 ssl error
+2018-06-12 20:00:37,036 - ERROR - asd.208608.com 443 ssl error
+2018-06-12 20:00:37,068 - ERROR - m.ct186.com 443 ssl error
+2018-06-12 20:00:37,204 - ERROR - m.ct6801.com 443 ssl error
+2018-06-12 20:00:37,230 - ERROR - www.ct991.com 443 ssl error
+2018-06-12 20:00:37,280 - ERROR - ct186.com 443 ssl error
+2018-06-12 20:00:37,318 - ERROR - m.caitou08.com 443 ssl error
+2018-06-12 20:00:37,414 - ERROR - m.caitou06.com 443 ssl error
+2018-06-12 20:00:37,573 - ERROR - le969.com 443 ssl error
+2018-06-12 20:00:37,753 - ERROR - www.caitou999.com 443 ssl error
+2018-06-12 20:00:38,250 - ERROR - www.2805s.com 443 ssl error
+2018-06-12 20:00:38,302 - ERROR - vip.2805s.com 443 ssl error
+2018-06-12 20:00:38,326 - ERROR - cpn8.com 443 ssl error
+2018-06-12 20:00:38,450 - ERROR - m.2805u.com 443 ssl error
+2018-06-12 20:00:38,487 - ERROR - ct581.com 443 ssl error
+2018-06-12 20:00:38,542 - ERROR - caitou06.com 443 ssl error
+2018-06-12 20:00:38,621 - ERROR - www.ct6801.com 443 ssl error
+2018-06-12 20:00:38,743 - ERROR - ct66888.com 443 ssl error
+2018-06-12 20:00:38,779 - ERROR - www.caitou111.com 443 ssl error
+2018-06-12 20:00:38,812 - ERROR - vip.le969.com 443 ssl error
+2018-06-12 20:00:38,963 - ERROR - m.caitou111.com 443 ssl error
+2018-06-12 20:00:39,082 - ERROR - 2805s.com 443 ssl error
+2018-06-12 20:00:39,188 - ERROR - m.2805z.com 443 ssl error
+2018-06-12 20:00:39,206 - ERROR - m.uc22.cc 443 ssl error
+2018-06-12 20:00:39,375 - ERROR - m.ct991.com 443 ssl error
+2018-06-12 20:00:39,414 - ERROR - m.caitou999.com 443 ssl error
+2018-06-12 20:00:39,532 - ERROR - wap.le670.com 443 ssl error
+2018-06-12 20:00:39,601 - ERROR - wap.le969.com 443 ssl error
+2018-06-12 20:00:39,617 - ERROR - www.caitou08.com 443 ssl error
+2018-06-12 20:00:39,867 - ERROR - www.2805z.com 443 ssl error
+2018-06-12 20:00:39,904 - ERROR - 2805u.com 443 ssl error
+2018-06-12 20:00:40,025 - ERROR - www.ct860.com 443 ssl error
+2018-06-12 20:00:40,058 - ERROR - vip.uc22.cc 443 ssl error
+2018-06-12 20:00:40,079 - ERROR - www.caitou06.com 443 ssl error
+2018-06-12 20:00:40,092 - ERROR - caitou999.com 443 ssl error
+2018-06-12 20:00:40,221 - ERROR - ct860.com 443 ssl error
+2018-06-12 20:00:40,283 - ERROR - www.ct186.com 443 ssl error
+2018-06-12 20:00:40,378 - ERROR - caitou111.com 443 ssl error
+2018-06-12 20:00:40,411 - ERROR - www.le969.com 443 ssl error
+2018-06-12 20:00:40,533 - ERROR - www.ct581.com 443 ssl error
+2018-06-12 20:00:40,605 - ERROR - ct6801.com 443 ssl error
+2018-06-12 20:00:40,638 - ERROR - m.cpn8.com 443 ssl error
+2018-06-12 20:00:40,700 - ERROR - ct991.com 443 ssl error
+2018-06-12 20:00:40,782 - ERROR - vip.uccp22.com 443 ssl error
+2018-06-12 20:00:40,914 - ERROR - www.ct66888.com 443 ssl error
+2018-06-12 20:02:00,973 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:02:06,637 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:02:08,693 - ERROR - 2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 20:02:09,447 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:02:11,717 - ERROR - www.2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 20:02:13,526 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:02:20,328 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:02:21,223 - ERROR - www.2805z.com 443 ssl error
+2018-06-12 20:02:21,276 - ERROR - www.cpn8.com 443 ssl error
+2018-06-12 20:02:21,348 - ERROR - www.2805u.com 443 ssl error
+2018-06-12 20:02:21,437 - ERROR - ct860.com 443 ssl error
+2018-06-12 20:02:22,040 - ERROR - www.ct6801.com 443 ssl error
+2018-06-12 20:02:22,076 - ERROR - m.caitou08.com 443 ssl error
+2018-06-12 20:02:22,114 - ERROR - www.caitou06.com 443 ssl error
+2018-06-12 20:02:22,127 - ERROR - caitou999.com 443 ssl error
+2018-06-12 20:02:22,207 - ERROR - ct581.com 443 ssl error
+2018-06-12 20:02:22,233 - ERROR - vip.le670.com 443 ssl error
+2018-06-12 20:02:22,309 - ERROR - wap.le670.com 443 ssl error
+2018-06-12 20:02:22,617 - ERROR - wap.le969.com 443 ssl error
+2018-06-12 20:02:22,924 - ERROR - www.2805s.com 443 ssl error
+2018-06-12 20:02:23,009 - ERROR - www.ct186.com 443 ssl error
+2018-06-12 20:02:23,049 - ERROR - www.ct66888.com 443 ssl error
+2018-06-12 20:02:23,121 - ERROR - www.ct991.com 443 ssl error
+2018-06-12 20:02:23,250 - ERROR - 2805z.com 443 ssl error
+2018-06-12 20:02:23,306 - ERROR - vip.uccp22.com 443 ssl error
+2018-06-12 20:02:23,575 - ERROR - m.caitou111.com 443 ssl error
+2018-06-12 20:02:23,612 - ERROR - 2805s.com 443 ssl error
+2018-06-12 20:02:23,654 - ERROR - vip.cpn8.com 443 ssl error
+2018-06-12 20:02:23,858 - ERROR - m.uc22.cc 443 ssl error
+2018-06-12 20:02:23,871 - ERROR - 2805u.com 443 ssl error
+2018-06-12 20:02:23,997 - ERROR - m.ct860.com 443 ssl error
+2018-06-12 20:02:24,092 - ERROR - ct6801.com 443 ssl error
+2018-06-12 20:02:24,223 - ERROR - www.ct860.com 443 ssl error
+2018-06-12 20:02:24,323 - ERROR - www.caitou111.com 443 ssl error
+2018-06-12 20:02:24,355 - ERROR - www.ct581.com 443 ssl error
+2018-06-12 20:02:24,362 - ERROR - ct66888.com 443 ssl error
+2018-06-12 20:02:24,529 - ERROR - caitou111.com 443 ssl error
+2018-06-12 20:02:24,572 - ERROR - caitou06.com 443 ssl error
+2018-06-12 20:02:24,634 - ERROR - vip.le969.com 443 ssl error
+2018-06-12 20:02:24,723 - ERROR - www.caitou999.com 443 ssl error
+2018-06-12 20:02:24,773 - ERROR - ct991.com 443 ssl error
+2018-06-12 20:02:24,829 - ERROR - vip.uc22222.com 443 ssl error
+2018-06-12 20:02:25,088 - ERROR - vip.uc22.cc 443 ssl error
+2018-06-12 20:02:25,365 - ERROR - m.2805s.com 443 ssl error
+2018-06-12 20:02:25,565 - ERROR - vip.2805s.com 443 ssl error
+2018-06-12 20:02:25,585 - ERROR - m.cpn8.com 443 ssl error
+2018-06-12 20:02:25,630 - ERROR - asd.208608.com 443 ssl error
+2018-06-12 20:02:25,665 - ERROR - m.ct66888.com 443 ssl error
+2018-06-12 20:02:25,740 - ERROR - vip.caitou111.com 443 ssl error
+2018-06-12 20:02:25,782 - ERROR - le969.com 443 ssl error
+2018-06-12 20:02:25,786 - ERROR - www.caitou08.com 443 ssl error
+2018-06-12 20:02:26,088 - ERROR - ct186.com 443 ssl error
+2018-06-12 20:02:26,197 - ERROR - m.ct581.com 443 ssl error
+2018-06-12 20:02:26,342 - ERROR - caitou08.com 443 ssl error
+2018-06-12 20:02:26,377 - ERROR - www.le969.com 443 ssl error
+2018-06-12 20:02:26,739 - ERROR - m.uccp22.com 443 ssl error
+2018-06-12 20:02:26,806 - ERROR - m.2805u.com 443 ssl error
+2018-06-12 20:02:26,845 - ERROR - m.caitou06.com 443 ssl error
+2018-06-12 20:02:27,131 - ERROR - cpn8.com 443 ssl error
+2018-06-12 20:02:27,167 - ERROR - m.ct6801.com 443 ssl error
+2018-06-12 20:02:27,173 - ERROR - m.ct186.com 443 ssl error
+2018-06-12 20:02:27,247 - ERROR - m.ct991.com 443 ssl error
+2018-06-12 20:02:27,289 - ERROR - m.caitou999.com 443 ssl error
+2018-06-12 20:02:27,427 - ERROR - m.2805z.com 443 ssl error
+2018-06-12 20:04:24,734 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:04:30,421 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:04:37,128 - ERROR - 2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 20:04:39,190 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:04:41,227 - ERROR - www.2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 20:04:41,990 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:04:44,009 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:04:47,660 - ERROR - 2805s.com 443 ssl error
+2018-06-12 20:04:47,697 - ERROR - vip.2805s.com 443 ssl error
+2018-06-12 20:04:47,730 - ERROR - 2805u.com 443 ssl error
+2018-06-12 20:04:47,773 - ERROR - www.ct186.com 443 ssl error
+2018-06-12 20:04:47,841 - ERROR - www.ct991.com 443 ssl error
+2018-06-12 20:04:47,967 - ERROR - www.ct6801.com 443 ssl error
+2018-06-12 20:04:48,096 - ERROR - wap.le969.com 443 ssl error
+2018-06-12 20:04:48,230 - ERROR - www.caitou06.com 443 ssl error
+2018-06-12 20:04:48,240 - ERROR - m.uccp22.com 443 ssl error
+2018-06-12 20:04:48,270 - ERROR - caitou999.com 443 ssl error
+2018-06-12 20:04:48,312 - ERROR - m.uc22.cc 443 ssl error
+2018-06-12 20:04:48,539 - ERROR - 2805z.com 443 ssl error
+2018-06-12 20:04:48,612 - ERROR - m.2805z.com 443 ssl error
+2018-06-12 20:04:48,661 - ERROR - cpn8.com 443 ssl error
+2018-06-12 20:04:48,825 - ERROR - caitou08.com 443 ssl error
+2018-06-12 20:04:48,859 - ERROR - asd.208608.com 443 ssl error
+2018-06-12 20:04:49,000 - ERROR - m.ct66888.com 443 ssl error
+2018-06-12 20:04:49,019 - ERROR - m.ct581.com 443 ssl error
+2018-06-12 20:04:49,075 - ERROR - m.caitou06.com 443 ssl error
+2018-06-12 20:04:49,177 - ERROR - vip.caitou111.com 443 ssl error
+2018-06-12 20:04:49,210 - ERROR - le969.com 443 ssl error
+2018-06-12 20:04:49,348 - ERROR - vip.uc22.cc 443 ssl error
+2018-06-12 20:04:49,592 - ERROR - vip.le670.com 443 ssl error
+2018-06-12 20:04:49,920 - ERROR - www.2805z.com 443 ssl error
+2018-06-12 20:04:49,956 - ERROR - www.cpn8.com 443 ssl error
+2018-06-12 20:04:50,257 - ERROR - m.cpn8.com 443 ssl error
+2018-06-12 20:04:50,293 - ERROR - m.2805u.com 443 ssl error
+2018-06-12 20:04:50,417 - ERROR - ct860.com 443 ssl error
+2018-06-12 20:04:50,492 - ERROR - ct581.com 443 ssl error
+2018-06-12 20:04:50,538 - ERROR - m.ct6801.com 443 ssl error
+2018-06-12 20:04:50,707 - ERROR - www.caitou08.com 443 ssl error
+2018-06-12 20:04:50,819 - ERROR - www.caitou111.com 443 ssl error
+2018-06-12 20:04:50,923 - ERROR - www.le969.com 443 ssl error
+2018-06-12 20:04:51,025 - ERROR - m.ct860.com 443 ssl error
+2018-06-12 20:04:51,249 - ERROR - vip.cpn8.com 443 ssl error
+2018-06-12 20:04:51,323 - ERROR - www.ct860.com 443 ssl error
+2018-06-12 20:04:51,408 - ERROR - m.ct186.com 443 ssl error
+2018-06-12 20:04:51,444 - ERROR - www.ct581.com 443 ssl error
+2018-06-12 20:04:51,588 - ERROR - www.ct66888.com 443 ssl error
+2018-06-12 20:04:51,632 - ERROR - m.caitou111.com 443 ssl error
+2018-06-12 20:04:51,835 - ERROR - m.2805s.com 443 ssl error
+2018-06-12 20:04:51,875 - ERROR - m.caitou08.com 443 ssl error
+2018-06-12 20:04:51,895 - ERROR - www.2805u.com 443 ssl error
+2018-06-12 20:04:51,992 - ERROR - ct186.com 443 ssl error
+2018-06-12 20:04:52,112 - ERROR - ct6801.com 443 ssl error
+2018-06-12 20:04:52,230 - ERROR - ct991.com 443 ssl error
+2018-06-12 20:04:52,288 - ERROR - www.caitou999.com 443 ssl error
+2018-06-12 20:04:52,388 - ERROR - m.ct991.com 443 ssl error
+2018-06-12 20:04:52,569 - ERROR - vip.le969.com 443 ssl error
+2018-06-12 20:04:52,584 - ERROR - m.caitou999.com 443 ssl error
+2018-06-12 20:04:52,848 - ERROR - www.2805s.com 443 ssl error
+2018-06-12 20:04:52,964 - ERROR - ct66888.com 443 ssl error
+2018-06-12 20:04:53,017 - ERROR - vip.uc22222.com 443 ssl error
+2018-06-12 20:04:53,253 - ERROR - wap.le670.com 443 ssl error
+2018-06-12 20:04:53,348 - ERROR - caitou111.com 443 ssl error
+2018-06-12 20:04:53,619 - ERROR - caitou06.com 443 ssl error
+2018-06-12 20:04:53,621 - ERROR - vip.uccp22.com 443 ssl error
+2018-06-12 20:10:59,849 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:11:01,430 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:11:01,431 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:11:02,378 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:11:03,684 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:13:56,104 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:13:56,104 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:14:06,240 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:14:06,240 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:14:09,687 - ERROR - 2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 20:14:09,688 - ERROR - www.2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 20:14:16,812 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:14:21,638 - ERROR - m.2805z.com 443 ssl error
+2018-06-12 20:14:21,763 - ERROR - m.2805u.com 443 ssl error
+2018-06-12 20:14:21,858 - ERROR - m.ct860.com 443 ssl error
+2018-06-12 20:14:22,055 - ERROR - m.ct991.com 443 ssl error
+2018-06-12 20:14:22,181 - ERROR - m.ct66888.com 443 ssl error
+2018-06-12 20:14:22,290 - ERROR - www.caitou06.com 443 ssl error
+2018-06-12 20:14:22,325 - ERROR - ct6801.com 443 ssl error
+2018-06-12 20:14:22,543 - ERROR - vip.caitou111.com 443 ssl error
+2018-06-12 20:14:22,627 - ERROR - 2805s.com 443 ssl error
+2018-06-12 20:14:22,711 - ERROR - cpn8.com 443 ssl error
+2018-06-12 20:14:22,795 - ERROR - www.2805u.com 443 ssl error
+2018-06-12 20:14:23,033 - ERROR - www.ct860.com 443 ssl error
+2018-06-12 20:14:23,165 - ERROR - m.ct186.com 443 ssl error
+2018-06-12 20:14:23,243 - ERROR - asd.208608.com 443 ssl error
+2018-06-12 20:14:23,263 - ERROR - www.ct66888.com 443 ssl error
+2018-06-12 20:14:23,364 - ERROR - caitou08.com 443 ssl error
+2018-06-12 20:14:23,470 - ERROR - m.caitou08.com 443 ssl error
+2018-06-12 20:14:23,490 - ERROR - m.caitou06.com 443 ssl error
+2018-06-12 20:14:23,553 - ERROR - m.caitou999.com 443 ssl error
+2018-06-12 20:14:23,944 - ERROR - vip.le670.com 443 ssl error
+2018-06-12 20:14:23,964 - ERROR - m.2805s.com 443 ssl error
+2018-06-12 20:14:24,039 - ERROR - vip.2805s.com 443 ssl error
+2018-06-12 20:14:24,290 - ERROR - m.cpn8.com 443 ssl error
+2018-06-12 20:14:24,341 - ERROR - www.cpn8.com 443 ssl error
+2018-06-12 20:14:24,381 - ERROR - ct581.com 443 ssl error
+2018-06-12 20:14:24,476 - ERROR - m.ct581.com 443 ssl error
+2018-06-12 20:14:24,523 - ERROR - caitou111.com 443 ssl error
+2018-06-12 20:14:24,552 - ERROR - wap.le969.com 443 ssl error
+2018-06-12 20:14:24,694 - ERROR - le969.com 443 ssl error
+2018-06-12 20:14:24,789 - ERROR - caitou999.com 443 ssl error
+2018-06-12 20:14:25,072 - ERROR - m.uc22.cc 443 ssl error
+2018-06-12 20:14:25,111 - ERROR - www.2805s.com 443 ssl error
+2018-06-12 20:14:25,296 - ERROR - vip.cpn8.com 443 ssl error
+2018-06-12 20:14:25,368 - ERROR - www.ct186.com 443 ssl error
+2018-06-12 20:14:25,476 - ERROR - www.ct581.com 443 ssl error
+2018-06-12 20:14:25,678 - ERROR - ct991.com 443 ssl error
+2018-06-12 20:14:25,750 - ERROR - www.caitou999.com 443 ssl error
+2018-06-12 20:14:25,793 - ERROR - wap.le670.com 443 ssl error
+2018-06-12 20:14:25,901 - ERROR - vip.le969.com 443 ssl error
+2018-06-12 20:14:26,372 - ERROR - vip.uc22222.com 443 ssl error
+2018-06-12 20:14:26,392 - ERROR - www.2805z.com 443 ssl error
+2018-06-12 20:14:26,553 - ERROR - ct186.com 443 ssl error
+2018-06-12 20:14:26,684 - ERROR - www.ct6801.com 443 ssl error
+2018-06-12 20:14:26,908 - ERROR - m.caitou111.com 443 ssl error
+2018-06-12 20:14:27,000 - ERROR - m.ct6801.com 443 ssl error
+2018-06-12 20:14:27,029 - ERROR - m.uccp22.com 443 ssl error
+2018-06-12 20:14:27,142 - ERROR - vip.uccp22.com 443 ssl error
+2018-06-12 20:14:27,236 - ERROR - caitou06.com 443 ssl error
+2018-06-12 20:14:27,322 - ERROR - www.ct991.com 443 ssl error
+2018-06-12 20:14:27,664 - ERROR - 2805u.com 443 ssl error
+2018-06-12 20:14:27,733 - ERROR - ct66888.com 443 ssl error
+2018-06-12 20:14:27,750 - ERROR - www.caitou111.com 443 ssl error
+2018-06-12 20:14:27,769 - ERROR - ct860.com 443 ssl error
+2018-06-12 20:14:27,967 - ERROR - www.caitou08.com 443 ssl error
+2018-06-12 20:14:28,164 - ERROR - www.le969.com 443 ssl error
+2018-06-12 20:14:28,173 - ERROR - vip.uc22.cc 443 ssl error
+2018-06-12 20:14:28,448 - ERROR - 2805z.com 443 ssl error
+2018-06-12 20:18:43,634 - ERROR - www.2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 20:18:45,181 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:18:50,091 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:18:55,157 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:18:55,157 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:18:57,275 - ERROR - 2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 20:18:57,858 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:19:11,565 - ERROR - vip.2805s.com 443 ssl error
+2018-06-12 20:19:11,744 - ERROR - cpn8.com 443 ssl error
+2018-06-12 20:19:11,888 - ERROR - 2805s.com 443 ssl error
+2018-06-12 20:19:12,020 - ERROR - m.2805z.com 443 ssl error
+2018-06-12 20:19:12,233 - ERROR - m.2805u.com 443 ssl error
+2018-06-12 20:19:12,714 - ERROR - www.2805s.com 443 ssl error
+2018-06-12 20:19:12,858 - ERROR - asd.208608.com 443 ssl error
+2018-06-12 20:19:12,888 - ERROR - m.uccp22.com 443 ssl error
+2018-06-12 20:19:12,921 - ERROR - vip.uc22.cc 443 ssl error
+2018-06-12 20:19:13,150 - ERROR - vip.uc22222.com 443 ssl error
+2018-06-12 20:19:13,236 - ERROR - vip.le670.com 443 ssl error
+2018-06-12 20:19:13,315 - ERROR - m.uc22.cc 443 ssl error
+2018-06-12 20:19:13,378 - ERROR - vip.cpn8.com 443 ssl error
+2018-06-12 20:19:13,561 - ERROR - www.cpn8.com 443 ssl error
+2018-06-12 20:19:13,982 - ERROR - wap.le670.com 443 ssl error
+2018-06-12 20:19:13,999 - ERROR - vip.uccp22.com 443 ssl error
+2018-06-12 20:19:14,154 - ERROR - m.2805s.com 443 ssl error
+2018-06-12 20:19:14,191 - ERROR - m.cpn8.com 443 ssl error
+2018-06-12 20:19:38,786 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:19:41,007 - ERROR - 2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 20:19:41,926 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:19:46,058 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:19:46,201 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:19:48,325 - ERROR - www.2805.com 443 connection error: 
+ [Errno 10061] 
+2018-06-12 20:19:55,477 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 20:20:04,546 - ERROR - vip.uccp22.com 443 ssl error
+2018-06-12 20:20:04,631 - ERROR - vip.uc22222.com 443 ssl error
+2018-06-12 20:20:04,918 - ERROR - m.2805s.com 443 ssl error
+2018-06-12 20:20:05,036 - ERROR - m.2805z.com 443 ssl error
+2018-06-12 20:20:05,114 - ERROR - cpn8.com 443 ssl error
+2018-06-12 20:20:05,203 - ERROR - m.uccp22.com 443 ssl error
+2018-06-12 20:20:05,332 - ERROR - wap.le670.com 443 ssl error
+2018-06-12 20:20:05,654 - ERROR - www.cpn8.com 443 ssl error
+2018-06-12 20:20:05,690 - ERROR - m.2805u.com 443 ssl error
+2018-06-12 20:20:06,158 - ERROR - vip.2805s.com 443 ssl error
+2018-06-12 20:20:06,190 - ERROR - vip.cpn8.com 443 ssl error
+2018-06-12 20:20:06,266 - ERROR - vip.uc22.cc 443 ssl error
+2018-06-12 20:20:06,384 - ERROR - vip.le670.com 443 ssl error
+2018-06-12 20:20:06,549 - ERROR - m.cpn8.com 443 ssl error
+2018-06-12 20:20:06,589 - ERROR - asd.208608.com 443 ssl error
+2018-06-12 20:20:06,733 - ERROR - 2805s.com 443 ssl error
+2018-06-12 20:20:06,799 - ERROR - m.uc22.cc 443 ssl error
+2018-06-12 20:20:08,611 - ERROR - www.2805s.com 443 ssl error
