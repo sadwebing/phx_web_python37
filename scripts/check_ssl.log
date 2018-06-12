@@ -915,3 +915,127 @@
 2018-06-12 20:20:06,733 - ERROR - 2805s.com 443 ssl error
 2018-06-12 20:20:06,799 - ERROR - m.uc22.cc 443 ssl error
 2018-06-12 20:20:08,611 - ERROR - www.2805s.com 443 ssl error
+2018-06-12 21:27:27,562 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:27:28,599 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:27:29,792 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:27:30,729 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:27:31,970 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:27:38,164 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:27:39,142 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:27:39,142 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:27:39,635 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:27:40,288 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:28:30,269 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:28:34,134 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:28:34,134 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:28:43,913 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:28:52,724 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:36:24,535 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:36:24,535 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:36:32,226 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:36:32,226 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:36:43,474 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:36:58,627 - ERROR - m.caitou08.com 443 ssl error
+2018-06-12 21:46:19,220 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:46:31,361 - ERROR - ct6801.com 443 connection error: 
+ [Errno 11002] getaddrinfo failed
+2018-06-12 21:46:35,503 - ERROR - ct991.com 443 connection error: 
+ [Errno 11002] getaddrinfo failed
+2018-06-12 21:46:39,640 - ERROR - www.ct991.com 443 connection error: 
+ [Errno 11002] getaddrinfo failed
+2018-06-12 21:46:52,635 - ERROR - www.le671.com 443 connection error: 
+ [Errno 11002] getaddrinfo failed
+2018-06-12 21:47:12,124 - ERROR - www.3030365.com 443 connection error: 
+ [Errno 11002] getaddrinfo failed
+2018-06-12 21:47:17,165 - ERROR - m.bet338.com 443 connection error: 
+ [Errno 11002] getaddrinfo failed
+2018-06-12 21:47:29,441 - ERROR - wap.alcp08.com 443 connection error: 
+ [Errno 11002] getaddrinfo failed
+2018-06-12 21:47:38,180 - ERROR - m.alcp777.com 443 connection error: 
+ [Errno 11002] getaddrinfo failed
+2018-06-12 21:47:38,457 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:47:47,845 - ERROR - m.668cp.me 443 connection error: 
+ [Errno 11002] getaddrinfo failed
+2018-06-12 21:47:55,605 - ERROR - www.ct66888.com 443 connection error: 
+ [Errno 11002] getaddrinfo failed
+2018-06-12 21:48:01,941 - ERROR - www.le672.com 443 connection error: 
+ [Errno 11002] getaddrinfo failed
+2018-06-12 21:48:08,101 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:48:08,101 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:48:11,641 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 21:48:29,584 - ERROR - bet338.com 443 connection error: 
+ timed out
+2018-06-12 21:48:36,315 - ERROR - 3030365.com 443 connection error: 
+ timed out
+2018-06-12 21:48:36,867 - ERROR - 128365365.tv 443 ssl error
+2018-06-12 21:48:37,246 - ERROR - 228365365.tv 443 ssl error
+2018-06-12 21:48:37,334 - ERROR - www.128365365.tv 443 connection error: 
+ timed out
+2018-06-12 21:48:41,224 - ERROR - www.caitou08.com 443 ssl error
+2018-06-12 21:48:43,790 - ERROR - 2805z.com 443 ssl error
+2018-06-12 21:48:51,148 - ERROR - vip.le969.com 443 ssl error
+2018-06-12 22:14:28,381 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 22:14:31,519 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 22:14:31,519 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 22:14:33,591 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 22:14:34,194 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 22:14:34,391 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 22:14:34,391 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 22:14:34,392 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 22:14:34,392 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 22:14:34,392 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 22:14:34,424 - ERROR - alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 22:14:34,424 - ERROR - wap.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 22:14:34,424 - ERROR - vip.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 22:14:34,426 - ERROR - m.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 22:14:34,428 - ERROR - www.alcp48.com  443 connection error: 
+ [Errno 11001] getaddrinfo failed
+2018-06-12 22:22:25,584 - ERROR - www.alcp1.com 443 connection error: 
+ timed out
+2018-06-12 22:22:30,210 - ERROR - vip.668cp.me 443 connection error: 
+ [Errno 11002] getaddrinfo failed
+2018-06-12 22:22:41,540 - ERROR - m.caitou999.com 443 connection error: 
+ [Errno 11002] getaddrinfo failed
+2018-06-12 22:22:51,163 - ERROR - 128365365.tv 443 connection error: 
+ [Errno 11002] getaddrinfo failed
+2018-06-12 22:22:56,198 - ERROR - www.3131365.com 443 connection error: 
+ [Errno 11002] getaddrinfo failed

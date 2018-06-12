@@ -27,7 +27,8 @@ message['parse_mode'] = "HTML"
 message['doc_name']   = 'message.txt'
 
 #django接口
-dj_url = 'sa.l510881.com'
+#dj_url = 'sa.l510881.com'
+dj_url = '127.0.0.1:5000'
 
 #一个月，半年，一年到期的时间
 d_one_y      = datetime.datetime.now()  + datetime.timedelta(365)
@@ -108,17 +109,26 @@ class sslExpiry(object):
         return datetime.datetime.strptime(ssl_info['notAfter'], ssl_date_fmt)
     
 class myThread(threading.Thread):
-    def __init__(self,domain):
+    def __init__(self,domain_l):
         super(myThread, self).__init__()
-        self.__domain = domain
-
+        self.__domain_l = domain_l
+        self.__domain = urlparse.urlsplit(domain_l['name']).netloc.strip()
+        
     def run(self):
-        cert = sslExpiry(self.__domain).getCert()
-        self.t  = None
+        self.t = None
+        
+        ssle = sslExpiry(self.__domain)
+
+        for i in range(self.__domain_l['retry']):
+            cert = ssle.getCert()
+            #print cert
+            if isinstance(cert, datetime.datetime):
+                break
+
         if cert == SSLError:
             self.t = (False, self.__domain, u"证书不合法")
-        elif not cert:
-            self.t = (False, self.__domain, u"连接失败")
+        elif not isinstance(cert, datetime.datetime):
+            self.t = (False, self.__domain, cert)
         else:
             self.t = (True,  self.__domain, cert)
 
@@ -128,7 +138,7 @@ class myThread(threading.Thread):
 if __name__ == "__main__":
     #print sslExpiry('alcp33.com').getTime()
     li = []
-
+    #print getDomains(product=7); sys.exit()
     choices_prod = ( 
             (0, 'pub'),
             (1, 'ali'), 
@@ -142,25 +152,24 @@ if __name__ == "__main__":
             (9, '3535'), 
             (10, 'agcai'), 
             (11, 'wanyou'),
-            (12, 'fh'),
+            (12, 'fenghuang'),
             (13, 'le7'),
             (14, 'dx_6668'),
             (15, 'dx_70887'),
-            (16, 'ys'),
+            (16, 'yongshi'),
             )
     
     failed    = ""
     ex_half_y = ""
     ex_one_m  = ""
     
-    for domain in getDomains(product='all'):
-        domain = urlparse.urlsplit(domain['name']).netloc.split('/')[0]
-        if domain:
-            t = myThread(domain)
+    for domain_l in getDomains(product='all'):
+        scheme = urlparse.urlsplit(domain_l['name']).scheme
+
+        if scheme == "https":
+            t = myThread(domain_l)
             li.append(t)
             t.start()
-        else:
-            failed += "域名格式错误: " + domain['name'] + "\r\n"
 
     for t in li:
         t.join()
@@ -173,7 +182,7 @@ if __name__ == "__main__":
         else:
             failed += str(result[2]) + ": " + result[1] + "\r\n"
 
-    message['group'] = 'arno_test' #domain_renew: 域名续费|证书续费
+    message['group'] = 'domain_renew' #domain_renew: 域名续费|证书续费
 
     if failed:
         message['text'] += u"<pre>检测失败的域名: </pre>\r\n" + failed
