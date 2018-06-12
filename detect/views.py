@@ -7,6 +7,7 @@ from dwebsocket                     import require_websocket, accept_websocket
 from models                         import domains
 from accounts.limit                 import LimitAccess
 from telegram                       import sendTelegram
+from phxweb                         import settings
 import json, logging, requests, re
 
 logger = logging.getLogger('django')
@@ -24,10 +25,10 @@ def GetDomains(request):
     if request.method == 'POST':
         try:
             product  = json.loads(request.body)['product']
-            if product.lower() == 'all':
+            if str(product).lower() == 'all':
                 domain_l = domains.objects.filter(status=1).all()
             else:
-                domain_l = domains.objects.filter(status=1, product=json.loads(request.body)['product']).all()
+                domain_l = domains.objects.filter(status=1, product=product).all()
         except Exception, e:
             logger.error(e.message)
             domain_l = []

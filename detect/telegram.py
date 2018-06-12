@@ -87,7 +87,7 @@ class sendTelegram(object):
 
     def send(self):
         try:
-            if (not self.__doc) or self.__doc.lower() == 'false':
+            if (not self.__doc) or str(self.__doc).lower() == 'false':
                 ret = requests.post(self.__url+'sendMessage', data=self.__message, timeout=self.__timeout)
             else:
                 with open(self.__message['doc_name'], 'w') as f:
