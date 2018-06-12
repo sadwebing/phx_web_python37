@@ -191,5 +191,6 @@ if __name__ == "__main__":
     #if ex_half_y:
     #    message['text'] += u"<pre>半年内证书到期域名: </pre>\r\n" + ex_half_y
     if message['text']:
+        message['text'] += u"\r\n@service 请提醒客户更换证书！"
         sendTelegram(message)
     
