@@ -13779,3 +13779,22 @@ SyntaxError: keyword can't be an expression
 2018-06-12 21:11:31,464 views.py [django:265] [INFO]- 127.0.0.1 is requesting.
 2018-06-12 21:11:35,638 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
 2018-06-12 21:11:35,640 views.py [django:37] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_153_239', u'CP_NG_HK_153_1', u'CP_NG_HK_179_204'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_76_165', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-12 22:10:53,556 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/get_domains
+2018-06-12 22:11:37,005 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/get_domains
+2018-06-12 22:13:18,848 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/get_domains
+2018-06-12 22:13:29,346 views.py [django:55] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-06-12 22:13:30,927 telegram.py [django:105] [INFO]- send message successfull!
+2018-06-12 22:14:10,686 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/get_domains
+2018-06-12 22:14:36,325 views.py [django:55] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-06-12 22:14:37,536 telegram.py [django:105] [INFO]- send message successfull!
+2018-06-12 22:20:31,506 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/get_domains
+2018-06-12 22:21:21,993 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/get_domains
+2018-06-12 22:23:32,272 views.py [django:55] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-06-12 22:23:33,647 telegram.py [django:105] [INFO]- send message successfull!
+2018-06-12 23:02:37,576 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/get_domains
+2018-06-12 23:04:46,148 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/get_domains
+2018-06-12 23:06:09,026 views.py [django:55] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-06-12 23:06:12,181 telegram.py [django:105] [INFO]- send message successfull!
+2018-06-13 18:49:19,920 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/get_domains
+2018-06-13 18:50:09,822 views.py [django:55] [INFO]- 127.0.0.1 is requesting /detect/send_telegram
+2018-06-13 18:50:11,773 telegram.py [django:105] [INFO]- send message successfull!

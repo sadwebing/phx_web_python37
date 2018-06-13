@@ -31,9 +31,9 @@ message['doc_name']   = 'message.txt'
 dj_url = '127.0.0.1:5000'
 
 #一个月，半年，一年到期的时间
-d_one_y      = datetime.datetime.now()  + datetime.timedelta(365)
-d_half_y     = datetime.datetime.now()  + datetime.timedelta(182)
-d_one_m      = datetime.datetime.now()  + datetime.timedelta(31)
+d_one_y      = datetime.datetime.now() + datetime.timedelta(365)
+d_half_y     = datetime.datetime.now() + datetime.timedelta(182)
+d_one_m      = datetime.datetime.now() + datetime.timedelta(31)
 ssl_date_fmt = r'%b %d %H:%M:%S %Y %Z'
 nor_date_fmt = r'%Y/%m/%d %H:%M:%S'
 timeout      = 10
