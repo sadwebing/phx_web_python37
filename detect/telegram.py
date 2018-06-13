@@ -20,7 +20,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 #获取当前时间，以特定的格式，如Wed, 09 May 2018 12:51:25 GMT
 def getDate():
-    return datetime.datetime.utcnow().strftime('%a, %d %b %Y %H:%M:%S   GMT')
+    return datetime.datetime.now().strftime('%Y%m%d%H%M%S')
 
 #telegram 通知
 
@@ -52,9 +52,9 @@ class sendTelegram(object):
         self.__url     = tg['url'][bot] if tg['url'].has_key(bot) else tg['url']['sa_monitor_bot']
         self.__message['chat_id']    = tg['chat_id'][group]  if tg['chat_id'].has_key(group)  else tg['chat_id']['arno_test']
         self.__message['parse_mode'] = message['parse_mode'] if message.has_key('parse_mode') else ''
-        self.__message['doc_name']   = message['doc_name']   if message.has_key('doc_name')   else 'warning.txt'
-        self.__message['caption']    = self.getAtUsers(message['caption']) if message.has_key('caption') else ''
-        self.__message['text']       = self.getAtUsers(message['text'])    if message.has_key('text')    else ''
+        self.__message['doc_name']   = message['doc_name'] +'_'+ getDate() if message.has_key('doc_name') else 'message.txt_'+getDate()
+        self.__message['caption']    = self.getAtUsers(message['caption']) if message.has_key('caption')  else ''
+        self.__message['text']       = self.getAtUsers(message['text'])    if message.has_key('text')     else ''
         self.__message['disable_web_page_preview'] = False if message.has_key('disable_web_page_preview') and message['disable_web_page_preview'].lower() == 'false' else True
 
     def getAtUsers(self, text):
