@@ -8592,3 +8592,7 @@ SyntaxError: keyword can't be an expression
 2018-06-13 19:26:11,994 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
 2018-06-13 19:26:12,045 utils.py [django.db.backends:89] [DEBUG]- (0.049) SHOW FULL TABLES; args=None
 2018-06-13 19:26:12,098 utils.py [django.db.backends:89] [DEBUG]- (0.053) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-06-13 21:11:57,970 utils.py [django.db.backends:89] [DEBUG]- (0.190) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-06-13 21:11:59,533 utils.py [django.db.backends:89] [DEBUG]- (0.191) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-06-13 21:11:59,726 utils.py [django.db.backends:89] [DEBUG]- (0.192) SHOW FULL TABLES; args=None
+2018-06-13 21:11:59,944 utils.py [django.db.backends:89] [DEBUG]- (0.191) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()

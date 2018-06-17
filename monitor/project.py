@@ -22,41 +22,41 @@ def ProjectQuery(request):
             clientip = request.META['REMOTE_ADDR']
         logger.info('[POST]%s is requesting. %s' %(clientip, request.get_full_path()))
         try:
-			data = json.loads(request.body)
-			act = data['act']
-			#logger.info(data)
+            data = json.loads(request.body)
+            act = data['act']
+            #logger.info(data)
         except:
-			act = 'null'
+            act = 'null'
         if act == 'query_all':
-        	datas = project_t.objects.all()
+            datas = project_t.objects.all()
         elif act == 'query_active':
-        	datas = project_t.objects.filter(status=1)
+            datas = project_t.objects.filter(status=1)
         elif act == 'query_inactive':
-        	datas = project_t.objects.filter(status=0)
+            datas = project_t.objects.filter(status=0)
         else:
-        	return HttpResponse(u"参数错误！")
+            return HttpResponse(u"参数错误！")
         logger.info(u'查询参数：%s' %act)
         project_list = []
         for project in datas:
-        	if project.status == 1:
-        		state = 'active'
-        	elif project.status == 0:
-        		state = 'inactive'
-        	else:
-        		state = 'unknown'
-        	tmp_dict = {}
-        	tmp_dict['id'] = project.id
-        	tmp_dict['envir'] = project.envir
-        	tmp_dict['product'] = project.product
-        	tmp_dict['project'] = project.project
-        	tmp_dict['minion_id'] = project.minion_id
-        	tmp_dict['server_type'] = project.server_type
-        	tmp_dict['role'] = project.role
-        	tmp_dict['domain'] = project.domain
-        	tmp_dict['uri'] = project.uri
-        	tmp_dict['status_'] = state
-        	tmp_dict['info'] = project.info
-        	project_list.append(tmp_dict)
+            if project.status == 1:
+                state = 'active'
+            elif project.status == 0:
+                state = 'inactive'
+            else:
+                state = 'unknown'
+            tmp_dict = {}
+            tmp_dict['id'] = project.id
+            tmp_dict['envir'] = project.envir
+            tmp_dict['product'] = project.product
+            tmp_dict['project'] = project.project
+            tmp_dict['minion_id'] = project.minion_id
+            tmp_dict['server_type'] = project.server_type
+            tmp_dict['role'] = project.role
+            tmp_dict['domain'] = project.domain
+            tmp_dict['uri'] = project.uri
+            tmp_dict['status_'] = state
+            tmp_dict['info'] = project.info
+            project_list.append(tmp_dict)
         return HttpResponse(json.dumps(project_list))
     else:
         return HttpResponse('nothing!')
@@ -118,20 +118,20 @@ def ProjectCheckServer(request):
             info_final['code'] = "\n\t"
 
             for minion in minion_list:
-            	url = "http://" + minion.ip_addr + data['uri']
+                url = "http://" + minion.ip_addr + data['uri']
 
-            	try:
-            	    ret = requests.head(url, headers={'Host': data['domain']}, timeout=10)
-            	    info_final['code'] += u'%s - %s\n\t' %(ret.status_code, url)
-            	    if str(ret.status_code) in rewrite_list:
-            	    	url = ret.headers['Location'].replace(data['domain'], minion.ip_addr)
-            	    	try:
-            	    		ret_r = requests.head(url, headers={'Host': data['domain']}, verify=False, timeout=10)
-            	    		info_final['code'] += u'%s - %s\n\t' %(ret_r.status_code, url)
-            	    	except:
-            	    		info_final['code'] += u'%s - %s\n\t' %(error_status, url)
-            	except:
-            	    info_final['code'] += u'%s - %s\n\t' %(error_status, url)
+                try:
+                    ret = requests.head(url, headers={'Host': data['domain']}, timeout=10)
+                    info_final['code'] += u'%s - %s\n\t' %(ret.status_code, url)
+                    if str(ret.status_code) in rewrite_list:
+                        url = ret.headers['Location'].replace(data['domain'], minion.ip_addr)
+                        try:
+                            ret_r = requests.head(url, headers={'Host': data['domain']}, verify=False, timeout=10)
+                            info_final['code'] += u'%s - %s\n\t' %(ret_r.status_code, url)
+                        except:
+                            info_final['code'] += u'%s - %s\n\t' %(error_status, url)
+                except:
+                    info_final['code'] += u'%s - %s\n\t' %(error_status, url)
 
             request.websocket.send(json.dumps(info_final))
         ### close websocket ###

@@ -55,7 +55,7 @@ class sendTelegram(object):
         self.__message['doc_name']   = message['doc_name'] +'_'+ getDate() if message.has_key('doc_name') else 'message.txt_'+getDate()
         self.__message['caption']    = self.getAtUsers(message['caption']) if message.has_key('caption')  else ''
         self.__message['text']       = self.getAtUsers(message['text'])    if message.has_key('text')     else ''
-        self.__message['disable_web_page_preview'] = False if message.has_key('disable_web_page_preview') and message['disable_web_page_preview'].lower() == 'false' else True
+        self.__message['disable_web_page_preview'] = False if message.has_key('disable_web_page_preview') and str(message['disable_web_page_preview']).lower() == 'false' else True
 
     def getAtUsers(self, text):
         regCp  = re.compile('[A-Za-z0-9]+(?![A-Za-z0-9])', re.I)

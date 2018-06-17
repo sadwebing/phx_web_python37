@@ -68,8 +68,8 @@ TELEGRAM_API = {
     },
 
     'user_group':{
-        'all':['arno', 'qiuge', 'xiaoxuan', 'xiaoqi', 'xiaowu', 'xiaoye', 'docker', 'alan', 'xiaoran', 'v7', 'power', 'john', 'dennis', 'ray', 'xiaolong'],
-        'yunwei':['arno', 'xiaoxuan', 'xiaoqi', 'xiaowu', 'xiaoye', 'docker', 'alan', 'xiaoran', 'v7', 'power', 'john', 'dennis', 'ray', 'xiaolong'],
+        'all':['arno', 'qiuge', 'xiaoxuan', 'xiaoqi', 'xiaowu', 'xiaoye', 'alan', 'xiaoran', 'v7', 'power', 'john', 'dennis', 'ray', 'white'],
+        'yunwei':['arno', 'xiaoxuan', 'xiaoqi', 'xiaowu', 'xiaoye', 'alan', 'xiaoran', 'v7', 'power', 'john', 'dennis', 'ray', 'white'],
     },
 
     'chat_id':{
@@ -257,4 +257,5 @@ choices_prod = (
             (15, 'dx_70887'),
             (16, 'yongshi'),
             (17, 'yy'),
+            (18, 'yongfa'),
             )
