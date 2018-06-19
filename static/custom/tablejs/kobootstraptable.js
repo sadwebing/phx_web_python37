@@ -25,7 +25,7 @@ ko.bindingHandlers.myBootstrapTable = {
             sortable: true,
             sortOrder: "asc",
             pageNumber: 1,
-            pageSize: 10,
+            pageSize: 15,
             pageList: [5, 10, 15, 25, 50, 100, 'ALL'],
             search: true,
             uniqueId: "id",

@@ -110,3 +110,10 @@ def HasPermission(user, act, table, app):
 		return False
 	else:
 		return True
+        
+def getIp(request):
+    if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+        clientip = request.META['HTTP_X_FORWARDED_FOR']
+    else:
+        clientip = request.META['REMOTE_ADDR']
+    return clientip

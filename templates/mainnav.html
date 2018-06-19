@@ -21,6 +21,9 @@
 								<ul>
 								    <li><a ui-sref="monitor_services"><i class="glyphicon glyphicon-edit"></i>   services</a></li>
 								</ul>
+                                <ul>
+								    <li><a ui-sref="monitor_domains"><i class="glyphicon glyphicon-edit"></i>   domains</a></li>
+								</ul>
 							</li>
 							<li id="saltstack">
 								<i class="glyphicon glyphicon-tasks text-primary"> <span>Saltstack</span></i>
@@ -36,7 +39,7 @@
 						</ul>
 					</li>
 					<li id="dns">
-						<i class="glyphicon glyphicon-sort text-primary"> <span>域名中心</span></i>
+						<i class="glyphicon glyphicon-sort text-primary"> <span>域名解析中心</span></i>
 						<ul>  
 						    <li><a ui-sref="dns_cloudflare"><i class="glyphicon glyphicon-align-right"></i>   CloudFlare</a></li>
 						</ul>
@@ -82,6 +85,7 @@
     $('#monitor_saltstack').children('ul').slideDown();
     $('#dns').children('ul').slideDown();
     $('#tomcat').children('ul').slideDown();
+    $('#monitor').children('ul').slideDown();
     $('#saltstack').children('ul').slideDown();
     $('#upgrade').children('ul').slideDown();
     //$('#detect').children('ul').slideDown();

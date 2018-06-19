@@ -21,6 +21,10 @@ TcbsApp.config(function ($stateProvider, $urlRouterProvider) {
             url:"/services",
             templateUrl: "/monitor/services"
         })
+        .state("monitor_domains", {
+            url:"/domains",
+            templateUrl: "/monitor/domains"
+        })
         .state("dns_cloudflare", {
             url:"/dns/cloudflare",
             templateUrl: "/dns/cloudflare/index"
