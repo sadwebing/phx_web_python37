@@ -32,13 +32,13 @@ def home(request):
         role = 'none'
     group = request.user.get_group_permissions()
     if request.user.has_perm('check_tomcat.add_tomcat_url'):
-    	auth = 'welcome!'
+        auth = 'welcome!'
     else:
-    	auth = 'back off!'
+        auth = 'back off!'
     if request.META.has_key('HTTP_X_FORWARDED_FOR'):
-    	clientip = request.META['HTTP_X_FORWARDED_FOR']
+        clientip = request.META['HTTP_X_FORWARDED_FOR']
     else:
-    	clientip = request.META['REMOTE_ADDR']
+        clientip = request.META['REMOTE_ADDR']
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
     return render(
         request,
@@ -54,62 +54,62 @@ def home(request):
     )
 
 def logout(request):
-	redirect_to = request.REQUEST.get('url', '/')
-	auth_logout(request)
-	
-	return HttpResponseRedirect(redirect_to)
+    redirect_to = request.REQUEST.get('url', '/')
+    auth_logout(request)
+    
+    return HttpResponseRedirect(redirect_to)
 
 @sensitive_post_parameters()
 @csrf_protect
 @never_cache
 def login(request, template_name='registration/login.html',
-				redirect_field_name=REDIRECT_FIELD_NAME,
-				authentication_form=AuthenticationForm,
-				current_app=None, extra_context=None):
-	"""
-	Displays the login form and handles the login action.
-	"""
-	redirect_to = request.POST.get(redirect_field_name,
-							request.GET.get(redirect_field_name, ''))
+                redirect_field_name=REDIRECT_FIELD_NAME,
+                authentication_form=AuthenticationForm,
+                current_app=None, extra_context=None):
+    """
+    Displays the login form and handles the login action.
+    """
+    redirect_to = request.POST.get(redirect_field_name,
+                            request.GET.get(redirect_field_name, ''))
 
-	if request.method == "POST":
-		form = authentication_form(request, data=request.POST)
-		if form.is_valid():
+    if request.method == "POST":
+        form = authentication_form(request, data=request.POST)
+        if form.is_valid():
 
             # Ensure the user-originating redirection url is safe.
-			if not is_safe_url(url=redirect_to, host=request.get_host()):
-				redirect_to = resolve_url(settings.LOGIN_REDIRECT_URL)
+            if not is_safe_url(url=redirect_to, host=request.get_host()):
+                redirect_to = resolve_url(settings.LOGIN_REDIRECT_URL)
 
             # Okay, security check complete. Log the user in.
-			auth_login(request, form.get_user())
+            auth_login(request, form.get_user())
 
-			return HttpResponseRedirect(redirect_to)
-	else:
-		form = authentication_form(request)
+            return HttpResponseRedirect(redirect_to)
+    else:
+        form = authentication_form(request)
 
-	current_site = get_current_site(request)
+    current_site = get_current_site(request)
 
-	context = {
-		'form': form,
-		redirect_field_name: redirect_to,
-		'site': current_site,
-		'site_name': current_site.name,
-	}
-	if extra_context is not None:
-		context.update(extra_context)
+    context = {
+        'form': form,
+        redirect_field_name: redirect_to,
+        'site': current_site,
+        'site_name': current_site.name,
+    }
+    if extra_context is not None:
+        context.update(extra_context)
 
-	if current_app is not None:
-		request.current_app = current_app
+    if current_app is not None:
+        request.current_app = current_app
 
-	return TemplateResponse(request, template_name, context)
+    return TemplateResponse(request, template_name, context)
 
 def HasPermission(user, act, table, app):
-	#logger.error('%s don\'t have the permisson to %s table %s of %s' %(user.username, act, table, app))
-	if not user.has_perm(app+'.'+act+'_'+table):
-		logger.error('%s don\'t have the permisson to %s table %s of %s' %(user.username, act, table, app))
-		return False
-	else:
-		return True
+    #logger.error('%s don\'t have the permisson to %s table %s of %s' %(user.username, act, table, app))
+    if not user.has_perm(app+'.'+act+'_'+table):
+        logger.error('%s don\'t have the permisson to %s table %s of %s' %(user.username, act, table, app))
+        return False
+    else:
+        return True
         
 def getIp(request):
     if request.META.has_key('HTTP_X_FORWARDED_FOR'):

@@ -44,6 +44,9 @@ var gp = {
                                             '<optgroup label="勇士">',
                                                 html_dict['yongshi'],
                                             '</optgroup>',
+                                            '<optgroup label="JAVA">',
+                                                html_dict['java'],
+                                            '</optgroup>',
                                             '<optgroup label="公共">',
                                                 html_dict['pub'],
                                             '</optgroup>',
@@ -54,6 +57,9 @@ var gp = {
                                                     '<optgroup label="勇士">',
                                                         html_dict['yongshi'],
                                                     '</optgroup>',
+                                                        '<optgroup label="JAVA">',
+                                                    html_dict['java'],
+                                            '</optgroup>',
                                                     ].join("")
                 if (document.getElementById('project_active')){
                     document.getElementById('project_active').innerHTML=html_project_active;

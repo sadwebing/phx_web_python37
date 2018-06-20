@@ -251,6 +251,12 @@ choices_prod = (
             (9, '3535'), 
             (19, '1717'), 
             (10, 'agcai'), 
+            (20, 'fulicai'), 
+            (22, 'yrcai'), 
+            (23, 'yiteng'), 
+            (24, 'yonglihui'), 
+            (25, '618cai'), 
+            (21, 'leducheng'), 
             (11, 'wanyou'),
             (13, 'le7'),
             (14, 'dx_6668'),
@@ -260,4 +266,5 @@ choices_prod = (
 
             (12, 'fenghuang'),
             (16, 'yongshi'),
+            (26, 'java'),
             )
