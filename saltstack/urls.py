@@ -1,8 +1,10 @@
+#coding: utf-8
 from django.conf.urls import url, include
 from . import views
 from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
+    #saltstack 调用
     url('^check_minion$', views.CheckMinion),
     url('^command$', views.command),
     url('^deploy$', views.deploy),
@@ -15,4 +17,8 @@ urlpatterns = [
     url('^saltstack_id/Query$', views.IdQuery),
     url('^saltstack_id/QueryMinion$', views.QueryMinion),
     url('^$', views.command),
+
+    #缓存清理
+    url('^reflesh$', views.reflesh),
+    
 ]

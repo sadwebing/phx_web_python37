@@ -10,6 +10,7 @@ from monitor.models import project_t, minion_t, minion_ip_t
 from command import Command
 import json, logging, time
 from accounts.limit import LimitAccess
+from accounts.views import getIp
 
 logger = logging.getLogger('django')
 
@@ -370,3 +371,31 @@ def QueryMinion(request):
         return HttpResponse('You get nothing!')
     else:
         return HttpResponse('nothing!')
+
+@csrf_protect
+@login_required
+def reflesh(request):
+    username = request.user.username
+    try:
+        role = request.user.userprofile.role
+    except:
+        role = 'none'
+    try:
+        manage = request.user.userprofile.manage
+    except:
+        manage = 0
+
+    clientip = getIp(request)
+    title = u'缓存清理'
+    logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
+    return render(
+        request,
+        LimitAccess(role, 'saltstack/reflesh.html'),
+        {
+            'clientip':clientip,
+            'title': title,
+            'role': role,
+            'username': username,
+            'manage': manage,
+        }
+    )

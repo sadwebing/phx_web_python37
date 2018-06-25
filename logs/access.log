@@ -16250,3 +16250,595 @@ UnboundLocalError: local variable 'group' referenced before assignment
 2018-06-20 19:13:01,684 views.py [django:265] [INFO]- 127.0.0.1 is requesting.
 2018-06-20 19:13:06,144 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
 2018-06-20 19:13:06,144 views.py [django:37] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_153_239', u'CP_NG_HK_153_1', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'java', 'minion_id': [u'JAVA_NG_HK_228_97', u'JAVA_NG_HK_33_71', u'JAVA_NG_HK_48_196', u'JAVA_NG_HK_83_86'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-20 20:44:36,385 views.py [django:79] [INFO]- 127.0.0.1 is requesting /monitor/domains
+2018-06-20 20:44:36,819 domains.py [django:64] [INFO]- [GET]127.0.0.1 is requesting. /monitor/domains/getGroups
+2018-06-24 18:27:34,657 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-24 18:27:36,045 views.py [django:42] [INFO]- 127.0.0.1 is requesting /home
+2018-06-24 18:29:45,812 views.py [django:265] [INFO]- 127.0.0.1 is requesting.
+2018-06-24 18:29:47,144 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-24 18:29:47,144 views.py [django:37] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'java', 'minion_id': [u'JAVA_NG_HK_228_97', u'JAVA_NG_HK_33_71', u'JAVA_NG_HK_48_196', u'JAVA_NG_HK_83_86'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-24 18:29:51,637 views.py [django:79] [INFO]- 127.0.0.1 is requesting /monitor/domains
+2018-06-24 18:29:51,740 domains.py [django:64] [INFO]- [GET]127.0.0.1 is requesting. /monitor/domains/getGroups
+2018-06-24 18:29:55,339 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-06-24 18:29:55,398 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-06-24 18:29:55,573 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-06-24 18:30:01,236 domains.py [django:64] [INFO]- [GET]127.0.0.1 is requesting. /monitor/domains/getGroups
+2018-06-24 18:30:01,401 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-24 18:30:01,401 views.py [django:37] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'java', 'minion_id': [u'JAVA_NG_HK_228_97', u'JAVA_NG_HK_33_71', u'JAVA_NG_HK_48_196', u'JAVA_NG_HK_83_86'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-24 18:31:06,427 domains.py [django:124] [INFO]- 127.0.0.1 is requesting. /monitor/domains/Add datas: {u'status': u'1', u'product': u'13', u'group': u'1', u'content': u'\u94bb\u77f3APP\u4e0b\u8f7d\u57df\u540d', u'domains': u'https://228365365.app/index.php/Mobile/index\nhttps://www.228365365.app/index.php/Mobile/index', u'domain_l': [u'https://228365365.app/index.php/Mobile/index', u'https://www.228365365.app/index.php/Mobile/index']}
+2018-06-24 18:31:16,892 domains.py [django:27] [INFO]- [POST]127.0.0.1 is requesting. /monitor/domains/Query
+2018-06-24 18:31:16,894 domains.py [django:42] [INFO]- 查询参数：{u'status': u'01', u'product': [u'13'], u'group': [u'1', u'2', u'3', u'4'], u'num': u'15', u'limit': 15, u'offset': 0}
+2018-06-24 18:32:44,028 domains.py [django:27] [INFO]- [POST]127.0.0.1 is requesting. /monitor/domains/Query
+2018-06-24 18:32:44,029 domains.py [django:42] [INFO]- 查询参数：{u'status': u'01', u'product': [u'26'], u'group': [u'1', u'2', u'3', u'4'], u'num': u'all', u'limit': 15, u'offset': 0}
+2018-06-24 18:35:25,617 domains.py [django:124] [INFO]- 127.0.0.1 is requesting. /monitor/domains/Add datas: {u'status': u'1', u'product': u'26', u'group': u'1', u'content': u'\u94bb\u77f3APP\u4e0b\u8f7d\u57df\u540d', u'domains': u'http://www.ifc99.com:8089/IFC/api.do?appid=2322&name=dsds\nhttp://ifc99.com:8089/IFC/api.do?appid=2322&name=dsds\nhttp://yy.l510881.com:8089/appinterface/crud/insertdata.do?appid=1265734746&name=xst-hg\nhttps://iosappapi.com/IFC/api.do?appid=2322&name=dsds\nhttps://www.iosappapi.com/IFC/api.do?appid=2322&name=dsds\nhttps://apiappios.com/IFC/api.do?appid=2322&name=dsds\nhttps://api3618.com/IFC/api.do?appid=2322&name=dsds\nhttps://ad3535.com/IFC/api.do?appid=2322&name=dsds\nhttps://appifc.com/IFC/api.do?appid=2322&name=dsds', u'domain_l': [u'http://www.ifc99.com:8089/IFC/api.do?appid=2322&name=dsds', u'http://ifc99.com:8089/IFC/api.do?appid=2322&name=dsds', u'http://yy.l510881.com:8089/appinterface/crud/insertdata.do?appid=1265734746&name=xst-hg', u'https://iosappapi.com/IFC/api.do?appid=2322&name=dsds', u'https://www.iosappapi.com/IFC/api.do?appid=2322&name=dsds', u'https://apiappios.com/IFC/api.do?appid=2322&name=dsds', u'https://api3618.com/IFC/api.do?appid=2322&name=dsds', u'https://ad3535.com/IFC/api.do?appid=2322&name=dsds', u'https://appifc.com/IFC/api.do?appid=2322&name=dsds']}
+2018-06-24 18:35:28,615 domains.py [django:27] [INFO]- [POST]127.0.0.1 is requesting. /monitor/domains/Query
+2018-06-24 18:35:28,617 domains.py [django:42] [INFO]- 查询参数：{u'status': u'01', u'product': [u'26'], u'group': [u'1', u'2', u'3', u'4'], u'num': u'all', u'limit': 15, u'offset': 0}
+2018-06-24 18:35:57,426 domains.py [django:153] [INFO]- 127.0.0.1 is requesting. /monitor/domains/Update
+2018-06-24 18:36:00,946 domains.py [django:27] [INFO]- [POST]127.0.0.1 is requesting. /monitor/domains/Query
+2018-06-24 18:36:00,947 domains.py [django:42] [INFO]- 查询参数：{u'status': u'01', u'product': [u'26'], u'group': [u'1', u'2', u'3', u'4'], u'num': u'all', u'limit': 15, u'offset': 0}
+2018-06-24 18:39:39,453 domains.py [django:27] [INFO]- [POST]127.0.0.1 is requesting. /monitor/domains/Query
+2018-06-24 18:39:39,454 domains.py [django:42] [INFO]- 查询参数：{u'status': u'01', u'product': [u'13', u'26'], u'group': [u'1', u'2', u'3', u'4'], u'num': u'all', u'limit': 15, u'offset': 0}
+2018-06-24 18:40:00,299 views.py [django:36] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-24 18:40:00,299 views.py [django:37] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'java', 'minion_id': [u'JAVA_NG_HK_228_97', u'JAVA_NG_HK_33_71', u'JAVA_NG_HK_48_196', u'JAVA_NG_HK_83_86'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-24 21:45:08,778 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 21, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\saltstack\urls.py", line 6
+SyntaxError: Non-ASCII character '\xe8' in file J:\arno\test\phx_web\saltstack\urls.py on line 6, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2018-06-24 21:45:09,063 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 21, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\saltstack\urls.py", line 6
+SyntaxError: Non-ASCII character '\xe8' in file J:\arno\test\phx_web\saltstack\urls.py on line 6, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2018-06-24 21:45:49,348 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 21, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\saltstack\urls.py", line 22, in <module>
+    url('^reflesh$', views.reflesh),
+AttributeError: 'module' object has no attribute 'reflesh'
+2018-06-24 21:45:49,502 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 21, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\saltstack\urls.py", line 22, in <module>
+    url('^reflesh$', views.reflesh),
+AttributeError: 'module' object has no attribute 'reflesh'
+2018-06-24 21:47:59,510 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 21, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\saltstack\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\saltstack\views.py", line 12, in <module>
+    from accounts.limit import LimitAccess, getIp
+ImportError: cannot import name getIp
+2018-06-24 21:47:59,696 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 21, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\saltstack\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\saltstack\views.py", line 12, in <module>
+    from accounts.limit import LimitAccess, getIp
+ImportError: cannot import name getIp
+2018-06-24 21:49:04,805 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-24 21:49:06,315 views.py [django:266] [INFO]- 127.0.0.1 is requesting.
+2018-06-24 21:49:08,117 views.py [django:37] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-24 21:49:08,117 views.py [django:38] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'java', 'minion_id': [u'JAVA_NG_HK_228_97', u'JAVA_NG_HK_33_71', u'JAVA_NG_HK_48_196', u'JAVA_NG_HK_83_86'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-24 21:49:17,693 views.py [django:79] [INFO]- 127.0.0.1 is requesting /monitor/domains
+2018-06-24 21:49:17,776 domains.py [django:64] [INFO]- [GET]127.0.0.1 is requesting. /monitor/domains/getGroups
+2018-06-24 21:49:20,168 views.py [django:37] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-24 21:49:20,168 views.py [django:38] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'java', 'minion_id': [u'JAVA_NG_HK_228_97', u'JAVA_NG_HK_33_71', u'JAVA_NG_HK_48_196', u'JAVA_NG_HK_83_86'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-24 22:28:41,720 domains.py [django:64] [INFO]- [GET]127.0.0.1 is requesting. /monitor/domains/getGroups
+2018-06-24 22:29:24,088 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-24 22:29:25,670 views.py [django:79] [INFO]- 127.0.0.1 is requesting /monitor/domains
+2018-06-24 22:29:25,767 domains.py [django:64] [INFO]- [GET]127.0.0.1 is requesting. /monitor/domains/getGroups
+2018-06-24 22:29:27,838 views.py [django:386] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-24 22:29:27,839 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 394, in reflesh
+    'username': username,
+  File "J:\arno\test\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "J:\arno\test\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "J:\arno\test\lib\site-packages\django\template\loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: saltstack/reflesh.html
+2018-06-24 22:29:31,151 views.py [django:386] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-24 22:29:31,151 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 394, in reflesh
+    'username': username,
+  File "J:\arno\test\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "J:\arno\test\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "J:\arno\test\lib\site-packages\django\template\loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: saltstack/reflesh.html
+2018-06-24 22:30:10,642 views.py [django:266] [INFO]- 127.0.0.1 is requesting.
+2018-06-24 22:30:11,838 views.py [django:37] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-24 22:30:11,838 views.py [django:38] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'java', 'minion_id': [u'JAVA_NG_HK_228_97', u'JAVA_NG_HK_33_71', u'JAVA_NG_HK_48_196', u'JAVA_NG_HK_83_86'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-24 22:30:56,994 views.py [django:386] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-24 22:30:56,994 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 394, in reflesh
+    'username': username,
+  File "J:\arno\test\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "J:\arno\test\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "J:\arno\test\lib\site-packages\django\template\loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: saltstack/reflesh.html
+2018-06-24 22:32:04,979 views.py [django:386] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-24 22:32:04,980 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 394, in reflesh
+    'username': username,
+  File "J:\arno\test\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "J:\arno\test\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "J:\arno\test\lib\site-packages\django\template\loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: saltstack/reflesh.html
+2018-06-25 14:34:22,105 views.py [django:386] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-25 14:34:22,107 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 394, in reflesh
+    'username': username,
+  File "J:\arno\test\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "J:\arno\test\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "J:\arno\test\lib\site-packages\django\template\loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: saltstack/reflesh.html
+2018-06-25 15:30:07,782 views.py [django:60] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-06-25 15:30:07,828 views.py [django:63] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'ali',), (u'guangda',), (u'lebo',), (u'panda',), (u'richer',), (u'yongshi',), (u'yongshi2',)]
+2018-06-25 15:30:07,986 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-06-25 15:30:10,559 views.py [django:386] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-25 15:30:10,562 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 394, in reflesh
+    'username': username,
+  File "J:\arno\test\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "J:\arno\test\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "J:\arno\test\lib\site-packages\django\template\loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: saltstack/reflesh.html
+2018-06-25 15:30:12,482 views.py [django:37] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-25 15:30:12,482 views.py [django:38] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'java', 'minion_id': [u'JAVA_NG_HK_228_97', u'JAVA_NG_HK_33_71', u'JAVA_NG_HK_48_196', u'JAVA_NG_HK_83_86'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-25 15:30:42,647 views.py [django:386] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-25 15:30:44,137 views.py [django:37] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-25 15:30:44,137 views.py [django:38] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'java', 'minion_id': [u'JAVA_NG_HK_228_97', u'JAVA_NG_HK_33_71', u'JAVA_NG_HK_48_196', u'JAVA_NG_HK_83_86'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-25 15:30:53,654 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-25 15:30:55,134 views.py [django:386] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-25 15:30:56,319 views.py [django:37] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-25 15:30:56,319 views.py [django:38] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'java', 'minion_id': [u'JAVA_NG_HK_228_97', u'JAVA_NG_HK_33_71', u'JAVA_NG_HK_48_196', u'JAVA_NG_HK_83_86'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-25 15:31:04,177 views.py [django:266] [INFO]- 127.0.0.1 is requesting.
+2018-06-25 15:31:05,411 views.py [django:37] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-25 15:31:05,411 views.py [django:38] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'java', 'minion_id': [u'JAVA_NG_HK_228_97', u'JAVA_NG_HK_33_71', u'JAVA_NG_HK_48_196', u'JAVA_NG_HK_83_86'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-25 15:31:11,144 base.py [django.request:170] [WARNING]- Not Found: /favicon.ico
+2018-06-25 15:31:12,996 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-25 15:31:14,341 views.py [django:266] [INFO]- 127.0.0.1 is requesting.
+2018-06-25 15:31:15,717 views.py [django:37] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-25 15:31:15,717 views.py [django:38] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'java', 'minion_id': [u'JAVA_NG_HK_228_97', u'JAVA_NG_HK_33_71', u'JAVA_NG_HK_48_196', u'JAVA_NG_HK_83_86'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-25 15:31:22,017 views.py [django:386] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-25 15:31:23,186 views.py [django:37] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-25 15:31:23,186 views.py [django:38] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'java', 'minion_id': [u'JAVA_NG_HK_228_97', u'JAVA_NG_HK_33_71', u'JAVA_NG_HK_48_196', u'JAVA_NG_HK_83_86'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-25 15:31:38,946 views.py [django:37] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-25 15:31:38,946 views.py [django:38] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'java', 'minion_id': [u'JAVA_NG_HK_228_97', u'JAVA_NG_HK_33_71', u'JAVA_NG_HK_48_196', u'JAVA_NG_HK_83_86'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-25 15:31:42,401 views.py [django:37] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-25 15:31:42,401 views.py [django:38] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'java', 'minion_id': [u'JAVA_NG_HK_228_97', u'JAVA_NG_HK_33_71', u'JAVA_NG_HK_48_196', u'JAVA_NG_HK_83_86'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-25 15:36:25,628 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-25 15:36:27,617 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-25 15:36:28,785 views.py [django:37] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-25 15:36:28,786 views.py [django:38] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'java', 'minion_id': [u'JAVA_NG_HK_228_97', u'JAVA_NG_HK_33_71', u'JAVA_NG_HK_48_196', u'JAVA_NG_HK_83_86'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-25 15:37:13,434 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-25 15:37:16,036 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-25 15:37:17,211 views.py [django:37] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-06-25 15:37:17,211 views.py [django:38] [INFO]- [{'project': u'houtai', 'product': u'fenghuang', 'minion_id': [u'HT_NG_HK_84_74', u'HT_NG_HK_55_50'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'fenghuang', 'minion_id': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'sport', 'product': u'fenghuang', 'minion_id': [u'SP_NG_HK_162_91', u'SP_NG_HK_55_122', u'SP_NG_HK_91_122', u'SP_NG_HK_153_113'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'vpn', 'product': u'pub', 'minion_id': [u'SA-VPN-SH-101-236', u'SA-VPN-BJ-35-62', u'SA-VPN-HK-4-12'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'vpn'}, {'project': u'sport', 'product': u'yongshi', 'minion_id': [u'YS_NG_HK_12_194', u'YS_NG_HK_44_201', u'YS_NG_HK_44_45', u'YS_NG_HK_64_71', u'YS_NG_HK_84_110', u'YS_NG_HK_84_2', u'YS_NG_HK_8_92'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'houtai', 'product': u'yongshi', 'minion_id': [u'YSHT_NG_HK_9_22', u'YSHT_NG_HK_9_79'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}, {'project': u'caipiao', 'product': u'java', 'minion_id': [u'JAVA_NG_HK_228_97', u'JAVA_NG_HK_33_71', u'JAVA_NG_HK_48_196', u'JAVA_NG_HK_83_86'], 'envir': u'\u8fd0\u8425\u73af\u5883', 'server_type': u'nginx'}]
+2018-06-25 17:25:43,125 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/10/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\test\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 211, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 92, in render
+    output = force_text(output)
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 92, in force_text
+    s = six.text_type(s)
+  File "J:\arno\test\lib\site-packages\django\utils\html.py", line 390, in <lambda>
+    klass.__unicode__ = lambda self: mark_safe(klass_unicode(self))
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 543, in __str__
+    return self.as_widget()
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 599, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\widgets.py", line 292, in render
+    'widget': self.widget.render(name, value, *args, **kwargs),
+  File "J:\arno\test\lib\site-packages\django\forms\widgets.py", line 513, in render
+    options = self.render_options(choices, [value])
+  File "J:\arno\test\lib\site-packages\django\forms\widgets.py", line 539, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 1103, in __iter__
+    yield self.choice(obj)
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 1110, in choice
+    return (self.field.prepare_value(obj), self.field.label_from_instance(obj))
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 1181, in label_from_instance
+    return smart_text(obj)
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 56, in smart_text
+    return force_text(s, encoding, strings_only, errors)
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 94, in force_text
+    s = six.text_type(bytes(s), encoding, errors)
+  File "J:\arno\test\phx_web\detect\models.py", line 44, in __str__
+    if self.group.ssl == 1:
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\related.py", line 602, in __get__
+    rel_obj = qs.get()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "J:\arno\test\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (2013, 'Lost connection to MySQL server during query')
+2018-06-25 17:26:50,994 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/10/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\test\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 211, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 92, in render
+    output = force_text(output)
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 92, in force_text
+    s = six.text_type(s)
+  File "J:\arno\test\lib\site-packages\django\utils\html.py", line 390, in <lambda>
+    klass.__unicode__ = lambda self: mark_safe(klass_unicode(self))
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 543, in __str__
+    return self.as_widget()
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 599, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\widgets.py", line 292, in render
+    'widget': self.widget.render(name, value, *args, **kwargs),
+  File "J:\arno\test\lib\site-packages\django\forms\widgets.py", line 513, in render
+    options = self.render_options(choices, [value])
+  File "J:\arno\test\lib\site-packages\django\forms\widgets.py", line 539, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 1103, in __iter__
+    yield self.choice(obj)
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 1110, in choice
+    return (self.field.prepare_value(obj), self.field.label_from_instance(obj))
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 1181, in label_from_instance
+    return smart_text(obj)
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 56, in smart_text
+    return force_text(s, encoding, strings_only, errors)
+  File "J:\arno\test\lib\site-packages\django\utils\encoding.py", line 94, in force_text
+    s = six.text_type(bytes(s), encoding, errors)
+  File "J:\arno\test\phx_web\detect\models.py", line 44, in __str__
+    if self.group.ssl == 1:
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\related.py", line 602, in __get__
+    rel_obj = qs.get()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "J:\arno\test\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (2013, 'Lost connection to MySQL server during query')

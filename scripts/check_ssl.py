@@ -112,7 +112,7 @@ class myThread(threading.Thread):
     def __init__(self,domain_l):
         super(myThread, self).__init__()
         self.__domain_l = domain_l
-        self.__domain = urlparse.urlsplit(domain_l['name']).netloc.strip()
+        self.__domain = urlparse.urlsplit(domain_l['name']).netloc.split(':')[0].strip()
         
     def run(self):
         self.t = None

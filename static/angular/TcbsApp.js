@@ -37,6 +37,10 @@ TcbsApp.config(function ($stateProvider, $urlRouterProvider) {
             url:"/saltstack_command",
             templateUrl: "/saltstack/command"
         })
+        .state("saltstack_reflesh", {
+            url:"/saltstack_reflesh",
+            templateUrl: "/saltstack/reflesh"
+        })
         .state("saltstack_deploy", {
             url:"/saltstack_deploy",
             templateUrl: "/saltstack/deploy"

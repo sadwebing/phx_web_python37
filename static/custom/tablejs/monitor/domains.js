@@ -167,7 +167,7 @@ window.operateStatusEvents = {
                 }
                 
                 //ko.cleanNode(document.getElementById("tomcat_table"));
-                row.status_ = postData.status;
+                row.status = postData.status;
                 //alert(data);
                 //tableInit.myViewModel.refresh();
             },
