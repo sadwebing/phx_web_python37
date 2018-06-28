@@ -82,6 +82,25 @@ TELEGRAM_API = {
     },
 }
 
+#telegram 参数
+message_TEST = {
+    'doc': False,
+    'bot': "sa_monitor_bot", #AuraAlertBot: 大魔王
+    'text': "",
+    'group': "arno_test",
+    'parse_mode': "HTML",
+    'doc_file': "message.txt",
+}
+
+message_ONLINE = {
+    'doc': False,
+    'bot': "AuraAlertBot", #AuraAlertBot: 大魔王
+    'text': "",
+    'group': "kindergarten",
+    'parse_mode': "HTML",
+    'doc_file': "message.txt",
+}
+
 # Application definition
 
 INSTALLED_APPS = (

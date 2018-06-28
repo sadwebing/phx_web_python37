@@ -107,4 +107,5 @@ class sendTelegram(object):
             else:
                 logger.error('Attention: send message failed!')
                 logger.error('%s: %s' %(ret.status_code, ret.content))
+                logger.error(self.__message)
                 return False

@@ -78,6 +78,6 @@ def SendTelegram(request):
         if s.send():
             return HttpResponse('发送成功！')
         else: 
-            return HttpResponse(content='telegram 发送失败！', status=502)
+            return HttpResponse(content='telegram 发送失败，参数错误！', status=502)
     else:
         return HttpResponse(status=403)

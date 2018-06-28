@@ -209,9 +209,8 @@ var operate = {
                 //console.log('websocket已关闭');
                 setTimeout(function(){$('#runprogress').modal('hide');}, 1000);
                 var html = "";
-                var button = ""
+                var button = "";
                 var button_html = "";
-                for (var tgt in data.results){
                     //alert(tgt+data[tgt])
                     if (data['results'][tgt] == 'not return'){
                         button = [                        

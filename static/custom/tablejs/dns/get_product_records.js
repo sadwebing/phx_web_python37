@@ -21,7 +21,7 @@ var dns = {
         var postData = {};
         postData['product'] = productlist;
         $.ajax({
-            url: "/dns/cloudflare/get_product_records",
+            url: "/saltstack/reflesh/get_project",
             type: "post",
             contentType: 'application/json',
             data: JSON.stringify(postData),

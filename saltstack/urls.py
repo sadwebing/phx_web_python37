@@ -1,7 +1,6 @@
 #coding: utf-8
 from django.conf.urls import url, include
 from . import views
-from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
     #saltstack 调用
@@ -20,5 +19,8 @@ urlpatterns = [
 
     #缓存清理
     url('^reflesh$', views.reflesh),
+    url('^reflesh/get_project$', views.refleshGetProject),
+    url('^reflesh/execute$', views.refleshExecute),
+    url('^reflesh/purge$', views.refleshPurge),
     
 ]

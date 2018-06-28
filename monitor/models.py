@@ -82,11 +82,21 @@ class project_t(models.Model):
         return " - ".join([self.get_envir_display(), self.get_product_display(), self.get_project_display(), self.get_server_type_display(), self.get_status_display()])
 
 class cdn_t(models.Model):
-    name = models.CharField(max_length=32, unique=True, null=False)
+    choices_cdn = (
+        (0, 'tencent'),
+        (1, 'wangsu'),
+        )
 
+    name      = models.IntegerField(choices=choices_cdn)
+    account   = models.CharField(max_length=64, null=False)
+    secretid  = models.CharField(max_length=128, null=False)
+    secretkey = models.CharField(max_length=128, null=False)
+
+    class Meta:
+        unique_together = ('name', 'account')
     def __str__(self):
-        return self.name
-        
+        return " | ".join([self.get_name_display(), self.account])
+
 class cdn_proj_t(models.Model):
     choices_proj = (
         (0, 'fh_app'),
@@ -98,4 +108,4 @@ class cdn_proj_t(models.Model):
     cdn     = models.ManyToManyField(cdn_t)
 
     def __str__(self):
-        return " - ".join([self.get_product_display(), self.get_cdn_display()])
+        return " - ".join([self.get_project_display()])
