@@ -101,6 +101,7 @@ class cdn_proj_t(models.Model):
     choices_proj = (
         (0, 'fh_app'),
         (1, 'fh_cp_static'),
+        (2, 'ry_sp_static'),
         )
 
     project = models.IntegerField(choices=choices_proj, unique=True)

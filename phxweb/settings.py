@@ -73,12 +73,14 @@ TELEGRAM_API = {
     },
 
     'chat_id':{
-        'arno_test'   : '-204952096',
-        'domain_renew': '-238289840',
-        'chk_ng_alert': '-275535278',
-        'domain_alert': '-317680977',
-        'kindergarten': '-186348806',
-        'yunwei'      : '-306748551',
+        'arno_test'      : '-204952096',
+        'domain_renew'   : '-238289840',
+        'chk_ng_alert'   : '-275535278',
+        'domain_alert'   : '-317680977',
+        'kindergarten'   : '-186348806',
+        'yunwei'         : '-306748551',
+        'java_domain'    : '-281290225',
+        'ruiying_domain' : '-246192532',
     },
 }
 
@@ -285,5 +287,6 @@ choices_prod = (
 
             (12, 'fenghuang'),
             (16, 'yongshi'),
+            (27, 'ruiying'),
             (26, 'java'),
             )

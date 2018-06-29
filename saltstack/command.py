@@ -9,7 +9,7 @@ import json, logging, yaml
 logger = logging.getLogger('django')
 
 class Command(object):
-    def __init__(self, tgt, fun, arg='', expr_form='glob', timeout=600):
+    def __init__(self, tgt, fun, arg='', expr_form='glob', timeout=1800):
         self.__tgt = tgt
         self.__fun = fun
         self.__arg = arg

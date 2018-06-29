@@ -18482,3 +18482,12 @@ Traceback (most recent call last):
   File "c:\python27\Lib\json\decoder.py", line 364, in decode
     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
 TypeError: expected string or buffer
+2018-06-28 22:54:22,332 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-28 22:54:27,002 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-28 22:54:27,049 reflesh.py [django:22] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-06-28 23:10:11,650 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-28 23:10:16,338 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-28 23:10:16,392 reflesh.py [django:22] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-06-28 23:11:03,631 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-28 23:11:07,321 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-28 23:11:07,361 reflesh.py [django:22] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
