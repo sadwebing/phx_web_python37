@@ -18615,3 +18615,194 @@ Traceback (most recent call last):
   File "c:\python27\Lib\json\decoder.py", line 364, in decode
     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
 TypeError: expected string or buffer
+2018-06-29 22:26:14,845 reflesh.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute 执行参数：{u'project': u'ry_sp_static', u'domain': [u'1280', u'1281'], u'uri': [u'/']}
+2018-06-29 22:26:15,036 reflesh.py [django:96] [INFO]- [<domains: ruiying | https://fanyingsh.com/images/member/index_error.png | pc : head : ssl | 启用>, <domains: ruiying | https://www.fanyingsh.com/images/member/index_error.png | pc : head : ssl | 启用>]
+2018-06-29 22:26:17,960 reflesh.py [django:100] [INFO]- {u'tencent_lebo.technical001': {'secretkey': 'c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1', 'domain': [u'https://fanyingsh.com', u'https://www.fanyingsh.com'], 'secretid': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'name': u'tencent'}, u'wangsu_speedfeng': {'secretkey': 'speedfeng@123', 'domain': [], 'secretid': 'speedfeng', 'name': u'wangsu'}}
+2018-06-29 22:26:17,960 tencent_api.py [django:78] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnDir&Nonce=87050&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530282377&dirs.0=https://fanyingsh.com/&dirs.1=https://www.fanyingsh.com/
+2018-06-29 22:26:17,960 tencent_api.py [django:79] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-06-29 22:26:21,707 tencent_api.py [django:106] [INFO]- {'Nonce': 87050, 'Timestamp': 1530282377, 'dirs.0': u'https://fanyingsh.com/', 'dirs.1': u'https://www.fanyingsh.com/', 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'DuRNSiuBh6jFUoajrbdq+lo0+Cw=', 'Action': 'RefreshCdnDir'}: 缓存清理成功！
+2018-06-29 22:26:23,173 telegram.py [django:105] [INFO]- send message successfull!
+2018-06-29 22:26:23,173 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 76, in refleshExecute
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-06-29 22:26:48,618 reflesh.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute 执行参数：{u'project': u'ry_sp_static', u'domain': [u'1280', u'1281'], u'uri': [u'/adfasdf/', u'/asdfasdf/asdfasdf.png']}
+2018-06-29 22:26:48,806 reflesh.py [django:96] [INFO]- [<domains: ruiying | https://fanyingsh.com/images/member/index_error.png | pc : head : ssl | 启用>, <domains: ruiying | https://www.fanyingsh.com/images/member/index_error.png | pc : head : ssl | 启用>]
+2018-06-29 22:26:51,657 reflesh.py [django:100] [INFO]- {u'tencent_lebo.technical001': {'secretkey': 'c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1', 'domain': [u'https://fanyingsh.com', u'https://www.fanyingsh.com'], 'secretid': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'name': u'tencent'}, u'wangsu_speedfeng': {'secretkey': 'speedfeng@123', 'domain': [], 'secretid': 'speedfeng', 'name': u'wangsu'}}
+2018-06-29 22:26:51,657 tencent_api.py [django:78] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnDir&Nonce=483214&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530282411&dirs.0=https://fanyingsh.com/adfasdf/&dirs.1=https://www.fanyingsh.com/adfasdf/
+2018-06-29 22:26:51,657 tencent_api.py [django:79] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-06-29 22:26:53,575 tencent_api.py [django:106] [INFO]- {'Nonce': 483214, 'Timestamp': 1530282411, 'dirs.0': u'https://fanyingsh.com/adfasdf/', 'dirs.1': u'https://www.fanyingsh.com/adfasdf/', 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': '+E1+kkDdijYPe6xbuQtaAIT77fc=', 'Action': 'RefreshCdnDir'}: 缓存清理成功！
+2018-06-29 22:26:53,576 tencent_api.py [django:78] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnDir&Nonce=483214&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Signature=+E1+kkDdijYPe6xbuQtaAIT77fc=&Timestamp=1530282411&dirs.0=https://fanyingsh.com/adfasdf/&dirs.1=https://www.fanyingsh.com/adfasdf/&urls.0=https://fanyingsh.com/asdfasdf/asdfasdf.png&urls.1=https://www.fanyingsh.com/asdfasdf/asdfasdf.png
+2018-06-29 22:26:53,578 tencent_api.py [django:79] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-06-29 22:26:55,388 tencent_api.py [django:101] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+身份认证失败，用户身份验证失败
+2018-06-29 22:26:56,698 telegram.py [django:105] [INFO]- send message successfull!
+2018-06-29 22:26:58,079 telegram.py [django:105] [INFO]- send message successfull!
+2018-06-29 22:26:58,081 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 76, in refleshExecute
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-06-29 22:27:54,559 reflesh.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute 执行参数：{u'project': u'ry_sp_static', u'domain': [u'1280', u'1281'], u'uri': [u'/asdfasdf/asdfasdf.png']}
+2018-06-29 22:27:54,750 reflesh.py [django:96] [INFO]- [<domains: ruiying | https://fanyingsh.com/images/member/index_error.png | pc : head : ssl | 启用>, <domains: ruiying | https://www.fanyingsh.com/images/member/index_error.png | pc : head : ssl | 启用>]
+2018-06-29 22:27:57,640 reflesh.py [django:100] [INFO]- {u'tencent_lebo.technical001': {'secretkey': 'c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1', 'domain': [u'https://fanyingsh.com', u'https://www.fanyingsh.com'], 'secretid': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'name': u'tencent'}, u'wangsu_speedfeng': {'secretkey': 'speedfeng@123', 'domain': [], 'secretid': 'speedfeng', 'name': u'wangsu'}}
+2018-06-29 22:27:57,640 tencent_api.py [django:78] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=752413&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530282477&urls.0=https://fanyingsh.com/asdfasdf/asdfasdf.png&urls.1=https://www.fanyingsh.com/asdfasdf/asdfasdf.png
+2018-06-29 22:27:57,640 tencent_api.py [django:79] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-06-29 22:27:59,601 tencent_api.py [django:106] [INFO]- {'Nonce': 752413, 'Timestamp': 1530282477, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'KxM7SujXorSSLAfnNbv80YQmlfw=', 'Action': 'RefreshCdnUrl', 'urls.0': u'https://fanyingsh.com/asdfasdf/asdfasdf.png', 'urls.1': u'https://www.fanyingsh.com/asdfasdf/asdfasdf.png'}: 缓存清理成功！
+2018-06-29 22:28:00,927 telegram.py [django:105] [INFO]- send message successfull!
+2018-06-29 22:28:00,928 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 76, in refleshExecute
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-06-29 22:29:20,440 reflesh.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute 执行参数：{u'project': u'ry_sp_static', u'domain': [u'1280', u'1281'], u'uri': [u'/asdfasdf/asdfasdf.png']}
+2018-06-29 22:29:20,634 reflesh.py [django:96] [INFO]- [<domains: ruiying | https://fanyingsh.com/images/member/index_error.png | pc : head : ssl | 启用>, <domains: ruiying | https://www.fanyingsh.com/images/member/index_error.png | pc : head : ssl | 启用>]
+2018-06-29 22:29:23,565 reflesh.py [django:100] [INFO]- {u'tencent_lebo.technical001': {'secretkey': 'c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1', 'domain': [u'https://fanyingsh.com', u'https://www.fanyingsh.com'], 'secretid': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'name': u'tencent'}, u'wangsu_speedfeng': {'secretkey': 'speedfeng@123', 'domain': [], 'secretid': 'speedfeng', 'name': u'wangsu'}}
+2018-06-29 22:29:23,566 tencent_api.py [django:78] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=836843&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530282563&urls.0=https://fanyingsh.com/asdfasdf/asdfasdf.png&urls.1=https://www.fanyingsh.com/asdfasdf/asdfasdf.png
+2018-06-29 22:29:23,566 tencent_api.py [django:79] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-06-29 22:29:26,035 tencent_api.py [django:106] [INFO]- {'Nonce': 836843, 'Timestamp': 1530282563, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'W4nVKEay/NpoC+TbYbUFWU4dClE=', 'Action': 'RefreshCdnUrl', 'urls.0': u'https://fanyingsh.com/asdfasdf/asdfasdf.png', 'urls.1': u'https://www.fanyingsh.com/asdfasdf/asdfasdf.png'}: 缓存清理成功！
+2018-06-29 22:29:30,635 telegram.py [django:105] [INFO]- send message successfull!
+2018-06-29 22:29:30,637 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 76, in refleshExecute
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-06-29 22:29:46,299 reflesh.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute 执行参数：{u'project': u'ry_sp_static', u'domain': [u'1280', u'1281'], u'uri': [u'/adfasdf/', u'/asdfasdf/asdfasdf.png']}
+2018-06-29 22:29:46,490 reflesh.py [django:96] [INFO]- [<domains: ruiying | https://fanyingsh.com/images/member/index_error.png | pc : head : ssl | 启用>, <domains: ruiying | https://www.fanyingsh.com/images/member/index_error.png | pc : head : ssl | 启用>]
+2018-06-29 22:29:49,384 reflesh.py [django:100] [INFO]- {u'tencent_lebo.technical001': {'secretkey': 'c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1', 'domain': [u'https://fanyingsh.com', u'https://www.fanyingsh.com'], 'secretid': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'name': u'tencent'}, u'wangsu_speedfeng': {'secretkey': 'speedfeng@123', 'domain': [], 'secretid': 'speedfeng', 'name': u'wangsu'}}
+2018-06-29 22:29:49,385 tencent_api.py [django:78] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnDir&Nonce=487309&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530282589&dirs.0=https://fanyingsh.com/adfasdf/&dirs.1=https://www.fanyingsh.com/adfasdf/
+2018-06-29 22:29:49,385 tencent_api.py [django:79] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-06-29 22:29:51,414 tencent_api.py [django:106] [INFO]- {'Nonce': 487309, 'Timestamp': 1530282589, 'dirs.0': u'https://fanyingsh.com/adfasdf/', 'dirs.1': u'https://www.fanyingsh.com/adfasdf/', 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'JCDgyHjne7Jg2vcRyrc/F0St9Zg=', 'Action': 'RefreshCdnDir'}: 缓存清理成功！
+2018-06-29 22:29:51,415 tencent_api.py [django:78] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnDir&Nonce=487309&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Signature=JCDgyHjne7Jg2vcRyrc/F0St9Zg=&Timestamp=1530282589&dirs.0=https://fanyingsh.com/adfasdf/&dirs.1=https://www.fanyingsh.com/adfasdf/&urls.0=https://fanyingsh.com/asdfasdf/asdfasdf.png&urls.1=https://www.fanyingsh.com/asdfasdf/asdfasdf.png
+2018-06-29 22:29:51,415 tencent_api.py [django:79] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-06-29 22:29:53,187 tencent_api.py [django:101] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+身份认证失败，用户身份验证失败
+2018-06-29 22:29:54,493 telegram.py [django:105] [INFO]- send message successfull!
+2018-06-29 22:29:55,809 telegram.py [django:105] [INFO]- send message successfull!
+2018-06-29 22:29:55,809 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 76, in refleshExecute
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-06-29 22:31:33,444 reflesh.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute 执行参数：{u'project': u'ry_sp_static', u'domain': [u'1280', u'1281'], u'uri': [u'/adfasdf/', u'/asdfasdf/asdfasdf.png']}
+2018-06-29 22:31:33,635 reflesh.py [django:96] [INFO]- [<domains: ruiying | https://fanyingsh.com/images/member/index_error.png | pc : head : ssl | 启用>, <domains: ruiying | https://www.fanyingsh.com/images/member/index_error.png | pc : head : ssl | 启用>]
+2018-06-29 22:31:36,635 reflesh.py [django:100] [INFO]- {u'tencent_lebo.technical001': {'secretkey': 'c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1', 'domain': [u'https://fanyingsh.com', u'https://www.fanyingsh.com'], 'secretid': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'name': u'tencent'}, u'wangsu_speedfeng': {'secretkey': 'speedfeng@123', 'domain': [], 'secretid': 'speedfeng', 'name': u'wangsu'}}
+2018-06-29 22:31:36,635 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnDir&Nonce=554700&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530282696&dirs.0=https://fanyingsh.com/adfasdf/&dirs.1=https://www.fanyingsh.com/adfasdf/
+2018-06-29 22:31:36,635 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-06-29 22:31:38,898 tencent_api.py [django:105] [INFO]- {'Nonce': 554700, 'Timestamp': 1530282696, 'dirs.0': u'https://fanyingsh.com/adfasdf/', 'dirs.1': u'https://www.fanyingsh.com/adfasdf/', 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'nhr8fw9nMq6JZqIZbMF4cCQ28Nw=', 'Action': 'RefreshCdnDir'}: 缓存清理成功！
+2018-06-29 22:31:38,898 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=370319&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530282698&urls.0=https://fanyingsh.com/asdfasdf/asdfasdf.png&urls.1=https://www.fanyingsh.com/asdfasdf/asdfasdf.png
+2018-06-29 22:31:38,898 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-06-29 22:31:40,763 tencent_api.py [django:105] [INFO]- {'Nonce': 370319, 'Timestamp': 1530282698, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'QQRQit/eRI2doDSTxV9lYFUrlU4=', 'Action': 'RefreshCdnUrl', 'urls.0': u'https://fanyingsh.com/asdfasdf/asdfasdf.png', 'urls.1': u'https://www.fanyingsh.com/asdfasdf/asdfasdf.png'}: 缓存清理成功！
+2018-06-29 22:31:42,217 telegram.py [django:105] [INFO]- send message successfull!
+2018-06-29 22:31:42,217 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 76, in refleshExecute
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-06-29 22:34:11,234 reflesh.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute 执行参数：{u'project': u'ry_sp_static', u'domain': [u'1280', u'1281'], u'uri': [u'/adfasdf/', u'/asdfasdf/asdfasdf.png']}
+2018-06-29 22:34:11,427 reflesh.py [django:96] [INFO]- [<domains: ruiying | https://fanyingsh.com/images/member/index_error.png | pc : head : ssl | 启用>, <domains: ruiying | https://www.fanyingsh.com/images/member/index_error.png | pc : head : ssl | 启用>]
+2018-06-29 22:34:14,355 reflesh.py [django:100] [INFO]- {u'tencent_lebo.technical001': {'secretkey': 'c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1', 'domain': [u'https://fanyingsh.com', u'https://www.fanyingsh.com'], 'secretid': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'name': u'tencent'}, u'wangsu_speedfeng': {'secretkey': 'speedfeng@123', 'domain': [], 'secretid': 'speedfeng', 'name': u'wangsu'}}
+2018-06-29 22:34:14,355 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnDir&Nonce=881578&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530282854&dirs.0=https://fanyingsh.com/adfasdf/&dirs.1=https://www.fanyingsh.com/adfasdf/
+2018-06-29 22:34:14,355 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-06-29 22:34:16,608 tencent_api.py [django:105] [INFO]- {'Nonce': 881578, 'Timestamp': 1530282854, 'dirs.0': u'https://fanyingsh.com/adfasdf/', 'dirs.1': u'https://www.fanyingsh.com/adfasdf/', 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': '6fmE2aQppw2EfEdXrkMedt/T+as=', 'Action': 'RefreshCdnDir'}: 缓存清理成功！
+2018-06-29 22:34:16,608 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=196132&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530282856&urls.0=https://fanyingsh.com/asdfasdf/asdfasdf.png&urls.1=https://www.fanyingsh.com/asdfasdf/asdfasdf.png
+2018-06-29 22:34:16,608 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-06-29 22:34:18,461 tencent_api.py [django:105] [INFO]- {'Nonce': 196132, 'Timestamp': 1530282856, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'jW6nrKh+DnUs3VHLbDswt0OhxSE=', 'Action': 'RefreshCdnUrl', 'urls.0': u'https://fanyingsh.com/asdfasdf/asdfasdf.png', 'urls.1': u'https://www.fanyingsh.com/asdfasdf/asdfasdf.png'}: 缓存清理成功！
+2018-06-29 22:34:19,775 telegram.py [django:105] [INFO]- send message successfull!
+2018-06-29 22:35:33,013 reflesh.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute 执行参数：{u'project': u'fh_app', u'domain': [u'1279'], u'uri': [u'/adfasdf/', u'/asdfasdf/asdfasdf.png']}
+2018-06-29 22:35:33,207 reflesh.py [django:96] [INFO]- [<domains: fenghuang | https://app.fanyingsh.com/test | pc : head : ssl | 启用>]
+2018-06-29 22:35:35,144 reflesh.py [django:100] [INFO]- {u'tencent_lebo.technical001': {'secretkey': 'c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1', 'domain': [], 'secretid': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'name': u'tencent'}, u'wangsu_speedfeng': {'secretkey': 'speedfeng@123', 'domain': [], 'secretid': 'speedfeng', 'name': u'wangsu'}}
+2018-06-29 22:35:36,490 telegram.py [django:105] [INFO]- send message successfull!
+2018-06-29 22:36:54,033 reflesh.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute 执行参数：{u'project': u'fh_app', u'domain': [u'1279'], u'uri': [u'/adfasdf/', u'/asdfasdf/asdfasdf.png']}
+2018-06-29 22:36:54,221 reflesh.py [django:96] [INFO]- [<domains: fenghuang | https://app.fanyingsh.com/test | pc : head : ssl | 启用>]
+2018-06-29 22:36:56,128 reflesh.py [django:100] [INFO]- {u'tencent_lebo.technical001': {'secretkey': 'c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1', 'domain': [u'https://app.fanyingsh.com'], 'secretid': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'name': u'tencent'}, u'wangsu_speedfeng': {'secretkey': 'speedfeng@123', 'domain': [u'https://app.fanyingsh.com'], 'secretid': 'speedfeng', 'name': u'wangsu'}}
+2018-06-29 22:36:56,128 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnDir&Nonce=850912&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530283016&dirs.0=https://app.fanyingsh.com/adfasdf/
+2018-06-29 22:36:56,128 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-06-29 22:36:58,003 tencent_api.py [django:105] [INFO]- {'Nonce': 850912, 'Timestamp': 1530283016, 'dirs.0': u'https://app.fanyingsh.com/adfasdf/', 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'xCuzVFQRBohvDn9yAmVMDeKHYdE=', 'Action': 'RefreshCdnDir'}: 缓存清理成功！
+2018-06-29 22:36:58,003 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=878848&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530283018&urls.0=https://app.fanyingsh.com/asdfasdf/asdfasdf.png
+2018-06-29 22:36:58,003 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-06-29 22:36:59,858 tencent_api.py [django:105] [INFO]- {'Nonce': 878848, 'Timestamp': 1530283018, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': '+EOOwO06o2lwgUqOzMbM8Lwd6Is=', 'Action': 'RefreshCdnUrl', 'urls.0': u'https://app.fanyingsh.com/asdfasdf/asdfasdf.png'}: 缓存清理成功！
+2018-06-29 22:37:02,019 telegram.py [django:105] [INFO]- send message successfull!
+2018-06-29 22:38:04,625 reflesh.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute 执行参数：{u'project': u'fh_app', u'domain': [u'1279'], u'uri': [u'/adfasdf/', u'/asdfasdf/asdfasdf.png']}
+2018-06-29 22:38:04,815 reflesh.py [django:96] [INFO]- [<domains: fenghuang | https://app.fanyingsh.com/test | pc : head : ssl | 启用>]
+2018-06-29 22:38:06,726 reflesh.py [django:100] [INFO]- {u'tencent_lebo.technical001': {'secretkey': 'c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1', 'domain': [u'https://app.fanyingsh.com'], 'secretid': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'name': u'tencent'}, u'wangsu_speedfeng': {'secretkey': 'speedfeng@123', 'domain': [u'https://app.fanyingsh.com'], 'secretid': 'speedfeng', 'name': u'wangsu'}}
+2018-06-29 22:38:06,726 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnDir&Nonce=698400&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530283086&dirs.0=https://app.fanyingsh.com/adfasdf/
+2018-06-29 22:38:06,726 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-06-29 22:38:09,038 tencent_api.py [django:105] [INFO]- {'Nonce': 698400, 'Timestamp': 1530283086, 'dirs.0': u'https://app.fanyingsh.com/adfasdf/', 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'NctmzPxAcsOJrfOHjiLCPi3Flqc=', 'Action': 'RefreshCdnDir'}: 缓存清理成功！
+2018-06-29 22:38:09,039 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=430812&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530283089&urls.0=https://app.fanyingsh.com/asdfasdf/asdfasdf.png
+2018-06-29 22:38:09,039 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-06-29 22:38:10,940 tencent_api.py [django:105] [INFO]- {'Nonce': 430812, 'Timestamp': 1530283089, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'TIu5vRtkqCsd5ydmh/+mA+pJ4Mg=', 'Action': 'RefreshCdnUrl', 'urls.0': u'https://app.fanyingsh.com/asdfasdf/asdfasdf.png'}: 缓存清理成功！
+2018-06-29 22:38:12,861 telegram.py [django:105] [INFO]- send message successfull!

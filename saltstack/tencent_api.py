@@ -42,13 +42,6 @@ class tcApi(object):
         self.__secretid   = secretid
         self.__secretkey  = secretkey
         self.__httpmethod = "POST"
-        self.__params    = {
-            'Action':'RefreshCdnUrl',
-            'Nonce': random.randint(1, 1000000),
-            'SecretId':secretid,
-            'Timestamp': int(time.time()),
-        }
-
         self.__warning = "\r\n".join([ 
                 'Attention: 腾讯云域名缓存清理失败，请检查:'
                 '腾讯云URL:  + %s' %tencent_url,
@@ -84,6 +77,12 @@ class tcApi(object):
         #        self.__params[key] = urllib.urlencode({'1': self.__params[key]}).split('=')[1]
         
     def purge(self, domains, uri="/"):
+        self.__params    = {
+            'Action':'RefreshCdnUrl',
+            'Nonce': random.randint(1, 1000000),
+            'SecretId':secretid,
+            'Timestamp': int(time.time()),
+        }
         self.signkey(self.__httpmethod, domains, uri)
         url = "https://" + tencent_url
         #logger.info(self.__params)

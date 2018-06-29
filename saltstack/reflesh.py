@@ -119,36 +119,17 @@ def refleshExecute(request):
                         for uri in data['uri']:
                             result, status = req.purge(domains_c, uri)
                             if status:
-                                info['result'] = [ domain+uri+": 刷新成功！" for domain in domains_c ]
+                                info['result'] = [ domain+uri+": 清缓存成功！" for domain in domains_c ]
                                 message["text"] += cdn + ": \r\n" + "\r\n".join(info['result']) 
                             else:
-                                info['result'] = [ domain+uri+": 刷新失败！" for domain in domains_c ]
+                                info['result'] = [ domain+uri+": 清缓存失败！" for domain in domains_c ]
                                 message["text"] += cdn + ": \r\n" + "\r\n".join(info['result']) 
                             request.websocket.send(json.dumps(info))
-                #info['cdn'] = cdn
-                #secretid  = cdn_d[cdn].secretid
-                #secretkey = cdn_d[cdn].secretkey
-                #if cdn.split('_')[0] == "tencent":
-                #    req = tcApi(secretid, secretkey)
-                #elif cdn.split('_')[0] == "wangsu":
-                #    req = wsApi(secretid, secretkey)
-                #else:
-                #    info['result'] = ["CDN 接口不存在！"]
-                #    message["text"] += "%s: CDN 接口不存在！\r\n" %cdn
-                #    request.websocket.send(json.dumps(info))
-                #    continue
-                #for uri in data['uri']:
-                #    result, status = req.purge(data['domain'], uri)
-                #    if status:
-                #        info['result'] = [ domain+uri+": 刷新成功！" for domain in data['domain'] ]
-                #        message["text"] += cdn + ": \r\n" + "\r\n".join(info['result']) 
-                #    else:
-                #        info['result'] = [ domain+uri+": 刷新失败！" for domain in data['domain'] ]
-                #        message["text"] += cdn + ": \r\n" + "\r\n".join(info['result']) 
-                #    request.websocket.send(json.dumps(info))
             info['step'] = 'final'
             request.websocket.send(json.dumps(info))
             sendTelegram(message).send()
+            request.websocket.close()
+            break
         ### close websocket ###
         request.websocket.close()
     else:
