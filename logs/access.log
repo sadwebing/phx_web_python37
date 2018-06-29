@@ -18491,3 +18491,127 @@ TypeError: expected string or buffer
 2018-06-28 23:11:03,631 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
 2018-06-28 23:11:07,321 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
 2018-06-28 23:11:07,361 reflesh.py [django:22] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-06-29 21:26:51,040 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-29 21:26:55,500 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-29 21:26:55,542 reflesh.py [django:23] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-06-29 21:26:57,316 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/get_project
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 33, in refleshGetProject
+    'account': cdn.account} for cdn in prot.cdn.all() ]
+AttributeError: 'cdn_proj_t' object has no attribute 'cdn'
+2018-06-29 21:28:08,641 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-29 21:28:13,055 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-29 21:28:13,092 reflesh.py [django:23] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-06-29 21:30:19,115 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-29 21:30:23,670 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-29 21:30:23,714 reflesh.py [django:23] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-06-29 21:31:19,710 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-29 21:31:23,516 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-29 21:31:23,549 reflesh.py [django:23] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-06-29 22:07:07,477 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-29 22:07:12,296 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-29 22:07:12,352 reflesh.py [django:24] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-06-29 22:07:28,266 reflesh.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute 执行参数：{u'project': u'ry_sp_static', u'domain': [u'1280', u'1281'], u'uri': [u'/']}
+2018-06-29 22:07:28,460 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 92, in refleshExecute
+    'secretkey': cdn.secretkey,
+TypeError: unsupported operand type(s) for +: 'long' and 'str'
+2018-06-29 22:09:54,930 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-29 22:09:59,319 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-29 22:09:59,355 reflesh.py [django:24] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-06-29 22:10:10,802 reflesh.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute 执行参数：{u'project': u'ry_sp_static', u'domain': [u'1280', u'1281'], u'uri': [u'/']}
+2018-06-29 22:10:10,993 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 92, in refleshExecute
+    'secretkey': str(cdn.secretkey),
+TypeError: unsupported operand type(s) for +: 'long' and 'str'
+2018-06-29 22:16:54,095 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-06-29 22:16:58,515 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-06-29 22:16:58,552 reflesh.py [django:24] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-06-29 22:17:08,868 reflesh.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute 执行参数：{u'project': u'ry_sp_static', u'domain': [u'1280', u'1281'], u'uri': [u'/']}
+2018-06-29 22:17:11,236 telegram.py [django:108] [ERROR]- Attention: send message failed!
+2018-06-29 22:17:11,236 telegram.py [django:109] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: message text is empty"}
+2018-06-29 22:17:11,239 telegram.py [django:110] [ERROR]- {'disable_web_page_preview': True, 'text': '', 'doc_name': 'message.txt_20180629221709', 'caption': '', 'chat_id': '-204952096', 'parse_mode': 'HTML'}
+2018-06-29 22:17:11,239 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 76, in refleshExecute
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-06-29 22:20:46,872 reflesh.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute 执行参数：{u'project': u'ry_sp_static', u'domain': [u'1280', u'1281'], u'uri': [u'/']}
+2018-06-29 22:20:47,654 reflesh.py [django:100] [INFO]- {u'tencent_lebo.technical001': {'secretkey': 'c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1', 'domain': [], 'secretid': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'name': u'tencent'}, u'wangsu_speedfeng': {'secretkey': 'speedfeng@123', 'domain': [], 'secretid': 'speedfeng', 'name': u'wangsu'}}
+2018-06-29 22:20:49,234 telegram.py [django:108] [ERROR]- Attention: send message failed!
+2018-06-29 22:20:49,234 telegram.py [django:109] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: message text is empty"}
+2018-06-29 22:20:49,234 telegram.py [django:110] [ERROR]- {'disable_web_page_preview': True, 'text': '', 'doc_name': 'message.txt_20180629222047', 'caption': '', 'chat_id': '-204952096', 'parse_mode': 'HTML'}
+2018-06-29 22:20:49,234 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 76, in refleshExecute
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-06-29 22:22:30,989 reflesh.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute 执行参数：{u'project': u'ry_sp_static', u'domain': [u'1280', u'1281'], u'uri': [u'/']}
+2018-06-29 22:22:31,184 reflesh.py [django:96] [INFO]- [<domains: ruiying | https://fanyingsh.com/images/member/index_error.png | pc : head : ssl | 启用>, <domains: ruiying | https://www.fanyingsh.com/images/member/index_error.png | pc : head : ssl | 启用>]
+2018-06-29 22:22:34,108 reflesh.py [django:100] [INFO]- {u'tencent_lebo.technical001': {'secretkey': 'c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1', 'domain': [], 'secretid': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'name': u'tencent'}, u'wangsu_speedfeng': {'secretkey': 'speedfeng@123', 'domain': [], 'secretid': 'speedfeng', 'name': u'wangsu'}}
+2018-06-29 22:22:35,700 telegram.py [django:108] [ERROR]- Attention: send message failed!
+2018-06-29 22:22:35,700 telegram.py [django:109] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: message text is empty"}
+2018-06-29 22:22:35,700 telegram.py [django:110] [ERROR]- {'disable_web_page_preview': True, 'text': '', 'doc_name': 'message.txt_20180629222234', 'caption': '', 'chat_id': '-204952096', 'parse_mode': 'HTML'}
+2018-06-29 22:22:35,700 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 76, in refleshExecute
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer

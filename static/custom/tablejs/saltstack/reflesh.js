@@ -48,11 +48,11 @@ var operate = {
                     var cdn_html    = "";
                     var domain_html = "";
                     //循环获取数据 
-                    $.each(item.cdn, function (index, cdn) {
-                        cdn_html = cdn_html + "<option value='"+cdn.name+"_"+cdn.account+"' data-subtext='"+cdn.name+"'>"+cdn.account+"</option>";
-                    })
+                    //$.each(item.cdn, function (index, cdn) {
+                    //    cdn_html = cdn_html + "<option value='"+cdn.name+"_"+cdn.account+"' data-subtext='"+cdn.name+"'>"+cdn.account+"</option>";
+                    //})
                     $.each(item.domain, function (index, domain) {
-                        domain_html = domain_html + "<option value='"+domain.name+"' data-subtext='"+domain.product+"'>"+domain.name+"</option>";
+                        domain_html = domain_html + "<option value="+domain.id+" data-subtext='"+domain.product+"'>"+domain.name+"</option>";
                     })
 
                     project_html = project_html + "<option value='"+item.project+"'>"+item.project+"</option>";
@@ -72,7 +72,7 @@ var operate = {
     setPorjectHtml: function(form, value){
         project = document.getElementById("cdn_projects").value;
         //console.log(project_list_html)
-        document.getElementById('cdns').innerHTML=project_list_html[project]['cdn_html'];
+        //document.getElementById('cdns').innerHTML=project_list_html[project]['cdn_html'];
         document.getElementById('cdn_domains').innerHTML=project_list_html[project]['domain_html'];
         //$('.selectpicker').selectpicker({title:"请选择服务器地址"});
         $('.selectpicker').selectpicker('refresh');
@@ -126,7 +126,7 @@ var operate = {
         var postData = {
             'project': document.getElementById("cdn_projects").value,
             'uri': document.getElementById("textarea_domain_uri").value,
-            'cdn': operate.showSelectedValue(document.projectreform.cdns),
+            //'cdn': operate.showSelectedValue(document.projectreform.cdns),
             'domain': operate.showSelectedValue(document.projectreform.cdn_domains),
         };
         
@@ -134,10 +134,10 @@ var operate = {
             alert("请选择项目！");
             return false;
         }
-        if (postData['cdn'].length === 0){
-            alert("请选择CDN！");
-            return false;
-        }
+        //if (postData['cdn'].length === 0){
+        //    alert("请选择CDN！");
+        //    return false;
+        //}
         if (postData['domain'].length === 0){
             alert("请选择域名！");
             return false;

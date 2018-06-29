@@ -139,26 +139,7 @@ if __name__ == "__main__":
     #print sslExpiry('alcp33.com').getTime()
     li = []
     #print getDomains(product=7); sys.exit()
-    choices_prod = ( 
-            (0, 'pub'),
-            (1, 'ali'), 
-            (2, 'guangda'), 
-            (3, 'leying'), 
-            (4, 'caitou'), 
-            (5, 'tiantian'), 
-            (6, 'sande'), 
-            (7, 'uc'), 
-            (8, '9393'), 
-            (9, '3535'), 
-            (10, 'agcai'), 
-            (11, 'wanyou'),
-            (12, 'fenghuang'),
-            (13, 'le7'),
-            (14, 'dx_6668'),
-            (15, 'dx_70887'),
-            (16, 'yongshi'),
-            )
-    
+
     failed    = ""
     ex_half_y = ""
     ex_one_m  = ""

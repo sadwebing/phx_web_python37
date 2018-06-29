@@ -23,4 +23,19 @@ def create_user_profile(sender, instance, created, **kwargs):
         profile.user = instance
         profile.save()
 
+class cdn_t(models.Model):
+    choices_cdn = (
+        (0, 'tencent'),
+        (1, 'wangsu'),
+        )
+
+    name      = models.IntegerField(choices=choices_cdn)
+    account   = models.CharField(max_length=64, null=False)
+    secretid  = models.CharField(max_length=128, null=False)
+    secretkey = models.CharField(max_length=128, null=False)
+
+    class Meta:
+        unique_together = ('name', 'account')
+    def __str__(self):
+        return " | ".join([self.get_name_display(), self.account])
 #post_save.connect(create_user_profile, sender=User)

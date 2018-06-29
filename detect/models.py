@@ -1,6 +1,7 @@
 # coding: utf8
 from django.db import models
 from phxweb.settings import choices_prod
+from accounts.models  import cdn_t
 
 # Create your models here.
 
@@ -21,7 +22,7 @@ class groups(models.Model):
         else:
             ssl = 'nossl'
         return " | ".join([self.group, self.client, self.method, ssl])
-
+        
 class domains(models.Model):
     #choices_n = (
     #            (1, 'http://'), 
@@ -39,6 +40,7 @@ class domains(models.Model):
     group    = models.ForeignKey(groups)
     content  = models.CharField(max_length=128, blank=True)
     status   = models.IntegerField(choices=choices_s, default=1)
+    cdn      = models.ManyToManyField(cdn_t, blank=True)
     
     def __str__(self):
         if self.group.ssl == 1:

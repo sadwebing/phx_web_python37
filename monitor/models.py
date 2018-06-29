@@ -10,7 +10,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-domain_D = domains.objects.get(id=1)
+#domain_D = domains.objects.get(id=1)
 
 choices_s = (
         (1, '启用'), 
@@ -71,7 +71,7 @@ class project_t(models.Model):
     minion_id   = models.ManyToManyField(minion_t)
     server_type = models.CharField(max_length=10, choices=choices_st, default='nginx')
     role        = models.CharField(max_length=10, choices=choices_role, default='main')
-    domain      = models.ForeignKey(domains, default=domain_D.id)
+    #domain      = models.ForeignKey(domains, default=domain_D.id)
     uri         = models.CharField(max_length=128, default='/')
     status      = models.IntegerField(choices=choices_s, default=1)
     info        = models.CharField(max_length=128, blank=True)
@@ -80,22 +80,6 @@ class project_t(models.Model):
 
     def __str__(self):
         return " - ".join([self.get_envir_display(), self.get_product_display(), self.get_project_display(), self.get_server_type_display(), self.get_status_display()])
-
-class cdn_t(models.Model):
-    choices_cdn = (
-        (0, 'tencent'),
-        (1, 'wangsu'),
-        )
-
-    name      = models.IntegerField(choices=choices_cdn)
-    account   = models.CharField(max_length=64, null=False)
-    secretid  = models.CharField(max_length=128, null=False)
-    secretkey = models.CharField(max_length=128, null=False)
-
-    class Meta:
-        unique_together = ('name', 'account')
-    def __str__(self):
-        return " | ".join([self.get_name_display(), self.account])
 
 class cdn_proj_t(models.Model):
     choices_proj = (
@@ -106,7 +90,7 @@ class cdn_proj_t(models.Model):
 
     project = models.IntegerField(choices=choices_proj, unique=True)
     domain  = models.ManyToManyField(domains)
-    cdn     = models.ManyToManyField(cdn_t)
+    #cdn     = models.ManyToManyField(cdn_t)
 
     def __str__(self):
         return " - ".join([self.get_project_display()])
