@@ -85,6 +85,7 @@ class cdn_proj_t(models.Model):
     choices_proj = (
         (0, 'fh_app'),
         (1, 'fh_cp_static'),
+        (3, 'fh_sp_static'),
         (2, 'ry_sp_static'),
         )
 

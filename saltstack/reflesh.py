@@ -15,7 +15,7 @@ import json, logging, time, urlparse
 logger = logging.getLogger('django')
 
 #telegram 参数
-message = settings.message_TEST
+message = settings.message_ONLINE
 
 @csrf_exempt
 def refleshGetProject(request):
@@ -30,7 +30,7 @@ def refleshGetProject(request):
             tmpdict['project'] = prot.get_project_display()
             tmpdict['domain']  = [ {'id': domain.id,
                                     'name': urlparse.urlsplit(domain.name).scheme+"://"+urlparse.urlsplit(domain.name).netloc,
-                                    'product': domain.get_product_display()} for domain in prot.domain.all() ]
+                                    'product': domain.get_product_display()} for domain in prot.domain.all() if domain.cdn.all() ]
             #tmpdict['cdn']     = [ {'name': cdn.get_name_display(),
             #                        'account': cdn.account} for cdn in cdn_t.objects.all() ]
             projectlist.append(tmpdict)
@@ -127,7 +127,7 @@ def refleshExecute(request):
                             request.websocket.send(json.dumps(info))
             info['step'] = 'final'
             request.websocket.send(json.dumps(info))
-            sendTelegram(message).send()
+            if message["text"]: sendTelegram(message).send()
             request.websocket.close()
             break
         ### close websocket ###

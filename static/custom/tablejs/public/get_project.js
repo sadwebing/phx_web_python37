@@ -161,6 +161,11 @@ var gp = {
                 $('#OperateRestartresults').append('<p>连接失败......</p>' );
                 setTimeout(function(){$('#runprogress').modal('hide');}, 1000);
             };
+            
+            socket.onclose = function () {
+                setTimeout(function(){$('#runprogress').modal('hide');}, 1000);
+            };
+            
             socket.onmessage = function (e) {
                 //return false;
                 data = eval('('+ e.data +')')

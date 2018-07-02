@@ -192,6 +192,10 @@ var operate = {
             socket.send(JSON.stringify(postData))
         };
 
+        socket.onclose = function () {
+            setTimeout(function(){$('#runprogress').modal('hide');}, 1000);
+        };
+        
         $('#runprogress').modal('show');
         socket.onmessage = function (e) {
             //return false;
@@ -209,8 +213,9 @@ var operate = {
                 //console.log('websocket已关闭');
                 setTimeout(function(){$('#runprogress').modal('hide');}, 1000);
                 var html = "";
-                var button = "";
+                var button = ""
                 var button_html = "";
+                for (var tgt in data.results){
                     //alert(tgt+data[tgt])
                     if (data['results'][tgt] == 'not return'){
                         button = [                        
