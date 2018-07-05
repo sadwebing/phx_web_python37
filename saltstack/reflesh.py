@@ -15,7 +15,7 @@ import json, logging, time, urlparse
 logger = logging.getLogger('django')
 
 #telegram 参数
-message = settings.message_ONLINE
+message = settings.message_TEST
 
 @csrf_exempt
 def refleshGetProject(request):

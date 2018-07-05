@@ -13905,3 +13905,4 @@ Traceback (most recent call last):
   File "c:\python27\Lib\json\decoder.py", line 364, in decode
     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
 TypeError: expected string or buffer
+2018-07-05 18:43:11,006 views.py [django:109] [ERROR]- trevor don't have the permisson to change table detect of domains

@@ -30,11 +30,12 @@ def home(request):
         role = request.user.userprofile.role
     except:
         role = 'none'
-    group = request.user.get_group_permissions()
-    if request.user.has_perm('check_tomcat.add_tomcat_url'):
+    permissions = request.user.get_all_permissions()
+    logger.info(permissions)
+    if permissions:
         auth = 'welcome!'
     else:
-        auth = 'back off!'
+        auth = 'you don\'t have any permissions.'
     if request.META.has_key('HTTP_X_FORWARDED_FOR'):
         clientip = request.META['HTTP_X_FORWARDED_FOR']
     else:
@@ -49,7 +50,7 @@ def home(request):
             'role': role,
             'username': username,
             'auth': auth,
-            'group': group,
+            'permissions': permissions,
         }
     )
 

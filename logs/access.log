@@ -18827,3 +18827,35 @@ TypeError: expected string or buffer
 2018-07-01 20:25:27,746 saltapi.py [django:68] [INFO]- [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13', u'CP_NG_HK_42_48'] "nginx.conf": 200
 2018-07-01 20:25:30,421 saltapi.py [django:68] [INFO]- [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13', u'CP_NG_HK_42_48'] "nginx.reload": 200
 2018-07-01 20:26:42,038 views.py [django:130] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'list', u'target': [u'CP_NG_HK_160_59', u'CP_NG_HK_83_36', u'CP_NG_HK_8_82', u'CP_NG_HK_85_10', u'CP_NG_HK_179_204', u'CP_NG_HK_137_13', u'CP_NG_HK_42_48'], u'exe_user': u'root', u'arguments': u''}
+2018-07-05 18:39:35,747 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-05 18:39:40,773 views.py [django:42] [INFO]- 127.0.0.1 is requesting /home
+2018-07-05 18:40:27,977 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-07-05 18:40:28,069 reflesh.py [django:24] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-07-05 18:40:47,707 reflesh.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute 执行参数：{u'project': u'fh_cp_static', u'domain': [u'1289', u'1291'], u'uri': [u'/']}
+2018-07-05 18:40:47,900 reflesh.py [django:96] [INFO]- [<domains: yiteng | https://yitengstatic.yuchaojinshu.com/static/images/yiteng/logo_main.png | pc : head : ssl | 启用>, <domains: leying | https://leyingstatic.yuchaojinshu.com/home/ly/images/tel.png | pc : head : ssl | 启用>]
+2018-07-05 18:40:50,878 reflesh.py [django:100] [INFO]- {u'tencent_lebo.technical001': {'secretkey': 'c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1', 'domain': [u'https://yitengstatic.yuchaojinshu.com', u'https://leyingstatic.yuchaojinshu.com'], 'secretid': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'name': u'tencent'}, u'wangsu_speedfeng': {'secretkey': 'speedfeng@123', 'domain': [], 'secretid': 'speedfeng', 'name': u'wangsu'}}
+2018-07-05 18:40:50,878 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnDir&Nonce=56863&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530787250&dirs.0=https://yitengstatic.yuchaojinshu.com/&dirs.1=https://leyingstatic.yuchaojinshu.com/
+2018-07-05 18:40:50,878 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 18:40:53,194 tencent_api.py [django:105] [INFO]- {'Nonce': 56863, 'Timestamp': 1530787250, 'dirs.0': u'https://yitengstatic.yuchaojinshu.com/', 'dirs.1': u'https://leyingstatic.yuchaojinshu.com/', 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': '737nQbIk39SzLMMv5kuBfw8bX9U=', 'Action': 'RefreshCdnDir'}: 缓存清理成功！
+2018-07-05 18:40:54,681 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 18:42:19,026 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-05 18:42:22,930 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-07-05 18:42:22,967 reflesh.py [django:24] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-07-05 18:42:29,282 views.py [django:79] [INFO]- 127.0.0.1 is requesting /monitor/domains
+2018-07-05 18:42:29,387 domains.py [django:64] [INFO]- [GET]127.0.0.1 is requesting. /monitor/domains/getGroups
+2018-07-05 18:42:32,664 domains.py [django:27] [INFO]- [POST]127.0.0.1 is requesting. /monitor/domains/Query
+2018-07-05 18:42:32,665 domains.py [django:42] [INFO]- 查询参数：{u'status': u'01', u'product': [u'1'], u'group': [u'1', u'2', u'3', u'4'], u'num': u'all', u'limit': 15, u'offset': 0}
+2018-07-05 18:43:07,348 domains.py [django:90] [INFO]- 127.0.0.1 is requesting. /monitor/domains/UpdateStatus data: {u'status': 0, u'id': 1298}
+2018-07-05 18:43:11,006 views.py [django:109] [ERROR]- trevor don't have the permisson to change table detect of domains
+2018-07-05 18:43:40,709 views.py [django:42] [INFO]- 127.0.0.1 is requesting /home
+2018-07-05 18:47:00,694 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-05 18:47:04,698 views.py [django:42] [INFO]- 127.0.0.1 is requesting /home
+2018-07-05 18:48:52,808 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-05 18:48:57,316 views.py [django:42] [INFO]- 127.0.0.1 is requesting /home
+2018-07-05 18:50:10,756 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-05 18:50:11,546 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-05 18:50:16,141 views.py [django:34] [INFO]- ['DoesNotExist', 'Meta', 'MultipleObjectsReturned', 'REQUIRED_FIELDS', 'USERNAME_FIELD', '__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', u'__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__unicode__', '__weakref__', '_base_manager', '_check_column_name_clashes', '_check_field_name_clashes', '_check_fields', '_check_id_field', '_check_index_together', '_check_local_fields', '_check_long_column_names', '_check_m2m_through_same_relationship', '_check_managers', '_check_model', '_check_ordering', '_check_swappable', '_check_unique_together', '_default_manager', '_deferred', '_do_insert', '_do_update', '_get_FIELD_display', '_get_next_or_previous_by_FIELD', '_get_next_or_previous_in_order', '_get_pk_val', '_get_unique_checks', '_group_perm_cache', '_meta', '_perform_date_checks', '_perform_unique_checks', '_save_parents', '_save_table', '_set_pk_val', '_state', '_userprofile_cache', 'check', 'check_password', 'clean', 'clean_fields', 'date_error_message', 'date_joined', 'delete', 'email', 'email_user', 'first_name', 'from_db', 'full_clean', 'get_all_permissions', 'get_deferred_fields', 'get_full_name', 'get_group_permissions', 'get_next_by_date_joined', 'get_previous_by_date_joined', 'get_session_auth_hash', 'get_short_name', 'get_username', 'groups', 'has_module_perms', 'has_perm', 'has_perms', 'has_usable_password', 'id', 'is_active', 'is_anonymous', 'is_authenticated', 'is_staff', 'is_superuser', 'last_login', 'last_name', 'logentry_set', 'natural_key', 'objects', 'password', 'pk', 'prepare_database_save', 'refresh_from_db', 'save', 'save_base', 'serializable_value', 'set_password', 'set_unusable_password', 'unique_error_message', 'user_permissions', 'username', 'userprofile', 'validate_unique']
+2018-07-05 18:50:16,142 views.py [django:43] [INFO]- 127.0.0.1 is requesting /home
+2018-07-05 18:51:27,313 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-05 18:51:32,101 views.py [django:34] [INFO]- set([u'detect.change_domains', u'detect.change_groups', u'detect.add_domains', u'detect.delete_domains'])
+2018-07-05 18:51:32,101 views.py [django:43] [INFO]- 127.0.0.1 is requesting /home

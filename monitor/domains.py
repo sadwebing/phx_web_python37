@@ -88,7 +88,7 @@ def DomainsUpdateStatus(request):
         clientip = getIp(request)
         data = json.loads(request.body)
         logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
-        if not HasPermission(request.user, 'change', 'detect', 'domains'):
+        if not HasPermission(request.user, 'change', 'domains', 'detect'):
             return HttpResponseForbidden('你没有修改的权限。')
         info = domains.objects.get(id=data['id'])
         info.status = data['status']
@@ -105,7 +105,7 @@ def DomainsDelete(request):
         clientip = getIp(request)
         datas = json.loads(request.body)
         logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), datas))
-        if not HasPermission(request.user, 'delete', 'detect', 'domains'):
+        if not HasPermission(request.user, 'delete', 'domains', 'detect'):
             return HttpResponseForbidden('你没有删除的权限。')
         for data in datas:
             info = domains.objects.get(id=data['id'])
@@ -122,7 +122,7 @@ def DomainsAdd(request):
         clientip = getIp(request)
         datas = json.loads(request.body)
         logger.info('%s is requesting. %s datas: %s' %(clientip, request.get_full_path(), datas))
-        if not HasPermission(request.user, 'add', 'detect', 'domains'):
+        if not HasPermission(request.user, 'add', 'domains', 'detect'):
             return HttpResponseForbidden('你没有新增的权限。')
             
         group = groups.objects.get(id=datas['group'])
@@ -151,7 +151,7 @@ def DomainsUpdate(request):
         clientip = getIp(request)
         datas = json.loads(request.body)
         logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
-        if not HasPermission(request.user, 'change', 'detect', 'domains'):
+        if not HasPermission(request.user, 'change', 'domains', 'detect'):
             return HttpResponseForbidden('你没有修改的权限。')
 
         if len(datas['all']) == 1:
