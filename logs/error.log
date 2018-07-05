@@ -13906,3 +13906,97 @@ Traceback (most recent call last):
     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
 TypeError: expected string or buffer
 2018-07-05 18:43:11,006 views.py [django:109] [ERROR]- trevor don't have the permisson to change table detect of domains
+2018-07-05 20:52:11,671 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 56, in refleshPurge
+    'secretkey': str(cdn.secretkey),
+NameError: global name 'cdn_d' is not defined
+2018-07-05 20:53:41,414 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 62, in refleshPurge
+    for domain in cdn_proj.objects.values(domain):
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 252, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % type.__name__)
+AttributeError: Manager isn't accessible via cdn_proj_t instances
+2018-07-05 20:54:41,907 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 62, in refleshPurge
+    for domain in cdn_proj.objects.values(domain).all():
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 252, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % type.__name__)
+AttributeError: Manager isn't accessible via cdn_proj_t instances
+2018-07-05 20:55:47,160 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 66, in refleshPurge
+    info['cdn'] = cdn
+NameError: global name 'info' is not defined
+2018-07-05 20:56:43,950 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:56:47,223 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:56:50,404 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:56:53,697 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:56:56,953 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:00,132 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:05,318 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:08,844 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:12,042 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:15,312 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:18,515 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:21,717 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:25,052 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:28,420 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:31,608 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:34,801 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:36,947 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 84, in refleshPurge
+    result, status = req.purge(domains_c, uri)
+  File "J:\arno\test\phx_web\saltstack\ws_api.py", line 114, in purge
+    logger.error(message['text'])
+NameError: global name 'logger' is not defined
+2018-07-05 20:58:58,608 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 84, in refleshPurge
+    result, status = req.purge(domains_c, uri)
+  File "J:\arno\test\phx_web\saltstack\ws_api.py", line 114, in purge
+    logger.error(message['text'])
+NameError: global name 'logger' is not defined

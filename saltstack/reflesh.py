@@ -15,7 +15,7 @@ import json, logging, time, urlparse
 logger = logging.getLogger('django')
 
 #telegram 参数
-message = settings.message_ONLINE
+message = settings.message_TEST
 
 @csrf_exempt
 def refleshGetProject(request):
@@ -46,16 +46,50 @@ def refleshGetProject(request):
 def refleshPurge(request):
     if request.method == 'POST':
         clientip = getIp(request)
-        data     = json.loads(request.body)
-        secretid = 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs'
-        secretkey = 'c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1'
-        req = tcApi(secretid, secretkey)
-        result, status = req.purge(data['domains'], data['uri'])
+        cdn_d = {}
+        info  = {}
+        data  = json.loads(request.body)
+        cdns  = cdn_t.objects.all()
+        for cdn in cdns:
+            cdn_d[cdn.get_name_display()+"_"+cdn.account] = {
+                'name': cdn.get_name_display(),
+                'domain': [],
+                'secretid': str(cdn.secretid),
+                'secretkey': str(cdn.secretkey),
+            }
         
-        if status:
-            return HttpResponse(json.dumps(result))
-        else:
-            return HttpResponse(json.dumps(result))
+        cdn_proj_l = cdn_proj_t.objects.filter(project__in = data['cdn_proj']).all()
+        for cdn_proj in cdn_proj_l:
+            for domain in cdn_proj.domain.all():
+                for cdn in domain.cdn.all():
+                    cdn_d[cdn.get_name_display()+"_"+cdn.account]['domain'].append(urlparse.urlsplit(domain.name).scheme+"://"+urlparse.urlsplit(domain.name).netloc)
+        for cdn in cdn_d:
+            info['cdn'] = cdn
+            if cdn_d[cdn]['domain']:
+                #开始清缓存，判断CDN接口是否存在
+                if cdn_d[cdn]['name'] == "tencent":
+                    req = tcApi(cdn_d[cdn]['secretid'], cdn_d[cdn]['secretkey'])
+                elif cdn_d[cdn]['name'] == "wangsu":
+                    req = wsApi(cdn_d[cdn]['secretid'], cdn_d[cdn]['secretkey'])
+                else:
+                    info['result'] = ["CDN 接口不存在！"]
+                    message["text"] += "%s: CDN 接口不存在！\r\n" %cdn
+                    continue
+
+                while len(cdn_d[cdn]['domain']) != 0 :
+                    domains_c            = cdn_d[cdn]['domain'][:10]
+                    cdn_d[cdn]['domain'] = cdn_d[cdn]['domain'][10:]
+
+                    for uri in data['uri']:
+                        result, status = req.purge(domains_c, uri)
+                        if status:
+                            info['result'] = [ domain+uri+": 清缓存成功！" for domain in domains_c ]
+                            message["text"] += cdn + ": \r\n" + "\r\n".join(info['result']) 
+                        else:
+                            info['result'] = [ domain+uri+": 清缓存失败！" for domain in domains_c ]
+                            message["text"] += cdn + ": \r\n" + "\r\n".join(info['result']) 
+        if message["text"]: sendTelegram(message).send()
+        return HttpResponse('success!')
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
     else:
@@ -97,7 +131,7 @@ def refleshExecute(request):
             for domain in domain_l:
                 for cdn in domain.cdn.all():
                     cdn_d[cdn.get_name_display()+"_"+cdn.account]['domain'].append(urlparse.urlsplit(domain.name).scheme+"://"+urlparse.urlsplit(domain.name).netloc)
-            logger.info(cdn_d)
+            #logger.info(cdn_d)
             for cdn in cdn_d:
                 info['cdn'] = cdn
                 if cdn_d[cdn]['domain']:

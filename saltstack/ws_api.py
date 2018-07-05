@@ -5,12 +5,14 @@
 #    调用网宿API，刷新网宿域名静态文件缓存
 #version: 1.0 20180626 实现基本功能
 
-import requests, sys, commands, os
+import requests, sys, commands, os, logging
 import datetime, hmac, base64, json
 from hashlib import sha256
 from phxweb  import settings
 from detect.telegram import sendTelegram
 #from urllib  import request,parse
+
+logger = logging.getLogger('django')
 
 # 禁用安全请求警告
 from requests.packages.urllib3.exceptions import InsecureRequestWarning

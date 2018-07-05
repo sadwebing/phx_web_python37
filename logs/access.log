@@ -18865,3 +18865,183 @@ TypeError: expected string or buffer
 2018-07-05 18:54:41,276 domains.py [django:42] [INFO]- 查询参数：{u'status': u'01', u'product': [u'0'], u'group': [u'1', u'2', u'3', u'4'], u'num': u'all', u'limit': 15, u'offset': 0}
 2018-07-05 18:54:46,668 domains.py [django:90] [INFO]- 127.0.0.1 is requesting. /monitor/domains/UpdateStatus data: {u'status': 1, u'id': 1288}
 2018-07-05 18:54:52,299 domains.py [django:90] [INFO]- 127.0.0.1 is requesting. /monitor/domains/UpdateStatus data: {u'status': 0, u'id': 1288}
+2018-07-05 19:02:24,565 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-05 19:02:28,566 views.py [django:34] [INFO]- set([u'detect.change_domains', u'detect.change_groups', u'detect.add_domains'])
+2018-07-05 19:02:28,566 views.py [django:43] [INFO]- 127.0.0.1 is requesting /home
+2018-07-05 20:52:11,671 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 56, in refleshPurge
+    'secretkey': str(cdn.secretkey),
+NameError: global name 'cdn_d' is not defined
+2018-07-05 20:53:41,414 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 62, in refleshPurge
+    for domain in cdn_proj.objects.values(domain):
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 252, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % type.__name__)
+AttributeError: Manager isn't accessible via cdn_proj_t instances
+2018-07-05 20:54:41,907 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 62, in refleshPurge
+    for domain in cdn_proj.objects.values(domain).all():
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 252, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % type.__name__)
+AttributeError: Manager isn't accessible via cdn_proj_t instances
+2018-07-05 20:55:47,160 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 66, in refleshPurge
+    info['cdn'] = cdn
+NameError: global name 'info' is not defined
+2018-07-05 20:56:39,789 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnDir&Nonce=66856&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795399&dirs.0=https://app.hhy988.com/&dirs.1=https://app.fanyingsh.com/
+2018-07-05 20:56:39,789 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:56:42,023 tencent_api.py [django:105] [INFO]- {'Nonce': 66856, 'Timestamp': 1530795399, 'dirs.0': u'https://app.hhy988.com/', 'dirs.1': u'https://app.fanyingsh.com/', 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': '8jkWxnSf2JwfshVUIR8ZRPNG+bY=', 'Action': 'RefreshCdnDir'}: 缓存清理成功！
+2018-07-05 20:56:42,023 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=322592&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795402&urls.0=https://app.hhy988.comm&urls.1=https://app.fanyingsh.comm
+2018-07-05 20:56:42,023 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:56:43,950 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:56:45,313 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:56:45,315 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=413707&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795405&urls.0=https://app.hhy988.como&urls.1=https://app.fanyingsh.como
+2018-07-05 20:56:45,315 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:56:47,223 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:56:48,516 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:56:48,516 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=209287&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795408&urls.0=https://app.hhy988.comb&urls.1=https://app.fanyingsh.comb
+2018-07-05 20:56:48,516 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:56:50,404 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:56:51,805 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:56:51,806 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=619650&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795411&urls.0=https://app.hhy988.comi&urls.1=https://app.fanyingsh.comi
+2018-07-05 20:56:51,806 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:56:53,697 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:56:55,105 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:56:55,105 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=900623&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795415&urls.0=https://app.hhy988.coml&urls.1=https://app.fanyingsh.coml
+2018-07-05 20:56:55,105 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:56:56,953 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:56:58,262 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:56:58,262 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=260864&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795418&urls.0=https://app.hhy988.come&urls.1=https://app.fanyingsh.come
+2018-07-05 20:56:58,262 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:00,132 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:01,540 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:01,540 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnDir&Nonce=898223&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795421&dirs.0=https://app.hhy988.com/&dirs.1=https://app.fanyingsh.com/
+2018-07-05 20:57:01,542 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:03,440 tencent_api.py [django:105] [INFO]- {'Nonce': 898223, 'Timestamp': 1530795421, 'dirs.0': u'https://app.hhy988.com/', 'dirs.1': u'https://app.fanyingsh.com/', 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'UiyIhxznRMpqKTyYeG9+qySbCJM=', 'Action': 'RefreshCdnDir'}: 缓存清理成功！
+2018-07-05 20:57:03,440 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=577125&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795423&urls.0=https://app.hhy988.comy&urls.1=https://app.fanyingsh.comy
+2018-07-05 20:57:03,440 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:05,318 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:06,970 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:06,970 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=686738&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795426&urls.0=https://app.hhy988.comi&urls.1=https://app.fanyingsh.comi
+2018-07-05 20:57:06,970 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:08,844 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:10,131 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:10,131 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=107322&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795430&urls.0=https://app.hhy988.comt&urls.1=https://app.fanyingsh.comt
+2018-07-05 20:57:10,131 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:12,042 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:13,444 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:13,444 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=860699&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795433&urls.0=https://app.hhy988.come&urls.1=https://app.fanyingsh.come
+2018-07-05 20:57:13,444 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:15,312 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:16,612 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:16,614 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=522638&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795436&urls.0=https://app.hhy988.comn&urls.1=https://app.fanyingsh.comn
+2018-07-05 20:57:16,614 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:18,515 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:19,811 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:19,811 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=149706&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795439&urls.0=https://app.hhy988.comg&urls.1=https://app.fanyingsh.comg
+2018-07-05 20:57:19,811 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:21,717 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:23,158 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:23,158 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=251321&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795443&urls.0=https://app.hhy988.com.&urls.1=https://app.fanyingsh.com.
+2018-07-05 20:57:23,158 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:25,052 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:26,480 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:26,480 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=244145&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795446&urls.0=https://app.hhy988.coma&urls.1=https://app.fanyingsh.coma
+2018-07-05 20:57:26,480 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:28,420 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:29,739 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:29,740 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=516409&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795449&urls.0=https://app.hhy988.comp&urls.1=https://app.fanyingsh.comp
+2018-07-05 20:57:29,740 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:31,608 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:32,914 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:32,914 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=116805&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795452&urls.0=https://app.hhy988.comk&urls.1=https://app.fanyingsh.comk
+2018-07-05 20:57:32,914 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:34,801 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:36,184 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:36,947 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 84, in refleshPurge
+    result, status = req.purge(domains_c, uri)
+  File "J:\arno\test\phx_web\saltstack\ws_api.py", line 114, in purge
+    logger.error(message['text'])
+NameError: global name 'logger' is not defined
+2018-07-05 20:58:14,908 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=291035&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795494&urls.0=https://app.hhy988.com/mobile/yiteng.apk&urls.1=https://app.fanyingsh.com/mobile/yiteng.apk
+2018-07-05 20:58:14,908 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:58:16,884 tencent_api.py [django:105] [INFO]- {'Nonce': 291035, 'Timestamp': 1530795494, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': '+VojtMQe6Z/u2ReG/j8mC8oKL+E=', 'Action': 'RefreshCdnUrl', 'urls.0': u'https://app.hhy988.com/mobile/yiteng.apk', 'urls.1': u'https://app.fanyingsh.com/mobile/yiteng.apk'}: 缓存清理成功！
+2018-07-05 20:58:18,563 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:58:56,306 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=575489&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795536&urls.0=https://app.hhy988.com/mobile/yiteng.apk&urls.1=https://app.fanyingsh.com/mobile/yiteng.apk
+2018-07-05 20:58:56,306 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:58:58,230 tencent_api.py [django:105] [INFO]- {'Nonce': 575489, 'Timestamp': 1530795536, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'EGhSIKKEna4BdbSX5XoHjjNpWMk=', 'Action': 'RefreshCdnUrl', 'urls.0': u'https://app.hhy988.com/mobile/yiteng.apk', 'urls.1': u'https://app.fanyingsh.com/mobile/yiteng.apk'}: 缓存清理成功！
+2018-07-05 20:58:58,608 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 84, in refleshPurge
+    result, status = req.purge(domains_c, uri)
+  File "J:\arno\test\phx_web\saltstack\ws_api.py", line 114, in purge
+    logger.error(message['text'])
+NameError: global name 'logger' is not defined
+2018-07-05 21:00:17,323 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=339124&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795617&urls.0=https://app.hhy988.com/mobile/yiteng.apk&urls.1=https://app.fanyingsh.com/mobile/yiteng.apk
+2018-07-05 21:00:17,323 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 21:00:19,563 tencent_api.py [django:105] [INFO]- {'Nonce': 339124, 'Timestamp': 1530795617, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'u3M0ykxEbyPA9SidQeOTnqEp3m0=', 'Action': 'RefreshCdnUrl', 'urls.0': u'https://app.hhy988.com/mobile/yiteng.apk', 'urls.1': u'https://app.fanyingsh.com/mobile/yiteng.apk'}: 缓存清理成功！
+2018-07-05 21:00:21,173 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 21:02:24,417 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=155625&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795744&urls.0=https://yitengstatic.yuchaojinshu.com/asdfsdfasf&urls.1=https://leyingstatic.yuchaojinshu.com/asdfsdfasf&urls.2=https://uccp44.com/asdfsdfasf
+2018-07-05 21:02:24,417 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 21:02:26,361 tencent_api.py [django:105] [INFO]- {'Nonce': 155625, 'Timestamp': 1530795744, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'j3LoUZ07MUIoxRWTZRjx9jfCtkM=', 'Action': 'RefreshCdnUrl', 'urls.2': u'https://uccp44.com/asdfsdfasf', 'urls.0': u'https://yitengstatic.yuchaojinshu.com/asdfsdfasf', 'urls.1': u'https://leyingstatic.yuchaojinshu.com/asdfsdfasf'}: 缓存清理成功！
+2018-07-05 21:02:26,361 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=501216&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795746&urls.0=https://yitengstatic.yuchaojinshu.com/asdfasdf&urls.1=https://leyingstatic.yuchaojinshu.com/asdfasdf&urls.2=https://uccp44.com/asdfasdf
+2018-07-05 21:02:26,362 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 21:02:28,259 tencent_api.py [django:105] [INFO]- {'Nonce': 501216, 'Timestamp': 1530795746, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': '0rq4BG7Rco9B2NgvD2hTEctkS/g=', 'Action': 'RefreshCdnUrl', 'urls.2': u'https://uccp44.com/asdfasdf', 'urls.0': u'https://yitengstatic.yuchaojinshu.com/asdfasdf', 'urls.1': u'https://leyingstatic.yuchaojinshu.com/asdfasdf'}: 缓存清理成功！
+2018-07-05 21:02:29,558 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 21:07:41,013 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=859237&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530796061&urls.0=https://yitengstatic.yuchaojinshu.com/asdfsdfasf&urls.1=https://leyingstatic.yuchaojinshu.com/asdfsdfasf&urls.2=https://uccp44.com/asdfsdfasf
+2018-07-05 21:07:41,013 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 21:07:42,900 tencent_api.py [django:105] [INFO]- {'Nonce': 859237, 'Timestamp': 1530796061, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'VfnHIFE4Nd50uKpuYoYVhACvbfs=', 'Action': 'RefreshCdnUrl', 'urls.2': u'https://uccp44.com/asdfsdfasf', 'urls.0': u'https://yitengstatic.yuchaojinshu.com/asdfsdfasf', 'urls.1': u'https://leyingstatic.yuchaojinshu.com/asdfsdfasf'}: 缓存清理成功！
+2018-07-05 21:07:42,900 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=201811&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530796062&urls.0=https://yitengstatic.yuchaojinshu.com/asdfasdf&urls.1=https://leyingstatic.yuchaojinshu.com/asdfasdf&urls.2=https://uccp44.com/asdfasdf
+2018-07-05 21:07:42,900 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 21:07:44,809 tencent_api.py [django:105] [INFO]- {'Nonce': 201811, 'Timestamp': 1530796062, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'e3mwNfTUtbiH+GcIB1sl47JaXqo=', 'Action': 'RefreshCdnUrl', 'urls.2': u'https://uccp44.com/asdfasdf', 'urls.0': u'https://yitengstatic.yuchaojinshu.com/asdfasdf', 'urls.1': u'https://leyingstatic.yuchaojinshu.com/asdfasdf'}: 缓存清理成功！
+2018-07-05 21:07:46,262 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 21:08:20,483 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=584127&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530796100&urls.0=https://yitengstatic.yuchaojinshu.com/yiteng/a.img&urls.1=https://leyingstatic.yuchaojinshu.com/yiteng/a.img&urls.2=https://uccp44.com/yiteng/a.img
+2018-07-05 21:08:20,483 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 21:08:22,407 tencent_api.py [django:105] [INFO]- {'Nonce': 584127, 'Timestamp': 1530796100, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'nk3huvWujO1h+jgQCvtrHlD5POc=', 'Action': 'RefreshCdnUrl', 'urls.2': u'https://uccp44.com/yiteng/a.img', 'urls.0': u'https://yitengstatic.yuchaojinshu.com/yiteng/a.img', 'urls.1': u'https://leyingstatic.yuchaojinshu.com/yiteng/a.img'}: 缓存清理成功！
+2018-07-05 21:08:23,710 telegram.py [django:105] [INFO]- send message successfull!

@@ -8203,3 +8203,230 @@ TypeError: expected string or buffer
 2018-07-05 18:56:20,816 utils.py [django.db.backends:89] [DEBUG]- (0.188) SET SQL_AUTO_IS_NULL = 0; args=None
 2018-07-05 18:56:21,006 utils.py [django.db.backends:89] [DEBUG]- (0.190) SHOW FULL TABLES; args=None
 2018-07-05 18:56:21,198 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-07-05 19:02:22,628 utils.py [django.db.backends:89] [DEBUG]- (0.191) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 19:02:23,984 utils.py [django.db.backends:89] [DEBUG]- (0.189) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 19:02:24,177 utils.py [django.db.backends:89] [DEBUG]- (0.191) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '5zp3a516mluky99h56q2zig8m3h6m6ku' AND `django_session`.`expire_date` > '2018-07-05 19:02:21.261000'); args=('5zp3a516mluky99h56q2zig8m3h6m6ku', u'2018-07-05 19:02:21.261000')
+2018-07-05 19:02:24,368 utils.py [django.db.backends:89] [DEBUG]- (0.191) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 23; args=(23,)
+2018-07-05 19:02:24,565 utils.py [django.db.backends:89] [DEBUG]- (0.195) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 23; args=(23,)
+2018-07-05 19:02:24,565 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-05 19:02:26,262 utils.py [django.db.backends:89] [DEBUG]- (0.191) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 19:02:27,614 utils.py [django.db.backends:89] [DEBUG]- (0.186) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 19:02:27,803 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '5zp3a516mluky99h56q2zig8m3h6m6ku' AND `django_session`.`expire_date` > '2018-07-05 19:02:24.888000'); args=('5zp3a516mluky99h56q2zig8m3h6m6ku', u'2018-07-05 19:02:24.888000')
+2018-07-05 19:02:27,993 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 23; args=(23,)
+2018-07-05 19:02:28,184 utils.py [django.db.backends:89] [DEBUG]- (0.188) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 23; args=(23,)
+2018-07-05 19:02:28,375 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `django_content_type`.`app_label`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `auth_user_user_permissions` ON ( `auth_permission`.`id` = `auth_user_user_permissions`.`permission_id` ) INNER JOIN `django_content_type` ON ( `auth_permission`.`content_type_id` = `django_content_type`.`id` ) WHERE `auth_user_user_permissions`.`user_id` = 23; args=(23,)
+2018-07-05 19:02:28,565 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `django_content_type`.`app_label`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `auth_group_permissions` ON ( `auth_permission`.`id` = `auth_group_permissions`.`permission_id` ) INNER JOIN `auth_group` ON ( `auth_group_permissions`.`group_id` = `auth_group`.`id` ) INNER JOIN `auth_user_groups` ON ( `auth_group`.`id` = `auth_user_groups`.`group_id` ) INNER JOIN `django_content_type` ON ( `auth_permission`.`content_type_id` = `django_content_type`.`id` ) WHERE `auth_user_groups`.`user_id` = 23; args=(23,)
+2018-07-05 19:02:28,566 views.py [django:34] [INFO]- set([u'detect.change_domains', u'detect.change_groups', u'detect.add_domains'])
+2018-07-05 19:02:28,566 views.py [django:43] [INFO]- 127.0.0.1 is requesting /home
+2018-07-05 19:28:20,753 utils.py [django.db.backends:89] [DEBUG]- (0.189) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 19:28:22,177 utils.py [django.db.backends:89] [DEBUG]- (0.187) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 19:28:22,367 utils.py [django.db.backends:89] [DEBUG]- (0.188) SHOW FULL TABLES; args=None
+2018-07-05 19:28:22,561 utils.py [django.db.backends:89] [DEBUG]- (0.192) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-07-05 20:52:11,479 utils.py [django.db.backends:89] [DEBUG]- (0.190) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 20:52:11,671 utils.py [django.db.backends:89] [DEBUG]- (0.193) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t`; args=()
+2018-07-05 20:52:11,671 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 56, in refleshPurge
+    'secretkey': str(cdn.secretkey),
+NameError: global name 'cdn_d' is not defined
+2018-07-05 20:53:35,710 utils.py [django.db.backends:89] [DEBUG]- (0.218) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 20:53:37,128 utils.py [django.db.backends:89] [DEBUG]- (0.189) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 20:53:37,318 utils.py [django.db.backends:89] [DEBUG]- (0.188) SHOW FULL TABLES; args=None
+2018-07-05 20:53:37,515 utils.py [django.db.backends:89] [DEBUG]- (0.192) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-07-05 20:53:41,035 utils.py [django.db.backends:89] [DEBUG]- (0.190) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 20:53:41,224 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t`; args=()
+2018-07-05 20:53:41,414 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `monitor_cdn_proj_t`.`id`, `monitor_cdn_proj_t`.`project` FROM `monitor_cdn_proj_t` WHERE `monitor_cdn_proj_t`.`project` IN (0); args=(0,)
+2018-07-05 20:53:41,414 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 62, in refleshPurge
+    for domain in cdn_proj.objects.values(domain):
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 252, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % type.__name__)
+AttributeError: Manager isn't accessible via cdn_proj_t instances
+2018-07-05 20:54:22,841 utils.py [django.db.backends:89] [DEBUG]- (0.189) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 20:54:24,288 utils.py [django.db.backends:89] [DEBUG]- (0.192) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 20:54:24,480 utils.py [django.db.backends:89] [DEBUG]- (0.193) SHOW FULL TABLES; args=None
+2018-07-05 20:54:24,683 utils.py [django.db.backends:89] [DEBUG]- (0.198) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-07-05 20:54:41,522 utils.py [django.db.backends:89] [DEBUG]- (0.192) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 20:54:41,714 utils.py [django.db.backends:89] [DEBUG]- (0.193) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t`; args=()
+2018-07-05 20:54:41,907 utils.py [django.db.backends:89] [DEBUG]- (0.192) SELECT `monitor_cdn_proj_t`.`id`, `monitor_cdn_proj_t`.`project` FROM `monitor_cdn_proj_t` WHERE `monitor_cdn_proj_t`.`project` IN (0); args=(0,)
+2018-07-05 20:54:41,907 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 62, in refleshPurge
+    for domain in cdn_proj.objects.values(domain).all():
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 252, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % type.__name__)
+AttributeError: Manager isn't accessible via cdn_proj_t instances
+2018-07-05 20:55:31,121 utils.py [django.db.backends:89] [DEBUG]- (0.189) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 20:55:32,533 utils.py [django.db.backends:89] [DEBUG]- (0.188) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 20:55:32,724 utils.py [django.db.backends:89] [DEBUG]- (0.191) SHOW FULL TABLES; args=None
+2018-07-05 20:55:32,917 utils.py [django.db.backends:89] [DEBUG]- (0.191) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-07-05 20:55:46,186 utils.py [django.db.backends:89] [DEBUG]- (0.192) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 20:55:46,380 utils.py [django.db.backends:89] [DEBUG]- (0.193) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t`; args=()
+2018-07-05 20:55:46,575 utils.py [django.db.backends:89] [DEBUG]- (0.192) SELECT `monitor_cdn_proj_t`.`id`, `monitor_cdn_proj_t`.`project` FROM `monitor_cdn_proj_t` WHERE `monitor_cdn_proj_t`.`project` IN (0); args=(0,)
+2018-07-05 20:55:46,770 utils.py [django.db.backends:89] [DEBUG]- (0.192) SELECT `detect_domains`.`id`, `detect_domains`.`name`, `detect_domains`.`product`, `detect_domains`.`group_id`, `detect_domains`.`content`, `detect_domains`.`status` FROM `detect_domains` INNER JOIN `monitor_cdn_proj_t_domain` ON ( `detect_domains`.`id` = `monitor_cdn_proj_t_domain`.`domains_id` ) WHERE `monitor_cdn_proj_t_domain`.`cdn_proj_t_id` = 1; args=(1,)
+2018-07-05 20:55:46,964 utils.py [django.db.backends:89] [DEBUG]- (0.192) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t` INNER JOIN `detect_domains_cdn` ON ( `accounts_cdn_t`.`id` = `detect_domains_cdn`.`cdn_t_id` ) WHERE `detect_domains_cdn`.`domains_id` = 1277; args=(1277,)
+2018-07-05 20:55:47,158 utils.py [django.db.backends:89] [DEBUG]- (0.192) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t` INNER JOIN `detect_domains_cdn` ON ( `accounts_cdn_t`.`id` = `detect_domains_cdn`.`cdn_t_id` ) WHERE `detect_domains_cdn`.`domains_id` = 1279; args=(1279,)
+2018-07-05 20:55:47,160 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 66, in refleshPurge
+    info['cdn'] = cdn
+NameError: global name 'info' is not defined
+2018-07-05 20:55:47,371 utils.py [django.db.backends:89] [DEBUG]- (0.194) SELECT `detect_groups`.`id`, `detect_groups`.`group`, `detect_groups`.`client`, `detect_groups`.`method`, `detect_groups`.`ssl`, `detect_groups`.`retry` FROM `detect_groups` WHERE `detect_groups`.`id` = 1; args=(1,)
+2018-07-05 20:56:32,822 utils.py [django.db.backends:89] [DEBUG]- (0.193) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 20:56:34,236 utils.py [django.db.backends:89] [DEBUG]- (0.194) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 20:56:34,463 utils.py [django.db.backends:89] [DEBUG]- (0.227) SHOW FULL TABLES; args=None
+2018-07-05 20:56:34,683 utils.py [django.db.backends:89] [DEBUG]- (0.217) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-07-05 20:56:38,779 utils.py [django.db.backends:89] [DEBUG]- (0.247) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 20:56:39,016 utils.py [django.db.backends:89] [DEBUG]- (0.237) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t`; args=()
+2018-07-05 20:56:39,209 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `monitor_cdn_proj_t`.`id`, `monitor_cdn_proj_t`.`project` FROM `monitor_cdn_proj_t` WHERE `monitor_cdn_proj_t`.`project` IN (0); args=(0,)
+2018-07-05 20:56:39,401 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `detect_domains`.`id`, `detect_domains`.`name`, `detect_domains`.`product`, `detect_domains`.`group_id`, `detect_domains`.`content`, `detect_domains`.`status` FROM `detect_domains` INNER JOIN `monitor_cdn_proj_t_domain` ON ( `detect_domains`.`id` = `monitor_cdn_proj_t_domain`.`domains_id` ) WHERE `monitor_cdn_proj_t_domain`.`cdn_proj_t_id` = 1; args=(1,)
+2018-07-05 20:56:39,595 utils.py [django.db.backends:89] [DEBUG]- (0.193) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t` INNER JOIN `detect_domains_cdn` ON ( `accounts_cdn_t`.`id` = `detect_domains_cdn`.`cdn_t_id` ) WHERE `detect_domains_cdn`.`domains_id` = 1277; args=(1277,)
+2018-07-05 20:56:39,786 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t` INNER JOIN `detect_domains_cdn` ON ( `accounts_cdn_t`.`id` = `detect_domains_cdn`.`cdn_t_id` ) WHERE `detect_domains_cdn`.`domains_id` = 1279; args=(1279,)
+2018-07-05 20:56:39,789 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnDir&Nonce=66856&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795399&dirs.0=https://app.hhy988.com/&dirs.1=https://app.fanyingsh.com/
+2018-07-05 20:56:39,789 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:56:42,023 tencent_api.py [django:105] [INFO]- {'Nonce': 66856, 'Timestamp': 1530795399, 'dirs.0': u'https://app.hhy988.com/', 'dirs.1': u'https://app.fanyingsh.com/', 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': '8jkWxnSf2JwfshVUIR8ZRPNG+bY=', 'Action': 'RefreshCdnDir'}: 缓存清理成功！
+2018-07-05 20:56:42,023 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=322592&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795402&urls.0=https://app.hhy988.comm&urls.1=https://app.fanyingsh.comm
+2018-07-05 20:56:42,023 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:56:43,950 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:56:45,313 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:56:45,315 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=413707&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795405&urls.0=https://app.hhy988.como&urls.1=https://app.fanyingsh.como
+2018-07-05 20:56:45,315 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:56:47,223 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:56:48,516 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:56:48,516 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=209287&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795408&urls.0=https://app.hhy988.comb&urls.1=https://app.fanyingsh.comb
+2018-07-05 20:56:48,516 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:56:50,404 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:56:51,805 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:56:51,806 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=619650&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795411&urls.0=https://app.hhy988.comi&urls.1=https://app.fanyingsh.comi
+2018-07-05 20:56:51,806 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:56:53,697 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:56:55,105 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:56:55,105 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=900623&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795415&urls.0=https://app.hhy988.coml&urls.1=https://app.fanyingsh.coml
+2018-07-05 20:56:55,105 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:56:56,953 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:56:58,262 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:56:58,262 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=260864&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795418&urls.0=https://app.hhy988.come&urls.1=https://app.fanyingsh.come
+2018-07-05 20:56:58,262 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:00,132 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:01,540 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:01,540 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnDir&Nonce=898223&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795421&dirs.0=https://app.hhy988.com/&dirs.1=https://app.fanyingsh.com/
+2018-07-05 20:57:01,542 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:03,440 tencent_api.py [django:105] [INFO]- {'Nonce': 898223, 'Timestamp': 1530795421, 'dirs.0': u'https://app.hhy988.com/', 'dirs.1': u'https://app.fanyingsh.com/', 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'UiyIhxznRMpqKTyYeG9+qySbCJM=', 'Action': 'RefreshCdnDir'}: 缓存清理成功！
+2018-07-05 20:57:03,440 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=577125&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795423&urls.0=https://app.hhy988.comy&urls.1=https://app.fanyingsh.comy
+2018-07-05 20:57:03,440 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:05,318 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:06,970 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:06,970 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=686738&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795426&urls.0=https://app.hhy988.comi&urls.1=https://app.fanyingsh.comi
+2018-07-05 20:57:06,970 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:08,844 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:10,131 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:10,131 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=107322&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795430&urls.0=https://app.hhy988.comt&urls.1=https://app.fanyingsh.comt
+2018-07-05 20:57:10,131 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:12,042 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:13,444 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:13,444 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=860699&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795433&urls.0=https://app.hhy988.come&urls.1=https://app.fanyingsh.come
+2018-07-05 20:57:13,444 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:15,312 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:16,612 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:16,614 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=522638&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795436&urls.0=https://app.hhy988.comn&urls.1=https://app.fanyingsh.comn
+2018-07-05 20:57:16,614 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:18,515 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:19,811 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:19,811 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=149706&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795439&urls.0=https://app.hhy988.comg&urls.1=https://app.fanyingsh.comg
+2018-07-05 20:57:19,811 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:21,717 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:23,158 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:23,158 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=251321&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795443&urls.0=https://app.hhy988.com.&urls.1=https://app.fanyingsh.com.
+2018-07-05 20:57:23,158 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:25,052 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:26,480 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:26,480 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=244145&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795446&urls.0=https://app.hhy988.coma&urls.1=https://app.fanyingsh.coma
+2018-07-05 20:57:26,480 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:28,420 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:29,739 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:29,740 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=516409&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795449&urls.0=https://app.hhy988.comp&urls.1=https://app.fanyingsh.comp
+2018-07-05 20:57:29,740 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:31,608 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:32,914 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:32,914 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=116805&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795452&urls.0=https://app.hhy988.comk&urls.1=https://app.fanyingsh.comk
+2018-07-05 20:57:32,914 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:57:34,801 tencent_api.py [django:100] [ERROR]- Attention: 腾讯云域名缓存清理失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+(9110)域名不存在，请确认后重试 cdn no such host
+2018-07-05 20:57:36,184 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:57:36,947 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 84, in refleshPurge
+    result, status = req.purge(domains_c, uri)
+  File "J:\arno\test\phx_web\saltstack\ws_api.py", line 114, in purge
+    logger.error(message['text'])
+NameError: global name 'logger' is not defined
+2018-07-05 20:58:13,966 utils.py [django.db.backends:89] [DEBUG]- (0.189) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 20:58:14,154 utils.py [django.db.backends:89] [DEBUG]- (0.188) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t`; args=()
+2018-07-05 20:58:14,342 utils.py [django.db.backends:89] [DEBUG]- (0.187) SELECT `monitor_cdn_proj_t`.`id`, `monitor_cdn_proj_t`.`project` FROM `monitor_cdn_proj_t` WHERE `monitor_cdn_proj_t`.`project` IN (0); args=(0,)
+2018-07-05 20:58:14,530 utils.py [django.db.backends:89] [DEBUG]- (0.188) SELECT `detect_domains`.`id`, `detect_domains`.`name`, `detect_domains`.`product`, `detect_domains`.`group_id`, `detect_domains`.`content`, `detect_domains`.`status` FROM `detect_domains` INNER JOIN `monitor_cdn_proj_t_domain` ON ( `detect_domains`.`id` = `monitor_cdn_proj_t_domain`.`domains_id` ) WHERE `monitor_cdn_proj_t_domain`.`cdn_proj_t_id` = 1; args=(1,)
+2018-07-05 20:58:14,719 utils.py [django.db.backends:89] [DEBUG]- (0.187) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t` INNER JOIN `detect_domains_cdn` ON ( `accounts_cdn_t`.`id` = `detect_domains_cdn`.`cdn_t_id` ) WHERE `detect_domains_cdn`.`domains_id` = 1277; args=(1277,)
+2018-07-05 20:58:14,908 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t` INNER JOIN `detect_domains_cdn` ON ( `accounts_cdn_t`.`id` = `detect_domains_cdn`.`cdn_t_id` ) WHERE `detect_domains_cdn`.`domains_id` = 1279; args=(1279,)
+2018-07-05 20:58:14,908 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=291035&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795494&urls.0=https://app.hhy988.com/mobile/yiteng.apk&urls.1=https://app.fanyingsh.com/mobile/yiteng.apk
+2018-07-05 20:58:14,908 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:58:16,884 tencent_api.py [django:105] [INFO]- {'Nonce': 291035, 'Timestamp': 1530795494, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': '+VojtMQe6Z/u2ReG/j8mC8oKL+E=', 'Action': 'RefreshCdnUrl', 'urls.0': u'https://app.hhy988.com/mobile/yiteng.apk', 'urls.1': u'https://app.fanyingsh.com/mobile/yiteng.apk'}: 缓存清理成功！
+2018-07-05 20:58:18,563 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-05 20:58:55,351 utils.py [django.db.backends:89] [DEBUG]- (0.189) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 20:58:55,540 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t`; args=()
+2018-07-05 20:58:55,733 utils.py [django.db.backends:89] [DEBUG]- (0.192) SELECT `monitor_cdn_proj_t`.`id`, `monitor_cdn_proj_t`.`project` FROM `monitor_cdn_proj_t` WHERE `monitor_cdn_proj_t`.`project` IN (0); args=(0,)
+2018-07-05 20:58:55,924 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `detect_domains`.`id`, `detect_domains`.`name`, `detect_domains`.`product`, `detect_domains`.`group_id`, `detect_domains`.`content`, `detect_domains`.`status` FROM `detect_domains` INNER JOIN `monitor_cdn_proj_t_domain` ON ( `detect_domains`.`id` = `monitor_cdn_proj_t_domain`.`domains_id` ) WHERE `monitor_cdn_proj_t_domain`.`cdn_proj_t_id` = 1; args=(1,)
+2018-07-05 20:58:56,115 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t` INNER JOIN `detect_domains_cdn` ON ( `accounts_cdn_t`.`id` = `detect_domains_cdn`.`cdn_t_id` ) WHERE `detect_domains_cdn`.`domains_id` = 1277; args=(1277,)
+2018-07-05 20:58:56,306 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t` INNER JOIN `detect_domains_cdn` ON ( `accounts_cdn_t`.`id` = `detect_domains_cdn`.`cdn_t_id` ) WHERE `detect_domains_cdn`.`domains_id` = 1279; args=(1279,)
+2018-07-05 20:58:56,306 tencent_api.py [django:71] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=575489&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1530795536&urls.0=https://app.hhy988.com/mobile/yiteng.apk&urls.1=https://app.fanyingsh.com/mobile/yiteng.apk
+2018-07-05 20:58:56,306 tencent_api.py [django:72] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-05 20:58:58,230 tencent_api.py [django:105] [INFO]- {'Nonce': 575489, 'Timestamp': 1530795536, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'EGhSIKKEna4BdbSX5XoHjjNpWMk=', 'Action': 'RefreshCdnUrl', 'urls.0': u'https://app.hhy988.com/mobile/yiteng.apk', 'urls.1': u'https://app.fanyingsh.com/mobile/yiteng.apk'}: 缓存清理成功！
+2018-07-05 20:58:58,608 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 84, in refleshPurge
+    result, status = req.purge(domains_c, uri)
+  File "J:\arno\test\phx_web\saltstack\ws_api.py", line 114, in purge
+    logger.error(message['text'])
+NameError: global name 'logger' is not defined
+2018-07-05 21:00:01,790 utils.py [django.db.backends:89] [DEBUG]- (0.204) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 21:00:03,213 utils.py [django.db.backends:89] [DEBUG]- (0.189) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-05 21:00:03,404 utils.py [django.db.backends:89] [DEBUG]- (0.191) SHOW FULL TABLES; args=None
+2018-07-05 21:00:03,598 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
