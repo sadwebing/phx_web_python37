@@ -15,7 +15,7 @@ import json, logging, time, urlparse
 logger = logging.getLogger('django')
 
 #telegram 参数
-message = settings.message_TEST
+message = settings.message_ONLINE
 
 @csrf_exempt
 def refleshGetProject(request):
@@ -47,7 +47,7 @@ def refleshPurge(request):
     if request.method == 'POST':
         clientip = getIp(request)
         cdn_d = {}
-        info  = {}
+        info  = {'failed': [], 'sccess': []}
         data  = json.loads(request.body)
         cdns  = cdn_t.objects.all()
         for cdn in cdns:
@@ -56,6 +56,8 @@ def refleshPurge(request):
                 'domain': [],
                 'secretid': str(cdn.secretid),
                 'secretkey': str(cdn.secretkey),
+                'failed': [],
+                'sccess': [],
             }
         
         cdn_proj_l = cdn_proj_t.objects.filter(project__in = data['cdn_proj']).all()
@@ -72,8 +74,7 @@ def refleshPurge(request):
                 elif cdn_d[cdn]['name'] == "wangsu":
                     req = wsApi(cdn_d[cdn]['secretid'], cdn_d[cdn]['secretkey'])
                 else:
-                    info['result'] = ["CDN 接口不存在！"]
-                    message["text"] += "%s: CDN 接口不存在！\r\n" %cdn
+                    cdn_d[cdn]['failed'].append("%s: 接口不存在！" %cdn)
                     continue
 
                 while len(cdn_d[cdn]['domain']) != 0 :
@@ -83,17 +84,34 @@ def refleshPurge(request):
                     for uri in data['uri']:
                         result, status = req.purge(domains_c, uri)
                         if status:
-                            info['result'] = [ domain+uri+": 清缓存成功！" for domain in domains_c ]
-                            message["text"] += cdn + ": \r\n" + "\r\n".join(info['result']) 
+                            cdn_d[cdn]['sccess'] += [ domain+uri for domain in domains_c ]
                         else:
-                            info['result'] = [ domain+uri+": 清缓存失败！" for domain in domains_c ]
-                            message["text"] += cdn + ": \r\n" + "\r\n".join(info['result']) 
-        if message["text"]: sendTelegram(message).send()
+                            cdn_d[cdn]['failed'] += [ domain+uri for domain in domains_c ]
+        for cdn in cdn_d:
+            if cdn_d[cdn]['failed']:
+                message["text"] = cdn_d[cdn]['failed']
+                message['caption'] = cdn + ': 域名缓存清理失败!'
+                sendTelegramRe(message)
+            if cdn_d[cdn]['sccess']:
+                message["text"] = cdn_d[cdn]['sccess']
+                message['caption'] = cdn + ': 域名缓存清理成功。'
+                sendTelegramRe(message)
+
         return HttpResponse('success!')
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
     else:
         return HttpResponse('nothing!')
+
+def sendTelegramRe(message):
+    if len(message["text"]) > 10:
+        message["text"] = '\n'.join(message["text"])
+        message["doc"] = True
+        message['doc_name'] = 'domain.txt'
+    else:
+        message["doc"] = False
+        message["text"] = '\r\n'.join(message["text"]) +'\r\n'+ message['caption']
+    sendTelegram(message).send()
 
 @accept_websocket
 @csrf_exempt
@@ -124,6 +142,8 @@ def refleshExecute(request):
                     'domain': [],
                     'secretid': str(cdn.secretid),
                     'secretkey': str(cdn.secretkey),
+                    'failed': [],
+                    'sccess': [],
                 }
 
             domain_l = domains.objects.filter(id__in=data['domain']).all()
@@ -142,7 +162,7 @@ def refleshExecute(request):
                         req = wsApi(cdn_d[cdn]['secretid'], cdn_d[cdn]['secretkey'])
                     else:
                         info['result'] = ["CDN 接口不存在！"]
-                        message["text"] += "%s: CDN 接口不存在！\r\n" %cdn
+                        cdn_d[cdn]['failed'].append("%s: 接口不存在！" %cdn)
                         request.websocket.send(json.dumps(info))
                         continue
 
@@ -153,15 +173,23 @@ def refleshExecute(request):
                         for uri in data['uri']:
                             result, status = req.purge(domains_c, uri)
                             if status:
-                                info['result'] = [ domain+uri+": 清缓存成功！" for domain in domains_c ]
-                                message["text"] += cdn + ": \r\n" + "\r\n".join(info['result']) 
+                                info['result'] = [ domain+uri+": 清缓存成功。" for domain in domains_c ]
+                                cdn_d[cdn]['sccess'] += [ domain+uri for domain in domains_c ]
                             else:
                                 info['result'] = [ domain+uri+": 清缓存失败！" for domain in domains_c ]
-                                message["text"] += cdn + ": \r\n" + "\r\n".join(info['result']) 
+                                cdn_d[cdn]['failed'] += [ domain+uri for domain in domains_c ]
                             request.websocket.send(json.dumps(info))
             info['step'] = 'final'
             request.websocket.send(json.dumps(info))
-            if message["text"]: sendTelegram(message).send()
+            for cdn in cdn_d:
+                if cdn_d[cdn]['failed']:
+                    message["text"] = cdn_d[cdn]['failed']
+                    message['caption'] = cdn + ': 域名缓存清理失败!'
+                    sendTelegramRe(message)
+                if cdn_d[cdn]['sccess']:
+                    message["text"] = cdn_d[cdn]['sccess']
+                    message['caption'] = cdn + ': 域名缓存清理成功。'
+                    sendTelegramRe(message)
             request.websocket.close()
             break
         ### close websocket ###

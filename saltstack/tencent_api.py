@@ -24,7 +24,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 #telegram 参数
-message = settings.message_TEST
+message = settings.message_ONLINE
 
 #获取当前时间，以特定的格式，如Wed, 09 May 2018 12:51:25 GMT
 def getDate():
