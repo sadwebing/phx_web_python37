@@ -18859,3 +18859,9 @@ TypeError: expected string or buffer
 2018-07-05 18:51:27,313 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
 2018-07-05 18:51:32,101 views.py [django:34] [INFO]- set([u'detect.change_domains', u'detect.change_groups', u'detect.add_domains', u'detect.delete_domains'])
 2018-07-05 18:51:32,101 views.py [django:43] [INFO]- 127.0.0.1 is requesting /home
+2018-07-05 18:54:36,055 views.py [django:79] [INFO]- 127.0.0.1 is requesting /monitor/domains
+2018-07-05 18:54:36,427 domains.py [django:64] [INFO]- [GET]127.0.0.1 is requesting. /monitor/domains/getGroups
+2018-07-05 18:54:41,275 domains.py [django:27] [INFO]- [POST]127.0.0.1 is requesting. /monitor/domains/Query
+2018-07-05 18:54:41,276 domains.py [django:42] [INFO]- 查询参数：{u'status': u'01', u'product': [u'0'], u'group': [u'1', u'2', u'3', u'4'], u'num': u'all', u'limit': 15, u'offset': 0}
+2018-07-05 18:54:46,668 domains.py [django:90] [INFO]- 127.0.0.1 is requesting. /monitor/domains/UpdateStatus data: {u'status': 1, u'id': 1288}
+2018-07-05 18:54:52,299 domains.py [django:90] [INFO]- 127.0.0.1 is requesting. /monitor/domains/UpdateStatus data: {u'status': 0, u'id': 1288}
