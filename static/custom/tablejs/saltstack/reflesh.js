@@ -31,9 +31,8 @@ var operate = {
     },
 
     GetProjects: function(value){
-        if (value == 'repost') {
-            operate.disableButtons(['btn_repost'], true);
-        }
+        operate.disableButtons(['btn_repost', 'btn_submit_cdn_proj', 'btn_submit_cdn'], true);
+
         var projectlist = []
         //var project = document.getElementById("project_active").value;
         //console.log(productlist);
@@ -45,7 +44,7 @@ var operate = {
             contentType: 'application/json',
             //data: JSON.stringify(postData),
             success: function (datas, status) {
-                operate.disableButtons(['btn_repost'], false);
+                operate.disableButtons(['btn_repost', 'btn_submit_cdn_proj', 'btn_submit_cdn'], false);
                 toastr.success('数据获取成功！');
                 //alert(datas);
                 var data = eval('('+datas+')');
@@ -89,7 +88,7 @@ var operate = {
                 $('.selectpicker').selectpicker('refresh');
             },
             error:function(msg){
-                operate.disableButtons(['btn_repost'], false);
+                operate.disableButtons(['btn_repost', 'btn_submit_cdn_proj', 'btn_submit_cdn'], false);
                 alert("获取项目失败！");
                 return false;
             }
