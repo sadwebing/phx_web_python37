@@ -34,7 +34,7 @@
                         <form class="form-group form-inline" role="form" id="cdnreform" name="cdnreform"> 
                             <select class="form-control selectpicker show-tick" id="cdns" onchange="operate.setCdnHtml()" name="cdns" title="请选择CDN" data-actions-box="true" data-width="20%">
                             </select>
-                            <select class="form-control selectpicker show-tick" data-actions-box="true" id="cdn_domains" name="cdn_domains" title="请选择域名" multiple data-width="79%"> 
+                            <select class="form-control selectpicker show-tick" data-live-search="true" data-actions-box="true" id="cdn_domains" name="cdn_domains" title="请选择域名" multiple data-width="79%"> 
                             </select>
                         </form>
                         <textarea class="form-control" id="textarea_cdn_domain_uri" name="textarea_domain_uri" style="height:150px; width: 100%; margin-bottom: 10px; resize: none;" placeholder="URI[/test/test.js]，每行一条"></textarea>
@@ -63,7 +63,7 @@
                         <form class="form-group form-inline" role="form" id="projectreform" name="projectreform"> 
                             <select class="form-control selectpicker show-tick" onchange="operate.setPorjectHtml()" id="cdn_projects" name="cdn_projects" title="请选择项目名" data-actions-box="true" data-width="20%">
                             </select>
-                            <select class="form-control selectpicker show-tick" data-actions-box="true" id="cdn_project_domains" name="cdn_project_domains" title="请选择域名" multiple data-width="79%"> 
+                            <select class="form-control selectpicker show-tick" data-live-search="true" data-actions-box="true" id="cdn_project_domains" name="cdn_project_domains" title="请选择域名" multiple data-width="79%"> 
                             </select>
                         </form>
                         <textarea class="form-control" id="textarea_domain_uri" name="textarea_domain_uri" style="height:150px; width: 100%; margin-bottom: 10px; resize: none;" placeholder="URI[/test/test.js]，每行一条"></textarea>
