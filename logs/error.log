@@ -14038,3 +14038,205 @@ speedfeng : 9nJCIUoon6yUKYBr5DeKRRZHvHwYpHvKPJzRFbeWJMg=
 2018-07-05 22:15:18,069 ws_api.py [django:116] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
 speedfeng : 6EDiGeughjA7wIJrkju1f3CH0VznIpgq0fY5uRFDg4k=
 {u'Message': u'running url or dir[https://app.hhy988.com/yiteng/b.img,https://app.fanyingsh.com/yiteng/b.img], please try again after one minute.\r\n', u'Code': 0}
+2018-07-07 23:28:58,382 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/get_domains
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 21, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\saltstack\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\saltstack\views.py", line 13, in <module>
+    from reflesh        import *
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 28
+    tcapi = tcApi.(secretid, secretkey)
+                  ^
+SyntaxError: invalid syntax
+2018-07-07 23:34:01,015 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/get_domains
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 31, in refleshGetDomains
+    return HttpResponse(json.dumps(results['data']['hosts'][2]))
+TypeError: tuple indices must be integers, not str
+2018-07-07 23:34:35,871 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/get_domains
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 31, in refleshGetDomains
+    return HttpResponse(json.dumps(results['data']['hosts']))
+TypeError: tuple indices must be integers, not str
+2018-07-07 23:35:04,782 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/get_domains
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 31, in refleshGetDomains
+    return HttpResponse(json.dumps(results['data']))
+TypeError: tuple indices must be integers, not str
+2018-07-07 23:53:40,667 tencent_api.py [django:106] [ERROR]- Attention: 腾讯云域名获取失败，请检查:腾讯云URL:  + cdn.api.qcloud.com/v2/index.php
+身份认证失败，用户身份验证失败
+2018-07-07 23:54:28,698 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/get_domains
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 31, in refleshGetDomains
+    results, status= tcapi.getdomains()
+  File "J:\arno\test\phx_web\saltstack\ws_api.py", line 69, in getdomains
+    message['text'] = self.__warning + '\n' + str(ret.json())
+  File "J:\arno\test\lib\site-packages\requests\models.py", line 884, in json
+    self.content.decode(encoding), **kwargs
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\python27\Lib\json\decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2018-07-07 23:55:35,721 ws_api.py [django:70] [ERROR]- Attention: 网宿域名获取失败，请检查:网宿URL:  + https://open.chinanetcenter.com/api/domain
+speedfeng@123 : U87nYrewNOYFzlQkx8C0SnXlwAAHbGclMx1I67MeKYQ=
+<?xml version="1.0" encoding="UTF-8"?>
+<response><code>WPLUS_InvalidHTTPAuthHeader</code>
+<message>The HTTP authorization header is bad</message></response>
+2018-07-07 23:55:38,420 telegram.py [django:108] [ERROR]- Attention: send message failed!
+2018-07-07 23:55:38,420 telegram.py [django:109] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: can't parse entities: Unsupported start tag \"?xml\" at byte offset 167"}
+2018-07-07 23:55:38,420 telegram.py [django:110] [ERROR]- {'disable_web_page_preview': True, 'text': 'Attention: \xe7\xbd\x91\xe5\xae\xbf\xe5\x9f\x9f\xe5\x90\x8d\xe8\x8e\xb7\xe5\x8f\x96\xe5\xa4\xb1\xe8\xb4\xa5\xef\xbc\x8c\xe8\xaf\xb7\xe6\xa3\x80\xe6\x9f\xa5:\xe7\xbd\x91\xe5\xae\xbfURL:  + https://open.chinanetcenter.com/api/domain\r\nspeedfeng@123 : U87nYrewNOYFzlQkx8C0SnXlwAAHbGclMx1I67MeKYQ=\n<?xml version="1.0" encoding="UTF-8"?>\n<response><code>WPLUS_InvalidHTTPAuthHeader</code>\n<message>The HTTP authorization header is bad</message></response>', 'doc_name': 'message.txt_20180707235535', 'caption': '', 'chat_id': '-186348806', 'parse_mode': 'HTML'}
+2018-07-07 23:55:38,420 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/get_domains
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 31, in refleshGetDomains
+    results, status= tcapi.getdomains()
+  File "J:\arno\test\phx_web\saltstack\ws_api.py", line 72, in getdomains
+    return ret.json(), False
+  File "J:\arno\test\lib\site-packages\requests\models.py", line 884, in json
+    self.content.decode(encoding), **kwargs
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\python27\Lib\json\decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2018-07-07 23:56:43,638 ws_api.py [django:70] [ERROR]- Attention: 网宿域名获取失败，请检查:网宿URL:  + https://open.chinanetcenter.com/api/domain
+speedfeng@123 : uV1ygMJ3AiUujIUyLP0GBKxSs8w+r2ixPOdirtCFRVw=
+<?xml version="1.0" encoding="UTF-8"?>
+<response><code>WPLUS_InvalidHTTPAuthHeader</code>
+<message>The HTTP authorization header is bad</message></response>
+2018-07-07 23:56:46,963 telegram.py [django:108] [ERROR]- Attention: send message failed!
+2018-07-07 23:56:46,963 telegram.py [django:109] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: can't parse entities: Unsupported start tag \"?xml\" at byte offset 167"}
+2018-07-07 23:56:46,964 telegram.py [django:110] [ERROR]- {'disable_web_page_preview': True, 'text': 'Attention: \xe7\xbd\x91\xe5\xae\xbf\xe5\x9f\x9f\xe5\x90\x8d\xe8\x8e\xb7\xe5\x8f\x96\xe5\xa4\xb1\xe8\xb4\xa5\xef\xbc\x8c\xe8\xaf\xb7\xe6\xa3\x80\xe6\x9f\xa5:\xe7\xbd\x91\xe5\xae\xbfURL:  + https://open.chinanetcenter.com/api/domain\r\nspeedfeng@123 : uV1ygMJ3AiUujIUyLP0GBKxSs8w+r2ixPOdirtCFRVw=\n<?xml version="1.0" encoding="UTF-8"?>\n<response><code>WPLUS_InvalidHTTPAuthHeader</code>\n<message>The HTTP authorization header is bad</message></response>', 'doc_name': 'message.txt_20180707235643', 'caption': '', 'chat_id': '-186348806', 'parse_mode': 'HTML'}
+2018-07-08 00:04:59,257 ws_api.py [django:70] [ERROR]- Attention: 网宿域名获取失败，请检查:网宿URL:  + https://open.chinanetcenter.com/api/domain
+speedfeng@123 : WVYjHzkAgBpebQtF4jujduDQOZpk0c0M+YFWiVtMR1A=
+<?xml version="1.0" encoding="UTF-8"?>
+<response><code>WPLUS_InvalidHTTPAuthHeader</code>
+<message>The HTTP authorization header is bad</message></response>
+2018-07-08 00:05:02,063 telegram.py [django:108] [ERROR]- Attention: send message failed!
+2018-07-08 00:05:02,063 telegram.py [django:109] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: can't parse entities: Unsupported start tag \"?xml\" at byte offset 167"}
+2018-07-08 00:05:02,065 telegram.py [django:110] [ERROR]- {'disable_web_page_preview': True, 'text': 'Attention: \xe7\xbd\x91\xe5\xae\xbf\xe5\x9f\x9f\xe5\x90\x8d\xe8\x8e\xb7\xe5\x8f\x96\xe5\xa4\xb1\xe8\xb4\xa5\xef\xbc\x8c\xe8\xaf\xb7\xe6\xa3\x80\xe6\x9f\xa5:\xe7\xbd\x91\xe5\xae\xbfURL:  + https://open.chinanetcenter.com/api/domain\r\nspeedfeng@123 : WVYjHzkAgBpebQtF4jujduDQOZpk0c0M+YFWiVtMR1A=\n<?xml version="1.0" encoding="UTF-8"?>\n<response><code>WPLUS_InvalidHTTPAuthHeader</code>\n<message>The HTTP authorization header is bad</message></response>', 'doc_name': 'message.txt_20180708000459', 'caption': '', 'chat_id': '-186348806', 'parse_mode': 'HTML'}
+2018-07-08 00:11:01,395 ws_api.py [django:70] [ERROR]- Attention: 网宿域名获取失败，请检查:网宿URL:  + https://open.chinanetcenter.com/api/domain
+speedfeng@123 : ePhAY8acVqwYHFuB31g6JhrEOGnvM3+OnjynIsd02Tg=
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;response&gt;&lt;code&gt;WPLUS_InvalidHTTPAuthHeader&lt;/code&gt;
+&lt;message&gt;The HTTP authorization header is bad&lt;/message&gt;&lt;/response&gt;
+2018-07-08 00:11:04,332 telegram.py [django:108] [ERROR]- Attention: send message failed!
+2018-07-08 00:11:04,332 telegram.py [django:109] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: can't parse entities: Unsupported start tag \"?xml\" at byte offset 167"}
+2018-07-08 00:11:04,332 telegram.py [django:110] [ERROR]- {'disable_web_page_preview': True, 'text': 'Attention: \xe7\xbd\x91\xe5\xae\xbf\xe5\x9f\x9f\xe5\x90\x8d\xe8\x8e\xb7\xe5\x8f\x96\xe5\xa4\xb1\xe8\xb4\xa5\xef\xbc\x8c\xe8\xaf\xb7\xe6\xa3\x80\xe6\x9f\xa5:\xe7\xbd\x91\xe5\xae\xbfURL:  + https://open.chinanetcenter.com/api/domain\r\nspeedfeng@123 : ePhAY8acVqwYHFuB31g6JhrEOGnvM3+OnjynIsd02Tg=\n<?xml version="1.0" encoding="UTF-8"?>\n<response><code>WPLUS_InvalidHTTPAuthHeader</code>\n<message>The HTTP authorization header is bad</message></response>', 'doc_name': 'message.txt_20180708001101', 'caption': '', 'chat_id': '-204952096', 'parse_mode': 'HTML'}
+2018-07-08 00:13:24,819 ws_api.py [django:70] [ERROR]- Attention: 网宿域名获取失败，请检查:网宿URL:  + https://open.chinanetcenter.com/api/domain
+speedfeng@123 : rEYBTkfaPCDIXp7lXPxwOYW2I7uDiVEQ/+195r2WT/Y=
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;response&gt;&lt;code&gt;WPLUS_InvalidHTTPAuthHeader&lt;/code&gt;
+&lt;message&gt;The HTTP authorization header is bad&lt;/message&gt;&lt;/response&gt;
+2018-07-08 00:19:50,400 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/get_domains
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 31, in refleshGetDomains
+    results, status= tcapi.getdomains()
+ValueError: too many values to unpack
+2018-07-08 00:30:03,092 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/get_project
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 78, in refleshGetProject
+    tmpdict['domain'].append({
+KeyError: 'domain'
+2018-07-08 00:31:02,918 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/get_project
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 81, in refleshGetProject
+    'ssl' : 1 if line['web-https']=='enabled' else 0,
+KeyError: 'web-https'
+2018-07-08 17:34:17,059 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 200, in refleshExecute
+    domain_l = domains.objects.filter(id__in=data['domain']).all()
+TypeError: 'bool' object has no attribute '__getitem__'
+2018-07-08 17:36:57,188 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute_cdn
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 273, in refleshExecuteCdn
+    cdn   = cdn_t.objects.get(id=data['id'])
+TypeError: 'bool' object has no attribute '__getitem__'
+2018-07-08 17:39:06,479 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute_cdn
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 273, in refleshExecuteCdn
+    cdn   = cdn_t.objects.get(id=data['id'])
+TypeError: 'bool' object has no attribute '__getitem__'

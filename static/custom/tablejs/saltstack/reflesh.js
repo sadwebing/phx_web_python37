@@ -7,13 +7,14 @@ window.modal_results = document.getElementById("OperateRestartresults");
 window.modal_footer = document.getElementById("progressFooter");
 window.modal_head = document.getElementById("progress_head");
 window.project_list_html = {}
+window.cdn_list_html = {}
 
 //操作
 var operate = {
     //初始化按钮事件
     operateInit: function () {
         this.GetProjects();
-        //this.Getform();
+        this.DisplayPanel();
         //this.Submit();
         this.Results();
         this.selectpicker();
@@ -29,23 +30,29 @@ var operate = {
         }
     },
 
-    GetProjects: function(){
+    GetProjects: function(value){
+        if (value == 'repost') {
+            operate.disableButtons(['btn_repost'], true);
+        }
         var projectlist = []
         //var project = document.getElementById("project_active").value;
         //console.log(productlist);
         var postData = {};
-
+        toastr.info("正在获取数据，请耐心等待返回...");
         $.ajax({
             url: "/saltstack/reflesh/get_project",
             type: "post",
             contentType: 'application/json',
             //data: JSON.stringify(postData),
             success: function (datas, status) {
+                operate.disableButtons(['btn_repost'], false);
+                toastr.success('数据获取成功！');
                 //alert(datas);
-                var data = eval(datas);
+                var data = eval('('+datas+')');
+                //console.log(data);
                 var project_html = "";
-                $.each(data, function (index, item) {
-                    var cdn_html    = "";
+                var cdn_html     = "";
+                $.each(data.cdn_proj, function (index, item) {
                     var domain_html = "";
                     //循环获取数据 
                     //$.each(item.cdn, function (index, cdn) {
@@ -56,29 +63,85 @@ var operate = {
                     })
 
                     project_html = project_html + "<option value='"+item.project+"'>"+item.project+"</option>";
-                    project_list_html[item.project] = {'cdn_html': cdn_html, 'domain_html': domain_html};
+                    project_list_html[item.project] = {'domain_html': domain_html};
                 })
+                
+                $.each(data.cdn, function (index, item) {
+                    var domain_html = "";
+                    cdn_html = cdn_html + "<option value="+item.id+" data-subtext='"+item.name+"'>"+item.account+"</option>";
+                    
+                    $.each(item.domain, function (index, domain) {
+                        if (domain.ssl === 1){
+                            domain_html = domain_html + "<option value=https://"+domain.name+">https://"+domain.name+"</option>";
+                        }else {
+                            domain_html = domain_html + "<option value=http://"+domain.name+">http://"+domain.name+"</option>";
+                        }
+                        
+                    })
+                    
+                    cdn_list_html[item.id] = {'domain_html': domain_html};
+                })
+
                 document.getElementById('cdn_projects').innerHTML=project_html;
+                document.getElementById('cdns').innerHTML=cdn_html;
+                //console.log(cdn_list_html)
 
                 $('.selectpicker').selectpicker('refresh');
             },
             error:function(msg){
+                operate.disableButtons(['btn_repost'], false);
                 alert("获取项目失败！");
                 return false;
             }
         });
     },
 
+    DisplayPanel: function (){
+        $("#cdn_panel").bind('click',function () {
+            that = document.getElementById("cdn_form")
+            if (that.style.display == "none"){
+                that.style.display = "inline";
+                document.getElementById('cdn_panel').innerHTML = "-";
+                document.getElementById('cdn_panel').title = "隐藏";
+            }else {
+                that.style.display = "none";
+                document.getElementById('cdn_panel').innerHTML = "+";
+                document.getElementById('cdn_panel').title = "展开";
+            }
+        });
+
+        $("#cdn_proj_panel").bind('click',function () {
+            that = document.getElementById("cdn_proj_form")
+            if (that.style.display == "none"){
+                that.style.display = "inline";
+                document.getElementById('cdn_proj_panel').innerHTML = "-";
+                document.getElementById('cdn_proj_panel').title = "隐藏";
+            }else {
+                that.style.display = "none";
+                document.getElementById('cdn_proj_panel').innerHTML = "+";
+                document.getElementById('cdn_proj_panel').title = "展开";
+            }
+        });
+    },
+    
     setPorjectHtml: function(form, value){
         project = document.getElementById("cdn_projects").value;
         //console.log(project_list_html)
         //document.getElementById('cdns').innerHTML=project_list_html[project]['cdn_html'];
-        document.getElementById('cdn_domains').innerHTML=project_list_html[project]['domain_html'];
+        document.getElementById('cdn_project_domains').innerHTML=project_list_html[project]['domain_html'];
         //$('.selectpicker').selectpicker({title:"请选择服务器地址"});
         $('.selectpicker').selectpicker('refresh');
         return false;
     },
 
+    setCdnHtml: function(form, value){
+        cdn = document.getElementById("cdns").value;
+        document.getElementById('cdn_domains').innerHTML=cdn_list_html[cdn]['domain_html'];
+        //$('.selectpicker').selectpicker({title:"请选择服务器地址"});
+        $('.selectpicker').selectpicker('refresh');
+        return false;
+    },
+    
     Results: function(){
         $("#show_results").modal({
             keyboard: true
@@ -121,13 +184,50 @@ var operate = {
         return true;
     },
     
-    Submit: function(submit){
-
+    getcdnSubmitpostData: function(){
+        var postData = {
+            'id': document.getElementById("cdns").value,
+            'uri': document.getElementById("textarea_cdn_domain_uri").value,
+            'domain': operate.showSelectedValue(document.cdnreform.cdn_domains),
+        };
+        
+        if (! postData['id']){
+            alert("请选择 CDN！");
+            return false;
+        }
+        //if (postData['cdn'].length === 0){
+        //    alert("请选择CDN！");
+        //    return false;
+        //}
+        if (postData['domain'].length === 0){
+            alert("请选择域名！");
+            return false;
+        }
+        
+        var uri_l = postData['uri'].split('\n');
+        postData['uri'] = [];
+        for(var i = 0; i < uri_l.length; i++) { 
+            if(uri_l[i].replace(/ /g, '') === ''){
+                continue;
+            }
+            if (! operate.isUri(uri_l[i].replace(/(^\s*)|(\s*$)/g, ""))) {
+                alert(uri_l[i].replace(/(^\s*)|(\s*$)/g, "") + "格式不正确！");
+                return false;
+            }
+            postData['uri'].push(uri_l[i].replace(/(^\s*)|(\s*$)/g, ""));
+        }
+        if (postData['uri'].length === 0){
+            postData['uri'] = ['/'];
+        }
+        return postData;
+    },
+    
+    getcdnprojSubmitpostData: function(){
         var postData = {
             'project': document.getElementById("cdn_projects").value,
             'uri': document.getElementById("textarea_domain_uri").value,
             //'cdn': operate.showSelectedValue(document.projectreform.cdns),
-            'domain': operate.showSelectedValue(document.projectreform.cdn_domains),
+            'domain': operate.showSelectedValue(document.projectreform.cdn_project_domains),
         };
         
         if (! postData['project']){
@@ -158,6 +258,35 @@ var operate = {
         if (postData['uri'].length === 0){
             postData['uri'] = ['/'];
         }
+        return postData;
+    
+    },
+    
+    disableButtons: function (buttonList, fun) {
+        for (var i = 0; i < buttonList.length; i++){
+            if (fun){
+                document.getElementById(buttonList[i]).disabled = true;
+            }else {
+                document.getElementById(buttonList[i]).disabled = false;
+            }
+        }
+    },
+    
+    Submit: function(submit){
+
+        if (submit == 'cdn') {
+            var postData = operate.getcdnSubmitpostData();
+            var posturi  = "/saltstack/reflesh/execute_cdn";
+        }else if (submit == 'cdn_proj') {
+            var postData = operate.getcdnprojSubmitpostData();
+            var posturi  = "/saltstack/reflesh/execute";
+        }else {
+            alert('数据提交错误！');
+            return false;
+        }
+        if (! postData) {
+            return false;
+        }
         
         //alert("获取到的表单数据为:"+JSON.stringify(postData));
         modal_results.innerHTML = "";
@@ -165,7 +294,7 @@ var operate = {
         $("#progress_bar").css("width", "30%");
         modal_head.innerHTML = "操作进行中，请勿刷新页面......";
         $('#OperateRestartresults').append('<p>连接中......</p>' );
-        var socket = new WebSocket("ws://" + window.location.host + "/saltstack/reflesh/execute");
+        var socket = new WebSocket("ws://" + window.location.host + posturi);
 
         socket.onerror = function (){
             modal_head.innerHTML = "与服务器连接失败...";

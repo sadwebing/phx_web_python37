@@ -66,14 +66,14 @@ class wsApi(object):
     
         else:
             if ret.status_code != 200:
-                message['text'] = self.__warning + '\n' + str(ret.json())
+                message['text'] = self.__warning + '\n' + str(ret.content.replace('<', '&lt;').replace('>', '&gt;'))
                 logger.error(message['text'])
                 sendTelegram(message).send()
-                return ret.json(), False
+                return ret.content, False
     
             else:
                 logger.info("网宿域名获取成功！")
-                return [ line for line in ret.json() if line['enabled'] == 'true' and exclDomain(line['domain-name'])]
+                return ret.json(), True
 
     def purge(self, domains, uri='/'):
         date = getDate()

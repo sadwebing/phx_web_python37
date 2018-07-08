@@ -19,8 +19,10 @@ urlpatterns = [
 
     #缓存清理
     url('^reflesh$', views.reflesh),
+    url('^reflesh/get_domains$', views.refleshGetDomains),
     url('^reflesh/get_project$', views.refleshGetProject),
     url('^reflesh/execute$', views.refleshExecute),
+    url('^reflesh/execute_cdn$', views.refleshExecuteCdn),
     url('^reflesh/purge$', views.refleshPurge),
     
 ]

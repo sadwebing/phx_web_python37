@@ -18,14 +18,35 @@ logger = logging.getLogger('django')
 message = settings.message_ONLINE
 
 @csrf_exempt
+def refleshGetDomains(request):
+    if request.method == 'POST':
+        clientip = getIp(request)
+        logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
+
+        #secretkey='c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1'
+        #secretid='AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs'
+        secretkey='speedfeng@123'
+        secretid='speedfeng'
+        tcapi = wsApi(secretid, secretkey)
+        results, status= tcapi.getdomains()
+        
+        return HttpResponse(json.dumps(results))
+
+    elif request.method == 'GET':
+        return HttpResponse('You get nothing!')
+    else:
+        return HttpResponse('nothing!')
+
+@csrf_exempt
 def refleshGetProject(request):
     if request.method == 'POST':
         clientip = getIp(request)
         logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
 
-        projectlist = []
-        cdn_prots   = cdn_proj_t.objects.all()
-        for prot in cdn_prots:
+        data = {'cdn_proj': [], 'cdn': []}
+        cdn_projs   = cdn_proj_t.objects.all()
+        cdns        = cdn_t.objects.all()
+        for prot in cdn_projs:
             tmpdict = {}
             tmpdict['project'] = prot.get_project_display()
             tmpdict['domain']  = [ {'id': domain.id,
@@ -33,8 +54,38 @@ def refleshGetProject(request):
                                     'product': domain.get_product_display()} for domain in prot.domain.all() if domain.cdn.all() ]
             #tmpdict['cdn']     = [ {'name': cdn.get_name_display(),
             #                        'account': cdn.account} for cdn in cdn_t.objects.all() ]
-            projectlist.append(tmpdict)
-        return HttpResponse(json.dumps(projectlist))
+            data['cdn_proj'].append(tmpdict)
+        for cdn in cdns:
+            tmpdict = {
+                'id':      cdn.id,
+                'name':    cdn.get_name_display(),
+                'account': cdn.account,
+                'domain': [],
+            }
+            if cdn.get_name_display() == "tencent":
+                req = tcApi(cdn.secretid, cdn.secretkey)
+                results, status = req.getdomains()
+                for line in results['data']['hosts']:
+                    if line['disabled'] == 0 and line['status'] in [3, 4, 5]:
+                        tmpdict['domain'].append({
+                            'name': line['host'],
+                            'ssl' : 1 if line['ssl_type']!=0 else 0,
+                        })
+            elif cdn.get_name_display() == "wangsu":
+                req = wsApi(cdn.secretid, cdn.secretkey)
+                results, status = req.getdomains()
+                for line in results:
+                    if line['enabled'] == 'true':
+                        tmpdict['domain'].append({
+                            'name': line['domain-name'],
+                            'ssl' : 1 if line['service-type']=='web-https' else 0,
+                        })
+            else:
+                tmpdict['domain'] = []
+
+            data['cdn'].append(tmpdict)
+
+        return HttpResponse(json.dumps(data))
 
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
@@ -151,6 +202,84 @@ def refleshExecute(request):
             for domain in domain_l:
                 for cdn in domain.cdn.all():
                     cdn_d[cdn.get_name_display()+"_"+cdn.account]['domain'].append(urlparse.urlsplit(domain.name).scheme+"://"+urlparse.urlsplit(domain.name).netloc)
+            #logger.info(cdn_d)
+            for cdn in cdn_d:
+                info['cdn'] = cdn
+                if cdn_d[cdn]['domain']:
+                    #开始清缓存，判断CDN接口是否存在
+                    if cdn_d[cdn]['name'] == "tencent":
+                        req = tcApi(cdn_d[cdn]['secretid'], cdn_d[cdn]['secretkey'])
+                    elif cdn_d[cdn]['name'] == "wangsu":
+                        req = wsApi(cdn_d[cdn]['secretid'], cdn_d[cdn]['secretkey'])
+                    else:
+                        info['result'] = ["CDN 接口不存在！"]
+                        cdn_d[cdn]['failed'].append("%s: 接口不存在！" %cdn)
+                        request.websocket.send(json.dumps(info))
+                        continue
+
+                    while len(cdn_d[cdn]['domain']) != 0 :
+                        domains_c            = cdn_d[cdn]['domain'][:10]
+                        cdn_d[cdn]['domain'] = cdn_d[cdn]['domain'][10:]
+
+                        for uri in data['uri']:
+                            result, status = req.purge(domains_c, uri)
+                            if status:
+                                info['result'] = [ domain+uri+": 清缓存成功。" for domain in domains_c ]
+                                cdn_d[cdn]['sccess'] += [ domain+uri for domain in domains_c ]
+                            else:
+                                info['result'] = [ domain+uri+": 清缓存失败！" for domain in domains_c ]
+                                cdn_d[cdn]['failed'] += [ domain+uri for domain in domains_c ]
+                            request.websocket.send(json.dumps(info))
+            info['step'] = 'final'
+            request.websocket.send(json.dumps(info))
+            for cdn in cdn_d:
+                if cdn_d[cdn]['failed']:
+                    message["text"] = cdn_d[cdn]['failed']
+                    message['caption'] = cdn + ': 域名缓存清理失败!'
+                    sendTelegramRe(message)
+                if cdn_d[cdn]['sccess']:
+                    message["text"] = cdn_d[cdn]['sccess']
+                    message['caption'] = cdn + ': 域名缓存清理成功。'
+                    sendTelegramRe(message)
+            request.websocket.close()
+            break
+        ### close websocket ###
+        request.websocket.close()
+    else:
+        return HttpResponse('nothing!', status=500)
+    
+@accept_websocket
+@csrf_exempt
+def refleshExecuteCdn(request):
+    username = request.user.username
+    try:
+        role = request.user.userprofile.role
+    except:
+        role = 'none'
+    clientip = getIp(request)
+    
+    if request.is_websocket():
+        for postdata in request.websocket:
+            data = json.loads(postdata)
+            logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
+            ### step one ##
+            info = {}
+            info['step'] = 'one'
+            request.websocket.send(json.dumps(info))
+            #time.sleep(2)
+            ### two step ###
+            info['step'] = 'two'
+            cdn_d = {}
+            cdn   = cdn_t.objects.get(id=data['id'])
+            cdn_d[cdn.get_name_display()+"_"+cdn.account] = {
+                'name': cdn.get_name_display(),
+                'domain': data['domain'],
+                'secretid': str(cdn.secretid),
+                'secretkey': str(cdn.secretkey),
+                'failed': [],
+                'sccess': [],
+            }
+
             #logger.info(cdn_d)
             for cdn in cdn_d:
                 info['cdn'] = cdn
