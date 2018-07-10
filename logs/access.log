@@ -19795,3 +19795,235 @@ TypeError: 'bool' object has no attribute '__getitem__'
 2018-07-08 17:56:35,783 tencent_api.py [django:111] [INFO]- {'Action': 'DescribeCdnHosts', 'Nonce': 750504, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'pj8aoJwl8eTfTDHiu2DCSLW6IR4=', 'Timestamp': 1531043793}: 腾讯云域名获取成功！
 2018-07-08 17:56:51,401 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://m.alcp48.com', u'https://m.gdcp000.com', u'https://m.gdcp66.com'], u'id': u'1', u'uri': [u'/ad/fa/sdf']}
 2018-07-08 17:56:53,332 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-08 18:02:42,243 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-08 18:02:46,959 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-07-08 18:02:47,440 reflesh.py [django:44] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-07-08 18:02:53,744 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-08 18:02:53,746 tencent_api.py [django:73] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=DescribeCdnHosts&Nonce=892582&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1531044173
+2018-07-08 18:02:53,746 tencent_api.py [django:74] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-08 18:02:55,812 tencent_api.py [django:111] [INFO]- {'Action': 'DescribeCdnHosts', 'Nonce': 892582, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'YrBNN+rhVztvSyGBSHumpTg+uXA=', 'Timestamp': 1531044173}: 腾讯云域名获取成功！
+2018-07-08 18:49:36,710 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-08 18:49:40,845 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-07-08 18:49:40,917 reflesh.py [django:44] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-07-08 18:49:46,385 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-08 18:49:46,387 tencent_api.py [django:73] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=DescribeCdnHosts&Nonce=206049&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1531046986
+2018-07-08 18:49:46,387 tencent_api.py [django:74] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-08 18:49:48,497 tencent_api.py [django:111] [INFO]- {'Action': 'DescribeCdnHosts', 'Nonce': 206049, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': '8uUklbNU1oJsB53N5ZSZnFMayM4=', 'Timestamp': 1531046986}: 腾讯云域名获取成功！
+2018-07-08 18:50:15,769 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-08 18:50:19,500 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-07-08 18:50:19,546 reflesh.py [django:44] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-07-08 18:50:24,852 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-08 18:50:24,854 tencent_api.py [django:73] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=DescribeCdnHosts&Nonce=32108&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1531047024
+2018-07-08 18:50:24,855 tencent_api.py [django:74] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-08 18:50:26,941 tencent_api.py [django:111] [INFO]- {'Action': 'DescribeCdnHosts', 'Nonce': 32108, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'qgJx/IBFIIsrZV+1j0zeCOuczx4=', 'Timestamp': 1531047024}: 腾讯云域名获取成功！
+2018-07-08 18:50:28,914 reflesh.py [django:44] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-07-08 18:50:33,769 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-08 18:50:33,770 tencent_api.py [django:73] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=DescribeCdnHosts&Nonce=988089&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1531047033
+2018-07-08 18:50:33,770 tencent_api.py [django:74] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-08 18:50:35,783 tencent_api.py [django:111] [INFO]- {'Action': 'DescribeCdnHosts', 'Nonce': 988089, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'S7ASueBPaYqDmHLZYGztQrHDM70=', 'Timestamp': 1531047033}: 腾讯云域名获取成功！
+2018-07-10 19:59:24,437 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-10 19:59:28,219 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-07-10 19:59:28,273 reflesh.py [django:44] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-07-10 19:59:35,834 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-10 19:59:35,835 tencent_api.py [django:73] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=DescribeCdnHosts&Nonce=114128&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1531223975
+2018-07-10 19:59:35,835 tencent_api.py [django:74] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-10 19:59:37,867 tencent_api.py [django:111] [INFO]- {'Action': 'DescribeCdnHosts', 'Nonce': 114128, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'ffCMuSP8qyx1FUZu0nHaJtnd9eE=', 'Timestamp': 1531223975}: 腾讯云域名获取成功！
+2018-07-10 19:59:39,790 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-10 19:59:47,668 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://apiios.tongwangfa.com'], u'id': u'3', u'uri': [u'/']}
+2018-07-10 19:59:48,665 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute_cdn
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 303, in refleshExecuteCdn
+    result, status = req.purge(domains_c, uri)
+  File "J:\arno\test\phx_web\saltstack\ws_api.py", line 114, in purge
+    if ret.json()['Message'] != 'handle success':
+  File "J:\arno\test\lib\site-packages\requests\models.py", line 884, in json
+    self.content.decode(encoding), **kwargs
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\python27\Lib\json\decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2018-07-10 20:00:52,630 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-10 20:00:56,563 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-07-10 20:00:56,621 reflesh.py [django:44] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-07-10 20:01:03,315 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-10 20:01:03,319 tencent_api.py [django:73] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=DescribeCdnHosts&Nonce=796080&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1531224063
+2018-07-10 20:01:03,319 tencent_api.py [django:74] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-10 20:01:05,351 tencent_api.py [django:111] [INFO]- {'Action': 'DescribeCdnHosts', 'Nonce': 796080, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'mUkRI30JgI846z5tzl8Zfcx1K8o=', 'Timestamp': 1531224063}: 腾讯云域名获取成功！
+2018-07-10 20:01:08,575 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-10 20:01:15,720 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://apiios.tongwangfa.com'], u'id': u'3', u'uri': [u'/']}
+2018-07-10 20:01:16,642 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute_cdn
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 303, in refleshExecuteCdn
+    result, status = req.purge(domains_c, uri)
+  File "J:\arno\test\phx_web\saltstack\ws_api.py", line 114, in purge
+    if ret.json()['Message'] != 'handle success':
+  File "J:\arno\test\lib\site-packages\requests\models.py", line 884, in json
+    self.content.decode(encoding), **kwargs
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\python27\Lib\json\decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2018-07-10 20:05:22,453 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://apiios.tongwangfa.com'], u'id': u'3', u'uri': [u'/']}
+2018-07-10 20:05:24,430 ws_api.py [django:106] [INFO]- 432: <?xml version="1.0" encoding="UTF-8"?>
+<response><code>WPLUS_ApiPrivilegeError</code>
+<message>the account used is not authenticated using this api.</message></response>
+2018-07-10 20:05:24,430 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute_cdn
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 303, in refleshExecuteCdn
+    result, status = req.purge(domains_c, uri)
+  File "J:\arno\test\phx_web\saltstack\ws_api.py", line 115, in purge
+    if ret.json()['Message'] != 'handle success':
+  File "J:\arno\test\lib\site-packages\requests\models.py", line 884, in json
+    self.content.decode(encoding), **kwargs
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\python27\Lib\json\decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2018-07-10 20:08:37,677 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://apiios.tongwangfa.com'], u'id': u'3', u'uri': [u'/']}
+2018-07-10 20:08:38,684 ws_api.py [django:106] [INFO]- 432: <?xml version="1.0" encoding="UTF-8"?>
+<response><code>WPLUS_ApiPrivilegeError</code>
+<message>the account used is not authenticated using this api.</message></response>
+2018-07-10 20:08:38,684 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+speedfeng2 : CmDqO91JP3zSG0TN1SwvueASr16X8R58CTR6AN0e9kQ=
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;response&gt;&lt;code&gt;WPLUS_ApiPrivilegeError&lt;/code&gt;
+&lt;message&gt;the account used is not authenticated using this api.&lt;/message&gt;&lt;/response&gt;
+2018-07-10 20:08:40,523 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 20:08:41,897 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 20:10:57,766 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://www.uc22.cc'], u'id': u'1', u'uri': [u'/asdfaf']}
+2018-07-10 20:10:58,845 ws_api.py [django:106] [INFO]- 200: {"Message":"handle success","itemId":"c550c5c6bb04452d9917358fd87884f4","Code":1}
+2018-07-10 20:11:00,279 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 20:12:25,625 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://www.uc22.cc'], u'id': u'1', u'uri': [u'/asdfaf']}
+2018-07-10 20:12:26,673 ws_api.py [django:106] [INFO]- 200: {"Message":"handle success","itemId":"959bd1c4c9894b468ed715124cd8fdd7","Code":1}
+2018-07-10 20:12:27,946 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 20:13:35,911 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://www.uc22.cc'], u'id': u'1', u'uri': [u'/asdfaf']}
+2018-07-10 20:13:37,348 ws_api.py [django:106] [INFO]- 200: {"Message":"handle success","itemId":"4753d8d8db224cd0b626eeb2d7870c48","Code":1}
+2018-07-10 20:13:39,056 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 20:13:39,056 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute_cdn
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 263, in refleshExecuteCdn
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-07-10 20:15:33,421 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-10 20:15:38,055 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-07-10 20:15:38,108 reflesh.py [django:44] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-07-10 20:15:44,782 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-10 20:15:44,783 tencent_api.py [django:73] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=DescribeCdnHosts&Nonce=644638&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1531224944
+2018-07-10 20:15:44,783 tencent_api.py [django:74] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-10 20:15:46,845 tencent_api.py [django:111] [INFO]- {'Action': 'DescribeCdnHosts', 'Nonce': 644638, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'h2UhokQGRjnA/TEJRLnFklbyOGU=', 'Timestamp': 1531224944}: 腾讯云域名获取成功！
+2018-07-10 20:15:51,239 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-10 20:15:59,460 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://alcp33.com'], u'id': u'1', u'uri': [u'/asdfaf']}
+2018-07-10 20:16:00,460 ws_api.py [django:106] [INFO]- 200: {"Message":"handle success","itemId":"9fe1236c459c4ce5b9abd06c7987d36d","Code":1}
+2018-07-10 20:16:01,872 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 20:16:01,874 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute_cdn
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 263, in refleshExecuteCdn
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-07-10 20:17:06,466 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://alcp33.com'], u'id': u'1', u'uri': [u'/asdfaf']}
+2018-07-10 20:17:07,438 ws_api.py [django:106] [INFO]- 200: {"Message":"handle success","itemId":"9423cd3ca83848fda1665a3bca7d95f1","Code":1}
+2018-07-10 20:17:09,196 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 20:17:36,316 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-10 20:17:40,832 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-07-10 20:17:40,874 reflesh.py [django:44] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-07-10 20:17:49,216 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-10 20:17:49,217 tencent_api.py [django:73] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=DescribeCdnHosts&Nonce=675133&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1531225069
+2018-07-10 20:17:49,217 tencent_api.py [django:74] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-10 20:17:51,273 tencent_api.py [django:111] [INFO]- {'Action': 'DescribeCdnHosts', 'Nonce': 675133, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'gwyXnuGNj4GNg0VDerLYghKnr1Y=', 'Timestamp': 1531225069}: 腾讯云域名获取成功！
+2018-07-10 20:17:53,122 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-10 20:18:07,792 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://apiios.tongwangfa.com'], u'id': u'3', u'uri': [u'/asdfaf']}
+2018-07-10 20:18:08,786 ws_api.py [django:106] [INFO]- 432: <?xml version="1.0" encoding="UTF-8"?>
+<response><code>WPLUS_ApiPrivilegeError</code>
+<message>the account used is not authenticated using this api.</message></response>
+2018-07-10 20:18:08,786 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+speedfeng2 : 7STDAEFD2ENYKrJdurI7+3K4M82SWzBuyMHY4EbXjfM=
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;response&gt;&lt;code&gt;WPLUS_ApiPrivilegeError&lt;/code&gt;
+&lt;message&gt;the account used is not authenticated using this api.&lt;/message&gt;&lt;/response&gt;
+2018-07-10 20:18:10,201 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 20:18:11,601 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 20:18:50,868 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://alcp00.com'], u'id': u'1', u'uri': [u'/asdfaf']}
+2018-07-10 20:18:51,882 ws_api.py [django:106] [INFO]- 200: {"Message":"handle success","itemId":"9b9ffa7b1e644ccdbfdef60dcd683479","Code":1}
+2018-07-10 20:18:53,154 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 20:59:51,655 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://alcp00.com'], u'id': u'1', u'uri': [u'/asdfaf']}
+2018-07-10 20:59:52,727 ws_api.py [django:106] [INFO]- 200: {"Message":"handle success","itemId":"727a1ebc25864f02b6532f9b3182e758","Code":1}
+2018-07-10 20:59:54,321 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 21:00:00,878 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://apiios.fanyingsh.com'], u'id': u'3', u'uri': [u'/asdfaf']}
+2018-07-10 21:00:01,838 ws_api.py [django:106] [INFO]- 432: <?xml version="1.0" encoding="UTF-8"?>
+<response><code>WPLUS_ApiPrivilegeError</code>
+<message>the account used is not authenticated using this api.</message></response>
+2018-07-10 21:00:01,838 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+speedfeng2 : d4Eh0N9GTpA/ZRt6qHwaZuns/oSK+MW8cieDkfhgE10=
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;response&gt;&lt;code&gt;WPLUS_ApiPrivilegeError&lt;/code&gt;
+&lt;message&gt;the account used is not authenticated using this api.&lt;/message&gt;&lt;/response&gt;
+2018-07-10 21:00:03,062 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 21:00:04,325 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 21:02:17,523 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://apiios.tongwangfa.com'], u'id': u'3', u'uri': [u'/asdfaf']}
+2018-07-10 21:02:18,562 ws_api.py [django:106] [INFO]- 432: <?xml version="1.0" encoding="UTF-8"?>
+<response><code>WPLUS_ApiPrivilegeError</code>
+<message>the account used is not authenticated using this api.</message></response>
+2018-07-10 21:02:18,562 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+speedfeng2 : nFD3rc2mdMZYTzID331AtLmtA8W0czDhThaimBnwAoM=
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;response&gt;&lt;code&gt;WPLUS_ApiPrivilegeError&lt;/code&gt;
+&lt;message&gt;the account used is not authenticated using this api.&lt;/message&gt;&lt;/response&gt;
+2018-07-10 21:02:19,864 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 21:02:21,325 telegram.py [django:105] [INFO]- send message successfull!

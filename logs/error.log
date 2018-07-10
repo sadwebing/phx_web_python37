@@ -14240,3 +14240,116 @@ Traceback (most recent call last):
   File "J:\arno\test\phx_web\saltstack\reflesh.py", line 273, in refleshExecuteCdn
     cdn   = cdn_t.objects.get(id=data['id'])
 TypeError: 'bool' object has no attribute '__getitem__'
+2018-07-10 19:59:48,665 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute_cdn
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 303, in refleshExecuteCdn
+    result, status = req.purge(domains_c, uri)
+  File "J:\arno\test\phx_web\saltstack\ws_api.py", line 114, in purge
+    if ret.json()['Message'] != 'handle success':
+  File "J:\arno\test\lib\site-packages\requests\models.py", line 884, in json
+    self.content.decode(encoding), **kwargs
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\python27\Lib\json\decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2018-07-10 20:01:16,642 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute_cdn
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 303, in refleshExecuteCdn
+    result, status = req.purge(domains_c, uri)
+  File "J:\arno\test\phx_web\saltstack\ws_api.py", line 114, in purge
+    if ret.json()['Message'] != 'handle success':
+  File "J:\arno\test\lib\site-packages\requests\models.py", line 884, in json
+    self.content.decode(encoding), **kwargs
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\python27\Lib\json\decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2018-07-10 20:05:24,430 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute_cdn
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 303, in refleshExecuteCdn
+    result, status = req.purge(domains_c, uri)
+  File "J:\arno\test\phx_web\saltstack\ws_api.py", line 115, in purge
+    if ret.json()['Message'] != 'handle success':
+  File "J:\arno\test\lib\site-packages\requests\models.py", line 884, in json
+    self.content.decode(encoding), **kwargs
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\python27\Lib\json\decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2018-07-10 20:08:38,684 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+speedfeng2 : CmDqO91JP3zSG0TN1SwvueASr16X8R58CTR6AN0e9kQ=
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;response&gt;&lt;code&gt;WPLUS_ApiPrivilegeError&lt;/code&gt;
+&lt;message&gt;the account used is not authenticated using this api.&lt;/message&gt;&lt;/response&gt;
+2018-07-10 20:13:39,056 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute_cdn
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 263, in refleshExecuteCdn
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-07-10 20:16:01,874 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/execute_cdn
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 263, in refleshExecuteCdn
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-07-10 20:18:08,786 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+speedfeng2 : 7STDAEFD2ENYKrJdurI7+3K4M82SWzBuyMHY4EbXjfM=
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;response&gt;&lt;code&gt;WPLUS_ApiPrivilegeError&lt;/code&gt;
+&lt;message&gt;the account used is not authenticated using this api.&lt;/message&gt;&lt;/response&gt;

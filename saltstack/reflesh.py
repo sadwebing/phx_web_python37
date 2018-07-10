@@ -15,7 +15,7 @@ import json, logging, time, urlparse
 logger = logging.getLogger('django')
 
 #telegram 参数
-message = settings.message_ONLINE
+message = settings.message_TEST
 
 @csrf_exempt
 def refleshGetDomains(request):
@@ -319,9 +319,9 @@ def refleshExecuteCdn(request):
                     message["text"] = cdn_d[cdn]['sccess']
                     message['caption'] = cdn + ': 域名缓存清理成功。'
                     sendTelegramRe(message)
-            request.websocket.close()
             break
-        ### close websocket ###
-        request.websocket.close()
+            ### close websocket ###
+            request.websocket.close()
+
     else:
         return HttpResponse('nothing!', status=500)

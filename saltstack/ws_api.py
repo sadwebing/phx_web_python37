@@ -21,7 +21,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 rewrite_list = ['301', '302', '303']
 
 #telegram 参数
-message = settings.message_ONLINE
+message = settings.message_TEST
 
 #获取当前脚本路径
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -103,6 +103,7 @@ class wsApi(object):
     
         try:
             ret = requests.post(url, headers=headers, auth=(self.__username, signed_apikey), data=json.dumps(data))
+            logger.info(str(ret.status_code)+': '+ret.content)
     
         except Exception, e:
             message['text'] = self.__warning + '\nException: ' + e.message
@@ -111,11 +112,16 @@ class wsApi(object):
             return {}, False
     
         else:
-            if ret.json()['Message'] != 'handle success':
-                message['text'] = self.__warning + '\n' + str(ret.json())
+            if ret.status_code != 200:
+                message['text'] = self.__warning + '\n' + str(ret.content.replace('<', '&lt;').replace('>', '&gt;'))
                 logger.error(message['text'])
                 sendTelegram(message).send()
-                return ret.json(), False
+                return ret.content, False
+            elif ret.status_code == 200 and ret.json()['Code'] != 1:
+                message['text'] = self.__warning + '\n' + str(ret.content.replace('<', '&lt;').replace('>', '&gt;'))
+                logger.error(message['text'])
+                sendTelegram(message).send()
+                return ret.content, False
             else:
                 return ret.json(), True
                 #return data[type_f], str(ret.status_code) + ' : ' + ret.content

@@ -298,6 +298,7 @@ var operate = {
         socket.onerror = function (){
             modal_head.innerHTML = "与服务器连接失败...";
             $('#OperateRestartresults').append('<p>连接失败......</p>' );
+            $("#commandresults").append('<p>执行失败！</p>');
             setTimeout(function(){$('#runprogress').modal('hide');}, 1000);
         };
 
@@ -307,6 +308,11 @@ var operate = {
             socket.send(JSON.stringify(postData))
         };
 
+        socket.onclose = function () {
+            
+            setTimeout(function(){$('#runprogress').modal('hide');}, 1000);
+        };
+        
         $('#runprogress').modal('show');
         socket.onmessage = function (e) {
             //return false;
