@@ -11180,3 +11180,58 @@ speedfeng2 : 7STDAEFD2ENYKrJdurI7+3K4M82SWzBuyMHY4EbXjfM=
 2018-07-10 20:21:50,605 utils.py [django.db.backends:89] [DEBUG]- (0.203) SET SQL_AUTO_IS_NULL = 0; args=None
 2018-07-10 20:21:50,812 utils.py [django.db.backends:89] [DEBUG]- (0.207) SHOW FULL TABLES; args=None
 2018-07-10 20:21:51,023 utils.py [django.db.backends:89] [DEBUG]- (0.206) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-07-10 20:59:49,319 utils.py [django.db.backends:89] [DEBUG]- (0.201) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-10 20:59:51,028 utils.py [django.db.backends:89] [DEBUG]- (0.206) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-10 20:59:51,236 utils.py [django.db.backends:89] [DEBUG]- (0.208) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'xy0egg0l6ugfp2ek8o3srp3g0ei9vwhd' AND `django_session`.`expire_date` > '2018-07-10 20:59:47.651000'); args=('xy0egg0l6ugfp2ek8o3srp3g0ei9vwhd', u'2018-07-10 20:59:47.651000')
+2018-07-10 20:59:51,444 utils.py [django.db.backends:89] [DEBUG]- (0.207) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-07-10 20:59:51,654 utils.py [django.db.backends:89] [DEBUG]- (0.207) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-07-10 20:59:51,655 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://alcp00.com'], u'id': u'1', u'uri': [u'/asdfaf']}
+2018-07-10 20:59:51,862 utils.py [django.db.backends:89] [DEBUG]- (0.207) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t` WHERE `accounts_cdn_t`.`id` = 1; args=(1,)
+2018-07-10 20:59:52,727 ws_api.py [django:106] [INFO]- 200: {"Message":"handle success","itemId":"727a1ebc25864f02b6532f9b3182e758","Code":1}
+2018-07-10 20:59:54,321 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 20:59:58,960 utils.py [django.db.backends:89] [DEBUG]- (0.189) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-10 21:00:00,305 utils.py [django.db.backends:89] [DEBUG]- (0.190) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-10 21:00:00,494 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'xy0egg0l6ugfp2ek8o3srp3g0ei9vwhd' AND `django_session`.`expire_date` > '2018-07-10 20:59:57.609000'); args=('xy0egg0l6ugfp2ek8o3srp3g0ei9vwhd', u'2018-07-10 20:59:57.609000')
+2018-07-10 21:00:00,686 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-07-10 21:00:00,878 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-07-10 21:00:00,878 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://apiios.fanyingsh.com'], u'id': u'3', u'uri': [u'/asdfaf']}
+2018-07-10 21:00:01,068 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t` WHERE `accounts_cdn_t`.`id` = 3; args=(3,)
+2018-07-10 21:00:01,838 ws_api.py [django:106] [INFO]- 432: <?xml version="1.0" encoding="UTF-8"?>
+<response><code>WPLUS_ApiPrivilegeError</code>
+<message>the account used is not authenticated using this api.</message></response>
+2018-07-10 21:00:01,838 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+speedfeng2 : d4Eh0N9GTpA/ZRt6qHwaZuns/oSK+MW8cieDkfhgE10=
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;response&gt;&lt;code&gt;WPLUS_ApiPrivilegeError&lt;/code&gt;
+&lt;message&gt;the account used is not authenticated using this api.&lt;/message&gt;&lt;/response&gt;
+2018-07-10 21:00:03,062 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 21:00:04,325 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 21:02:15,598 utils.py [django.db.backends:89] [DEBUG]- (0.200) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-10 21:02:16,947 utils.py [django.db.backends:89] [DEBUG]- (0.187) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-10 21:02:17,138 utils.py [django.db.backends:89] [DEBUG]- (0.191) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'xy0egg0l6ugfp2ek8o3srp3g0ei9vwhd' AND `django_session`.`expire_date` > '2018-07-10 21:02:14.162000'); args=('xy0egg0l6ugfp2ek8o3srp3g0ei9vwhd', u'2018-07-10 21:02:14.162000')
+2018-07-10 21:02:17,329 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-07-10 21:02:17,523 utils.py [django.db.backends:89] [DEBUG]- (0.190) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-07-10 21:02:17,523 reflesh.py [django:264] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute_cdn 执行参数：{u'domain': [u'https://apiios.tongwangfa.com'], u'id': u'3', u'uri': [u'/asdfaf']}
+2018-07-10 21:02:17,714 utils.py [django.db.backends:89] [DEBUG]- (0.188) SELECT `accounts_cdn_t`.`id`, `accounts_cdn_t`.`name`, `accounts_cdn_t`.`account`, `accounts_cdn_t`.`secretid`, `accounts_cdn_t`.`secretkey` FROM `accounts_cdn_t` WHERE `accounts_cdn_t`.`id` = 3; args=(3,)
+2018-07-10 21:02:18,562 ws_api.py [django:106] [INFO]- 432: <?xml version="1.0" encoding="UTF-8"?>
+<response><code>WPLUS_ApiPrivilegeError</code>
+<message>the account used is not authenticated using this api.</message></response>
+2018-07-10 21:02:18,562 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+speedfeng2 : nFD3rc2mdMZYTzID331AtLmtA8W0czDhThaimBnwAoM=
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;response&gt;&lt;code&gt;WPLUS_ApiPrivilegeError&lt;/code&gt;
+&lt;message&gt;the account used is not authenticated using this api.&lt;/message&gt;&lt;/response&gt;
+2018-07-10 21:02:19,864 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 21:02:21,325 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-10 21:16:49,808 utils.py [django.db.backends:89] [DEBUG]- (0.196) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-10 21:16:51,418 utils.py [django.db.backends:89] [DEBUG]- (0.189) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-10 21:16:51,609 utils.py [django.db.backends:89] [DEBUG]- (0.191) SHOW FULL TABLES; args=None
+2018-07-10 21:16:51,803 utils.py [django.db.backends:89] [DEBUG]- (0.191) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-07-11 15:41:55,869 utils.py [django.db.backends:89] [DEBUG]- (0.234) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-11 15:41:57,999 utils.py [django.db.backends:89] [DEBUG]- (0.206) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-11 15:41:58,204 utils.py [django.db.backends:89] [DEBUG]- (0.205) SHOW FULL TABLES; args=None
+2018-07-11 15:41:58,430 utils.py [django.db.backends:89] [DEBUG]- (0.207) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-07-11 15:42:46,821 utils.py [django.db.backends:89] [DEBUG]- (0.227) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-11 15:42:48,578 utils.py [django.db.backends:89] [DEBUG]- (0.246) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-11 15:42:48,845 utils.py [django.db.backends:89] [DEBUG]- (0.266) SHOW FULL TABLES; args=None
+2018-07-11 15:42:49,088 utils.py [django.db.backends:89] [DEBUG]- (0.241) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()

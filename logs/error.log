@@ -14353,3 +14353,13 @@ speedfeng2 : 7STDAEFD2ENYKrJdurI7+3K4M82SWzBuyMHY4EbXjfM=
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;response&gt;&lt;code&gt;WPLUS_ApiPrivilegeError&lt;/code&gt;
 &lt;message&gt;the account used is not authenticated using this api.&lt;/message&gt;&lt;/response&gt;
+2018-07-10 21:00:01,838 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+speedfeng2 : d4Eh0N9GTpA/ZRt6qHwaZuns/oSK+MW8cieDkfhgE10=
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;response&gt;&lt;code&gt;WPLUS_ApiPrivilegeError&lt;/code&gt;
+&lt;message&gt;the account used is not authenticated using this api.&lt;/message&gt;&lt;/response&gt;
+2018-07-10 21:02:18,562 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+speedfeng2 : nFD3rc2mdMZYTzID331AtLmtA8W0czDhThaimBnwAoM=
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;response&gt;&lt;code&gt;WPLUS_ApiPrivilegeError&lt;/code&gt;
+&lt;message&gt;the account used is not authenticated using this api.&lt;/message&gt;&lt;/response&gt;
