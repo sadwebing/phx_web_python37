@@ -9,6 +9,16 @@ var dns = {
         this.GetProductRecords();
     },
 
+    disableButtons: function (buttonList, fun) {
+        for (var i = 0; i < buttonList.length; i++){
+            if (fun){
+                document.getElementById(buttonList[i]).disabled = true;
+            }else {
+                document.getElementById(buttonList[i]).disabled = false;
+            }
+        }
+    },
+    
     GetProductRecords: function(){
         var productlist = []
         //var project = document.getElementById("project_active").value;
@@ -44,7 +54,7 @@ var dns = {
             }
         });
     },
-
+    
     selectpicker: function docombjs() {
         $('.selectpicker').selectpicker({
             style: 'btn-default',

@@ -1,12 +1,14 @@
 # coding: utf8
 from django.shortcuts import render
+from django.http      import HttpResponse, HttpResponseForbidden
+from dwebsocket       import require_websocket
+from models           import cf_account, dnspod_account
+from cf_api           import CfApi
+from dnspod           import *
+from cf               import *
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse, HttpResponseForbidden
-from dwebsocket import require_websocket
-from django.views.decorators.csrf import csrf_exempt, csrf_protect
-from cf_api import CfApi
-from cf import *
-from models import cf_account
+from django.views.decorators.csrf   import csrf_exempt, csrf_protect
+
 import json, logging, requests, re, datetime
 logger = logging.getLogger('django')
 
@@ -65,6 +67,37 @@ def Index(request):
     return render(
         request,
         'dns/cloudflare_index.html',
+        {
+            'title': title,
+            'clientip':clientip,
+            'role': role,
+            'username': username,
+            'product_list': [name[0] for name in product_list],
+        }
+    )
+
+@csrf_protect
+@login_required
+def DndpodIndex(request):
+    title = u'DnsPod-主页'
+    global username, role, clientip
+    username = request.user.username
+    try:
+        role = request.user.userprofile.role
+    except:
+        role = 'none'
+    if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+        clientip = request.META['HTTP_X_FORWARDED_FOR']
+    else:
+        clientip = request.META['REMOTE_ADDR']
+    logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
+
+    product_list = dnspod_account.objects.values_list("name").all().order_by("name")
+    logger.info('%s %s' %(type(product_list), product_list))
+
+    return render(
+        request,
+        'dns/dnspod_index.html',
         {
             'title': title,
             'clientip':clientip,

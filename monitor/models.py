@@ -87,6 +87,7 @@ class cdn_proj_t(models.Model):
         (1, 'fh_cp_static'),
         (3, 'fh_sp_static'),
         (2, 'ry_sp_static'),
+        (4, 'java_cp_static'),
         )
 
     project = models.IntegerField(choices=choices_proj, unique=True)

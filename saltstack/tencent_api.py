@@ -29,11 +29,7 @@ message = settings.message_ONLINE
 #获取当前时间，以特定的格式，如Wed, 09 May 2018 12:51:25 GMT
 def getDate():
     return datetime.datetime.utcnow().strftime('%a, %d %b %Y %H:%M:%S   GMT')
-    
-#腾讯云账号
-secretkey='c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1'
-secretid='AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs'
-    
+
 #接口
 tencent_url = "cdn.api.qcloud.com/v2/index.php"
 

@@ -3,6 +3,8 @@ $(function () {
     operate.operateInit();
 });
 
+window.product_list_html = {}
+
 //初始化表格
 var tableInit = {
     Init: function () {
@@ -47,22 +49,30 @@ var tableInit = {
                     //width:'5%',
                     //align: 'center'
                 },{
-                    field: 'content',
+                    field: 'value',
                     title: 'content',
                     sortable: true,
                     //width:'15%',
                     //align: 'center'
                 },{
-                    field: 'proxied',
-                    title: 'proxied',
+                    field: 'record_line',
+                    title: '线路',
                     sortable: true,
-                    //width:'auto',
+                    //width:'15%',
                     //align: 'center'
                 },{
                     field: 'record_id',
                     title: 'record_id',
                     sortable: true,
                     //width:'auto',
+                    //align: 'center'
+                },{
+                    field: 'enabled',
+                    title: '状态',
+                    sortable: true,
+                    //width:'5%',
+                    events: operateStatusEvents,
+                    formatter: this.operateStatusFormatter,
                     //align: 'center'
                 },{
                     field: 'zone_id',
@@ -84,6 +94,7 @@ var tableInit = {
 
         });
         //this.myViewModel.hidecolumn('zone_id');
+        //this.myViewModel.hidecolumn('record_id');
         ko.applyBindings(this.myViewModel, document.getElementById("records_table"));
     },
 
@@ -112,19 +123,19 @@ var tableInit = {
     },
 
     operateStatusFormatter: function (value,row,index){
-        if (row.status_ == 'active'){
+        if (row.enabled == '1'){
             content = [
             '<div class="checkbox checkbox-slider--a" style="margin:0px;">',
                 '<label>',
-                    '<input type="checkbox" id='+ row.id +' class="update_status" checked><span></span>',
+                    '<input type="checkbox" id='+ row.record_id +' class="update_status" checked><span></span>',
                 '</label>',
             '</div>'
             ].join('');
-        }else if (row.status_ == 'inactive'){
+        }else if (row.enabled == '0'){
             content = [
             '<div class="checkbox checkbox-slider--a" style="margin:0px;">',
                 '<label>',
-                    '<input type="checkbox" id='+ row.id +' class="update_status"><span></span>',
+                    '<input type="checkbox" id='+ row.record_id +' class="update_status"><span></span>',
                 '</label>',
             '</div>'
             ].join('');
@@ -144,7 +155,51 @@ var tableInit = {
     },
 };
 
-
+window.operateStatusEvents = {
+    'click .update_status': function (e, value, row, index) {
+        var postData = [row];
+        if (document.getElementById(row.record_id).checked){
+            postData[0].enabled = '1';
+            //console.log(postData);
+        }else {
+            postData[0].enabled = '0';
+            //console.log(postData);
+        }
+        $.ajax({
+            url: "/dns/dnspod/update_records",
+            type: "post",
+            data: JSON.stringify(postData),
+            success: function (data, enabled) {
+                if (postData[0].enabled == '1'){
+                    toastr.success(row.product+": "+row.name, '域名解析已启用');
+                }else {
+                    toastr.warning(row.product+": "+row.name, '域名解析已禁用');
+                }
+                
+                //ko.cleanNode(document.getElementById("tomcat_table"));
+                row.enabled = postData[0].enabled;
+                //alert(data);
+                //tableInit.myViewModel.refresh();
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown){
+                if (postData[0].enabled == '1'){
+                    document.getElementById(row.record_id).checked = false;
+                }else {
+                    document.getElementById(row.record_id).checked = true;
+                }
+                if (XMLHttpRequest.enabled == '0'){
+                    toastr.error('后端服务不响应', '错误')
+                }else {
+                    toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.enabled)
+                }
+                //console.info(XMLHttpRequest)
+                //alert(XMLHttpRequest.enabled+': '+XMLHttpRequest.responseText);
+                //tableInit.myViewModel.refresh();
+            }
+        });
+        return false;
+    },
+};
 
 //操作
 var operate = {
@@ -154,6 +209,7 @@ var operate = {
         tableInit.myViewModel.hidecolumn('record_id');
         //this.operateCheckStatus();
         this.isIp();
+        this.GetDnsPodProduct();
         this.selectpicker();
         this.operateSearch();
         this.operateEdit();
@@ -188,7 +244,6 @@ var operate = {
             
         });
     },
-
 
     isIp: function (value) {
         var regexp = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/;
@@ -233,17 +288,76 @@ var operate = {
         return true;
     },
 
+    GetDnsPodProduct: function(){
+        operate.disableButtons(['btn_repost', 'btn_op_search'], true);
+        toastr.info("正在获取数据，请耐心等待返回...");
+
+        $.ajax({
+            url: "/dns/dnspod/get_product_records",
+            type: "post",
+            contentType: 'application/json',
+            //data: JSON.stringify(postData),
+            success: function (datas, status) {
+                operate.disableButtons(['btn_repost', 'btn_op_search'], false);
+                toastr.success('数据获取成功！');
+                //alert(datas);
+                var data = eval('('+datas+')');
+                var product_html = "";
+
+                $.each(data, function (index, item) { 
+                    var domain_html = "";
+                    product_html = product_html + "<option value="+item.product+">"+item.product+"</option>";
+                    //循环获取数据 
+                    $.each(item.domain, function (index, domain) {
+                        if (domain.status == 'enable'){
+                            domain_html = domain_html + "<option value='"+domain.id+"_"+item.product+"' data-subtext='"+item.product+"'>"+domain.name+"</option>";
+                        }
+                    })
+
+                    product_list_html[item.product] = domain_html;
+                })
+                document.getElementById('dp_product').innerHTML=product_html;
+                //$('.selectpicker').selectpicker({title:"请选择服务器地址"});
+                $('.selectpicker').selectpicker('refresh');
+            },
+            error:function(msg){
+                alert("获取项目失败！");
+                return false;
+            }
+        });
+    },
+    
+    setProductHtml: function(value){
+        var productlist = []
+        //var project = document.getElementById("project_active").value;
+        objSelectproject = document.productform.dp_product;
+        
+        for(var i = 0; i < objSelectproject.options.length; i++) { 
+            if (objSelectproject.options[i].selected == true) 
+            productlist.push(objSelectproject.options[i].value);
+        }
+        var html = "";
+
+        for (var num in productlist){
+            product = productlist[num];
+            html = html + product_list_html[product];
+        }
+        document.getElementById(value).innerHTML=html;
+        //$('.selectpicker').selectpicker({title:"请选择服务器地址"});
+        $('.selectpicker').selectpicker('refresh');
+        return false;
+    },
+    
     //查询zone记录
     operateSearch: function () {
         $('#btn_op_search').on("click", function () {
             var zone_list = []
-            
-            //var project = document.getElementById("project_active").value;
-            var objSelectzone = document.productform.zone_name; 
+
+            var objSelectzone = document.domainsform.zone_name; 
             for(var i = 0; i < objSelectzone.options.length; i++) { 
                 if (objSelectzone.options[i].selected == true){
                     var tmp = {}
-                    tmp['zone_id'] = objSelectzone.options[i].value.split('_')[0];
+                    tmp['id'] = objSelectzone.options[i].value.split('_')[0];
                     tmp['name'] = objSelectzone.options[i].text;
                     tmp['product'] = objSelectzone.options[i].value.split('_')[1];
                     zone_list.push(tmp);
@@ -251,7 +365,7 @@ var operate = {
             }
             //console.log(zone_list);
             var params = {
-                url: '/dns/cloudflare/get_zone_records',
+                url: '/dns/dnspod/get_zone_records',
                 method: 'post',
                 singleSelect: false,
                 queryParams: function (param) {
@@ -284,7 +398,7 @@ var operate = {
             var options = document.getElementById('record_type').children;
             options[0].selected=true;
 
-            var options = document.getElementById('record_proxied').children;
+            var options = document.getElementById('record_status').children;
             options[0].selected=true;
 
             var vm = new operate.ViewModel();
@@ -302,8 +416,9 @@ var operate = {
                 $.each(vm.datas(), function (index, item) { 
                     //循环获取数据
                     var record = vm.datas()[index];
+                    //console.log(record);
                     //alert(record)
-                    html_record = "<tr id="+record.name()+"><td>"+record.product()+"</td><td>"+record.zone()+"</td><td>"+record.name()+"</td><td>"+record.type()+"</td><td>"+record.content()+"</td><td>"+record.proxied()+"</td></tr>";
+                    html_record = "<tr id="+record.name()+"><td>"+record.product()+"</td><td>"+record.zone()+"</td><td>"+record.name()+"</td><td>"+record.type()+"</td><td>"+record.value()+"</td><td>"+record.enabled()+"</td></tr>";
                     html = html + html_record
                 }); 
                 $("#EditDatas").html(html);
@@ -329,35 +444,31 @@ var operate = {
                 operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
                 return false;
             }
-            postdata['proxied'] = $("#record_proxied option:selected").val()
-            if (! postdata['proxied']){
-                alert('pls select the proxied!');
+            postdata['enabled'] = $("#record_status option:selected").val()
+            if (! postdata['enabled']){
+                alert('pls select the status!');
                 operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
                 return false;
             }
-            postdata['content'] = document.getElementById('record_content').value.replace(/(^\s*)|(\s*$)/g, "");
-            if (! postdata['content']){
+            postdata['value'] = document.getElementById('record_content').value.replace(/(^\s*)|(\s*$)/g, "");
+            if (! postdata['value']){
                 alert('content can\'t be empty!');
                 operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
                 return false;
             }
 
             if (postdata['type'] == 'A') {
-                if (! operate.isIp(postdata['content'])){
+                if (! operate.isIp(postdata['value'])){
                     alert('Content for A record is invalid.');
                     operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
                     return false;
                 }
             }else if (postdata['type'] == 'CNAME'){
-                if (! operate.isDomain(postdata['content'], postdata['proxied'])){
+                if (! operate.isDomain(postdata['value'], postdata['enabled'])){
                     alert('Content for CNAME record is invalid.');
                     operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
                     return false;
                 }
-
-
-
-
             }
 
             postdata['records'] = arrselectedData;
@@ -365,7 +476,7 @@ var operate = {
             success = 0;
             failed = 0;
 
-            var socket = new WebSocket("ws://" + window.location.host + "/dns/cloudflare/update_records");
+            var socket = new WebSocket("ws://" + window.location.host + "/dns/dnspod/update_records");
             socket.onopen = function () {
                 //console.log('WebSocket open');//成功连接上Websocket
                 socket.send(JSON.stringify(postdata));
@@ -373,6 +484,11 @@ var operate = {
             //$('#runprogress').modal('show');
             socket.onerror = function (){
                 toastr.error('后端服务不响应', '错误');
+                operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
+            };
+            socket.onclose = function () {
+                //setTimeout(function(){$('#confirmEditModal').modal('hide');}, 1000);
+                toastr.info('连接已关闭...');
                 operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
             };
             socket.onmessage = function (e) {

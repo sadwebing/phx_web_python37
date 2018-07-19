@@ -2,7 +2,7 @@
 from django.shortcuts               import render
 from django.contrib.auth.decorators import login_required
 from django.http                    import HttpResponse, HttpResponseForbidden
-from dwebsocket                     import require_websocket
+from dwebsocket                     import require_websocket, accept_websocket
 from django.views.decorators.csrf   import csrf_exempt, csrf_protect
 from models                         import cf_account, domain_info, alter_history
 from cf_api                         import CfApi

@@ -46,6 +46,8 @@ TG_API = {
 
 #cloudflare api
 CF_URL = 'https://api.cloudflare.com/client/v4/zones'
+#dnspod api
+DnsPod_URL = 'https://dnsapi.cn/'
 
 #saltstack api
 SALT_API = {

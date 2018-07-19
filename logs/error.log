@@ -14363,3 +14363,654 @@ speedfeng2 : nFD3rc2mdMZYTzID331AtLmtA8W0czDhThaimBnwAoM=
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;response&gt;&lt;code&gt;WPLUS_ApiPrivilegeError&lt;/code&gt;
 &lt;message&gt;the account used is not authenticated using this api.&lt;/message&gt;&lt;/response&gt;
+2018-07-18 20:08:53,911 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/dns/cf_account/9/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1519, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1459, in changeform_view
+    if form.is_valid():
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 184, in is_valid
+    return self.is_bound and not self.errors
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 176, in errors
+    self.full_clean()
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 394, in full_clean
+    self._post_clean()
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 436, in _post_clean
+    self.validate_unique()
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 445, in validate_unique
+    self.instance.validate_unique(exclude=exclude)
+  File "J:\arno\test\lib\site-packages\django\db\models\base.py", line 933, in validate_unique
+    errors = self._perform_unique_checks(unique_checks)
+  File "J:\arno\test\lib\site-packages\django\db\models\base.py", line 1028, in _perform_unique_checks
+    if qs.exists():
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 586, in exists
+    return self.query.has_results(using=self.db)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 479, in has_results
+    return compiler.has_results()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 800, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "J:\arno\test\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1267, "Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='")
+2018-07-18 20:10:03,822 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/dns/cf_account/9/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1519, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1459, in changeform_view
+    if form.is_valid():
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 184, in is_valid
+    return self.is_bound and not self.errors
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 176, in errors
+    self.full_clean()
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 394, in full_clean
+    self._post_clean()
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 436, in _post_clean
+    self.validate_unique()
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 445, in validate_unique
+    self.instance.validate_unique(exclude=exclude)
+  File "J:\arno\test\lib\site-packages\django\db\models\base.py", line 933, in validate_unique
+    errors = self._perform_unique_checks(unique_checks)
+  File "J:\arno\test\lib\site-packages\django\db\models\base.py", line 1028, in _perform_unique_checks
+    if qs.exists():
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 586, in exists
+    return self.query.has_results(using=self.db)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 479, in has_results
+    return compiler.has_results()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 800, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "J:\arno\test\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1267, "Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='")
+2018-07-18 21:21:59,586 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/dns/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 8, in <module>
+    from dnspod_api                     import DpApi
+  File "J:\arno\test\phx_web\dns\dnspod_api.py", line 58
+    return result['domains'], True
+         ^
+SyntaxError: invalid syntax
+2018-07-18 21:23:58,851 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 26, in GetDnspodProductRecords
+    result, status = dpapi.GetDnsLists()
+  File "J:\arno\test\phx_web\dns\dnspod_api.py", line 50, in GetDnsLists
+    result = ret.json()
+  File "J:\arno\test\lib\site-packages\requests\models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\python27\Lib\json\decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2018-07-18 21:32:43,924 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 29, in GetDnspodProductRecords
+    dpapi  = DpApi(DnsPod_URL, dp_acc.key)
+AttributeError: 'NoneType' object has no attribute 'key'
+2018-07-18 21:34:26,618 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 30, in GetDnspodProductRecords
+    dpapi  = DpApi(DnsPod_URL, dp_acc.key)
+AttributeError: 'NoneType' object has no attribute 'key'
+2018-07-18 21:35:36,361 dnspod.py [django:28] [ERROR]- 查询 凤凰|asdf勇士  账号失败！
+2018-07-18 21:41:59,670 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/get_project
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 67, in refleshGetProject
+    results, status = req.getdomains()
+  File "J:\arno\test\phx_web\saltstack\tencent_api.py", line 86, in getdomains
+    'SecretId':secretid,
+NameError: global name 'secretid' is not defined
+2018-07-18 21:47:57,436 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 28, in GetProductRecords
+    cfapi       = CfApi(CF_URL, cf_acc.email, cf_acc.key)
+AttributeError: 'NoneType' object has no attribute 'email'
+2018-07-18 22:21:23,029 dnspod_api.py [django:54] [ERROR]- Attention: Dnspod域名获取失败，请检查:腾讯云URL:  + https://dnsapi.cn/Domain.List
+{u'message': u'No domains', u'code': u'9', u'created_at': u'2018-07-18 22:21:22'}
+2018-07-18 23:10:16,153 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 8, in <module>
+    from dnspod_api                     import DpApi
+  File "J:\arno\test\phx_web\dns\dnspod_api.py", line 37
+    'URL:  + %s' %url,
+               ^
+SyntaxError: invalid syntax
+2018-07-18 23:11:15,788 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 31, in GetDnspodProductRecords
+    result, status = dpapi.GetDnsLists(type='all')
+  File "J:\arno\test\phx_web\dns\dnspod_api.py", line 63, in GetDnsLists
+    return self.ExePost('/Domain.List', "Dnspod域名列表获取")
+TypeError: ExePost() takes exactly 2 arguments (3 given)
+2018-07-19 16:09:28,430 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_record
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 106
+    'domain':         record['zone'],
+            ^
+SyntaxError: invalid syntax
+2018-07-19 16:11:54,690 dnspod_api.py [django:51] [ERROR]- Attention: Dnspod域名[lebocdn.com]解析修改 失败，请检查:
+URL:  + https://dnsapi.cn/Record.Modify
+{u'message': u'Record line invalid', u'code': u'26', u'created_at': u'2018-07-19 16:11:28'}
+2018-07-19 16:13:27,946 dnspod_api.py [django:51] [ERROR]- Attention: Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 失败，请检查:
+URL:  + https://dnsapi.cn/Record.Modify
+{u'message': u'Record line invalid', u'code': u'26', u'created_at': u'2018-07-19 16:13:01'}
+2018-07-19 16:16:36,194 dnspod_api.py [django:51] [ERROR]- Attention: Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 失败，请检查:
+URL:  + https://dnsapi.cn/Record.Modify
+{u'message': u'Record line invalid', u'code': u'26', u'created_at': u'2018-07-19 16:16:09'}
+2018-07-19 21:37:05,417 dnspod_api.py [django:52] [ERROR]- Attention: Dnspod域名[@.hgb168.com]解析修改 失败，请检查:
+URL:  + https://dnsapi.cn/Record.Modify
+{u'message': u'NS \u8bb0\u5f55\u7684\u5b50\u57df\u540d\u4e0d\u80fd\u4e3a @', u'code': u'31', u'created_at': u'2018-07-19 21:36:38'}
+2018-07-19 22:58:29,811 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 114
+    return HttpResponseServerError("修改 %s 域名失败！" %record['name'])
+         ^
+SyntaxError: invalid syntax
+2018-07-19 22:59:06,803 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 183
+    request.websocket.send(json.dumps(return_info))
+          ^
+SyntaxError: invalid syntax
+2018-07-19 22:59:45,842 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 183
+    request.websocket.send(json.dumps(return_info))
+          ^
+SyntaxError: invalid syntax
+2018-07-19 23:01:40,203 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 183
+    request.websocket.send(json.dumps(return_info))
+          ^
+SyntaxError: invalid syntax
+2018-07-19 23:02:39,690 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 183
+    request.websocket.send(json.dumps(return_info))
+          ^
+SyntaxError: invalid syntax
+2018-07-19 23:02:43,049 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 183
+    request.websocket.send(json.dumps(return_info))
+          ^
+SyntaxError: invalid syntax
+2018-07-19 23:02:52,345 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 183
+    request.websocket.send(json.dumps(return_info))
+          ^
+SyntaxError: invalid syntax
+2018-07-19 23:03:20,369 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 183
+    request.websocket.send(json.dumps(return_info))
+          ^
+SyntaxError: invalid syntax
+2018-07-19 23:03:29,403 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 183
+    request.websocket.send(json.dumps(return_info))
+          ^
+SyntaxError: invalid syntax
+2018-07-19 23:03:55,500 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 201
+    status  = result
+         ^
+SyntaxError: invalid syntax
+2018-07-19 23:03:59,733 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 201
+    status  = result
+         ^
+SyntaxError: invalid syntax

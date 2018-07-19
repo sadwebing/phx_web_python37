@@ -20027,3 +20027,1143 @@ speedfeng2 : nFD3rc2mdMZYTzID331AtLmtA8W0czDhThaimBnwAoM=
 &lt;message&gt;the account used is not authenticated using this api.&lt;/message&gt;&lt;/response&gt;
 2018-07-10 21:02:19,864 telegram.py [django:105] [INFO]- send message successfull!
 2018-07-10 21:02:21,325 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-18 19:46:40,351 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-18 19:46:45,404 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-07-18 19:46:45,516 reflesh.py [django:44] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-07-18 19:46:52,256 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-18 19:46:52,257 tencent_api.py [django:73] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=DescribeCdnHosts&Nonce=391084&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1531914412
+2018-07-18 19:46:52,257 tencent_api.py [django:74] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-18 19:46:53,857 base.py [django.request:170] [WARNING]- Not Found: /favicon.ico
+2018-07-18 19:46:54,388 tencent_api.py [django:111] [INFO]- {'Action': 'DescribeCdnHosts', 'Nonce': 391084, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'Qb88JwtmOdeb797l7u9TUuih5hw=', 'Timestamp': 1531914412}: 腾讯云域名获取成功！
+2018-07-18 19:46:55,107 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-18 20:08:53,911 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/dns/cf_account/9/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1519, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1459, in changeform_view
+    if form.is_valid():
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 184, in is_valid
+    return self.is_bound and not self.errors
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 176, in errors
+    self.full_clean()
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 394, in full_clean
+    self._post_clean()
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 436, in _post_clean
+    self.validate_unique()
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 445, in validate_unique
+    self.instance.validate_unique(exclude=exclude)
+  File "J:\arno\test\lib\site-packages\django\db\models\base.py", line 933, in validate_unique
+    errors = self._perform_unique_checks(unique_checks)
+  File "J:\arno\test\lib\site-packages\django\db\models\base.py", line 1028, in _perform_unique_checks
+    if qs.exists():
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 586, in exists
+    return self.query.has_results(using=self.db)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 479, in has_results
+    return compiler.has_results()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 800, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "J:\arno\test\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1267, "Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='")
+2018-07-18 20:10:03,822 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/dns/cf_account/9/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1519, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1459, in changeform_view
+    if form.is_valid():
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 184, in is_valid
+    return self.is_bound and not self.errors
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 176, in errors
+    self.full_clean()
+  File "J:\arno\test\lib\site-packages\django\forms\forms.py", line 394, in full_clean
+    self._post_clean()
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 436, in _post_clean
+    self.validate_unique()
+  File "J:\arno\test\lib\site-packages\django\forms\models.py", line 445, in validate_unique
+    self.instance.validate_unique(exclude=exclude)
+  File "J:\arno\test\lib\site-packages\django\db\models\base.py", line 933, in validate_unique
+    errors = self._perform_unique_checks(unique_checks)
+  File "J:\arno\test\lib\site-packages\django\db\models\base.py", line 1028, in _perform_unique_checks
+    if qs.exists():
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 586, in exists
+    return self.query.has_results(using=self.db)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 479, in has_results
+    return compiler.has_results()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 800, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "J:\arno\test\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1267, "Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='")
+2018-07-18 20:28:00,963 views.py [django:61] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-07-18 20:28:01,163 views.py [django:64] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u4e09\u5fb7|\u5bcc\u8c6a|668',), (u'\u5149\u5927',), (u'\u51e4\u51f001',), (u'\u51e4\u51f002',), (u'\u52c7\u58eb01',), (u'\u52c7\u58eb02',), (u'\u718a\u732b|\u4e50\u76c8',), (u'\u745e\u94f6',), (u'\u963f\u91cc',)]
+2018-07-18 20:28:01,826 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-07-18 20:28:05,134 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-18 20:28:08,760 views.py [django:61] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-07-18 20:28:08,950 views.py [django:64] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u4e09\u5fb7|\u5bcc\u8c6a|668',), (u'\u5149\u5927',), (u'\u51e4\u51f001',), (u'\u51e4\u51f002',), (u'\u52c7\u58eb01',), (u'\u52c7\u58eb02',), (u'\u718a\u732b|\u4e50\u76c8',), (u'\u745e\u94f6',), (u'\u963f\u91cc',)]
+2018-07-18 20:28:09,242 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-07-18 20:28:12,562 base.py [django.request:170] [WARNING]- Not Found: /dns/dnspod/index
+2018-07-18 20:28:20,529 base.py [django.request:170] [WARNING]- Not Found: /dns/dnspod/index
+2018-07-18 20:28:56,387 views.py [django:92] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-18 20:28:56,573 views.py [django:95] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-18 20:28:57,163 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-07-18 21:21:59,586 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/dns/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 8, in <module>
+    from dnspod_api                     import DpApi
+  File "J:\arno\test\phx_web\dns\dnspod_api.py", line 58
+    return result['domains'], True
+         ^
+SyntaxError: invalid syntax
+2018-07-18 21:23:51,996 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 21:23:58,851 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 26, in GetDnspodProductRecords
+    result, status = dpapi.GetDnsLists()
+  File "J:\arno\test\phx_web\dns\dnspod_api.py", line 50, in GetDnsLists
+    result = ret.json()
+  File "J:\arno\test\lib\site-packages\requests\models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\python27\Lib\json\decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2018-07-18 21:24:56,854 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 21:25:01,549 dnspod_api.py [django:57] [INFO]- Dnspod域名获取成功！
+2018-07-18 21:27:20,221 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 21:27:23,927 dnspod_api.py [django:57] [INFO]- Dnspod域名获取成功！
+2018-07-18 21:29:54,299 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 21:29:58,380 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 21:32:09,078 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 21:32:13,558 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 21:32:40,506 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 21:32:43,924 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 29, in GetDnspodProductRecords
+    dpapi  = DpApi(DnsPod_URL, dp_acc.key)
+AttributeError: 'NoneType' object has no attribute 'key'
+2018-07-18 21:34:23,661 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 21:34:26,618 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 30, in GetDnspodProductRecords
+    dpapi  = DpApi(DnsPod_URL, dp_acc.key)
+AttributeError: 'NoneType' object has no attribute 'key'
+2018-07-18 21:35:33,335 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 21:35:36,361 dnspod.py [django:28] [ERROR]- 查询 凤凰|asdf勇士  账号失败！
+2018-07-18 21:36:22,611 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 21:36:29,394 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 21:39:05,038 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-18 21:39:09,627 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-18 21:39:09,835 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-18 21:39:10,138 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-07-18 21:39:10,140 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 21:41:53,128 views.py [django:390] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-07-18 21:41:53,178 reflesh.py [django:44] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-07-18 21:41:59,668 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-18 21:41:59,670 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/get_project
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 67, in refleshGetProject
+    results, status = req.getdomains()
+  File "J:\arno\test\phx_web\saltstack\tencent_api.py", line 86, in getdomains
+    'SecretId':secretid,
+NameError: global name 'secretid' is not defined
+2018-07-18 21:46:49,434 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-07-18 21:46:49,437 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 21:46:57,115 views.py [django:62] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-07-18 21:46:57,305 views.py [django:65] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u4e09\u5fb7|\u5bcc\u8c6a|668',), (u'\u5149\u5927',), (u'\u51e4\u51f001',), (u'\u51e4\u51f002',), (u'\u52c7\u58eb01',), (u'\u52c7\u58eb02',), (u'\u718a\u732b|\u4e50\u76c8',), (u'\u745e\u94f6',), (u'\u963f\u91cc',)]
+2018-07-18 21:46:57,563 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-07-18 21:46:57,568 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 21:47:03,089 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-07-18 21:47:03,092 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 21:47:54,283 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-07-18 21:47:57,436 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 28, in GetProductRecords
+    cfapi       = CfApi(CF_URL, cf_acc.email, cf_acc.key)
+AttributeError: 'NoneType' object has no attribute 'email'
+2018-07-18 21:48:03,823 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
+2018-07-18 21:50:21,516 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-18 21:50:25,138 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-18 21:50:25,325 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-18 21:51:58,236 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-18 21:52:01,826 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-18 21:52:02,016 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-18 21:54:56,585 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-18 21:55:00,352 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-18 21:55:00,545 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-18 21:55:36,118 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-18 21:55:39,842 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-18 21:55:40,040 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-18 21:56:43,585 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-18 21:56:47,539 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-18 21:56:47,727 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-18 22:02:29,743 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-18 22:02:33,503 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-18 22:02:33,703 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-18 22:04:52,857 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-18 22:04:56,963 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-18 22:04:57,164 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-18 22:21:19,296 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 22:21:21,867 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 22:21:23,029 dnspod_api.py [django:54] [ERROR]- Attention: Dnspod域名获取失败，请检查:腾讯云URL:  + https://dnsapi.cn/Domain.List
+{u'message': u'No domains', u'code': u'9', u'created_at': u'2018-07-18 22:21:22'}
+2018-07-18 22:21:27,180 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-18 22:23:06,137 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 22:23:12,302 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 22:23:12,914 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 22:30:32,276 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-18 22:30:37,335 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-18 22:30:37,526 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-18 22:31:34,855 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-18 22:31:38,463 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-18 22:31:38,651 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-18 22:31:38,907 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 22:31:41,266 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 22:31:42,056 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 22:32:03,230 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 22:32:05,289 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 22:32:06,211 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 22:41:26,984 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-18 22:41:30,572 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-18 22:41:30,763 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-18 22:41:31,026 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 22:41:33,101 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 22:41:33,875 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 22:42:48,263 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-18 22:42:51,811 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-18 22:42:52,000 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-18 22:42:52,257 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 22:42:57,309 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 22:42:57,628 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 22:43:31,950 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-18 22:43:35,621 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-18 22:43:35,819 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-18 22:43:36,091 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 22:43:38,604 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 22:43:38,921 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 22:44:02,566 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 22:44:04,477 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 22:44:04,805 dnspod_api.py [django:58] [INFO]- Dnspod域名获取成功！
+2018-07-18 23:10:16,153 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 8, in <module>
+    from dnspod_api                     import DpApi
+  File "J:\arno\test\phx_web\dns\dnspod_api.py", line 37
+    'URL:  + %s' %url,
+               ^
+SyntaxError: invalid syntax
+2018-07-18 23:11:14,094 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 23:11:15,788 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 31, in GetDnspodProductRecords
+    result, status = dpapi.GetDnsLists(type='all')
+  File "J:\arno\test\phx_web\dns\dnspod_api.py", line 63, in GetDnsLists
+    return self.ExePost('/Domain.List', "Dnspod域名列表获取")
+TypeError: ExePost() takes exactly 2 arguments (3 given)
+2018-07-18 23:11:46,901 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 23:11:49,976 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-18 23:11:50,601 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-18 23:21:17,490 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-18 23:21:22,076 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-18 23:21:22,266 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-18 23:21:22,526 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 23:21:24,815 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-18 23:21:25,217 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-18 23:23:45,492 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-18 23:23:49,163 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-18 23:23:49,354 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-18 23:23:49,601 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 23:23:51,732 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-18 23:23:52,053 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-18 23:23:56,029 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-18 23:23:58,369 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-18 23:23:58,986 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-18 23:24:02,868 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-18 23:24:02,869 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'67040834', u'name': u'wgcp168.net'}]
+2018-07-18 23:24:06,391 dnspod_api.py [django:55] [INFO]- Dnspod域名解析获取 成功！
+2018-07-18 23:27:43,390 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-18 23:27:43,390 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'67040834', u'name': u'wgcp168.net'}]
+2018-07-18 23:27:47,855 dnspod_api.py [django:55] [INFO]- Dnspod域名解析获取 成功！
+2018-07-18 23:28:11,260 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-18 23:28:11,262 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'61382896', u'name': u'l5uc.com'}]
+2018-07-18 23:28:14,529 dnspod_api.py [django:55] [INFO]- Dnspod域名解析获取 成功！
+2018-07-18 23:28:23,644 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-18 23:28:23,644 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'61806906', u'name': u'l5uc22.com'}]
+2018-07-18 23:28:27,210 dnspod_api.py [django:55] [INFO]- Dnspod域名解析获取 成功！
+2018-07-18 23:37:00,983 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-18 23:37:00,984 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'61806986', u'name': u'l5xm.com'}, {u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'61806906', u'name': u'l5uc22.com'}]
+2018-07-18 23:37:04,838 dnspod_api.py [django:55] [INFO]- Dnspod域名解析获取 成功！
+2018-07-18 23:37:05,351 dnspod_api.py [django:55] [INFO]- Dnspod域名解析获取 成功！
+2018-07-19 14:24:11,158 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 14:24:16,391 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 14:24:16,615 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 14:26:28,655 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 14:26:33,009 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 14:26:33,233 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 14:26:33,601 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 14:26:35,915 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 14:26:36,724 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 14:26:41,221 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 14:26:41,223 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'67040834', u'name': u'wgcp168.net'}]
+2018-07-19 14:26:45,395 dnspod_api.py [django:55] [INFO]- Dnspod域名解析获取 成功！
+2018-07-19 14:27:26,022 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 14:27:29,628 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 14:27:29,828 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 14:27:30,091 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 14:27:32,002 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 14:27:32,648 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 14:28:16,062 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 14:28:21,016 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 14:28:24,617 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 14:28:29,173 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 14:28:29,174 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'67040834', u'name': u'wgcp168.net'}]
+2018-07-19 14:28:35,690 dnspod_api.py [django:55] [INFO]- Dnspod域名解析获取 成功！
+2018-07-19 14:29:57,329 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 14:29:57,329 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'67040834', u'name': u'wgcp168.net'}]
+2018-07-19 14:30:01,104 dnspod_api.py [django:55] [INFO]- Dnspod域名解析获取 成功！
+2018-07-19 14:30:13,150 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 14:30:13,151 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'61806592', u'name': u'l5668.com'}]
+2018-07-19 14:30:16,653 dnspod_api.py [django:55] [INFO]- Dnspod域名解析获取 成功！
+2018-07-19 15:24:41,058 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 15:24:45,980 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 15:24:46,178 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 15:24:46,463 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 15:24:48,993 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 15:24:49,394 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 15:24:57,908 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 15:24:57,908 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'61806592', u'name': u'l5668.com'}]
+2018-07-19 15:25:01,924 dnspod_api.py [django:55] [INFO]- Dnspod域名[l5668.com]解析获取 成功！
+2018-07-19 15:25:04,928 base.py [django.request:170] [WARNING]- Not Found: /dns/dnspod/update_record_status
+2018-07-19 15:25:26,293 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 15:25:29,997 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 15:25:30,187 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 15:25:30,454 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 15:25:32,706 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 15:25:34,005 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 15:25:42,957 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 15:25:42,959 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'61806592', u'name': u'l5668.com'}]
+2018-07-19 15:25:46,821 dnspod_api.py [django:55] [INFO]- Dnspod域名[l5668.com]解析获取 成功！
+2018-07-19 15:25:48,240 dnspod.py [django:90] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 15:25:48,240 dnspod.py [django:92] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'zone_id': u'61806592', u'zone': u'l5668.com', u'enabled': u'0', u'record_line_id': u'0', u'value': u'119.47.83.102', u'0': True, u'sub_domain': u'cloud', u'record_id': u'339308593', u'type': u'A', u'name': u'cloud.l5668.com'}]
+2018-07-19 15:47:28,184 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 15:47:32,148 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 15:47:32,375 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 15:47:32,674 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 15:47:35,401 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 15:47:35,928 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 15:47:41,676 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 15:47:41,676 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'61806592', u'name': u'l5668.com'}]
+2018-07-19 15:47:51,276 dnspod_api.py [django:55] [INFO]- Dnspod域名[l5668.com]解析获取 成功！
+2018-07-19 15:47:52,959 dnspod.py [django:90] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 15:47:52,959 dnspod.py [django:92] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'zone_id': u'61806592', u'zone': u'l5668.com', u'enabled': 1, u'record_line_id': u'0', u'value': u'119.47.83.102', u'0': True, u'sub_domain': u'cloud', u'record_id': u'339308593', u'type': u'A', u'name': u'cloud.l5668.com'}]
+2018-07-19 15:49:47,806 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 15:49:51,638 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 15:49:51,828 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 15:49:52,104 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 15:49:54,424 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 15:49:54,750 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 15:50:00,076 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 15:50:00,076 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'61806592', u'name': u'l5668.com'}]
+2018-07-19 15:50:03,336 dnspod_api.py [django:55] [INFO]- Dnspod域名[l5668.com]解析获取 成功！
+2018-07-19 15:50:04,566 dnspod.py [django:90] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 15:50:04,568 dnspod.py [django:92] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'zone_id': u'61806592', u'zone': u'l5668.com', u'enabled': u'1', u'record_line_id': u'0', u'value': u'119.47.83.102', u'0': True, u'sub_domain': u'cloud', u'record_id': u'339308593', u'type': u'A', u'name': u'cloud.l5668.com'}]
+2018-07-19 15:50:12,766 dnspod.py [django:90] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 15:50:12,767 dnspod.py [django:92] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'zone_id': u'61806592', u'zone': u'l5668.com', u'enabled': u'0', u'record_line_id': u'0', u'value': u'119.47.83.102', u'0': True, u'sub_domain': u'cloud', u'record_id': u'339308593', u'type': u'A', u'name': u'cloud.l5668.com'}]
+2018-07-19 15:52:33,351 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 15:52:36,984 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 15:52:37,176 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 15:52:37,450 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 15:52:39,525 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 15:52:42,858 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 15:52:48,709 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 15:52:48,709 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'61806592', u'name': u'l5668.com'}]
+2018-07-19 15:52:52,020 dnspod_api.py [django:55] [INFO]- Dnspod域名[l5668.com]解析获取 成功！
+2018-07-19 15:52:53,311 dnspod.py [django:90] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 15:52:53,311 dnspod.py [django:92] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'zone_id': u'61806592', u'zone': u'l5668.com', u'enabled': u'1', u'record_line_id': u'0', u'value': u'119.47.83.102', u'0': True, u'sub_domain': u'cloud', u'record_id': u'339308593', u'type': u'A', u'name': u'cloud.l5668.com'}]
+2018-07-19 15:52:56,078 dnspod.py [django:90] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 15:52:56,078 dnspod.py [django:92] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'zone_id': u'61806592', u'zone': u'l5668.com', u'enabled': u'1', u'record_line_id': u'0', u'value': u'119.47.83.102', u'0': True, u'sub_domain': u'cloud', u'record_id': u'339308593', u'type': u'A', u'name': u'cloud.l5668.com'}]
+2018-07-19 15:52:57,229 dnspod.py [django:90] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 15:52:57,230 dnspod.py [django:92] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'zone_id': u'61806592', u'zone': u'l5668.com', u'enabled': u'1', u'record_line_id': u'0', u'value': u'119.47.83.102', u'0': True, u'sub_domain': u'cloud', u'record_id': u'339308593', u'type': u'A', u'name': u'cloud.l5668.com'}]
+2018-07-19 15:53:20,519 dnspod.py [django:90] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 15:53:20,519 dnspod.py [django:92] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'zone_id': u'61806592', u'zone': u'l5668.com', u'enabled': u'1', u'record_line_id': u'0', u'value': u'119.47.83.102', u'0': True, u'sub_domain': u'cloud', u'record_id': u'339308593', u'type': u'A', u'name': u'cloud.l5668.com'}]
+2018-07-19 15:56:11,259 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 15:56:15,792 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 15:56:15,990 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 15:56:16,273 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 15:56:18,588 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 15:56:18,915 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 15:56:25,463 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 15:56:25,463 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'61806592', u'name': u'l5668.com'}]
+2018-07-19 15:56:29,384 dnspod_api.py [django:55] [INFO]- Dnspod域名[l5668.com]解析获取 成功！
+2018-07-19 15:56:56,617 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 15:57:00,210 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 15:57:00,403 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 15:57:00,687 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 15:57:03,698 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 15:57:05,388 dnspod_api.py [django:55] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 15:57:17,308 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 15:57:17,308 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'45400594', u'name': u'lebocdn.com'}]
+2018-07-19 15:57:21,003 dnspod_api.py [django:55] [INFO]- Dnspod域名[lebocdn.com]解析获取 成功！
+2018-07-19 15:57:30,568 dnspod.py [django:91] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 15:57:30,568 dnspod.py [django:93] [INFO]- [{u'record_line_id': u'7%3D0', u'name': u'apiad.hhy988.com.lebocdn.com', u'zone': u'lebocdn.com', u'record_line': u'\u56fd\u5185', u'enabled': u'1', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'speed.l5ali.com.', u'0': True, u'sub_domain': u'apiad.hhy988.com', u'record_id': u'365573789', u'type': u'CNAME', u'zone_id': u'45400594'}]
+2018-07-19 16:02:29,976 dnspod.py [django:91] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 16:02:29,977 dnspod.py [django:93] [INFO]- [{u'record_line_id': u'7%3D0', u'name': u'app.hhy988.com.lebocdn.com', u'zone': u'lebocdn.com', u'record_line': u'\u56fd\u5185', u'enabled': u'1', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'app.hhy988.com.whecloud.com.', u'0': True, u'sub_domain': u'app.hhy988.com', u'record_id': u'365673768', u'type': u'CNAME', u'zone_id': u'45400594'}]
+2018-07-19 16:09:28,430 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_record
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 106
+    'domain':         record['zone'],
+            ^
+SyntaxError: invalid syntax
+2018-07-19 16:11:50,846 dnspod.py [django:91] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 16:11:50,848 dnspod.py [django:93] [INFO]- [{u'record_line_id': u'7%3D0', u'name': u'app.hhy988.com.lebocdn.com', u'zone': u'lebocdn.com', u'record_line': u'\u56fd\u5185', u'enabled': u'1', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'app.hhy988.com.whecloud.com.', u'0': True, u'sub_domain': u'app.hhy988.com', u'record_id': u'365673768', u'type': u'CNAME', u'zone_id': u'45400594'}]
+2018-07-19 16:11:54,690 dnspod_api.py [django:51] [ERROR]- Attention: Dnspod域名[lebocdn.com]解析修改 失败，请检查:
+URL:  + https://dnsapi.cn/Record.Modify
+{u'message': u'Record line invalid', u'code': u'26', u'created_at': u'2018-07-19 16:11:28'}
+2018-07-19 16:11:56,013 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-19 16:13:24,286 dnspod.py [django:91] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 16:13:24,286 dnspod.py [django:93] [INFO]- [{u'record_line_id': u'7%3D0', u'name': u'app.hhy988.com.lebocdn.com', u'zone': u'lebocdn.com', u'record_line': u'\u56fd\u5185', u'enabled': u'1', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'app.hhy988.com.whecloud.com.', u'0': True, u'sub_domain': u'app.hhy988.com', u'record_id': u'365673768', u'type': u'CNAME', u'zone_id': u'45400594'}]
+2018-07-19 16:13:27,946 dnspod_api.py [django:51] [ERROR]- Attention: Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 失败，请检查:
+URL:  + https://dnsapi.cn/Record.Modify
+{u'message': u'Record line invalid', u'code': u'26', u'created_at': u'2018-07-19 16:13:01'}
+2018-07-19 16:13:31,744 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-19 16:16:32,413 dnspod.py [django:92] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 16:16:32,414 dnspod.py [django:94] [INFO]- [{u'record_line_id': u'7%3D0', u'name': u'app.hhy988.com.lebocdn.com', u'zone': u'lebocdn.com', u'record_line': u'\u56fd\u5185', u'enabled': u'1', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'app.hhy988.com.whecloud.com.', u'0': True, u'sub_domain': u'app.hhy988.com', u'record_id': u'365673768', u'type': u'CNAME', u'zone_id': u'45400594'}]
+2018-07-19 16:16:36,194 dnspod_api.py [django:51] [ERROR]- Attention: Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 失败，请检查:
+URL:  + https://dnsapi.cn/Record.Modify
+{u'message': u'Record line invalid', u'code': u'26', u'created_at': u'2018-07-19 16:16:09'}
+2018-07-19 16:16:37,563 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-19 16:17:25,226 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 16:17:25,227 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'45400594', u'name': u'lebocdn.com'}]
+2018-07-19 16:17:28,780 dnspod_api.py [django:55] [INFO]- Dnspod域名[lebocdn.com]解析获取 成功！
+2018-07-19 16:17:31,526 dnspod.py [django:92] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 16:17:31,528 dnspod.py [django:94] [INFO]- [{u'record_line_id': u'7=0', u'name': u'app.hhy988.com.lebocdn.com', u'zone': u'lebocdn.com', u'record_line': u'\u56fd\u5185', u'enabled': u'1', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'app.hhy988.com.whecloud.com.', u'0': True, u'sub_domain': u'app.hhy988.com', u'record_id': u'365673768', u'type': u'CNAME', u'zone_id': u'45400594'}]
+2018-07-19 16:17:34,997 dnspod_api.py [django:55] [INFO]- Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 成功！
+2018-07-19 16:19:06,947 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 16:19:06,948 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'45400594', u'name': u'lebocdn.com'}]
+2018-07-19 16:19:10,538 dnspod_api.py [django:55] [INFO]- Dnspod域名[lebocdn.com]解析获取 成功！
+2018-07-19 16:19:15,431 dnspod.py [django:92] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 16:19:15,431 dnspod.py [django:94] [INFO]- [{u'record_line_id': u'7=0', u'name': u'app.hhy988.com.lebocdn.com', u'zone': u'lebocdn.com', u'record_line': u'\u56fd\u5185', u'enabled': u'1', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'app.hhy988.com.whecloud.com.', u'0': True, u'sub_domain': u'app.hhy988.com', u'record_id': u'365673768', u'type': u'CNAME', u'zone_id': u'45400594'}]
+2018-07-19 16:19:18,819 dnspod_api.py [django:55] [INFO]- Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 成功！
+2018-07-19 16:20:39,017 dnspod.py [django:92] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 16:20:39,017 dnspod.py [django:94] [INFO]- [{u'record_line_id': u'7=0', u'name': u'app.hhy988.com.lebocdn.com', u'zone': u'lebocdn.com', u'record_line': u'\u56fd\u5185', u'enabled': u'0', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'app.hhy988.com.whecloud.com.', u'0': True, u'sub_domain': u'app.hhy988.com', u'record_id': u'365673768', u'type': u'CNAME', u'zone_id': u'45400594'}]
+2018-07-19 16:20:40,187 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 16:20:40,187 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'45400594', u'name': u'lebocdn.com'}]
+2018-07-19 16:20:43,119 dnspod_api.py [django:55] [INFO]- Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 成功！
+2018-07-19 16:20:43,581 dnspod_api.py [django:55] [INFO]- Dnspod域名[lebocdn.com]解析获取 成功！
+2018-07-19 16:20:47,453 dnspod.py [django:92] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 16:20:47,453 dnspod.py [django:94] [INFO]- [{u'record_line_id': u'7=0', u'name': u'app.hhy988.com.lebocdn.com', u'zone': u'lebocdn.com', u'record_line': u'\u56fd\u5185', u'enabled': u'1', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'app.hhy988.com.whecloud.com.', u'0': True, u'sub_domain': u'app.hhy988.com', u'record_id': u'365673768', u'type': u'CNAME', u'zone_id': u'45400594'}]
+2018-07-19 16:20:51,196 dnspod_api.py [django:55] [INFO]- Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 成功！
+2018-07-19 16:21:20,194 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 16:21:20,194 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'45400594', u'name': u'lebocdn.com'}]
+2018-07-19 16:21:24,003 dnspod_api.py [django:55] [INFO]- Dnspod域名[lebocdn.com]解析获取 成功！
+2018-07-19 16:21:36,717 dnspod.py [django:92] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 16:21:36,717 dnspod.py [django:94] [INFO]- [{u'record_line_id': u'7=0', u'name': u'app.hhy988.com.lebocdn.com', u'zone': u'lebocdn.com', u'record_line': u'\u56fd\u5185', u'enabled': u'1', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'app.hhy988.com.whecloud.com.', u'0': True, u'sub_domain': u'app.hhy988.com', u'record_id': u'365673768', u'type': u'CNAME', u'zone_id': u'45400594'}]
+2018-07-19 16:21:40,384 dnspod_api.py [django:55] [INFO]- Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 成功！
+2018-07-19 16:33:59,805 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 16:33:59,805 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'45400594', u'name': u'lebocdn.com'}]
+2018-07-19 16:34:03,266 dnspod_api.py [django:55] [INFO]- Dnspod域名[lebocdn.com]解析获取 成功！
+2018-07-19 16:38:40,407 dnspod.py [django:92] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 16:38:40,407 dnspod.py [django:94] [INFO]- [{u'record_line_id': u'7=0', u'name': u'app.hhy988.com.lebocdn.com', u'zone': u'lebocdn.com', u'record_line': u'\u56fd\u5185', u'enabled': u'1', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'app.hhy988.com.whecloud.com.', u'0': True, u'sub_domain': u'app.hhy988.com', u'record_id': u'365673768', u'type': u'CNAME', u'zone_id': u'45400594'}]
+2018-07-19 16:38:52,805 dnspod_api.py [django:55] [INFO]- Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 成功！
+2018-07-19 16:51:53,293 dnspod.py [django:92] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 16:51:53,295 dnspod.py [django:94] [INFO]- [{u'record_line_id': u'7=0', u'name': u'app.hhy988.com.lebocdn.com', u'zone': u'lebocdn.com', u'record_line': u'\u56fd\u5185', u'enabled': u'0', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'app.hhy988.com.whecloud.com.', u'0': True, u'sub_domain': u'app.hhy988.com', u'record_id': u'365673768', u'type': u'CNAME', u'zone_id': u'45400594'}]
+2018-07-19 16:51:57,168 dnspod_api.py [django:55] [INFO]- Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 成功！
+2018-07-19 17:05:13,709 dnspod.py [django:92] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 17:05:13,710 dnspod.py [django:94] [INFO]- [{u'record_line_id': u'7=0', u'name': u'app.hhy988.com.lebocdn.com', u'zone': u'lebocdn.com', u'record_line': u'\u56fd\u5185', u'enabled': u'1', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'app.hhy988.com.whecloud.com.', u'0': True, u'sub_domain': u'app.hhy988.com', u'record_id': u'365673768', u'type': u'CNAME', u'zone_id': u'45400594'}]
+2018-07-19 17:05:18,190 dnspod_api.py [django:55] [INFO]- Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 成功！
+2018-07-19 17:07:00,759 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 17:07:00,760 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'45400594', u'name': u'lebocdn.com'}]
+2018-07-19 17:07:04,043 dnspod_api.py [django:40] [INFO]- {'login_token': u'61345,d9fe9578670af59743cd173219288182', 'domain': u'lebocdn.com', 'format': 'json'}
+2018-07-19 17:07:04,704 dnspod_api.py [django:56] [INFO]- Dnspod域名[lebocdn.com]解析获取 成功！
+2018-07-19 17:07:08,236 dnspod.py [django:92] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 17:07:08,236 dnspod.py [django:94] [INFO]- [{u'record_line_id': u'7=0', u'name': u'app.hhy988.com.lebocdn.com', u'zone': u'lebocdn.com', u'record_line': u'\u56fd\u5185', u'enabled': u'1', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'app.hhy988.com.whecloud.com.', u'0': True, u'sub_domain': u'app.hhy988.com', u'record_id': u'365673768', u'type': u'CNAME', u'zone_id': u'45400594'}]
+2018-07-19 17:07:11,249 dnspod_api.py [django:40] [INFO]- {'status': 'disable', 'domain': u'lebocdn.com', 'format': 'json', 'login_token': u'61345,d9fe9578670af59743cd173219288182', 'record_line_id': u'7=0', 'value': u'app.hhy988.com.whecloud.com.', 'record_type': u'CNAME', 'sub_domain': u'app.hhy988.com', 'record_id': u'365673768'}
+2018-07-19 17:07:11,678 dnspod_api.py [django:56] [INFO]- Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 成功！
+2018-07-19 17:07:53,775 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 17:07:53,776 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'45400594', u'name': u'lebocdn.com'}]
+2018-07-19 17:07:56,780 dnspod_api.py [django:40] [INFO]- {'login_token': u'61345,d9fe9578670af59743cd173219288182', 'domain': u'lebocdn.com', 'format': 'json'}
+2018-07-19 17:07:57,723 dnspod_api.py [django:56] [INFO]- Dnspod域名[lebocdn.com]解析获取 成功！
+2018-07-19 17:07:59,776 dnspod.py [django:92] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 17:07:59,776 dnspod.py [django:94] [INFO]- [{u'record_line_id': u'7=0', u'name': u'app.hhy988.com.lebocdn.com', u'zone': u'lebocdn.com', u'record_line': u'\u56fd\u5185', u'enabled': u'1', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'app.hhy988.com.whecloud.com.', u'0': True, u'sub_domain': u'app.hhy988.com', u'record_id': u'365673768', u'type': u'CNAME', u'zone_id': u'45400594'}]
+2018-07-19 17:08:02,852 dnspod_api.py [django:40] [INFO]- {'status': 'enable', 'domain': u'lebocdn.com', 'format': 'json', 'login_token': u'61345,d9fe9578670af59743cd173219288182', 'record_line_id': u'7=0', 'value': u'app.hhy988.com.whecloud.com.', 'record_type': u'CNAME', 'sub_domain': u'app.hhy988.com', 'record_id': u'365673768'}
+2018-07-19 17:08:06,494 dnspod_api.py [django:56] [INFO]- Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 成功！
+2018-07-19 17:10:41,441 dnspod.py [django:92] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 17:10:41,443 dnspod.py [django:94] [INFO]- [{u'record_line_id': u'7=0', u'name': u'app.hhy988.com.lebocdn.com', u'zone': u'lebocdn.com', u'record_line': u'\u56fd\u5185', u'enabled': u'0', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'app.hhy988.com.whecloud.com.', u'0': True, u'sub_domain': u'app.hhy988.com', u'record_id': u'365673768', u'type': u'CNAME', u'zone_id': u'45400594'}]
+2018-07-19 17:10:48,338 dnspod_api.py [django:56] [INFO]- Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 成功！
+2018-07-19 17:15:41,799 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 17:15:46,305 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 17:15:46,494 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 17:15:46,782 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 17:15:49,019 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 17:15:49,719 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 17:15:56,413 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 17:15:56,413 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'61806592', u'name': u'l5668.com'}]
+2018-07-19 17:16:00,127 dnspod_api.py [django:56] [INFO]- Dnspod域名[l5668.com]解析获取 成功！
+2018-07-19 21:23:59,109 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 21:24:02,976 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 21:24:03,164 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 21:24:03,444 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 21:24:05,585 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 21:24:09,036 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 21:24:12,647 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 21:24:12,647 dnspod.py [django:51] [INFO]- []
+2018-07-19 21:24:20,141 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 21:24:20,141 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'39146190', u'name': u'l56668.com'}]
+2018-07-19 21:24:24,068 dnspod_api.py [django:56] [INFO]- Dnspod域名[l56668.com]解析获取 成功！
+2018-07-19 21:26:04,434 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 21:26:08,288 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 21:26:08,483 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 21:26:08,776 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 21:26:11,137 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 21:26:11,740 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 21:26:20,256 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 21:26:20,256 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'45400596', u'name': u'cdnlebo.com'}]
+2018-07-19 21:26:24,832 dnspod_api.py [django:56] [INFO]- Dnspod域名[cdnlebo.com]解析获取 成功！
+2018-07-19 21:27:13,588 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 21:27:17,335 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 21:27:17,535 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 21:27:17,803 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 21:27:22,756 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 21:27:23,079 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 21:27:27,358 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 21:27:27,359 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'66997331', u'name': u'wgle5.com'}]
+2018-07-19 21:27:30,884 dnspod_api.py [django:56] [INFO]- Dnspod域名[wgle5.com]解析获取 成功！
+2018-07-19 21:29:33,486 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 21:29:37,151 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 21:29:37,342 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 21:29:37,618 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 21:29:43,430 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 21:29:47,013 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 21:29:51,270 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 21:29:51,270 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'65170120', u'name': u'hgb168.com'}]
+2018-07-19 21:29:54,690 dnspod_api.py [django:56] [INFO]- Dnspod域名[hgb168.com]解析获取 成功！
+2018-07-19 21:36:00,306 dnspod.py [django:92] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 21:36:00,306 dnspod.py [django:94] [INFO]- [{u'record_line_id': u'0', u'name': u'hgb168.com', u'zone': u'hgb168.com', u'record_line': u'\u9ed8\u8ba4', u'enabled': u'0', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'f1g1ns2.dnspod.net.', u'0': True, u'sub_domain': u'@', u'record_id': u'351624000', u'type': u'NS', u'zone_id': u'65170120'}]
+2018-07-19 21:36:04,990 dnspod_api.py [django:56] [INFO]- Dnspod域名[@.hgb168.com]解析修改 成功！
+2018-07-19 21:37:02,137 dnspod.py [django:92] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/update_record
+2018-07-19 21:37:02,138 dnspod.py [django:94] [INFO]- [{u'record_line_id': u'0', u'name': u'hgb168.com', u'zone': u'hgb168.com', u'record_line': u'\u9ed8\u8ba4', u'enabled': u'1', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'f1g1ns2.dnspod.net.', u'0': True, u'sub_domain': u'@', u'record_id': u'351624000', u'type': u'NS', u'zone_id': u'65170120'}]
+2018-07-19 21:37:05,417 dnspod_api.py [django:52] [ERROR]- Attention: Dnspod域名[@.hgb168.com]解析修改 失败，请检查:
+URL:  + https://dnsapi.cn/Record.Modify
+{u'message': u'NS \u8bb0\u5f55\u7684\u5b50\u57df\u540d\u4e0d\u80fd\u4e3a @', u'code': u'31', u'created_at': u'2018-07-19 21:36:38'}
+2018-07-19 21:37:06,621 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-19 21:45:35,191 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 21:45:35,191 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'65170120', u'name': u'hgb168.com'}]
+2018-07-19 21:45:38,954 dnspod_api.py [django:56] [INFO]- Dnspod域名[hgb168.com]解析获取 成功！
+2018-07-19 21:45:45,710 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 21:45:45,710 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'61806592', u'name': u'l5668.com'}]
+2018-07-19 21:45:49,384 dnspod_api.py [django:56] [INFO]- Dnspod域名[l5668.com]解析获取 成功！
+2018-07-19 21:51:57,920 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 21:52:02,486 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 21:52:02,676 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 21:52:02,967 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 21:52:05,319 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 21:52:05,836 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 22:12:50,951 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 22:12:55,621 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 22:12:55,812 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 22:12:56,092 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 22:12:58,601 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 22:12:59,092 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 22:13:16,197 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 22:13:16,198 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'39146190', u'name': u'l56668.com'}]
+2018-07-19 22:13:21,207 dnspod_api.py [django:56] [INFO]- Dnspod域名[l56668.com]解析获取 成功！
+2018-07-19 22:15:51,726 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 22:15:55,523 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 22:15:55,714 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 22:15:56,010 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 22:15:59,059 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 22:16:20,506 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 22:16:27,141 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 22:16:27,141 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'67040834', u'name': u'wgcp168.net'}]
+2018-07-19 22:16:30,385 dnspod_api.py [django:56] [INFO]- Dnspod域名[wgcp168.net]解析获取 成功！
+2018-07-19 22:16:44,088 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 22:16:44,088 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'39146190', u'name': u'l56668.com'}]
+2018-07-19 22:16:50,361 dnspod_api.py [django:56] [INFO]- Dnspod域名[l56668.com]解析获取 成功！
+2018-07-19 22:17:46,726 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 22:17:50,790 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 22:17:50,980 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 22:17:51,289 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 22:17:54,085 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 22:17:54,400 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 22:19:00,226 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 22:19:00,227 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'39146190', u'name': u'l56668.com'}]
+2018-07-19 22:19:04,042 dnspod_api.py [django:56] [INFO]- Dnspod域名[l56668.com]解析获取 成功！
+2018-07-19 22:22:48,994 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 22:22:53,621 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 22:22:53,812 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 22:22:54,086 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 22:22:56,032 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 22:22:57,188 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 22:23:28,543 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 22:23:32,710 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 22:23:32,901 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 22:23:33,184 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 22:23:35,262 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 22:23:35,586 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 22:24:07,707 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 22:24:11,523 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 22:24:11,714 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 22:24:12,023 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 22:24:14,003 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 22:24:14,638 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 22:24:25,950 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 22:24:25,950 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'39146190', u'name': u'l56668.com'}]
+2018-07-19 22:24:29,799 dnspod_api.py [django:56] [INFO]- Dnspod域名[l56668.com]解析获取 成功！
+2018-07-19 22:35:16,141 dnspod.py [django:90] [INFO]- test11!!!!!!!!!!!!!!!!!
+2018-07-19 22:38:16,519 dnspod.py [django:91] [INFO]- gettest22!!!!!!!!!!!!!!!!!
+2018-07-19 22:39:34,882 dnspod.py [django:143] [INFO]- user:phexus_sa | [WS]127.0.0.1 is requesting. /dns/dnspod/update_records
+2018-07-19 22:39:34,882 dnspod.py [django:145] [INFO]- {"type":"A","enabled":"1","value":"182.16.91.124","records":[{"0":true,"product":"凤凰|勇士","record_line":"默认","sub_domain":"pay4","name":"pay4.l56668.com","record_line_id":"0","zone_id":"39146190","zone":"l56668.com","enabled":"1","value":"182.16.91.123","record_id":"282329318","type":"A"}]}
+2018-07-19 22:39:36,266 dnspod_api.py [django:56] [INFO]- Dnspod域名[pay4.l56668.com]解析修改 成功！
+2018-07-19 22:39:36,266 dnspod.py [django:180] [INFO]- req_ip: 127.0.0.1 | user: phexus_sa | updaterecord: { 'type':A, 'name': pay4.l56668.com, 'content': 182.16.91.123, 'proxied':1 } ---> { 'type':A, 'name': pay4.l56668.com, 'content': 182.16.91.124, 'proxied':1 } {result: True}
+2018-07-19 22:39:37,026 dnspod.py [django:145] [INFO]- None
+2018-07-19 22:41:17,108 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 22:41:17,109 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'39146190', u'name': u'l56668.com'}]
+2018-07-19 22:41:23,717 dnspod_api.py [django:56] [INFO]- Dnspod域名[l56668.com]解析获取 成功！
+2018-07-19 22:41:39,131 dnspod.py [django:143] [INFO]- user:phexus_sa | [WS]127.0.0.1 is requesting. /dns/dnspod/update_records
+2018-07-19 22:41:39,971 dnspod_api.py [django:56] [INFO]- Dnspod域名[pay4.l56668.com]解析修改 成功！
+2018-07-19 22:41:39,971 dnspod.py [django:179] [INFO]- req_ip: 127.0.0.1 | user: phexus_sa | updaterecord: { 'type':A, 'name': pay4.l56668.com, 'content': 182.16.91.124, 'proxied':1 } ---> { 'type':A, 'name': pay4.l56668.com, 'content': 182.16.91.123, 'proxied':1 } {result: True}
+2018-07-19 22:58:29,811 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 114
+    return HttpResponseServerError("修改 %s 域名失败！" %record['name'])
+         ^
+SyntaxError: invalid syntax
+2018-07-19 22:59:06,803 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 183
+    request.websocket.send(json.dumps(return_info))
+          ^
+SyntaxError: invalid syntax
+2018-07-19 22:59:45,842 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 183
+    request.websocket.send(json.dumps(return_info))
+          ^
+SyntaxError: invalid syntax
+2018-07-19 23:01:40,203 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 183
+    request.websocket.send(json.dumps(return_info))
+          ^
+SyntaxError: invalid syntax
+2018-07-19 23:02:39,690 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 183
+    request.websocket.send(json.dumps(return_info))
+          ^
+SyntaxError: invalid syntax
+2018-07-19 23:02:43,049 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 183
+    request.websocket.send(json.dumps(return_info))
+          ^
+SyntaxError: invalid syntax
+2018-07-19 23:02:52,345 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 183
+    request.websocket.send(json.dumps(return_info))
+          ^
+SyntaxError: invalid syntax
+2018-07-19 23:03:20,369 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 183
+    request.websocket.send(json.dumps(return_info))
+          ^
+SyntaxError: invalid syntax
+2018-07-19 23:03:29,403 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 183
+    request.websocket.send(json.dumps(return_info))
+          ^
+SyntaxError: invalid syntax
+2018-07-19 23:03:55,500 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 201
+    status  = result
+         ^
+SyntaxError: invalid syntax
+2018-07-19 23:03:59,733 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 201
+    status  = result
+         ^
+SyntaxError: invalid syntax
+2018-07-19 23:04:24,138 dnspod.py [django:102] [INFO]- user:phexus_sa | [POST]127.0.0.1 is requesting. /dns/dnspod/update_records
+2018-07-19 23:04:24,138 dnspod.py [django:104] [INFO]- [{u'record_line_id': u'0', u'name': u'pay4.l56668.com', u'zone': u'l56668.com', u'record_line': u'\u9ed8\u8ba4', u'enabled': u'0', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'182.16.91.124', u'0': False, u'sub_domain': u'pay4', u'record_id': u'282329318', u'type': u'A', u'zone_id': u'39146190'}]
+2018-07-19 23:04:25,457 dnspod_api.py [django:56] [INFO]- Dnspod域名[pay4.l56668.com]解析修改 成功！
+2018-07-19 23:04:25,457 dnspod.py [django:193] [INFO]- req_ip: 127.0.0.1 | user: phexus_sa | updaterecord: { 'type':null, 'name': null, 'content': null, 'enabled':null } ---> { 'type':A, 'name': pay4.l56668.com, 'content': 182.16.91.124, 'enabled':0 } {result: True}
+2018-07-19 23:04:31,779 dnspod.py [django:102] [INFO]- user:phexus_sa | [POST]127.0.0.1 is requesting. /dns/dnspod/update_records
+2018-07-19 23:04:31,779 dnspod.py [django:104] [INFO]- [{u'record_line_id': u'0', u'name': u'pay4.l56668.com', u'zone': u'l56668.com', u'record_line': u'\u9ed8\u8ba4', u'enabled': u'1', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'182.16.91.124', u'0': False, u'sub_domain': u'pay4', u'record_id': u'282329318', u'type': u'A', u'zone_id': u'39146190'}]
+2018-07-19 23:04:32,407 dnspod_api.py [django:56] [INFO]- Dnspod域名[pay4.l56668.com]解析修改 成功！
+2018-07-19 23:04:32,407 dnspod.py [django:193] [INFO]- req_ip: 127.0.0.1 | user: phexus_sa | updaterecord: { 'type':null, 'name': null, 'content': null, 'enabled':null } ---> { 'type':A, 'name': pay4.l56668.com, 'content': 182.16.91.124, 'enabled':1 } {result: True}
+2018-07-19 23:04:52,742 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 23:04:52,742 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'61806592', u'name': u'l5668.com'}]
+2018-07-19 23:04:59,198 dnspod_api.py [django:56] [INFO]- Dnspod域名[l5668.com]解析获取 成功！
+2018-07-19 23:06:06,581 dnspod.py [django:102] [INFO]- user:phexus_sa | [POST]127.0.0.1 is requesting. /dns/dnspod/update_records
+2018-07-19 23:06:06,581 dnspod.py [django:104] [INFO]- [{u'record_line_id': u'0', u'name': u'speed.l5668.com', u'zone': u'l5668.com', u'record_line': u'\u9ed8\u8ba4', u'enabled': u'1', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'116.206.179.206', u'0': True, u'sub_domain': u'speed', u'record_id': u'344238771', u'type': u'A', u'zone_id': u'61806592'}]
+2018-07-19 23:06:10,237 dnspod_api.py [django:56] [INFO]- Dnspod域名[speed.l5668.com]解析修改 成功！
+2018-07-19 23:06:10,237 dnspod.py [django:193] [INFO]- req_ip: 127.0.0.1 | user: phexus_sa | updaterecord: { 'type':null, 'name': null, 'content': null, 'enabled':null } ---> { 'type':A, 'name': speed.l5668.com, 'content': 116.206.179.206, 'enabled':1 } {result: True}
+2018-07-19 23:06:32,388 dnspod.py [django:102] [INFO]- user:phexus_sa | [POST]127.0.0.1 is requesting. /dns/dnspod/update_records
+2018-07-19 23:06:32,388 dnspod.py [django:104] [INFO]- [{u'record_line_id': u'0', u'name': u'speed.l5668.com', u'zone': u'l5668.com', u'record_line': u'\u9ed8\u8ba4', u'enabled': u'0', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'116.206.179.206', u'0': True, u'sub_domain': u'speed', u'record_id': u'344238771', u'type': u'A', u'zone_id': u'61806592'}]
+2018-07-19 23:06:33,414 dnspod_api.py [django:56] [INFO]- Dnspod域名[speed.l5668.com]解析修改 成功！
+2018-07-19 23:06:33,414 dnspod.py [django:193] [INFO]- req_ip: 127.0.0.1 | user: phexus_sa | updaterecord: { 'type':null, 'name': null, 'content': null, 'enabled':null } ---> { 'type':A, 'name': speed.l5668.com, 'content': 116.206.179.206, 'enabled':0 } {result: True}
+2018-07-19 23:06:38,910 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-19 23:06:43,469 views.py [django:93] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-07-19 23:06:43,657 views.py [django:96] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-07-19 23:06:43,950 dnspod.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-07-19 23:06:47,308 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 23:06:47,859 dnspod_api.py [django:56] [INFO]- Dnspod域名列表获取 成功！
+2018-07-19 23:06:57,269 dnspod.py [django:49] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-19 23:06:57,269 dnspod.py [django:51] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'61806592', u'name': u'l5668.com'}]
+2018-07-19 23:07:01,358 dnspod_api.py [django:56] [INFO]- Dnspod域名[l5668.com]解析获取 成功！
+2018-07-19 23:09:36,540 views.py [django:62] [INFO]- 127.0.0.1 is requesting /dns/cloudflare/index
+2018-07-19 23:09:36,730 views.py [django:65] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u4e09\u5fb7|\u5bcc\u8c6a|668',), (u'\u5149\u5927',), (u'\u51e4\u51f001',), (u'\u51e4\u51f002',), (u'\u52c7\u58eb01',), (u'\u52c7\u58eb02',), (u'\u718a\u732b|\u4e50\u76c8',), (u'\u745e\u94f6',), (u'\u963f\u91cc',)]
+2018-07-19 23:09:37,022 cf.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /dns/cloudflare/get_product_records
