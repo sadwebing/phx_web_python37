@@ -25,6 +25,16 @@ var tableInit = {
                     checkbox: true,
                     width:'2%',
                 },{
+                    field: 'id',
+                    title: 'id',
+                    sortable: true,
+                    formatter: function (value, row, index) {
+                        row.id = index+1;
+                        return index+1;
+                    }
+                    //width:'8%',
+                    //align: 'center'
+                },{
                     field: 'product',
                     title: 'product',
                     sortable: true,
@@ -87,6 +97,7 @@ var tableInit = {
                     width:'6%',
                     checkbox: false,
                     //events: operateEvents,
+                    events: operateStatusEvents,
                     formatter: this.operateFormatter,
                     //width:300,
                 },
@@ -147,10 +158,10 @@ var tableInit = {
 
     operateFormatter: function (value,row,index){
         content = [
-        '<a class="check_server" href="javascript:void(0)" title="删除记录">',
+        '<a class="delete_record" href="javascript:void(0)" title="删除记录">',
         '<i class="text-primary"> 删除</i>',
         '</a>'
-        ].join('');   
+        ].join('');
         return content;
     },
 };
@@ -187,6 +198,48 @@ window.operateStatusEvents = {
                 }else {
                     document.getElementById(row.record_id).checked = true;
                 }
+                if (XMLHttpRequest.enabled == '0'){
+                    toastr.error('后端服务不响应', '错误')
+                }else {
+                    toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.enabled)
+                }
+                //console.info(XMLHttpRequest)
+                //alert(XMLHttpRequest.enabled+': '+XMLHttpRequest.responseText);
+                //tableInit.myViewModel.refresh();
+            }
+        });
+        return false;
+    },
+
+    'click .delete_record': function (e, value, row, index) {
+        var postData = [row];
+        var row_d    = {'index': row.id-1};
+        //console.log(row);
+
+        //删除前先隐藏删除列
+        tableInit.myViewModel.hideRow(row_d);
+        //setTimeout(function(){tableInit.myViewModel.showRow(row_d)}, 2000);
+        //tableInit.myViewModel.showRow(row_d);
+
+        $.ajax({
+            url: "/dns/dnspod/delete_records",
+            type: "post",
+            data: JSON.stringify(postData),
+            success: function (data, enabled) {
+                toastr.success(row.product+": "+row.name, '域名删除成功');
+                //删除列表行
+                tableInit.myViewModel.remove({
+                    'field': 'id',
+                    'values': [row.id]
+                });
+                
+                //alert(data);
+                //tableInit.myViewModel.refresh();
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown){
+                //删除失败，重新展示行
+                tableInit.myViewModel.showRow(row_d);
+                
                 if (XMLHttpRequest.enabled == '0'){
                     toastr.error('后端服务不响应', '错误')
                 }else {

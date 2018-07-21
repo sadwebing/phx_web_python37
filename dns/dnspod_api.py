@@ -70,6 +70,14 @@ class DpApi(object):
         self.__data['domain'] = domain
         return self.ExePost('/Record.List', "Dnspod域名[%s]解析获取" %domain)
         
+    def DeleteZoneRecord(self, domain, record_id, full_domain):
+        '''
+            删除域名解析记录
+        '''
+        self.__data['domain']    = domain
+        self.__data['record_id'] = record_id
+        return self.ExePost('/Record.Remove', "Dnspod域名[%s]删除" %full_domain)
+        
     def UpdateZoneRecord(self, domain, record_id, sub_domain, value, record_type, record_line_id, status):
         '''
             修改域名解析记录

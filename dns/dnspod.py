@@ -17,6 +17,15 @@ def GetDnspodProductRecords(request):
         return HttpResponse('You get nothing!')
     elif request.method == 'POST':
         clientip = getIp(request)
+        username = request.user.username
+        try:
+            role = request.user.userprofile.role
+        except:
+            role = 'none'
+        if not username:
+            request.websocket.send('userNone')
+            logger.info('user: 用户名未知 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
+            return HttpResponseServerError("用户名未知！")
         logger.info('[POST]%s is requesting. %s' %(clientip, request.get_full_path()))
 
         products = dnspod_account.objects.all()
@@ -46,6 +55,16 @@ def GetDnspodZoneRecords(request):
         return HttpResponse('You get nothing!')
     elif request.method == 'POST':
         clientip = getIp(request)
+        username = request.user.username
+        try:
+            role = request.user.userprofile.role
+        except:
+            role = 'none'
+        if not username:
+            request.websocket.send('userNone')
+            logger.info('user: 用户名未知 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
+            return HttpResponseServerError("用户名未知！")
+
         logger.info('[POST]%s is requesting. %s' %(clientip, request.get_full_path()))
         data = json.loads(request.body)['postdata']
         logger.info(data)
@@ -56,11 +75,12 @@ def GetDnspodZoneRecords(request):
             try:
                 dpapi = DpApi(DnsPod_URL, dp_acc.key)
             except Exception, e:
-                logger.error("查询 %s 域名失败！" %zone['name'])
+                logger.error("查询 %s 域名失败！%s" %(zone['name'], str(e)))
                 return HttpResponseServerError("查询 %s 域名失败！" %zone['name'])
             else:
                 result, status = dpapi.GetZoneRecords(zone['name'])
                 if not status:
+                    logger.error("查询 %s 域名失败！%s" %(zone['name'], str(result)))
                     return HttpResponseServerError('error!')
                 else:
                     for record in result['records']:
@@ -189,6 +209,55 @@ def UpdateDnspodRecords(request):
     else:
         return HttpResponse('nothing!')
 
+@csrf_exempt
+def DeleteDnspodRecords(request):
+    if request.method == 'GET':
+        return HttpResponse('You get nothing!')
+    elif request.method == 'POST':
+        clientip = getIp(request)
+        username = request.user.username
+        try:
+            role = request.user.userprofile.role
+        except:
+            role = 'none'
+            
+        try:
+            manage = request.user.userprofile.manage
+        except:
+            manage = 0
+            
+        if manage == 0:
+            logger.info('user: 没有权限 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
+            return HttpResponseServerError("抱歉，您没有权限！")
+            
+        if not username:
+            logger.info('user: 用户名未知 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
+            return HttpResponseServerError("用户名未知！")
+
+        logger.info('[POST]%s is requesting. %s' %(clientip, request.get_full_path()))
+        data = json.loads(request.body)
+        #logger.info(data)
+        record_list = []
+        for zone in data:
+            dp_acc = dnspod_account.objects.get(name=zone['product'])
+
+            try:
+                dpapi = DpApi(DnsPod_URL, dp_acc.key)
+            except Exception, e:
+                logger.error("删除 %s 域名失败！%s" %(zone['name'], str(e)))
+                return HttpResponseServerError("删除 %s 域名失败！" %zone['name'])
+            else:
+                result, status = dpapi.DeleteZoneRecord(zone['zone'], zone['record_id'], zone['name'])
+                if not status:
+                    logger.error("删除 %s 域名失败！%s" %(zone['name'], str(result)))
+                    return HttpResponseServerError("删除 %s 域名失败！" %zone['name'])
+                else:
+                    logger.info("删除 %s 域名成功！%s" %(zone['name'], str(result)))
+
+        return HttpResponse("删除 %s 域名成功！" %zone['name'])
+    else:
+        return HttpResponse('nothing!')
+        
 def insert_ah(clientip, username, type_before, name_before, value_before, status_before, type_after, name_after, value_after, status_after, result):
     logger.info("req_ip: %s | user: %s | updaterecord: { 'type':%s, 'name': %s, 'content': %s, 'enabled':%s } ---> { 'type':%s, 'name': %s, 'content': %s, 'enabled':%s } {result: %s}" %(clientip, username, type_before, name_before, value_before, status_before, type_after, name_after, value_after, status_after, result))
 

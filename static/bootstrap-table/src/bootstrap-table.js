@@ -2442,7 +2442,7 @@
 
         this.initSearch();
         this.initPagination();
-        this.initSort();
+        //this.initSort();
         this.initBody(true);
     };
 
@@ -2578,6 +2578,7 @@
 
         if (params.hasOwnProperty('index')) {
             row = this.getData()[params.index];
+            //console.log(row);
         } else if (params.hasOwnProperty('uniqueId')) {
             row = this.getRowByUniqueId(params.uniqueId);
         }
@@ -2593,6 +2594,8 @@
         } else if (visible && index > -1) {
             this.hiddenRows.splice(index, 1);
         }
+        //this.initSearch();
+        //this.initPagination();
         this.initBody(true);
     };
 

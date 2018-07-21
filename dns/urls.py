@@ -21,6 +21,7 @@ urlpatterns = [
     url('^dnspod/get_product_records$', views.GetDnspodProductRecords, name='GetDnspodProductRecords'),
     url('^dnspod/get_zone_records$', views.GetDnspodZoneRecords, name='GetDnspodZoneRecords'),
     url('^dnspod/update_records$', views.UpdateDnspodRecords, name='UpdateDnspodRecords'),
+    url('^dnspod/delete_records$', views.DeleteDnspodRecords, name='DeleteDnspodRecords'),
     
     #config nginx
     url('^nginx$', nginx.Nginx, name='Nginx'),

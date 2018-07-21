@@ -69,6 +69,18 @@ ko.bindingHandlers.myBootstrapTable = {
         this.hidecolumn = function (params) {
             that.bootstrapTable("hideColumn", params);
         };
+        this.removeByUniqueId = function (params) {
+            that.bootstrapTable("removeByUniqueId", params);
+        };
+        this.remove = function (params) {
+            that.bootstrapTable("remove", params);
+        };
+        this.hideRow = function (params) {
+            that.bootstrapTable("hideRow", params);
+        };
+        this.showRow = function (params) {
+            that.bootstrapTable("showRow", params);
+        };
     };
 })(jQuery);
 
