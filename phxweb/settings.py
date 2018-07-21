@@ -119,6 +119,7 @@ INSTALLED_APPS = (
     'saltstack',
     'dns',
     'detect',
+    'servers',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -1,18 +1,22 @@
 #!/usr/bin/env python
-import pycurl, cStringIO
-response_buffer = cStringIO.StringIO()
+# -*- coding: utf-8 -*-
+import rsa, sys
+# 生成密钥
+pubkey, privkey = rsa.newkeys(64)
 
-c = pycurl.Curl()
-c.setopt(c.URL, 'https://www.ag8.com')
-c.setopt(c.SSL_VERIFYPEER, 0)
-c.setopt(c.SSL_VERIFYHOST, 0)
-#c.setopt(c.FOLLOWLOCATION, True)
-c.setopt(c.HEADER, True)
-c.setopt(c.WRITEFUNCTION, response_buffer.write)
-#c.setopt(c.SSL_CIPHER_LIST, 'TLSv1')
-c.setopt(c.SSLVERSION, 2)
-c.perform()
-print c.getinfo(pycurl.HTTP_CODE)
-c.close
+print pubkey
+print privkey
+sys.exit()
 
-
+# 明文
+message = 'hello'
+# 公钥加密
+crypto = rsa.encrypt(message.encode(), pubkey)
+# 私钥解密
+message = rsa.decrypt(crypto, privkey).decode()
+print(message)
+# 私钥签名
+signature = rsa.sign(message.encode(), privkey, 'SHA-1')
+print signature
+# 公钥验证
+rsa.verify(message.encode(), signature, pubkey)

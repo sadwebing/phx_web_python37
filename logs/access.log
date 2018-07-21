@@ -21839,3 +21839,10 @@ URL:  + https://dnsapi.cn/Record.Remove
 2018-07-21 16:18:21,717 dnspod.py [django:68] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
 2018-07-21 16:18:21,717 dnspod.py [django:70] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'39067769', u'name': u'l5jiamei.com'}]
 2018-07-21 16:18:22,266 dnspod_api.py [django:56] [INFO]- Dnspod域名[l5jiamei.com]解析获取 成功！
+2018-07-21 16:46:51,611 dnspod.py [django:68] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-21 16:46:51,612 dnspod.py [django:70] [INFO]- [{u'product': u'\u745e\u94f6', u'id': u'57811599', u'name': u'ubssp.com'}, {u'product': u'\u745e\u94f6', u'id': u'57811590', u'name': u'ubscp.com'}]
+2018-07-21 16:46:52,118 dnspod_api.py [django:56] [INFO]- Dnspod域名[ubssp.com]解析获取 成功！
+2018-07-21 16:46:52,523 dnspod_api.py [django:56] [INFO]- Dnspod域名[ubscp.com]解析获取 成功！
+2018-07-21 17:35:49,085 dnspod.py [django:68] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-07-21 17:35:49,085 dnspod.py [django:70] [INFO]- [{u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'id': u'39146127', u'name': u'lebole2.com'}]
+2018-07-21 17:35:49,674 dnspod_api.py [django:56] [INFO]- Dnspod域名[lebole2.com]解析获取 成功！

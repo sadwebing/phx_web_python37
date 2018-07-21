@@ -38,8 +38,22 @@ class minion_ip_t(models.Model):
         return " - ".join([self.minion_id, self.ip_addr, self.get_status_display()])
 
 class minion_t(models.Model):
+    choices_provider = (
+            (1, '台湾机房'), 
+            (2, '香港机房'),
+            (3, 'fent'),
+            (4, '星联'),
+            (5, '久速'),
+            (6, '杜杜'),
+            (7, '网时'),
+            (8, '优与云'),
+        )
+
     minion_id = models.CharField(max_length=32, unique=True, null=False)
-    status = models.IntegerField(choices=choices_s, default=1)
+    price     = models.IntegerField(null=True)
+    provider  = models.IntegerField(choices=choices_provider, null=False, default=1)
+    status    = models.IntegerField(choices=choices_s, default=1)
+    info      = models.TextField(blank=True)
 
     def __str__(self):
         return " - ".join([self.minion_id, self.get_status_display()])
@@ -69,11 +83,15 @@ class project_t(models.Model):
     product     = models.IntegerField(choices=choices_prod)
     project     = models.CharField(max_length=10, choices=choices_proj)
     minion_id   = models.ManyToManyField(minion_t)
+    port        = models.IntegerField(null=False, default=11223)
+    password    = models.CharField(max_length=128, null=False, default='/')
     server_type = models.CharField(max_length=10, choices=choices_st, default='nginx')
     role        = models.CharField(max_length=10, choices=choices_role, default='main')
     #domain      = models.ForeignKey(domains, default=domain_D.id)
     uri         = models.CharField(max_length=128, default='/')
     status      = models.IntegerField(choices=choices_s, default=1)
+    privatekey  = models.TextField(null=False, default='thisisdefaultprivatekey')
+    publickey   = models.TextField(null=False, default='thisisdefaultpublickey')
     info        = models.CharField(max_length=128, blank=True)
     class Meta:
         unique_together = ('product' ,'project' ,'envir', 'server_type')
