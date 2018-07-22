@@ -137,7 +137,7 @@ var tableInit = {
         '<a class="check_server" href="javascript:void(0)" title="检测服务">',
         '<i class="text-primary"> 检测</i>',
         '</a>'
-        ].join('');   
+        ].join('');
         return content;
     },
 };

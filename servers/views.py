@@ -98,6 +98,12 @@ def setCookies(request, response, setcookieV):
     except Exception, e:
         logger.error(str(e))
 
+def isStrinList(strA, listB):
+    for item in listB:
+        if strA in item:
+            return True
+    return False
+
 @csrf_exempt
 def GetServersRecords(request):
     if request.method == 'GET':
@@ -122,7 +128,9 @@ def GetServersRecords(request):
             projects = project_t.objects.all()
 
         servers_list = []
-        for project in projects:
+        return_list  = []
+
+        for project in projects: #将项目数据循环获取
             if project.status == 0:
                 continue #禁用的项目不做展示
 
@@ -140,7 +148,7 @@ def GetServersRecords(request):
                 'minions':     [],
             }
 
-            for minion in project.minion_id.all():
+            for minion in project.minion_id.all(): #将服务器属性数据循环获取
                 if minion.status == 0:
                     continue #禁用的服务器不做展示
 
@@ -156,7 +164,21 @@ def GetServersRecords(request):
                     'info':      minion.info,
                     'ip':        [i.ip_addr for i in ips if i.status != 0]
                 }
-                tmp_dict['minions'].append(minion_tmp_dict)
+
+                #ip 刷选
+                try:
+                    data = json.loads(request.body)
+                    ips  = data['ips']
+                except:
+                    tmp_dict['minions'].append(minion_tmp_dict)
+                else:
+                    if len(ips) != 0:
+                        for ip in ips:
+                            if isStrinList(ip, minion_tmp_dict['ip']):
+                                tmp_dict['minions'].append(minion_tmp_dict)
+                                break
+                    else:
+                        tmp_dict['minions'].append(minion_tmp_dict)
 
             servers_list.append(tmp_dict)
 

@@ -102,6 +102,18 @@ var servers = {
             'product': servers.showSelectedValue('item_product'),
             'project': servers.showSelectedValue('item_project'),
             'server_type': servers.showSelectedValue('item_server_type'),
+            'ips': document.getElementById('textarea_item_ips').value.split('\n'),
+        }
+
+        for(var i = 0; i < postData['ips'].length; i++) { 
+            postData['ips'][i] = postData['ips'][i].replace(/(^\s*)|(\s*$)/g, "")
+            if(postData['ips'][i].replace(/ /g, '') === ''){
+                postData['ips'].splice(i, 1);
+            }
+        }
+
+        if (postData['product'].length == 0){
+            alert('您没有查询的权限，请联系管理员！');
         }
 
         for(var i = 0; i < servers_list['item'].length; i++) { 

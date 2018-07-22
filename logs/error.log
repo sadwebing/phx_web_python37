@@ -17412,3 +17412,30 @@ TypeError: setCookies() takes exactly 2 arguments (3 given)
 2018-07-22 22:45:18,072 views.py [django:99] [ERROR]- u'1_12_houtai_nginx'
 2018-07-22 22:45:24,640 views.py [django:99] [ERROR]- u'1_12_houtai_nginx'
 2018-07-22 22:45:33,661 views.py [django:99] [ERROR]- u'1_12_houtai_nginx'
+2018-07-23 00:03:05,796 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/get_servers_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 182, in GetServersRecords
+    return_list[index]['minions'] = []
+IndexError: list index out of range
+2018-07-23 00:04:41,792 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/get_servers_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 182, in GetServersRecords
+    return_list[index]['minions'] = []
+IndexError: list index out of range
+2018-07-23 00:04:50,187 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/get_servers_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 182, in GetServersRecords
+    return_list[index]['minions'] = []
+IndexError: list index out of range
