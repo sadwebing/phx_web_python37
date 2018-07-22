@@ -390,7 +390,7 @@ def reflesh(request):
     logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
     return render(
         request,
-        LimitAccess(role, 'saltstack/reflesh.html'),
+        'saltstack/reflesh.html',
         {
             'clientip':clientip,
             'title': title,

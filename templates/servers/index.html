@@ -1,0 +1,138 @@
+{% if title %}
+    <title>{{title}}</title>
+{% else %}
+    <title>管理中心</title>
+{% endif %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">服务器 列表</h4>
+    </div>
+
+<div class="col-xs-12 col-sm-12 col-md-12">
+    <div class="col-xs-5 col-sm-5 col-md-5">
+        <select class="selectpicker show-tick" onchange="servers.DisplayPanel('item_privkey_select', 'textarea_item_privkey')" id="item_privkey_select" name="item_privkey_select" title="[请选择要解密的项目]" data-width="90%">
+            {% for item in items.item %}
+                <option value={{ item.0 }}>{{ item.1 }}</option>
+            {% endfor %}
+        </select>
+        {% for item in items.item %}
+            <textarea id="textarea_item_privkey_{{ item.0 }}" name="textarea_item_privkey_{{ item.0 }}" style="display: none; height:200px; width: 90%; margin-top: 10px; margin-bottom: 10px; resize: none;" placeholder="密钥"></textarea>
+        {% endfor %}
+    </div>
+    <div class="col-xs-7 col-sm-7 col-md-7">
+        <div id="servers_modal_body">
+            <form class="form-group form-inline" role="form" style="padding-bottom: 15px;">
+                <select class="selectpicker show-tick" id="item_envir" title="[请选择环境]" name="item_envir" data-actions-box="true" multiple data-width="40%"> 
+                    <option value=1>运营环境</option>
+                    <option value=0>测试环境</option>
+                </select>
+                <select class="selectpicker show-tick" data-live-search="true" id="item_product" title="[请选择产品]" name="item_product" data-actions-box="true" multiple data-width="40%"> 
+                    {% for product in items.product %}
+                        <option value={{ product.0 }}>{{ product.1 }}</option>
+                    {% endfor %}
+                </select>
+                <input id="btn_op_search" class="btn btn-default" onclick="servers.GetServersRecords('textarea_item_privkey')" type="button" id="arguments" value="查询" style="margin-left: 15px;">
+            </form>
+            <form class="form-group form-inline" role="form"  style="padding-bottom: 15px;">
+                <select class="selectpicker show-tick" id="item_project" title="[请选择项目]" name="item_project" data-actions-box="true" multiple data-width="40%"> 
+                    {% for project in items.project %}
+                        <option value={{ project.0 }}>{{ project.1 }}</option>
+                    {% endfor %}
+                </select>
+                <select class="selectpicker show-tick" id="item_server_type" title="[请选择服务类型]" name="item_server_type" data-actions-box="true" multiple data-width="40%"> 
+                    {% for server_type in items.server_type %}
+                        <option value={{ server_type.0 }}>{{ server_type.1 }}</option>
+                    {% endfor %}
+                </select>
+            </form>
+            <form class="form-group form-inline" role="form">
+                <textarea id="textarea_add_content" name="textarea_add_content" style="height:100px; width: 90%; margin-bottom: 10px; resize: none;" placeholder="ip地址，模糊查询，一行一条[例如119.47.83]"></textarea>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+    {% comment %}
+    <div id="toolbar" class="btn-group">
+        <button id="btn_edit" type="button" class="btn btn-default" >
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改
+        </button>
+    </div>
+    {% endcomment %}
+
+    <table id="records_table" class="table table-condensed" data-bind="myBootstrapTable:$root">
+    </table>
+
+        <div class="modal fade text-center" id="confirmEditModal" role="dialog" aria-labelledby="confirmEditModalLabel" data-backdrop="static">
+            <div class="modal-dialog" style="display:inline-block; width: auto;">
+                <div class="modal-content" style="width:auto;">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="confirmEditModalLabel">请确认</h4>
+                    </div>
+                    <div class="modal-body">  
+                        <div style="overflow:scroll; max-height: 450px;">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <td>product</td>
+                                        <td>zone</td>
+                                        <td>name</td>
+                                        <td>type</td>
+                                        <td>content</td>
+                                        <td>proxied</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="EditDatas" style="text-align: left">
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <form class="form-inline" style="margin-top: 20px;">
+                            <div class="input-group" style="margin-bottom: 10px;margin-right: 30px;">
+                                <label class="input-group-addon" style="width: 85px;">type</label>
+                                <select name="record_type" class="form-control" id="record_type" placeholder="type" style="width: 150px;"> 
+                                    <option disabled selected value></option>
+                                    <option value="A">A</option>
+                                    <option value="CNAME">CNAME</option>
+                                </select>
+                            </div>
+                            <div class="input-group" style="margin-bottom: 10px;margin-left: 0px;">
+                                <label class="input-group-addon" style="width: 85px;">proxied</label>
+                                <select type="text" name="record_proxied" class="form-control" id="record_proxied" placeholder="proxied"  style="width: 150px;"> 
+                                    <option disabled selected value></option>
+                                    <option value="true">true</option>
+                                    <option value="false">false</option>
+                                </select>
+                            </div>
+                        </form>
+                        <form class="form-inline">
+                            <div class="input-group" style="margin-bottom: 10px;">
+                                <label class="input-group-addon" style="width: 85px;">content</label>
+                                <input type="text" name="record_content" class="form-control" id="record_content" placeholder="解析记录" style="width: 420px;">
+                            </div>
+                            {% comment %}
+                            <div class="input-group" style="margin-bottom: 10px;">
+                                <button id="detect_dns" type="button" class="btn btn-default">检测</button>
+                            </div>
+                            {% endcomment %}
+                        </form>
+                        <p id="update_record_finished_count" style="text-align: left">finished: 0  &emsp;  success: 0  &emsp;  failed: 0</p>
+                        <div class="progress progress-striped active" id="progress_update_record">  
+                            <div class="progress-bar progress-bar-success" role="progressbar" id="progress_bar_update_record" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <p style="text-align: left">Total：<span data-bind="text: datas().length"></span></p>
+                        <button type="button" id="btn_close_edit" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+                        <button type="button" id="btn_commit_edit" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>确认修改</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+  
+<script src="/static/custom/tablejs/servers/servers_index.js"></script>
+<script src="/static/custom/tablejs/servers/get_servers_records.js"></script>

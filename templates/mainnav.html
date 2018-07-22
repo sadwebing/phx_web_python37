@@ -53,6 +53,14 @@
 						</ul>
 						{% endcomment %}
 					</li>
+
+					<li id="servers">
+						<i class="glyphicon glyphicon-home text-primary"> <span>服务器</span></i>
+						<ul>  
+						    <li><a ui-sref="servers_index"><i class="glyphicon glyphicon-align-right"></i>   列表</a></li>
+						</ul>
+					</li>
+
 					{% comment %}
 					<li id="upgrade">
 						<i class="glyphicon glyphicon-sort text-primary"> <span>升级中心</span></i>
@@ -68,6 +76,20 @@
 						</ul>
 					</li>
 					{% endcomment %}
+					{% endif %}
+					
+					{% if role = 'notsa' %}
+					<li id='monitor_saltstack'>
+						<i class="glyphicon glyphicon-list-alt text-primary"> <span> 监控与部署 </span></i>
+						<ul>
+							<li id="saltstack">
+								<i class="glyphicon glyphicon-tasks text-primary"> <span>远程执行</span></i>
+								<ul>  
+								    <li><a ui-sref="saltstack_reflesh"><i class="glyphicon glyphicon-align-right"></i>   缓存清理</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
 					{% endif %}
             	</ul>
     		</div>
@@ -92,5 +114,6 @@
     $('#monitor').children('ul').slideDown();
     $('#saltstack').children('ul').slideDown();
     $('#upgrade').children('ul').slideDown();
+    $('#servers').children('ul').slideDown();
     //$('#detect').children('ul').slideDown();
 </script>

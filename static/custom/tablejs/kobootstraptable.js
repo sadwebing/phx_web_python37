@@ -81,6 +81,12 @@ ko.bindingHandlers.myBootstrapTable = {
         this.showRow = function (params) {
             that.bootstrapTable("showRow", params);
         };
+        this.getData = function (params) {
+            that.bootstrapTable("getData");
+        };
+        this.load = function (params) {
+            that.bootstrapTable("load", params);
+        };
     };
 })(jQuery);
 

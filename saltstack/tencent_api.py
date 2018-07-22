@@ -111,7 +111,7 @@ class tcApi(object):
         self.__params    = {
             'Action':'RefreshCdnUrl',
             'Nonce': random.randint(1, 1000000),
-            'SecretId':secretid,
+            'SecretId':self.__secretid,
             'Timestamp': int(time.time()),
         }
         self.signkey(self.__httpmethod, domains, uri)

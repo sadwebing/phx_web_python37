@@ -57,6 +57,10 @@ TcbsApp.config(function ($stateProvider, $urlRouterProvider) {
             url:"/saltstack_id",
             templateUrl: "/saltstack/saltstack_id"
         })
+        .state("servers_index", {
+            url:"/servers",
+            templateUrl: "/servers/"
+        })
         .state("upgrade_operate", {
             url:"/upgrade_operate",
             templateUrl: "/upgrade/operate"

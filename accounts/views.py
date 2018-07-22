@@ -41,9 +41,10 @@ def home(request):
     else:
         clientip = request.META['REMOTE_ADDR']
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
+
     return render(
         request,
-        LimitAccess(role, 'home/home.html'),
+        'home/home.html',
         {
             'title': title,
             'clientip':clientip,
