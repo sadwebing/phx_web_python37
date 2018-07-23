@@ -78,9 +78,9 @@ def decryptPasswd(request, project, passwd):
         privatekey       = None
 
     if privatekey:
-        private_key = rsa.PrivateKey.load_pkcs1(privatekey) #获取私钥
-        #private_key = rsa.PrivateKey.load_pkcs1(project.privatekey) #获取私钥
         try:
+            private_key = rsa.PrivateKey.load_pkcs1(privatekey) #获取私钥
+            #private_key = rsa.PrivateKey.load_pkcs1(project.privatekey) #获取私钥
             password = rsa.decrypt(base64.decodestring(passwd), private_key).decode() #用私钥解密
         except Exception, e:
             logger.error(item_display+": "+str(e))
@@ -93,10 +93,10 @@ def setCookies(request, response, setcookieV):
     try:
         data = json.loads(request.body)
         for key in data['privkey']:
-            if setcookieV[key]:
+            if setcookieV.has_key(key) and setcookieV[key]:
                 response.set_cookie(key, data['privkey'][key], max_age=604800)
     except Exception, e:
-        logger.error(str(e))
+        logger.error(e)
 
 def isStrinList(strA, listB):
     for item in listB:

@@ -70,6 +70,7 @@ class project_t(models.Model):
         ('nginx',  'nginx'), 
         ('apache', 'apache'),
         ('vpn',    'vpn'),
+        ('flask',    'flask'),
         )
     choices_role = (
         ('main',   'main'), 
@@ -78,8 +79,11 @@ class project_t(models.Model):
     choices_proj = (
         ('caipiao', 'caipiao'), 
         ('sport',   'sport'),
-        ('houtai',   'houtai'),
+        ('houtai',  'houtai'),
+        ('ggz',     'ggz'),
         ('vpn',     'vpn'),
+        ('image',   'image'),
+        ('httpdns', 'httpdns'),
         )
 
     envir       = models.IntegerField(choices=choices_env, default=1)
@@ -94,6 +98,7 @@ class project_t(models.Model):
     #domain      = models.ForeignKey(domains, default=domain_D.id)
     uri         = models.CharField(max_length=128, default='/')
     status      = models.IntegerField(choices=choices_s, default=1)
+    svn         = models.IntegerField(choices=choices_s, default=1)
     privatekey  = models.TextField(null=False, default='thisisdefaultprivatekey')
     publickey   = models.TextField(null=False, default='thisisdefaultpublickey')
     info        = models.CharField(max_length=128, blank=True)

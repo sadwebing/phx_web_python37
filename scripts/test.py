@@ -4,26 +4,24 @@ import rsa, sys, base64
 
 privkey = '''
 -----BEGIN RSA PRIVATE KEY-----
-MIICXAIBAAKBgQDOHF/idTvIic+t8yTAsIYVL3z0Sz/UmbVjHQeAT3GmqoQtlddDZe1E0Bgg09papMhrIM7K+POZp/0tFWviZs0C+9p3tK03s9o4e79NYFtnNp0LF7wMmzQmDVpWmUZprFxEc0pd2nwyGtiOD73jpi838nvG/5Uv+6FKNNVpaczv3wIDAQABAoGANc6YhZEfY1H+4qWIIbmzt1InZ8tBRao+/Tn13FxhCiaXzSLCCLlSQNWmhuNnrKQ6IiV1du2ZArMlWCCwgnFd8YJ5Xn5qEHWM6vakA/W83/pud/3a0LqiVqwlxpTGv5IjfsqjbbgbFjIo2Ql4YUK4xL3vDJEDo38uhLoqLMzGNqECQQDtKwKoomo/7EAA9wes8tlDJeQdUHi0ZGb9UQcvUodmZKPMq27RdIw4bqiL7u99L2qiuJcUUVF34+7PRGrlItNxAkEA3noOHt9DL8SbA1lQQNrj4NhMyNngGdGoMSwl2osfn3HBco/JM3uEHAj6n2x1BN0JSYqAEwDjPt2DfK99NbCwTwJBAIMxoKXiOj4kFP+zpwZPzEltw3NH2Y2IYMRON1hBIe9NSqLkTkgFXa+13vyRbt9kBGwBCmnN1fApISh8o1kfW7ECQADYY99YJ9AxpgkgOL7WVhFPoRMOSNywQDxXl5k5+BfJ/dsqkrAgYwMcQZ+DcPpgwJ1H6m6oDTT68HnzzLz8e98CQC2dY1lAijYWwe1gXDSr8dX7PpFs66lB72QRV5cpg0ku6pdt7uokl/Ymkv26gNtFCL67Nq0tDIgbLaEcxUY4Muo=
+MIICXAIBAAKBgQCs/K7jMZgZDDIqqa5yQy+aC6MoQdAPZW03Bm8u7xrFCtZIOAi/7ncbjPwj8sUQXrdPtdHwVmu+7TTwbFsSAPsyOYM3nD5LpIWQeq8woDO5GDYTffKuXs0wmZhnDjZIcaAaxcXFgWOOWJsb+i9iylBN6trZOQcOYvKIO3jYz0C/wQIDAQABAoGAVPQPC0Ja2Mo1hOAp7LF0Ginm6alQfY8pEKHXTmxccDI/Q95I5cE9u0kEtr7N6pkpWzsGrAo1BeHGYuBD5VaYBaYrFB5kBnvAm8fpFPgAFSfEr7EDzTSXLYIfKTjYEsT15WRrKLg3G0RGmqtZEs62IpIRcfpso0L68GgX8ZcWqqUCQQDhd77u/IPYf/YRaTOsdzPJU7sAtZbQ0cdEwLeFhu2ek/b+3dfRZ6nUBniO5WkAbfxjxTixYCCIp/egIJu+Xr3nAkEAxGmY0LLrXHM+uqbqrFEf1wa/Xmu9lWh32mKXhU1bPuYJhrZyCAU4CDJd7uXty7CoyBev0YxFDjzC9qNZz77QFwJAHOtVDCZLavuOvlD2Fcr8U3hv5flkrMgbfRAS+geCdvKXnb0qr2tSdyWVVQ7L1whEdS+Yw/eGdMDGnD1SfKp+RQJAXBKsYlkdYA9ePp10sSauaFxvZVHYY6u/U46YPRMQTSIFITNxrTTVGXKS+iSrHqtH09TWxMKetJfjRT86INrwLQJBAINFTZXu4qss/B8+rPzCrWdcHxhYDdtr7SqLtI/ogwuxcPuQY4aQb5W9YEkKJ3rHrNJUqoT2pwWtoHX4XUsnsZg=
 -----END RSA PRIVATE KEY-----
 '''
 
 # 生成密钥
 pubkey = '''-----BEGIN PUBLIC KEY-----
-		MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDOHF/idTvIic+t8yTAsIYVL3z0Sz/UmbVjHQeAT3GmqoQtlddDZe1E0Bgg09papMhrIM7K+POZp/0tFWviZs0C+9p3tK03s9o4e79NYFtnNp0LF7wMmzQmDVpWmUZprFxEc0pd2nwyGtiOD73jpi838nvG/5Uv+6FKNNVpaczv3wIDAQAB
+		MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCs/K7jMZgZDDIqqa5yQy+aC6MoQdAPZW03Bm8u7xrFCtZIOAi/7ncbjPwj8sUQXrdPtdHwVmu+7TTwbFsSAPsyOYM3nD5LpIWQeq8woDO5GDYTffKuXs0wmZhnDjZIcaAaxcXFgWOOWJsb+i9iylBN6trZOQcOYvKIO3jYz0C/wQIDAQAB
 		-----END PUBLIC KEY-----'''
 # 明文
-message = 'Br_DdR_bGpwDfFg8VwHe_z63HFIDh5J'
+message = 'Le5JOI8&(*%dsf6`fkj!@3jkl237NgInX@!#qxmmp716'
 
 public_key = rsa.PublicKey.load_pkcs1_openssl_pem(pubkey)
 private_key = rsa.PrivateKey.load_pkcs1(privkey)
 
-print public_key
-print private_key
 
 # 公钥加密
 crypto = rsa.encrypt(message.encode(), public_key)
-print len(crypto)
+
 #a = base64.encodestring(crypto)
 #b = base64.encodestring(a)
 print base64.encodestring(crypto)

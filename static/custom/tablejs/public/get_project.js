@@ -12,6 +12,16 @@ var gp = {
         this.SubmitDeploy();
     },
 
+    isStrinList: function (stringToSearch, arrayToSearch) {
+        for (s = 0; s < arrayToSearch.length; s++) {
+            thisEntry = arrayToSearch[s].toString();
+            if (thisEntry == stringToSearch) {
+                return true;
+            }
+        }
+        return false;
+    },
+
     GetProject: function(){
         $.ajax({
             url: "/saltstack/restart/get_project",
@@ -29,12 +39,16 @@ var gp = {
                     //console.log(name)
                     if (typeof(html_dict[name.product]) == undefined){
                         html_dict[name.product] == ''
+                        html_dict[name.product+'2'] == ''
                     }
                     //console.log(data)
                     //html_name = "<option>"+name+"</option>";
                     html_name = "<option value='"+name.product+"_"+name.project+"' data-subtext='"+name.server_type+" "+name.envir+"'>"+name.project+"</option>";
-                    html_dict[name.product] = html_dict[name.product] + html_name
-                    project_minion_list[name.product+'_'+name.project] = name
+                    html_dict[name.product] = html_dict[name.product] + html_name;
+                    if (name.svn == 1){
+                        html_dict[name.product+'2'] = html_dict[name.product+'2'] + html_name;
+                    }
+                    project_minion_list[name.product+'_'+name.project] = name;
                 }); 
                 //$("#project").html(html);
                 //$("#project_active").html(html);
@@ -51,14 +65,15 @@ var gp = {
                                                 html_dict['pub'],
                                             '</optgroup>',
                                             ].join("")
+
                 var html_restart_project_active = ['<optgroup label="凤凰">',
-                                                        html_dict['fenghuang'],
+                                                        html_dict['fenghuang2'],
                                                     '</optgroup>',
                                                     '<optgroup label="勇士">',
-                                                        html_dict['yongshi'],
+                                                        html_dict['yongshi2'],
                                                     '</optgroup>',
                                                         '<optgroup label="JAVA">',
-                                                    html_dict['java'],
+                                                    html_dict['java2'],
                                             '</optgroup>',
                                                     ].join("")
                 if (document.getElementById('project_active')){

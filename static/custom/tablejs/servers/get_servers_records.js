@@ -121,6 +121,8 @@ var servers = {
             postData['privkey'][servers_list['item'][i]] = document.getElementById(value+"_"+servers_list['item'][i]).value;
         }
 
+        console.log(postData)
+
         $.ajax({
             url: "/servers/get_servers_records",
             type: "post",

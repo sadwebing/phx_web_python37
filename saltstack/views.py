@@ -32,6 +32,7 @@ def GetProjectActive(request):
             tmpdict['product']     = data.get_product_display()
             tmpdict['project']     = data.get_project_display()
             tmpdict['server_type'] = data.get_server_type_display()
+            tmpdict['svn']         = data.svn
             tmpdict['minion_id']   = [minion.minion_id for minion in data.minion_id.filter(status=1).all()]
             projectlist.append(tmpdict)
         logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
