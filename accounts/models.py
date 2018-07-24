@@ -1,6 +1,7 @@
 # coding: utf8
-from django.db import models
+from django.db                  import models
 from django.contrib.auth.models import User
+#from monitor.models             import project_t
 
 # Create your models here.
 class UserProfile(models.Model):
@@ -10,7 +11,8 @@ class UserProfile(models.Model):
                 )
     user = models.OneToOneField(User)    
     role = models.CharField(max_length=200, default='', blank=True)
-    manage = models.IntegerField(choices=choices_mg, default=0)
+    manage  = models.IntegerField(choices=choices_mg, default=0)
+    #project = models.ManyToManyField(project_t, blank=True)
     #address = models.CharField(max_length=200,default='',blank=True)
 
     def __unicode__(self):

@@ -70,8 +70,8 @@ TELEGRAM_API = {
     },
 
     'user_group':{
-        'all':['arno', 'qiuge', 'xiaoxuan', 'xiaowu', 'xiaoye', 'hugoking', 'alan', 'xiaoran', 'v7', 'power', 'john', 'dennis', 'ray', 'white', 'trevor'],
-        'yunwei':['arno', 'xiaoxuan', 'xiaowu', 'xiaoye', 'hugoking', 'alan', 'xiaoran', 'v7', 'power', 'john', 'dennis', 'ray', 'white', 'trevor'],
+        'all':['arno', 'qiuge', 'xiaoxuan', 'xiaowu', 'xiaoye', 'hugoking', 'alan', 'xiaoran', 'v7', 'power', 'john', 'dennis', 'ray', 'white', 'trevor', 'conan'],
+        'yunwei':['arno', 'xiaoxuan', 'xiaowu', 'xiaoye', 'hugoking', 'alan', 'xiaoran', 'v7', 'power', 'john', 'dennis', 'ray', 'white', 'trevor', 'conan'],
     },
 
     'chat_id':{

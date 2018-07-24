@@ -47,6 +47,7 @@ class minion_t(models.Model):
             (6, '杜杜'),
             (7, '网时'),
             (8, '优与云'),
+            (9, '阿里云'),
         )
 
     minion_id = models.CharField(max_length=32, unique=True, null=False)
@@ -70,7 +71,7 @@ class project_t(models.Model):
         ('nginx',  'nginx'), 
         ('apache', 'apache'),
         ('vpn',    'vpn'),
-        ('flask',    'flask'),
+        ('flask',  'flask'),
         )
     choices_role = (
         ('main',   'main'), 
