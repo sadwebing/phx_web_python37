@@ -291,6 +291,6 @@ choices_prod = (
 
             (12, 'fenghuang'),
             (16, 'yongshi'),
-            (27, 'ruiying'),
+            (27, 'ruiyin'),
             (26, 'java'),
             )

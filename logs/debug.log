@@ -1997,3 +1997,11 @@ SubstrateUnderrunError: 3-octet short
 2018-07-23 23:26:26,858 utils.py [django.db.backends:89] [DEBUG]- (0.028) SELECT `monitor_minion_t`.`id`, `monitor_minion_t`.`minion_id`, `monitor_minion_t`.`user`, `monitor_minion_t`.`port`, `monitor_minion_t`.`password`, `monitor_minion_t`.`price`, `monitor_minion_t`.`provider`, `monitor_minion_t`.`status`, `monitor_minion_t`.`info` FROM `monitor_minion_t` INNER JOIN `monitor_project_t_minion_id` ON ( `monitor_minion_t`.`id` = `monitor_project_t_minion_id`.`minion_t_id` ) WHERE (`monitor_project_t_minion_id`.`project_t_id` = 12 AND `monitor_minion_t`.`status` = 1); args=(12, 1)
 2018-07-23 23:26:26,898 utils.py [django.db.backends:89] [DEBUG]- (0.031) SELECT `monitor_minion_t`.`id`, `monitor_minion_t`.`minion_id`, `monitor_minion_t`.`user`, `monitor_minion_t`.`port`, `monitor_minion_t`.`password`, `monitor_minion_t`.`price`, `monitor_minion_t`.`provider`, `monitor_minion_t`.`status`, `monitor_minion_t`.`info` FROM `monitor_minion_t` INNER JOIN `monitor_project_t_minion_id` ON ( `monitor_minion_t`.`id` = `monitor_project_t_minion_id`.`minion_t_id` ) WHERE (`monitor_project_t_minion_id`.`project_t_id` = 13 AND `monitor_minion_t`.`status` = 1); args=(13, 1)
 2018-07-23 23:26:26,898 views.py [django:38] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-07-24 15:48:14,871 utils.py [django.db.backends:89] [DEBUG]- (0.191) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-24 15:48:16,973 utils.py [django.db.backends:89] [DEBUG]- (0.189) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-24 15:48:17,163 utils.py [django.db.backends:89] [DEBUG]- (0.189) SHOW FULL TABLES; args=None
+2018-07-24 15:48:17,375 utils.py [django.db.backends:89] [DEBUG]- (0.194) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-07-24 16:40:39,398 utils.py [django.db.backends:89] [DEBUG]- (0.188) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-24 16:40:40,959 utils.py [django.db.backends:89] [DEBUG]- (0.187) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-07-24 16:40:41,147 utils.py [django.db.backends:89] [DEBUG]- (0.187) SHOW FULL TABLES; args=None
+2018-07-24 16:40:41,338 utils.py [django.db.backends:89] [DEBUG]- (0.187) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()

@@ -80,6 +80,7 @@ class project_t(models.Model):
         ('caipiao', 'caipiao'), 
         ('sport',   'sport'),
         ('houtai',  'houtai'),
+        ('pay',     'pay'),
         ('ggz',     'ggz'),
         ('vpn',     'vpn'),
         ('image',   'image'),
