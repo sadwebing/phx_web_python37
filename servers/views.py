@@ -27,7 +27,7 @@ def Index(request):
         return HttpResponseServerError("用户名未知！")
 
     try:
-        projects = request.user.userprofile.project.all()
+        projects = request.user.userprofile.project.all().order_by('product')
     except:
         projects = []
 
@@ -130,13 +130,13 @@ def GetServersRecords(request):
             data = json.loads(request.body)
             #projects = project_t.objects.filter(envir__in=data['envir'], product__in=data['product'], project__in=data['project'], server_type__in=data['server_type'], ).all()
             try:
-                projects = request.user.userprofile.project.filter(envir__in=data['envir'], product__in=data['product'], project__in=data['project'], server_type__in=data['server_type'], ).all()
+                projects = request.user.userprofile.project.filter(envir__in=data['envir'], product__in=data['product'], project__in=data['project'], server_type__in=data['server_type'], ).all().order_by('product')
             except:
                 projects = []
         except Exception, e:
             logger.error(str(e))
             try:
-                projects = request.user.userprofile.project.all()
+                projects = request.user.userprofile.project.all().order_by('product')
             except:
                 projects = []
 

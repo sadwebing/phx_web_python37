@@ -19,6 +19,7 @@ var tableInit = {
             dataType: "json",
             toolbar: '#toolbar',                //工具按钮用哪个容器
             clickToSelect: false,
+            height:780,
             queryParams: function (param) {
                 return { limit: param.limit, offset: param.offset, 'act':'query_all' };
             },//传递参数（*）
