@@ -25788,3 +25788,152 @@ Traceback (most recent call last):
   File "J:\arno\test\phx_web\monitor\project.py", line 55, in ProjectQuery
     tmp_dict['domain'] = project.domain
 AttributeError: 'project_t' object has no attribute 'domain'
+2018-07-24 22:09:10,963 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_authority_t/8/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 22, in <module>
+    url(r'^servers/', include('servers.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\servers\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\servers\views.py", line 35
+    except:
+    ^
+IndentationError: expected an indented block
+2018-07-24 22:09:12,480 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_authority_t/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 22, in <module>
+    url(r'^servers/', include('servers.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\servers\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\servers\views.py", line 35
+    except:
+    ^
+IndentationError: expected an indented block
+2018-07-24 22:16:27,904 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-24 22:16:29,516 views.py [django:53] [INFO]- 127.0.0.1 is requesting /monitor/services
+2018-07-24 22:16:29,579 project.py [django:23] [INFO]- [POST]127.0.0.1 is requesting. /monitor/project/Query
+2018-07-24 22:16:29,581 project.py [django:38] [INFO]- 查询参数：query_all
+2018-07-24 22:16:29,947 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/project/Query
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\monitor\project.py", line 55, in ProjectQuery
+    tmp_dict['domain'] = project.domain
+AttributeError: 'project_t' object has no attribute 'domain'
+2018-07-24 22:16:34,732 views.py [django:39] [INFO]- 127.0.0.1 is requesting /servers/
+2018-07-24 22:16:40,892 views.py [django:131] [INFO]- [POST]127.0.0.1 is requesting. /servers/get_servers_records
+2018-07-24 22:16:41,038 views.py [django:96] [ERROR]- 运营环境_pub_vpn_vpn: Incorrect padding
+2018-07-24 22:16:41,069 views.py [django:96] [ERROR]- 运营环境_pub_vpn_vpn: Incorrect padding
+2018-07-24 22:16:41,099 views.py [django:96] [ERROR]- 运营环境_pub_vpn_vpn: Incorrect padding
+2018-07-24 22:16:41,131 views.py [django:96] [ERROR]- 运营环境_pub_vpn_vpn: Incorrect padding
+2018-07-24 22:16:41,160 views.py [django:96] [ERROR]- 运营环境_pub_httpdns_flask: Incorrect padding
+2018-07-24 22:16:41,717 views.py [django:96] [ERROR]- 运营环境_fenghuang_sport_nginx: Incorrect padding
+2018-07-24 22:16:41,954 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_fenghuang_image_nginx
+2018-07-24 22:16:41,983 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_fenghuang_image_nginx
+2018-07-24 22:16:42,013 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_fenghuang_ggz_nginx
+2018-07-24 22:16:42,043 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_fenghuang_ggz_nginx
+2018-07-24 22:16:42,076 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_fenghuang_ggz_nginx
+2018-07-24 22:16:42,109 views.py [django:82] [ERROR]- failed to get cookies for 测试环境_fenghuang_sport_nginx
+2018-07-24 22:16:42,141 views.py [django:82] [ERROR]- failed to get cookies for 测试环境_fenghuang_sport_nginx
+2018-07-24 22:16:42,170 views.py [django:96] [ERROR]- 运营环境_yongshi_sport_nginx: Incorrect padding
+2018-07-24 22:16:42,658 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 22:16:42,694 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 22:16:42,727 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 22:16:42,759 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 22:16:42,789 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 22:16:42,821 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 22:16:42,849 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 22:16:42,878 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 22:16:42,907 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 22:16:42,934 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 22:16:42,964 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 22:16:42,993 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 22:16:43,023 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:16:43,055 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:16:43,082 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:16:43,112 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:16:43,144 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:16:43,177 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:16:43,207 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:16:43,236 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:16:43,267 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:16:43,296 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:17:00,253 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-24 22:17:01,243 views.py [django:39] [INFO]- 127.0.0.1 is requesting /servers/
+2018-07-24 22:17:06,084 views.py [django:131] [INFO]- [POST]127.0.0.1 is requesting. /servers/get_servers_records
+2018-07-24 22:17:06,216 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 22:17:06,252 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 22:17:06,282 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 22:17:06,312 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 22:17:06,342 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 22:17:06,371 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 22:17:06,400 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 22:17:06,427 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 22:17:06,457 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 22:17:06,484 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 22:17:06,516 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 22:17:06,546 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 22:17:06,573 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:17:06,605 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:17:06,631 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:17:06,657 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:17:06,687 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:17:06,717 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:17:06,743 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:17:06,772 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:17:06,799 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:17:06,828 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 22:17:42,967 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-24 22:17:44,020 views.py [django:39] [INFO]- 127.0.0.1 is requesting /servers/
+2018-07-24 22:17:48,000 views.py [django:131] [INFO]- [POST]127.0.0.1 is requesting. /servers/get_servers_records
+2018-07-24 22:17:48,099 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_fenghuang_ggz_nginx
+2018-07-24 22:17:48,131 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_fenghuang_ggz_nginx
+2018-07-24 22:17:48,161 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_fenghuang_ggz_nginx
+2018-07-24 22:17:48,292 views.py [django:82] [ERROR]- failed to get cookies for 测试环境_fenghuang_sport_nginx
+2018-07-24 22:17:48,322 views.py [django:82] [ERROR]- failed to get cookies for 测试环境_fenghuang_sport_nginx
+2018-07-24 22:17:48,355 views.py [django:96] [ERROR]- 运营环境_fenghuang_sport_nginx: Incorrect padding
+2018-07-24 22:18:12,229 views.py [django:131] [INFO]- [POST]127.0.0.1 is requesting. /servers/get_servers_records
+2018-07-24 22:18:12,334 views.py [django:82] [ERROR]- failed to get cookies for 测试环境_fenghuang_sport_nginx
+2018-07-24 22:18:12,365 views.py [django:82] [ERROR]- failed to get cookies for 测试环境_fenghuang_sport_nginx
+2018-07-24 22:18:35,608 views.py [django:131] [INFO]- [POST]127.0.0.1 is requesting. /servers/get_servers_records
+2018-07-24 22:18:35,796 views.py [django:96] [ERROR]- 运营环境_yongshi_sport_nginx: Incorrect padding
+2018-07-24 22:19:21,201 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-24 22:19:22,943 views.py [django:39] [INFO]- 127.0.0.1 is requesting /servers/
+2018-07-24 22:19:28,644 views.py [django:131] [INFO]- [POST]127.0.0.1 is requesting. /servers/get_servers_records
+2018-07-24 22:19:28,744 views.py [django:82] [ERROR]- failed to get cookies for 测试环境_fenghuang_sport_nginx
+2018-07-24 22:19:28,776 views.py [django:82] [ERROR]- failed to get cookies for 测试环境_fenghuang_sport_nginx
+2018-07-24 22:19:38,796 views.py [django:131] [INFO]- [POST]127.0.0.1 is requesting. /servers/get_servers_records
+2018-07-24 22:19:43,676 views.py [django:131] [INFO]- [POST]127.0.0.1 is requesting. /servers/get_servers_records
+2018-07-24 22:19:43,773 views.py [django:82] [ERROR]- failed to get cookies for 测试环境_fenghuang_sport_nginx
+2018-07-24 22:19:43,808 views.py [django:82] [ERROR]- failed to get cookies for 测试环境_fenghuang_sport_nginx
+2018-07-24 22:20:11,351 views.py [django:131] [INFO]- [POST]127.0.0.1 is requesting. /servers/get_servers_records
+2018-07-24 22:20:11,460 views.py [django:96] [ERROR]- 测试环境_fenghuang_sport_nginx: Incorrect padding

@@ -125,3 +125,12 @@ class cdn_proj_t(models.Model):
 
     def __str__(self):
         return " - ".join([self.get_project_display()])
+
+class project_authority_t(models.Model):
+    name    = models.CharField(max_length=128, unique=True)
+    project = models.ManyToManyField(project_t, blank=True)
+    read    = models.IntegerField(choices=choices_s, default=1)
+    write   = models.IntegerField(choices=choices_s, default=0)
+
+    def __str__(self):
+        return self.name +" | 读权限: "+ self.get_read_display() +" | 写权限: "+ self.get_write_display()
