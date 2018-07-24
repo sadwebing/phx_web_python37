@@ -26,6 +26,12 @@ def Index(request):
         logger.info('user: 用户名未知 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
         return HttpResponseServerError("用户名未知！")
 
+    try:
+        projects = request.user.userprofile.project.all()
+    except:
+        projects = []
+
+
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
 
     items = {
@@ -34,7 +40,7 @@ def Index(request):
             'project':     [],
             'server_type': [],}
 
-    projects = project_t.objects.all()
+    #projects = project_t.objects.all()
     for project in projects:
         items['item'].append(('_'.join([str(project.envir), str(project.product), str(project.project), str(project.server_type)]), '_'.join([project.get_envir_display(), project.get_product_display(), project.get_project_display(), project.get_server_type_display()])))
         items['product'].append((project.product, project.get_product_display())),
@@ -122,10 +128,17 @@ def GetServersRecords(request):
 
         try:
             data = json.loads(request.body)
-            projects = project_t.objects.filter(envir__in=data['envir'], product__in=data['product'], project__in=data['project'], server_type__in=data['server_type'], ).all()
+            #projects = project_t.objects.filter(envir__in=data['envir'], product__in=data['product'], project__in=data['project'], server_type__in=data['server_type'], ).all()
+            try:
+                projects = request.user.userprofile.project.filter(envir__in=data['envir'], product__in=data['product'], project__in=data['project'], server_type__in=data['server_type'], ).all()
+            except:
+                projects = []
         except Exception, e:
             logger.error(str(e))
-            projects = project_t.objects.all()
+            try:
+                projects = request.user.userprofile.project.all()
+            except:
+                projects = []
 
         servers_list = []
         return_list  = []

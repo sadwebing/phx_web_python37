@@ -7,7 +7,7 @@ from tencent_api     import tcApi
 from ws_api          import wsApi
 from detect.models   import domains
 from monitor.models  import cdn_proj_t
-from accounts.models import cdn_t
+from detect.models   import cdn_account_t as cdn_t
 from dwebsocket      import require_websocket, accept_websocket
 from detect.telegram import sendTelegram
 from django.views.decorators.csrf import csrf_exempt, csrf_protect

@@ -25020,3 +25020,168 @@ SubstrateUnderrunError: 3-octet short
 2018-07-23 23:26:24,773 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
 2018-07-23 23:26:25,921 views.py [django:267] [INFO]- 127.0.0.1 is requesting.
 2018-07-23 23:26:26,898 views.py [django:38] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-07-24 18:54:46,651 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 21, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\saltstack\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\saltstack\views.py", line 13, in <module>
+    from reflesh        import *
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 10, in <module>
+    from accounts.models import cdn_t
+ImportError: cannot import name cdn_t
+2018-07-24 18:56:10,125 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-24 18:56:11,802 views.py [django:267] [INFO]- 127.0.0.1 is requesting.
+2018-07-24 18:56:12,861 views.py [django:38] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-07-24 18:56:17,756 views.py [django:391] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh
+2018-07-24 18:56:17,858 reflesh.py [django:44] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-07-24 18:56:19,346 views.py [django:38] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-07-24 18:56:20,451 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-24 18:56:20,453 tencent_api.py [django:69] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=DescribeCdnHosts&Nonce=617863&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1532429780
+2018-07-24 18:56:20,453 tencent_api.py [django:70] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-24 18:56:21,188 tencent_api.py [django:107] [INFO]- {'Action': 'DescribeCdnHosts', 'Nonce': 617863, 'SecretId': u'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'VJyhAytAxnS6019F/SlaE7Tzgeo=', 'Timestamp': 1532429780}: 腾讯云域名获取成功！
+2018-07-24 18:56:21,233 reflesh.py [django:44] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/get_project
+2018-07-24 18:56:21,871 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-24 18:56:23,253 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-24 18:56:23,255 tencent_api.py [django:69] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=DescribeCdnHosts&Nonce=388080&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1532429783
+2018-07-24 18:56:23,255 tencent_api.py [django:70] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-24 18:56:23,865 tencent_api.py [django:107] [INFO]- {'Action': 'DescribeCdnHosts', 'Nonce': 388080, 'SecretId': u'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'QBMyo4Ajlfr/H7a5VWIPzQXuSjI=', 'Timestamp': 1532429783}: 腾讯云域名获取成功！
+2018-07-24 18:56:24,536 ws_api.py [django:75] [INFO]- 网宿域名获取成功！
+2018-07-24 18:56:30,032 reflesh.py [django:180] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/execute 执行参数：{u'project': u'fh_app', u'domain': [u'1279'], u'uri': [u'/']}
+2018-07-24 18:56:30,062 reflesh.py [django:201] [INFO]- [<domains: fenghuang | https://app.fanyingsh.com/test | pc : head : ssl | 启用>]
+2018-07-24 18:56:30,355 tencent_api.py [django:69] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnDir&Nonce=12311&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1532429790&dirs.0=https://app.fanyingsh.com/
+2018-07-24 18:56:30,355 tencent_api.py [django:70] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-07-24 18:56:30,834 tencent_api.py [django:136] [INFO]- {'Nonce': 12311, 'Timestamp': 1532429790, 'dirs.0': u'https://app.fanyingsh.com/', 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': '6S80Phohz1ccJn7rpxMOwn+VTNk=', 'Action': 'RefreshCdnDir'}: 缓存清理成功！
+2018-07-24 18:56:31,026 ws_api.py [django:106] [INFO]- 200: {"Message":"handle success","itemId":"9a797193a5bb41429683ff3d8dfe5923","Code":1}
+2018-07-24 18:56:32,582 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-24 18:56:34,111 telegram.py [django:105] [INFO]- send message successfull!
+2018-07-24 19:35:07,752 views.py [django:35] [INFO]- 127.0.0.1 is requesting /servers/
+2018-07-24 19:35:34,471 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-24 19:35:35,410 views.py [django:35] [INFO]- 127.0.0.1 is requesting /servers/
+2018-07-24 19:43:07,727 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-24 19:43:09,390 views.py [django:35] [INFO]- 127.0.0.1 is requesting /servers/
+2018-07-24 19:43:11,855 views.py [django:127] [INFO]- [POST]127.0.0.1 is requesting. /servers/get_servers_records
+2018-07-24 19:43:12,378 views.py [django:92] [ERROR]- 运营环境_fenghuang_sport_nginx: Incorrect padding
+2018-07-24 19:43:12,628 views.py [django:92] [ERROR]- 运营环境_pub_vpn_vpn: Incorrect padding
+2018-07-24 19:43:12,657 views.py [django:92] [ERROR]- 运营环境_pub_vpn_vpn: Incorrect padding
+2018-07-24 19:43:12,686 views.py [django:92] [ERROR]- 运营环境_pub_vpn_vpn: Incorrect padding
+2018-07-24 19:43:12,717 views.py [django:92] [ERROR]- 运营环境_pub_vpn_vpn: Incorrect padding
+2018-07-24 19:43:12,749 views.py [django:92] [ERROR]- 运营环境_yongshi_sport_nginx: Incorrect padding
+2018-07-24 19:43:13,223 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_fenghuang_image_nginx
+2018-07-24 19:43:13,253 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_fenghuang_image_nginx
+2018-07-24 19:43:13,286 views.py [django:92] [ERROR]- 运营环境_pub_httpdns_flask: Incorrect padding
+2018-07-24 19:43:13,368 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_fenghuang_ggz_nginx
+2018-07-24 19:43:13,398 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_fenghuang_ggz_nginx
+2018-07-24 19:43:13,426 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_fenghuang_ggz_nginx
+2018-07-24 19:43:13,453 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 19:43:13,483 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 19:43:13,512 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 19:43:13,542 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:43:13,571 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:43:13,599 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:43:13,630 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:43:13,657 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:43:13,684 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:43:13,713 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 19:43:13,743 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 19:43:13,773 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 19:43:13,803 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:43:13,835 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:43:13,868 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:43:13,897 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:43:13,926 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:43:13,960 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:43:13,992 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:43:14,023 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:43:14,051 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:43:14,078 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:44:36,542 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-24 19:44:37,457 views.py [django:35] [INFO]- 127.0.0.1 is requesting /servers/
+2018-07-24 19:44:50,250 views.py [django:127] [INFO]- [POST]127.0.0.1 is requesting. /servers/get_servers_records
+2018-07-24 19:44:50,309 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:44:50,339 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:44:50,369 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:44:50,400 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:44:50,431 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:44:50,461 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:44:50,490 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 19:44:50,525 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 19:44:50,555 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 19:44:50,586 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 19:44:50,618 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 19:44:50,648 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 19:44:50,680 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:44:50,717 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:44:50,746 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:44:50,775 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:44:50,803 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:44:50,832 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:44:50,861 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:44:50,888 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:44:50,917 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:44:50,944 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:05,131 views.py [django:127] [INFO]- [POST]127.0.0.1 is requesting. /servers/get_servers_records
+2018-07-24 19:45:05,164 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:45:05,194 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:45:05,224 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:45:05,253 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:45:05,285 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:45:05,315 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:45:05,344 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 19:45:05,381 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 19:45:05,408 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 19:45:05,437 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 19:45:05,467 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 19:45:05,502 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 19:45:05,530 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:05,589 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:05,618 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:05,647 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:05,676 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:05,704 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:05,732 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:05,759 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:05,786 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:05,813 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:13,270 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-24 19:45:14,308 views.py [django:35] [INFO]- 127.0.0.1 is requesting /servers/
+2018-07-24 19:45:18,740 views.py [django:127] [INFO]- [POST]127.0.0.1 is requesting. /servers/get_servers_records
+2018-07-24 19:45:18,778 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:45:18,809 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:45:18,838 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:45:18,867 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:45:18,894 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:45:18,927 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_caipiao_nginx
+2018-07-24 19:45:18,954 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 19:45:18,984 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 19:45:19,013 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_houtai_nginx
+2018-07-24 19:45:19,040 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 19:45:19,072 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 19:45:19,099 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_pay_nginx
+2018-07-24 19:45:19,131 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:19,216 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:19,243 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:19,273 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:19,301 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:19,329 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:19,357 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:19,384 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:19,414 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:45:19,440 views.py [django:78] [ERROR]- failed to get cookies for 运营环境_ruiyin_sport_nginx
+2018-07-24 19:46:18,198 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-24 19:46:19,164 views.py [django:35] [INFO]- 127.0.0.1 is requesting /servers/

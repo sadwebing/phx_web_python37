@@ -1,7 +1,6 @@
 # coding: utf8
 from django.db import models
 from phxweb.settings import choices_prod
-from accounts.models  import cdn_t
 
 # Create your models here.
 
