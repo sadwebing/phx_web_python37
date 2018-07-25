@@ -11,11 +11,17 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 #domain_D = domains.objects.get(id=1)
+choices_st = (
+        ('nginx',  'nginx'), 
+        ('apache', 'apache'),
+        ('vpn',    'vpn'),
+        ('flask',  'flask'),
+    )
 
 choices_s = (
         (1, '启用'), 
         (0, '禁用'),
-        )
+    )
 
 class telegram_user_id_t(models.Model):
     user = models.CharField(max_length=32, null=False)
@@ -50,14 +56,15 @@ class minion_t(models.Model):
             (9, '阿里云'),
         )
 
-    minion_id = models.CharField(max_length=32, unique=True, null=False)
-    user      = models.CharField(max_length=24, default='root')
-    port      = models.IntegerField(null=False, default=11223)
-    password  = models.TextField(null=False, default='/')
-    price     = models.IntegerField(null=True)
-    provider  = models.IntegerField(choices=choices_provider, null=False, default=1)
-    status    = models.IntegerField(choices=choices_s, default=1)
-    info      = models.TextField(blank=True)
+    minion_id   = models.CharField(max_length=32, unique=True, null=False)
+    user        = models.CharField(max_length=24, default='root')
+    port        = models.IntegerField(null=False, default=11223)
+    server_type = models.CharField(max_length=10, choices=choices_st, default='nginx')
+    password    = models.TextField(null=False, default='/')
+    price       = models.IntegerField(null=True)
+    provider    = models.IntegerField(choices=choices_provider, null=False, default=1)
+    status      = models.IntegerField(choices=choices_s, default=1)
+    info        = models.TextField(blank=True)
 
     def __str__(self):
         return " - ".join([self.minion_id, self.get_provider_display(), self.get_status_display()])
@@ -66,12 +73,6 @@ class project_t(models.Model):
     choices_env = (
         (1, '运营环境'), 
         (0, '测试环境'),
-        )
-    choices_st = (
-        ('nginx',  'nginx'), 
-        ('apache', 'apache'),
-        ('vpn',    'vpn'),
-        ('flask',  'flask'),
         )
     choices_role = (
         ('main',   'main'), 

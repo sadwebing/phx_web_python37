@@ -25937,3 +25937,9 @@ AttributeError: 'project_t' object has no attribute 'domain'
 2018-07-24 22:19:43,808 views.py [django:82] [ERROR]- failed to get cookies for 测试环境_fenghuang_sport_nginx
 2018-07-24 22:20:11,351 views.py [django:131] [INFO]- [POST]127.0.0.1 is requesting. /servers/get_servers_records
 2018-07-24 22:20:11,460 views.py [django:96] [ERROR]- 测试环境_fenghuang_sport_nginx: Incorrect padding
+2018-07-25 14:19:50,473 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-25 14:19:51,617 views.py [django:39] [INFO]- 127.0.0.1 is requesting /servers/
+2018-07-25 14:20:08,558 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-25 14:20:09,677 views.py [django:39] [INFO]- 127.0.0.1 is requesting /servers/
+2018-07-25 14:20:34,676 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-25 14:20:35,733 views.py [django:39] [INFO]- 127.0.0.1 is requesting /servers/
