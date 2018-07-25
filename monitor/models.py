@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.db                  import models
 from django.contrib.auth.models import User
 from django.core                import exceptions
-from phxweb.settings            import choices_prod
+from phxweb.settings            import choices_prod, choices_customer
 from detect.models              import domains
 import sys
 reload(sys)
@@ -98,6 +98,7 @@ class project_t(models.Model):
     envir       = models.IntegerField(choices=choices_env, default=1)
     product     = models.IntegerField(choices=choices_prod)
     project     = models.CharField(max_length=10, choices=choices_proj)
+    customer    = models.IntegerField(max_length=10, choices=choices_customer, default=29)
     minion_id   = models.ManyToManyField(minion_t)
     user        = models.CharField(max_length=24, default='root')
     port        = models.IntegerField(null=False, default=11223)
@@ -107,7 +108,7 @@ class project_t(models.Model):
     #domain      = models.ForeignKey(domains, default=domain_D.id)
     uri         = models.CharField(max_length=128, default='/')
     status      = models.IntegerField(choices=choices_s, default=1)
-    svn         = models.IntegerField(choices=choices_s, default=1)
+    svn         = models.IntegerField(choices=choices_s, default=0)
     privatekey  = models.TextField(null=False, default='thisisdefaultprivatekey')
     publickey   = models.TextField(null=False, default='thisisdefaultpublickey')
     info        = models.CharField(max_length=128, blank=True)

@@ -101,6 +101,7 @@ var servers = {
             'envir': servers.showSelectedValue('item_envir'),
             'product': servers.showSelectedValue('item_product'),
             'project': servers.showSelectedValue('item_project'),
+            'customer': servers.showSelectedValue('item_customer'),
             'server_type': servers.showSelectedValue('item_server_type'),
             'ips': document.getElementById('textarea_item_ips').value.split('\n'),
         }
@@ -121,6 +122,8 @@ var servers = {
             postData['privkey'][servers_list['item'][i]] = document.getElementById(value+"_"+servers_list['item'][i]).value;
         }
 
+        operate.disableButtons(['btn_op_search'], true);
+
         //console.log(postData)
 
         $.ajax({
@@ -129,6 +132,7 @@ var servers = {
             contentType: 'application/json',
             data: JSON.stringify(postData),
             success: function (datas, status) {
+                operate.disableButtons(['btn_op_search'], false);
                 //alert(datas);
                 var data = eval(datas);
                 initData = [];
@@ -141,6 +145,7 @@ var servers = {
                             'envir':       item.envir,
                             'product':     item.product,
                             'project':     item.project,
+                            'customer':    item.customer,
                             'server_type': item.server_type,
                             'role':        item.role,
                             'uri':         item.uri,
@@ -162,6 +167,7 @@ var servers = {
             },
             error:function(msg){
                 alert("获取项目失败！");
+                operate.disableButtons(['btn_op_search'], false);
                 return false;
             }
         });

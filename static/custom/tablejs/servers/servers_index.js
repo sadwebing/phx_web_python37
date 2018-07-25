@@ -42,6 +42,12 @@ var tableInit = {
                     //width:'15%',
                     //align: 'center'
                 },{
+                    field: 'customer',
+                    title: 'customer',
+                    sortable: true,
+                    //width:'15%',
+                    //align: 'center'
+                },{
                     field: 'server_type',
                     title: 'server_type',
                     sortable: true,

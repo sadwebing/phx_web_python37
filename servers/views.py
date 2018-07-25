@@ -40,18 +40,24 @@ def Index(request):
 
     items = {
             'item': [],
+            'envir': [],
             'product':     [],
             'project':     [],
+            'customer':     [],
             'server_type': [],}
 
     #projects = project_t.objects.all()
     for project in projects:
+        items['envir'].append((project.envir, project.get_envir_display()))
         items['item'].append(('_'.join([str(project.envir), str(project.product), str(project.project), str(project.server_type)]), '_'.join([project.get_envir_display(), project.get_product_display(), project.get_project_display(), project.get_server_type_display()])))
         items['product'].append((project.product, project.get_product_display())),
         items['project'].append((project.project, project.get_project_display())),
+        items['customer'].append((project.customer, project.get_customer_display())),
         items['server_type'].append((project.server_type, project.get_server_type_display())),
+    items['envir'] = list(set(items['envir']))
     items['product'] = list(set(items['product']))
     items['project'] = list(set(items['project']))
+    items['customer'] = list(set(items['customer']))
     items['server_type'] = list(set(items['server_type']))
 
     return render(
@@ -137,7 +143,7 @@ def GetServersRecords(request):
             #projects = project_t.objects.filter(envir__in=data['envir'], product__in=data['product'], project__in=data['project'], server_type__in=data['server_type'], ).all()
             authoritys = request.user.userprofile.servers.filter(read=1).all()
             for authority in authoritys:
-                projects += [ project for project in authority.project.filter(envir__in=data['envir'], product__in=data['product'], project__in=data['project'], server_type__in=data['server_type']).all().order_by('product')]
+                projects += [ project for project in authority.project.filter(envir__in=data['envir'], product__in=data['product'], project__in=data['project'], customer__in=data['customer'], server_type__in=data['server_type']).all().order_by('product')]
         except Exception, e:
             logger.error(str(e))
             try:
@@ -158,6 +164,7 @@ def GetServersRecords(request):
                 'envir':       project.get_envir_display(),
                 'product':     project.get_product_display(),
                 'project':     project.get_project_display(),
+                'customer':    project.get_customer_display(),
                 'server_type': project.get_server_type_display(),
                 'password':    decryptPasswd(request, project, project.password),
                 'user':        project.user,

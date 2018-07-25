@@ -22,31 +22,37 @@
     <div class="col-xs-7 col-sm-7 col-md-7">
         <div id="servers_modal_body">
             <form class="form-group form-inline" role="form" style="padding-bottom: 15px;">
-                <select class="selectpicker show-tick" id="item_envir" title="[请选择环境]" name="item_envir" data-actions-box="true" multiple data-width="40%"> 
-                    <option value=1>运营环境</option>
-                    <option value=0>测试环境</option>
+                <select class="selectpicker show-tick" id="item_envir" title="[请选择环境|envir]" name="item_envir" data-actions-box="true" multiple data-width="32%"> 
+                    {% for envir in items.envir %}
+                        <option value={{ envir.0 }}>{{ envir.1 }}</option>
+                    {% endfor %}
                 </select>
-                <select class="selectpicker show-tick" data-live-search="true" id="item_product" title="[请选择产品]" name="item_product" data-actions-box="true" multiple data-width="40%"> 
+                <select class="selectpicker show-tick" data-live-search="true" id="item_product" title="[请选择产品|product]" name="item_product" data-actions-box="true" multiple data-width="32%"> 
                     {% for product in items.product %}
                         <option value={{ product.0 }}>{{ product.1 }}</option>
                     {% endfor %}
                 </select>
-                <input id="btn_op_search" class="btn btn-default" onclick="servers.GetServersRecords('textarea_item_privkey')" type="button" id="arguments" value="查询" style="margin-left: 15px;">
+                <input id="btn_op_search" class="btn btn-primary" onclick="servers.GetServersRecords('textarea_item_privkey')" type="button" id="arguments" value="查询" >
             </form>
             <form class="form-group form-inline" role="form"  style="padding-bottom: 15px;">
-                <select class="selectpicker show-tick" id="item_project" title="[请选择项目]" name="item_project" data-actions-box="true" multiple data-width="40%"> 
+                <select class="selectpicker show-tick" id="item_project" title="[请选择项目|project]" name="item_project" data-actions-box="true" multiple data-width="32%"> 
                     {% for project in items.project %}
                         <option value={{ project.0 }}>{{ project.1 }}</option>
                     {% endfor %}
                 </select>
-                <select class="selectpicker show-tick" id="item_server_type" title="[请选择服务器类型]" name="item_server_type" data-actions-box="true" multiple data-width="40%"> 
+                <select class="selectpicker show-tick" id="item_customer" title="[请选择客户|customer]" name="item_customer" data-actions-box="true" multiple data-width="32%"> 
+                    {% for customer in items.customer %}
+                        <option value={{ customer.0 }}>{{ customer.1 }}</option>
+                    {% endfor %}
+                </select>
+                <select class="selectpicker show-tick" id="item_server_type" title="[请选择服务器类型|server_type]" name="item_server_type" data-actions-box="true" multiple data-width="32%"> 
                     {% for server_type in items.server_type %}
                         <option value={{ server_type.0 }}>{{ server_type.1 }}</option>
                     {% endfor %}
                 </select>
             </form>
             <form class="form-group form-inline" role="form">
-                <textarea id="textarea_item_ips" name="textarea_item_ips" style="height:100px; width: 90%; margin-bottom: 10px; resize: none;" placeholder="ip地址,一行一条[例如119.47.83.36]"></textarea>
+                <textarea id="textarea_item_ips" name="textarea_item_ips" style="height:100px; width: 97%; margin-bottom: 10px; resize: none;" placeholder="ip地址,一行一条[例如119.47.83.36]"></textarea>
             </form>
         </div>
 
