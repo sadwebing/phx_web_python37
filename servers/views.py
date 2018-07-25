@@ -175,14 +175,15 @@ def GetServersRecords(request):
                 ips = minion_ip_t.objects.filter(minion_id=minion.minion_id).all()
 
                 minion_tmp_dict = {
-                    'minion_id': minion.minion_id,
-                    'user':      minion.user,
-                    'port':      minion.port,
-                    'password':  decryptPasswd(request, project, minion.password),
-                    'price':     minion.price,
-                    'provider':  minion.get_provider_display(),
-                    'info':      minion.info,
-                    'ip':        [i.ip_addr for i in ips if i.status != 0]
+                    'minion_id':    minion.minion_id,
+                    'user':         minion.user,
+                    'port':         minion.port,
+                    'service_type': minion.get_service_type_display(),
+                    'password':     decryptPasswd(request, project, minion.password),
+                    'price':        minion.price,
+                    'provider':     minion.get_provider_display(),
+                    'info':         minion.info,
+                    'ip':           [i.ip_addr for i in ips if i.status != 0]
                 }
 
                 #ip 刷选

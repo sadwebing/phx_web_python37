@@ -59,7 +59,7 @@ class minion_t(models.Model):
     minion_id   = models.CharField(max_length=32, unique=True, null=False)
     user        = models.CharField(max_length=24, default='root')
     port        = models.IntegerField(null=False, default=11223)
-    server_type = models.CharField(max_length=10, choices=choices_st, default='nginx')
+    service_type = models.CharField(max_length=10, choices=choices_st, default='nginx')
     password    = models.TextField(null=False, default='/')
     price       = models.IntegerField(null=True)
     provider    = models.IntegerField(choices=choices_provider, null=False, default=1)
@@ -89,6 +89,12 @@ class project_t(models.Model):
         ('httpdns', 'httpdns'),
         )
 
+    choices_servert = (
+            ('front',   '反代服务器'),
+            ('backend', '后端源服务器'),
+            ('other',   '其他服务器'),
+        )
+
     envir       = models.IntegerField(choices=choices_env, default=1)
     product     = models.IntegerField(choices=choices_prod)
     project     = models.CharField(max_length=10, choices=choices_proj)
@@ -96,7 +102,7 @@ class project_t(models.Model):
     user        = models.CharField(max_length=24, default='root')
     port        = models.IntegerField(null=False, default=11223)
     password    = models.TextField(null=False, default='/')
-    server_type = models.CharField(max_length=10, choices=choices_st, default='nginx')
+    server_type = models.CharField(max_length=10, choices=choices_servert, default='front')
     role        = models.CharField(max_length=10, choices=choices_role, default='main')
     #domain      = models.ForeignKey(domains, default=domain_D.id)
     uri         = models.CharField(max_length=128, default='/')

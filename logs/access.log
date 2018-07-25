@@ -25943,3 +25943,13 @@ AttributeError: 'project_t' object has no attribute 'domain'
 2018-07-25 14:20:09,677 views.py [django:39] [INFO]- 127.0.0.1 is requesting /servers/
 2018-07-25 14:20:34,676 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
 2018-07-25 14:20:35,733 views.py [django:39] [INFO]- 127.0.0.1 is requesting /servers/
+2018-07-25 16:13:17,289 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-25 16:13:22,917 views.py [django:39] [INFO]- 127.0.0.1 is requesting /servers/
+2018-07-25 16:13:34,121 views.py [django:131] [INFO]- [POST]127.0.0.1 is requesting. /servers/get_servers_records
+2018-07-25 16:13:34,578 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_yongshi_ggz_nginx
+2018-07-25 16:13:34,779 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_yongshi_ggz_nginx
+2018-07-25 16:13:34,979 views.py [django:82] [ERROR]- failed to get cookies for 运营环境_yongshi_ggz_nginx
+2018-07-25 17:16:24,250 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-25 17:16:29,732 views.py [django:39] [INFO]- 127.0.0.1 is requesting /servers/
+2018-07-25 17:31:27,019 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-25 17:31:32,124 views.py [django:39] [INFO]- 127.0.0.1 is requesting /servers/
