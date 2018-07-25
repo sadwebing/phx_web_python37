@@ -71,6 +71,12 @@ var tableInit = {
                     //width:'auto',
                     //align: 'center'
                 },{
+                    field: 'service_type',
+                    title: 'service_type',
+                    sortable: true,
+                    //width:'auto',
+                    //align: 'center'
+                },{
                     field: 'user',
                     title: 'user',
                     sortable: true,
