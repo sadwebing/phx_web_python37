@@ -45,15 +45,15 @@ class minion_ip_t(models.Model):
 
 class minion_t(models.Model):
     choices_provider = (
-            (1, '台湾机房'), 
-            (2, '香港机房'),
+            (1, '台湾机房[taiwan]'), 
+            (2, '香港机房[hongkong]'),
             (3, 'fent'),
-            (4, '星联'),
-            (5, '久速'),
-            (6, '杜杜'),
-            (7, '网时'),
-            (8, '优与云'),
-            (9, '阿里云'),
+            (4, '星联[xinglian]'),
+            (5, '久速[jiusu]'),
+            (6, '杜杜[dudu]'),
+            (7, '网时[wangshi]'),
+            (8, '优与云[youyucloud]'),
+            (9, '阿里云[alicloud]'),
         )
 
     minion_id   = models.CharField(max_length=32, unique=True, null=False)
@@ -71,28 +71,28 @@ class minion_t(models.Model):
 
 class project_t(models.Model):
     choices_env = (
-        (1, '运营环境'), 
-        (0, '测试环境'),
+        (1, '运营环境[ONLINE]'), 
+        (0, '测试环境[TEST]'),
         )
     choices_role = (
-        ('main',   'main'), 
-        ('backup', 'backup'),
+        ('main',   '主[main]'), 
+        ('backup', '备[backup]'),
         )
     choices_proj = (
-        ('caipiao', 'caipiao'), 
-        ('sport',   'sport'),
-        ('houtai',  'houtai'),
-        ('pay',     'pay'),
-        ('ggz',     'ggz'),
+        ('caipiao', '彩票[caipiao]'), 
+        ('sport',   '体育[sport]'),
+        ('houtai',  '后台[houtai]'),
+        ('pay',     '支付[pay]'),
+        ('ggz',     '广告站[ggz]'),
+        ('image',   '图片[image]'),
         ('vpn',     'vpn'),
-        ('image',   'image'),
         ('httpdns', 'httpdns'),
         )
 
     choices_servert = (
-            ('front',   '反代服务器'),
-            ('backend', '后端源服务器'),
-            ('other',   '其他服务器'),
+            ('front',   '反代服务器[front]'),
+            ('backend', '后端源服务器[backend]'),
+            ('other',   '其他服务器[other]'),
         )
 
     envir       = models.IntegerField(choices=choices_env, default=1)

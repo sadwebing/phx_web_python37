@@ -25953,3 +25953,21 @@ AttributeError: 'project_t' object has no attribute 'domain'
 2018-07-25 17:16:29,732 views.py [django:39] [INFO]- 127.0.0.1 is requesting /servers/
 2018-07-25 17:31:27,019 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
 2018-07-25 17:31:32,124 views.py [django:39] [INFO]- 127.0.0.1 is requesting /servers/
+2018-07-25 17:34:20,940 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-25 17:34:25,293 views.py [django:39] [INFO]- 127.0.0.1 is requesting /servers/
+2018-07-25 17:55:47,648 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-25 17:55:52,605 views.py [django:39] [INFO]- 127.0.0.1 is requesting /servers/
+2018-07-25 17:55:59,671 views.py [django:267] [INFO]- 127.0.0.1 is requesting.
+2018-07-25 17:56:07,404 views.py [django:38] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-07-25 17:57:53,918 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-25 17:57:58,260 views.py [django:267] [INFO]- 127.0.0.1 is requesting.
+2018-07-25 17:58:05,977 views.py [django:38] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-07-25 18:01:11,322 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-25 18:01:15,711 views.py [django:267] [INFO]- 127.0.0.1 is requesting.
+2018-07-25 18:01:22,368 views.py [django:38] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-07-25 18:04:49,121 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-25 18:04:52,996 views.py [django:267] [INFO]- 127.0.0.1 is requesting.
+2018-07-25 18:04:59,790 views.py [django:38] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2018-07-25 18:05:25,645 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-07-25 18:05:30,009 views.py [django:267] [INFO]- 127.0.0.1 is requesting.
+2018-07-25 18:05:36,941 views.py [django:38] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project

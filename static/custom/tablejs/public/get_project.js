@@ -52,25 +52,37 @@ var gp = {
                 }); 
                 //$("#project").html(html);
                 //$("#project_active").html(html);
-                var html_project_active = ['<optgroup label="凤凰">',
-                                                html_dict['fenghuang'],
-                                            '</optgroup>',
-                                            '<optgroup label="勇士">',
-                                                html_dict['yongshi'],
-                                            '</optgroup>',
-                                            '<optgroup label="JAVA">',
-                                                html_dict['java'],
-                                            '</optgroup>',
-                                            '<optgroup label="公共">',
-                                                html_dict['pub'],
+                var html_project_active = "";
+
+                for (var key in html_dict){
+                    if (key.substr(-1) == "2") {
+                        continue
+                    }
+                    html_project_active = html_project_active + ['<optgroup label='+key+'>',
+                                                html_dict[key],
                                             '</optgroup>',
                                             ].join("")
+                }
 
-                var html_restart_project_active = ['<optgroup label="凤凰">',
-                                                        html_dict['fenghuang2'],
+                //var html_project_active = ['<optgroup label="凤凰">',
+                //                                html_dict['fenghuang[凤凰]'],
+                //                            '</optgroup>',
+                //                            '<optgroup label="勇士">',
+                //                                html_dict['yongshi[勇士]'],
+                //                            '</optgroup>',
+                //                            '<optgroup label="JAVA">',
+                //                                html_dict['java'],
+                //                            '</optgroup>',
+                //                            '<optgroup label="公共">',
+                //                                html_dict['pub'],
+                //                            '</optgroup>',
+                //                            ].join("")
+
+                var html_restart_project_active = ['<optgroup label="fenghuang[凤凰]">',
+                                                        html_dict['fenghuang[凤凰]2'],
                                                     '</optgroup>',
-                                                    '<optgroup label="勇士">',
-                                                        html_dict['yongshi2'],
+                                                    '<optgroup label="yongshi[勇士]">',
+                                                        html_dict['yongshi[勇士]2'],
                                                     '</optgroup>',
                                                         '<optgroup label="JAVA">',
                                                     html_dict['java2'],
