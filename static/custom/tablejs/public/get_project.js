@@ -78,14 +78,14 @@ var gp = {
                 //                            '</optgroup>',
                 //                            ].join("")
 
-                var html_restart_project_active = ['<optgroup label="fenghuang[凤凰]">',
-                                                        html_dict['fenghuang[凤凰]2'],
+                var html_restart_project_active = ['<optgroup label="凤凰[fenghuang]">',
+                                                        html_dict['凤凰[fenghuang]2'],
                                                     '</optgroup>',
-                                                    '<optgroup label="yongshi[勇士]">',
-                                                        html_dict['yongshi[勇士]2'],
+                                                    '<optgroup label="勇士[yongshi]">',
+                                                        html_dict['勇士[yongshi]2'],
                                                     '</optgroup>',
                                                         '<optgroup label="JAVA">',
-                                                    html_dict['java2'],
+                                                    html_dict['JAVA2'],
                                             '</optgroup>',
                                                     ].join("")
                 if (document.getElementById('project_active')){
