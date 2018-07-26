@@ -151,7 +151,7 @@ if __name__ == "__main__":
     ex_one_m  = ""
     
     for domain_l in getDomains(product='all'):
-        if domain_l['customer'] in ['dx_70887', 'dx_6668']:
+        if domain_l['customer'] in ['大象6668[dx_6668]', '大象70887[dx_70887]']:
             continue
         scheme = urlparse.urlsplit(domain_l['name']).scheme
 
