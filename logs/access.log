@@ -27678,3 +27678,5 @@ KeyError: u'\u516c\u5171\u4ea7\u54c1[pub]'
 2018-07-26 23:00:20,627 domains.py [django:30] [INFO]- [POST]127.0.0.1 is requesting. /monitor/domains/Query
 2018-07-26 23:00:20,628 domains.py [django:46] [INFO]- 查询参数：{u'status': u'01', u'customer': [u'29', u'1', u'2', u'3', u'4', u'5', u'6', u'7', u'8', u'9', u'19', u'10', u'20', u'22', u'23', u'24', u'25', u'28', u'21', u'11', u'17', u'18', u'13', u'14', u'15', u'30', u'31'], u'product': [u'0', u'12', u'16', u'27', u'26'], u'group': [u'1', u'2', u'3', u'4', u'5'], u'num': u'all', u'limit': 1523, u'offset': 0}
 2018-07-26 23:02:50,746 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/get_domains
+2018-07-26 23:07:13,030 domains.py [django:96] [INFO]- 127.0.0.1 is requesting. /monitor/domains/UpdateStatus data: {u'status': 0, u'id': 1548}
+2018-07-26 23:12:56,234 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/get_domains

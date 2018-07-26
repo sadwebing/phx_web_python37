@@ -4,6 +4,7 @@
 #introduciton:
 #    监控HTTPS域名证书是否到期
 #version: 2018/06/12 实现基本功能
+#         2018/07/26 域名区分产品和客户
 
 import os, sys, datetime, logging, ssl, socket, threading, requests, json, urlparse
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
@@ -119,6 +120,11 @@ class myThread(threading.Thread):
         
         ssle = sslExpiry(self.__domain)
 
+        if self.__domain_l['customer'] == '公共客户[pub]':
+            self.__domain_l['customer'] = ""
+        else:
+            self.__domain_l['customer'] = "_"+self.__domain_l['customer']
+
         for i in range(self.__domain_l['retry']):
             cert = ssle.getCert()
             #print cert
@@ -126,11 +132,11 @@ class myThread(threading.Thread):
                 break
 
         if cert == SSLError:
-            self.t = (False, '['+self.__domain_l['product']+'_'+self.__domain_l['customer']+']'+self.__domain, u"证书不合法")
+            self.t = (False, '['+self.__domain_l['product']+self.__domain_l['customer']+']'+self.__domain, u"证书不合法")
         elif not isinstance(cert, datetime.datetime):
-            self.t = (False, '['+self.__domain_l['product']+'_'+self.__domain_l['customer']+']'+self.__domain, cert)
+            self.t = (False, '['+self.__domain_l['product']+self.__domain_l['customer']+']'+self.__domain, cert)
         else:
-            self.t = (True,  '['+self.__domain_l['product']+'_'+self.__domain_l['customer']+']'+self.__domain, cert)
+            self.t = (True,  '['+self.__domain_l['product']+self.__domain_l['customer']+']'+self.__domain, cert)
 
     def get_result(self):
         return self.t
