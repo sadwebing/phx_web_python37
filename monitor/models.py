@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.db                  import models
 from django.contrib.auth.models import User
 from django.core                import exceptions
-from phxweb.settings            import choices_prod, choices_customer
+from phxweb.settings            import choices_prod, choices_customer, choices_product
 from detect.models              import domains
 import sys
 reload(sys)
@@ -96,7 +96,7 @@ class project_t(models.Model):
         )
 
     envir       = models.IntegerField(choices=choices_env, default=1)
-    product     = models.IntegerField(choices=choices_prod)
+    product     = models.IntegerField(choices=choices_product)
     project     = models.CharField(max_length=10, choices=choices_proj)
     customer    = models.IntegerField(max_length=10, choices=choices_customer, default=29)
     minion_id   = models.ManyToManyField(minion_t)

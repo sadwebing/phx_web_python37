@@ -18673,3 +18673,178 @@ KeyError: 'envir'
 2018-07-25 23:07:40,733 views.py [django:102] [ERROR]- 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]: Incorrect padding
 2018-07-25 23:07:40,813 views.py [django:102] [ERROR]- 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]: Incorrect padding
 2018-07-25 23:07:40,842 views.py [django:102] [ERROR]- 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]: Incorrect padding
+2018-07-26 19:54:08,512 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/domains/Query
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\monitor\domains.py", line 49, in DomainsQuery
+    tmp_dict['group']   = domain.group.group
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\related.py", line 602, in __get__
+    rel_obj = qs.get()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "J:\arno\test\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (2013, 'Lost connection to MySQL server during query')
+2018-07-26 19:59:13,979 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/domains/Update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\monitor\domains.py", line 175, in DomainsUpdate
+    info.product = datas['product'] if datas['product'] else prod_d[line['product']]
+KeyError: u'\u5149\u5927[guangda]'
+2018-07-26 20:12:12,220 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/domains/Update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\monitor\domains.py", line 177, in DomainsUpdate
+    info.product = datas['product'] if datas['product'] else prod_d[line['product']]
+KeyError: u'\u5149\u5927[guangda]'
+2018-07-26 20:33:51,095 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\test\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 1271, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 320, in result_list
+    'results': list(results(cl))}
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 296, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 287, in __init__
+    super(ResultList, self).__init__(*items)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 199, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\utils.py", line 282, in lookup_field
+    value = attr()
+  File "J:\arno\test\phx_web\monitor\models.py", line 119, in __str__
+    return " - ".join([self.get_envir_display(), self.get_product_display(), self.get_project_display(), self.get_customer_display(), self.get_server_type_display(), self.get_status_display()])
+TypeError: sequence item 1: expected string or Unicode, long found
+2018-07-26 20:35:33,773 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\test\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 1271, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 320, in result_list
+    'results': list(results(cl))}
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 296, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 287, in __init__
+    super(ResultList, self).__init__(*items)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 199, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\utils.py", line 282, in lookup_field
+    value = attr()
+  File "J:\arno\test\phx_web\monitor\models.py", line 119, in __str__
+    return " - ".join([self.get_envir_display(), self.get_product_display(), self.get_project_display(), self.get_customer_display(), self.get_server_type_display(), self.get_status_display()])
+TypeError: sequence item 1: expected string or Unicode, long found

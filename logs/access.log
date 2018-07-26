@@ -26470,3 +26470,205 @@ KeyError: 'envir'
 2018-07-25 23:07:40,733 views.py [django:102] [ERROR]- 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]: Incorrect padding
 2018-07-25 23:07:40,813 views.py [django:102] [ERROR]- 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]: Incorrect padding
 2018-07-25 23:07:40,842 views.py [django:102] [ERROR]- 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]: Incorrect padding
+2018-07-26 19:53:18,197 views.py [django:79] [INFO]- 127.0.0.1 is requesting /monitor/domains
+2018-07-26 19:53:18,598 domains.py [django:64] [INFO]- [GET]127.0.0.1 is requesting. /monitor/domains/getGroups
+2018-07-26 19:53:28,200 domains.py [django:27] [INFO]- [POST]127.0.0.1 is requesting. /monitor/domains/Query
+2018-07-26 19:53:28,201 domains.py [django:42] [INFO]- 查询参数：{u'status': u'01', u'product': [u'2'], u'group': [u'1', u'2', u'3', u'4', u'5'], u'num': u'all', u'limit': 15, u'offset': 0}
+2018-07-26 19:53:51,559 domains.py [django:27] [INFO]- [POST]127.0.0.1 is requesting. /monitor/domains/Query
+2018-07-26 19:53:51,559 domains.py [django:42] [INFO]- 查询参数：{u'status': u'01', u'product': [u'2'], u'group': [u'1', u'2', u'3', u'4', u'5'], u'num': u'all', u'limit': 15, u'offset': 0}
+2018-07-26 19:53:54,687 domains.py [django:27] [INFO]- [POST]127.0.0.1 is requesting. /monitor/domains/Query
+2018-07-26 19:53:54,688 domains.py [django:42] [INFO]- 查询参数：{u'status': u'01', u'product': [u'2'], u'group': [u'1', u'2', u'3', u'4', u'5'], u'num': u'all', u'limit': 15, u'offset': 0}
+2018-07-26 19:54:08,512 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/domains/Query
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\monitor\domains.py", line 49, in DomainsQuery
+    tmp_dict['group']   = domain.group.group
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\related.py", line 602, in __get__
+    rel_obj = qs.get()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "J:\arno\test\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (2013, 'Lost connection to MySQL server during query')
+2018-07-26 19:59:13,391 domains.py [django:153] [INFO]- 127.0.0.1 is requesting. /monitor/domains/Update
+2018-07-26 19:59:13,979 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/domains/Update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\monitor\domains.py", line 175, in DomainsUpdate
+    info.product = datas['product'] if datas['product'] else prod_d[line['product']]
+KeyError: u'\u5149\u5927[guangda]'
+2018-07-26 20:12:11,641 domains.py [django:153] [INFO]- 127.0.0.1 is requesting. /monitor/domains/Update
+2018-07-26 20:12:12,193 domains.py [django:173] [INFO]- {'\xe9\x92\xbb\xe7\x9f\xb3[le7]': 13, '\xe4\xba\xbf\xe4\xba\xba[yrcai]': 22, '\xe8\xb0\xb7\xe6\xad\x8c[9393]': 8, '\xe5\x8b\x87\xe5\xa3\xab[yongshi]': 16, '\xe6\xb0\xb8\xe5\x8f\x91[yongfa]': 18, '\xe4\xb9\x90\xe7\x9b\x88|\xe7\x86\x8a\xe7\x8c\xab[leying]': 3, 'ag\xe5\xbd\xa9[agcai]': 10, '\xe7\xa6\x8f\xe5\x88\xa9\xe5\xbd\xa9[fulicai]': 20, 'yy\xe5\xa8\xb1\xe4\xb9\x90\xe5\x9f\x8e[yy]': 17, '\xe4\xb9\x90\xe5\xa4\xa9[letian]': 28, '\xe5\x87\xa4\xe5\x87\xb0[fenghuang]': 12, '\xe4\xb9\x90\xe9\x83\xbd\xe5\x9f\x8e[leducheng]': 21, '618\xe5\xbd\xa9[618cai]': 25, '\xe5\xa4\xa7\xe8\xb1\xa16668[dx_6668]': 14, '\xe6\xb0\xb8\xe5\x88\xa9\xe4\xbc\x9a[yonglihui]': 24, '\xe4\xb8\x87\xe6\xb8\xb8[wanyou]': 11, '\xe8\x8a\x92\xe6\x9e\x9c[1717]': 19, '\xe4\xb8\x89\xe5\xbe\xb7|\xe5\xaf\x8c\xe8\xb1\xaa|668[sande]': 6, '\xe5\xa4\xa9\xe5\xa4\xa9[tiantian]': 5, '\xe8\x8b\xb9\xe6\x9e\x9c[3535]': 9, 'uc\xe5\xbd\xa9\xe7\xa5\xa8[uc]': 7, '\xe5\x85\x89\xe5\xa4\xa7[guangda]': 2, '\xe4\xba\xbf\xe8\x85\xbe[yiteng]': 23, 'JAVA': 26, '\xe5\xa4\xa7\xe8\xb1\xa170887[dx_70887]': 15, '\xe5\xbd\xa9\xe6\x8a\x95[caitou]': 4, '\xe7\x91\x9e\xe9\x93\xb6[ruiyin|UBS]': 27, '\xe9\x98\xbf\xe9\x87\x8c[ali]': 1, '\xe5\x85\xac\xe5\x85\xb1\xe4\xba\xa7\xe5\x93\x81[pub]': 0}
+2018-07-26 20:12:12,193 domains.py [django:174] [INFO]- {u'status': 1, u'product': u'\u5149\u5927[guangda]', u'group': u'PC-\u4e3b\u7ad9', u'name': u'https://m.dongxu8.com', u'content': u'', u'0': True, u'id': 1546}
+2018-07-26 20:12:12,220 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/domains/Update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\monitor\domains.py", line 177, in DomainsUpdate
+    info.product = datas['product'] if datas['product'] else prod_d[line['product']]
+KeyError: u'\u5149\u5927[guangda]'
+2018-07-26 20:12:14,937 domains.py [django:27] [INFO]- [POST]127.0.0.1 is requesting. /monitor/domains/Query
+2018-07-26 20:12:14,937 domains.py [django:42] [INFO]- 查询参数：{u'status': u'01', u'product': [u'2'], u'group': [u'1', u'2', u'3', u'4', u'5'], u'num': u'all', u'limit': 15, u'offset': 0}
+2018-07-26 20:14:56,897 domains.py [django:27] [INFO]- [POST]127.0.0.1 is requesting. /monitor/domains/Query
+2018-07-26 20:14:56,898 domains.py [django:42] [INFO]- 查询参数：{u'status': u'01', u'product': [u'2'], u'group': [u'1', u'2', u'3', u'4', u'5'], u'num': u'all', u'limit': 15, u'offset': 0}
+2018-07-26 20:15:04,191 domains.py [django:153] [INFO]- 127.0.0.1 is requesting. /monitor/domains/Update
+2018-07-26 20:15:04,809 domains.py [django:173] [INFO]- {u'\u4ebf\u4eba[yrcai]': 22, u'\u4e50\u5929[letian]': 28, u'\u6c38\u5229\u4f1a[yonglihui]': 24, u'\u82f9\u679c[3535]': 9, u'\u516c\u5171\u4ea7\u54c1[pub]': 0, u'\u8c37\u6b4c[9393]': 8, u'\u5929\u5929[tiantian]': 5, u'\u4ebf\u817e[yiteng]': 23, u'\u8292\u679c[1717]': 19, u'\u963f\u91cc[ali]': 1, u'uc\u5f69\u7968[uc]': 7, u'\u52c7\u58eb[yongshi]': 16, u'ag\u5f69[agcai]': 10, u'\u4e07\u6e38[wanyou]': 11, u'\u94bb\u77f3[le7]': 13, u'\u5927\u8c6170887[dx_70887]': 15, u'\u4e50\u90fd\u57ce[leducheng]': 21, u'\u6c38\u53d1[yongfa]': 18, u'\u5149\u5927[guangda]': 2, u'\u51e4\u51f0[fenghuang]': 12, u'618\u5f69[618cai]': 25, u'\u745e\u94f6[ruiyin|UBS]': 27, u'JAVA': 26, u'yy\u5a31\u4e50\u57ce[yy]': 17, u'\u4e50\u76c8|\u718a\u732b[leying]': 3, u'\u798f\u5229\u5f69[fulicai]': 20, u'\u5f69\u6295[caitou]': 4, u'\u4e09\u5fb7|\u5bcc\u8c6a|668[sande]': 6, u'\u5927\u8c616668[dx_6668]': 14}
+2018-07-26 20:15:04,809 domains.py [django:174] [INFO]- {u'status': 0, u'product': u'\u5149\u5927[guangda]', u'group': u'PC-\u4e3b\u7ad9', u'name': u'https://m.dongxu8.com', u'content': u'', u'0': True, u'id': 1546}
+2018-07-26 20:15:04,986 domains.py [django:173] [INFO]- {u'\u4ebf\u4eba[yrcai]': 22, u'\u4e50\u5929[letian]': 28, u'\u6c38\u5229\u4f1a[yonglihui]': 24, u'\u82f9\u679c[3535]': 9, u'\u516c\u5171\u4ea7\u54c1[pub]': 0, u'\u8c37\u6b4c[9393]': 8, u'\u5929\u5929[tiantian]': 5, u'\u4ebf\u817e[yiteng]': 23, u'\u8292\u679c[1717]': 19, u'\u963f\u91cc[ali]': 1, u'uc\u5f69\u7968[uc]': 7, u'\u52c7\u58eb[yongshi]': 16, u'ag\u5f69[agcai]': 10, u'\u4e07\u6e38[wanyou]': 11, u'\u94bb\u77f3[le7]': 13, u'\u5927\u8c6170887[dx_70887]': 15, u'\u4e50\u90fd\u57ce[leducheng]': 21, u'\u6c38\u53d1[yongfa]': 18, u'\u5149\u5927[guangda]': 2, u'\u51e4\u51f0[fenghuang]': 12, u'618\u5f69[618cai]': 25, u'\u745e\u94f6[ruiyin|UBS]': 27, u'JAVA': 26, u'yy\u5a31\u4e50\u57ce[yy]': 17, u'\u4e50\u76c8|\u718a\u732b[leying]': 3, u'\u798f\u5229\u5f69[fulicai]': 20, u'\u5f69\u6295[caitou]': 4, u'\u4e09\u5fb7|\u5bcc\u8c6a|668[sande]': 6, u'\u5927\u8c616668[dx_6668]': 14}
+2018-07-26 20:15:04,986 domains.py [django:174] [INFO]- {u'status': 0, u'product': u'\u5149\u5927[guangda]', u'group': u'PC-\u4e3b\u7ad9', u'name': u'https://www.dongxu8.com', u'content': u' \u8b49\u66f8\u5931\u6548\u5f85\u8655\u7406', u'0': True, u'id': 802}
+2018-07-26 20:15:05,170 domains.py [django:173] [INFO]- {u'\u4ebf\u4eba[yrcai]': 22, u'\u4e50\u5929[letian]': 28, u'\u6c38\u5229\u4f1a[yonglihui]': 24, u'\u82f9\u679c[3535]': 9, u'\u516c\u5171\u4ea7\u54c1[pub]': 0, u'\u8c37\u6b4c[9393]': 8, u'\u5929\u5929[tiantian]': 5, u'\u4ebf\u817e[yiteng]': 23, u'\u8292\u679c[1717]': 19, u'\u963f\u91cc[ali]': 1, u'uc\u5f69\u7968[uc]': 7, u'\u52c7\u58eb[yongshi]': 16, u'ag\u5f69[agcai]': 10, u'\u4e07\u6e38[wanyou]': 11, u'\u94bb\u77f3[le7]': 13, u'\u5927\u8c6170887[dx_70887]': 15, u'\u4e50\u90fd\u57ce[leducheng]': 21, u'\u6c38\u53d1[yongfa]': 18, u'\u5149\u5927[guangda]': 2, u'\u51e4\u51f0[fenghuang]': 12, u'618\u5f69[618cai]': 25, u'\u745e\u94f6[ruiyin|UBS]': 27, u'JAVA': 26, u'yy\u5a31\u4e50\u57ce[yy]': 17, u'\u4e50\u76c8|\u718a\u732b[leying]': 3, u'\u798f\u5229\u5f69[fulicai]': 20, u'\u5f69\u6295[caitou]': 4, u'\u4e09\u5fb7|\u5bcc\u8c6a|668[sande]': 6, u'\u5927\u8c616668[dx_6668]': 14}
+2018-07-26 20:15:05,170 domains.py [django:174] [INFO]- {u'status': 0, u'product': u'\u5149\u5927[guangda]', u'group': u'PC-\u4e3b\u7ad9', u'name': u'https://dongxu8.com', u'content': u'', u'0': True, u'id': 801}
+2018-07-26 20:15:05,328 domains.py [django:27] [INFO]- [POST]127.0.0.1 is requesting. /monitor/domains/Query
+2018-07-26 20:15:05,329 domains.py [django:42] [INFO]- 查询参数：{u'status': u'01', u'product': [u'2'], u'group': [u'1', u'2', u'3', u'4', u'5'], u'num': u'all', u'limit': 15, u'offset': 0}
+2018-07-26 20:30:46,707 domains.py [django:27] [INFO]- [POST]127.0.0.1 is requesting. /monitor/domains/Query
+2018-07-26 20:30:46,707 domains.py [django:42] [INFO]- 查询参数：{u'status': u'01', u'product': [u'2'], u'group': [u'1', u'2', u'3', u'4', u'5'], u'num': u'all', u'limit': 15, u'offset': 0}
+2018-07-26 20:33:51,095 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\test\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 1271, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 320, in result_list
+    'results': list(results(cl))}
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 296, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 287, in __init__
+    super(ResultList, self).__init__(*items)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 199, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\utils.py", line 282, in lookup_field
+    value = attr()
+  File "J:\arno\test\phx_web\monitor\models.py", line 119, in __str__
+    return " - ".join([self.get_envir_display(), self.get_product_display(), self.get_project_display(), self.get_customer_display(), self.get_server_type_display(), self.get_status_display()])
+TypeError: sequence item 1: expected string or Unicode, long found
+2018-07-26 20:35:33,773 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/monitor/project_t/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\test\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 1271, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 320, in result_list
+    'results': list(results(cl))}
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 296, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 287, in __init__
+    super(ResultList, self).__init__(*items)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 199, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\utils.py", line 282, in lookup_field
+    value = attr()
+  File "J:\arno\test\phx_web\monitor\models.py", line 119, in __str__
+    return " - ".join([self.get_envir_display(), self.get_product_display(), self.get_project_display(), self.get_customer_display(), self.get_server_type_display(), self.get_status_display()])
+TypeError: sequence item 1: expected string or Unicode, long found

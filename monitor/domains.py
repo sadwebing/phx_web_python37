@@ -170,6 +170,8 @@ def DomainsUpdate(request):
                     group = groups.objects.get(id=int(datas['group']))
                 else:
                     group = groups.objects.get(group=line['group'])
+                logger.info(prod_d)
+                logger.info(line)
                 info = domains.objects.get(id=line['id'])
                 info.name    = datas['name'][i]
                 info.product = datas['product'] if datas['product'] else prod_d[line['product']]
