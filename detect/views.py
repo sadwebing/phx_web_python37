@@ -35,12 +35,13 @@ def GetDomains(request):
 
         for domain in domain_l:
             tmp_dict = {}
-            tmp_dict['name']    = domain.name
-            tmp_dict['product'] = domain.get_product_display()
-            tmp_dict['client']  = domain.group.client
-            tmp_dict['method']  = domain.group.method
-            tmp_dict['ssl']     = domain.group.ssl
-            tmp_dict['retry']   = domain.group.retry
+            tmp_dict['name']     = domain.name
+            tmp_dict['product']  = domain.get_product_display()
+            tmp_dict['customer'] = domain.get_customer_display()
+            tmp_dict['client']   = domain.group.client
+            tmp_dict['method']   = domain.group.method
+            tmp_dict['ssl']      = domain.group.ssl
+            tmp_dict['retry']    = domain.group.retry
             domain_list.append(tmp_dict)
         return HttpResponse(json.dumps(domain_list))
     else:

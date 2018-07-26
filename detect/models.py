@@ -1,6 +1,6 @@
 # coding: utf8
 from django.db import models
-from phxweb.settings import choices_prod
+from phxweb.settings import choices_product, choices_customer
 
 # Create your models here.
 
@@ -51,7 +51,8 @@ class domains(models.Model):
 
     #protocol = models.IntegerField(choices=choices_n, default=1) 
     name     = models.CharField(max_length=128, unique=True)
-    product  = models.IntegerField(choices=choices_prod)
+    product  = models.IntegerField(choices=choices_product, default=12)
+    customer = models.IntegerField(choices=choices_customer)
     group    = models.ForeignKey(groups)
     content  = models.CharField(max_length=128, blank=True)
     status   = models.IntegerField(choices=choices_s, default=1)
@@ -62,4 +63,4 @@ class domains(models.Model):
             ssl = 'ssl'
         else:
             ssl = 'nossl'
-        return " | ".join([self.get_product_display(), self.name, ' : '.join([self.group.client, self.group.method, ssl]), self.get_status_display()])
+        return " | ".join([self.get_customer_display(), self.name, ' : '.join([self.group.client, self.group.method, ssl]), self.get_status_display()])

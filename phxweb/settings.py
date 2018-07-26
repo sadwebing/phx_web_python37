@@ -289,43 +289,12 @@ choices_customer = (
             (14, u'大象6668[dx_6668]'),
             (15, u'大象70887[dx_70887]'),
             (30, u'大象[daxiang]'),
+
+            (31, u'恒隆[henglong]'),
             )
 
 choices_product = ( 
             (0, u'公共产品[pub]'),
-            (12, u'凤凰[fenghuang]'),
-            (16, u'勇士[yongshi]'),
-            (27, u'瑞银[ruiyin|UBS]'),
-            (26, u'JAVA'),
-            )
-
-choices_prod = ( 
-            
-            (1, u'阿里[ali]'), 
-            (2, u'光大[guangda]'), 
-            (3, u'乐盈|熊猫[leying]'), 
-            (4, u'彩投[caitou]'), 
-            (5, u'天天[tiantian]'), 
-            (6, u'三德|富豪|668[sande]'), 
-            (7, u'uc彩票[uc]'), 
-            (8, u'谷歌[9393]'), 
-            (9, u'苹果[3535]'), 
-            (19, u'芒果[1717]'), 
-            (10, u'ag彩[agcai]'), 
-            (20, u'福利彩[fulicai]'), 
-            (22, u'亿人[yrcai]'), 
-            (23, u'亿腾[yiteng]'),
-            (24, u'永利会[yonglihui]'), 
-            (25, u'618彩[618cai]'), 
-            (28, u'乐天[letian]'),
-            (21, u'乐都城[leducheng]'), 
-            (11, u'万游[wanyou]'),
-            (13, u'钻石[le7]'),
-            (14, u'大象6668[dx_6668]'),
-            (15, u'大象70887[dx_70887]'),
-            (17, u'yy娱乐城[yy]'),
-            (18, u'永发[yongfa]'),
-
             (12, u'凤凰[fenghuang]'),
             (16, u'勇士[yongshi]'),
             (27, u'瑞银[ruiyin|UBS]'),

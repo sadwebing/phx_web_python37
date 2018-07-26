@@ -47,15 +47,19 @@ var tableInit = {
                     sortable: true,
                     //width:'9%',
                     //align: 'center'
-                }
-                ,{
+                },{
+                    field: 'customer',
+                    title: '客户',
+                    sortable: true,
+                    //width:'9%',
+                    //align: 'center'
+                },{
                     field: 'group',
                     title: '所属组',
                     sortable: true,
                     //width:'9%',
                     //align: 'center'
-                }
-                ,{
+                },{
                     field: 'status',
                     title: '状态',
                     sortable: true,
@@ -162,9 +166,9 @@ window.operateStatusEvents = {
             data: JSON.stringify(postData),
             success: function (data, status) {
                 if (postData.status == 1){
-                    toastr.success(row.product+": "+row.name, '监控项已启用');
+                    toastr.success(row.customer+": "+row.name, '监控项已启用');
                 }else {
-                    toastr.warning(row.product+": "+row.name, '监控项已禁用');
+                    toastr.warning(row.customer+": "+row.name, '监控项已禁用');
                 }
                 
                 //ko.cleanNode(document.getElementById("tomcat_table"));
@@ -222,7 +226,7 @@ window.operateEvents = {
             //console.log('message: ' + data);//打印服务端返回的数据
             if (data.step == 'one'){
                 $("#progress_bar").css("width", "50%");
-                $('#Checkresults').append('<p> 产品名:&thinsp;<strong>' + row.product + '</strong></p>' );
+                $('#Checkresults').append('<p> 产品名:&thinsp;<strong>' + row.customer + '</strong></p>' );
                 $('#Checkresults').append('<p> 项目名:&thinsp;<strong>' + row.project + '</strong></p>' );
                 $('#Checkresults').append('<p> 服务器地址:&thinsp;<strong>' + row.minion_id + '</strong></p>' );
                 $('#Checkresults').append('<p> 服务类型:&thinsp;<strong>' + row.server_type + '</strong></p>' );
@@ -311,7 +315,7 @@ var operate = {
         this.DepartmentModel = {
             id: ko.observable(),
             name: ko.observable(),
-            product: ko.observable(),
+            customer: ko.observable(),
             group: ko.observable(),
             content: ko.observable(),
             status: ko.observable(),
@@ -339,17 +343,23 @@ var operate = {
                 var selects = {}
                 selects['data']    = data
                 selects['group']   = "";
+                selects['customer'] = "";
                 selects['product'] = "";
                 $.each(data['group_l'], function (index, item) { 
                     selects['group'] = selects['group'] + "<option value="+item.id+" data-subtext='"+item.client+" | "+item.method+" | "+item.ssl+" | "+item.retry+"'>"+item.group+"</option>"
+                }); 
+                $.each(data['customer_l'], function (index, item) { 
+                    selects['customer'] = selects['customer'] + "<option value="+item[0]+">"+item[1]+"</option>"
                 }); 
                 $.each(data['product_l'], function (index, item) { 
                     selects['product'] = selects['product'] + "<option value="+item[0]+">"+item[1]+"</option>"
                 }); 
                 document.getElementById("txt_group").innerHTML=selects['group'];
+                document.getElementById("txt_customer").innerHTML=selects['customer'];
                 document.getElementById("txt_product").innerHTML=selects['product'];
-                document.getElementById("txt_add_group").innerHTML=selects['group'];
-                document.getElementById("txt_add_product").innerHTML=selects['product'];
+                document.getElementById("txt_add_group").innerHTML="<option value=></option>" + selects['group'];
+                document.getElementById("txt_add_customer").innerHTML="<option value=></option>" + selects['customer'];
+                document.getElementById("txt_add_product").innerHTML="<option value=></option>" + selects['product'];
                 $('.selectpicker').selectpicker('refresh');
                 data_all = selects;
                 return true;
@@ -367,6 +377,7 @@ var operate = {
     operateMonitorPorjectSelect: function(){
         $('#btn_query').on("click", function () {
             var group_l   = [];
+            var customer_l = [];
             var product_l = [];
             var objSelectproject = document.selectmalform.txt_group
             for(var i = 0; i < objSelectproject.options.length; i++) { 
@@ -376,6 +387,16 @@ var operate = {
             if (group_l.length == 0) {
                 for(var i = 0; i < objSelectproject.options.length; i++) {
                     group_l.push(objSelectproject.options[i].value);
+                }
+            }
+            objSelectproject = document.selectmalform.txt_customer
+            for(var i = 0; i < objSelectproject.options.length; i++) { 
+                if (objSelectproject.options[i].selected == true) 
+                customer_l.push(objSelectproject.options[i].value);
+            }
+            if (customer_l.length == 0) {
+                for(var i = 0; i < objSelectproject.options.length; i++) {
+                    customer_l.push(objSelectproject.options[i].value);
                 }
             }
             objSelectproject = document.selectmalform.txt_product
@@ -398,62 +419,8 @@ var operate = {
                         'status':document.getElementById("txt_status").value, 
                         'num': document.getElementById("txt_num").value, 
                         'group': group_l,
+                        'customer': customer_l,
                         'product': product_l,
-                        };
-                },
-            }
-            tableInit.myViewModel.refresh(params);
-        });
-
-        $('#domains_active').on("click", function () {
-            //document.getElementById('project_active').disabled = true;
-            //document.getElementById('project_inactive').disabled = false;
-            //document.getElementById('project_all').disabled = false;
-            var params = {
-                url: '/monitor/domains/Query',
-                method: 'post',
-                singleSelect: false,
-                queryParams: function (param) {
-                    return { limit: param.limit, offset: param.offset, 
-                        'status':1, 
-                        'num': document.getElementById("txt_num").value, 
-                        'group': document.getElementById("txt_group").value,
-                        };
-                },
-            }
-            tableInit.myViewModel.refresh(params);
-        });
-        $('#domains_inactive').on("click", function () {
-            //document.getElementById('project_active').disabled = false;
-            //document.getElementById('project_inactive').disabled = true;
-            //document.getElementById('project_all').disabled = false;
-            var params = {
-                url: '/monitor/domains/Query',
-                method: 'post',
-                singleSelect: false,                                                
-                queryParams: function (param) {
-                    return { limit: param.limit, offset: param.offset, 
-                        'status': 0, 
-                        'num': document.getElementById("txt_num").value, 
-                        'group': document.getElementById("txt_group").value,
-                        };
-                },
-            }
-            tableInit.myViewModel.refresh(params);
-        });
-        $('#domains_all').on("click", function () {
-            //document.getElementById('project_active').disabled = false;
-            //document.getElementById('project_inactive').disabled = false;
-            //document.getElementById('project_all').disabled = true;
-            var params = {
-                url: '/monitor/domains/Query',
-                method: 'post',
-                singleSelect: false,
-                queryParams: function (param) {
-                    return { limit: param.limit, offset: param.offset, 
-                        'status': 2, 
-                        'num': document.getElementById("txt_num").value, 
-                        'group': document.getElementById("txt_group").value,
                         };
                 },
             }
@@ -687,6 +654,7 @@ var operate = {
                 ko.applyBindings(operate.DepartmentModel, document.getElementById("myModal"));
                 document.getElementById("txt_add_group").innerHTML=data_all['group'];
                 document.getElementById("txt_add_product").innerHTML=data_all['product'];
+                document.getElementById("txt_add_customer").innerHTML=data_all['customer'];
                 $('.selectpicker').selectpicker('refresh');
                 operate.operateAddCommit();
                 //operate.operateSave('Add');
@@ -705,6 +673,7 @@ var operate = {
                 'status'  : document.getElementById('txt_add_status').value,
                 'group'   : document.getElementById('txt_add_group').value,
                 'product' : document.getElementById('txt_add_product').value,
+                'customer' : document.getElementById('txt_add_customer').value,
                 'domains' : document.getElementById('textarea_add_domain').value,
                 'content' : document.getElementById('textarea_add_content').value,
             }
@@ -715,6 +684,10 @@ var operate = {
             }
             if (! postData['product']){
                 alert('前选择所属产品！')
+                return false;
+            }
+            if (! postData['customer']){
+                alert('前选择所属客户！')
                 return false;
             }
             if (! postData['domains']){
@@ -776,6 +749,11 @@ var operate = {
                             data['group'] = data_all['data']['group_l'][i]['id'];
                         }
                     }
+                    for(var i = 0; i < data_all['data']['customer_l'].length; i++) { 
+                        if (data['customer'] == data_all['data']['customer_l'][i][1]){
+                            data['customer'] = data_all['data']['customer_l'][i][0];
+                        }
+                    }
                     for(var i = 0; i < data_all['data']['product_l'].length; i++) { 
                         if (data['product'] == data_all['data']['product_l'][i][1]){
                             data['product'] = data_all['data']['product_l'][i][0];
@@ -790,6 +768,7 @@ var operate = {
                     
                     document.getElementById("txt_edit_group").innerHTML=data_all['group'];
                     document.getElementById("txt_edit_product").innerHTML=data_all['product'];
+                    document.getElementById("txt_edit_customer").innerHTML=data_all['customer'];
                     ko.utils.extend(operate.DepartmentModel, data);
                     ko.applyBindings(operate.DepartmentModel, document.getElementById("editSingleModal"));
                     $('#btn_update_submit').on("click", function () {
@@ -806,6 +785,7 @@ var operate = {
                         id: "",
                         name: "",
                         product: "",
+                        customer: "",
                         group: "",
                         content: "",
                         status: "",
@@ -815,15 +795,16 @@ var operate = {
                         //循环获取数据
                         var name = arrselectedData[index];
                         //alert(name)
-                        html_name = "<tr><td>"+name.id+"</td><td>"+name.name+"</td><td>"+name.product+"</td><td>"+name.group+"</td><td>"+name.status+"</td><td>"+name.content+"</td></tr>";
+                        html_name = "<tr><td>"+name.id+"</td><td>"+name.name+"</td><td>"+name.product+"</td><td>"+name.customer+"</td><td>"+name.group+"</td><td>"+name.status+"</td><td>"+name.content+"</td></tr>";
                         html = html + html_name
                         data['name'] = data['name'] + name.name + "\n";
                     }); 
                     $("#UpdateDatas").html(html);
                     //console.log(data)
 
-                    document.getElementById("txt_edit2_group").innerHTML="<option value selected>所属组[默认不修改]</option>" + data_all['group'];
-                    document.getElementById("txt_edit2_product").innerHTML="<option value selected>所属产品[默认不修改]</option>" + data_all['product'];
+                    document.getElementById("txt_edit2_group").innerHTML="<option value selected></option>" + data_all['group'];
+                    document.getElementById("txt_edit2_product").innerHTML="<option value selected></option>" + data_all['product'];
+                    document.getElementById("txt_edit2_customer").innerHTML="<option value selected></option>" + data_all['customer'];
                     ko.utils.extend(operate.DepartmentModel, data);
                     ko.applyBindings(operate.DepartmentModel, document.getElementById("editMultiModal"));
                     
@@ -866,7 +847,7 @@ var operate = {
                     //循环获取数据
                     var name = vm.datas()[index];
                     //alert(name)
-                    html_name = "<tr><td>"+name.id()+"</td><td>"+name.name()+"</td><td>"+name.product()+"</td><td>"+name.group()+"</td><td>"+name.status()+"</td><td>"+name.content()+"</td></tr>";
+                    html_name = "<tr><td>"+name.id()+"</td><td>"+name.name()+"</td><td>"+name.customer()+"</td><td>"+name.group()+"</td><td>"+name.status()+"</td><td>"+name.content()+"</td></tr>";
                     html = html + html_name
                 }); 
                 $("#DeleteDatas").html(html);

@@ -15,8 +15,11 @@ logger = logging.getLogger('django')
 error_status = 'null'
 
 prod_d = {}
-for line in settings.choices_prod:
+for line in settings.choices_product:
     prod_d[line[1]] = line[0]
+cust_d = {}
+for line in settings.choices_customer:
+    cust_d[line[1]] = line[0]
 
 @csrf_exempt
 def DomainsQuery(request):
@@ -26,29 +29,31 @@ def DomainsQuery(request):
         clientip = getIp(request)
         logger.info('[POST]%s is requesting. %s' %(clientip, request.get_full_path()))
         try:
-            data   = json.loads(request.body)
-            status = list(data['status']) if data.has_key('status') else None
-            num    = int(data['num']) if data.has_key('num') and str(data['num']).lower() != 'all' else None
-            group  = data['group'] if data.has_key('group') else []
-            prod   = data['product'] if data.has_key('product') else []
+            data     = json.loads(request.body)
+            status   = list(data['status']) if data.has_key('status') else None
+            num      = int(data['num']) if data.has_key('num') and str(data['num']).lower() != 'all' else None
+            group    = data['group'] if data.has_key('group') else []
+            product  = data['product'] if data.has_key('product') else []
+            customer = data['customer'] if data.has_key('customer') else []
             #logger.info(data)
         except:
             status = None
         if status:
-            datas = domains.objects.filter(status__in=status, group__id__in=group, product__in=prod).all().order_by('-id')[:num]
+            datas = domains.objects.filter(status__in=status, group__id__in=group, product__in=product, customer__in=customer).all().order_by('-id')[:num]
         else:
-            return HttpResponse(u"参数错误！")
+            return HttpResponseServerError(u"参数错误！")
 
         logger.info(u'查询参数：%s' %data)
         domain_list = []
         for domain in datas:
             tmp_dict = {}
-            tmp_dict['id']      = domain.id
-            tmp_dict['name']    = domain.name
-            tmp_dict['product'] = domain.get_product_display()
-            tmp_dict['group']   = domain.group.group
-            tmp_dict['content'] = domain.content
-            tmp_dict['status']  = domain.status
+            tmp_dict['id']       = domain.id
+            tmp_dict['name']     = domain.name
+            tmp_dict['product']  = domain.get_product_display()
+            tmp_dict['customer'] = domain.get_customer_display()
+            tmp_dict['group']    = domain.group.group
+            tmp_dict['content']  = domain.content
+            tmp_dict['status']   = domain.status
 
             domain_list.append(tmp_dict)
         return HttpResponse(json.dumps(domain_list))
@@ -65,7 +70,8 @@ def GetGroups(request):
 
         datas = groups.objects.all()
         items = {}
-        items['product_l'] = settings.choices_prod
+        items['customer_l'] = settings.choices_customer
+        items['product_l'] = settings.choices_product
         items['group_l']   = []
         for group in datas:
             tmp_dict = {}
@@ -134,7 +140,7 @@ def DomainsAdd(request):
                     exist.append(domain)
                     continue
             except:
-                info = domains(name=domain, product=datas['product'], group=group, content=datas['content'], status=datas['status'])
+                info = domains(name=domain, product=datas['product'], customer=datas['customer'], group=group, content=datas['content'], status=datas['status'])
                 info.save()
         if exist:
             return HttpResponse(str(exist)+'已存在，其余的新增成功！')
@@ -157,11 +163,12 @@ def DomainsUpdate(request):
         if len(datas['all']) == 1:
             group = groups.objects.get(id=datas['group'])
             info = domains.objects.get(id=datas['id'])
-            info.name    = datas['name'][0]
+            info.name     = datas['name'][0]
             info.product = datas['product']
-            info.group   = group
-            info.content = datas['content']
-            info.status  = datas['status']
+            info.customer = datas['customer']
+            info.group    = group
+            info.content  = datas['content']
+            info.status   = datas['status']
             info.save()
         else:
             i = 0
@@ -173,11 +180,12 @@ def DomainsUpdate(request):
                 logger.info(prod_d)
                 logger.info(line)
                 info = domains.objects.get(id=line['id'])
-                info.name    = datas['name'][i]
-                info.product = datas['product'] if datas['product'] else prod_d[line['product']]
-                info.group   = group
-                info.content = datas['content'] if datas['content'] else line['content']
-                info.status  = datas['status'] if datas['status'] else line['status']
+                info.name     = datas['name'][i]
+                info.product  = datas['product'] if datas['product'] else prod_d[line['product']]
+                info.customer = datas['customer'] if datas['customer'] else cust_d[line['customer']]
+                info.group    = group
+                info.content  = datas['content'] if datas['content'] else line['content']
+                info.status   = datas['status'] if datas['status'] else line['status']
                 info.save()
                 i += 1
 

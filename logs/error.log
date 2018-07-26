@@ -18848,3 +18848,162 @@ Traceback (most recent call last):
   File "J:\arno\test\phx_web\monitor\models.py", line 119, in __str__
     return " - ".join([self.get_envir_display(), self.get_product_display(), self.get_project_display(), self.get_customer_display(), self.get_server_type_display(), self.get_status_display()])
 TypeError: sequence item 1: expected string or Unicode, long found
+2018-07-26 21:08:10,348 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/detect/domains/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\options.py", line 1655, in changelist_view
+    selection_note=_('0 of %(cnt)s selected') % {'cnt': len(cl.result_list)},
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "J:\arno\test\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'detect_domains.customer' in 'field list'")
+2018-07-26 21:08:29,552 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/detect/domains/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "J:\arno\test\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "J:\arno\test\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "J:\arno\test\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "J:\arno\test\lib\site-packages\django\template\base.py", line 1271, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 320, in result_list
+    'results': list(results(cl))}
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 296, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 287, in __init__
+    super(ResultList, self).__init__(*items)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 199, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\utils.py", line 282, in lookup_field
+    value = attr()
+  File "J:\arno\test\phx_web\detect\models.py", line 65, in __str__
+    return " | ".join([self.get_product_display(), self.name, ' : '.join([self.group.client, self.group.method, ssl]), self.get_status_display()])
+AttributeError: 'domains' object has no attribute 'get_product_display'
+2018-07-26 21:12:06,474 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/domains/Query
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\monitor\domains.py", line 38, in DomainsQuery
+    datas = domains.objects.filter(status__in=status, group__id__in=group, customer__in=prod).all().order_by('-id')[:num]
+NameError: global name 'prod' is not defined
+2018-07-26 21:12:07,786 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/domains/Query
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\monitor\domains.py", line 38, in DomainsQuery
+    datas = domains.objects.filter(status__in=status, group__id__in=group, customer__in=prod).all().order_by('-id')[:num]
+NameError: global name 'prod' is not defined
+2018-07-26 21:12:16,437 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/domains/Query
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\monitor\domains.py", line 38, in DomainsQuery
+    datas = domains.objects.filter(status__in=status, group__id__in=group, customer__in=prod).all().order_by('-id')[:num]
+NameError: global name 'prod' is not defined
+2018-07-26 21:22:33,042 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/domains/Update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\monitor\domains.py", line 161, in DomainsUpdate
+    info.product = datas['product']
+KeyError: 'product'
+2018-07-26 21:53:14,868 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/domains/Add
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\monitor\domains.py", line 140, in DomainsAdd
+    info = domains(name=domain, product=datas['product'], customer=datas['customer'], group=group, content=datas['content'], status=datas['status'])
+KeyError: 'product'
+2018-07-26 22:26:17,706 views.py [django:33] [ERROR]- product
+2018-07-26 22:35:41,006 base.py [django.request:256] [ERROR]- Internal Server Error: /monitor/domains/Update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\monitor\domains.py", line 185, in DomainsUpdate
+    info.customer = datas['customer'] if datas['customer'] else cust_d[line['customer']]
+KeyError: u'\u516c\u5171\u4ea7\u54c1[pub]'

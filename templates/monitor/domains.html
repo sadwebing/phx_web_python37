@@ -9,51 +9,26 @@
     </div>
     <div>
         <form id="selectmalform" name="selectmalform" class="form-group form-inline" role="form">
-            {% comment %}
-            <button id="domains_active" type="button" class="btn btn-default active">启用</button>
-            <button id="domains_inactive" type="button" class="btn btn-default active">禁用</button>
-            <button id="domains_all" type="button" class="btn btn-default active">全部</button>
-            {% endcomment %}
-            <div class="input-group" style="line-height: 1.42857143;">
-                <label class="input-group-addon" style="line-height: 1.42857143;">状态</label>
-                <select type="text" name="txt_status" class="form-control" id="txt_status"> 
-                    <option value='1'>启用</option>
-                    <option value='0'>禁用</option>
-                    <option value='01' selected>全部</option>
-                </select>
-            </div>
-            <div class="input-group" style="line-height: 1.42857143;">
-                <label class="input-group-addon" style="line-height: 1.42857143;">数量</label>
-                <select type="text" name="txt_num" class="form-control" id="txt_num"> 
-                    <option value=15>15</option>
-                    <option value=30>30</option>
-                    <option value=30>50</option>
-                    <option value=30>100</option>
-                    <option value='all' selected>all</option>
-                </select>
-            </div>
-            <select type="text" class="form-control selectpicker show-tick" data-live-search="true" data-actions-box="true" name="txt_group" title="所属组[默认全部]" multiple id="txt_group" data-width="20%">
+            <select type="text" name="txt_status" class="form-control selectpicker show-tick" id="txt_status" data-width="10%"> 
+                <option value='1'>启用</option>
+                <option value='0'>禁用</option>
+                <option value='01' selected>全部</option>
+            </select>
+            <select type="text" name="txt_num" class="form-control selectpicker show-tick" id="txt_num" data-width="10%"> 
+                <option value=15>15</option>
+                <option value=30>30</option>
+                <option value=30>50</option>
+                <option value=30>100</option>
+                <option value='all' selected>all</option>
             </select>
             <select type="text" class="form-control selectpicker show-tick" data-live-search="true" data-actions-box="true" name="txt_product" title="所属产品[默认全部]" multiple id="txt_product" data-width="20%">
             </select>
+            <select type="text" class="form-control selectpicker show-tick" data-live-search="true" data-actions-box="true" name="txt_customer" title="所属客户[默认全部]" multiple id="txt_customer" data-width="20%">
+            </select>
+            <select type="text" class="form-control selectpicker show-tick" data-live-search="true" data-actions-box="true" name="txt_group" title="所属组[默认全部]" multiple id="txt_group" data-width="20%">
+            </select>
             <button id="btn_query" type="button" class="btn btn-default">查询</button>
             
-            {% comment %}
-            <div class="input-group" style="line-height: 1.42857143;">
-                <label class="input-group-addon" style="line-height: 1.42857143; width: 50px;">所属组</label>
-                <select type="text" class="form-control selectpicker" name="txt_group1" id="txt_group1" data-width="5%">
-                </select>
-            </div>
-            <div class="input-group" style="line-height: 1.42857143; width: 200px; max-width: 200px;">
-                <label class="input-group-addon" style="line-height: 1.42857143; width: 50px;">产品</label>
-                <select type="text" class="form-control selectpicker" name="txt_product1" id="txt_product1" style="width:150; max-width: 150px;">
-                </select>
-            </div>
-            
-            <button id="edit_group" type="button" class="btn btn-default" style="margin-left: 15px;">
-                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>更新组
-            </button>
-            {% endcomment %}
         </form>
     </div>
     <div id="toolbar" class="btn-group">
@@ -80,13 +55,16 @@
                     </div>
                     <div class="modal-body">
                         <form class="form-inline" style="margin-bottom: 10px;">
-                            <select name="txt_add_status" class="form-control" id="txt_add_status" placeholder="状态" style="margin-right: 10px;"> 
+                            <select name="txt_add_status" class="form-control" id="txt_add_status" placeholder="状态"> 
                                 <option value=1>启用</option>
                                 <option value=0>禁用</option>
                             </select>
-                            <select type="text" name="txt_add_group" class="form-control" id="txt_add_group" title="所属组" style="margin-right: 10px;"> 
-                            </select>
+                            
                             <select type="text" name="txt_add_product" class="form-control" id="txt_add_product" placeholder="所属产品" >
+                            </select>
+                            <select type="text" name="txt_add_customer" class="form-control" id="txt_add_customer" placeholder="所属产品" >
+                            </select>
+                            <select type="text" name="txt_add_group" class="form-control" id="txt_add_group" title="所属组"> 
                             </select>
                         </form>
                         
@@ -110,13 +88,16 @@
                     </div>
                     <div class="modal-body">
                         <form class="form-inline" style="margin-bottom: 10px;">
-                            <select name="txt_edit_status" data-bind="value:status" class="form-control" id="txt_edit_status" placeholder="状态" style="margin-right: 10px;"> 
+                            <select name="txt_edit_status" data-bind="value:status" class="form-control" id="txt_edit_status" placeholder="状态"> 
                                 <option value=1>启用</option>
                                 <option value=0>禁用</option>
                             </select>
-                            <select type="text" name="txt_edit_group" data-bind="value:group" class="form-control" id="txt_edit_group" placeholder="所属组" style="margin-right: 10px;">
-                            </select>
+                            
                             <select type="text" name="txt_edit_product" data-bind="value:product" class="form-control" id="txt_edit_product" placeholder="所属产品" >
+                            </select>
+                            <select type="text" name="txt_edit_customer" data-bind="value:customer" class="form-control" id="txt_edit_customer" placeholder="所属客户" >
+                            </select>
+                            <select type="text" name="txt_edit_group" data-bind="value:group" class="form-control" id="txt_edit_group" placeholder="所属组">
                             </select>
                         </form>
                         
@@ -147,6 +128,7 @@
                                     <td>id</td>
                                     <td>域名</td>
                                     <td>产品</td>
+                                    <td>客户</td>
                                     <td>所属组</td>
                                     <td>状态</td>
                                     <td>备注</td>
@@ -157,14 +139,17 @@
                         </table>
                         </div>
                         <form class="form-inline" style="margin-bottom: 10px;">
-                            <select name="txt_edit2_status" data-bind="value:status" class="form-control" id="txt_edit2_status" title="状态[默认不修改]" style="margin-right: 10px;"> 
-                                <option value selected>状态[默认不修改]</option>
+                            <select name="txt_edit2_status" data-bind="value:status" class="form-control" id="txt_edit2_status" title="状态"> 
+                                <option value selected></option>
                                 <option value=1>启用</option>
                                 <option value=0>禁用</option>
                             </select>
-                            <select type="text" name="txt_edit2_group" data-bind="value:group" class="form-control" id="txt_edit2_group" placeholder="所属组[默认不修改]" style="margin-right: 10px;">
+                            
+                            <select type="text" name="txt_edit2_product" data-bind="value:product" class="form-control" id="txt_edit2_product" placeholder="所属产品">
                             </select>
-                            <select type="text" name="txt_edit2_product" data-bind="value:product" class="form-control" id="txt_edit2_product" placeholder="所属产品[默认不修改]">
+                            <select type="text" name="txt_edit2_customer" data-bind="value:customer" class="form-control" id="txt_edit2_customer" placeholder="所属产品">
+                            </select>
+                            <select type="text" name="txt_edit2_group" data-bind="value:group" class="form-control" id="txt_edit2_group" placeholder="所属组">
                             </select>
                         </form>
                         
