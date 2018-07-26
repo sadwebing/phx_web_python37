@@ -4,7 +4,7 @@
 #introduciton:
 #    监控HTTPS域名证书是否到期
 #version: 2018/06/12 实现基本功能
-#         2018/07/26 域名区分产品和客户
+#         2018/07/26 域名区分产品和客户, 信息长度大于4096，以文件形式发送信息
 
 import os, sys, datetime, logging, ssl, socket, threading, requests, json, urlparse
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
@@ -180,6 +180,10 @@ if __name__ == "__main__":
     #if ex_half_y:
     #    message['text'] += u"<pre>半年内证书到期域名: </pre>\r\n" + ex_half_y
     if message['text']:
-        message['text'] += u"\r\n@service 请提醒客户更换证书！"
+        if len(message['text']) >= 4096:
+            message['doc']     = True
+            message['caption'] = u"\r\n@service 请提醒客户更换证书！"
+        else:
+            message['text'] += u"\r\n@service 请提醒客户更换证书！"
         sendTelegram(message)
     
