@@ -126,11 +126,11 @@ class myThread(threading.Thread):
                 break
 
         if cert == SSLError:
-            self.t = (False, '['+self.__domain_l['product']+']'+self.__domain, u"证书不合法")
+            self.t = (False, '['+self.__domain_l['product']+'_'+self.__domain_l['customer']+']'+self.__domain, u"证书不合法")
         elif not isinstance(cert, datetime.datetime):
-            self.t = (False, '['+self.__domain_l['product']+']'+self.__domain, cert)
+            self.t = (False, '['+self.__domain_l['product']+'_'+self.__domain_l['customer']+']'+self.__domain, cert)
         else:
-            self.t = (True,  '['+self.__domain_l['product']+']'+self.__domain, cert)
+            self.t = (True,  '['+self.__domain_l['product']+'_'+self.__domain_l['customer']+']'+self.__domain, cert)
 
     def get_result(self):
         return self.t
@@ -145,7 +145,7 @@ if __name__ == "__main__":
     ex_one_m  = ""
     
     for domain_l in getDomains(product='all'):
-        if domain_l['product'] in ['dx_70887', 'dx_6668']:
+        if domain_l['customer'] in ['dx_70887', 'dx_6668']:
             continue
         scheme = urlparse.urlsplit(domain_l['name']).scheme
 
