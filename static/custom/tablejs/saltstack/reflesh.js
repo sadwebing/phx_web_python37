@@ -58,7 +58,7 @@ var operate = {
                     //    cdn_html = cdn_html + "<option value='"+cdn.name+"_"+cdn.account+"' data-subtext='"+cdn.name+"'>"+cdn.account+"</option>";
                     //})
                     $.each(item.domain, function (index, domain) {
-                        domain_html = domain_html + "<option value="+domain.id+" data-subtext='"+domain.product+"'>"+domain.name+"</option>";
+                        domain_html = domain_html + "<option value="+domain.id+" data-subtext='"+domain.product+" "+domain.customer+"'>"+domain.name+"</option>";
                     })
 
                     project_html = project_html + "<option value='"+item.project+"'>"+item.project+"</option>";

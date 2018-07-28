@@ -51,7 +51,8 @@ def refleshGetProject(request):
             tmpdict['project'] = prot.get_project_display()
             tmpdict['domain']  = [ {'id': domain.id,
                                     'name': urlparse.urlsplit(domain.name).scheme+"://"+urlparse.urlsplit(domain.name).netloc,
-                                    'product': domain.get_product_display()} for domain in prot.domain.all() ]
+                                    'product': domain.get_product_display(),
+                                    'customer': domain.get_customer_display()} for domain in prot.domain.all() ]
             #tmpdict['cdn']     = [ {'name': cdn.get_name_display(),
             #                        'account': cdn.account} for cdn in cdn_t.objects.all() ]
             data['cdn_proj'].append(tmpdict)
