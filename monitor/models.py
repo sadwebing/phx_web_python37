@@ -43,7 +43,7 @@ class telegram_domain_alert_t(models.Model):
     project    = models.CharField(max_length=10, choices=choices_proj, blank=True)
     status     = models.IntegerField(choices=choices_s, default=1)
     class Meta:
-        unique_together = ('product' ,'project')
+        unique_together = ('product' ,'customer')
 
     def __str__(self):
         return " | ".join([self.name, self.get_product_display(), self.get_customer_display(),])
@@ -57,7 +57,7 @@ class telegram_ssl_alert_t(models.Model):
     project    = models.CharField(max_length=10, choices=choices_proj, blank=True)
     status     = models.IntegerField(choices=choices_s, default=1)
     class Meta:
-        unique_together = ('product' ,'project')
+        unique_together = ('product' ,'customer')
 
     def __str__(self):
         return " | ".join([self.name, self.get_product_display(), self.get_customer_display(),])

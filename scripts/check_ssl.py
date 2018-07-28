@@ -172,9 +172,10 @@ if __name__ == "__main__":
                 continue
         if not alert:
             alert = getDomainsDict['alert']['default']
+
+        customer = "_"+result[1]['customer'][1] if result[1]['customer'][0] != 29 else ""
+        info     = "["+result[1]['product'][1]+customer+"]"+urlparse.urlsplit(result[1]['name']).netloc.split(':')[0].strip()
         if result[0]:
-            customer = "_"+result[1]['customer'][1] if result[1]['customer'][0] != 29 else ""
-            info     = "["+result[1]['product'][1]+customer+"]"+urlparse.urlsplit(result[1]['name']).netloc.split(':')[0].strip()
             if d_one_m > result[2]:
                 alert['ex_one_m'] += result[2].strftime(nor_date_fmt) + ": " + info + "\r\n"
             elif d_half_y > result[2]:
@@ -198,6 +199,7 @@ if __name__ == "__main__":
             message['group'] = group
             if message['text']:
                 if len(message['text']) >= 4096:
+                    message['text']    = message['text'].replace('\r\n', '\n')
                     message['doc']     = True
                     message['caption'] = u"\r\n%s 请提醒客户更换证书！" %" ".join([ "@"+user for user in alert['user'] ]) if len(alert['user']) !=0 else ""
                 else:
