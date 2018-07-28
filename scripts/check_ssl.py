@@ -5,6 +5,7 @@
 #    监控HTTPS域名证书是否到期
 #version: 2018/06/12 实现基本功能
 #         2018/07/26 域名区分产品和客户, 信息长度大于4096，以文件形式发送信息
+#         2018/07/29 域名区分产品和客户, 发送到相应的客户群组
 
 import os, sys, datetime, logging, ssl, socket, threading, requests, json, urlparse
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
@@ -56,7 +57,7 @@ def getDomains(product='all'):
         return []
     else:
         return ret.json()
-        
+
 class sslExpiry(object):
     def __init__(self, domain):
         '''
@@ -120,11 +121,6 @@ class myThread(threading.Thread):
         
         ssle = sslExpiry(self.__domain)
 
-        if self.__domain_l['customer'] == '公共客户[pub]':
-            self.__domain_l['customer'] = ""
-        else:
-            self.__domain_l['customer'] = "_"+self.__domain_l['customer']
-
         for i in range(self.__domain_l['retry']):
             cert = ssle.getCert()
             #print cert
@@ -132,48 +128,15 @@ class myThread(threading.Thread):
                 break
 
         if cert == SSLError:
-            self.t = (False, '['+self.__domain_l['product']+self.__domain_l['customer']+']'+self.__domain, u"证书不合法")
+            self.t = (False, self.__domain_l, u"证书不合法")
         elif not isinstance(cert, datetime.datetime):
-            self.t = (False, '['+self.__domain_l['product']+self.__domain_l['customer']+']'+self.__domain, cert)
+            self.t = (False, self.__domain_l, cert)
         else:
-            self.t = (True,  '['+self.__domain_l['product']+self.__domain_l['customer']+']'+self.__domain, cert)
+            self.t = (True,  self.__domain_l, cert)
 
     def get_result(self):
         return self.t
     
-def sendAlert(results):
-    java      = ""
-    yongshi   = ""
-    ruiying   = ""
-    fenghuang = ""
-    for result in results:
-        if result[0] == "java":
-            java += '\r\n' + result[1]
-        elif result[0] == "ruiying":
-            ruiying += '\r\n' + result[1]
-        else:
-            fenghuang += '\r\n' + result[1]
-    if java:
-        if len(java) >= 4096:
-            message['doc'] = True
-        message['text'] = ip + java
-        message['group'] = 'java_domain'
-        sendTelegram(message)
-    if ruiying:
-        if len(ruiying) >= 4096:
-            message['doc'] = True
-        message['text'] = ip + ruiying
-        message['group'] = 'ruiying_domain'
-        sendTelegram(message)
-    if fenghuang:
-        if len(fenghuang) >= 4096:
-            message['doc'] = True
-        message['text'] = ip + fenghuang
-        message['group'] = 'domain_alert' #domain_alert
-        sendTelegram(message)
-
-
-
 if __name__ == "__main__":
     #print sslExpiry('alcp33.com').getTime()
     li = []
@@ -183,8 +146,10 @@ if __name__ == "__main__":
     ex_half_y = ""
     ex_one_m  = ""
     
-    for domain_l in getDomains(product='all'):
-        if domain_l['customer'] in ['大象6668[dx_6668]', '大象70887[dx_70887]']:
+    getDomainsDict = getDomains(product='all')
+
+    for domain_l in getDomainsDict['domain']:
+        if domain_l['customer'][0] in [14, 15]:  #['大象6668[dx_6668]', '大象70887[dx_70887]']
             continue
         scheme = urlparse.urlsplit(domain_l['name']).scheme
 
@@ -196,27 +161,46 @@ if __name__ == "__main__":
     for t in li:
         t.join()
         result = t.get_result()
-        if result[0] and isinstance(result[2], datetime.datetime):
+
+        alert = None
+        #将结果存入报警列表
+        for tmp in getDomainsDict['alert']['others']:
+            if result[1]['product'][0] == tmp['product'][0] and result[1]['customer'][0] == tmp['customer'][0]:
+                alert = tmp
+                break
+            else:
+                continue
+        if not alert:
+            alert = getDomainsDict['alert']['default']
+        if result[0]:
+            customer = "_"+result[1]['customer'][1] if result[1]['customer'][0] != 29 else ""
+            info     = "["+result[1]['product'][1]+customer+"]"+urlparse.urlsplit(result[1]['name']).netloc.split(':')[0].strip()
             if d_one_m > result[2]:
-                ex_one_m += result[2].strftime(nor_date_fmt) + ": " + result[1] + "\r\n"
+                alert['ex_one_m'] += result[2].strftime(nor_date_fmt) + ": " + info + "\r\n"
             elif d_half_y > result[2]:
-                ex_half_y += result[2].strftime(nor_date_fmt) + ": " + result[1] + "\r\n"
+                alert['ex_half_y'] += result[2].strftime(nor_date_fmt) + ": " + info + "\r\n"
         else:
-            failed += str(result[2]) + ": " + result[1] + "\r\n"
+            alert['failed'] += str(result[2]) + ": " + info + "\r\n"
 
-    message['group'] = 'domain_renew' #domain_renew: 域名续费|证书续费
+    getDomainsDict['alert']['others'].append(getDomainsDict['alert']['default'])
 
-    if failed:
-        message['text'] += u"<pre>检测失败的域名: </pre>\r\n" + failed
-    if ex_one_m:
-        message['text'] += u"<pre>一个月内证书到期域名: </pre>\r\n" + ex_one_m
-    #if ex_half_y:
-    #    message['text'] += u"<pre>半年内证书到期域名: </pre>\r\n" + ex_half_y
-    if message['text']:
-        if len(message['text']) >= 4096:
-            message['doc']     = True
-            message['caption'] = u"\r\n@service 请提醒客户更换证书！"
-        else:
-            message['text'] += u"\r\n@service 请提醒客户更换证书！"
-        sendTelegram(message)
+    for alert in getDomainsDict['alert']['others']:
+        message['text']    = ""
+        message['doc']     = False
+        message['caption'] = ""
+
+        if alert['failed']:
+            message['text'] += u"<pre>检测失败的域名: </pre>\r\n" + alert['failed']
+        if alert['ex_one_m']:
+            message['text'] += u"<pre>一个月内证书到期域名: </pre>\r\n" + alert['ex_one_m']
+
+        for group in alert['chat_group']:
+            message['group'] = group
+            if message['text']:
+                if len(message['text']) >= 4096:
+                    message['doc']     = True
+                    message['caption'] = u"\r\n%s 请提醒客户更换证书！" %" ".join([ "@"+user for user in alert['user'] ]) if len(alert['user']) !=0 else ""
+                else:
+                    message['text'] += u"\r\n%s 请提醒客户更换证书！" %" ".join([ "@"+user for user in alert['user'] ]) if len(alert['user']) !=0 else ""
+                sendTelegram(message)
     

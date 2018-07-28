@@ -1039,3 +1039,7 @@
  [Errno 11002] getaddrinfo failed
 2018-06-12 22:22:56,198 - ERROR - www.3131365.com 443 connection error: 
  [Errno 11002] getaddrinfo failed
+2018-07-29 05:13:34,049 - ERROR - pay2.zhifu8868.com 443 connection error: 
+ timed out
+2018-07-29 05:13:44,428 - ERROR - pay2.zhifu8868.com 443 connection error: 
+ timed out

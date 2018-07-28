@@ -39,12 +39,28 @@ class telegram_domain_alert_t(models.Model):
     chat_group = models.ManyToManyField(telegram_chat_group_t, null=False)
     user_id    = models.ManyToManyField(telegram_user_id_t, blank=True)
     product    = models.IntegerField(choices=choices_product)
-    project    = models.CharField(max_length=10, choices=choices_proj)
+    customer   = models.IntegerField(choices=choices_customer, default=29)
+    project    = models.CharField(max_length=10, choices=choices_proj, blank=True)
+    status     = models.IntegerField(choices=choices_s, default=1)
     class Meta:
         unique_together = ('product' ,'project')
 
     def __str__(self):
-        return " | ".join([self.name, self.get_product_display(), self.get_project_display(),])
+        return " | ".join([self.name, self.get_product_display(), self.get_customer_display(),])
+
+class telegram_ssl_alert_t(models.Model):
+    name       = models.CharField(max_length=32, null=False)
+    chat_group = models.ManyToManyField(telegram_chat_group_t, null=False)
+    user_id    = models.ManyToManyField(telegram_user_id_t, blank=True)
+    product    = models.IntegerField(choices=choices_product)
+    customer   = models.IntegerField(choices=choices_customer, default=29)
+    project    = models.CharField(max_length=10, choices=choices_proj, blank=True)
+    status     = models.IntegerField(choices=choices_s, default=1)
+    class Meta:
+        unique_together = ('product' ,'project')
+
+    def __str__(self):
+        return " | ".join([self.name, self.get_product_display(), self.get_customer_display(),])
 
 class minion_ip_t(models.Model):
     minion_id = models.CharField(max_length=32, null=False)

@@ -5,6 +5,7 @@ from django.http                    import HttpResponse
 from django.views.decorators.csrf   import csrf_exempt, csrf_protect
 from dwebsocket                     import require_websocket, accept_websocket
 from models                         import domains
+from monitor.models                 import telegram_ssl_alert_t
 from accounts.limit                 import LimitAccess
 from telegram                       import sendTelegram
 from phxweb                         import settings
@@ -20,7 +21,7 @@ def GetDomains(request):
     else:
         clientip = request.META['REMOTE_ADDR']
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
-    domain_list = []
+    domain_dict = {'domain':[], 'alert':{'default':None, 'others':[]}}
 
     if request.method == 'POST':
         try:
@@ -29,9 +30,28 @@ def GetDomains(request):
                 domain_l = domains.objects.filter(status=1).all()
             else:
                 domain_l = domains.objects.filter(status=1, product=product).all()
+
+            alert_l  = telegram_ssl_alert_t.objects.filter(status=1).all()
         except Exception, e:
             logger.error(e.message)
             domain_l = []
+            alert_l  = []
+
+        for alert in alert_l:
+            tmp_dict = {
+                'name': alert.name,
+                'chat_group': [ group.group for group in alert.chat_group.all() ],
+                'user':       [ user.user for user in alert.user_id.all() ],
+                'product':  (alert.product, alert.get_product_display()),
+                'customer': (alert.customer, alert.get_customer_display()),
+                'ex_one_m':  "",
+                'ex_half_y': "",
+                'failed':    "",
+            }
+            if tmp_dict['name'] == "默认":
+                domain_dict['alert']['default']=tmp_dict
+            else:
+                domain_dict['alert']['others'].append(tmp_dict)
 
         for domain in domain_l:
             tmp_dict = {}
@@ -42,8 +62,8 @@ def GetDomains(request):
             tmp_dict['method']   = domain.group.method
             tmp_dict['ssl']      = domain.group.ssl
             tmp_dict['retry']    = domain.group.retry
-            domain_list.append(tmp_dict)
-        return HttpResponse(json.dumps(domain_list))
+            domain_dict['domain'].append(tmp_dict)
+        return HttpResponse(json.dumps(domain_dict))
     else:
         return HttpResponse(status=403)
 
