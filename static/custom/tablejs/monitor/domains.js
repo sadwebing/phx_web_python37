@@ -523,11 +523,11 @@ var operate = {
     //新增
     operateAdd: function(){
         $('#btn_add').on("click", function () {
-            document.getElementById("txt_add_status").innerHTML=selects['status'];
-            document.getElementById("txt_add_group").innerHTML=selects['group'];
-            document.getElementById("txt_add_customer").innerHTML=selects['customer'];
-            document.getElementById("txt_add_product").innerHTML=selects['product'];
-            document.getElementById("txt_add_cdn").innerHTML=selects['cdn'];
+            document.getElementById("txt_add_status").innerHTML=data_all['status'];
+            document.getElementById("txt_add_group").innerHTML=data_all['group'];
+            document.getElementById("txt_add_customer").innerHTML=data_all['customer'];
+            document.getElementById("txt_add_product").innerHTML=data_all['product'];
+            document.getElementById("txt_add_cdn").innerHTML=data_all['cdn'];
             $('.selectpicker').selectpicker('refresh');
 
             $("#myModal").modal().on("shown.bs.modal", function () {
