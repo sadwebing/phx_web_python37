@@ -6,8 +6,8 @@
 
 import requests, sys, os
 import datetime, json, logging, re
-from accounts.models import telegram_user_id_t, telegram_chat_group_t
-from phxweb          import settings
+from models import telegram_user_id_t, telegram_chat_group_t
+from phxweb import settings
 
 logger = logging.getLogger('django')
 

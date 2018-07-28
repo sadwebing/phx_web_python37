@@ -39,6 +39,26 @@ class cdn_account_t(models.Model):
     def __str__(self):
         return " | ".join([self.get_name_display(), self.account])
 
+class telegram_chat_group_t(models.Model):
+    name  = models.CharField(max_length=32, null=False)
+    group = models.CharField(max_length=32, null=False)
+    group_id = models.IntegerField()
+    class Meta:
+        unique_together = ('group' ,'group_id')
+
+    def __str__(self):
+        return " | ".join([self.name, self.group, str(self.group_id)])
+
+class telegram_user_id_t(models.Model):
+    user = models.CharField(max_length=32, null=False)
+    name = models.CharField(max_length=32, null=False)
+    user_id = models.IntegerField()
+    class Meta:
+        unique_together = ('user' ,'user_id')
+
+    def __str__(self):
+        return " | ".join([self.user, self.name, str(self.user_id)])
+
 class domains(models.Model):
     #choices_n = (
     #            (1, 'http://'), 

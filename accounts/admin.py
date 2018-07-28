@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import UserProfile, telegram_chat_group_t, telegram_user_id_t
+from models import UserProfile
 from django.contrib.auth.models import User
 from django.contrib.auth.admin import UserAdmin  
 
@@ -16,6 +16,3 @@ class CustomUserAdmin(UserAdmin):
 
 admin.site.unregister(User)
 admin.site.register(User, CustomUserAdmin)
-
-admin.site.register(telegram_chat_group_t)
-admin.site.register(telegram_user_id_t)

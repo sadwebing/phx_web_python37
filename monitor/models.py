@@ -5,7 +5,7 @@ from django.db                  import models
 from django.contrib.auth.models import User
 from django.core                import exceptions
 from phxweb.settings            import choices_customer, choices_product
-from detect.models              import domains
+from detect.models              import domains, telegram_chat_group_t, telegram_user_id_t
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -23,17 +23,28 @@ choices_s = (
         (0, '禁用'),
     )
 
-#class telegram_alert_t(models.Model):
-#    user = models.CharField(max_length=32, null=False)
-#    name = models.CharField(max_length=32, null=False)
-#    user_id = models.IntegerField()
-#    product = models.IntegerField(choices=choices_product)
-#    project = models.CharField(max_length=10, choices=choices_proj)
-#    class Meta:
-#        unique_together = ('user' ,'user_id')
-#
-#    def __str__(self):
-#        return " | ".join([self.user, self.name, str(self.user_id)])
+choices_proj = (
+        ('caipiao', '彩票[caipiao]'), 
+        ('sport',   '体育[sport]'),
+        ('houtai',  '后台[houtai]'),
+        ('pay',     '支付[pay]'),
+        ('ggz',     '广告站[ggz]'),
+        ('image',   '图片[image]'),
+        ('vpn',     'vpn'),
+        ('httpdns', 'httpdns'),
+    )
+
+class telegram_domain_alert_t(models.Model):
+    name       = models.CharField(max_length=32, null=False)
+    chat_group = models.ManyToManyField(telegram_chat_group_t, null=False)
+    user_id    = models.ManyToManyField(telegram_user_id_t, blank=True)
+    product    = models.IntegerField(choices=choices_product)
+    project    = models.CharField(max_length=10, choices=choices_proj)
+    class Meta:
+        unique_together = ('product' ,'project')
+
+    def __str__(self):
+        return " | ".join([self.name, self.get_product_display(), self.get_project_display(),])
 
 class minion_ip_t(models.Model):
     minion_id = models.CharField(max_length=32, null=False)
@@ -79,16 +90,6 @@ class project_t(models.Model):
     choices_role = (
         ('main',   '主[main]'), 
         ('backup', '备[backup]'),
-        )
-    choices_proj = (
-        ('caipiao', '彩票[caipiao]'), 
-        ('sport',   '体育[sport]'),
-        ('houtai',  '后台[houtai]'),
-        ('pay',     '支付[pay]'),
-        ('ggz',     '广告站[ggz]'),
-        ('image',   '图片[image]'),
-        ('vpn',     'vpn'),
-        ('httpdns', 'httpdns'),
         )
 
     choices_servert = (
