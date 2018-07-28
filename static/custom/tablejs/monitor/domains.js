@@ -60,6 +60,19 @@ var tableInit = {
                     //width:'9%',
                     //align: 'center'
                 },{
+                    field: 'cdn',
+                    title: 'CDN',
+                    sortable: true,
+                    formatter: function (value, row, index) {
+                        var list = [];
+                        for (var i = row.cdn.length - 1; i >= 0; i--) {
+                            list.push(row.cdn[i].name+"_"+row.cdn[i].account)
+                        }
+                        return list.join('<br>');
+                    }
+                    //width:'9%',
+                    //align: 'center'
+                },{
                     field: 'status',
                     title: '状态',
                     sortable: true,
@@ -308,8 +321,10 @@ var operate = {
         this.selectpicker();
         this.getGroups();
         this.operateAdd();
-        this.operateUpdate();
+        //this.operateUpdate();
         this.operateconfirmDelete();
+        this.operateAddCommit();
+        this.operateSave();
         this.operateMonitorPorjectSelect();
         //this.operateDelete();
         this.DepartmentModel = {
@@ -341,10 +356,13 @@ var operate = {
                 //console.log(data);
                 //var selects = "<option selected value>all</option>";
                 var selects = {}
-                selects['data']    = data
-                selects['group']   = "";
+                selects['data']     = data
+                selects['group']    = "";
                 selects['customer'] = "";
-                selects['product'] = "";
+                selects['product']  = "";
+                selects['cdn']      = "";
+                selects['status']   = "option value=1>启用</option><option value=0>禁用</option>";
+                selects['edit_cdn_bool'] = "<option value=1>更新CDN</option><option value=0 selected>不更新CDN</option>";
                 $.each(data['group_l'], function (index, item) { 
                     selects['group'] = selects['group'] + "<option value="+item.id+" data-subtext='"+item.client+" | "+item.method+" | "+item.ssl+" | "+item.retry+"'>"+item.group+"</option>"
                 }); 
@@ -354,12 +372,15 @@ var operate = {
                 $.each(data['product_l'], function (index, item) { 
                     selects['product'] = selects['product'] + "<option value="+item[0]+">"+item[1]+"</option>"
                 }); 
+                $.each(data['cdn_l'], function (index, item) { 
+                    selects['cdn'] = selects['cdn'] + "<option value="+item.id+" data-subtext="+item.name+">"+item.account+"</option>"
+                }); 
                 document.getElementById("txt_group").innerHTML=selects['group'];
                 document.getElementById("txt_customer").innerHTML=selects['customer'];
                 document.getElementById("txt_product").innerHTML=selects['product'];
-                document.getElementById("txt_add_group").innerHTML="<option value=></option>" + selects['group'];
-                document.getElementById("txt_add_customer").innerHTML="<option value=></option>" + selects['customer'];
-                document.getElementById("txt_add_product").innerHTML="<option value=></option>" + selects['product'];
+                document.getElementById("txt_cdn").innerHTML=selects['cdn'];
+                
+                //document.getElementById("txt_edit2_cdn").innerHTML=selects['cdn'];
                 $('.selectpicker').selectpicker('refresh');
                 data_all = selects;
                 return true;
@@ -376,39 +397,10 @@ var operate = {
     
     operateMonitorPorjectSelect: function(){
         $('#btn_query').on("click", function () {
-            var group_l   = [];
-            var customer_l = [];
-            var product_l = [];
-            var objSelectproject = document.selectmalform.txt_group
-            for(var i = 0; i < objSelectproject.options.length; i++) { 
-                if (objSelectproject.options[i].selected == true) 
-                group_l.push(objSelectproject.options[i].value);
-            }
-            if (group_l.length == 0) {
-                for(var i = 0; i < objSelectproject.options.length; i++) {
-                    group_l.push(objSelectproject.options[i].value);
-                }
-            }
-            objSelectproject = document.selectmalform.txt_customer
-            for(var i = 0; i < objSelectproject.options.length; i++) { 
-                if (objSelectproject.options[i].selected == true) 
-                customer_l.push(objSelectproject.options[i].value);
-            }
-            if (customer_l.length == 0) {
-                for(var i = 0; i < objSelectproject.options.length; i++) {
-                    customer_l.push(objSelectproject.options[i].value);
-                }
-            }
-            objSelectproject = document.selectmalform.txt_product
-            for(var i = 0; i < objSelectproject.options.length; i++) { 
-                if (objSelectproject.options[i].selected == true) 
-                product_l.push(objSelectproject.options[i].value);
-            }
-            if (product_l.length == 0) {
-                for(var i = 0; i < objSelectproject.options.length; i++) {
-                    product_l.push(objSelectproject.options[i].value);
-                }
-            }
+            var group    = public.showSelectedValue('txt_group', true);
+            var customer = public.showSelectedValue('txt_customer', true);
+            var product  = public.showSelectedValue('txt_product', true);
+            var cdn      = public.showSelectedValue('txt_cdn', false);
             
             var params = {
                 url: '/monitor/domains/Query',
@@ -418,9 +410,10 @@ var operate = {
                     return { limit: param.limit, offset: param.offset, 
                         'status':document.getElementById("txt_status").value, 
                         'num': document.getElementById("txt_num").value, 
-                        'group': group_l,
-                        'customer': customer_l,
-                        'product': product_l,
+                        'group': group,
+                        'customer': customer,
+                        'product': product,
+                        'cdn': cdn,
                         };
                 },
             }
@@ -516,113 +509,6 @@ var operate = {
 
     },
 
-    operateEditMail: function (){
-        this.mailViewModel = new ko.bootstrapTableViewModel({
-            url: '/tomcat/mail/Query',         //请求后台的URL（*）
-            method: 'post',                      //请求方式（*）
-            dataType: "json",
-            //toolbar: '#toolbar',                //工具按钮用哪个容器
-            queryParams: function (param) {
-                return { limit: param.limit, offset: param.offset, 'act':'query_all' };
-            },//传递参数（*）
-            columns: [
-                {
-                    field: 'id',
-                    title: 'id',
-                    sortable: true,
-                    width:'3%',
-                    //align: 'center'
-                },{
-                    field: 'name',
-                    title: '姓名',
-                    sortable: true,
-                    width:'5%',
-                    //align: 'center'
-                },{
-                    field: 'mail_address',
-                    title: '邮箱',
-                    sortable: true,
-                    width:'18%',
-                    //align: 'center'
-                },{
-                    field: 'role',
-                    title: '角色',
-                    sortable: true,
-                    //align: 'center',
-                    width:'9%',
-                },{
-                    field: 'check_services',
-                    title: '假死监控',
-                    sortable: true,
-                    //align: 'center',
-                    width:'5%',
-                    events: operateMailEvents,
-                    formatter: operate.checkServicesFormatter,
-                },{
-                    field: 'check_salt_minion',
-                    title: 'minion监控',
-                    sortable: true,
-                    width:'5%',
-                    //align: 'center'
-                    events: operateMailEvents,
-                    formatter: operate.checkSaltMinionFormatter,
-                },
-            ]
-        });
-        ko.applyBindings(this.mailViewModel, document.getElementById("mail_table"));
-        //部分列进行隐藏
-        $('#mail_table').bootstrapTable('hideColumn', 'id');
-        $('#mail_table').bootstrapTable('hideColumn', 'name');
-        $('#mail_table').bootstrapTable('hideColumn', 'role');
-        $('#edit_mail').on("click", function () {
-            //console.log(this.mailViewModel)
-            $("#modifyMail").modal('show');
-        });
-    },
-
-    checkServicesFormatter: function (value,row,index){
-        //console.log(row)
-        if (value == 1){
-            content = [
-            '<div class="checkbox checkbox-slider--a" style="margin:0px;">',
-                '<label>',
-                    '<input type="checkbox" id="'+ row.id+'_check_services" class="update_mail_status" checked><span></span>',
-                '</label>',
-            '</div>'
-            ].join('');
-        }else {
-            content = [
-            '<div class="checkbox checkbox-slider--a" style="margin:0px;">',
-                '<label>',
-                    '<input type="checkbox" id="'+ row.id+'_check_services" class="update_mail_status"><span></span>',
-                '</label>',
-            '</div>'
-            ].join('');
-        }
-        return content;
-    },
-
-    checkSaltMinionFormatter: function (value,row,index){
-        if (value == 1){
-            content = [
-            '<div class="checkbox checkbox-slider--a" style="margin:0px;">',
-                '<label>',
-                    '<input type="checkbox" id="'+ row.id+'_check_salt_minion" class="update_mail_status" checked><span></span>',
-                '</label>',
-            '</div>'
-            ].join('');
-        }else {
-            content = [
-            '<div class="checkbox checkbox-slider--a" style="margin:0px;">',
-                '<label>',
-                    '<input type="checkbox" id="'+ row.id+'_check_salt_minion" class="update_mail_status"><span></span>',
-                '</label>',
-            '</div>'
-            ].join('');
-        }
-        return content;
-    },
-
     isDomain: function (value) {
         var regexp = /^(http:\/\/|https:\/\/).*[a-zA-Z0-9]+.*\.[a-zA-Z0-9]*[a-zA-Z]+[a-zA-Z0-9]*.*$/;
         //var regexp_tw = /^(tw|.*\.tw)\..*$/;
@@ -637,33 +523,20 @@ var operate = {
     //新增
     operateAdd: function(){
         $('#btn_add').on("click", function () {
+            document.getElementById("txt_add_status").innerHTML=selects['status'];
+            document.getElementById("txt_add_group").innerHTML=selects['group'];
+            document.getElementById("txt_add_customer").innerHTML=selects['customer'];
+            document.getElementById("txt_add_product").innerHTML=selects['product'];
+            document.getElementById("txt_add_cdn").innerHTML=selects['cdn'];
+            $('.selectpicker').selectpicker('refresh');
+
             $("#myModal").modal().on("shown.bs.modal", function () {
-                var oEmptyModel = {
-                    envir: ko.observable(),
-                    project: ko.observable(),
-                    minion_id: ko.observable(),
-                    ip_addr: ko.observable(),
-                    server_type: ko.observable(),
-                    role: ko.observable(),
-                    domain: ko.observable(),
-                    url: ko.observable(),
-                    status_: ko.observable(),
-                    info: ko.observable(),
-                };
-                ko.utils.extend(operate.DepartmentModel, oEmptyModel);
-                ko.applyBindings(operate.DepartmentModel, document.getElementById("myModal"));
-                document.getElementById("txt_add_group").innerHTML=data_all['group'];
-                document.getElementById("txt_add_product").innerHTML=data_all['product'];
-                document.getElementById("txt_add_customer").innerHTML=data_all['customer'];
-                $('.selectpicker').selectpicker('refresh');
-                operate.operateAddCommit();
                 //operate.operateSave('Add');
             }).on('hidden.bs.modal', function () {
-                ko.cleanNode(document.getElementById("myModal"));
+                $("#myModal").removeData("bs.modal");
             });
+            //operate.operateAddCommit();
         });
-        
-
     },
 
     operateAddCommit: function () {
@@ -676,6 +549,7 @@ var operate = {
                 'customer' : document.getElementById('txt_add_customer').value,
                 'domains' : document.getElementById('textarea_add_domain').value,
                 'content' : document.getElementById('textarea_add_content').value,
+                'cdn'     : public.showSelectedValue('txt_add_cdn', false),
             }
 
             if (! postData['group']){
@@ -731,91 +605,113 @@ var operate = {
         
     },
     
+    operateSelected: function (value, selectid) {
+        var objSelectproject = document.getElementById(selectid);
+        //console.log(objSelectproject);
+        for (var i = objSelectproject.options.length - 1; i >= 0; i--) {
+            if (Array.isArray(value)){
+                if (public.isStrinList(objSelectproject.options[i].value, String(value))){
+                    objSelectproject.options[i].selected = true;
+                    //console.log(objSelectproject.options[i].value+"_"+value);
+                }
+            }else {
+                if (objSelectproject.options[i].value == String(value)) {
+                    objSelectproject.options[i].selected = true;
+                    //console.log(objSelectproject.options[i].value+"_"+value);
+                }
+            }
+        }
+        $('.selectpicker').selectpicker('refresh');
+    },
+
     //编辑
     operateUpdate: function () {
-        $('#btn_edit').on("click", function () {
-            var arrselectedData = tableInit.myViewModel.getSelections();
-            if (!operate.operateCheck(arrselectedData)) { return; }
+        var arrselectedData = tableInit.myViewModel.getSelections();
+        if (!operate.operateCheck(arrselectedData)) { return; }
+            document.getElementById("txt_edit_status").innerHTML=data_all['status'];
+            document.getElementById("txt_edit_group").innerHTML=data_all['group'];
+            document.getElementById("txt_edit_product").innerHTML=data_all['product'];
+            document.getElementById("txt_edit_customer").innerHTML=data_all['customer'];
+            document.getElementById("txt_edit_cdn").innerHTML=data_all['cdn'];
+            document.getElementById("txt_edit_cdn_bool").innerHTML=data_all['edit_cdn_bool'];
+            document.getElementById("textarea_edit_domain").innerHTML="";
+            document.getElementById("textarea_edit_content").innerHTML="";
+            $('.selectpicker').selectpicker('refresh');
+    
             //operate.operateSave('Update');
             if (arrselectedData.length == 1) {
-                $("#editSingleModal").modal().on("shown.bs.modal", function () {
-                    //operate.selectpicker();
-                    //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
-                    ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[0]));
-                    var data = ko.toJS(operate.DepartmentModel)
-                    
-                    for(var i = 0; i < data_all['data']['group_l'].length; i++) { 
-                        if (data['group'] == data_all['data']['group_l'][i]['group']){
-                            data['group'] = data_all['data']['group_l'][i]['id'];
-                        }
+                //operate.selectpicker();
+                //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
+                ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[0]));
+                var data = ko.toJS(operate.DepartmentModel)
+                //console.log(data);
+                
+                for(var i = 0; i < data_all['data']['group_l'].length; i++) { 
+                    if (data['group'] == data_all['data']['group_l'][i]['group']){
+                        operate.operateSelected(data_all['data']['group_l'][i]['id'], 'txt_edit_group');
                     }
-                    for(var i = 0; i < data_all['data']['customer_l'].length; i++) { 
-                        if (data['customer'] == data_all['data']['customer_l'][i][1]){
-                            data['customer'] = data_all['data']['customer_l'][i][0];
-                        }
+                }
+                for(var i = 0; i < data_all['data']['customer_l'].length; i++) { 
+                    if (data['customer'] == data_all['data']['customer_l'][i][1]){
+                        operate.operateSelected(data_all['data']['customer_l'][i][0], 'txt_edit_customer');
                     }
-                    for(var i = 0; i < data_all['data']['product_l'].length; i++) { 
-                        if (data['product'] == data_all['data']['product_l'][i][1]){
-                            data['product'] = data_all['data']['product_l'][i][0];
-                        }
+                }
+                for(var i = 0; i < data_all['data']['product_l'].length; i++) { 
+                    if (data['product'] == data_all['data']['product_l'][i][1]){
+                        operate.operateSelected(data_all['data']['product_l'][i][0], 'txt_edit_product');
                     }
-                    
-                    if (document.getElementById(operate.DepartmentModel.id()).checked){
-                        data['status'] = 1;
-                    }else {
-                        data['status'] = 0;
-                    }
-                    
-                    document.getElementById("txt_edit_group").innerHTML=data_all['group'];
-                    document.getElementById("txt_edit_product").innerHTML=data_all['product'];
-                    document.getElementById("txt_edit_customer").innerHTML=data_all['customer'];
-                    ko.utils.extend(operate.DepartmentModel, data);
-                    ko.applyBindings(operate.DepartmentModel, document.getElementById("editSingleModal"));
-                    $('#btn_update_submit').on("click", function () {
-                        operate.operateSave('Update');
-                    });
-                }).on('hidden.bs.modal', function () {
-                    //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
-                    ko.cleanNode(document.getElementById("editSingleModal"));
-                });
-            }else {
-                $("#editMultiModal").modal().on("shown.bs.modal", function () {
-                    //ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData));
-                    var data = {
-                        id: "",
-                        name: "",
-                        product: "",
-                        customer: "",
-                        group: "",
-                        content: "",
-                        status: "",
-                    };
-                    var html = "";
-                    $.each(arrselectedData, function (index, item) { 
-                        //循环获取数据
-                        var name = arrselectedData[index];
-                        //alert(name)
-                        html_name = "<tr><td>"+name.id+"</td><td>"+name.name+"</td><td>"+name.product+"</td><td>"+name.customer+"</td><td>"+name.group+"</td><td>"+name.status+"</td><td>"+name.content+"</td></tr>";
-                        html = html + html_name
-                        data['name'] = data['name'] + name.name + "\n";
-                    }); 
-                    $("#UpdateDatas").html(html);
-                    //console.log(data)
+                }
+                for(var i = 0; i < data['cdn'].length; i++) { 
+                    operate.operateSelected(data['cdn'][i]['id'], 'txt_edit_cdn');
+                }
+                
+                if (document.getElementById(data['id']).checked){
+                    data['status'] = 1;
+                }else {
+                    data['status'] = 0;
+                }
+                document.getElementById("textarea_edit_domain").innerHTML=data['name'];
+                document.getElementById("textarea_edit_content").innerHTML=data['content'];
+                operate.operateSelected(data['status'], 'txt_edit_status');
 
-                    document.getElementById("txt_edit2_group").innerHTML="<option value selected></option>" + data_all['group'];
-                    document.getElementById("txt_edit2_product").innerHTML="<option value selected></option>" + data_all['product'];
-                    document.getElementById("txt_edit2_customer").innerHTML="<option value selected></option>" + data_all['customer'];
-                    ko.utils.extend(operate.DepartmentModel, data);
-                    ko.applyBindings(operate.DepartmentModel, document.getElementById("editMultiModal"));
-                    
-                    $('#btn_update2_submit').on("click", function () {
-                        operate.operateSave('Update');
-                    });
-                }).on('hidden.bs.modal', function () {
-                    //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
-                    ko.cleanNode(document.getElementById("editMultiModal"));
-                });
+                //ko.utils.extend(operate.DepartmentModel, data);
+                //ko.applyBindings(operate.DepartmentModel, document.getElementById("editSingleModal"));
+            }else {
+                //ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData));
+                var data = {
+                    id: "",
+                    name: "",
+                    product: "",
+                    customer: "",
+                    group: "",
+                    content: "",
+                    status: "",
+                };
+                var html = "";
+                $.each(arrselectedData, function (index, item) { 
+                    //console.log(arrselectedData);
+                    //循环获取数据
+                    var name = arrselectedData[index];
+                    //alert(name)
+                    html_name = "<tr><td>"+name.id+"</td><td>"+name.name+"</td><td>"+name.product+"</td><td>"+name.customer+"</td><td>"+name.group+"</td><td>"+name.status+"</td><td>"+name.content+"</td></tr>";
+                    html = html + html_name
+                    data['name'] = data['name'] + name.name + "\n";
+                }); 
+                $("#UpdateDatas").html(html);
+                document.getElementById("UpdateDatasTable").style.display = "inline";
+                //document.getElementById("edit_cdn_bool").style.display = "inline";
+
+                document.getElementById("textarea_edit_domain").innerHTML=data['name'];
+                
+                $('.selectpicker').selectpicker('refresh');
             }
+        $("#editSingleModal").modal().on("shown.bs.modal", function () {
+
+        }).on('hidden.bs.modal', function () {
+            //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
+            document.getElementById("UpdateDatasTable").style.display = "none";
+            //document.getElementById("edit_cdn_bool").style.display = "none";
+            $(this).removeData("bs.modal");
         });
     },
 
@@ -886,48 +782,81 @@ var operate = {
         });
     },
     //保存数据
-    operateSave: function (funcName) {
-        //toastr.info("Welcome World!1");
-        //将Viewmodel转换为数据model
-        var data = ko.toJS(operate.DepartmentModel);
-        data['name'] = data['name'].split('\n');
-        for(var i = 0; i < data['name'].length; i++) { 
-            if(data['name'][i].replace(/ /g, '') === ''){
-                data['name'].splice(i, 1);
-            }else if (! operate.isDomain(data['name'][i])) {
-                alert(data['name'][i] + "格式不正确！");
-                return false;
-            }
-        }
-        data['all'] = tableInit.myViewModel.getSelections();
-        if (data['name'].length !== data['all'].length){
-            alert("需要修改的域名数量不正确，请检查！");
-            return false;
-        }
-
-        toastr.info("请求发送中，请耐心等待返回...");
-        //var funcName = oDataModel.id?"Update":"Add";
-        $.ajax({
-            url: "/monitor/domains/"+funcName,
-            type: "post",
-            data: JSON.stringify(data),
-            contentType: 'application/json',
-            success: function (data, status) {
-                toastr.success(data);
-                tableInit.myViewModel.refresh();
-                return true;
-            },
-            error:function(XMLHttpRequest, textStatus, errorThrown){
-                if (XMLHttpRequest.status == 0){
-                    toastr.error('后端服务不响应', '错误')
+    operateSave: function () {
+        $('#btn_update_submit').on("click", function () {
+            //toastr.info("Welcome World!1");
+            //将Viewmodel转换为数据model
+            arrselectedData = tableInit.myViewModel.getSelections();
+            var postData = {
+                    'status'   : document.getElementById('txt_edit_status').value,
+                    'group'    : document.getElementById('txt_edit_group').value,
+                    'product'  : document.getElementById('txt_edit_product').value,
+                    'customer' : document.getElementById('txt_edit_customer').value,
+                    'domains'  : document.getElementById('textarea_edit_domain').value,
+                    'content'  : document.getElementById('textarea_edit_content').value,
+                    'cdn'      : public.showSelectedValue('txt_edit_cdn', false),
+                    'edit_cdn_bool' : public.showSelectedValue('txt_edit_cdn_bool', false),
+                }
+                if (arrselectedData.length == 1){
+                    if (! postData['group']){
+                        alert('前选择所属组！')
+                        return false;
+                    }
+                    if (! postData['product']){
+                        alert('前选择所属产品！')
+                        return false;
+                    }
+                    if (! postData['customer']){
+                        alert('前选择所属客户！')
+                        return false;
+                    }
+                }
+                
+                if (! postData['domains']){
+                    alert('域名不能为空！')
                     return false;
                 }else {
-                    toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.status)
-                    return false;
+                    postData['domain_l'] = postData['domains'].split('\n')
+                    for(var i = 0; i < postData['domain_l'].length; i++) { 
+                        if(postData['domain_l'][i].replace(/ /g, '') === ''){
+                            postData['domain_l'].splice(i, 1);
+                        }else if (! operate.isDomain(postData['domain_l'][i])) {
+                            alert(postData['domain_l'][i] + "格式不正确！");
+                            return false;
+                        }
+                    }
                 }
-                //alert("失败，请检查日志！");
-                //tableInit.myViewModel.refresh();
+    
+            postData['all'] = arrselectedData;
+            if (postData['domain_l'].length !== postData['all'].length){
+                alert("需要修改的域名数量不正确，请检查！");
+                return false;
             }
+    
+            toastr.info("请求发送中，请耐心等待返回...");
+            //var funcName = oDataModel.id?"Update":"Add";
+            $.ajax({
+                url: "/monitor/domains/Update",
+                type: "post",
+                data: JSON.stringify(postData),
+                contentType: 'application/json',
+                success: function (data, status) {
+                    toastr.success(data);
+                    tableInit.myViewModel.refresh();
+                    return true;
+                },
+                error:function(XMLHttpRequest, textStatus, errorThrown){
+                    if (XMLHttpRequest.status == 0){
+                        toastr.error('后端服务不响应', '错误')
+                        return false;
+                    }else {
+                        toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.status)
+                        return false;
+                    }
+                    //alert("失败，请检查日志！");
+                    //tableInit.myViewModel.refresh();
+                }
+            });
         });
     },
     //数据校验

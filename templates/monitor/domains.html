@@ -7,36 +7,53 @@
     <div class="panel-heading">
         <h4 class="panel-title">监控域名列表</h4>
     </div>
-    <div>
-        <form id="selectmalform" name="selectmalform" class="form-group form-inline" role="form">
-            <select type="text" name="txt_status" class="form-control selectpicker show-tick" id="txt_status" data-width="10%"> 
+    <div class="col-xs-12 col-sm-12 col-md-12" style="margin-bottom: 5px;">
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <select type="text" name="txt_status" class="form-control selectpicker show-tick" id="txt_status" data-width="80%"> 
                 <option value='1'>启用</option>
                 <option value='0'>禁用</option>
                 <option value='01' selected>全部</option>
             </select>
-            <select type="text" name="txt_num" class="form-control selectpicker show-tick" id="txt_num" data-width="10%"> 
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <select type="text" name="txt_num" class="form-control selectpicker show-tick" id="txt_num" data-width="80%"> 
                 <option value=15>15</option>
                 <option value=30>30</option>
                 <option value=30>50</option>
                 <option value=30>100</option>
                 <option value='all' selected>all</option>
             </select>
-            <select type="text" class="form-control selectpicker show-tick" data-live-search="true" data-actions-box="true" name="txt_product" title="所属产品[默认全部]" multiple id="txt_product" data-width="20%">
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <select type="text" class="form-control selectpicker show-tick" data-live-search="true" data-actions-box="true" name="txt_cdn" title="CDN[默认为空]" multiple id="txt_cdn" data-width="80%" required>
             </select>
-            <select type="text" class="form-control selectpicker show-tick" data-live-search="true" data-actions-box="true" name="txt_customer" title="所属客户[默认全部]" multiple id="txt_customer" data-width="20%">
-            </select>
-            <select type="text" class="form-control selectpicker show-tick" data-live-search="true" data-actions-box="true" name="txt_group" title="所属组[默认全部]" multiple id="txt_group" data-width="20%">
-            </select>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3">
             <button id="btn_query" type="button" class="btn btn-default">查询</button>
-            
-        </form>
+        </div>
     </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <select type="text" class="form-control selectpicker show-tick" data-live-search="true" data-actions-box="true" name="txt_product" title="所属产品[默认全部]" multiple id="txt_product" data-width="80%">
+            </select>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <select type="text" class="form-control selectpicker show-tick" data-live-search="true" data-actions-box="true" name="txt_customer" title="所属客户[默认全部]" multiple id="txt_customer" data-width="80%">
+            </select>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <select type="text" class="form-control selectpicker show-tick" data-live-search="true" data-actions-box="true" name="txt_group" title="所属组[默认全部]" multiple id="txt_group" data-width="80%">
+            </select>
+        </div>
+    </div>
+
     <div id="toolbar" class="btn-group">
         <button id="btn_add" type="button" class="btn btn-default" >
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
         </button>
 
-        <button id="btn_edit" type="button" class="btn btn-default" >
+        <button id="btn_edit" onclick="operate.operateUpdate()" type="button" class="btn btn-default" >
             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改
         </button>
         
@@ -54,22 +71,36 @@
                         <h4 class="modal-title text-center" id="myModalLabel">新增</h4>
                     </div>
                     <div class="modal-body">
-                        <form class="form-inline" style="margin-bottom: 10px;">
-                            <select name="txt_add_status" class="form-control" id="txt_add_status" placeholder="状态"> 
-                                <option value=1>启用</option>
-                                <option value=0>禁用</option>
-                            </select>
-                            
-                            <select type="text" name="txt_add_product" class="form-control" id="txt_add_product" placeholder="所属产品" >
-                            </select>
-                            <select type="text" name="txt_add_customer" class="form-control" id="txt_add_customer" placeholder="所属产品" >
-                            </select>
-                            <select type="text" name="txt_add_group" class="form-control" id="txt_add_group" title="所属组"> 
-                            </select>
-                        </form>
-                        
-                        <textarea id="textarea_add_domain" name="textarea_add_domain" style="height:200px; width: 550px; margin-bottom: 10px; resize: none;" placeholder="域名URL[http://domain/uri]，每行一条"></textarea>
-                        <textarea id="textarea_add_content" name="textarea_add_content" style="height:50px; width: 550px; margin-bottom: 10px; resize: none;" placeholder="域名备注"></textarea>
+                        <div class="col-xs-12 col-sm-12 col-md-12" style="margin-bottom: 5px;">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <select name="txt_add_status" class="form-control selectpicker" id="txt_add_status" placeholder="状态"> 
+                                    <option value=1>启用</option>
+                                    <option value=0>禁用</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <select type="text" name="txt_add_cdn" class="form-control selectpicker" multiple data-actions-box="true" id="txt_add_cdn" title="CDN"> 
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12" style="margin-bottom: 10px;">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <select type="text" name="txt_add_product" class="form-control selectpicker" data-live-search="true" id="txt_add_product" title="所属产品">
+                                </select>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <select type="text" name="txt_add_customer" class="form-control selectpicker" data-live-search="true" id="txt_add_customer" title="所属客户">
+                                </select>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <select type="text" name="txt_add_group" class="form-control selectpicker" data-live-search="true" id="txt_add_group" title="所属组">
+                                </select>
+                            </div>
+                        </div>
+                        <p>域名URL：</p>
+                        <textarea class="form-control" id="textarea_add_domain" name="textarea_add_domain" style="height:200px; margin-bottom: 10px; resize: none;" placeholder="域名URL[http://domain/uri]，每行一条"></textarea>
+                        <p>备注：</p>
+                        <textarea class="form-control" id="textarea_add_content" name="textarea_add_content" style="height:50px; margin-bottom: 10px; resize: none;" placeholder="域名备注"></textarea>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
@@ -80,86 +111,75 @@
         </div>
 
         <div class="modal fade" id="editSingleModal" tabindex="-1" role="dialog" aria-labelledby="editSingleModalLabel" aria-hidden="true" data-backdrop="static">
-            <div class="modal-dialog" role="document" style="width: 600px;">
+            <div class="modal-dialog" role="document" style="width: 800px;">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title text-center" id="editSingleModalLabel">修改单条</h4>
+                        <h4 class="modal-title text-center" id="editSingleModalLabel">修改</h4>
                     </div>
                     <div class="modal-body">
-                        <form class="form-inline" style="margin-bottom: 10px;">
-                            <select name="txt_edit_status" data-bind="value:status" class="form-control" id="txt_edit_status" placeholder="状态"> 
-                                <option value=1>启用</option>
-                                <option value=0>禁用</option>
-                            </select>
-                            
-                            <select type="text" name="txt_edit_product" data-bind="value:product" class="form-control" id="txt_edit_product" placeholder="所属产品" >
-                            </select>
-                            <select type="text" name="txt_edit_customer" data-bind="value:customer" class="form-control" id="txt_edit_customer" placeholder="所属客户" >
-                            </select>
-                            <select type="text" name="txt_edit_group" data-bind="value:group" class="form-control" id="txt_edit_group" placeholder="所属组">
-                            </select>
-                        </form>
-                        
-                        <textarea id="textarea_edit_domain" name="textarea_edit_domain" data-bind="value:name" style="height:200px; width: 550px; margin-bottom: 10px; resize: none;" placeholder="域名URL[http://domain/uri]，每行一条"></textarea>
-                        <textarea id="textarea_edit_content" name="textarea_edit_content" data-bind="value:content" style="height:50px; width: 550px; margin-bottom: 10px; resize: none;" placeholder="域名备注"></textarea>
+                        <div style="display: none;" id="UpdateDatasTable">
+                            <div style="overflow: scroll; max-height: 300px; margin-bottom: 10px;">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <td>id</td>
+                                            <td>域名</td>
+                                            <td>产品</td>
+                                            <td>客户</td>
+                                            <td>所属组</td>
+                                            <td>状态</td>
+                                            <td>备注</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="UpdateDatas" style="text-align: left">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12" style="margin-bottom: 5px;">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <select name="txt_edit_status" class="form-control selectpicker" title="状态" id="txt_edit_status"> 
+                                    <option value=1>启用</option>
+                                    <option value=0>禁用</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <select type="text" name="txt_edit_cdn" class="form-control selectpicker" title="CDN" data-actions-box="true" id="txt_edit_cdn" multiple> 
+                                </select>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4" id="edit_cdn_bool" style="display: inline;">
+                                <select type="text" name="txt_edit_cdn_bool" class="form-control selectpicker" title="是否修改CDN" data-actions-box="true" id="txt_edit_cdn_bool"> 
+                                    <option value=1>是</option>
+                                    <option value=0 selected>否</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12" style="margin-bottom: 5px;">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <select type="text" name="txt_edit_product" class="form-control selectpicker" data-live-search="true" id="txt_edit_product" title="所属产品">
+                                </select>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <select type="text" name="txt_edit_customer" class="form-control selectpicker" data-live-search="true" id="txt_edit_customer" title="所属客户">
+                                </select>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <select type="text" name="txt_edit_group" class="form-control selectpicker"
+                                data-live-search="true" id="txt_edit_group" title="所属组"> 
+                                </select>
+                            </div>
+                        </div>
+                        <p>域名URL：</p>
+                        <textarea class="form-control" id="textarea_edit_domain" name="textarea_edit_domain" style="height:200px; margin-bottom: 10px; resize: none;" placeholder="域名URL[http://domain/uri]，每行一条"></textarea>
+                        <p>备注：</p>
+                        <textarea class="form-control" id="textarea_edit_content" name="textarea_edit_content" style="height:50px; margin-bottom: 10px; resize: none;" placeholder="域名备注"></textarea>
                     </div>
                     
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
                         <button type="button" id="btn_update_submit" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="editMultiModal" tabindex="-1" role="dialog" aria-labelledby="editMultiModalLabel" aria-hidden="true" data-backdrop="static">
-            <div class="modal-dialog" role="document" style="width: 600px;">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title text-center" id="editMultiModalLabel">修改多条</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div style="overflow:scroll; max-height: 300px;margin-bottom: 10px;">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <td>id</td>
-                                    <td>域名</td>
-                                    <td>产品</td>
-                                    <td>客户</td>
-                                    <td>所属组</td>
-                                    <td>状态</td>
-                                    <td>备注</td>
-                                </tr>
-                            </thead>
-                            <tbody id="UpdateDatas" style="text-align: left">
-                            </tbody>
-                        </table>
-                        </div>
-                        <form class="form-inline" style="margin-bottom: 10px;">
-                            <select name="txt_edit2_status" data-bind="value:status" class="form-control" id="txt_edit2_status" title="状态"> 
-                                <option value selected></option>
-                                <option value=1>启用</option>
-                                <option value=0>禁用</option>
-                            </select>
-                            
-                            <select type="text" name="txt_edit2_product" data-bind="value:product" class="form-control" id="txt_edit2_product" placeholder="所属产品">
-                            </select>
-                            <select type="text" name="txt_edit2_customer" data-bind="value:customer" class="form-control" id="txt_edit2_customer" placeholder="所属产品">
-                            </select>
-                            <select type="text" name="txt_edit2_group" data-bind="value:group" class="form-control" id="txt_edit2_group" placeholder="所属组">
-                            </select>
-                        </form>
-                        
-                        <textarea id="textarea_edit2_domain" name="textarea_edit2_domain" data-bind="value:name" style="height:200px; width: 550px; margin-bottom: 10px; resize: none;" placeholder="域名URL[http://domain/uri]，每行一条"></textarea>
-                        <textarea id="textarea_edit2_content" name="textarea_edit2_content" data-bind="value:content" style="height:50px; width: 550px; margin-bottom: 10px; resize: none;" placeholder="域名备注"></textarea>
-                    </div>
-                    
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
-                        <button type="button" id="btn_update2_submit" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存</button>
                     </div>
                 </div>
             </div>
@@ -267,3 +287,4 @@
        </div>  
     </div>  
 <script src="/static/custom/tablejs/monitor/domains.js"></script>
+<script src="/static/custom/tablejs/public/public.js"></script>

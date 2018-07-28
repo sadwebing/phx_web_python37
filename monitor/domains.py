@@ -5,7 +5,7 @@ from django.http                    import HttpResponse, HttpResponseForbidden
 from dwebsocket                     import require_websocket
 from django.views.decorators.csrf   import csrf_exempt, csrf_protect
 from models                         import project_t, minion_t
-from detect.models                  import domains, groups
+from detect.models                  import domains, groups, cdn_account_t
 from saltstack.command              import Command
 from accounts.views                 import HasPermission, getIp
 from phxweb                         import settings
@@ -35,17 +35,21 @@ def DomainsQuery(request):
             group    = data['group'] if data.has_key('group') else []
             product  = data['product'] if data.has_key('product') else []
             customer = data['customer'] if data.has_key('customer') else []
+            cdn      = data['cdn'] if data.has_key('cdn') else []
             #logger.info(data)
         except:
             status = None
         if status:
-            datas = domains.objects.filter(status__in=status, group__id__in=group, product__in=product, customer__in=customer).all().order_by('-id')[:num]
+            if len(cdn) == 0:
+                datas = domains.objects.filter(status__in=status, group__id__in=group, product__in=product, customer__in=customer).all().order_by('-id')[:num]
+            else:
+                datas = domains.objects.filter(status__in=status, group__id__in=group, product__in=product, customer__in=customer, cdn__in=cdn).all().order_by('-id')[:num]
         else:
             return HttpResponseServerError(u"参数错误！")
 
         logger.info(u'查询参数：%s' %data)
         domain_list = []
-        for domain in datas:
+        for domain in list(set(datas)):
             tmp_dict = {}
             tmp_dict['id']       = domain.id
             tmp_dict['name']     = domain.name
@@ -54,8 +58,14 @@ def DomainsQuery(request):
             tmp_dict['group']    = domain.group.group
             tmp_dict['content']  = domain.content
             tmp_dict['status']   = domain.status
+            tmp_dict['cdn']      = [{
+                    'id':      cdn.id,
+                    'name':    cdn.get_name_display(),
+                    'account': cdn.account,
+                } for cdn in domain.cdn.all()]
 
             domain_list.append(tmp_dict)
+        logger.info(domain_list)
         return HttpResponse(json.dumps(domain_list))
     else:
         return HttpResponse('nothing!')
@@ -68,19 +78,31 @@ def GetGroups(request):
         clientip = getIp(request)
         logger.info('[GET]%s is requesting. %s' %(clientip, request.get_full_path()))
 
-        datas = groups.objects.all()
-        items = {}
-        items['customer_l'] = settings.choices_customer
-        items['product_l'] = settings.choices_product
-        items['group_l']   = []
-        for group in datas:
+        cdns   = cdn_account_t.objects.all()
+        group  = groups.objects.all()
+        items  = {
+                'customer_l': settings.choices_customer,
+                'product_l' : settings.choices_product,
+                'group_l'   : [],
+                'cdn_l'     : [],
+            }
+
+        for cdn in cdns:
+            tmp_dict = {
+                'id':      cdn.id,
+                'name':    cdn.get_name_display(),
+                'account': cdn.account,
+            }
+
+            items['cdn_l'].append(tmp_dict)
+        for item in group:
             tmp_dict = {}
-            tmp_dict['id']     = group.id
-            tmp_dict['group']  = group.group
-            tmp_dict['client'] = group.client
-            tmp_dict['method'] = group.method
-            tmp_dict['ssl']    = group.ssl
-            tmp_dict['retry']  = group.retry
+            tmp_dict['id']     = item.id
+            tmp_dict['group']  = item.group
+            tmp_dict['client'] = item.client
+            tmp_dict['method'] = item.method
+            tmp_dict['ssl']    = item.ssl
+            tmp_dict['retry']  = item.retry
 
             items['group_l'].append(tmp_dict)
         #logger.info(items)
@@ -140,8 +162,20 @@ def DomainsAdd(request):
                     exist.append(domain)
                     continue
             except:
-                info = domains(name=domain, product=datas['product'], customer=datas['customer'], group=group, content=datas['content'], status=datas['status'])
+                info = domains(
+                        name=domain, 
+                        product=datas['product'], 
+                        customer=datas['customer'], 
+                        group=group, 
+                        content=datas['content'], 
+                        #cdn=[cdn_account_t.objects.get(id=id) for id in datas['cdn']], 
+                        status=datas['status']
+                    )
+                logger.info(datas)
                 info.save()
+                for id in datas['cdn']:
+                    info.cdn.add(cdn_account_t.objects.get(id=id))
+                    info.save()
         if exist:
             return HttpResponse(str(exist)+'已存在，其余的新增成功！')
         else:
@@ -160,34 +194,30 @@ def DomainsUpdate(request):
         if not HasPermission(request.user, 'change', 'domains', 'detect'):
             return HttpResponseForbidden('你没有修改的权限。')
 
-        if len(datas['all']) == 1:
-            group = groups.objects.get(id=datas['group'])
-            info = domains.objects.get(id=datas['id'])
-            info.name     = datas['name'][0]
-            info.product = datas['product']
-            info.customer = datas['customer']
+        i = 0
+        for line in datas['all']:
+            if datas['group']:
+                group = groups.objects.get(id=int(datas['group']))
+            else:
+                group = groups.objects.get(group=line['group'])
+
+            info = domains.objects.get(id=line['id'])
+            if int(datas['edit_cdn_bool'][0]) == 1:
+                for cdn in info.cdn.all():
+                    info.cdn.remove(cdn)
+                    info.save()
+                    #info.cdn.all().delete()
+                for id in datas['cdn']:
+                    info.cdn.add(cdn_account_t.objects.get(id=id))
+                    info.save()
+            info.name     = datas['domain_l'][i]
+            info.product  = datas['product'] if datas['product'] else prod_d[line['product']]
+            info.customer = datas['customer'] if datas['customer'] else cust_d[line['customer']]
             info.group    = group
-            info.content  = datas['content']
-            info.status   = datas['status']
+            info.content  = datas['content'] if datas['content'] else line['content']
+            info.status   = datas['status'] if datas['status'] else line['status']
             info.save()
-        else:
-            i = 0
-            for line in datas['all']:
-                if datas['group']:
-                    group = groups.objects.get(id=int(datas['group']))
-                else:
-                    group = groups.objects.get(group=line['group'])
-                logger.info(prod_d)
-                logger.info(line)
-                info = domains.objects.get(id=line['id'])
-                info.name     = datas['name'][i]
-                info.product  = datas['product'] if datas['product'] else prod_d[line['product']]
-                info.customer = datas['customer'] if datas['customer'] else cust_d[line['customer']]
-                info.group    = group
-                info.content  = datas['content'] if datas['content'] else line['content']
-                info.status   = datas['status'] if datas['status'] else line['status']
-                info.save()
-                i += 1
+            i += 1
 
         return HttpResponse('更新成功！')
     elif request.method == 'GET':

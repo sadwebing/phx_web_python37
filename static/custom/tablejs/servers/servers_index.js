@@ -65,7 +65,7 @@ var tableInit = {
                     sortable: true,
                     formatter: function (value, row, index) {
                         return row.ip.join('<br>');
-                    }
+                    },
                     //events: operateStatusEvents,
                     //formatter: this.operateStatusFormatter,
                     //width:'auto',
