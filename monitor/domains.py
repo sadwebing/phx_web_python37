@@ -65,7 +65,7 @@ def DomainsQuery(request):
                 } for cdn in domain.cdn.all()]
 
             domain_list.append(tmp_dict)
-        logger.info(domain_list)
+        #logger.info(domain_list)
         return HttpResponse(json.dumps(domain_list))
     else:
         return HttpResponse('nothing!')

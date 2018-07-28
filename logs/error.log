@@ -19183,3 +19183,117 @@ Traceback (most recent call last):
   File "J:\arno\test\phx_web\monitor\domains.py", line 205, in DomainsUpdate
     if int(datas['edit_cdn_bool']) == 1:
 TypeError: int() argument must be a string or a number, not 'list'
+2018-07-28 23:29:28,289 views.py [django:88] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_广告站[ggz]_后端源服务器[backend]
+2018-07-28 23:29:28,322 views.py [django:88] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_广告站[ggz]_后端源服务器[backend]
+2018-07-28 23:29:28,354 views.py [django:88] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_广告站[ggz]_后端源服务器[backend]
+2018-07-28 23:29:28,384 views.py [django:88] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_后台[houtai]_反代服务器[front]
+2018-07-28 23:29:28,417 views.py [django:88] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_后台[houtai]_反代服务器[front]
+2018-07-28 23:29:28,450 views.py [django:88] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_后台[houtai]_反代服务器[front]
+2018-07-28 23:29:28,483 views.py [django:88] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_图片[image]_后端源服务器[backend]
+2018-07-28 23:29:28,516 views.py [django:88] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_图片[image]_后端源服务器[backend]
+2018-07-28 23:29:28,548 views.py [django:102] [ERROR]- 测试环境[TEST]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]: Incorrect padding
+2018-07-28 23:29:28,601 views.py [django:102] [ERROR]- 测试环境[TEST]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]: Decryption failed
+2018-07-28 23:29:28,632 views.py [django:88] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_反代服务器[front]
+2018-07-28 23:29:28,664 views.py [django:88] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_反代服务器[front]
+2018-07-28 23:29:28,696 views.py [django:88] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_反代服务器[front]
+2018-07-28 23:29:28,726 views.py [django:88] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_反代服务器[front]
+2018-07-28 23:29:28,757 views.py [django:88] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_反代服务器[front]
+2018-07-29 02:21:20,440 base.py [django.request:256] [ERROR]- Internal Server Error: /admin/jsi18n/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 254, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 222, in inner
+    if not self.has_permission(request):
+  File "J:\arno\test\lib\site-packages\django\contrib\admin\sites.py", line 162, in has_permission
+    return request.user.is_active and request.user.is_staff
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 359, in _setup
+    self._wrapped = self._setupfunc()
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 22, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\__init__.py", line 167, in get_user
+    user_id = _get_user_session_key(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\__init__.py", line 59, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\base.py", line 48, in __getitem__
+    return self._session[key]
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\base.py", line 181, in _get_session
+    self._session_cache = self.load()
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\db.py", line 21, in load
+    expire_date__gt=timezone.now()
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 827, in execute_sql
+    cursor = self.connection.cursor()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\test\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 237, in __init__
+    self.autocommit(autocommit)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 243, in autocommit
+    _mysql.connection.autocommit(self, on)
+OperationalError: (2013, 'Lost connection to MySQL server during query')
+2018-07-29 02:33:18,404 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/send_telegram
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 7, in <module>
+    from dnspod           import *
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 8, in <module>
+    from dnspod_api                     import DpApi
+  File "J:\arno\test\phx_web\dns\dnspod_api.py", line 7, in <module>
+    from detect.telegram import sendTelegram
+  File "J:\arno\test\phx_web\detect\telegram.py", line 53
+    self.__message['chat_id']    = telegram_chat_group_t.objects.get(group=group).group_id try telegram_chat_group_t.objects.get(group=group) except telegram_chat_group_t.objects.get(group="arno_test").group_id
+                                                                                             ^
+SyntaxError: invalid syntax

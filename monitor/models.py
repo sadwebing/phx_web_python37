@@ -23,15 +23,17 @@ choices_s = (
         (0, '禁用'),
     )
 
-class telegram_user_id_t(models.Model):
-    user = models.CharField(max_length=32, null=False)
-    name = models.CharField(max_length=32, null=False)
-    user_id = models.IntegerField()
-    class Meta:
-        unique_together = ('user' ,'user_id')
-
-    def __str__(self):
-        return " | ".join([self.user, self.name, str(self.user_id)])
+#class telegram_alert_t(models.Model):
+#    user = models.CharField(max_length=32, null=False)
+#    name = models.CharField(max_length=32, null=False)
+#    user_id = models.IntegerField()
+#    product = models.IntegerField(choices=choices_product)
+#    project = models.CharField(max_length=10, choices=choices_proj)
+#    class Meta:
+#        unique_together = ('user' ,'user_id')
+#
+#    def __str__(self):
+#        return " | ".join([self.user, self.name, str(self.user_id)])
 
 class minion_ip_t(models.Model):
     minion_id = models.CharField(max_length=32, null=False)

@@ -1,6 +1,7 @@
 # coding: utf8
 from django.db import models
-from phxweb.settings import choices_product, choices_customer
+from phxweb.settings import choices_product, choices_customer, TELEGRAM_API
+#from accounts.models import telegram_chat_group_t
 
 # Create your models here.
 
@@ -50,13 +51,14 @@ class domains(models.Model):
                 )
 
     #protocol = models.IntegerField(choices=choices_n, default=1) 
-    name     = models.CharField(max_length=128, unique=True)
-    product  = models.IntegerField(choices=choices_product, default=12)
-    customer = models.IntegerField(choices=choices_customer)
-    group    = models.ForeignKey(groups)
-    content  = models.CharField(max_length=128, blank=True)
-    status   = models.IntegerField(choices=choices_s, default=1)
-    cdn      = models.ManyToManyField(cdn_account_t, blank=True)
+    name       = models.CharField(max_length=128, unique=True)
+    product    = models.IntegerField(choices=choices_product, default=12)
+    customer   = models.IntegerField(choices=choices_customer)
+    group      = models.ForeignKey(groups)
+    #chat_group = models.ManyToManyField(telegram_chat_group_t, blank=True)
+    content    = models.CharField(max_length=128, blank=True)
+    status     = models.IntegerField(choices=choices_s, default=1)
+    cdn        = models.ManyToManyField(cdn_account_t, blank=True)
     
     def __str__(self):
         if self.group.ssl == 1:

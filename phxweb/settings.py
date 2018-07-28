@@ -74,16 +74,6 @@ TELEGRAM_API = {
         'yunwei':['arno', 'xiaoxuan', 'xiaowu', 'xiaoye', 'hugoking', 'alan', 'xiaoran', 'v7', 'power', 'john', 'dennis', 'ray', 'white', 'trevor', 'conan'],
     },
 
-    'chat_id':{
-        'arno_test'      : '-204952096',
-        'domain_renew'   : '-238289840',
-        'chk_ng_alert'   : '-275535278',
-        'domain_alert'   : '-317680977',
-        'kindergarten'   : '-186348806',
-        'yunwei'         : '-306748551',
-        'java_domain'    : '-281290225',
-        'ruiying_domain' : '-246192532',
-    },
 }
 
 #telegram 参数

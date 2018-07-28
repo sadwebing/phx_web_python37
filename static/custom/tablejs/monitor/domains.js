@@ -361,7 +361,7 @@ var operate = {
                 selects['customer'] = "";
                 selects['product']  = "";
                 selects['cdn']      = "";
-                selects['status']   = "option value=1>启用</option><option value=0>禁用</option>";
+                selects['status']   = "<option value=1>启用</option><option value=0>禁用</option>";
                 selects['edit_cdn_bool'] = "<option value=1>更新CDN</option><option value=0 selected>不更新CDN</option>";
                 $.each(data['group_l'], function (index, item) { 
                     selects['group'] = selects['group'] + "<option value="+item.id+" data-subtext='"+item.client+" | "+item.method+" | "+item.ssl+" | "+item.retry+"'>"+item.group+"</option>"
@@ -634,8 +634,8 @@ var operate = {
             document.getElementById("txt_edit_customer").innerHTML=data_all['customer'];
             document.getElementById("txt_edit_cdn").innerHTML=data_all['cdn'];
             document.getElementById("txt_edit_cdn_bool").innerHTML=data_all['edit_cdn_bool'];
-            document.getElementById("textarea_edit_domain").innerHTML="";
-            document.getElementById("textarea_edit_content").innerHTML="";
+            document.getElementById("textarea_edit_domain").value="";
+            document.getElementById("textarea_edit_content").value="";
             $('.selectpicker').selectpicker('refresh');
     
             //operate.operateSave('Update');
@@ -670,8 +670,8 @@ var operate = {
                 }else {
                     data['status'] = 0;
                 }
-                document.getElementById("textarea_edit_domain").innerHTML=data['name'];
-                document.getElementById("textarea_edit_content").innerHTML=data['content'];
+                document.getElementById("textarea_edit_domain").value=data['name'];
+                document.getElementById("textarea_edit_content").value=data['content'];
                 operate.operateSelected(data['status'], 'txt_edit_status');
 
                 //ko.utils.extend(operate.DepartmentModel, data);
@@ -701,10 +701,11 @@ var operate = {
                 document.getElementById("UpdateDatasTable").style.display = "inline";
                 //document.getElementById("edit_cdn_bool").style.display = "inline";
 
-                document.getElementById("textarea_edit_domain").innerHTML=data['name'];
+                document.getElementById("textarea_edit_domain").value=data['name'];
                 
                 $('.selectpicker').selectpicker('refresh');
             }
+        console.log(document.getElementById('textarea_edit_content').value);
         $("#editSingleModal").modal().on("shown.bs.modal", function () {
 
         }).on('hidden.bs.modal', function () {

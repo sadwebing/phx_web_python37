@@ -6,8 +6,8 @@
 
 import requests, sys, os
 import datetime, json, logging, re
-from monitor.models import telegram_user_id_t
-from phxweb import settings
+from accounts.models import telegram_user_id_t, telegram_chat_group_t
+from phxweb          import settings
 
 logger = logging.getLogger('django')
 
@@ -50,12 +50,16 @@ class sendTelegram(object):
         self.__doc     = doc
         self.__timeout = timeout
         self.__url     = tg['url'][bot] if tg['url'].has_key(bot) else tg['url']['sa_monitor_bot']
-        self.__message['chat_id']    = tg['chat_id'][group]  if tg['chat_id'].has_key(group)  else tg['chat_id']['arno_test']
         self.__message['parse_mode'] = message['parse_mode'] if message.has_key('parse_mode') else ''
         self.__message['doc_name']   = message['doc_name'] +'_'+ getDate() if message.has_key('doc_name') else 'message.txt_'+getDate()
         self.__message['caption']    = self.getAtUsers(message['caption']) if message.has_key('caption')  else ''
         self.__message['text']       = self.getAtUsers(message['text'])    if message.has_key('text')     else ''
         self.__message['disable_web_page_preview'] = False if message.has_key('disable_web_page_preview') and str(message['disable_web_page_preview']).lower() == 'false' else True
+
+        try: 
+            self.__message['chat_id'] = telegram_chat_group_t.objects.get(group=group).group_id 
+        except: 
+            self.__message['chat_id'] = telegram_chat_group_t.objects.get(group="arno_test").group_id 
 
     def getAtUsers(self, text):
         regCp  = re.compile('[A-Za-z0-9]+(?![A-Za-z0-9])', re.I)

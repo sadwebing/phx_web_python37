@@ -141,6 +141,39 @@ class myThread(threading.Thread):
     def get_result(self):
         return self.t
     
+def sendAlert(results):
+    java      = ""
+    yongshi   = ""
+    ruiying   = ""
+    fenghuang = ""
+    for result in results:
+        if result[0] == "java":
+            java += '\r\n' + result[1]
+        elif result[0] == "ruiying":
+            ruiying += '\r\n' + result[1]
+        else:
+            fenghuang += '\r\n' + result[1]
+    if java:
+        if len(java) >= 4096:
+            message['doc'] = True
+        message['text'] = ip + java
+        message['group'] = 'java_domain'
+        sendTelegram(message)
+    if ruiying:
+        if len(ruiying) >= 4096:
+            message['doc'] = True
+        message['text'] = ip + ruiying
+        message['group'] = 'ruiying_domain'
+        sendTelegram(message)
+    if fenghuang:
+        if len(fenghuang) >= 4096:
+            message['doc'] = True
+        message['text'] = ip + fenghuang
+        message['group'] = 'domain_alert' #domain_alert
+        sendTelegram(message)
+
+
+
 if __name__ == "__main__":
     #print sslExpiry('alcp33.com').getTime()
     li = []

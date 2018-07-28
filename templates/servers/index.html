@@ -16,12 +16,12 @@
             {% endfor %}
         </select>
         {% for item in items.item %}
-            <textarea id="textarea_item_privkey_{{ item.0 }}" name="textarea_item_privkey_{{ item.0 }}" style="display: none; height:200px; width: 90%; margin-top: 10px; margin-bottom: 10px; resize: none;" placeholder="密钥"></textarea>
+            <textarea class="form-control" id="textarea_item_privkey_{{ item.0 }}" name="textarea_item_privkey_{{ item.0 }}" style="display: none; height:200px; width: 90%; margin-top: 10px; margin-bottom: 10px; resize: none;" placeholder="密钥"></textarea>
         {% endfor %}
     </div>
     <div class="col-xs-7 col-sm-7 col-md-7">
         <div id="servers_modal_body">
-            <form class="form-group form-inline" role="form" style="padding-bottom: 15px;">
+            <form class="form-group form-inline" role="form" style="padding-bottom: 10px;">
                 <select class="selectpicker show-tick" id="item_envir" title="[请选择环境|envir]" name="item_envir" data-actions-box="true" multiple data-width="32%"> 
                     {% for envir in items.envir %}
                         <option value={{ envir.0 }}>{{ envir.1 }}</option>
@@ -34,7 +34,7 @@
                 </select>
                 <input id="btn_op_search" class="btn btn-primary" onclick="servers.GetServersRecords('textarea_item_privkey')" type="button" id="arguments" value="查询" >
             </form>
-            <form class="form-group form-inline" role="form"  style="padding-bottom: 15px;">
+            <form class="form-group form-inline" role="form"  style="padding-bottom: 10px;">
                 <select class="selectpicker show-tick" id="item_project" title="[请选择项目|project]" name="item_project" data-actions-box="true" multiple data-width="32%"> 
                     {% for project in items.project %}
                         <option value={{ project.0 }}>{{ project.1 }}</option>
@@ -52,7 +52,7 @@
                 </select>
             </form>
             <form class="form-group form-inline" role="form">
-                <textarea id="textarea_item_ips" name="textarea_item_ips" style="height:100px; width: 97%; margin-bottom: 10px; resize: none;" placeholder="ip地址,一行一条[例如119.47.83.36]"></textarea>
+                <textarea class="form-control" id="textarea_item_ips" name="textarea_item_ips" style="height:100px; width: 97%; margin-bottom: 10px; resize: none;" placeholder="ip地址,一行一条[例如119.47.83.36]"></textarea>
             </form>
         </div>
 
