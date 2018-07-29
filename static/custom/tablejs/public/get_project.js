@@ -43,12 +43,12 @@ var gp = {
                     }
                     //console.log(data)
                     //html_name = "<option>"+name+"</option>";
-                    html_name = "<option value='"+name.product+"_"+name.project+"' data-subtext='"+name.server_type+" "+name.envir+"'>"+name.project+"</option>";
+                    html_name = "<option value='"+[name.envir,name.product,name.project,name.server_type].join("_")+"' data-subtext='"+name.server_type+" "+name.envir+"'>"+name.project+"</option>";
                     html_dict[name.product] = html_dict[name.product] + html_name;
                     if (name.svn == 1){
                         html_dict[name.product+'2'] = html_dict[name.product+'2'] + html_name;
                     }
-                    project_minion_list[name.product+'_'+name.project] = name;
+                    project_minion_list[[name.envir,name.product,name.project,name.server_type].join("_")] = name;
                 }); 
                 //$("#project").html(html);
                 //$("#project_active").html(html);
