@@ -24,7 +24,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 #telegram 参数
-message = settings.message_ONLINE
+message = settings.message_TEST
 
 #获取当前时间，以特定的格式，如Wed, 09 May 2018 12:51:25 GMT
 def getDate():
@@ -120,14 +120,14 @@ class tcApi(object):
         try:
             ret = requests.post(url, data=self.__params, verify=False)
         except Exception, e:
-            message['text'] = self.__warning + '\nException: ' + e.message
+            message['text'] = self.__warning + '\n%s | Exception: ' %url + e.message
             logger.error(message['text'])
             sendTelegram(message).send()
             return self.__params, False
 
         else:
             if ret.json()['code'] != 0:
-                message['text'] = self.__warning + '\n' + ret.json()['message']
+                message['text'] = self.__warning + '\n%s: ' %url + ret.json()['message']
                 logger.error(message['text'])
                 sendTelegram(message).send()
                 return ret.json(), False

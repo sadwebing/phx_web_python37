@@ -21,7 +21,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 rewrite_list = ['301', '302', '303']
 
 #telegram 参数
-message = settings.message_ONLINE
+message = settings.message_TEST
 
 #获取当前脚本路径
 basedir = os.path.abspath(os.path.dirname(__file__))

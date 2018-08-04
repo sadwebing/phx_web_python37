@@ -253,6 +253,8 @@ LOGGING = {
 
 choices_customer = ( 
             (29, u'公共客户[pub]'),
+
+            #凤凰彩票
             (1, u'阿里[ali]'), 
             (2, u'光大[guangda]'), 
             (3, u'乐盈|熊猫[leying]'), 
@@ -264,8 +266,8 @@ choices_customer = (
             (9, u'苹果[3535]'), 
             (19, u'芒果[1717]'), 
             (10, u'ag彩[agcai]'), 
-            (20, u'福利彩[fulicai]'), 
-            (22, u'亿人[yrcai]'), 
+            #(20, u'福利彩[fulicai]'), 
+            #(22, u'亿人[yrcai]'), 
             (23, u'亿腾[yiteng]'),
             (24, u'永利会[yonglihui]'), 
             (25, u'618彩[618cai]'), 
@@ -275,12 +277,19 @@ choices_customer = (
             (17, u'yy娱乐城[yy]'),
             (18, u'永发[yongfa]'),
 
+            #凤凰体育
             (13, u'钻石[le7]'),
             (14, u'大象6668[dx_6668]'),
             (15, u'大象70887[dx_70887]'),
             (30, u'大象[daxiang]'),
 
+            #凤凰圆角分
+            (32, u'世德[shide]'),
+            (33, u'图腾[tuteng]'),
+
+            #Java
             (31, u'恒隆[henglong]'),
+
             )
 
 choices_product = ( 

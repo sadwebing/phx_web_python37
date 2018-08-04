@@ -71,7 +71,7 @@ class domains(models.Model):
                 )
 
     #protocol = models.IntegerField(choices=choices_n, default=1) 
-    name       = models.CharField(max_length=128, unique=True)
+    name       = models.CharField(max_length=128, unique=True, null=False)
     product    = models.IntegerField(choices=choices_product, default=12)
     customer   = models.IntegerField(choices=choices_customer)
     group      = models.ForeignKey(groups)
