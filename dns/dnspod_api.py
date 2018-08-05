@@ -33,6 +33,7 @@ class DpApi(object):
     def ExePost(self, uri, info):
         url = self.__url + uri
         self.__warning = "\r\n".join([ 
+                '@arno',
                 'Attention: %s 失败，请检查:' %info,
                 'URL:  + %s' %url,
                 #'%s : %s' %(secretid, secretkey)
@@ -70,7 +71,29 @@ class DpApi(object):
         self.__data['domain'] = domain
         return self.ExePost('/Record.List', "Dnspod域名[%s]解析获取" %domain)
         
-    def DeleteZoneRecord(self, domain, record_id, full_domain):
+    def CreateZoneRecord(self, domain, sub_domain='@', record_type='A', record_line='默认', value='8.8.8.8', status='enable'):
+        '''
+            新增域名解析记录：
+                domain_id 或 domain, 分别对应域名ID和域名, 提交其中一个即可；
+                sub_domain 主机记录, 如 www，可选，如果不传，默认为 @；
+                record_type 记录类型，通过API记录类型获得，大写英文，比如：A, 必选；
+                record_line 记录线路，通过API记录线路获得，中文，比如：默认，国内，国外；
+                value 记录值, 如 IP:200.200.200.200, CNAME: cname.dnspod.com., MX: mail.dnspod.com., 必选；
+                status [“enable”, “disable”]，记录初始状态，默认为“enable”，如果传入“disable”，解析不会生效，也不会验证负载均衡的限制，可选。
+        '''
+        self.__data.update({
+                'domain': domain,
+                'value' : value,
+                'status': status,
+
+                'sub_domain' : sub_domain,
+                'record_type': record_type,
+                'record_line': record_line,
+            })
+        full_domain = domain if sub_domain == '@' else sub_domain +'.'+ domain
+        return self.ExePost('/Record.Create', "Dnspod域名记录[%s]新增" %full_domain)
+
+    def DeleteZoneRecord(self, domain, record_id, full_domain=''):
         '''
             删除域名解析记录
         '''

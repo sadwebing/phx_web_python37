@@ -20,6 +20,7 @@ urlpatterns = [
     url('^dnspod/index$', views.DndpodIndex, name='DndpodIndex'),
     url('^dnspod/get_product_records$', views.GetDnspodProductRecords, name='GetDnspodProductRecords'),
     url('^dnspod/get_zone_records$', views.GetDnspodZoneRecords, name='GetDnspodZoneRecords'),
+    url('^dnspod/create_records$', views.CreateDnspodRecords, name='CreateDnspodRecords'),
     url('^dnspod/update_records$', views.UpdateDnspodRecords, name='UpdateDnspodRecords'),
     url('^dnspod/delete_records$', views.DeleteDnspodRecords, name='DeleteDnspodRecords'),
     

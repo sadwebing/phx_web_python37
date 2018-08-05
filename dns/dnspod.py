@@ -103,7 +103,125 @@ def GetDnspodZoneRecords(request):
         return HttpResponse(json.dumps(record_list))
     else:
         return HttpResponse('nothing!')
-        
+
+@accept_websocket
+@csrf_exempt
+def CreateDnspodRecords(request):
+    if request.method == 'POST':
+        clientip = getIp(request)
+        username = request.user.username
+        try:
+            role = request.user.userprofile.role
+        except:
+            role = 'none'
+        if not username:
+            request.websocket.send('userNone')
+            logger.info('user: 用户名未知 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
+            return HttpResponseServerError("用户名未知！")
+            
+        logger.info('user:%s | [POST]%s is requesting. %s' %(username, clientip, request.get_full_path()))
+        data = json.loads(request.body)
+        logger.info(data)
+
+        for sub_domain in data['sub_domain']:
+            dp_acc = dnspod_account.objects.get(name=data['product'])
+
+            try:
+                dpapi = DpApi(DnsPod_URL, dp_acc.key)
+            except Exception, e:
+                info = "新增 %s 域名失败！" %sub_domain+'.'+data['zone']
+                logger.error(info)
+                insert_ah(clientip, username, 
+                        "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %('null', 'null', 'null', 'null'), 
+                        "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(data['type'], sub_domain+'.'+data['zone'], data['value'], '1'), 
+                        False, 'add')
+
+                return HttpResponseServerError(info)
+            else:
+                result, status = dpapi.CreateZoneRecord(
+                    domain         = data['zone'],
+                    sub_domain     = sub_domain,
+                    record_type    = data['type'],
+                    value          = data['value'],
+                    record_line    = data['record_line'],
+                    #status         = 'enable' if data['enabled'] == '1' else 'disable',
+                )
+                
+                if not status:
+                    insert_ah(clientip, username, 
+                        "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %('null', 'null', 'null', 'null'), 
+                        "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(data['type'], sub_domain+'.'+data['zone'], data['value'], '1'), 
+                        status, 'add')
+                    return HttpResponseServerError('error!')
+            insert_ah(clientip, username, 
+                "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %('null', 'null', 'null', 'null'), 
+                "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(data['type'], sub_domain+'.'+data['zone'], data['value'], '1'), 
+                status, 'add')
+        return HttpResponse(result)
+
+    elif request.is_websocket():
+        clientip = getIp(request)
+        username = request.user.username
+        try:
+            role = request.user.userprofile.role
+        except:
+            role = 'none'
+        if not username:
+            request.websocket.send('userNone')
+            logger.info('user: 用户名未知 | [WS]%s is requesting. %s' %(clientip, request.get_full_path()))
+            ### close websocket ###
+            request.websocket.close()
+
+        logger.info('user:%s | [WS]%s is requesting. %s' %(username, clientip, request.get_full_path()))
+        for postdata in request.websocket:
+            if not postdata:
+                ### close websocket ###
+                request.websocket.close()
+                break
+            data = json.loads(postdata)
+            step = 0
+
+            for sub_domain in data['sub_domain']:
+                step += 1
+                return_info           = {}
+                return_info['domain'] = sub_domain+'.'+data['zone']
+                return_info['step']   = step
+                dp_acc = dnspod_account.objects.get(name=data['product'])
+                try:
+                    dpapi = DpApi(DnsPod_URL, dp_acc.key)
+                except Exception, e:
+                    logger.error("新增 %s 域名失败！" %return_info['domain'])
+                    return_info['result'] = False
+                else:
+                    result, status = dpapi.CreateZoneRecord(
+                        domain         = data['zone'],
+                        sub_domain     = sub_domain,
+                        record_type    = data['type'],
+                        value          = data['value'],
+                        record_line    = data['record_line'],
+                        #status         = 'enable' if data['enabled'] == '1' else 'disable',
+                    )
+                
+                    if not status:
+                        return_info['result'] = False
+                    else:
+                        return_info['result'] = True
+
+                        insert_ah(clientip, username, 
+                            "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %('null', 'null', 'null', 'null'), 
+                            "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(data['type'], sub_domain+'.'+data['zone'], data['value'], '1'), 
+                            status, 'add')
+
+                request.websocket.send(json.dumps(return_info))
+            ### close websocket ###
+            request.websocket.close()
+
+    elif request.method == 'GET':
+        return HttpResponse('You get nothing!')
+    else:
+        return HttpResponse('nothing!')
+
+
 @accept_websocket
 @csrf_exempt
 def UpdateDnspodRecords(request):
@@ -130,7 +248,10 @@ def UpdateDnspodRecords(request):
                 dpapi = DpApi(DnsPod_URL, dp_acc.key)
             except Exception, e:
                 logger.error("修改 %s 域名失败！" %record['name'])
-                insert_ah(clientip, username, 'null', 'null', 'null', 'null', record['type'], record['name'], record['value'], record['enabled'], str(False))
+                insert_ah(clientip, username, 
+                        "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %('null', 'null', 'null', 'null'), 
+                        "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(record['type'], record['name'], record['value'], record['enabled']), 
+                        False)
                 return HttpResponseServerError("修改 %s 域名失败！" %record['name'])
             else:
                 result, status = dpapi.UpdateZoneRecord(
@@ -144,10 +265,17 @@ def UpdateDnspodRecords(request):
                 )
                 
                 if not status:
-                    insert_ah(clientip, username, 'null', 'null', 'null', 'null', record['type'], record['name'], record['value'], record['enabled'], str(False))
+                    insert_ah(clientip, username, 
+                            "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %('null', 'null', 'null', 'null'), 
+                            "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(record['type'], record['name'], record['value'], record['enabled']), 
+                            status)
                     return HttpResponseServerError('error!')
-        insert_ah(clientip, username, 'null', 'null', 'null', 'null', record['type'], record['name'], record['value'], record['enabled'], str(True))
+
         return HttpResponse(result)
+        insert_ah(clientip, username, 
+                "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %('null', 'null', 'null', 'null'), 
+                "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(record['type'], record['name'], record['value'], record['enabled']), 
+                status)
 
     elif request.is_websocket():
         clientip = getIp(request)
@@ -198,7 +326,10 @@ def UpdateDnspodRecords(request):
                     else:
                         return_info['result'] = True
 
-                insert_ah(clientip, username, record['type'], record['name'], record['value'], record['enabled'], data['type'], record['name'], data['value'], data['enabled'], str(return_info['result']))
+                insert_ah(clientip, username, 
+                        "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(record['type'], record['name'], record['value'], record['enabled']), 
+                        "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(data['type'], record['name'], data['value'], data['enabled']), 
+                        return_info['result'])
 
                 request.websocket.send(json.dumps(return_info))
             ### close websocket ###
@@ -226,6 +357,10 @@ def DeleteDnspodRecords(request):
         except:
             manage = 0
             
+        if username != 'phexus_sa':
+            return HttpResponseServerError("抱歉，暂时不放开删除权限，请联系管理员！")
+        #return HttpResponseServerError("抱歉，暂时不放开删除权限，请联系管理员！")
+
         if manage == 0:
             logger.info('user: 没有权限 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
             return HttpResponseServerError("抱歉，您没有权限！")
@@ -253,20 +388,25 @@ def DeleteDnspodRecords(request):
                     return HttpResponseServerError("删除 %s 域名失败！" %zone['name'])
                 else:
                     logger.info("删除 %s 域名成功！%s" %(zone['name'], str(result)))
+                    insert_ah(clientip, username, 
+                        "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(zone['type'], zone['name'], zone['value'], zone['enabled']), 
+                        "null", 
+                        status, 'delete')
 
         return HttpResponse("删除 %s 域名成功！" %zone['name'])
     else:
         return HttpResponse('nothing!')
         
-def insert_ah(clientip, username, type_before, name_before, value_before, status_before, type_after, name_after, value_after, status_after, result):
-    logger.info("req_ip: %s | user: %s | updaterecord: { 'type':%s, 'name': %s, 'content': %s, 'enabled':%s } ---> { 'type':%s, 'name': %s, 'content': %s, 'enabled':%s } {result: %s}" %(clientip, username, type_before, name_before, value_before, status_before, type_after, name_after, value_after, status_after, result))
+def insert_ah(clientip, username, pre_rec, now_rec, result=True, action='change'):
+    logger.info("req_ip: %s | user: %s | updaterecord: { %s } ---> { %s } {result: %s}" %(clientip, username, pre_rec, now_rec, result))
 
     insert_h = alter_history(
             time    = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             req_ip  = clientip,
             user    = username,
-            pre_rec = "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(type_before, name_before, value_before, status_before),
-            now_rec = "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(type_after, name_after, value_after, status_after),
+            pre_rec = pre_rec,
+            now_rec = now_rec,
+            action  = action,
             status  = result,
         )
 

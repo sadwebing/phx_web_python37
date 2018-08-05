@@ -196,7 +196,7 @@ if __name__ == "__main__":
             message['text'] += u"<pre>一个月内证书到期域名: </pre>\r\n" + alert['ex_one_m']
 
         atUser = u"%s " %" ".join([ "@"+user for user in alert['user'] ]) if len(alert['user']) !=0 else ""
-        atUser += atUser + u"请注意更换证书！"
+        atUser += u"请注意更换证书！"
 
         if message['text']:
             if len(message['text']) >= 4096:

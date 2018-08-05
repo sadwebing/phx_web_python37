@@ -159,8 +159,12 @@ var tableInit = {
 
     operateFormatter: function (value,row,index){
         content = [
+        '<a class="add_record" href="javascript:void(0)" title="新增记录">',
+        '新增',
+        '</a>',
+        ' | ',
         '<a class="delete_record" href="javascript:void(0)" title="删除记录">',
-        '<i class="text-primary"> 删除</i>',
+        '删除',
         '</a>'
         ].join('');
         return content;
@@ -253,6 +257,34 @@ window.operateStatusEvents = {
         });
         return false;
     },
+
+    'click .add_record': function (e, value, row, index) {
+
+        //model页面数据初始化
+        $("#progress_bar_add_record").css("width", "0%");
+        document.getElementById('add_record_finished_count').innerHTML="finished: 0  &emsp;  success: 0  &emsp;  failed: 0";
+
+        //document.getElementById('add_record_content').value = "";
+        document.getElementById('add_domain_zone').value = row.zone;
+        operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+
+        var options = document.getElementById('add_record_type').children;
+        options[0].selected=true;
+
+        var options = document.getElementById('add_record_line').children;
+        options[0].selected=true;
+
+        $("#confirmAddModal").modal().on("shown.bs.modal", function () {
+            operate.operateCommitAdd(row);
+            //vm.datas.valueHasMutated();
+        }).on('hidden.bs.modal', function () {
+            //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
+            ko.cleanNode(document.getElementById("confirmAddModal"));
+        });
+
+        return false;
+    },
+
 };
 
 //操作
@@ -338,6 +370,17 @@ var operate = {
             }
         }
 
+
+        return true;
+    },
+
+    isSubDomain: function (value, proxied) {
+        var regexp = /^(@|[a-zA-Z0-9]+|.*[a-zA-Z0-9]+.*\.[a-zA-Z0-9]*[a-zA-Z]+[a-zA-Z0-9]*)$/;
+
+        var valid = regexp.test(value);
+        if(!valid){
+            return false;
+        }
 
         return true;
     },
@@ -547,8 +590,6 @@ var operate = {
             };
             socket.onmessage = function (e) {
 
-                console.log(e.data);
-
                 if (e.data == 'userNone'){
                     toastr.error('未获取用户名，请重新登陆！', '错误');
                     operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
@@ -570,6 +611,118 @@ var operate = {
                 if (data.step == count){
                     socket.close();
                     operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
+                }
+            };
+            return false;
+        });
+    },
+
+    operateCommitAdd: function (row) {
+        $('#btn_commit_add').on("click", function () {
+            $("#progress_bar_add_record").css("width", "0%");
+            operate.disableButtons(['btn_close_add', 'btn_commit_add'], true);
+
+            var postdata = {
+                'zone':    row.zone,
+                'product': row.product,
+                'type':        document.getElementById('add_record_type').value,
+                'record_line': document.getElementById('add_record_line').value,
+                'value':       document.getElementById('add_record_content').value.replace(/(^\s*)|(\s*$)/g, ""),
+            };
+
+            postdata['sub_domain'] = document.getElementById('textarea_add_sub_domain').value.split('\n');
+
+            for(var i = 0; i < postdata['sub_domain'].length; i++) { 
+                if(postdata['sub_domain'][i].replace(/ /g, '') === ''){
+                    postdata['sub_domain'].splice(i, 1);
+                }else if (! operate.isSubDomain(postdata['sub_domain'][i])) {
+                    alert(postdata['sub_domain'][i] + "格式不正确！");
+                    operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                    return false;
+                }
+            }
+
+            if (postdata['sub_domain'].length == 0){
+                alert('sub_domain can\'t be empty!');
+                operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                return false;
+            }
+
+            if (! postdata['type']){
+                alert('pls select the type!');
+                operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                return false;
+            }
+
+            if (! postdata['record_line']){
+                alert('pls select the record_line!');
+                operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                return false;
+            }
+
+            if (! postdata['value']){
+                alert('content can\'t be empty!');
+                operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                return false;
+            }
+
+            if (postdata['type'] == 'A') {
+                if (! operate.isIp(postdata['value'])){
+                    alert('Content for A record is invalid.');
+                    operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                    return false;
+                }
+            }else if (postdata['type'] == 'CNAME'){
+                if (! operate.isDomain(postdata['value'], 'true')){
+                    alert('Content for CNAME record is invalid.');
+                    operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                    return false;
+                }
+            }
+
+            count = postdata['sub_domain'].length;
+            success = 0;
+            failed = 0;
+
+            var socket = new WebSocket("ws://" + window.location.host + "/dns/dnspod/create_records");
+            socket.onopen = function () {
+                //console.log('WebSocket open');//成功连接上Websocket
+                socket.send(JSON.stringify(postdata));
+            };
+            //$('#runprogress').modal('show');
+            socket.onerror = function (){
+                toastr.error('后端服务不响应', '错误');
+                operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+            };
+            socket.onclose = function () {
+                //setTimeout(function(){$('#confirmaddModal').modal('hide');}, 1000);
+                toastr.info('连接已关闭...');
+                operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+            };
+            socket.onmessage = function (e) {
+
+                if (e.data == 'userNone'){
+                    toastr.error('未获取用户名，请重新登陆！', '错误');
+                    operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                    socket.close();
+                    return false;
+                }
+
+                data = eval('('+ e.data +')');
+                var width = 100*(data.step)/count + "%";
+                if (data.result){
+                    success = success + 1;
+                    $('#textarea_add_result').append("<p>"+data.domain+": 域名解析新增成功</p>");
+                }else {
+                    failed = failed + 1;
+                    $('#textarea_add_result').append("<p>"+data.domain+": <strong>域名解析新增失败</strong></p>");
+                }
+                document.getElementById('add_record_finished_count').innerHTML="finished: "+data.step+"  &emsp;  success: "+success+"  &emsp;  failed: "+failed+"";
+                $("#progress_bar_add_record").css("width", width);
+                if (data.step == count){
+                    tableInit.myViewModel.refresh();
+                    socket.close();
+                    operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
                 }
             };
             return false;

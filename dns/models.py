@@ -1,3 +1,4 @@
+# coding: utf8
 from __future__ import unicode_literals
 from django.db import models
 
@@ -36,12 +37,19 @@ class domain_info(models.Model):
     	return " | ".join([self.product, self.client, self.cf_account_name, self.domain, self.route, str(self.status), str(self.route_status)])
 
 class alter_history(models.Model):
-    time = models.CharField(max_length=32, null=False)
-    req_ip = models.CharField(max_length=128, null=False)
-    user = models.CharField(max_length=32, null=False)
+    choices_action = (
+        ('change', '修改'), 
+        ('add',    '新增'),
+        ('delete', '删除'),
+    )
+
+    time    = models.CharField(max_length=32, null=False)
+    req_ip  = models.CharField(max_length=128, null=False)
+    user    = models.CharField(max_length=32, null=False)
     pre_rec = models.CharField(max_length=256, null=False)
     now_rec = models.CharField(max_length=256, null=False)
-    status = models.BooleanField(default=True)
+    action  = models.CharField(max_length=10, choices=choices_action, default='change')
+    status  = models.BooleanField(default=True)
 
     def __str__(self):
-        return " | ".join([self.time, self.user, self.pre_rec, self.now_rec, str(self.status)])
+        return " | ".join([self.time, self.user, self.pre_rec, self.now_rec, self.get_action_display(), str(self.status)])
