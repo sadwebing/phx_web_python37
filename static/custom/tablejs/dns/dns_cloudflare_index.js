@@ -388,6 +388,11 @@ var operate = {
                 }
 
                 data = eval('('+ e.data +')');
+
+                if (! data.permission){
+                    toastr.error('抱歉，您没有修改['+data.record.name+']权限！', '错误');
+                }
+
                 var width = 100*(data.step)/count + "%";
                 if (data.result){
                     success = success + 1;

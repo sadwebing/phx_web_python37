@@ -321,7 +321,7 @@ def UpdateDnspodRecords(request):
                 return_info           = {}
                 return_info['record'] = record
                 return_info['step']   = step
-                return_info['permission']   = True
+                return_info['permission'] = True
 
                 #判断是否有权限
                 if not HasDnsPermission(request, "dnspod", record['product'], "change"):

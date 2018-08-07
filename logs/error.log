@@ -20565,3 +20565,56 @@ KeyError: 'result'
 2018-08-07 22:00:20,029 views.py [django:88] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
 2018-08-07 22:00:20,059 views.py [django:88] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
 2018-08-07 22:00:20,088 views.py [django:88] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-07 22:27:59,073 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/index
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "J:\arno\test\phx_web\dns\views.py", line 67, in Index
+    product_list = [ dns.cf_account.values_list("name").all().order_by("name") for dns in request.user.userprofile.dns.filter(permission='read').all() if dns.cf_account ]
+AttributeError: 'cf_account' object has no attribute 'values_list'
+2018-08-07 22:28:45,545 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/index
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "J:\arno\test\phx_web\dns\views.py", line 67, in Index
+    product_list = [ dns.cf_account.values_list("name").all().order_by("name") for dns in request.user.userprofile.dns.filter(permission='read').all() if dns.cf_account ]
+AttributeError: 'cf_account' object has no attribute 'values_list'
+2018-08-07 22:29:50,444 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/index
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "J:\arno\test\phx_web\dns\views.py", line 67, in Index
+    product_list = [ dns.cf_account.values("name").all().order_by("name") for dns in request.user.userprofile.dns.filter(permission='read').all() if dns.cf_account ]
+AttributeError: 'cf_account' object has no attribute 'values'
+2018-08-07 22:31:02,901 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 28, in GetProductRecords
+    cfapi       = CfApi(CF_URL, cf_acc.email, cf_acc.key)
+AttributeError: 'NoneType' object has no attribute 'email'
+2018-08-07 22:33:29,233 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/index
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "J:\arno\test\phx_web\dns\views.py", line 78, in Index
+    'product_list': list(set(product_list, reverse=True)),
+TypeError: set() does not take keyword arguments

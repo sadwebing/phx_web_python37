@@ -61,7 +61,12 @@ def Index(request):
         clientip = request.META['REMOTE_ADDR']
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
 
-    product_list = cf_account.objects.values_list("name").all().order_by("name")
+    if request.user.userprofile.manage == 1:
+        product_list = [ name[0] for name in cf_account.objects.values_list("name").all().order_by("name")]
+    else:
+        product_list = [ dns.cf_account.name for dns in request.user.userprofile.dns.filter(permission='read').all() if dns.cf_account ]
+        
+    product_list.sort()
     logger.info('%s %s' %(type(product_list), product_list))
 
     return render(
@@ -72,7 +77,7 @@ def Index(request):
             'clientip':clientip,
             'role': role,
             'username': username,
-            'product_list': [name[0] for name in product_list],
+            'product_list': product_list,
         }
     )
 

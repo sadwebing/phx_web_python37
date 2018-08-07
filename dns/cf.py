@@ -6,7 +6,7 @@ from dwebsocket                     import require_websocket, accept_websocket
 from django.views.decorators.csrf   import csrf_exempt, csrf_protect
 from models                         import cf_account, domain_info, alter_history
 from cf_api                         import CfApi
-from accounts.views                 import HasPermission
+from accounts.views                 import HasDnsPermission, HasPermission, getIp
 from phxweb.settings                import CF_URL
 import json, logging, requests, re, datetime
 logger = logging.getLogger('django')
@@ -113,6 +113,15 @@ def UpdateRecords(request):
                 return_info           = {}
                 return_info['record'] = record
                 return_info['step']   = step
+                return_info['permission'] = True
+
+                #判断是否有权限
+                if not HasDnsPermission(request, "cf", record['product'], "change"):
+                    return_info['permission']   = False
+                    return_info['result'] = False
+                    request.websocket.send(json.dumps(return_info))
+                    continue
+
                 cf_acc = cf_account.objects.filter(name=record['product']).first()
                 cfapi  = CfApi(CF_URL, cf_acc.email, cf_acc.key)
                 if data['proxied'] == 'true':
