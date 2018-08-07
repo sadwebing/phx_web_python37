@@ -418,6 +418,7 @@ var operate = {
                 $('.selectpicker').selectpicker('refresh');
             },
             error:function(msg){
+                operate.disableButtons(['btn_repost', 'btn_op_search'], false);
                 alert("获取项目失败！");
                 return false;
             }
@@ -598,6 +599,11 @@ var operate = {
                 }
 
                 data = eval('('+ e.data +')');
+
+                if (! data.permission){
+                    toastr.error('抱歉，您没有修改['+data.record.name+']权限！', '错误');
+                }
+
                 var width = 100*(data.step)/count + "%";
                 if (data.result){
                     success = success + 1;
@@ -610,6 +616,7 @@ var operate = {
                 $("#progress_bar_update_record").css("width", width);
                 if (data.step == count){
                     socket.close();
+                    tableInit.myViewModel.refresh();
                     operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
                 }
             };
@@ -703,6 +710,13 @@ var operate = {
 
                 if (e.data == 'userNone'){
                     toastr.error('未获取用户名，请重新登陆！', '错误');
+                    operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                    socket.close();
+                    return false;
+                }
+
+                if (e.data == 'noPermission'){
+                    toastr.error('抱歉，您没有权限！', '错误');
                     operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
                     socket.close();
                     return false;

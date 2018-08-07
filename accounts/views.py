@@ -105,6 +105,16 @@ def login(request, template_name='registration/login.html',
 
     return TemplateResponse(request, template_name, context)
 
+def HasDnsPermission(request, dns, account, permisson):
+    if request.user.userprofile.manage == 1:
+        return True
+    if dns == "dnspod" and request.user.userprofile.dns.filter(permission=permisson, dnspod_account__name=account):
+        return True
+    elif dns == "cf" and request.user.userprofile.dns.filter(permission=permisson, cf_account__name=account):
+        return True
+    else:
+        return False
+
 def HasPermission(user, act, table, app):
     #logger.error('%s don\'t have the permisson to %s table %s of %s' %(user.username, act, table, app))
     if not user.has_perm(app+'.'+act+'_'+table):

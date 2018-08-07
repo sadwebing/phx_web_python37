@@ -263,55 +263,6 @@ window.operateEvents = {
     },
 }; 
 
-window.operateMailEvents = {
-    'click .update_mail_status': function (e, value, row, index) {
-        var check_id = event.target.id
-        var program = check_id.replace(/[0-9]+_/g, "");
-        var postData = {
-            id:row.id,
-            program:program,
-        };
-        postData[program] = 0;
-        //console.log(row[postData.program])
-        //console.log(event.target.id.replace(/[0-9]+_/g, ""))
-        if (document.getElementById(event.target.id).checked){
-            postData[program] = 1;
-            //console.log(postData);
-        }else {
-            postData[program] = 0;
-            //console.log(postData);
-        }
-        $.ajax({
-            url: "/tomcat/mail/UpdateMailStatus",
-            type: "post",
-            data: JSON.stringify(postData),
-            success: function (data, status) {
-                if (postData[program] == 1){
-                    toastr.success(postData.program+": "+row.mail_address, '报警邮箱已启用');
-                }else {
-                    toastr.warning(postData.program+": "+row.mail_address, '报警邮箱已禁用');
-                }
-                
-                row[program] = postData[program];
-            },
-            error: function(XMLHttpRequest, textStatus, errorThrown){
-                if (postData[program] == 1){
-                    document.getElementById(check_id).checked = false;
-                }else {
-                    document.getElementById(check_id).checked = true;
-                }
-                if (XMLHttpRequest.status == 0){
-                    toastr.error('后端服务不响应', '错误')
-                }else {
-                    toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.status)
-                }
-                //tableInit.myViewModel.refresh();
-            }
-        });
-        return false;
-    },
-};
-
 //操作
 var operate = {
     //初始化按钮事件
@@ -705,7 +656,7 @@ var operate = {
                 
                 $('.selectpicker').selectpicker('refresh');
             }
-        console.log(document.getElementById('textarea_edit_content').value);
+
         $("#editSingleModal").modal().on("shown.bs.modal", function () {
 
         }).on('hidden.bs.modal', function () {

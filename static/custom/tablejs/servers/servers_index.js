@@ -9,7 +9,7 @@ var tableInit = {
         //this.dbclick();
         //绑定table的viewmodel
         this.myViewModel = new ko.bootstrapTableViewModel({
-            url: '/servers/get_servers_records',         //请求后台的URL（*）
+            //url: '/servers/get_servers_records',         //请求后台的URL（*）
             //method: 'post',                      //请求方式（*）
             dataType: "json",
             toolbar: '#toolbar',                //工具按钮用哪个容器

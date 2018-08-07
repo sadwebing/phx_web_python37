@@ -6,7 +6,7 @@ from dwebsocket                     import require_websocket, accept_websocket
 from django.views.decorators.csrf   import csrf_exempt, csrf_protect
 from models                         import dnspod_account, domain_info, alter_history
 from dnspod_api                     import DpApi
-from accounts.views                 import HasPermission, getIp
+from accounts.views                 import HasDnsPermission, HasPermission, getIp
 from phxweb.settings                import DnsPod_URL
 import json, logging, requests, re, datetime
 logger = logging.getLogger('django')
@@ -28,7 +28,11 @@ def GetDnspodProductRecords(request):
             return HttpResponseServerError("用户名未知！")
         logger.info('[POST]%s is requesting. %s' %(clientip, request.get_full_path()))
 
-        products = dnspod_account.objects.all()
+        if request.user.userprofile.manage == 1:
+            products = dnspod_account.objects.all()
+        else:
+            products = [ dns.dnspod_account for dns in request.user.userprofile.dns.filter(permission='read').all() if dns.dnspod_account ]
+
         zone_name_list = []
         for product in products:
             try:
@@ -67,7 +71,7 @@ def GetDnspodZoneRecords(request):
 
         logger.info('[POST]%s is requesting. %s' %(clientip, request.get_full_path()))
         data = json.loads(request.body)['postdata']
-        logger.info(data)
+
         record_list = []
         for zone in data:
             dp_acc = dnspod_account.objects.get(name=zone['product'])
@@ -121,7 +125,10 @@ def CreateDnspodRecords(request):
             
         logger.info('user:%s | [POST]%s is requesting. %s' %(username, clientip, request.get_full_path()))
         data = json.loads(request.body)
-        logger.info(data)
+
+        #判断是否有权限
+        if not HasDnsPermission(request, "dnspod", data['product'], "add"):
+            return HttpResponseServerError("抱歉，您没有新增账号[%s]解析的权限！" %data['product'])
 
         for sub_domain in data['sub_domain']:
             dp_acc = dnspod_account.objects.get(name=data['product'])
@@ -179,6 +186,14 @@ def CreateDnspodRecords(request):
                 request.websocket.close()
                 break
             data = json.loads(postdata)
+
+            #判断是否有权限
+            if not HasDnsPermission(request, "dnspod", data['product'], "add"):
+                request.websocket.send('noPermission')
+                ### close websocket ###
+                request.websocket.close()
+                break
+
             step = 0
 
             for sub_domain in data['sub_domain']:
@@ -221,7 +236,6 @@ def CreateDnspodRecords(request):
     else:
         return HttpResponse('nothing!')
 
-
 @accept_websocket
 @csrf_exempt
 def UpdateDnspodRecords(request):
@@ -243,6 +257,9 @@ def UpdateDnspodRecords(request):
 
         for record in data:
             dp_acc = dnspod_account.objects.get(name=record['product'])
+            #判断是否有权限
+            if not HasDnsPermission(request, "dnspod", record['product'], "change"):
+                return HttpResponseServerError("抱歉，您没有修改账号[%s]解析的权限！" %record['product'])
 
             try:
                 dpapi = DpApi(DnsPod_URL, dp_acc.key)
@@ -304,6 +321,15 @@ def UpdateDnspodRecords(request):
                 return_info           = {}
                 return_info['record'] = record
                 return_info['step']   = step
+                return_info['permission']   = True
+
+                #判断是否有权限
+                if not HasDnsPermission(request, "dnspod", record['product'], "change"):
+                    return_info['permission']   = False
+                    return_info['result'] = False
+                    request.websocket.send(json.dumps(return_info))
+                    continue
+
                 dp_acc = dnspod_account.objects.get(name=record['product'])
                 try:
                     dpapi = DpApi(DnsPod_URL, dp_acc.key)
@@ -347,33 +373,28 @@ def DeleteDnspodRecords(request):
     elif request.method == 'POST':
         clientip = getIp(request)
         username = request.user.username
+        manage   = request.user.userprofile.manage
         try:
             role = request.user.userprofile.role
         except:
             role = 'none'
-            
-        try:
-            manage = request.user.userprofile.manage
-        except:
-            manage = 0
-            
-        if username != 'phexus_sa':
-            return HttpResponseServerError("抱歉，暂时不放开删除权限，请联系管理员！")
-        #return HttpResponseServerError("抱歉，暂时不放开删除权限，请联系管理员！")
 
-        if manage == 0:
-            logger.info('user: 没有权限 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
-            return HttpResponseServerError("抱歉，您没有权限！")
-            
         if not username:
             logger.info('user: 用户名未知 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
-            return HttpResponseServerError("用户名未知！")
+            return HttpResponseServerError("用户名未知，请登陆有效账号！")
+
+        #if username != 'phexus_sa':
+        #    return HttpResponseServerError("抱歉，暂时不放开删除权限，请联系管理员！")
+        #return HttpResponseServerError("抱歉，暂时不放开删除权限，请联系管理员！")
 
         logger.info('[POST]%s is requesting. %s' %(clientip, request.get_full_path()))
         data = json.loads(request.body)
-        #logger.info(data)
+
         record_list = []
         for zone in data:
+            if not HasDnsPermission(request, "dnspod", zone['product'], "delete"):
+                return HttpResponseServerError("抱歉，您没有删除账号[%s]解析的权限！" %zone['product'])
+
             dp_acc = dnspod_account.objects.get(name=zone['product'])
 
             try:

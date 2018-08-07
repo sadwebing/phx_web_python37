@@ -2027,6 +2027,7 @@
                 if (!silent) that.$tableLoading.hide();
             },
             error: function (res) {
+                alert(res.status+": "+res.statusText);
                 that.trigger('load-error', res.status, res);
                 if (!silent) that.$tableLoading.hide();
             }

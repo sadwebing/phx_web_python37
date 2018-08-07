@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.core                import exceptions
 from phxweb.settings            import choices_customer, choices_product
 from detect.models              import domains, telegram_chat_group_t, telegram_user_id_t
+from dns.models                 import cf_account, dnspod_account
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -21,6 +22,13 @@ choices_st = (
 choices_s = (
         (1, '启用'), 
         (0, '禁用'),
+    )
+
+choices_permission = (
+        ('read',   '读权限'), 
+        ('change', '改权限'),
+        ('delete', '删权限'),
+        ('add',    '增权限'),
     )
 
 choices_proj = (
@@ -161,3 +169,15 @@ class project_authority_t(models.Model):
 
     def __str__(self):
         return self.name +" | 读权限: "+ self.get_read_display() +" | 写权限: "+ self.get_write_display()
+
+class dns_authority_t(models.Model):
+    cf_account     = models.ForeignKey(cf_account, blank=True, null=True)
+    dnspod_account = models.ForeignKey(dnspod_account, blank=True, null=True)
+    permission     = models.CharField(max_length=10, choices=choices_permission, blank=False)
+
+    def __str__(self):
+        if self.cf_account:
+            name = "CloudFlare-" + self.cf_account.name
+        else:
+            name = "DnsPod-" + self.dnspod_account.name
+        return name + ": " + self.get_permission_display()

@@ -21,6 +21,9 @@ cust_d = {}
 for line in settings.choices_customer:
     cust_d[line[1]] = line[0]
 
+def takeId(elem):
+    return elem['id']
+
 @csrf_exempt
 def DomainsQuery(request):
     if request.method == 'GET':
@@ -66,6 +69,7 @@ def DomainsQuery(request):
 
             domain_list.append(tmp_dict)
         #logger.info(domain_list)
+        domain_list.sort(key=takeId, reverse=True) #以ID 倒序排序
         return HttpResponse(json.dumps(domain_list))
     else:
         return HttpResponse('nothing!')
