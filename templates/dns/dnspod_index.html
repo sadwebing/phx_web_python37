@@ -8,9 +8,9 @@
         <h4 class="panel-title">dnspod 域名列表</h4>
     </div>
     <form class="form-group form-inline" role="form" name="productform">
-        <select class="selectpicker show-tick" data-live-search="true" onchange="operate.setProductHtml('zone_name')" id="dp_product" name="dp_product" title="[请选择dndpod账号]" data-actions-box="true"  multiple data-width="250px">
+        <select class="selectpicker show-tick" data-live-search="true" onchange="dns.setProductHtml('zone_name')" id="product" name="product" title="[请选择dnspod账号]" data-actions-box="true"  multiple data-width="250px">
         </select>
-        <button id="btn_repost" type="button" onclick="operate.GetDnsPodProduct()" class="btn btn-default" style="margin-left: 5px;">
+        <button id="btn_repost" type="button" onclick="dns.GetProductRecords('dnspod')" class="btn btn-default" style="margin-left: 5px;">
             重新获取账号
         </button>
     </form>
@@ -160,8 +160,6 @@
             </div>
         </div>
 </div>
-  
-<script src="/static/custom/tablejs/dns/dns_dnspod_index.js"></script>
-{% comment %}
+
 <script src="/static/custom/tablejs/dns/get_product_records.js"></script>
-{% endcomment %}
+<script src="/static/custom/tablejs/dns/dns_dnspod_index.js"></script>

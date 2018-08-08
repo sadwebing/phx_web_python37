@@ -4,12 +4,16 @@
 #introduction:
 #    cfapi
 
-import requests,json
+import requests, json, logging
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
+from phxweb          import settings
+from detect.telegram import sendTelegram
 # 禁用安全请求警告
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-import logging
 logger = logging.getLogger('django')
+
+#telegram 参数
+message = settings.message_TEST
 
 class CfApi(object):
     def __init__(self, url, email, key):
@@ -61,7 +65,37 @@ class CfApi(object):
 
         return self.__record_id
 
-    def UpdateDnsRecords(self, zone_id, record_type, record_name, record_content, proxied=False, record_id=''):
+    def CreateZoneRecord(self, zone_id, record_type, record_name, record_content, proxied=False):
+        '''
+            新增解析记录，{'type':'A', 'name':'example.com', 'content': '127.0.0.1', 'proxied':false}
+        '''
+        datas  = {'type':record_type, 'name': record_name, 'content': record_content, 'proxied':proxied}
+        result = {}
+
+        url = self.__url + '/%s/' %zone_id + 'dns_records'
+
+        self.__warning = "\r\n".join([ 
+                '@arno',
+                'Attention: CF域名解析新增失败，请检查:',
+                'URL:  + %s' %url,
+                #'%s : %s' %(secretid, secretkey)
+              ])
+
+        try:
+            ret = requests.post(url, data=json.dumps(datas), headers=self.__headers, verify=False)
+            result = ret.json()
+
+        except Exception, e:
+            result = {'result': None, 'errors': str(e), 'success': False}
+
+        if not result['success']:
+            message['text'] = self.__warning + '\n' + str(result)
+            logger.error(message['text'].replace('\r\n', '\n'))
+            sendTelegram(message).send()
+
+        return result
+
+    def UpdateZoneRecord(self, zone_id, record_type, record_name, record_content, proxied=False, record_id=''):
         datas = {'type':record_type, 'name': record_name, 'content': record_content, 'proxied':proxied}
         if record_id == '':
             record_id = self.GetDnsRecordId(zone_id, record_name)
@@ -76,12 +110,41 @@ class CfApi(object):
         else:
             url = self.__url + '/%s/' %zone_id + 'dns_records/'+ record_id
             try:
-                logger.info("%s: %s" %(url, datas))
-                ret = requests.put(url ,data=json.dumps(datas), headers=self.__headers, verify=False)
+                ret = requests.put(url, data=json.dumps(datas), headers=self.__headers, verify=False)
                 return ret.json()
-                logger.info(ret.json())
+
             except:
                 return {'result': {}, 'success': False}
+
+    def DeleteZoneRecord(self, zone_id, record_id):
+        '''
+            删除解析记录
+        '''
+        result = {}
+
+        url = self.__url + '/%s/' %zone_id + 'dns_records/' + record_id
+
+        self.__warning = "\r\n".join([ 
+                '@arno',
+                'Attention: CF域名解析删除失败，请检查:',
+                'URL:  + %s' %url,
+                #'%s : %s' %(secretid, secretkey)
+              ])
+
+        try:
+            ret = requests.delete(url, headers=self.__headers, verify=False)
+            result = ret.json()
+
+        except Exception, e:
+            result = {'result': None, 'errors': str(e), 'success': False}
+
+        if not result['success']:
+            message['text'] = self.__warning + '\n' + str(result)
+            logger.error(message['text'].replace('\r\n', '\n'))
+            sendTelegram(message).send()
+
+        return result
+
 
 if __name__ == '__main__':
     print 'no'

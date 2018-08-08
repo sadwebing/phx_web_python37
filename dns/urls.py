@@ -12,7 +12,9 @@ urlpatterns = [
     url('^cloudflare/index$', views.Index, name='Index'),
     url('^cloudflare/get_product_records$', views.GetProductRecords, name='GetProductRecords'),
     url('^cloudflare/get_zone_records$', views.GetZoneRecords, name='GetZoneRecords'),
+    url('^cloudflare/create_records$', views.CreateRecords, name='CreateRecords'),
     url('^cloudflare/update_records$', views.UpdateRecords, name='UpdateRecords'),
+    url('^cloudflare/delete_records$', views.DeleteRecords, name='DeleteRecords'),
     url('^cloudflare/update_api_route$', views.UpdateApiRoute, name='UpdateApiRoute'),
     url('^cloudflare/get_api_route$', views.GetApiRoute, name='GetApiRoute'),
 

@@ -3,7 +3,7 @@ $(function () {
     operate.operateInit();
 });
 
-window.product_list_html = {}
+dns.GetProductRecords('dnspod');
 
 //初始化表格
 var tableInit = {
@@ -295,7 +295,6 @@ var operate = {
         tableInit.myViewModel.hidecolumn('record_id');
         //this.operateCheckStatus();
         this.isIp();
-        this.GetDnsPodProduct();
         this.selectpicker();
         this.operateSearch();
         this.operateEdit();
@@ -383,67 +382,6 @@ var operate = {
         }
 
         return true;
-    },
-
-    GetDnsPodProduct: function(){
-        operate.disableButtons(['btn_repost', 'btn_op_search'], true);
-        toastr.info("正在获取数据，请耐心等待返回...");
-
-        $.ajax({
-            url: "/dns/dnspod/get_product_records",
-            type: "post",
-            contentType: 'application/json',
-            //data: JSON.stringify(postData),
-            success: function (datas, status) {
-                operate.disableButtons(['btn_repost', 'btn_op_search'], false);
-                toastr.success('数据获取成功！');
-                //alert(datas);
-                var data = eval('('+datas+')');
-                var product_html = "";
-
-                $.each(data, function (index, item) { 
-                    var domain_html = "";
-                    product_html = product_html + "<option value="+item.product+">"+item.product+"</option>";
-                    //循环获取数据 
-                    $.each(item.domain, function (index, domain) {
-                        if (domain.status == 'enable'){
-                            domain_html = domain_html + "<option value='"+domain.id+"_"+item.product+"' data-subtext='"+item.product+"'>"+domain.name+"</option>";
-                        }
-                    })
-
-                    product_list_html[item.product] = domain_html;
-                })
-                document.getElementById('dp_product').innerHTML=product_html;
-                //$('.selectpicker').selectpicker({title:"请选择服务器地址"});
-                $('.selectpicker').selectpicker('refresh');
-            },
-            error:function(msg){
-                operate.disableButtons(['btn_repost', 'btn_op_search'], false);
-                alert("获取项目失败！");
-                return false;
-            }
-        });
-    },
-    
-    setProductHtml: function(value){
-        var productlist = []
-        //var project = document.getElementById("project_active").value;
-        objSelectproject = document.productform.dp_product;
-        
-        for(var i = 0; i < objSelectproject.options.length; i++) { 
-            if (objSelectproject.options[i].selected == true) 
-            productlist.push(objSelectproject.options[i].value);
-        }
-        var html = "";
-
-        for (var num in productlist){
-            product = productlist[num];
-            html = html + product_list_html[product];
-        }
-        document.getElementById(value).innerHTML=html;
-        //$('.selectpicker').selectpicker({title:"请选择服务器地址"});
-        $('.selectpicker').selectpicker('refresh');
-        return false;
     },
     
     //查询zone记录

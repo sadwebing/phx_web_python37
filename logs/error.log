@@ -20618,3 +20618,329 @@ Traceback (most recent call last):
   File "J:\arno\test\phx_web\dns\views.py", line 78, in Index
     'product_list': list(set(product_list, reverse=True)),
 TypeError: set() does not take keyword arguments
+2018-08-08 16:52:29,740 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 19, in <module>
+    url(r'^dns/', include('dns.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\dns\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\dns\views.py", line 6, in <module>
+    from cf_api           import CfApi
+  File "J:\arno\test\phx_web\dns\cf_api.py", line 14, in <module>
+    message = settings.message_TEST
+NameError: name 'settings' is not defined
+2018-08-08 16:55:46,766 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 93, in CreateRecords
+    request.websocket.send('userNone')
+AttributeError: 'WSGIRequest' object has no attribute 'websocket'
+2018-08-08 16:57:40,568 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 97, in CreateRecords
+    data = json.loads(request.body)['postdata']
+KeyError: 'postdata'
+2018-08-08 16:57:56,273 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 100, in CreateRecords
+    if not HasDnsPermission(request, "cf", data['product'], "add"):
+  File "J:\arno\test\phx_web\accounts\views.py", line 113, in HasDnsPermission
+    elif dns == "cf" and request.user.userprofile.dns.filter(permission=permisson, cf_account__name=account):
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 227, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'userprofile'
+2018-08-08 16:58:23,088 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 119, in CreateRecords
+    result= dpapi.CreateDnsRecords(
+NameError: global name 'dpapi' is not defined
+2018-08-08 16:58:47,303 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 124, in CreateRecords
+    proxied        = data['proxied'],
+KeyError: 'proxied'
+2018-08-08 17:02:52,819 cf_api.py [django:93] [ERROR]- @arno
+Attention: CF域名解析新增失败，请检查:
+URL:  + https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records
+None
+2018-08-08 17:02:52,819 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 124, in CreateRecords
+    proxied        = True if data['proxied'].lower() == 'true' else False,
+  File "J:\arno\test\phx_web\dns\cf_api.py", line 94, in CreateDnsRecords
+    sendTelegram(message).send()
+NameError: global name 'sendTelegram' is not defined
+2018-08-08 17:03:20,862 cf_api.py [django:94] [ERROR]- @arno
+Attention: CF域名解析新增失败，请检查:
+URL:  + https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records
+None
+2018-08-08 17:03:22,693 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 130, in CreateRecords
+    "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(data['type'], sub_domain+'.'+data['zone'], data['value'], '1'),
+KeyError: 'value'
+2018-08-08 17:04:42,000 cf_api.py [django:94] [ERROR]- @arno
+Attention: CF域名解析新增失败，请检查:
+URL:  + https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records
+None
+2018-08-08 17:04:43,786 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 131, in CreateRecords
+    result['success'], 'add')
+  File "J:\arno\test\phx_web\accounts\views.py", line 136, in insert_ah
+    insert_h = alter_history(
+NameError: global name 'alter_history' is not defined
+2018-08-08 17:05:55,861 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 7, in <module>
+    from accounts.views import home
+  File "J:\arno\test\phx_web\accounts\views.py", line 13, in <module>
+    from monitor.models import alter_history
+ImportError: cannot import name alter_history
+2018-08-08 17:07:20,392 cf_api.py [django:94] [ERROR]- @arno
+Attention: CF域名解析新增失败，请检查:
+URL:  + https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records
+None
+2018-08-08 17:07:22,161 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 131, in CreateRecords
+    result['success'], 'add')
+  File "J:\arno\test\phx_web\accounts\views.py", line 137, in insert_ah
+    time    = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+NameError: global name 'datetime' is not defined
+2018-08-08 17:07:48,220 cf_api.py [django:94] [ERROR]- @arno
+Attention: CF域名解析新增失败，请检查:
+URL:  + https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records
+None
+2018-08-08 17:07:50,417 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 132, in CreateRecords
+    return HttpResponseServerError(result['result'])
+NameError: global name 'HttpResponseServerError' is not defined
+2018-08-08 17:08:14,048 cf_api.py [django:94] [ERROR]- @arno
+Attention: CF域名解析新增失败，请检查:
+URL:  + https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records
+None
+2018-08-08 17:17:17,121 cf_api.py [django:94] [ERROR]- @arno
+Attention: CF域名解析新增失败，请检查:
+URL:  + https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records
+None
+2018-08-08 17:22:05,648 cf_api.py [django:94] [ERROR]- @arno
+Attention: CF域名解析新增失败，请检查:
+URL:  + https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records
+None
+2018-08-08 17:23:43,542 cf_api.py [django:94] [ERROR]- @arno
+Attention: CF域名解析新增失败，请检查:
+URL:  + https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records
+{u'errors': [{u'message': u'The record already exists.', u'code': 81057}], u'messages': [], u'result': None, u'success': False}
+2018-08-08 18:07:23,384 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 40, in GetProductRecords
+    cfapi       = CfApi(CF_URL, cf_acc.email, cf_acc.key)
+AttributeError: 'NoneType' object has no attribute 'email'
+2018-08-08 18:23:28,552 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 44, in GetProductRecords
+    zone_name_list['product'] = product
+TypeError: list indices must be integers, not str
+2018-08-08 18:25:45,878 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 44, in GetProductRecords
+    tmp_dict['product'] = product
+NameError: global name 'tmp_dict' is not defined
+2018-08-08 18:26:48,676 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 58, in GetProductRecords
+    zone_name_list['domain'].append(tmp_dict)
+TypeError: list indices must be integers, not str
+2018-08-08 18:27:22,711 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/get_product_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 61, in GetProductRecords
+    return HttpResponse(json.dumps(zone_name_list))
+  File "c:\python27\Lib\json\__init__.py", line 244, in dumps
+    return _default_encoder.encode(obj)
+  File "c:\python27\Lib\json\encoder.py", line 207, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "c:\python27\Lib\json\encoder.py", line 270, in iterencode
+    return _iterencode(o, 0)
+  File "c:\python27\Lib\json\encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <cf_account: 凤凰01 | lebo.technical001@gmail.com> is not JSON serializable
+2018-08-08 19:06:11,536 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 151, in CreateRecords
+    elif request.is_websocket():
+AttributeError: 'WSGIRequest' object has no attribute 'is_websocket'
+2018-08-08 19:06:20,621 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 151, in CreateRecords
+    elif request.is_websocket():
+AttributeError: 'WSGIRequest' object has no attribute 'is_websocket'
+2018-08-08 19:08:48,540 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 195, in CreateRecords
+    zone_id        = data['zone_id'],
+KeyError: 'zone_id'
+2018-08-08 19:10:43,010 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 196, in CreateRecords
+    record_name    = record_name,
+UnboundLocalError: local variable 'record_name' referenced before assignment
+2018-08-08 19:11:19,852 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 207, in CreateRecords
+    return_info['success'], 'add')
+KeyError: 'success'
+2018-08-08 19:11:47,907 cf_api.py [django:94] [ERROR]- @arno
+Attention: CF域名解析新增失败，请检查:
+URL:  + https://api.cloudflare.com/client/v4/zones/569c6c8d53b0fb6cf85953186b0bdb0d/dns_records
+{u'errors': [{u'message': u'The record already exists.', u'code': 81057}], u'messages': [], u'result': None, u'success': False}
+2018-08-08 19:12:23,878 cf_api.py [django:94] [ERROR]- @arno
+Attention: CF域名解析新增失败，请检查:
+URL:  + https://api.cloudflare.com/client/v4/zones/569c6c8d53b0fb6cf85953186b0bdb0d/dns_records
+{u'errors': [{u'message': u'The record already exists.', u'code': 81057}], u'messages': [], u'result': None, u'success': False}
+2018-08-08 19:12:26,283 cf_api.py [django:94] [ERROR]- @arno
+Attention: CF域名解析新增失败，请检查:
+URL:  + https://api.cloudflare.com/client/v4/zones/569c6c8d53b0fb6cf85953186b0bdb0d/dns_records
+{u'errors': [{u'message': u'The record already exists.', u'code': 81057}], u'messages': [], u'result': None, u'success': False}
+2018-08-08 19:36:51,717 cf_api.py [django:146] [ERROR]- @arno
+Attention: CF域名解析删除失败，请检查:
+URL:  + https://api.cloudflare.com/client/v4/zones/569c6c8d53b0fb6cf85953186b0bdb0d/dns_records/5515de3f36046c9f00b439313bdd2023
+{'errors': "global name 'datas' is not defined", 'result': None, 'success': False}
+2018-08-08 19:36:53,334 cf.py [django:326] [ERROR]- 删除 www1.lycp168.net 域名失败！{'errors': "global name 'datas' is not defined", 'result': None, 'success': False}
+2018-08-08 19:38:52,753 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/delete_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 333, in DeleteRecords
+    status, 'delete')
+NameError: global name 'status' is not defined

@@ -6,7 +6,7 @@ from dwebsocket                     import require_websocket, accept_websocket
 from django.views.decorators.csrf   import csrf_exempt, csrf_protect
 from models                         import dnspod_account, domain_info, alter_history
 from dnspod_api                     import DpApi
-from accounts.views                 import HasDnsPermission, HasPermission, getIp
+from accounts.views                 import HasDnsPermission, HasPermission, getIp, insert_ah
 from phxweb.settings                import DnsPod_URL
 import json, logging, requests, re, datetime
 logger = logging.getLogger('django')
@@ -119,7 +119,6 @@ def CreateDnspodRecords(request):
         except:
             role = 'none'
         if not username:
-            request.websocket.send('userNone')
             logger.info('user: 用户名未知 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
             return HttpResponseServerError("用户名未知！")
             
@@ -132,15 +131,16 @@ def CreateDnspodRecords(request):
 
         for sub_domain in data['sub_domain']:
             dp_acc = dnspod_account.objects.get(name=data['product'])
+            record_name = data['zone'] if sub_domain == '@' else sub_domain+"."+data['zone']
 
             try:
                 dpapi = DpApi(DnsPod_URL, dp_acc.key)
             except Exception, e:
-                info = "新增 %s 域名失败！" %sub_domain+'.'+data['zone']
+                info = "新增 %s 域名失败！" %record_name
                 logger.error(info)
                 insert_ah(clientip, username, 
                         "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %('null', 'null', 'null', 'null'), 
-                        "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(data['type'], sub_domain+'.'+data['zone'], data['value'], '1'), 
+                        "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(data['type'], record_name, data['value'], '1'), 
                         False, 'add')
 
                 return HttpResponseServerError(info)
@@ -164,7 +164,7 @@ def CreateDnspodRecords(request):
                 "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %('null', 'null', 'null', 'null'), 
                 "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(data['type'], sub_domain+'.'+data['zone'], data['value'], '1'), 
                 status, 'add')
-        return HttpResponse(result)
+        return HttpResponse(json.dumps(result))
 
     elif request.is_websocket():
         clientip = getIp(request)
@@ -199,7 +199,7 @@ def CreateDnspodRecords(request):
             for sub_domain in data['sub_domain']:
                 step += 1
                 return_info           = {}
-                return_info['domain'] = sub_domain+'.'+data['zone']
+                return_info['domain'] = sub_domain+'.'+data['zone'] if sub_domain != "@" else data['zone']
                 return_info['step']   = step
                 dp_acc = dnspod_account.objects.get(name=data['product'])
                 try:
@@ -224,7 +224,7 @@ def CreateDnspodRecords(request):
 
                         insert_ah(clientip, username, 
                             "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %('null', 'null', 'null', 'null'), 
-                            "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(data['type'], sub_domain+'.'+data['zone'], data['value'], '1'), 
+                            "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(data['type'], return_info['domain'], data['value'], '1'), 
                             status, 'add')
 
                 request.websocket.send(json.dumps(return_info))
@@ -418,17 +418,3 @@ def DeleteDnspodRecords(request):
     else:
         return HttpResponse('nothing!')
         
-def insert_ah(clientip, username, pre_rec, now_rec, result=True, action='change'):
-    logger.info("req_ip: %s | user: %s | updaterecord: { %s } ---> { %s } {result: %s}" %(clientip, username, pre_rec, now_rec, result))
-
-    insert_h = alter_history(
-            time    = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-            req_ip  = clientip,
-            user    = username,
-            pre_rec = pre_rec,
-            now_rec = now_rec,
-            action  = action,
-            status  = result,
-        )
-
-    insert_h.save()

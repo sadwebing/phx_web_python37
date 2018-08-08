@@ -1,21 +1,21 @@
 # coding: utf-8
-from django.shortcuts import render
-from django.http import HttpResponseRedirect, HttpResponse, HttpResponseForbidden
+from django.shortcuts               import render
+from django.http                    import HttpResponseRedirect, HttpResponse, HttpResponseForbidden
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import AuthenticationForm
-from django.views.decorators.debug import sensitive_post_parameters
-from django.views.decorators.csrf import csrf_protect
-from django.views.decorators.cache import never_cache
+from django.contrib.auth.forms      import AuthenticationForm
+from django.views.decorators.debug  import sensitive_post_parameters
+from django.views.decorators.csrf   import csrf_protect
+from django.views.decorators.cache  import never_cache
 from django.contrib.sites.shortcuts import get_current_site
-from django.template.response import TemplateResponse
-from django.utils.http import is_safe_url, urlsafe_base64_decode
-from accounts.limit import LimitAccess
-from django.contrib.auth import (
-    REDIRECT_FIELD_NAME, get_user_model, login as auth_login,
-    logout as auth_logout, update_session_auth_hash,
-)
-import logging
-
+from django.template.response       import TemplateResponse
+from django.utils.http              import is_safe_url, urlsafe_base64_decode
+from accounts.limit                 import LimitAccess
+from dns.models                     import alter_history
+from django.contrib.auth            import (
+                                            REDIRECT_FIELD_NAME, get_user_model, login as auth_login,
+                                            logout as auth_logout, update_session_auth_hash,
+                                        )
+import logging, datetime
 logger = logging.getLogger('django')
 
 # Create your views here.
@@ -106,7 +106,7 @@ def login(request, template_name='registration/login.html',
     return TemplateResponse(request, template_name, context)
 
 def HasDnsPermission(request, dns, account, permisson):
-    if request.user.userprofile.manage == 1:
+    if request.user.is_superuser:
         return True
     if dns == "dnspod" and request.user.userprofile.dns.filter(permission=permisson, dnspod_account__name=account):
         return True
@@ -129,3 +129,18 @@ def getIp(request):
     else:
         clientip = request.META['REMOTE_ADDR']
     return clientip
+
+def insert_ah(clientip, username, pre_rec, now_rec, result=True, action='change'):
+    logger.info("req_ip: %s | user: %s | %s-record: { %s } ---> { %s } {result: %s}" %(clientip, username, action, pre_rec, now_rec, result))
+
+    insert_h = alter_history(
+            time    = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+            req_ip  = clientip,
+            user    = username,
+            pre_rec = pre_rec,
+            now_rec = now_rec,
+            action  = action,
+            status  = result,
+        )
+
+    insert_h.save()

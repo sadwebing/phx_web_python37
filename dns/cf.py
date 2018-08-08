@@ -1,12 +1,12 @@
 # coding: utf8
 from django.shortcuts               import render
 from django.contrib.auth.decorators import login_required
-from django.http                    import HttpResponse, HttpResponseForbidden
+from django.http                    import HttpResponse, HttpResponseForbidden, HttpResponseServerError
 from dwebsocket                     import require_websocket, accept_websocket
 from django.views.decorators.csrf   import csrf_exempt, csrf_protect
 from models                         import cf_account, domain_info, alter_history
 from cf_api                         import CfApi
-from accounts.views                 import HasDnsPermission, HasPermission, getIp
+from accounts.views                 import HasDnsPermission, HasPermission, getIp, insert_ah
 from phxweb.settings                import CF_URL
 import json, logging, requests, re, datetime
 logger = logging.getLogger('django')
@@ -16,31 +16,49 @@ def GetProductRecords(request):
     if request.method == 'GET':
         return HttpResponse('You get nothing!')
     elif request.method == 'POST':
-        if request.META.has_key('HTTP_X_FORWARDED_FOR'):
-            clientip = request.META['HTTP_X_FORWARDED_FOR']
-        else:
-            clientip = request.META['REMOTE_ADDR']
+        clientip = getIp(request)
+        username = request.user.username
+        try:
+            role = request.user.userprofile.role
+        except:
+            role = 'none'
+        if not username:
+            request.websocket.send('userNone')
+            logger.info('user: 用户名未知 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
+            return HttpResponseServerError("用户名未知！")
         logger.info('[POST]%s is requesting. %s' %(clientip, request.get_full_path()))
-        data = json.loads(request.body)
+
+        if request.user.userprofile.manage == 1:
+            products = cf_account.objects.all()
+        else:
+            products = [ dns.cf_account for dns in request.user.userprofile.dns.filter(permission='read').all() if dns.cf_account ]
+
         zone_name_list = []
-        for name in data['product']:
-            cf_acc      = cf_account.objects.filter(name=name).first()
+
+        for product in products:
+            cf_acc      = cf_account.objects.get(name=product.name)
             cfapi       = CfApi(CF_URL, cf_acc.email, cf_acc.key)
             page        = 1
             result      = cfapi.GetDnsLists(page=page)
             total_pages = result['result_info']['total_pages']
+            tmp_dict = {
+                'product': product.name,
+                'domain':  [],
+                }
             if len(result['result']) == 0:
                 continue
             while page <= total_pages:
                 for record in result['result']:
-                    tmp_dict = {}
-                    tmp_dict['name']    = record['name']
-                    tmp_dict['id']      = record['id']
-                    tmp_dict['product'] = name
-                    zone_name_list.append(tmp_dict)
+                    tmp_dict['domain'].append({
+                            'name': record['name'],
+                            'id':   record['id'],
+                            'status': 'enable',
+                        })
                 page += 1
                 result = cfapi.GetDnsLists(page=page)
+            zone_name_list.append(tmp_dict)
 
+        #logger.info(zone_name_list)
         return HttpResponse(json.dumps(zone_name_list))
     else:
         return HttpResponse('nothing!')
@@ -77,6 +95,124 @@ def GetZoneRecords(request):
                 record_list.append(tmp_dict)
 
         return HttpResponse(json.dumps(record_list))
+    else:
+        return HttpResponse('nothing!')
+
+@accept_websocket
+@csrf_exempt
+def CreateRecords(request):
+    if request.method == 'POST':
+        clientip = getIp(request)
+        username = request.user.username
+        try:
+            role = request.user.userprofile.role
+        except:
+            role = 'none'
+        #if not username:
+        #    logger.info('user: 用户名未知 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
+        #    return HttpResponseServerError("用户名未知！")
+
+        logger.info('user:%s | [POST]%s is requesting. %s' %(username, clientip, request.get_full_path()))
+        data = json.loads(request.body)
+
+        #判断是否有权限
+        #if not HasDnsPermission(request, "cf", data['product'], "add"):
+        #    return HttpResponseServerError("抱歉，您没有新增账号[%s]解析的权限！" %data['product'])
+
+        result_list = []
+        for sub_domain in data['sub_domain']:
+            cf_acc = cf_account.objects.get(name=data['product'])
+            record_name = sub_domain+'.'+data['zone'] if sub_domain != '@' else data['zone']
+
+            try:
+                cfapi = CfApi(CF_URL, cf_acc.email, cf_acc.key)
+            except Exception, e:
+                info  = "新增 %s 域名失败: %s" %(record_name, str(e))
+                logger.error(info)
+                result = {'result': None, 'errors': str(e), 'success': False}
+            else:
+                result = cfapi.CreateZoneRecord(
+                    zone_id        = data['zone_id'],
+                    record_name    = record_name,
+                    record_type    = data['type'],
+                    record_content = data['content'],
+                    proxied        = True if data['proxied'].lower() == 'true' else False,
+                )
+            result_list.append(result)
+
+            insert_ah(clientip, username, 
+                    "null", 
+                    "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(data['type'], record_name, data['content'], '1'), 
+                    result['success'], 'add')
+
+            if not result['success']:
+                return HttpResponseServerError(result_list)
+        return HttpResponse(json.dumps(result_list))
+
+    elif request.is_websocket():
+        clientip = getIp(request)
+        username = request.user.username
+        try:
+            role = request.user.userprofile.role
+        except:
+            role = 'none'
+        if not username:
+            request.websocket.send('userNone')
+            logger.info('user: 用户名未知 | [WS]%s is requesting. %s' %(clientip, request.get_full_path()))
+            ### close websocket ###
+            request.websocket.close()
+
+        logger.info('user:%s | [WS]%s is requesting. %s' %(username, clientip, request.get_full_path()))
+        for postdata in request.websocket:
+            if not postdata:
+                ### close websocket ###
+                request.websocket.close()
+                break
+            data = json.loads(postdata)
+
+            #判断是否有权限
+            if not HasDnsPermission(request, "cf", data['product'], "add"):
+                request.websocket.send('noPermission')
+                ### close websocket ###
+                request.websocket.close()
+                break
+
+            step = 0
+
+            for sub_domain in data['sub_domain']:
+                step += 1
+                return_info           = {}
+                return_info['domain'] = sub_domain+'.'+data['zone'] if sub_domain != "@" else data['zone']
+                return_info['step']   = step
+                cf_acc = cf_account.objects.get(name=data['product'])
+                try:
+                    cfapi = CfApi(CF_URL, cf_acc.email, cf_acc.key)
+                except Exception, e:
+                    logger.error("新增 %s 域名失败！" %return_info['domain'])
+                    return_info['result'] = False
+                else:
+                    result = cfapi.CreateZoneRecord(
+                        zone_id        = data['zone_id'],
+                        record_name    = return_info['domain'],
+                        record_type    = data['type'],
+                        record_content = data['content'],
+                        proxied        = True if data['proxied'].lower() == 'true' else False,
+                    )
+                
+                    return_info['result'] = result['success']
+
+                insert_ah(clientip, username, 
+                    "null", 
+                    "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(data['type'], sub_domain+'.'+data['zone'], data['content'], '1'), 
+                    return_info['result'], 'add')
+
+                request.websocket.send(json.dumps(return_info))
+
+            ### close websocket ###
+            request.websocket.close()
+
+    elif request.method == 'GET':
+        return HttpResponse('You get nothing!')
     else:
         return HttpResponse('nothing!')
 
@@ -129,7 +265,7 @@ def UpdateRecords(request):
                 else:
                     proxied = False
 
-                result = cfapi.UpdateDnsRecords(record['zone_id'], data['type'], record['name'], data['content'], proxied=proxied, record_id=record['record_id'])
+                result = cfapi.UpdateZoneRecord(record['zone_id'], data['type'], record['name'], data['content'], proxied=proxied, record_id=record['record_id'])
                 if not result['success']:
                     return_info['result'] = False
                 else:
@@ -151,6 +287,54 @@ def UpdateRecords(request):
         else:
             ### close websocket ###
             request.websocket.close()
+
+@csrf_exempt
+def DeleteRecords(request):
+    if request.method == 'GET':
+        return HttpResponse('You get nothing!')
+    elif request.method == 'POST':
+        clientip = getIp(request)
+        username = request.user.username
+        manage   = request.user.userprofile.manage
+        try:
+            role = request.user.userprofile.role
+        except:
+            role = 'none'
+
+        if not username:
+            logger.info('user: 用户名未知 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
+            return HttpResponseServerError("用户名未知，请登陆有效账号！")
+
+        logger.info('[POST]%s is requesting. %s' %(clientip, request.get_full_path()))
+        data = json.loads(request.body)
+
+        record_list = []
+        for zone in data:
+            if not HasDnsPermission(request, "cf", zone['product'], "delete"):
+                return HttpResponseServerError("抱歉，您没有删除账号[%s]解析的权限！" %zone['product'])
+
+            cf_acc = cf_account.objects.get(name=zone['product'])
+
+            try:
+                cfapi  = CfApi(CF_URL, cf_acc.email, cf_acc.key)
+            except Exception, e:
+                logger.error("删除 %s 域名失败！%s" %(zone['name'], str(e)))
+                return HttpResponseServerError("删除 %s 域名失败！" %zone['name'])
+            else:
+                result = cfapi.DeleteZoneRecord(zone['zone_id'], zone['record_id'])
+                if not result['success']:
+                    logger.error("删除 %s 域名失败！%s" %(zone['name'], str(result)))
+                    return HttpResponseServerError("删除 %s 域名失败！" %zone['name'])
+                else:
+                    logger.info("删除 %s 域名成功！%s" %(zone['name'], str(result)))
+                    insert_ah(clientip, username, 
+                        "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(zone['type'], zone['name'], zone['content'], zone['proxied']), 
+                        "null", 
+                        result['success'], 'delete')
+
+        return HttpResponse("删除 %s 域名成功！" %zone['name'])
+    else:
+        return HttpResponse('nothing!')
 
 @csrf_exempt
 def UpdateApiRoute(request):
@@ -183,7 +367,7 @@ def UpdateApiRoute(request):
         elif data['route'] == 'wangsu':
             content = [domain_i.content for domain_i in domain_l if domain_i.route == 'wangsu' ]
 
-        result = cfapi.UpdateDnsRecords(zone_id, r_type, data['domain'], content[0], proxied=proxied, record_id=record_id)
+        result = cfapi.UpdateZoneRecord(zone_id, r_type, data['domain'], content[0], proxied=proxied, record_id=record_id)
 
         #logger.info(result)
 
