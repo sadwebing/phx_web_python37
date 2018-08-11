@@ -10,11 +10,15 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.template.response       import TemplateResponse
 from django.utils.http              import is_safe_url, urlsafe_base64_decode
 from accounts.limit                 import LimitAccess
-from dns.models                     import alter_history
-from django.contrib.auth            import (
-                                            REDIRECT_FIELD_NAME, get_user_model, login as auth_login,
-                                            logout as auth_logout, update_session_auth_hash,
-                                        )
+from django.contrib.auth.models     import User
+from dns.models     import alter_history
+from monitor.models import project_t
+from models         import user_project_authority_t
+from monitor.models import permission_t
+from django.contrib.auth import (
+                                REDIRECT_FIELD_NAME, get_user_model, login as auth_login,
+                                logout as auth_logout, update_session_auth_hash,
+                            )
 import logging, datetime
 logger = logging.getLogger('django')
 
@@ -129,6 +133,21 @@ def getIp(request):
     else:
         clientip = request.META['REMOTE_ADDR']
     return clientip
+
+def getProjects(request, value):
+    projects = []
+    user = User.objects.get(username=request.user.username) #获取用户信息
+    permission = permission_t.objects.get(permission=value) #权限
+    if request.user.is_superuser:
+        projects = project_t.objects.filter(status=1).all()
+    else:
+        try:
+            authoritys = user_project_authority_t.objects.filter(user=user, permission__in=[permission]).all()
+            for authority in authoritys:
+                projects += [ project for project in authority.project.filter(status=1).all().order_by('product')]
+        except:
+            projects = []
+    return projects
 
 def insert_ah(clientip, username, pre_rec, now_rec, result=True, action='change'):
     logger.info("req_ip: %s | user: %s | %s-record: { %s } ---> { %s } {result: %s}" %(clientip, username, action, pre_rec, now_rec, result))

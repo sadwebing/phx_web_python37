@@ -17,7 +17,7 @@
             <div class="panel-body" style="padding-top: 5px; padding-bottom: 5px;">
             <div class="row">
             <div class="col-xs-9 col-sm-9 col-md-9">
-                {% if manage = 1 %}
+                {% if user.is_superuser %}
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <form class="form-group form-inline" role="form" style="margin-bottom: 5px;">
                         <div class="input-group">
@@ -67,7 +67,7 @@
                 </div>
                 {% endif %}
 
-                {% if role = 'sa' %}
+                {% if manage = 1 %}
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <form class="form-group form-inline" role="form" style="margin-bottom: 5px;">
                         <hr size=1>

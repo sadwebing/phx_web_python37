@@ -10,9 +10,8 @@ from monitor.models                 import project_t, minion_t, minion_ip_t
 from command                        import Command
 from django.contrib.auth.models     import User
 from accounts.limit  import LimitAccess
-from accounts.views  import getIp
+from accounts.views  import getIp, getProjects
 from accounts.models import user_project_authority_t
-from monitor.models  import permission_t
 from reflesh         import *
 import json, logging, time
 logger = logging.getLogger('django')
@@ -32,20 +31,8 @@ def GetProjectActive(request):
         if not username:
             logger.info('user: 用户名未知 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
             return HttpResponseServerError("用户名未知！")
-        user = User.objects.get(username=username) #获取用户信息
-        permission = permission_t.objects.get(permission="execute")
 
-        projects = []
-
-        if request.user.is_superuser:
-            projects = project_t.objects.filter(status=1).all()
-        else:
-            try:
-                authoritys = user_project_authority_t.objects.filter(user=user, permission__in=[permission]).all()
-                for authority in authoritys:
-                    projects += [ project for project in authority.project.filter(status=1).all().order_by('product')]
-            except:
-                projects = []
+        projects   = getProjects(request, "execute") #获取项目
 
         logger.info('%s is requesting %s' %(clientip, request.get_full_path())) 
 
@@ -297,6 +284,7 @@ def command(request):
             'role': role,
             'manage': manage,
             'username': username,
+            'user': request.user,
         }
     )
 

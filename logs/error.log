@@ -21062,3 +21062,47 @@ Traceback (most recent call last):
     from accounts.limit import LimitAc  cess
                                            ^
 SyntaxError: invalid syntax
+2018-08-11 19:36:11,891 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 29, in Index
+    user = User.objects.get(username=username) #获取用户信息
+NameError: global name 'User' is not defined
+2018-08-11 19:40:23,701 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/restart/get_project
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\saltstack\views.py", line 37, in GetProjectActive
+    projects = getProjects(request, permission) #获取项目
+  File "J:\arno\test\phx_web\accounts\views.py", line 137, in getProjects
+    user = User.objects.get(username=request.user.username) #获取用户信息
+NameError: global name 'User' is not defined
+2018-08-11 19:44:34,671 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_彩票[caipiao]_反代服务器[front]
+2018-08-11 19:44:34,704 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_彩票[caipiao]_反代服务器[front]
+2018-08-11 19:44:34,736 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_彩票[caipiao]_反代服务器[front]
+2018-08-11 19:44:34,767 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_彩票[caipiao]_反代服务器[front]
+2018-08-11 19:44:34,799 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_彩票[caipiao]_反代服务器[front]
+2018-08-11 19:44:34,828 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_彩票[caipiao]_反代服务器[front]
+2018-08-11 19:44:34,861 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_后台[houtai]_反代服务器[front]
+2018-08-11 19:44:34,905 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_后台[houtai]_反代服务器[front]
+2018-08-11 19:44:34,937 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_后台[houtai]_反代服务器[front]
+2018-08-11 19:44:34,971 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_支付[pay]_反代服务器[front]
+2018-08-11 19:44:35,006 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_支付[pay]_反代服务器[front]
+2018-08-11 19:44:35,040 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_支付[pay]_反代服务器[front]
+2018-08-11 19:44:35,071 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-11 19:44:35,104 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-11 19:44:35,134 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-11 19:44:35,167 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-11 19:44:35,198 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-11 19:44:35,230 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-11 19:44:35,263 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-11 19:44:35,296 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-11 19:44:35,326 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-11 19:44:35,359 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]

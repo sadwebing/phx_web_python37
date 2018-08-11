@@ -3,7 +3,8 @@ from django.shortcuts import render
 from django.http      import HttpResponse, HttpResponseForbidden
 from dwebsocket       import require_websocket
 from monitor.models   import project_t, minion_t, minion_ip_t
-from accounts.views   import HasPermission, getIp
+from accounts.views   import HasPermission, getIp, getProjects
+from django.contrib.auth.models     import User
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf   import csrf_exempt, csrf_protect
 
@@ -25,16 +26,8 @@ def Index(request):
     if not username:
         logger.info('user: 用户名未知 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
         return HttpResponseServerError("用户名未知！")
-
-    projects = []
-
-    try:
-        authoritys = request.user.userprofile.servers.filter(read=1).all()
-        for authority in authoritys:
-            projects += [ project for project in authority.project.all().order_by('product')]
-    except:
-        projects = []
-
+    
+    projects = getProjects(request, "read") #获取项目
 
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
 
