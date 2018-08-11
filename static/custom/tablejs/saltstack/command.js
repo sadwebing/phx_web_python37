@@ -117,8 +117,8 @@ var operate = {
 
     Getcommandform2: function getEntity(projectreform) {
         var formdata = {
-            expr_form,
-            target,
+            expr_form:"",
+            target:[],
             function:document.getElementById("function2").value,
             arguments:document.getElementById("arguments2").value,
         };
@@ -256,72 +256,6 @@ var operate = {
             }
         }; 
         return false;
-    },
-
-    Exe: function(){
-        $("#btn_exe").bind('click',function () {
-            //var postData=operate.Getform();
-            var postData = {
-                expr_form,
-                target,
-                function:document.getElementById("function2").value,
-                arguments:document.getElementById("arguments2").value,
-            };
-            //console.log(postData)
-            postData['target'] = operate.showSelectedValue();
-            if (document.getElementById("project_active").value.length == 0){
-                alert("请至少选择一个服务！")
-                return false;
-            }
-            if (postData['target'].length == 0){
-                alert("请至少选择一个服务器！")
-                return false;
-            }
-            postData['expr_form'] = 'list';
-            console.log(postData)
-            //alert("获取到的表单数据为:"+JSON.stringify(postData));
-            $.ajax({
-                url: "/saltstack/command/execute",
-                type: "post",
-                contentType: 'application/json',
-                dataType: "json",
-                data: JSON.stringify(postData),
-                success: function (data, status) {
-                    var html = "";
-                    var button = "";
-                    for (var tgt in data){
-                        button = button + [
-                            '<div class="btn-group">',
-                                '<button data-toggle="modal" data-target="#'+tgt+'" id="#'+tgt+'" type="button" class="btn btn-primary">'+tgt+'',
-                                '</button>',
-                            '</div>',
-                            '<div class="modal fade" id="'+tgt+'" tabindex="-1" role="dialog" dialaria-labelledby="'+tgt+'" aria-hidden="true">',
-                                '<div class="modal-dialog" style="width:1000px;">',
-                                    '<div class="modal-content" >',
-                                        '<div class="modal-body">',
-                                            '<xmp>'+data[tgt]+'</xmp>',
-                                        '</div>',
-                                    '</div>',
-                                '</div>',
-                            '</div>',].join("");
-                        html = html + "<p><strong>"+tgt+"</strong></p><pre class='pre-scrollable'><xmp>"+data[tgt]+"</xmp></pre>";
-                    }
-                    button = "<div class='btn-toolbar' role='toolbar'>" + button +"</div>" + "<hr>"
-                    $("#commandresults").html(button+html);
-                    for (var tgt in data){
-                        $("#"+tgt).click(function(){
-                            $(this).modal({keyboard: true});
-                        });
-                    }
-                    return false;
-                },
-                error:function(msg){
-                    alert("参数输入错误！");
-                    return false;
-                }
-            });
-            return false;
-        });
     },
 
 };

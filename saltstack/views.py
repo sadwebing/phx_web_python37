@@ -37,12 +37,15 @@ def GetProjectActive(request):
 
         projects = []
 
-        try:
-            authoritys = user_project_authority_t.objects.filter(user=user, permission__in=[permission]).all()
-            for authority in authoritys:
-                projects += [ project for project in authority.project.filter(status=1).all().order_by('product')]
-        except:
-            projects = []
+        if request.user.is_superuser:
+            projects = project_t.objects.filter(status=1).all()
+        else:
+            try:
+                authoritys = user_project_authority_t.objects.filter(user=user, permission__in=[permission]).all()
+                for authority in authoritys:
+                    projects += [ project for project in authority.project.filter(status=1).all().order_by('product')]
+            except:
+                projects = []
 
         logger.info('%s is requesting %s' %(clientip, request.get_full_path())) 
 
