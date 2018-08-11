@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.db                  import models
 from django.contrib.auth.models import User
 from django.core                import exceptions
-from phxweb.settings            import choices_customer, choices_product
+from phxweb.settings            import choices_customer, choices_product, choices_permission
 from detect.models              import domains, telegram_chat_group_t, telegram_user_id_t
 from dns.models                 import cf_account, dnspod_account
 import sys
@@ -22,13 +22,6 @@ choices_st = (
 choices_s = (
         (1, '启用'), 
         (0, '禁用'),
-    )
-
-choices_permission = (
-        ('read',   '读权限'), 
-        ('change', '改权限'),
-        ('delete', '删权限'),
-        ('add',    '增权限'),
     )
 
 choices_proj = (
@@ -181,3 +174,9 @@ class dns_authority_t(models.Model):
         else:
             name = "DnsPod-" + self.dnspod_account.name
         return name + ": " + self.get_permission_display()
+
+class permission_t(models.Model):
+    permission = models.CharField(max_length=10, choices=choices_permission, blank=False, unique=True)
+
+    def __str__(self):
+        return self.get_permission_display()

@@ -65,9 +65,9 @@
                         <input id="btn_submit_command" type="submit" onclick="operate.Submit('btn_submit_command')" class="btn btn-default" style="width:100%; height:82px;" value="执行">
                     </div>
                 </div>
-                {% comment %}
-                    <button class="form-control pull-right" id="btn_reset" type="reset" class="btn btn-default" >重置参数</button>
-                {% endcomment %}
+                {% endif %}
+
+                {% if role = 'sa' %}
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <form class="form-group form-inline" role="form" style="margin-bottom: 5px;">
                         <hr size=1>

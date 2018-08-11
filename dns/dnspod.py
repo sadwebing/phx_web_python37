@@ -8,8 +8,12 @@ from models                         import dnspod_account, domain_info, alter_hi
 from dnspod_api                     import DpApi
 from accounts.views                 import HasDnsPermission, HasPermission, getIp, insert_ah
 from phxweb.settings                import DnsPod_URL
+from pypinyin                       import lazy_pinyin
 import json, logging, requests, re, datetime
 logger = logging.getLogger('django')
+
+def takeId(elem):
+    return elem['product_py']
 
 @csrf_exempt
 def GetDnspodProductRecords(request):
@@ -46,9 +50,11 @@ def GetDnspodProductRecords(request):
                     return HttpResponseServerError('error!')
                 else:
                     zone_name_list.append({
-                        'product': product.name,
-                        'domain' : result['domains'],
+                        'product':    product.name,
+                        'product_py': lazy_pinyin(product.name),
+                        'domain':     result['domains'],
                     })
+        zone_name_list.sort(key=takeId) #以product 拼音排序
         return HttpResponse(json.dumps(zone_name_list))
     else:
         return HttpResponse('nothing!')

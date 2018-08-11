@@ -251,6 +251,14 @@ LOGGING = {
     }
 }     
 
+choices_permission = (
+        ('read',    '读权限'), 
+        ('change',  '改权限'),
+        ('delete',  '删权限'),
+        ('add',     '增权限'),
+        ('execute', '执行权限'),
+    )
+
 choices_customer = ( 
             (29, u'公共客户[pub]'),
 

@@ -8,8 +8,12 @@ from models                         import cf_account, domain_info, alter_histor
 from cf_api                         import CfApi
 from accounts.views                 import HasDnsPermission, HasPermission, getIp, insert_ah
 from phxweb.settings                import CF_URL
+from pypinyin                       import lazy_pinyin
 import json, logging, requests, re, datetime
 logger = logging.getLogger('django')
+
+def takeId(elem):
+    return elem['product_py']
 
 @csrf_exempt
 def GetProductRecords(request):
@@ -42,8 +46,9 @@ def GetProductRecords(request):
             result      = cfapi.GetDnsLists(page=page)
             total_pages = result['result_info']['total_pages']
             tmp_dict = {
-                'product': product.name,
-                'domain':  [],
+                'product':    product.name,
+                'product_py': lazy_pinyin(product.name),
+                'domain':     [],
                 }
             if len(result['result']) == 0:
                 continue
@@ -59,6 +64,7 @@ def GetProductRecords(request):
             zone_name_list.append(tmp_dict)
 
         #logger.info(zone_name_list)
+        zone_name_list.sort(key=takeId) #以product 拼音排序
         return HttpResponse(json.dumps(zone_name_list))
     else:
         return HttpResponse('nothing!')

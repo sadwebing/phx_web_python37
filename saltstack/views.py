@@ -8,9 +8,12 @@ from saltstack.saltapi              import SaltAPI
 from dwebsocket                     import require_websocket, accept_websocket
 from monitor.models                 import project_t, minion_t, minion_ip_t
 from command                        import Command
-from accounts.limit import LimitAccess
-from accounts.views import getIp
-from reflesh        import *
+from django.contrib.auth.models     import User
+from accounts.limit  import LimitAccess
+from accounts.views  import getIp
+from accounts.models import user_project_authority_t
+from monitor.models  import permission_t
+from reflesh         import *
 import json, logging, time
 logger = logging.getLogger('django')
 
@@ -19,23 +22,40 @@ logger = logging.getLogger('django')
 @csrf_exempt
 def GetProjectActive(request):
     if request.method == 'POST':
-        if request.META.has_key('HTTP_X_FORWARDED_FOR'):
-            clientip = request.META['HTTP_X_FORWARDED_FOR']
-        else:
-            clientip = request.META['REMOTE_ADDR']
+        clientip = getIp(request)
+        username = request.user.username
+        try:
+            role = request.user.userprofile.role
+        except:
+            role = 'none'
 
-        datas     = project_t.objects.filter(status=1)
+        if not username:
+            logger.info('user: 用户名未知 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
+            return HttpResponseServerError("用户名未知！")
+        user = User.objects.get(username=username) #获取用户信息
+        permission = permission_t.objects.get(permission="execute")
+
+        projects = []
+
+        try:
+            authoritys = user_project_authority_t.objects.filter(user=user, permission__in=[permission]).all()
+            for authority in authoritys:
+                projects += [ project for project in authority.project.filter(status=1).all().order_by('product')]
+        except:
+            projects = []
+
+        logger.info('%s is requesting %s' %(clientip, request.get_full_path())) 
+
         projectlist = []
-        for data in datas:
+        for project in projects:
             tmpdict = {}
-            tmpdict['envir']       = data.get_envir_display()
-            tmpdict['product']     = data.get_product_display()
-            tmpdict['project']     = data.get_project_display()
-            tmpdict['server_type'] = data.get_server_type_display()
-            tmpdict['svn']         = data.svn
-            tmpdict['minion_id']   = [minion.minion_id for minion in data.minion_id.filter(status=1).all()]
+            tmpdict['envir']       = project.get_envir_display()
+            tmpdict['product']     = project.get_product_display()
+            tmpdict['project']     = project.get_project_display()
+            tmpdict['server_type'] = project.get_server_type_display()
+            tmpdict['svn']         = project.svn
+            tmpdict['minion_id']   = [minion.minion_id for minion in project.minion_id.filter(status=1).all()]
             projectlist.append(tmpdict)
-        logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
         #logger.info(projectlist)
         return HttpResponse(json.dumps(projectlist))
     elif request.method == 'GET':

@@ -23,12 +23,14 @@ def refleshGetDomains(request):
         clientip = getIp(request)
         logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
 
-        #secretkey='c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1'
-        #secretid='AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs'
-        secretkey='speedfeng@123'
-        secretid='speedfeng'
-        tcapi = wsApi(secretid, secretkey)
-        results, status= tcapi.getdomains()
+        secretkey='c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1'
+        secretid='AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs'
+        req = tcApi(secretid, secretkey)
+        results, status = req.getdomains()
+        #secretkey='speedfeng@123'
+        #secretid='speedfeng'
+        #tcapi = wsApi(secretid, secretkey)
+        #results, status= tcapi.getdomains()
         
         return HttpResponse(json.dumps(results))
 
