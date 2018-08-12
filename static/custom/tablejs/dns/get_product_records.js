@@ -11,17 +11,6 @@ var dns = {
         //this.GetProductRecords('dnspod');
     },
 
-    isSubDomain: function (value, proxied) {
-        var regexp = /^(@|[a-zA-Z0-9]+|.*[a-zA-Z0-9]+.*\.[a-zA-Z0-9]*[a-zA-Z]+[a-zA-Z0-9]*)$/;
-
-        var valid = regexp.test(value);
-        if(!valid){
-            return false;
-        }
-
-        return true;
-    },
-
     isDomain: function (value, proxied) {
         var regexp = /^.*[a-zA-Z0-9]+.*\.[a-zA-Z0-9]*[a-zA-Z]+[a-zA-Z0-9]*$/;
         var regexp_tw = /^(tw|.*\.tw)\..*$/;

@@ -372,17 +372,6 @@ var operate = {
 
         return true;
     },
-
-    isSubDomain: function (value, proxied) {
-        var regexp = /^(@|[a-zA-Z0-9]+|.*[a-zA-Z0-9]+.*\.[a-zA-Z0-9]*[a-zA-Z]+[a-zA-Z0-9]*)$/;
-
-        var valid = regexp.test(value);
-        if(!valid){
-            return false;
-        }
-
-        return true;
-    },
     
     //查询zone记录
     operateSearch: function () {
@@ -580,7 +569,7 @@ var operate = {
             for(var i = 0; i < postdata['sub_domain'].length; i++) { 
                 if(postdata['sub_domain'][i].replace(/ /g, '') === ''){
                     postdata['sub_domain'].splice(i, 1);
-                }else if (! operate.isSubDomain(postdata['sub_domain'][i])) {
+                }else if (! public.isSubDomain(postdata['sub_domain'][i])) {
                     alert(postdata['sub_domain'][i] + "格式不正确！");
                     operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
                     return false;

@@ -470,7 +470,7 @@ var operate = {
             for(var i = 0; i < postdata['sub_domain'].length; i++) { 
                 if(postdata['sub_domain'][i].replace(/ /g, '') === ''){
                     postdata['sub_domain'].splice(i, 1);
-                }else if (! dns.isSubDomain(postdata['sub_domain'][i])) {
+                }else if (! public.isSubDomain(postdata['sub_domain'][i])) {
                     alert(postdata['sub_domain'][i] + "格式不正确！");
                     dns.disableButtons(['btn_close_add', 'btn_commit_add'], false);
                     return false;
