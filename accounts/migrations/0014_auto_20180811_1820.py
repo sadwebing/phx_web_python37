@@ -17,22 +17,22 @@ class Migration(migrations.Migration):
             model_name='userprofile',
             name='project_group',
         ),
-        migrations.AddField(
-            model_name='user_project_authority_t',
-            name='project',
-            field=models.ManyToManyField(to='monitor.project_t'),
-        ),
-        migrations.AlterField(
-            model_name='user_project_authority_t',
-            name='user',
-            field=models.OneToOneField(to=settings.AUTH_USER_MODEL),
-        ),
-        migrations.AlterUniqueTogether(
-            name='user_project_authority_t',
-            unique_together=set([]),
-        ),
-        migrations.RemoveField(
-            model_name='user_project_authority_t',
-            name='project',
-        ),
+        #migrations.AddField(
+        #    model_name='user_project_authority_t',
+        #    name='project',
+        #    field=models.ManyToManyField(to='monitor.project_t'),
+        #),
+        #migrations.AlterField(
+        #    model_name='user_project_authority_t',
+        #    name='user',
+        #    field=models.OneToOneField(to=settings.AUTH_USER_MODEL),
+        #),
+        #migrations.AlterUniqueTogether(
+        #    name='user_project_authority_t',
+        #    unique_together=set([]),
+        #),
+        #migrations.RemoveField(
+        #    model_name='user_project_authority_t',
+        #    name='project',
+        #),
     ]

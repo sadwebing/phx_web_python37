@@ -24,6 +24,17 @@ var tableInit = {
                     checkbox: true,
                     width:'2%',
                 },{
+                    field: 'id',
+                    title: 'id',
+                    sortable: true,
+                    formatter: function (value, row, index) {
+                        row.id = index+1;
+                        return index+1;
+                    },
+                    visible: false,
+                    //width:'8%',
+                    //align: 'center'
+                },{
                     field: 'envir',
                     title: 'envir',
                     sortable: true,
@@ -57,6 +68,13 @@ var tableInit = {
                     field: 'minion_id',
                     title: 'minion_id',
                     sortable: true,
+                    //width:'15%',
+                    //align: 'center'
+                },{
+                    field: 'system',
+                    title: 'system',
+                    sortable: true,
+                    visible: false,
                     //width:'15%',
                     //align: 'center'
                 },{
@@ -132,6 +150,8 @@ var tableInit = {
         //console.log(this.myViewModel)
         //this.myViewModel.hidecolumn('zone_id');
         ko.applyBindings(this.myViewModel, document.getElementById("records_table"));
+        //部分列进行隐藏
+        $('#records_table').bootstrapTable('hideColumn', 'operations');
     },
 
     dbclick: function (){
@@ -192,7 +212,6 @@ var tableInit = {
 };
 
 
-
 //操作
 var operate = {
     //初始化按钮事件
@@ -202,88 +221,8 @@ var operate = {
         //tableInit.myViewModel.hidecolumn('zone_id');
         //tableInit.myViewModel.hidecolumn('record_id');
         //this.operateCheckStatus();
-        this.isIp();
-        this.selectpicker();
         this.operateEdit();
-        this.detectDns();
         //this.operateCommitEdit();
-        this.DepartmentModel = {
-            id: ko.observable(),
-            envir: ko.observable(),
-            project: ko.observable(),
-            minion_id: ko.observable(),
-            ip_addr: ko.observable(),
-            server_type: ko.observable(),
-            role: ko.observable(),
-            domain: ko.observable(),
-            url: ko.observable(),
-            status_: ko.observable(),
-            info: ko.observable(),
-        };
-    },
-
-    selectpicker: function docombjs() {
-        $('.selectpicker').selectpicker({
-            style: 'btn-default',
-            //width: "auto",
-            size: 15,
-            showSubtext:true,
-        });
-    },
-
-    detectDns: function () {
-        $('#detect_dns').on("click", function () {
-            
-        });
-    },
-
-
-    isIp: function (value) {
-        var regexp = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/;
-                 
-        var valid = regexp.test(value);
-        if(!valid){//首先必须是 xxx.xxx.xxx.xxx 类型的数字，如果不是，返回false
-            return false;
-        }
-             
-        return value.split('.').every(function(num){
-            //切割开来，每个都做对比，可以为0，可以小于等于255，但是不可以0开头的俩位数
-            //只要有一个不符合就返回false
-            if(num.length > 1 && num.charAt(0) === '0'){
-                //大于1位的，开头都不可以是‘0’
-                return false;
-            }else if(parseInt(num , 10) > 255){
-                //大于255的不能通过
-                return false;
-            }
-            return true;
-        });
-    },
-
-    isDomain: function (value, proxied) {
-        var regexp = /^.*[a-zA-Z0-9]+.*\.[a-zA-Z0-9]*[a-zA-Z]+[a-zA-Z0-9]*$/;
-        var regexp_tw = /^(tw|.*\.tw)\..*$/;
-
-        var valid = regexp.test(value);
-        if(!valid){
-            return false;
-        }
-
-        if (proxied == 'false'){
-            var valid_tw = regexp_tw.test(value);
-
-            if(valid_tw){
-                return false;
-            }
-        }
-
-
-        return true;
-    },
-
-    ViewModel: function() {
-                var self = this;
-                self.datas = ko.observableArray();
     },
 
     //修改zone记录
@@ -291,24 +230,16 @@ var operate = {
         $('#btn_edit').on("click", function () {
             $("#progress_bar_update_record").css("width", "0%");
             document.getElementById('update_record_finished_count').innerHTML="finished: 0  &emsp;  success: 0  &emsp;  failed: 0";
-            document.getElementById('record_content').value = "";
-            operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
+            document.getElementById('password').value = "";
+            public.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
             var arrselectedData = tableInit.myViewModel.getSelections();
             if (arrselectedData.length <= 0){
                 alert("请至少选择一行数据");
                 return false;
             }
 
-            var options = document.getElementById('record_type').children;
-            options[0].selected=true;
-
-            var options = document.getElementById('record_proxied').children;
-            options[0].selected=true;
-
-            var vm = new operate.ViewModel();
+            var vm = new public.ViewModel();
             for (var i=0;i<arrselectedData.length;i++){
-                //ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[i]));
-                //vm.datas.push(operate.DepartmentModel);
                 vm.datas.push(ko.mapping.fromJS(arrselectedData[i]));
             }
             $("#confirmEditModal").modal().on("shown.bs.modal", function () {
@@ -321,7 +252,7 @@ var operate = {
                     //循环获取数据
                     var record = vm.datas()[index];
                     //alert(record)
-                    html_record = "<tr id="+record.name()+"><td>"+record.product()+"</td><td>"+record.zone()+"</td><td>"+record.name()+"</td><td>"+record.type()+"</td><td>"+record.content()+"</td><td>"+record.proxied()+"</td></tr>";
+                    html_record = "<tr id="+record.minion_id()+"><td>"+record.product()+"</td><td>"+record.project()+"</td><td>"+record.customer()+"</td><td>"+record.server_type()+"</td><td>"+record.minion_id()+"</td></tr>";
                     html = html + html_record
                 }); 
                 $("#EditDatas").html(html);
@@ -338,52 +269,18 @@ var operate = {
         $('#btn_commit_edit').on("click", function () {
             $("#progress_bar_update_record").css("width", "0%");
             document.getElementById('update_record_finished_count').innerHTML="finished: 0  &emsp;  success: 0  &emsp;  failed: 0";
-            operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], true);
+            public.disableButtons(['btn_close_edit', 'btn_commit_edit'], true);
             var arrselectedData = tableInit.myViewModel.getSelections();
             var postdata = {};
-            postdata['type'] = $("#record_type option:selected").val()
-            if (! postdata['type']){
-                alert('pls select the type!');
-                operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
-                return false;
-            }
-            postdata['proxied'] = $("#record_proxied option:selected").val()
-            if (! postdata['proxied']){
-                alert('pls select the proxied!');
-                operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
-                return false;
-            }
-            postdata['content'] = document.getElementById('record_content').value.replace(/(^\s*)|(\s*$)/g, "");
-            if (! postdata['content']){
-                alert('content can\'t be empty!');
-                operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
-                return false;
-            }
 
-            if (postdata['type'] == 'A') {
-                if (! operate.isIp(postdata['content'])){
-                    alert('Content for A record is invalid.');
-                    operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
-                    return false;
-                }
-            }else if (postdata['type'] == 'CNAME'){
-                if (! operate.isDomain(postdata['content'], postdata['proxied'])){
-                    alert('Content for CNAME record is invalid.');
-                    operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
-                    return false;
-                }
-
-
-
-
-            }
+            postdata['password'] = document.getElementById('password').value.replace(/(^\s*)|(\s*$)/g, "");
 
             postdata['records'] = arrselectedData;
             count = postdata['records'].length;
             success = 0;
             failed = 0;
 
-            var socket = new WebSocket("ws://" + window.location.host + "/dns/cloudflare/update_records");
+            var socket = new WebSocket("ws://" + window.location.host + "/dns/servers/update_records");
             socket.onopen = function () {
                 //console.log('WebSocket open');//成功连接上Websocket
                 socket.send(JSON.stringify(postdata));
@@ -391,15 +288,13 @@ var operate = {
             //$('#runprogress').modal('show');
             socket.onerror = function (){
                 toastr.error('后端服务不响应', '错误');
-                operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
+                public.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
             };
             socket.onmessage = function (e) {
 
-                console.log(e.data);
-
                 if (e.data == 'userNone'){
                     toastr.error('未获取用户名，请重新登陆！', '错误');
-                    operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
+                    public.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
                     socket.close();
                     return false;
                 }
@@ -408,30 +303,22 @@ var operate = {
                 var width = 100*(data.step)/count + "%";
                 if (data.result){
                     success = success + 1;
-                    document.getElementById(data.record.name).style.backgroundColor = "white";
+                    document.getElementById(data.record.id).style.backgroundColor = "green";
+                    $('#textarea_edit_result').append("<p>"+data.record.minion_id+": 密码修改成功</p>");
                 }else {
                     failed = failed + 1;
                     document.getElementById(data.record.name).style.backgroundColor = "red";
+                    $('#textarea_edit_result').append("<p>"+data.record.minion_id+": <strong>密码修改失败</strong></p>");
                 }
                 document.getElementById('update_record_finished_count').innerHTML="finished: "+data.step+"  &emsp;  success: "+success+"  &emsp;  failed: "+failed+"";
                 $("#progress_bar_update_record").css("width", width);
                 if (data.step == count){
                     socket.close();
-                    operate.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
+                    public.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
                 }
             };
             return false;
         });
-    },
-
-    disableButtons: function (buttonList, fun) {
-        for (var i = 0; i < buttonList.length; i++){
-            if (fun){
-                document.getElementById(buttonList[i]).disabled = true;
-            }else {
-                document.getElementById(buttonList[i]).disabled = false;
-            }
-        }
     },
 
     //数据校验

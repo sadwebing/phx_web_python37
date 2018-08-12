@@ -12,16 +12,6 @@ var servers = {
         this.getItemsValue();
     },
 
-    disableButtons: function (buttonList, fun) {
-        for (var i = 0; i < buttonList.length; i++){
-            if (fun){
-                document.getElementById(buttonList[i]).disabled = true;
-            }else {
-                document.getElementById(buttonList[i]).disabled = false;
-            }
-        }
-    },
-
     getItemsValue: function (){
         var objSelect = document.getElementById("item_privkey_select"); 
         for(var i = 0; i < objSelect.options.length; i++) { 
@@ -122,7 +112,7 @@ var servers = {
             postData['privkey'][servers_list['item'][i]] = document.getElementById(value+"_"+servers_list['item'][i]).value;
         }
 
-        operate.disableButtons(['btn_op_search'], true);
+        public.disableButtons(['btn_op_search'], true);
 
         //console.log(postData)
 
@@ -132,7 +122,7 @@ var servers = {
             contentType: 'application/json',
             data: JSON.stringify(postData),
             success: function (datas, status) {
-                operate.disableButtons(['btn_op_search'], false);
+                public.disableButtons(['btn_op_search'], false);
                 //alert(datas);
                 var data = eval(datas);
                 initData = [];
@@ -168,7 +158,7 @@ var servers = {
             },
             error:function(msg){
                 alert("获取项目失败！");
-                operate.disableButtons(['btn_op_search'], false);
+                public.disableButtons(['btn_op_search'], false);
                 return false;
             }
         });

@@ -28,7 +28,7 @@ def create_user_profile(sender, instance, created, **kwargs):
         profile.save()
 
 class user_project_authority_t(models.Model):
-    user       = models.OneToOneField(User, blank=False, null=False)
+    user       = models.ForeignKey(User, blank=False, null=False)
     project    = models.ManyToManyField(project_t, blank=False)
     permission = models.ManyToManyField(permission_t, blank=False)
 

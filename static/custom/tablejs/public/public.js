@@ -6,8 +6,22 @@ $(function () {
 var public = {
     //初始化按钮事件
     operateInit: function () {
-        //this.isStrinList();
+        this.selectpicker();
         //this.showSelectedValue();
+    },
+
+    ViewModel: function() {
+                var self = this;
+                self.datas = ko.observableArray();
+    },
+
+    selectpicker: function docombjs() {
+        $('.selectpicker').selectpicker({
+            style: 'btn-default',
+            //width: "auto",
+            size: 15,
+            showSubtext:true,
+        });
     },
 
     isStrinList: function (stringToSearch, arrayToSearch) {
@@ -37,6 +51,57 @@ var public = {
         }
         
         return selectedValue;
+    },
+
+    isIp: function (value) {
+        var regexp = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/;
+                 
+        var valid = regexp.test(value);
+        if(!valid){//首先必须是 xxx.xxx.xxx.xxx 类型的数字，如果不是，返回false
+            return false;
+        }
+             
+        return value.split('.').every(function(num){
+            //切割开来，每个都做对比，可以为0，可以小于等于255，但是不可以0开头的俩位数
+            //只要有一个不符合就返回false
+            if(num.length > 1 && num.charAt(0) === '0'){
+                //大于1位的，开头都不可以是‘0’
+                return false;
+            }else if(parseInt(num , 10) > 255){
+                //大于255的不能通过
+                return false;
+            }
+            return true;
+        });
+    },
+
+    isDomain: function (value, proxied) {
+        var regexp = /^.*[a-zA-Z0-9]+.*\.[a-zA-Z0-9]*[a-zA-Z]+[a-zA-Z0-9]*$/;
+        var regexp_tw = /^(tw|.*\.tw)\..*$/;
+
+        var valid = regexp.test(value);
+        if(!valid){
+            return false;
+        }
+
+        if (proxied == 'false'){
+            var valid_tw = regexp_tw.test(value);
+
+            if(valid_tw){
+                return false;
+            }
+        }
+        return true;
+    },
+
+    disableButtons: function (buttonList, fun) {
+        for (var i = 0; i < buttonList.length; i++){
+            if (fun){
+                document.getElementById(buttonList[i]).disabled = true;
+            }else {
+                document.getElementById(buttonList[i]).disabled = false;
+            }
+        }
     },
 
 };

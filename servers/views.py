@@ -178,6 +178,7 @@ def GetServersRecords(request):
 
                 minion_tmp_dict = {
                     'minion_id':    minion.minion_id,
+                    'system':       minion.system,
                     'user':         minion.user,
                     'port':         minion.port,
                     'service_type': minion.get_service_type_display(),

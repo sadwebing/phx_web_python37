@@ -87,6 +87,7 @@ class minion_t(models.Model):
         )
 
     minion_id   = models.CharField(max_length=32, unique=True, null=False)
+    system      = models.CharField(max_length=32, null=False, default='linux')
     user        = models.CharField(max_length=24, default='root')
     port        = models.IntegerField(null=False, default=11223)
     service_type = models.CharField(max_length=10, choices=choices_st, default='nginx')
