@@ -32,7 +32,7 @@ def GetDnspodProductRecords(request):
             return HttpResponseServerError("用户名未知！")
         logger.info('[POST]%s is requesting. %s' %(clientip, request.get_full_path()))
 
-        if request.user.userprofile.manage == 1:
+        if request.user.is_superuser:
             products = dnspod_account.objects.all()
         else:
             products = [ dns.dnspod_account for dns in request.user.userprofile.dns.filter(permission='read').all() if dns.dnspod_account ]

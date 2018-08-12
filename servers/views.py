@@ -133,16 +133,18 @@ def GetServersRecords(request):
 
         try:
             data = json.loads(request.body)
-            #projects = project_t.objects.filter(envir__in=data['envir'], product__in=data['product'], project__in=data['project'], server_type__in=data['server_type'], ).all()
-            authoritys = request.user.userprofile.servers.filter(read=1).all()
-            for authority in authoritys:
-                projects += [ project for project in authority.project.filter(envir__in=data['envir'], product__in=data['product'], project__in=data['project'], customer__in=data['customer'], server_type__in=data['server_type']).all().order_by('product')]
+            logger.info(data)
+            projects = project_t.objects.filter(envir__in=data['envir'], product__in=data['product'], project__in=data['project'], customer__in=data['customer'], server_type__in=data['server_type']).all().order_by('product')
+            #authoritys = request.user.userprofile.servers.filter(read=1).all()
+            #for authority in authoritys:
+            #    projects += [ project for project in authority.project.filter(envir__in=data['envir'], product__in=data['product'], project__in=data['project'], customer__in=data['customer'], server_type__in=data['server_type']).all().order_by('product')]
         except Exception, e:
             logger.error(str(e))
             try:
-                authoritys = request.user.userprofile.servers.filter(read=1).all()
-                for authority in authoritys:
-                    projects += [ project for project in authority.project.all().order_by('product')]
+                projects = getProjects(request, "read") #获取项目
+                #authoritys = request.user.userprofile.servers.filter(read=1).all()
+                #for authority in authoritys:
+                #    projects += [ project for project in authority.project.all().order_by('product')]
             except:
                 projects = []
 
