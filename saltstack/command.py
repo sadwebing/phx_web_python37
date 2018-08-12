@@ -62,7 +62,7 @@ class Command(object):
                 self.tgt_list = results['return'][0].keys()
             else:
                 return results['return'][0]
-                
+
         for minionid in self.tgt_list:
             try:
                 self.info[minionid.strip()] = results['return'][0][minionid]

@@ -132,6 +132,7 @@ var servers = {
                     $.each(item.minions, function (index, minion) { 
                         //console.log(data.minions['index']);
                         initData.push({
+                            'project_id':   item.project_id,
                             'envir':        item.envir,
                             'product':      item.product,
                             'project':      item.project,
@@ -141,6 +142,7 @@ var servers = {
                             'uri':          item.uri,
                             'proj_info':    item.info,
                             'minion_id':    minion.minion_id,
+                            'system':       minion.system,
                             'service_type': minion.service_type,
                             'user':         minion.user,
                             'port':         minion.port,

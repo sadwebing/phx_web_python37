@@ -21351,3 +21351,896 @@ NameError: global name 'User' is not defined
 2018-08-12 12:13:07,045 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
 2018-08-12 12:13:07,075 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
 2018-08-12 12:13:07,108 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:17:35,790 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:17:35,822 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:17:35,852 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:17:35,884 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:17:35,915 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:17:35,947 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:18:32,901 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:18:32,934 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:18:32,964 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:18:32,997 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:18:33,032 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:18:33,068 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:19:44,249 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:19:44,283 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:19:44,316 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:19:44,348 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:19:44,380 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:19:44,411 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:19:46,910 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:19:46,941 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:19:46,971 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:19:47,005 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:19:47,039 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:19:47,072 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:20:09,308 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:20:09,342 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:20:09,372 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:20:09,405 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:20:09,438 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:20:09,471 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:20:09,502 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:09,536 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:09,568 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:09,598 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:09,631 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:09,664 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:09,696 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_后台[houtai]_反代服务器[front]
+2018-08-12 12:20:09,727 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_后台[houtai]_反代服务器[front]
+2018-08-12 12:20:09,759 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_后台[houtai]_反代服务器[front]
+2018-08-12 12:20:09,790 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 12:20:09,823 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 12:20:09,855 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 12:20:23,709 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:20:23,740 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:20:23,772 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:20:23,802 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:20:23,834 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:20:23,865 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:20:23,897 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_后台[houtai]_反代服务器[front]
+2018-08-12 12:20:23,930 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_后台[houtai]_反代服务器[front]
+2018-08-12 12:20:23,960 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_后台[houtai]_反代服务器[front]
+2018-08-12 12:20:23,993 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_彩票[caipiao]_反代服务器[front]
+2018-08-12 12:20:24,026 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_彩票[caipiao]_反代服务器[front]
+2018-08-12 12:20:24,058 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_彩票[caipiao]_反代服务器[front]
+2018-08-12 12:20:24,089 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_彩票[caipiao]_反代服务器[front]
+2018-08-12 12:20:24,121 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_彩票[caipiao]_反代服务器[front]
+2018-08-12 12:20:24,153 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_彩票[caipiao]_反代服务器[front]
+2018-08-12 12:20:24,184 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_彩票[caipiao]_反代服务器[front]
+2018-08-12 12:20:24,217 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:24,255 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:24,286 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:24,319 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:24,351 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:24,382 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_图片[image]_后端源服务器[backend]
+2018-08-12 12:20:24,414 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_图片[image]_后端源服务器[backend]
+2018-08-12 12:20:24,446 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 12:20:24,477 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 12:20:24,509 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 12:20:24,542 views.py [django:81] [ERROR]- failed to get cookies for 测试环境[TEST]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]
+2018-08-12 12:20:24,572 views.py [django:81] [ERROR]- failed to get cookies for 测试环境[TEST]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]
+2018-08-12 12:20:24,604 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]
+2018-08-12 12:20:24,635 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]
+2018-08-12 12:20:24,667 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]
+2018-08-12 12:20:24,700 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]
+2018-08-12 12:20:24,730 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]
+2018-08-12 12:20:24,762 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_彩票[caipiao]_后端源服务器[backend]
+2018-08-12 12:20:24,795 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_彩票[caipiao]_后端源服务器[backend]
+2018-08-12 12:20:24,828 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_彩票[caipiao]_后端源服务器[backend]
+2018-08-12 12:20:24,859 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:24,891 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:24,924 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:24,957 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:24,989 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:25,019 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:25,051 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_后台[houtai]_反代服务器[front]
+2018-08-12 12:20:25,085 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_后台[houtai]_反代服务器[front]
+2018-08-12 12:20:25,117 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_后台[houtai]_反代服务器[front]
+2018-08-12 12:20:25,148 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 12:20:25,180 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 12:20:25,210 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 12:20:25,243 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_JAVA_彩票[caipiao]_反代服务器[front]
+2018-08-12 12:20:25,276 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_JAVA_彩票[caipiao]_反代服务器[front]
+2018-08-12 12:20:25,309 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_JAVA_彩票[caipiao]_反代服务器[front]
+2018-08-12 12:20:25,345 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_后台[houtai]_反代服务器[front]
+2018-08-12 12:20:25,378 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_后台[houtai]_反代服务器[front]
+2018-08-12 12:20:25,411 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_后台[houtai]_反代服务器[front]
+2018-08-12 12:20:25,443 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_彩票[caipiao]_反代服务器[front]
+2018-08-12 12:20:25,474 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_彩票[caipiao]_反代服务器[front]
+2018-08-12 12:20:25,506 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_彩票[caipiao]_反代服务器[front]
+2018-08-12 12:20:25,536 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_彩票[caipiao]_反代服务器[front]
+2018-08-12 12:20:25,569 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_彩票[caipiao]_反代服务器[front]
+2018-08-12 12:20:25,599 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_彩票[caipiao]_反代服务器[front]
+2018-08-12 12:20:25,631 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_支付[pay]_反代服务器[front]
+2018-08-12 12:20:25,663 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_支付[pay]_反代服务器[front]
+2018-08-12 12:20:25,694 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_支付[pay]_反代服务器[front]
+2018-08-12 12:20:25,726 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:25,759 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:25,790 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:25,821 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:25,851 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:25,882 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:25,914 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:25,947 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:25,979 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-12 12:20:26,010 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]
+2018-08-12 12:25:10,736 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:25:10,767 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:25:10,799 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:25:10,831 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:25:10,862 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:25:10,897 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:25:59,078 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:25:59,111 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:25:59,142 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:25:59,174 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:25:59,207 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:25:59,237 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:28:55,961 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:28:55,993 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:28:56,026 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:28:56,062 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:28:56,095 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:28:56,127 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:29:22,154 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:29:22,187 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:29:22,219 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:29:22,250 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:29:22,282 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:29:22,313 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:29:57,697 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:29:57,730 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:29:57,762 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:29:57,793 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:29:57,825 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:29:57,855 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:30:32,892 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:30:32,924 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:30:32,957 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:30:32,990 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:30:33,026 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:30:33,059 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:51:00,012 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 7, in <module>
+    from accounts.views import home
+  File "J:\arno\test\phx_web\accounts\views.py", line 127
+    if user_project_authority_t.objects.filter(user=user, project__in=[project] permission__in=[permisson]).all():
+                                                                                             ^
+SyntaxError: invalid syntax
+2018-08-12 12:51:00,655 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 7, in <module>
+    from accounts.views import home
+  File "J:\arno\test\phx_web\accounts\views.py", line 127
+    if user_project_authority_t.objects.filter(user=user, project__in=[project] permission__in=[permisson]).all():
+                                                                                             ^
+SyntaxError: invalid syntax
+2018-08-12 12:52:16,069 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 22, in <module>
+    url(r'^servers/', include('servers.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\servers\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\servers\views.py", line 216, in <module>
+    @accept_websocket
+NameError: name 'accept_websocket' is not defined
+2018-08-12 12:52:16,641 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 22, in <module>
+    url(r'^servers/', include('servers.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\servers\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\servers\views.py", line 216, in <module>
+    @accept_websocket
+NameError: name 'accept_websocket' is not defined
+2018-08-12 12:52:45,966 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:52:46,016 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:52:46,046 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:52:46,082 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:52:46,117 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:52:46,150 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:53:48,076 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:53:48,109 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:53:48,142 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:53:48,186 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:53:48,220 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:53:48,250 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:54:08,576 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:54:08,609 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:54:08,641 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:54:08,674 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:54:08,706 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:54:08,736 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:54:13,461 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 250, in UpdateServers
+    if not HasServerPermission(request, record, "change"):
+NameError: global name 'HasServerPermission' is not defined
+2018-08-12 12:54:44,135 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:54:44,180 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:54:44,210 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:54:44,243 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:54:44,276 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:54:44,306 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:54:47,696 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 250, in UpdateServers
+    if not HasServerPermission(request, record, "change"):
+NameError: global name 'HasServerPermission' is not defined
+2018-08-12 12:54:57,963 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 250, in UpdateServers
+    if not HasServerPermission(request, record, "change"):
+NameError: global name 'HasServerPermission' is not defined
+2018-08-12 12:55:33,558 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:55:33,598 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 12:55:33,628 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:55:33,661 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:55:33,691 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:55:33,724 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 12:55:37,388 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 250, in UpdateServers
+    if not HasServerPermission(request, record, "change"):
+  File "J:\arno\test\phx_web\accounts\views.py", line 124, in HasServerPermission
+    project = project_t.objects.get(product=server['product'], project=server['project'], envir=server['envir'], server_type=server['server_type'])
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 325, in get
+    clone = self.filter(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 679, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 697, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1301, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1328, in _add_q
+    current_negated=current_negated, connector=connector, allow_joins=allow_joins)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1200, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1096, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 96, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 134, in get_prep_lookup
+    return self.lhs.output_field.get_prep_lookup(self.lookup_name, self.rhs)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 1874, in get_prep_lookup
+    return super(IntegerField, self).get_prep_lookup(lookup_type, value)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 727, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 1868, in get_prep_value
+    return int(value)
+UnicodeEncodeError: 'decimal' codec can't encode characters in position 0-3: invalid decimal Unicode string
+2018-08-12 13:11:16,150 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 250, in UpdateServers
+    if not HasServerPermission(request, record, "change"):
+  File "J:\arno\test\phx_web\accounts\views.py", line 124, in HasServerPermission
+    project = project_t.objects.get(product=server['product'], project=server['project'], envir=server['envir'], server_type=server['server_type'])
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 325, in get
+    clone = self.filter(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 679, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 697, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1301, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1328, in _add_q
+    current_negated=current_negated, connector=connector, allow_joins=allow_joins)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1200, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1096, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 96, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 134, in get_prep_lookup
+    return self.lhs.output_field.get_prep_lookup(self.lookup_name, self.rhs)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 1874, in get_prep_lookup
+    return super(IntegerField, self).get_prep_lookup(lookup_type, value)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 727, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 1868, in get_prep_value
+    return int(value)
+UnicodeEncodeError: 'decimal' codec can't encode characters in position 0-3: invalid decimal Unicode string
+2018-08-12 13:18:45,890 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/get_servers_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 159, in GetServersRecords
+    'envir':       (project,envir, project.get_envir_display()),
+NameError: global name 'envir' is not defined
+2018-08-12 13:19:14,401 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 13:19:14,437 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 13:19:14,467 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:19:14,502 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:19:14,536 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:19:14,569 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:19:50,994 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 13:19:51,029 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 13:19:51,063 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:19:51,101 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:19:51,134 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:19:51,167 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:19:55,398 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 250, in UpdateServers
+    if not HasServerPermission(request, record, "change"):
+  File "J:\arno\test\phx_web\accounts\views.py", line 124, in HasServerPermission
+    project = project_t.objects.get(product=server['product'], project=server['project'], envir=server['envir'], server_type=server['server_type'])
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 325, in get
+    clone = self.filter(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 679, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 697, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1301, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1328, in _add_q
+    current_negated=current_negated, connector=connector, allow_joins=allow_joins)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1200, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1096, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 96, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 134, in get_prep_lookup
+    return self.lhs.output_field.get_prep_lookup(self.lookup_name, self.rhs)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 1874, in get_prep_lookup
+    return super(IntegerField, self).get_prep_lookup(lookup_type, value)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 727, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 1868, in get_prep_value
+    return int(value)
+UnicodeEncodeError: 'decimal' codec can't encode characters in position 0-3: invalid decimal Unicode string
+2018-08-12 13:20:52,796 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 250, in UpdateServers
+    if not HasServerPermission(request, record, "change"):
+  File "J:\arno\test\phx_web\accounts\views.py", line 124, in HasServerPermission
+    project = project_t.objects.get(product=server['product'][0], project=server['project'][0], customer=server['customer'][0], envir=server['envir'][0], server_type=server['server_type'][0])
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 325, in get
+    clone = self.filter(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 679, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 697, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1301, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1328, in _add_q
+    current_negated=current_negated, connector=connector, allow_joins=allow_joins)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1200, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1096, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 96, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 134, in get_prep_lookup
+    return self.lhs.output_field.get_prep_lookup(self.lookup_name, self.rhs)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 1874, in get_prep_lookup
+    return super(IntegerField, self).get_prep_lookup(lookup_type, value)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 727, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 1868, in get_prep_value
+    return int(value)
+UnicodeEncodeError: 'decimal' codec can't encode character u'\u516c' in position 0: invalid decimal Unicode string
+2018-08-12 13:24:03,638 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 13:24:03,671 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 13:24:03,701 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:24:03,733 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:24:03,766 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:24:03,799 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:24:32,270 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 13:24:32,305 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 13:24:32,336 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:24:32,368 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:24:32,403 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:24:32,434 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:25:38,085 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 13:25:38,117 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 13:25:38,150 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:25:38,183 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:25:38,213 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:25:38,244 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:48:19,710 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 13:48:19,740 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 13:48:19,773 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:48:19,806 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:48:19,839 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:48:19,871 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:48:47,323 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 13:48:47,358 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 13:48:47,390 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:48:47,421 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:48:47,453 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:48:47,486 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:49:15,947 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 13:49:15,979 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 13:49:16,010 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:49:16,042 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:49:16,075 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 13:49:16,109 views.py [django:81] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 14:19:43,795 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 22, in <module>
+    url(r'^servers/', include('servers.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\servers\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\servers\views.py", line 262
+    if 'all authentication tokens updated successfully' not in result：
+                                                                     ^
+SyntaxError: invalid syntax
+2018-08-12 14:19:44,437 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 22, in <module>
+    url(r'^servers/', include('servers.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\servers\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\servers\views.py", line 262
+    if 'all authentication tokens updated successfully' not in result：
+                                                                     ^
+SyntaxError: invalid syntax
+2018-08-12 14:20:25,767 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 14:20:25,801 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 14:20:25,832 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 14:20:25,865 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 14:20:25,895 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 14:20:25,927 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 14:22:42,799 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 260, in UpdateServers
+    result = Command(record['minion_id'], 'cmd.run', cmd, 'glob').CmdRun()[0][record['minion_id']]
+KeyError: 0
+2018-08-12 14:24:26,154 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 14:24:26,187 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 14:24:26,220 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 14:24:26,255 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 14:24:26,286 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 14:24:26,319 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 14:36:01,572 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 14:36:01,605 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 14:36:01,641 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 14:36:01,674 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_后台[houtai]_反代服务器[front]
+2018-08-12 14:36:01,706 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_后台[houtai]_反代服务器[front]
+2018-08-12 14:36:01,736 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_后台[houtai]_反代服务器[front]
+2018-08-12 14:36:01,767 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 14:36:01,802 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 14:36:01,832 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 14:36:01,865 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 14:36:01,897 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 14:36:01,930 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 14:36:13,930 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 286, in UpdateServers
+    if not HasServerPermission(request, record, "change"):
+  File "J:\arno\test\phx_web\accounts\views.py", line 132, in HasServerPermission
+    if user_project_authority_t.objects.filter(user=user, project__in=[project], permission__in=[permisson]).all():
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 679, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 697, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1301, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1328, in _add_q
+    current_negated=current_negated, connector=connector, allow_joins=allow_joins)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1191, in build_filter
+    lookups, value)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\related.py", line 1745, in get_lookup_constraint
+    root_constraint.add(lookup_class(targets[0].get_col(alias, sources[0]), value), AND)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 96, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 134, in get_prep_lookup
+    return self.lhs.output_field.get_prep_lookup(self.lookup_name, self.rhs)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 729, in get_prep_lookup
+    return [self.get_prep_value(v) for v in value]
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 985, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'change'
+2018-08-12 14:40:22,411 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 286, in UpdateServers
+    if not HasServerPermission(request, record, "change"):
+  File "J:\arno\test\phx_web\accounts\views.py", line 133, in HasServerPermission
+    if user_project_authority_t.objects.filter(user=user, project__in=[project], permission__in=[permission]).all():
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 679, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 697, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1301, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1328, in _add_q
+    current_negated=current_negated, connector=connector, allow_joins=allow_joins)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1191, in build_filter
+    lookups, value)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\related.py", line 1745, in get_lookup_constraint
+    root_constraint.add(lookup_class(targets[0].get_col(alias, sources[0]), value), AND)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 96, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 134, in get_prep_lookup
+    return self.lhs.output_field.get_prep_lookup(self.lookup_name, self.rhs)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 729, in get_prep_lookup
+    return [self.get_prep_value(v) for v in value]
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 985, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'change'
+2018-08-12 14:42:48,796 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 286, in UpdateServers
+    if not HasServerPermission(request, record, "change"):
+  File "J:\arno\test\phx_web\accounts\views.py", line 133, in HasServerPermission
+    if user_project_authority_t.objects.filter(user=user, project__in=[project], permission__in=[permission]).all():
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 679, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 697, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1301, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1328, in _add_q
+    current_negated=current_negated, connector=connector, allow_joins=allow_joins)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\query.py", line 1191, in build_filter
+    lookups, value)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\related.py", line 1745, in get_lookup_constraint
+    root_constraint.add(lookup_class(targets[0].get_col(alias, sources[0]), value), AND)
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 96, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "J:\arno\test\lib\site-packages\django\db\models\lookups.py", line 134, in get_prep_lookup
+    return self.lhs.output_field.get_prep_lookup(self.lookup_name, self.rhs)
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 729, in get_prep_lookup
+    return [self.get_prep_value(v) for v in value]
+  File "J:\arno\test\lib\site-packages\django\db\models\fields\__init__.py", line 985, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'change'
+2018-08-12 14:44:35,887 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 14:44:35,920 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 14:44:35,951 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 14:44:35,983 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_后台[houtai]_反代服务器[front]
+2018-08-12 14:44:36,016 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_后台[houtai]_反代服务器[front]
+2018-08-12 14:44:36,048 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_后台[houtai]_反代服务器[front]
+2018-08-12 14:44:36,079 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 14:44:36,112 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 14:44:36,144 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 14:44:36,177 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 14:44:36,210 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 14:44:36,240 views.py [django:82] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 15:03:06,660 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 22, in <module>
+    url(r'^servers/', include('servers.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\servers\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\servers\views.py", line 295
+    if status
+            ^
+SyntaxError: invalid syntax
+2018-08-12 15:03:29,069 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 275, in UpdateServers
+    if not HasServerPermission(request, record, "change"):
+  File "J:\arno\test\phx_web\accounts\views.py", line 126, in HasServerPermission
+    project = project_t.objects.get(id=server['project_id'])
+KeyError: 'project_id'
+2018-08-12 15:03:53,358 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 15:03:53,392 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 15:03:53,424 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_广告站[ggz]_后端源服务器[backend]
+2018-08-12 15:03:53,457 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_后台[houtai]_反代服务器[front]
+2018-08-12 15:03:53,490 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_后台[houtai]_反代服务器[front]
+2018-08-12 15:03:53,523 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_后台[houtai]_反代服务器[front]
+2018-08-12 15:03:53,555 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 15:03:53,588 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 15:03:53,618 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 15:03:53,651 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 15:03:53,681 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 15:03:53,713 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_勇士[yongshi]_体育[sport]_反代服务器[front]
+2018-08-12 18:06:58,066 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 18:06:58,099 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]
+2018-08-12 18:06:58,132 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:06:58,164 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:06:58,196 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:06:58,226 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:07:09,062 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 304, in UpdateServers
+    update.save()
+  File "J:\arno\test\lib\site-packages\django\db\models\base.py", line 710, in save
+    force_update=force_update, update_fields=update_fields)
+  File "J:\arno\test\lib\site-packages\django\db\models\base.py", line 738, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "J:\arno\test\lib\site-packages\django\db\models\base.py", line 822, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "J:\arno\test\lib\site-packages\django\db\models\base.py", line 861, in _do_insert
+    using=using, raw=raw)
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 963, in execute_sql
+    cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "J:\arno\test\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1062, "Duplicate entry 'PUB_DNS_HK_181_165' for key 'minion_id'")
+2018-08-12 18:11:41,611 base.py [django.request:256] [ERROR]- Internal Server Error: /servers/update
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\servers\views.py", line 307, in UpdateServers
+    logger,error(str(e))
+NameError: global name 'error' is not defined
+2018-08-12 18:12:05,082 views.py [django:307] [ERROR]- (1062, "Duplicate entry 'PUB_DNS_HK_181_165' for key 'minion_id'")
+2018-08-12 18:13:01,539 views.py [django:104] [ERROR]- 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]: Incorrect padding
+2018-08-12 18:13:01,625 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:13:01,657 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:13:01,688 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:13:01,720 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:22:26,523 telegram.py [django:112] [ERROR]- Attention: send message failed!
+2018-08-12 18:22:26,523 telegram.py [django:113] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: message text is empty"}
+2018-08-12 18:22:26,523 telegram.py [django:114] [ERROR]- {'disable_web_page_preview': True, 'text': '', 'doc_name': 'message.txt_20180812182225', 'caption': '', 'chat_id': -204952096L, 'parse_mode': 'HTML'}
+2018-08-12 18:23:09,384 telegram.py [django:112] [ERROR]- Attention: send message failed!
+2018-08-12 18:23:09,384 telegram.py [django:113] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: message text is empty"}
+2018-08-12 18:23:09,384 telegram.py [django:114] [ERROR]- {'disable_web_page_preview': True, 'text': '', 'doc_name': 'message.txt_20180812182308', 'caption': '', 'chat_id': -186348806L, 'parse_mode': 'HTML'}
+2018-08-12 18:24:27,174 views.py [django:104] [ERROR]- 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]: Incorrect padding
+2018-08-12 18:24:27,282 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:24:27,315 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:24:27,348 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:24:27,378 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:25:13,295 views.py [django:104] [ERROR]- 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]: Incorrect padding
+2018-08-12 18:25:13,381 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:25:13,413 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:25:13,444 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:25:13,476 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:27:18,835 views.py [django:104] [ERROR]- 运营环境[ONLINE]_公共产品[pub]_httpdns_反代服务器[front]: Incorrect padding
+2018-08-12 18:27:18,921 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:27:18,957 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:27:18,987 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-08-12 18:27:19,017 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]

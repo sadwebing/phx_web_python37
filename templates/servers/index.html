@@ -91,18 +91,16 @@
                                 </tbody>
                             </table>
                         </div>
-                        <form class="form-inline">
-                            <div class="input-group" style="margin-bottom: 10px;">
-                                <label class="input-group-addon" style="width: 85px;">密码</label>
-                                <input type="text" name="password" class="form-control" id="password" placeholder="密码[password]" style="width: 420px;">
-                            </div>
-                        </form>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <label class="input-group-addon" style="width: 10%;">密码</label>
+                            <input type="text" name="password" class="form-control" id="password" placeholder="password" style="width: 100%;">
+                        </div>
                         <p id="update_record_finished_count" style="text-align: left">finished: 0  &emsp;  success: 0  &emsp;  failed: 0</p>
                         <div class="progress progress-striped active" id="progress_update_record">  
                             <div class="progress-bar progress-bar-success" role="progressbar" id="progress_bar_update_record" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
                             </div>
                         </div>
-                        <pre class="pre-scrollable" id="textarea_edit_result" name="textarea_edit_result" style="max-width: 500px; height:100px; margin-bottom: 10px; resize: none; text-align: left;" placeholder="返回结果"></pre>
+                        <pre class="pre-scrollable" id="textarea_edit_result" name="textarea_edit_result" style="width: 100%; height:100px; margin-bottom: 10px; resize: none; text-align: left;" placeholder="返回结果"></pre>
                     </div>
                     <div class="modal-footer">
                         <p style="text-align: left">Total：<span data-bind="text: datas().length"></span></p>

@@ -11,10 +11,10 @@ from django.template.response       import TemplateResponse
 from django.utils.http              import is_safe_url, urlsafe_base64_decode
 from accounts.limit                 import LimitAccess
 from django.contrib.auth.models     import User
-from dns.models     import alter_history
-from monitor.models import project_t
-from models         import user_project_authority_t
-from monitor.models import permission_t
+from dns.models      import alter_history
+from monitor.models  import project_t, permission_t
+from models          import user_project_authority_t
+
 from django.contrib.auth import (
                                 REDIRECT_FIELD_NAME, get_user_model, login as auth_login,
                                 logout as auth_logout, update_session_auth_hash,
@@ -109,20 +109,32 @@ def login(request, template_name='registration/login.html',
 
     return TemplateResponse(request, template_name, context)
 
-def HasDnsPermission(request, dns, account, permisson):
+def HasDnsPermission(request, dns, account, permission):
     if request.user.is_superuser:
         return True
-    if dns == "dnspod" and request.user.userprofile.dns.filter(permission=permisson, dnspod_account__name=account):
+    if dns == "dnspod" and request.user.userprofile.dns.filter(permission=permission, dnspod_account__name=account):
         return True
-    elif dns == "cf" and request.user.userprofile.dns.filter(permission=permisson, cf_account__name=account):
+    elif dns == "cf" and request.user.userprofile.dns.filter(permission=permission, cf_account__name=account):
+        return True
+    else:
+        return False
+
+def HasServerPermission(request, server, value):
+    if request.user.is_superuser:
+        return True
+    user    = User.objects.get(username=request.user.username)
+    project = project_t.objects.get(id=server['project_id'])
+    permission = permission_t.objects.get(permission=value) #权限
+    
+    if user_project_authority_t.objects.filter(user=user, project__in=[project], permission__in=[permission]).all():
         return True
     else:
         return False
 
 def HasPermission(user, act, table, app):
-    #logger.error('%s don\'t have the permisson to %s table %s of %s' %(user.username, act, table, app))
+    #logger.error('%s don\'t have the permission to %s table %s of %s' %(user.username, act, table, app))
     if not user.has_perm(app+'.'+act+'_'+table):
-        logger.error('%s don\'t have the permisson to %s table %s of %s' %(user.username, act, table, app))
+        logger.error('%s don\'t have the permission to %s table %s of %s' %(user.username, act, table, app))
         return False
     else:
         return True

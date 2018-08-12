@@ -134,7 +134,7 @@ class project_t(models.Model):
     publickey   = models.TextField(null=False, default='thisisdefaultpublickey')
     info        = models.CharField(max_length=128, blank=True)
     class Meta:
-        unique_together = ('product' ,'project' ,'envir', 'server_type')
+        unique_together = ('product' ,'project' ,'envir', 'customer', 'server_type')
 
     def __str__(self):
         return " - ".join([self.get_envir_display(), self.get_product_display(), self.get_project_display(), self.get_customer_display(), self.get_server_type_display(), self.get_status_display()])

@@ -38,30 +38,45 @@ var tableInit = {
                     field: 'envir',
                     title: 'envir',
                     sortable: true,
+                    formatter: function (value, row, index) {
+                        return value[1];
+                    },
                     //width:'8%',
                     //align: 'center'
                 },{
                     field: 'product',
                     title: 'product',
                     sortable: true,
+                    formatter: function (value, row, index) {
+                        return value[1];
+                    },
                     //width:'15%',
                     //align: 'center'
                 },{
                     field: 'project',
                     title: 'project',
                     sortable: true,
+                    formatter: function (value, row, index) {
+                        return value[1];
+                    },
                     //width:'15%',
                     //align: 'center'
                 },{
                     field: 'customer',
                     title: 'customer',
                     sortable: true,
+                    formatter: function (value, row, index) {
+                        return value[1];
+                    },
                     //width:'15%',
                     //align: 'center'
                 },{
                     field: 'server_type',
                     title: 'server_type',
                     sortable: true,
+                    formatter: function (value, row, index) {
+                        return value[1];
+                    },
                     //width:'5%',
                     //align: 'center'
                 },{
@@ -274,16 +289,26 @@ var operate = {
             var postdata = {};
 
             postdata['password'] = document.getElementById('password').value.replace(/(^\s*)|(\s*$)/g, "");
+            if (postdata['password'].length < 6){
+                alert('password is too short.');
+                public.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
+                return false;
+            }
 
             postdata['records'] = arrselectedData;
             count = postdata['records'].length;
             success = 0;
             failed = 0;
 
-            var socket = new WebSocket("ws://" + window.location.host + "/dns/servers/update_records");
+            var socket = new WebSocket("ws://" + window.location.host + "/servers/update");
             socket.onopen = function () {
                 //console.log('WebSocket open');//成功连接上Websocket
                 socket.send(JSON.stringify(postdata));
+            };
+            socket.onclose = function () {
+                //setTimeout(function(){$('#confirmEditModal').modal('hide');}, 1000);
+                toastr.info('连接已关闭...');
+                public.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
             };
             //$('#runprogress').modal('show');
             socket.onerror = function (){
@@ -300,15 +325,21 @@ var operate = {
                 }
 
                 data = eval('('+ e.data +')');
+
+                if (! data.permission){
+                    toastr.error('抱歉，您没有修改['+data.record.minion_id+']权限！', '错误');
+                }
+
                 var width = 100*(data.step)/count + "%";
                 if (data.result){
                     success = success + 1;
-                    document.getElementById(data.record.id).style.backgroundColor = "green";
+                    document.getElementById(data.record.minion_id).style.backgroundColor = "white";
                     $('#textarea_edit_result').append("<p>"+data.record.minion_id+": 密码修改成功</p>");
                 }else {
                     failed = failed + 1;
-                    document.getElementById(data.record.name).style.backgroundColor = "red";
+                    document.getElementById(data.record.minion_id).style.backgroundColor = "red";
                     $('#textarea_edit_result').append("<p>"+data.record.minion_id+": <strong>密码修改失败</strong></p>");
+                    $('#textarea_edit_result').append("<p>"+data.info+"</p>");
                 }
                 document.getElementById('update_record_finished_count').innerHTML="finished: "+data.step+"  &emsp;  success: "+success+"  &emsp;  failed: "+failed+"";
                 $("#progress_bar_update_record").css("width", width);

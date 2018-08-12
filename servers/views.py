@@ -1,9 +1,12 @@
 # coding: utf8
 from django.shortcuts import render
 from django.http      import HttpResponse, HttpResponseForbidden
-from dwebsocket       import require_websocket
+from dwebsocket       import require_websocket, accept_websocket
 from monitor.models   import project_t, minion_t, minion_ip_t
-from accounts.views   import HasPermission, getIp, getProjects
+from accounts.views   import HasPermission, HasServerPermission, getIp, getProjects
+from phxweb           import settings
+from detect.telegram  import sendTelegram
+from saltstack.command              import Command
 from django.contrib.auth.models     import User
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf   import csrf_exempt, csrf_protect
@@ -11,6 +14,9 @@ from django.views.decorators.csrf   import csrf_exempt, csrf_protect
 import json, logging, requests, re, datetime, rsa, base64
 logger = logging.getLogger('django')
 setcookieV = {}
+
+#telegram 参数
+message = settings.message_TEST
 
 @csrf_protect
 @login_required
@@ -66,10 +72,13 @@ def Index(request):
     )
 
 def decryptPasswd(request, project, passwd):
+    '''
+        对密码进行解密
+    '''
     error = "密码已加密[passwdEncrypted]"
     item  = '_'.join([str(project.envir), str(project.product), str(project.project), str(project.server_type)])
     item_display = '_'.join([project.get_envir_display(), project.get_product_display(), project.get_project_display(), project.get_server_type_display()])
-    #解密 服务器密码
+
     try:
         data = json.loads(request.body)
         privatekey = data['privkey'][item]
@@ -97,6 +106,18 @@ def decryptPasswd(request, project, passwd):
     else:
         password = error
     return password
+
+def encryptPasswd(password, record):
+    '''
+        对密码进行加密
+    '''
+    try:
+        pubkey     = project_t.objects.get(id=record['project_id']).publickey
+        public_key = rsa.PublicKey.load_pkcs1_openssl_pem(pubkey)
+        crypto     = base64.encodestring(rsa.encrypt(password.encode(), public_key))
+        return crypto, True
+    except Exception, e:
+        return str(e), False
 
 def setCookies(request, response, setcookieV):
     try:
@@ -156,11 +177,12 @@ def GetServersRecords(request):
                 continue #禁用的项目不做展示
 
             tmp_dict = {
-                'envir':       project.get_envir_display(),
-                'product':     project.get_product_display(),
-                'project':     project.get_project_display(),
-                'customer':    project.get_customer_display(),
-                'server_type': project.get_server_type_display(),
+                'project_id':  project.id,
+                'envir':       (project.envir, project.get_envir_display()),
+                'product':     (project.product, project.get_product_display()),
+                'project':     (project.project, project.get_project_display()),
+                'customer':    (project.customer, project.get_customer_display()),
+                'server_type': (project.server_type, project.get_server_type_display()),
                 'password':    decryptPasswd(request, project, project.password),
                 'user':        project.user,
                 'port':        project.port,
@@ -212,3 +234,86 @@ def GetServersRecords(request):
         return response
     else:
         return HttpResponse('nothing!')
+
+@accept_websocket
+@csrf_exempt
+def UpdateServers(request):
+    if request.is_websocket():
+        clientip = getIp(request)
+        username = request.user.username
+        try:
+            role = request.user.userprofile.role
+        except:
+            role = 'none'
+        if not username:
+            request.websocket.send('userNone')
+            logger.info('user: 用户名未知 | [WS]%s is requesting. %s' %(clientip, request.get_full_path()))
+            ### close websocket ###
+            request.websocket.close()
+
+        logger.info('user:%s | [WS]%s is requesting. %s' %(username, clientip, request.get_full_path()))
+
+        for postdata in request.websocket:
+            if not postdata:
+                ### close websocket ###
+                request.websocket.close()
+                break
+            data = json.loads(postdata)
+            step = 0
+
+            for record in data['records']:
+                step += 1
+                return_info           = {}
+                return_info['record'] = record
+                return_info['step']   = step
+                return_info['info']   = ""
+                return_info['permission'] = True
+                return_info['result']     = True
+
+                #判断是否有权限
+                if not HasServerPermission(request, record, "change"):
+                    return_info['permission'] = False
+                    return_info['result']     = False
+                    request.websocket.send(json.dumps(return_info))
+                    ### close websocket ###
+                    request.websocket.close()
+                    break
+
+                #修改密码
+                cmd    = 'echo %s |passwd root --stdin' %data['password'].replace('`', '\`') # `这个符号在Linux命令行有特殊含义，需要转义
+                result = Command(record['minion_id'], 'cmd.run', cmd, 'glob').CmdRun()[record['minion_id']]
+
+                if 'all authentication tokens updated successfully' not in result:
+                    return_info['result'] = False
+                    return_info['info']   = result
+                    request.websocket.send(json.dumps(return_info))
+                    continue
+
+                #密码加密并存放
+                crypto, status = encryptPasswd(data['password'], record)
+                if not status:
+                    return_info['result'] = False
+                    return_info['info']   = "密码修改成功，但是密码加密失败：" + result
+                    message['text']       = "@arno\r\n" + return_info['info']
+                    sendTelegram(message).send()
+                    request.websocket.send(json.dumps(return_info))
+                    continue
+                try:
+                    update = minion_t.objects.get(minion_id=record['minion_id'])
+                    update.password = crypto
+                    update.save()
+                except Exception, e:
+                    sendTelegram(message).send()
+                    return_info['result'] = False
+                    return_info['info']   = "密码修改成功，但是密码存入失败：" + str(e)
+                    message['text']       = "@arno\r\n" + return_info['info']
+                    sendTelegram(message).send()
+                    request.websocket.send(json.dumps(return_info))
+                    continue
+
+                request.websocket.send(json.dumps(return_info))
+            ### close websocket ###
+            request.websocket.close()
+
+    else:
+        return HttpResponseForbidden('nothing!')
