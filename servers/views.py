@@ -280,7 +280,7 @@ def UpdateServers(request):
                     break
 
                 #修改密码
-                cmd    = 'echo %s |passwd root --stdin' %data['password'].replace('`', '\`') # `这个符号在Linux命令行有特殊含义，需要转义
+                cmd    = 'echo "%s" |passwd root --stdin' %data['password'].replace('`', '\`') # `这个符号在Linux命令行有特殊含义，需要转义
                 result = Command(record['minion_id'], 'cmd.run', cmd, 'glob').CmdRun()[record['minion_id']]
 
                 if 'all authentication tokens updated successfully' not in result:

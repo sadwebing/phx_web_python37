@@ -76,7 +76,7 @@ var public = {
     },
 
     isSubDomain: function (value, proxied) {
-        var regexp = /^(@|[_a-zA-Z0-9]+|.*[_a-zA-Z0-9]+.*\.[_a-zA-Z0-9]*[_a-zA-Z]+[_a-zA-Z0-9]*)$/;
+        var regexp = /^(@|[-_a-zA-Z0-9]+|.*[-_a-zA-Z0-9]+.*\.[-_a-zA-Z0-9]*[-_a-zA-Z]+[-_a-zA-Z0-9]*)$/;
 
         var valid = regexp.test(value);
         if(!valid){
@@ -87,7 +87,7 @@ var public = {
     },
 
     isDomain: function (value, proxied) {
-        var regexp = /^.*[a-zA-Z0-9]+.*\.[a-zA-Z0-9]*[a-zA-Z]+[a-zA-Z0-9]*$/;
+        var regexp = /^.*[-a-zA-Z0-9]+.*\.[-a-zA-Z0-9]*[-a-zA-Z]+[-a-zA-Z0-9]*$/;
         var regexp_tw = /^(tw|.*\.tw)\..*$/;
 
         var valid = regexp.test(value);
