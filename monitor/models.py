@@ -17,6 +17,7 @@ choices_st = (
         ('apache', 'apache'),
         ('vpn',    'vpn'),
         ('flask',  'flask'),
+        ('logstash', 'logstash'),
     )
 
 choices_s = (
@@ -25,6 +26,7 @@ choices_s = (
     )
 
 choices_proj = (
+        ('pub', '公共项目[pub]'), 
         ('caipiao', '彩票[caipiao]'), 
         ('sport',   '体育[sport]'),
         ('houtai',  '后台[houtai]'),
