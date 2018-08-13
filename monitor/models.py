@@ -26,7 +26,7 @@ choices_s = (
     )
 
 choices_proj = (
-        ('pub', '公共项目[pub]'), 
+        ('other',   '其他[other]'), 
         ('caipiao', '彩票[caipiao]'), 
         ('sport',   '体育[sport]'),
         ('houtai',  '后台[houtai]'),
