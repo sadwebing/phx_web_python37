@@ -129,7 +129,7 @@ class project_t(models.Model):
     server_type = models.CharField(max_length=10, choices=choices_servert, default='front')
     role        = models.CharField(max_length=10, choices=choices_role, default='main')
     #domain      = models.ForeignKey(domains, default=domain_D.id)
-    uri         = models.CharField(max_length=128, default='/')
+    url         = models.CharField(max_length=128, default='https://arno.com')
     status      = models.IntegerField(choices=choices_s, default=1)
     svn         = models.IntegerField(choices=choices_s, default=0)
     privatekey  = models.TextField(null=False, default='thisisdefaultprivatekey')
