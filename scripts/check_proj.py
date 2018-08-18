@@ -5,7 +5,10 @@
 #    监控NGINX服务器IP是否能正常提供服务
 #version: 2018/08/13  实现基本功能
 
-import os, sys, datetime, logging, multiprocessing, requests, json, urlparse, threading
+import os, sys, datetime, logging, multiprocessing, requests, json, urlparse, threading, platform
+
+#reload(sys)
+#sys.setdefaultencoding('utf8')
 
 #将上层目录加入环境变量，用于引用其他模块
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
@@ -35,7 +38,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 message = settings.message_TEST
 
 #状态定义
-error_status  = '失败'
+error_status  = u'失败'
 normal_status = [200, 404, 403]
 
 #当前脚本路径
@@ -54,27 +57,30 @@ def getIps(service_type):
         获取需要监控的ip列表
     '''
     ip_list  = []
-    projects = project_t.objects.filter(status=1).all() #获取所有项目
+    projects = project_t.objects.filter(alive=1, status=1).all() #获取所有项目
     for project in projects:
-        domain = domains.objects.filter(product=project.product, customer=project.customer, name__icontains='https://', status=1).first()
-        if not domain: continue
-        domain_tmpdict = {}
-        domain_tmpdict['id']       = domain.id
-        domain_tmpdict['name']     = domain.name
-        domain_tmpdict['product']  = (domain.product, domain.get_product_display())
-        domain_tmpdict['customer'] = (domain.customer, domain.get_customer_display())
-        domain_tmpdict['content']  = domain.content
-        domain_tmpdict['status']   = domain.status
-        domain_tmpdict['group']    = {
-                'group':  domain.group.group,
-                'client': domain.group.client,
-                'method': domain.group.method,
-                'ssl':    domain.group.ssl,
-                'retry':  domain.group.retry
+        domain = domains.objects.filter(product=project.product, name__icontains=project.url.strip('/'), status=1).first()
+        domain_tmpdict = {
+                'product':  (project.product, project.get_product_display()),
+                'customer': (project.customer, project.get_customer_display()),
+                'name':     project.url,
             }
+        if domain:
+            domain_tmpdict['id']       = domain.id
+            domain_tmpdict['name']     = domain.name
+            domain_tmpdict['product']  = (domain.product, domain.get_product_display())
+            domain_tmpdict['customer'] = (domain.customer, domain.get_customer_display())
+            domain_tmpdict['content']  = domain.content
+            domain_tmpdict['status']   = domain.status
+            domain_tmpdict['group']    = domain.group.group
+            domain_tmpdict['client']   = domain.group.client
+            domain_tmpdict['method']   = domain.group.method
+            domain_tmpdict['ssl']      = domain.group.ssl
+            domain_tmpdict['retry']    = domain.group.retry
 
-        for minion in project.minion_id.filter(service_type=service_type, status=1).all():
-            for item in minion_ip_t.objects.filter(minion_id=minion.minion_id, status=1).all():
+
+        for minion in project.minion_id.filter(service_type=service_type, alive=1, status=1).all():
+            for item in minion_ip_t.objects.filter(minion_id=minion.minion_id, alive=1, status=1).all():
                 tmpdict = {
                         'url':     "http://" + item.ip_addr.strip(),
                         'domain':  domain_tmpdict,
@@ -127,27 +133,28 @@ class ReqIps(object):
         '''执行域名检测'''
         res = []
         s   = requests.Session()
+        url = self.__url.strip() + self.__uri
         req = requests.Request(
                 method  = self.__method.strip(), 
-                url     = self.__url.strip() + self.__uri, 
+                url     = url, 
                 headers = self.__headers
             ).prepare()
         try:
             ret = s.send(req, verify=self.__verify, timeout=self.__timeout)
         except requests.exceptions.ConnectTimeout:
-            res.append({error_status: {self.__ip:'连接超时！'}})
+            res.append({error_status: {url:u'连接超时！'}})
         except requests.exceptions.ReadTimeout:
-            res.append({error_status: {self.__ip:'加载超时！'}})
+            res.append({error_status: {url:u'加载超时！'}})
         except requests.exceptions.SSLError:
-            res.append({error_status: {self.__ip:'证书认证错误！'}})
+            res.append({error_status: {url:u'证书认证错误！'}})
         #except requests.exceptions.NewConnectionError:
-        #    res.append({error_status: {self.__ip:'找不到主机名！'}})
+        #    res.append({error_status: {url:u'找不到主机名！'}})
         except requests.exceptions.MissingSchema:
-            res.append({error_status: {self.__ip:'协议头无效！'}})
+            res.append({error_status: {url:u'协议头无效！'}})
         except requests.exceptions.ConnectionError:
-            res.append({error_status: {self.__ip:'连接错误！'}})
+            res.append({error_status: {url:u'连接错误！'}})
         except Exception as e:
-            res.append({error_status: {self.__ip:e}})
+            res.append({error_status: {url:str(e)}})
         else:
             if len(ret.history) != 0:
                 for r in ret.history:
@@ -169,19 +176,19 @@ class myThread(threading.Thread):
 
         for i in range(rd.__dict__['_ReqIps__retry']):
             res = rd.ExeReq()
-            print self.__product + "_" +self.__customer, rd.__dict__['_ReqIps__name'], str(res)
+            print self.__product + "_" +self.__customer, rd.__dict__['_ReqIps__name'], str(res).decode("unicode-escape")
 
             if error_status not in res[0].keys() and res[-2].keys()[0] in normal_status:
                 break
             sleep(2)
         if error_status in res[0].keys():
-            self.t = ": ".join([self.__product + "_" +self.__customer, rd.__dict__['_ReqIps__name'], str(res[0][error_status])])
+            self.t = ": ".join([self.__product + "_" +self.__customer, rd.__dict__['_ReqIps__name'], str(res[0][error_status]).decode("unicode-escape")])
         elif res[-2].keys()[0] not in normal_status:
-            self.t = ": ".join([self.__product + "_" +self.__customer, rd.__dict__['_ReqIps__name'], str(res)])
+            self.t = ": ".join([self.__product + "_" +self.__customer, rd.__dict__['_ReqIps__name'], str(res).decode("unicode-escape")])
 
     def get_result(self):
         if self.t:
-            return [self.__product + "_" +self.__customer, self.t]
+            return [self.arg['domain']['product'][0], self.t] 
         else:
             return None
 
@@ -189,8 +196,8 @@ def getIp():
     try:
         ret = requests.get('http://myip.ipip.net')
     except Exception as e:
-        print ('获取当前IP失败......')
-        print (str(e))
+        print u'获取当前IP失败......'
+        print str(e)
         ip = gethostname()
     else:
         if ret.status_code == 200:
@@ -204,16 +211,16 @@ def sendAlert(ip, results):
     ruiying   = ""
     fenghuang = ""
     for result in results:
-        if result[0] == "java":
+        if result[0] == 26:
             java += '\r\n' + result[1]
-        elif result[0] == "ruiying":
+        elif result[0] == 27:
             ruiying += '\r\n' + result[1]
         else:
             fenghuang += '\r\n' + result[1]
     if java:
         message['doc']  = False
         message['text'] = ip + java
-        message['group'] = 'arno_test' #java_domain
+        message['group'] = 'java_domain' #java_domain
         if len(message['text']) >= 4096:
             message['doc']  = True
             message['text'] = message['text'].replace('\r\n', '\n')
@@ -221,7 +228,7 @@ def sendAlert(ip, results):
     if ruiying:
         message['doc']  = False
         message['text'] = ip + ruiying
-        message['group'] = 'arno_test' #ruiying_domain
+        message['group'] = 'ruiying_domain' #ruiying_domain
         if len(message['text']) >= 4096:
             message['doc']  = True
             message['text'] = message['text'].replace('\r\n', '\n')
@@ -229,15 +236,18 @@ def sendAlert(ip, results):
     if fenghuang:
         message['doc']  = False
         message['text'] = ip + fenghuang
-        message['group'] = 'arno_test' #domain_alert
+        message['group'] = 'domain_alert' #domain_alert
         if len(message['text']) >= 4096:
             message['doc']  = True
             message['text'] = message['text'].replace('\r\n', '\n')
         sendTelegram(message).send()
 
 if __name__ == '__main__':
-    #ip = getoutput('curl -s http://ip.cn')
-    ip = "null"
+    if platform.system() == "Linux":
+        ip = getoutput('curl -s http://ip.cn')
+    else:
+        ip = getIp()
+
     li = []
     results = []
 

@@ -252,11 +252,11 @@ LOGGING = {
 }     
 
 choices_permission = (
-        ('read',    '读权限'), 
-        ('change',  '改权限'),
-        ('delete',  '删权限'),
-        ('add',     '增权限'),
-        ('execute', '执行权限'),
+        ('read',    u'读权限'), 
+        ('change',  u'改权限'),
+        ('delete',  u'删权限'),
+        ('add',     u'增权限'),
+        ('execute', u'执行权限'),
     )
 
 choices_customer = ( 

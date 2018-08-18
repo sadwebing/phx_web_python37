@@ -68,6 +68,7 @@ class telegram_ssl_alert_t(models.Model):
 class minion_ip_t(models.Model):
     minion_id = models.CharField(max_length=32, null=False)
     ip_addr = models.GenericIPAddressField()
+    alive  = models.IntegerField(choices=choices_s, default=1)
     status = models.IntegerField(choices=choices_s, default=1)
     class Meta:
         unique_together = ('minion_id' ,'ip_addr')
@@ -96,6 +97,7 @@ class minion_t(models.Model):
     password    = models.TextField(null=False, default='/')
     price       = models.IntegerField(null=True)
     provider    = models.IntegerField(choices=choices_provider, null=False, default=1)
+    alive       = models.IntegerField(choices=choices_s, default=1)
     status      = models.IntegerField(choices=choices_s, default=1)
     info        = models.TextField(blank=True)
 
@@ -130,6 +132,7 @@ class project_t(models.Model):
     role        = models.CharField(max_length=10, choices=choices_role, default='main')
     #domain      = models.ForeignKey(domains, default=domain_D.id)
     url         = models.CharField(max_length=128, default='https://arno.com')
+    alive       = models.IntegerField(choices=choices_s, default=1)
     status      = models.IntegerField(choices=choices_s, default=1)
     svn         = models.IntegerField(choices=choices_s, default=0)
     privatekey  = models.TextField(null=False, default='thisisdefaultprivatekey')

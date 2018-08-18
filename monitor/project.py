@@ -53,7 +53,7 @@ def ProjectQuery(request):
             tmp_dict['server_type'] = project.server_type
             tmp_dict['role'] = project.role
             tmp_dict['domain'] = project.domain
-            tmp_dict['uri'] = project.uri
+            tmp_dict['url'] = project.url
             tmp_dict['status_'] = state
             tmp_dict['info'] = project.info
             project_list.append(tmp_dict)
