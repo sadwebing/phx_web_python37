@@ -18,6 +18,28 @@ logger = logging.getLogger('django')
 message = settings.message_ONLINE
 
 @csrf_exempt
+def GetCdnMiddleSourceList(request):
+    if request.method == 'POST':
+        clientip = getIp(request)
+        logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
+
+        secretkey='c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1'
+        secretid='AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs'
+        req = tcApi(secretid, secretkey)
+        results, status = req.GetCdnMiddleSourceList()
+        #secretkey='speedfeng@123'
+        #secretid='speedfeng'
+        #tcapi = wsApi(secretid, secretkey)
+        #results, status= tcapi.getdomains()
+        
+        return HttpResponse(json.dumps(results))
+
+    elif request.method == 'GET':
+        return HttpResponse('You get nothing!')
+    else:
+        return HttpResponse('nothing!')
+
+@csrf_exempt
 def refleshGetDomains(request):
     if request.method == 'POST':
         clientip = getIp(request)

@@ -187,7 +187,7 @@ def GetServersRecords(request):
                 'user':        project.user,
                 'port':        project.port,
                 'role':        project.role,
-                'uri':         project.uri,
+                'url':         project.url,
                 'info':        project.info,
                 'minions':     [],
             }

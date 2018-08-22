@@ -4,6 +4,7 @@
 #Introduction:
 #    调用腾讯云API，刷新腾讯云域名静态文件缓存
 #version: 1.0 20180626 实现基本功能
+#version: 1.1 20180822 新增获取中间源IP列表
 
 import requests, sys, commands, os, random, operator
 import datetime, json, time, logging, urllib
@@ -134,6 +135,40 @@ class tcApi(object):
         
             else:
                 logger.info(str(self.__params)+": 缓存清理成功！")
+                return ret.json(), True
+
+    def GetCdnMiddleSourceList(self):
+        self.__warning = "\r\n".join([ 
+                'Attention: 腾讯云中间源ip列表获取失败，请检查:'
+                '腾讯云URL:  + %s' %tencent_url,
+                #'%s : %s' %(secretid, secretkey)
+              ])
+        self.__params    = {
+            'Action':'GetCdnMiddleSourceList',
+            'Nonce': random.randint(1, 1000000),
+            'SecretId':self.__secretid,
+            'Timestamp': int(time.time()),
+        }
+        self.signkey(self.__httpmethod)
+        url = "https://" + tencent_url
+        #logger.info(self.__params)
+        try:
+            ret = requests.post(url, data=self.__params, verify=False)
+        except Exception, e:
+            message['text'] = self.__warning + '\n%s | Exception: ' %url + e.message
+            logger.error(message['text'])
+            sendTelegram(message).send()
+            return self.__params, False
+
+        else:
+            if ret.json()['code'] != 0:
+                message['text'] = self.__warning + '\n%s: ' %url + ret.json()['message']
+                logger.error(message['text'])
+                sendTelegram(message).send()
+                return ret.json(), False
+        
+            else:
+                logger.info(str(self.__params)+": 获取中间源ip列表成功！")
                 return ret.json(), True
 
 
