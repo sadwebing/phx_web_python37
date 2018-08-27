@@ -57,7 +57,7 @@ def getIps(service_type):
         获取需要监控的ip列表
     '''
     ip_list  = []
-    projects = project_t.objects.filter(alive=1, status=1).all() #获取所有项目
+    projects = project_t.objects.filter(product__in=[12, 26],  alive=1, status=1).all() #获取所有项目
     for project in projects:
         domain = domains.objects.filter(product=project.product, name__icontains=project.url.strip('/'), status=1).first()
         domain_tmpdict = {
@@ -182,9 +182,9 @@ class myThread(threading.Thread):
                 break
             sleep(2)
         if error_status in res[0].keys():
-            self.t = ": ".join([self.__product + "_" +self.__customer, rd.__dict__['_ReqIps__name'], str(res[0][error_status]).decode("unicode-escape")])
+            self.t = ": ".join([self.__product, rd.__dict__['_ReqIps__name'], str(res[0][error_status]).decode("unicode-escape")])
         elif res[-2].keys()[0] not in normal_status:
-            self.t = ": ".join([self.__product + "_" +self.__customer, rd.__dict__['_ReqIps__name'], str(res).decode("unicode-escape")])
+            self.t = ": ".join([self.__product, rd.__dict__['_ReqIps__name'], str(res).decode("unicode-escape")])
 
     def get_result(self):
         if self.t:
@@ -228,7 +228,7 @@ def sendAlert(ip, results):
     if ruiying:
         message['doc']  = False
         message['text'] = ip + ruiying
-        message['group'] = 'ruiying_domain' #ruiying_domain
+        message['group'] = 'arno_test' #ruiying_domain
         if len(message['text']) >= 4096:
             message['doc']  = True
             message['text'] = message['text'].replace('\r\n', '\n')
