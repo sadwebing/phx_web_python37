@@ -267,7 +267,7 @@ var operate = {
                     //循环获取数据
                     var record = vm.datas()[index];
                     //alert(record)
-                    html_record = "<tr id="+record.minion_id()+"><td>"+record.product()+"</td><td>"+record.project()+"</td><td>"+record.customer()+"</td><td>"+record.server_type()+"</td><td>"+record.minion_id()+"</td></tr>";
+                    html_record = "<tr id="+record.minion_id()+"><td>"+record.product()[1]+"</td><td>"+record.project()[1]+"</td><td>"+record.customer()[1]+"</td><td>"+record.server_type()[1]+"</td><td>"+record.minion_id()+"</td></tr>";
                     html = html + html_record
                 }); 
                 $("#EditDatas").html(html);
