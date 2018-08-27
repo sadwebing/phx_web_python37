@@ -69,6 +69,8 @@ class DpApi(object):
             获取域名解析记录
         '''
         self.__data['domain'] = domain
+        self.__data['offset'] = 0
+        self.__data['length'] = 3000
         return self.ExePost('/Record.List', "Dnspod域名[%s]解析获取" %domain)
         
     def CreateZoneRecord(self, domain, sub_domain='@', record_type='A', record_line='默认', value='8.8.8.8', status='enable'):

@@ -93,7 +93,9 @@ def GetDnspodZoneRecords(request):
                     logger.error("查询 %s 域名失败！%s" %(zone['name'], str(result)))
                     return HttpResponseServerError('error!')
                 else:
+                    #logger.info(result)
                     for record in result['records']:
+
                         if record['type'] in ['A', 'CNAME']:
                             record_list.append({
                                 'product':        zone['product'],
