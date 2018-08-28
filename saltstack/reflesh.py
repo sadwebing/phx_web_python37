@@ -1,5 +1,5 @@
 # coding: utf8
-from django.http     import HttpResponse
+from django.http     import HttpResponse, HttpResponseForbidden, HttpResponseServerError
 from accounts.limit  import LimitAccess
 from phxweb          import settings
 from accounts.views  import getIp
@@ -136,11 +136,26 @@ def refleshPurge(request):
                 'sccess': [],
             }
         
-        cdn_proj_l = cdn_proj_t.objects.filter(project__in = data['cdn_proj']).all()
-        for cdn_proj in cdn_proj_l:
-            for domain in cdn_proj.domain.all():
-                for cdn in domain.cdn.all():
-                    cdn_d[cdn.get_name_display()+"_"+cdn.account]['domain'].append(urlparse.urlsplit(domain.name).scheme+"://"+urlparse.urlsplit(domain.name).netloc)
+        #按照项目进行缓存清理
+        #cdn_proj_l = cdn_proj_t.objects.filter(project__in = data['cdn_proj']).all()
+        #for cdn_proj in cdn_proj_l:
+        #    for domain in cdn_proj.domain.all():
+        #        for cdn in domain.cdn.all():
+        #            cdn_d[cdn.get_name_display()+"_"+cdn.account]['domain'].append(urlparse.urlsplit(domain.name).scheme+"://"+urlparse.urlsplit(domain.name).netloc)
+
+        try:
+            for name in data['domain']:
+                #name = domain if urlparse.urlsplit(domain).netloc == "" else urlparse.urlsplit(domain).netloc
+                domain_s = domains.objects.filter(name__icontains=name.rstrip("/"), status=1).first()
+                for cdn in domain_s.cdn.all():
+                    cdn_d[cdn.get_name_display()+"_"+cdn.account]['domain'].append(urlparse.urlsplit(domain_s.name).scheme+"://"+urlparse.urlsplit(domain_s.name).netloc)
+            if not isinstance(data['uri'], list):
+                return HttpResponseServerError("uri错误！")
+
+        except Exception, e:
+            logger.error("执行清缓存失败: %s" %str(e))
+            return HttpResponseServerError("执行清缓存失败: %s" %str(e))
+
         for cdn in cdn_d:
             info['cdn'] = cdn
             if cdn_d[cdn]['domain']:

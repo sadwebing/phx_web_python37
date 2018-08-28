@@ -5,7 +5,7 @@
 #    监控NGINX服务器IP是否能正常提供服务
 #version: 2018/08/13  实现基本功能
 
-import os, sys, datetime, logging, multiprocessing, requests, json, urlparse, threading, platform
+import os, sys, datetime, logging, multiprocessing, requests, json, urlparse, threading, platform, commands
 
 #reload(sys)
 #sys.setdefaultencoding('utf8')
@@ -57,7 +57,7 @@ def getIps(service_type):
         获取需要监控的ip列表
     '''
     ip_list  = []
-    projects = project_t.objects.filter(product__in=[12, 26],  alive=1, status=1).all() #获取所有项目
+    projects = project_t.objects.filter(product__in=[12, 26, 27],  alive=1, status=1).all() #获取所有项目
     for project in projects:
         domain = domains.objects.filter(product=project.product, name__icontains=project.url.strip('/'), status=1).first()
         domain_tmpdict = {
@@ -244,7 +244,7 @@ def sendAlert(ip, results):
 
 if __name__ == '__main__':
     if platform.system() == "Linux":
-        ip = getoutput('curl -s http://ip.cn')
+        ip = commands.getoutput('curl -s http://ip.cn')
     else:
         ip = getIp()
 

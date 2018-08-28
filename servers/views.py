@@ -1,6 +1,6 @@
 # coding: utf8
 from django.shortcuts import render
-from django.http      import HttpResponse, HttpResponseForbidden
+from django.http      import HttpResponse, HttpResponseForbidden, HttpResponseServerError
 from dwebsocket       import require_websocket, accept_websocket
 from monitor.models   import project_t, minion_t, minion_ip_t
 from accounts.views   import HasPermission, HasServerPermission, getIp, getProjects
