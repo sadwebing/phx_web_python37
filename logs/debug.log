@@ -8571,3 +8571,61 @@ speedfeng2 : yV2aDzQeFoaSCw83mGTNbs/ATO4/M141ApdUXcmvpTU=
 2018-08-30 19:18:43,928 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'rsa_key_t' AND `django_content_type`.`app_label` = 'servers'); args=('rsa_key_t', 'servers')
 2018-08-30 19:18:43,950 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON ( `auth_permission`.`content_type_id` = `django_content_type`.`id` ) WHERE `auth_permission`.`content_type_id` IN (27) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(27,)
 2018-08-30 19:18:43,971 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'servers'; args=('servers',)
+2018-08-30 20:34:06,023 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "J:\arno\test\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "J:\arno\test\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\phxweb\urls.py", line 21, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "J:\arno\test\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "c:\python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "J:\arno\test\phx_web\saltstack\urls.py", line 3, in <module>
+    from . import views
+  File "J:\arno\test\phx_web\saltstack\views.py", line 15, in <module>
+    from reflesh         import *
+  File "J:\arno\test\phx_web\saltstack\reflesh.py", line 148
+    if 'cdn_proj' in data.keys()：
+                                ^
+SyntaxError: invalid syntax
+2018-08-30 20:34:31,677 reflesh.py [django:128] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/purge 执行参数：{u'domain': [u'https://www.cdn3721.com'], u'uri': [u'/ali/201808/alty1.png']}
+2018-08-30 20:34:31,851 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-08-30 20:34:31,871 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `detect_cdn_account_t`.`id`, `detect_cdn_account_t`.`name`, `detect_cdn_account_t`.`account`, `detect_cdn_account_t`.`secretid`, `detect_cdn_account_t`.`secretkey` FROM `detect_cdn_account_t`; args=()
+2018-08-30 20:34:31,898 utils.py [django.db.backends:89] [DEBUG]- (0.025) SELECT `detect_domains`.`id`, `detect_domains`.`name`, `detect_domains`.`product`, `detect_domains`.`customer`, `detect_domains`.`group_id`, `detect_domains`.`content`, `detect_domains`.`status` FROM `detect_domains` WHERE (`detect_domains`.`status` = 1 AND `detect_domains`.`name` LIKE '%https://www.cdn3721.com%') ORDER BY `detect_domains`.`id` ASC LIMIT 1; args=(1, u'%https://www.cdn3721.com%')
+2018-08-30 20:34:31,920 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `detect_cdn_account_t`.`id`, `detect_cdn_account_t`.`name`, `detect_cdn_account_t`.`account`, `detect_cdn_account_t`.`secretid`, `detect_cdn_account_t`.`secretkey` FROM `detect_cdn_account_t` INNER JOIN `detect_domains_cdn` ON ( `detect_cdn_account_t`.`id` = `detect_domains_cdn`.`cdn_account_t_id` ) WHERE `detect_domains_cdn`.`domains_id` = 1781; args=(1781,)
+2018-08-30 20:34:32,315 ws_api.py [django:106] [INFO]- 200: {"Message":"handle success","itemId":"63e92a4de1ae49fbb0e06a2b0c1b4d0f","Code":1}
+2018-08-30 20:34:32,336 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `detect_telegram_chat_group_t`.`id`, `detect_telegram_chat_group_t`.`name`, `detect_telegram_chat_group_t`.`group`, `detect_telegram_chat_group_t`.`group_id` FROM `detect_telegram_chat_group_t` WHERE `detect_telegram_chat_group_t`.`group` = 'arno_test'; args=('arno_test',)
+2018-08-30 20:34:34,773 telegram.py [django:109] [INFO]- send message successfull!
+2018-08-30 20:35:03,737 reflesh.py [django:128] [INFO]- 127.0.0.1 is requesting. /saltstack/reflesh/purge 执行参数：{u'cdn_proj': [1], u'uri': [u'/ali/201808/alty1.png']}
+2018-08-30 20:35:03,926 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-08-30 20:35:03,947 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `detect_cdn_account_t`.`id`, `detect_cdn_account_t`.`name`, `detect_cdn_account_t`.`account`, `detect_cdn_account_t`.`secretid`, `detect_cdn_account_t`.`secretkey` FROM `detect_cdn_account_t`; args=()
+2018-08-30 20:35:03,969 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `monitor_cdn_proj_t`.`id`, `monitor_cdn_proj_t`.`project` FROM `monitor_cdn_proj_t` WHERE `monitor_cdn_proj_t`.`project` IN (1); args=(1,)
+2018-08-30 20:35:03,992 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `detect_domains`.`id`, `detect_domains`.`name`, `detect_domains`.`product`, `detect_domains`.`customer`, `detect_domains`.`group_id`, `detect_domains`.`content`, `detect_domains`.`status` FROM `detect_domains` INNER JOIN `monitor_cdn_proj_t_domain` ON ( `detect_domains`.`id` = `monitor_cdn_proj_t_domain`.`domains_id` ) WHERE `monitor_cdn_proj_t_domain`.`cdn_proj_t_id` = 4; args=(4,)
+2018-08-30 20:35:04,013 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `detect_cdn_account_t`.`id`, `detect_cdn_account_t`.`name`, `detect_cdn_account_t`.`account`, `detect_cdn_account_t`.`secretid`, `detect_cdn_account_t`.`secretkey` FROM `detect_cdn_account_t` INNER JOIN `detect_domains_cdn` ON ( `detect_cdn_account_t`.`id` = `detect_domains_cdn`.`cdn_account_t_id` ) WHERE `detect_domains_cdn`.`domains_id` = 1289; args=(1289,)
+2018-08-30 20:35:04,036 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `detect_cdn_account_t`.`id`, `detect_cdn_account_t`.`name`, `detect_cdn_account_t`.`account`, `detect_cdn_account_t`.`secretid`, `detect_cdn_account_t`.`secretkey` FROM `detect_cdn_account_t` INNER JOIN `detect_domains_cdn` ON ( `detect_cdn_account_t`.`id` = `detect_domains_cdn`.`cdn_account_t_id` ) WHERE `detect_domains_cdn`.`domains_id` = 1291; args=(1291,)
+2018-08-30 20:35:04,062 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `detect_cdn_account_t`.`id`, `detect_cdn_account_t`.`name`, `detect_cdn_account_t`.`account`, `detect_cdn_account_t`.`secretid`, `detect_cdn_account_t`.`secretkey` FROM `detect_cdn_account_t` INNER JOIN `detect_domains_cdn` ON ( `detect_cdn_account_t`.`id` = `detect_domains_cdn`.`cdn_account_t_id` ) WHERE `detect_domains_cdn`.`domains_id` = 1435; args=(1435,)
+2018-08-30 20:35:04,084 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `detect_cdn_account_t`.`id`, `detect_cdn_account_t`.`name`, `detect_cdn_account_t`.`account`, `detect_cdn_account_t`.`secretid`, `detect_cdn_account_t`.`secretkey` FROM `detect_cdn_account_t` INNER JOIN `detect_domains_cdn` ON ( `detect_cdn_account_t`.`id` = `detect_domains_cdn`.`cdn_account_t_id` ) WHERE `detect_domains_cdn`.`domains_id` = 1556; args=(1556,)
+2018-08-30 20:35:04,084 tencent_api.py [django:70] [INFO]- POSTcdn.api.qcloud.com/v2/index.php?Action=RefreshCdnUrl&Nonce=749132&SecretId=AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs&Timestamp=1535632504&urls.0=https://yitengstatic.yuchaojinshu.com/ali/201808/alty1.png&urls.1=https://leyingstatic.yuchaojinshu.com/ali/201808/alty1.png&urls.2=https://www.congsumy.com/ali/201808/alty1.png&urls.3=https://www.uccp44.com/ali/201808/alty1.png
+2018-08-30 20:35:04,084 tencent_api.py [django:71] [INFO]- c5QehaK1bQ9oKoDpOsNsiPvHSbdYQKB1
+2018-08-30 20:35:06,371 tencent_api.py [django:137] [INFO]- {'Nonce': 749132, 'Timestamp': 1535632504, 'SecretId': 'AKID75tX0ViCMVbcVJoqmbFjCfx35wNsshIs', 'Signature': 'CW085TsuSW3ytfyIrIiFE5D+ua8=', 'Action': 'RefreshCdnUrl', 'urls.2': u'https://www.congsumy.com/ali/201808/alty1.png', 'urls.3': u'https://www.uccp44.com/ali/201808/alty1.png', 'urls.0': u'https://yitengstatic.yuchaojinshu.com/ali/201808/alty1.png', 'urls.1': u'https://leyingstatic.yuchaojinshu.com/ali/201808/alty1.png'}: 缓存清理成功！
+2018-08-30 20:35:06,394 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `detect_telegram_chat_group_t`.`id`, `detect_telegram_chat_group_t`.`name`, `detect_telegram_chat_group_t`.`group`, `detect_telegram_chat_group_t`.`group_id` FROM `detect_telegram_chat_group_t` WHERE `detect_telegram_chat_group_t`.`group` = 'arno_test'; args=('arno_test',)
+2018-08-30 20:35:07,767 telegram.py [django:109] [INFO]- send message successfull!
+2018-08-30 20:35:19,260 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-08-30 20:35:20,299 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-08-30 20:35:20,322 utils.py [django.db.backends:89] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-08-30 20:35:20,348 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()

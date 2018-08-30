@@ -145,13 +145,21 @@ def refleshPurge(request):
         #            cdn_d[cdn.get_name_display()+"_"+cdn.account]['domain'].append(urlparse.urlsplit(domain.name).scheme+"://"+urlparse.urlsplit(domain.name).netloc)
 
         try:
-            for name in data['domain']:
-                #name = domain if urlparse.urlsplit(domain).netloc == "" else urlparse.urlsplit(domain).netloc
-                domain_s = domains.objects.filter(name__icontains=name.rstrip("/"), status=1).first()
-                for cdn in domain_s.cdn.all():
-                    cdn_d[cdn.get_name_display()+"_"+cdn.account]['domain'].append(urlparse.urlsplit(domain_s.name).scheme+"://"+urlparse.urlsplit(domain_s.name).netloc)
-            if not isinstance(data['uri'], list):
-                return HttpResponseServerError("uri错误！")
+            if 'cdn_proj' in data.keys():
+                cdn_proj_l = cdn_proj_t.objects.filter(project__in = data['cdn_proj']).all()
+                for cdn_proj in cdn_proj_l:
+                    for domain in cdn_proj.domain.all():
+                        for cdn in domain.cdn.all():
+                            cdn_d[cdn.get_name_display()+"_"+cdn.account]['domain'].append(urlparse.urlsplit(domain.name).scheme+"://"+urlparse.urlsplit(domain.name).netloc)
+            else:
+
+                for name in data['domain']:
+                    #name = domain if urlparse.urlsplit(domain).netloc == "" else urlparse.urlsplit(domain).netloc
+                    domain_s = domains.objects.filter(name__icontains=name.rstrip("/"), status=1).first()
+                    for cdn in domain_s.cdn.all():
+                        cdn_d[cdn.get_name_display()+"_"+cdn.account]['domain'].append(urlparse.urlsplit(domain_s.name).scheme+"://"+urlparse.urlsplit(domain_s.name).netloc)
+                if not isinstance(data['uri'], list):
+                    return HttpResponseServerError("uri错误！")
 
         except Exception, e:
             logger.error("执行清缓存失败: %s" %str(e))
@@ -196,6 +204,7 @@ def refleshPurge(request):
         return HttpResponse('nothing!')
 
 def sendTelegramRe(message):
+    message['group'] = 'arno_test'
     if len(message["text"]) > 10:
         message["text"] = '\n'.join(message["text"])
         message["doc"] = True
