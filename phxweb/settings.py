@@ -265,6 +265,7 @@ choices_customer = (
             #凤凰彩票
             (1, u'阿里[ali]'), 
             (2, u'光大[guangda]'), 
+            (34, u'恒达[hengda]'), 
             (3, u'乐盈|熊猫[leying]'), 
             (4, u'彩投[caitou]'), 
             (5, u'天天[tiantian]'), 

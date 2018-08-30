@@ -125,6 +125,7 @@ def refleshPurge(request):
         cdn_d = {}
         info  = {'failed': [], 'sccess': []}
         data  = json.loads(request.body)
+        logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
         cdns  = cdn_t.objects.all()
         for cdn in cdns:
             cdn_d[cdn.get_name_display()+"_"+cdn.account] = {
