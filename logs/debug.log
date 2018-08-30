@@ -8629,3 +8629,15 @@ SyntaxError: invalid syntax
 2018-08-30 20:35:20,299 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
 2018-08-30 20:35:20,322 utils.py [django.db.backends:89] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
 2018-08-30 20:35:20,348 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-08-30 21:13:59,463 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-08-30 21:13:59,749 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-08-30 21:13:59,770 utils.py [django.db.backends:89] [DEBUG]- (0.021) SHOW FULL TABLES; args=None
+2018-08-30 21:13:59,793 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-08-30 21:34:48,786 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-08-30 21:34:49,049 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-08-30 21:34:49,072 utils.py [django.db.backends:89] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-08-30 21:34:49,094 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-08-30 21:35:29,762 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-08-30 21:35:30,058 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-08-30 21:35:30,079 utils.py [django.db.backends:89] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-08-30 21:35:30,104 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
