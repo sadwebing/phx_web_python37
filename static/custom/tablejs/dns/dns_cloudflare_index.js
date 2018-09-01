@@ -443,7 +443,7 @@ var operate = {
                 $("#progress_bar_update_record").css("width", width);
                 if (data.step == count){
                     socket.close();
-                    tableInit.myViewModel.refresh();
+                    //tableInit.myViewModel.refresh();
                     dns.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
                 }
             };

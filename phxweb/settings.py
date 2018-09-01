@@ -27,7 +27,7 @@ AUTH_PROFILE_MODULE = 'djangoadmin.myadmin.UserProfile'
 SECRET_KEY = 'm1!&%(kha(g04bl7ek*hh@ly$ibnm8@2zrnkmxxkzcf6jjc4d@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['58.64.145.50', 'sa.l510881.com']
 
@@ -187,10 +187,10 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.join(BASE_DIR)
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-#STATICFILES_DIRS = (
-#    os.path.join(BASE_DIR, "static"),
-#)
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 LOGGING = {
     'version': 1,

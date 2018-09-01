@@ -204,7 +204,7 @@ def refleshPurge(request):
         return HttpResponse('nothing!')
 
 def sendTelegramRe(message):
-    message['group'] = 'arno_test'
+    #message['group'] = 'arno_test'
     if len(message["text"]) > 10:
         message["text"] = '\n'.join(message["text"])
         message["doc"] = True

@@ -8641,3 +8641,321 @@ SyntaxError: invalid syntax
 2018-08-30 21:35:30,058 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
 2018-08-30 21:35:30,079 utils.py [django.db.backends:89] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
 2018-08-30 21:35:30,104 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-01 17:05:10,559 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:05:12,141 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:05:12,163 utils.py [django.db.backends:89] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-09-01 17:05:12,211 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-01 17:05:21,585 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:05:21,770 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:05:21,792 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 17:05:21.396000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 17:05:21.396000')
+2018-09-01 17:05:22,032 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 17:05:22,052 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 17:05:22,053 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-09-01 17:05:51,681 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:05:51,862 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:05:51,884 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 17:05:51.502000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 17:05:51.502000')
+2018-09-01 17:05:51,907 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 17:05:51,927 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 17:05:51,927 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-09-01 17:05:54,184 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:05:54,365 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:05:54,385 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 17:05:54.009000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 17:05:54.009000')
+2018-09-01 17:05:54,407 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 17:05:54,436 utils.py [django.db.backends:89] [DEBUG]- (0.027) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 17:05:54,437 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-09-01 17:05:56,095 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:05:56,293 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:05:56,315 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 17:05:55.912000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 17:05:55.912000')
+2018-09-01 17:05:56,336 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 17:05:56,358 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 17:05:56,359 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-09-01 17:06:41,375 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:06:41,653 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:06:41,677 utils.py [django.db.backends:89] [DEBUG]- (0.023) SHOW FULL TABLES; args=None
+2018-09-01 17:06:41,703 utils.py [django.db.backends:89] [DEBUG]- (0.023) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-01 17:06:42,581 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:06:42,753 utils.py [django.db.backends:89] [DEBUG]- (0.019) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:06:42,776 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 17:06:42.398000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 17:06:42.398000')
+2018-09-01 17:06:42,799 utils.py [django.db.backends:89] [DEBUG]- (0.023) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 17:06:42,821 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 17:06:42,822 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-09-01 17:06:50,229 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:06:50,513 utils.py [django.db.backends:89] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:06:50,536 utils.py [django.db.backends:89] [DEBUG]- (0.023) SHOW FULL TABLES; args=None
+2018-09-01 17:06:50,562 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-01 17:06:54,612 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:06:54,796 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:06:54,818 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 17:06:54.429000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 17:06:54.429000')
+2018-09-01 17:06:54,842 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 17:06:54,865 utils.py [django.db.backends:89] [DEBUG]- (0.023) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 17:06:54,865 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-09-01 17:08:15,549 utils.py [django.db.backends:89] [DEBUG]- (0.028) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:08:15,815 utils.py [django.db.backends:89] [DEBUG]- (0.027) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:08:15,854 utils.py [django.db.backends:89] [DEBUG]- (0.038) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 17:08:15.191000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 17:08:15.191000')
+2018-09-01 17:08:15,894 utils.py [django.db.backends:89] [DEBUG]- (0.039) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 17:08:15,923 utils.py [django.db.backends:89] [DEBUG]- (0.028) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 17:08:15,923 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-09-01 17:35:53,664 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:35:54,000 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:35:54,022 utils.py [django.db.backends:89] [DEBUG]- (0.021) SHOW FULL TABLES; args=None
+2018-09-01 17:35:54,046 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-01 17:35:56,990 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:35:57,176 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:35:57,197 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 17:35:56.804000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 17:35:56.804000')
+2018-09-01 17:35:57,220 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 17:35:57,242 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 17:35:57,243 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-09-01 17:37:18,599 utils.py [django.db.backends:89] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:37:18,904 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:37:18,927 utils.py [django.db.backends:89] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-09-01 17:37:18,950 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-01 17:37:22,779 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:37:22,966 utils.py [django.db.backends:89] [DEBUG]- (0.024) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:37:22,986 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 17:37:22.597000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 17:37:22.597000')
+2018-09-01 17:37:23,007 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 17:37:23,030 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 17:37:23,030 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-09-01 17:39:18,904 utils.py [django.db.backends:89] [DEBUG]- (0.019) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:39:19,177 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:39:19,198 utils.py [django.db.backends:89] [DEBUG]- (0.021) SHOW FULL TABLES; args=None
+2018-09-01 17:39:19,223 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-01 17:39:22,045 utils.py [django.db.backends:89] [DEBUG]- (0.023) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:39:22,223 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 17:39:22,243 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 17:39:21.857000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 17:39:21.857000')
+2018-09-01 17:39:22,266 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 17:39:22,290 utils.py [django.db.backends:89] [DEBUG]- (0.025) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 17:39:22,290 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-09-01 21:21:47,806 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:21:48,088 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:21:48,114 utils.py [django.db.backends:89] [DEBUG]- (0.025) SHOW FULL TABLES; args=None
+2018-09-01 21:21:48,141 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-01 21:21:56,799 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:21:56,973 utils.py [django.db.backends:89] [DEBUG]- (0.026) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:21:56,993 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:21:56.619000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:21:56.619000')
+2018-09-01 21:21:57,015 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:21:57,036 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:21:57,036 views.py [django:27] [INFO]- 127.0.0.1 is requesting /
+2018-09-01 21:21:58,769 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:21:58,956 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:21:58,980 utils.py [django.db.backends:89] [DEBUG]- (0.023) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:21:58.588000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:21:58.588000')
+2018-09-01 21:21:59,000 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:21:59,022 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:21:59,045 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `django_content_type`.`app_label`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON ( `auth_permission`.`content_type_id` = `django_content_type`.`id` ); args=()
+2018-09-01 21:21:59,068 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `django_content_type`.`app_label`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON ( `auth_permission`.`content_type_id` = `django_content_type`.`id` ); args=()
+2018-09-01 21:21:59,069 views.py [django:38] [INFO]- set([u'monitor.delete_minion_t', u'accounts.delete_user_project_authority_t', u'accounts.change_userprofile', u'auth.add_permission', u'monitor.delete_telegram_domain_alert_t', u'detect.add_telegram_chat_group_t', u'sessions.change_session', u'servers.add_rsa_key_t', u'accounts.add_user_project_authority_t', u'monitor.change_telegram_ssl_alert_t', u'dns.add_domain_info', u'dns.add_cf_account', u'monitor.change_permission_t', u'monitor.add_telegram_domain_alert_t', u'dns.delete_domain_info', u'admin.change_logentry', u'detect.add_domains', u'monitor.change_dns_authority_t', u'detect.delete_groups', u'contenttypes.delete_contenttype', u'dns.change_domain_info', u'monitor.add_minion_t', u'detect.change_domains', u'auth.add_group', u'detect.add_groups', u'accounts.delete_userprofile', u'detect.change_cdn_account_t', u'dns.delete_dnspod_account', u'detect.delete_telegram_chat_group_t', u'saltstack.add_tomcat_project', u'detect.change_telegram_chat_group_t', u'saltstack.add_tomcat_saltstack_history', u'auth.delete_group', u'accounts.add_userprofile', u'dns.add_alter_history', u'dns.change_cf_account', u'monitor.add_telegram_ssl_alert_t', u'auth.change_user', u'contenttypes.add_contenttype', u'dns.delete_cf_account', u'auth.add_user', u'servers.change_rsa_key_t', u'dns.change_dnspod_account', u'auth.change_group', u'detect.delete_cdn_account_t', u'saltstack.delete_tomcat_project', u'monitor.delete_minion_ip_t', u'detect.change_telegram_user_id_t', u'saltstack.delete_tomcat_saltstack_history', u'monitor.change_project_t', u'monitor.add_project_authority_t', u'saltstack.change_tomcat_saltstack_history', u'dns.add_dnspod_account', u'monitor.delete_permission_t', u'dns.change_alter_history', u'monitor.add_cdn_proj_t', u'monitor.change_telegram_domain_alert_t', u'monitor.change_cdn_proj_t', u'monitor.delete_project_t', u'monitor.add_permission_t', u'contenttypes.change_contenttype', u'monitor.change_minion_ip_t', u'monitor.delete_project_authority_t', u'detect.delete_domains', u'admin.delete_logentry', u'sessions.delete_session', u'saltstack.change_tomcat_project', u'monitor.delete_dns_authority_t', u'auth.change_permission', u'monitor.delete_cdn_proj_t', u'monitor.add_minion_ip_t', u'detect.add_cdn_account_t', u'servers.delete_rsa_key_t', u'monitor.change_project_authority_t', u'detect.change_groups', u'accounts.change_user_project_authority_t', u'monitor.change_minion_t', u'sessions.add_session', u'detect.add_telegram_user_id_t', u'monitor.add_project_t', u'auth.delete_user', u'detect.delete_telegram_user_id_t', u'auth.delete_permission', u'admin.add_logentry', u'monitor.delete_telegram_ssl_alert_t', u'dns.delete_alter_history', u'monitor.add_dns_authority_t'])
+2018-09-01 21:21:59,069 views.py [django:47] [INFO]- 127.0.0.1 is requesting /home
+2018-09-01 21:22:12,680 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:22:12,852 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:22:12,874 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:22:12.503000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:22:12.503000')
+2018-09-01 21:22:12,895 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:22:12,917 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:22:12,917 views.py [django:98] [INFO]- 127.0.0.1 is requesting /dns/dnspod/index
+2018-09-01 21:22:12,938 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `dns_dnspod_account`.`name` FROM `dns_dnspod_account` ORDER BY `dns_dnspod_account`.`name` ASC LIMIT 21; args=()
+2018-09-01 21:22:12,940 views.py [django:101] [INFO]- <class 'django.db.models.query.ValuesListQuerySet'> [(u'\u51e4\u51f0|\u52c7\u58eb',), (u'\u745e\u94f6',)]
+2018-09-01 21:22:12,960 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `dns_dnspod_account`.`name` FROM `dns_dnspod_account` ORDER BY `dns_dnspod_account`.`name` ASC; args=()
+2018-09-01 21:22:13,263 utils.py [django.db.backends:89] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:22:13,450 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:22:13,473 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:22:13.077000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:22:13.077000')
+2018-09-01 21:22:13,497 utils.py [django.db.backends:89] [DEBUG]- (0.024) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:22:13,522 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:22:13,523 dnspod.py [django:33] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_product_records
+2018-09-01 21:22:13,546 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `dns_dnspod_account`.`id`, `dns_dnspod_account`.`name`, `dns_dnspod_account`.`email`, `dns_dnspod_account`.`key` FROM `dns_dnspod_account`; args=()
+2018-09-01 21:22:15,013 dnspod_api.py [django:57] [INFO]- Dnspod域名列表获取 成功！
+2018-09-01 21:22:15,280 dnspod_api.py [django:57] [INFO]- Dnspod域名列表获取 成功！
+2018-09-01 21:22:31,039 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:22:31,220 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:22:31,242 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:22:30.865000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:22:30.865000')
+2018-09-01 21:22:31,263 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:22:31,283 utils.py [django.db.backends:89] [DEBUG]- (0.019) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:22:31,285 dnspod.py [django:78] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-09-01 21:22:31,305 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `dns_dnspod_account`.`id`, `dns_dnspod_account`.`name`, `dns_dnspod_account`.`email`, `dns_dnspod_account`.`key` FROM `dns_dnspod_account` WHERE `dns_dnspod_account`.`name` = '凤凰|勇士'; args=(u'\u51e4\u51f0|\u52c7\u58eb',)
+2018-09-01 21:22:31,598 dnspod_api.py [django:57] [INFO]- Dnspod域名[lebocdn.com]解析获取 成功！
+2018-09-01 21:22:52,871 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:22:53,052 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:22:53,075 utils.py [django.db.backends:89] [DEBUG]- (0.023) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:22:52.690000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:22:52.690000')
+2018-09-01 21:22:53,099 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:22:53,121 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:22:53,121 dnspod.py [django:78] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-09-01 21:22:53,142 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `dns_dnspod_account`.`id`, `dns_dnspod_account`.`name`, `dns_dnspod_account`.`email`, `dns_dnspod_account`.`key` FROM `dns_dnspod_account` WHERE `dns_dnspod_account`.`name` = '凤凰|勇士'; args=(u'\u51e4\u51f0|\u52c7\u58eb',)
+2018-09-01 21:22:53,519 dnspod_api.py [django:57] [INFO]- Dnspod域名[lebocdn.com]解析获取 成功！
+2018-09-01 21:23:02,448 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:23:02,648 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:23:02,668 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:23:02.258000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:23:02.258000')
+2018-09-01 21:23:02,690 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:23:02,713 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:23:02,713 dnspod.py [django:318] [INFO]- user:phexus_sa | [WS]127.0.0.1 is requesting. /dns/dnspod/update_records
+2018-09-01 21:23:02,737 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `dns_dnspod_account`.`id`, `dns_dnspod_account`.`name`, `dns_dnspod_account`.`email`, `dns_dnspod_account`.`key` FROM `dns_dnspod_account` WHERE `dns_dnspod_account`.`name` = '凤凰|勇士'; args=(u'\u51e4\u51f0|\u52c7\u58eb',)
+2018-09-01 21:23:03,052 dnspod_api.py [django:57] [INFO]- Dnspod域名[java.speed.lebocdn.com]解析修改 成功！
+2018-09-01 21:23:03,052 views.py [django:165] [INFO]- req_ip: 127.0.0.1 | user: phexus_sa | change-record: { 'type':A, 'name': java.speed.lebocdn.com, 'content': 119.47.83.85, 'enabled':0 } ---> { 'type':A, 'name': java.speed.lebocdn.com, 'content': 119.47.83.85, 'enabled':0 } {result: True}
+2018-09-01 21:23:03,094 utils.py [django.db.backends:89] [DEBUG]- (0.020) INSERT INTO `dns_alter_history` (`time`, `req_ip`, `user`, `pre_rec`, `now_rec`, `action`, `status`) VALUES ('2018-09-01 21:23:03', '127.0.0.1', 'phexus_sa', '\'type\':A, \'name\': java.speed.lebocdn.com, \'content\': 119.47.83.85, \'enabled\':0', '\'type\':A, \'name\': java.speed.lebocdn.com, \'content\': 119.47.83.85, \'enabled\':0', 'change', 1); args=['2018-09-01 21:23:03', '127.0.0.1', u'phexus_sa', u"'type':A, 'name': java.speed.lebocdn.com, 'content': 119.47.83.85, 'enabled':0", u"'type':A, 'name': java.speed.lebocdn.com, 'content': 119.47.83.85, 'enabled':0", 'change', True]
+2018-09-01 21:23:03,335 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:23:03,555 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:23:03,582 utils.py [django.db.backends:89] [DEBUG]- (0.025) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:23:03.148000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:23:03.148000')
+2018-09-01 21:23:03,644 utils.py [django.db.backends:89] [DEBUG]- (0.059) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:23:03,667 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:23:03,667 dnspod.py [django:78] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-09-01 21:23:03,688 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `dns_dnspod_account`.`id`, `dns_dnspod_account`.`name`, `dns_dnspod_account`.`email`, `dns_dnspod_account`.`key` FROM `dns_dnspod_account` WHERE `dns_dnspod_account`.`name` = '凤凰|勇士'; args=(u'\u51e4\u51f0|\u52c7\u58eb',)
+2018-09-01 21:23:07,288 dnspod_api.py [django:57] [INFO]- Dnspod域名[lebocdn.com]解析获取 成功！
+2018-09-01 21:25:31,769 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:25:31,957 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:25:31,979 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:25:31.602000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:25:31.602000')
+2018-09-01 21:25:32,006 utils.py [django.db.backends:89] [DEBUG]- (0.024) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:25:32,032 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:25:32,032 dnspod.py [django:318] [INFO]- user:phexus_sa | [WS]127.0.0.1 is requesting. /dns/dnspod/update_records
+2018-09-01 21:29:16,596 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:29:16,775 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:29:16,796 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:29:16.428000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:29:16.428000')
+2018-09-01 21:29:16,816 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:29:16,838 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:29:16,838 dnspod.py [django:78] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-09-01 21:29:16,859 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `dns_dnspod_account`.`id`, `dns_dnspod_account`.`name`, `dns_dnspod_account`.`email`, `dns_dnspod_account`.`key` FROM `dns_dnspod_account` WHERE `dns_dnspod_account`.`name` = '凤凰|勇士'; args=(u'\u51e4\u51f0|\u52c7\u58eb',)
+2018-09-01 21:29:29,224 dnspod_api.py [django:57] [INFO]- Dnspod域名[lebocdn.com]解析获取 成功！
+2018-09-01 21:30:27,612 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:30:27,792 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:30:27,815 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:30:27.433000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:30:27.433000')
+2018-09-01 21:30:27,836 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:30:27,858 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:30:27,858 dnspod.py [django:262] [INFO]- user:phexus_sa | [POST]127.0.0.1 is requesting. /dns/dnspod/update_records
+2018-09-01 21:30:27,858 dnspod.py [django:264] [INFO]- [{u'record_line_id': u'0', u'name': u'test.lebocdn.com', u'zone': u'lebocdn.com', u'record_line': u'\u9ed8\u8ba4', u'enabled': u'0', u'product': u'\u51e4\u51f0|\u52c7\u58eb', u'value': u'104.27.173.238', u'0': True, u'sub_domain': u'test', u'record_id': u'378523629', u'type': u'A', u'id': 1, u'zone_id': u'45400594'}]
+2018-09-01 21:30:27,880 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `dns_dnspod_account`.`id`, `dns_dnspod_account`.`name`, `dns_dnspod_account`.`email`, `dns_dnspod_account`.`key` FROM `dns_dnspod_account` WHERE `dns_dnspod_account`.`name` = '凤凰|勇士'; args=(u'\u51e4\u51f0|\u52c7\u58eb',)
+2018-09-01 21:30:28,430 dnspod_api.py [django:57] [INFO]- Dnspod域名[test.lebocdn.com]解析修改 成功！
+2018-09-01 21:30:36,608 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:30:36,792 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:30:36,812 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:30:36.427000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:30:36.427000')
+2018-09-01 21:30:36,834 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:30:36,855 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:30:36,855 dnspod.py [django:318] [INFO]- user:phexus_sa | [WS]127.0.0.1 is requesting. /dns/dnspod/update_records
+2018-09-01 21:30:36,877 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `dns_dnspod_account`.`id`, `dns_dnspod_account`.`name`, `dns_dnspod_account`.`email`, `dns_dnspod_account`.`key` FROM `dns_dnspod_account` WHERE `dns_dnspod_account`.`name` = '凤凰|勇士'; args=(u'\u51e4\u51f0|\u52c7\u58eb',)
+2018-09-01 21:30:37,164 dnspod_api.py [django:57] [INFO]- Dnspod域名[test.lebocdn.com]解析修改 成功！
+2018-09-01 21:30:37,164 views.py [django:165] [INFO]- req_ip: 127.0.0.1 | user: phexus_sa | change-record: { 'type':A, 'name': test.lebocdn.com, 'content': 104.27.173.238, 'enabled':0 } ---> { 'type':A, 'name': test.lebocdn.com, 'content': 104.27.173.238, 'enabled':0 } {result: True}
+2018-09-01 21:30:37,204 utils.py [django.db.backends:89] [DEBUG]- (0.021) INSERT INTO `dns_alter_history` (`time`, `req_ip`, `user`, `pre_rec`, `now_rec`, `action`, `status`) VALUES ('2018-09-01 21:30:37', '127.0.0.1', 'phexus_sa', '\'type\':A, \'name\': test.lebocdn.com, \'content\': 104.27.173.238, \'enabled\':0', '\'type\':A, \'name\': test.lebocdn.com, \'content\': 104.27.173.238, \'enabled\':0', 'change', 1); args=['2018-09-01 21:30:37', '127.0.0.1', u'phexus_sa', u"'type':A, 'name': test.lebocdn.com, 'content': 104.27.173.238, 'enabled':0", u"'type':A, 'name': test.lebocdn.com, 'content': 104.27.173.238, 'enabled':0", 'change', True]
+2018-09-01 21:30:37,448 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:30:37,635 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:30:37,657 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:30:37.253000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:30:37.253000')
+2018-09-01 21:30:37,680 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:30:37,703 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:30:37,703 dnspod.py [django:78] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-09-01 21:30:37,724 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `dns_dnspod_account`.`id`, `dns_dnspod_account`.`name`, `dns_dnspod_account`.`email`, `dns_dnspod_account`.`key` FROM `dns_dnspod_account` WHERE `dns_dnspod_account`.`name` = '凤凰|勇士'; args=(u'\u51e4\u51f0|\u52c7\u58eb',)
+2018-09-01 21:30:38,118 dnspod_api.py [django:57] [INFO]- Dnspod域名[lebocdn.com]解析获取 成功！
+2018-09-01 21:30:45,312 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:30:45,490 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:30:45,512 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:30:45.124000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:30:45.124000')
+2018-09-01 21:30:45,535 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:30:45,556 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:30:45,556 dnspod.py [django:318] [INFO]- user:phexus_sa | [WS]127.0.0.1 is requesting. /dns/dnspod/update_records
+2018-09-01 21:32:51,391 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:32:51,719 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:32:51,740 utils.py [django.db.backends:89] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-09-01 21:32:51,765 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-01 21:32:55,641 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:32:55,838 utils.py [django.db.backends:89] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:32:55,859 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:32:55.454000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:32:55.454000')
+2018-09-01 21:32:55,884 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:32:55,905 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:32:55,907 dnspod.py [django:318] [INFO]- user:phexus_sa | [WS]127.0.0.1 is requesting. /dns/dnspod/update_records
+2018-09-01 21:32:55,907 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 324, in UpdateDnspodRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-09-01 21:33:12,184 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:33:12,369 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:33:12,391 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:33:11.997000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:33:11.997000')
+2018-09-01 21:33:12,411 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:33:12,434 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:33:12,434 dnspod.py [django:318] [INFO]- user:phexus_sa | [WS]127.0.0.1 is requesting. /dns/dnspod/update_records
+2018-09-01 21:33:12,454 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `dns_dnspod_account`.`id`, `dns_dnspod_account`.`name`, `dns_dnspod_account`.`email`, `dns_dnspod_account`.`key` FROM `dns_dnspod_account` WHERE `dns_dnspod_account`.`name` = '凤凰|勇士'; args=(u'\u51e4\u51f0|\u52c7\u58eb',)
+2018-09-01 21:33:13,880 dnspod_api.py [django:57] [INFO]- Dnspod域名[test.lebocdn.com]解析修改 成功！
+2018-09-01 21:33:13,880 views.py [django:165] [INFO]- req_ip: 127.0.0.1 | user: phexus_sa | change-record: { 'type':A, 'name': test.lebocdn.com, 'content': 104.27.173.238, 'enabled':0 } ---> { 'type':A, 'name': test.lebocdn.com, 'content': 104.27.173.238, 'enabled':0 } {result: True}
+2018-09-01 21:33:13,921 utils.py [django.db.backends:89] [DEBUG]- (0.020) INSERT INTO `dns_alter_history` (`time`, `req_ip`, `user`, `pre_rec`, `now_rec`, `action`, `status`) VALUES ('2018-09-01 21:33:13', '127.0.0.1', 'phexus_sa', '\'type\':A, \'name\': test.lebocdn.com, \'content\': 104.27.173.238, \'enabled\':0', '\'type\':A, \'name\': test.lebocdn.com, \'content\': 104.27.173.238, \'enabled\':0', 'change', 1); args=['2018-09-01 21:33:13', '127.0.0.1', u'phexus_sa', u"'type':A, 'name': test.lebocdn.com, 'content': 104.27.173.238, 'enabled':0", u"'type':A, 'name': test.lebocdn.com, 'content': 104.27.173.238, 'enabled':0", 'change', True]
+2018-09-01 21:33:13,963 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 324, in UpdateDnspodRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-09-01 21:33:14,151 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:33:14,329 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:33:14,351 utils.py [django.db.backends:89] [DEBUG]- (0.022) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:33:13.973000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:33:13.973000')
+2018-09-01 21:33:14,374 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:33:14,394 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:33:14,395 dnspod.py [django:78] [INFO]- [POST]127.0.0.1 is requesting. /dns/dnspod/get_zone_records
+2018-09-01 21:33:14,417 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `dns_dnspod_account`.`id`, `dns_dnspod_account`.`name`, `dns_dnspod_account`.`email`, `dns_dnspod_account`.`key` FROM `dns_dnspod_account` WHERE `dns_dnspod_account`.`name` = '凤凰|勇士'; args=(u'\u51e4\u51f0|\u52c7\u58eb',)
+2018-09-01 21:33:14,660 dnspod_api.py [django:57] [INFO]- Dnspod域名[lebocdn.com]解析获取 成功！
+2018-09-01 21:33:23,493 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:33:23,676 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:33:23,696 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:33:23.322000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:33:23.322000')
+2018-09-01 21:33:23,717 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:33:23,739 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:33:23,740 dnspod.py [django:318] [INFO]- user:phexus_sa | [WS]127.0.0.1 is requesting. /dns/dnspod/update_records
+2018-09-01 21:33:23,740 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 324, in UpdateDnspodRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-09-01 21:35:59,828 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:36:00,104 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:36:00,128 utils.py [django.db.backends:89] [DEBUG]- (0.023) SHOW FULL TABLES; args=None
+2018-09-01 21:36:00,151 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-01 21:36:07,546 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:36:07,739 utils.py [django.db.backends:89] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:36:07,759 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '3mzkjds6wbnysgq8wg627l71y7nezhn1' AND `django_session`.`expire_date` > '2018-09-01 21:36:07.369000'); args=('3mzkjds6wbnysgq8wg627l71y7nezhn1', u'2018-09-01 21:36:07.369000')
+2018-09-01 21:36:07,780 utils.py [django.db.backends:89] [DEBUG]- (0.021) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-01 21:36:07,802 utils.py [django.db.backends:89] [DEBUG]- (0.020) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role`, `accounts_userprofile`.`manage` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 1; args=(1,)
+2018-09-01 21:36:07,802 dnspod.py [django:318] [INFO]- user:phexus_sa | [WS]127.0.0.1 is requesting. /dns/dnspod/update_records
+2018-09-01 21:36:07,802 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 324, in UpdateDnspodRecords
+    data = json.loads(postdata)
+  File "c:\python27\Lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "c:\python27\Lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-09-01 21:36:25,563 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:36:25,865 utils.py [django.db.backends:89] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; args=None
+2018-09-01 21:36:25,890 utils.py [django.db.backends:89] [DEBUG]- (0.023) SHOW FULL TABLES; args=None
+2018-09-01 21:36:25,915 utils.py [django.db.backends:89] [DEBUG]- (0.024) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
