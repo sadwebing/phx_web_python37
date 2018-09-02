@@ -198,14 +198,15 @@ if __name__ == "__main__":
         atUser = u"%s " %" ".join([ "@"+user for user in alert['user'] ]) if len(alert['user']) !=0 else ""
         atUser += u"请注意更换证书！"
 
-        if message['text']:
+        if "证书" in message['text']:
             if len(message['text']) >= 4096:
                 message['text']    = message['text'].replace('\r\n', '\n')
                 message['doc']     = True
                 message['caption'] = u"\r\n" + atUser
             else:
                 message['text'] += atUser
+        else:
+            continue
 
         for group in alert['chat_group']:
-            message['group'] = group
             sendTelegram(message)

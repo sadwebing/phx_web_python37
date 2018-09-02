@@ -190,8 +190,7 @@ def CreateDnspodRecords(request):
         logger.info('user:%s | [WS]%s is requesting. %s' %(username, clientip, request.get_full_path()))
         for postdata in request.websocket:
             if not postdata:
-                ### close websocket ###
-                request.websocket.close()
+                request.websocket.send("nothing")
                 break
             data = json.loads(postdata)
 
@@ -237,7 +236,7 @@ def CreateDnspodRecords(request):
 
                 request.websocket.send(json.dumps(return_info))
             ### close websocket ###
-            request.websocket.close()
+            #request.websocket.close()
 
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
@@ -316,10 +315,11 @@ def UpdateDnspodRecords(request):
             request.websocket.close()
 
         logger.info('user:%s | [WS]%s is requesting. %s' %(username, clientip, request.get_full_path()))
+
         for postdata in request.websocket:
+            #logger.info(request.websocket.read())
             if not postdata:
-                ### close websocket ###
-                request.websocket.close()
+                request.websocket.send("nothing")
                 break
             data = json.loads(postdata)
             step = 0

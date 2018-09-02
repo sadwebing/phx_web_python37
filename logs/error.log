@@ -22714,3 +22714,62 @@ Traceback (most recent call last):
   File "c:\python27\Lib\json\decoder.py", line 364, in decode
     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
 TypeError: expected string or buffer
+2018-09-02 13:17:40,201 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 321, in UpdateDnspodRecords
+    logger.info(request.websocket.read())
+  File "J:\arno\test\lib\site-packages\dwebsocket\backends\default\websocket.py", line 73, in read
+    if self.has_messages():
+  File "J:\arno\test\lib\site-packages\dwebsocket\backends\default\websocket.py", line 64, in has_messages
+    self._get_new_messages()
+  File "J:\arno\test\lib\site-packages\dwebsocket\backends\default\websocket.py", line 45, in _get_new_messages
+    while self.protocol.can_read():
+  File "J:\arno\test\lib\site-packages\dwebsocket\backends\default\protocols.py", line 197, in can_read
+    r, w, e = select.select(r, w, e, timeout)
+ValueError: file descriptor cannot be a negative integer (-1)
+2018-09-02 19:56:44,627 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 324, in UpdateDnspodRecords
+    request.websocket.send(None)
+  File "J:\arno\test\lib\site-packages\dwebsocket\backends\default\websocket.py", line 41, in send
+    self.protocol.write(message)
+  File "J:\arno\test\lib\site-packages\dwebsocket\backends\default\protocols.py", line 236, in write
+    self._write_frame(True, opcode, message)
+  File "J:\arno\test\lib\site-packages\dwebsocket\backends\default\protocols.py", line 210, in _write_frame
+    l = len(data)
+TypeError: object of type 'NoneType' has no len()
+2018-09-02 20:00:16,755 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\dnspod.py", line 324, in UpdateDnspodRecords
+    request.websocket.send(postdata)
+  File "J:\arno\test\lib\site-packages\dwebsocket\backends\default\websocket.py", line 41, in send
+    self.protocol.write(message)
+  File "J:\arno\test\lib\site-packages\dwebsocket\backends\default\protocols.py", line 236, in write
+    self._write_frame(True, opcode, message)
+  File "J:\arno\test\lib\site-packages\dwebsocket\backends\default\protocols.py", line 210, in _write_frame
+    l = len(data)
+TypeError: object of type 'NoneType' has no len()

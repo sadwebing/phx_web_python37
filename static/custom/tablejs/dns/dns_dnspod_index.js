@@ -266,7 +266,8 @@ window.operateStatusEvents = {
 
         //document.getElementById('add_record_content').value = "";
         document.getElementById('add_domain_zone').value = row.zone;
-        operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+        window.buttons = ['btn_close_add', 'btn_commit_add'];
+        public.disableButtons(window.buttons, false);
 
         var options = document.getElementById('add_record_type').children;
         options[0].selected=true;
@@ -275,11 +276,15 @@ window.operateStatusEvents = {
         options[0].selected=true;
 
         $("#confirmAddModal").modal().on("shown.bs.modal", function () {
+            public.socketConn('/dns/dnspod/create_records', window.buttons)
             operate.operateCommitAdd(row);
             //vm.datas.valueHasMutated();
         }).on('hidden.bs.modal', function () {
             //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
             ko.cleanNode(document.getElementById("confirmAddModal"));
+            if (window.s) {
+                window.s.close();
+            }
         });
 
         return false;
@@ -552,7 +557,7 @@ var operate = {
     operateCommitAdd: function (row) {
         $('#btn_commit_add').on("click", function () {
             $("#progress_bar_add_record").css("width", "0%");
-            operate.disableButtons(['btn_close_add', 'btn_commit_add'], true);
+            public.disableButtons(window.buttons, true);
 
             var postdata = {
                 'zone':    row.zone,
@@ -569,45 +574,45 @@ var operate = {
                     postdata['sub_domain'].splice(i, 1);
                 }else if (! public.isSubDomain(postdata['sub_domain'][i])) {
                     alert(postdata['sub_domain'][i] + "格式不正确！");
-                    operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                    public.disableButtons(window.buttons, false);
                     return false;
                 }
             }
 
             if (postdata['sub_domain'].length == 0){
                 alert('sub_domain can\'t be empty!');
-                operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                public.disableButtons(window.buttons, false);
                 return false;
             }
 
             if (! postdata['type']){
                 alert('pls select the type!');
-                operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                public.disableButtons(window.buttons, false);
                 return false;
             }
 
             if (! postdata['record_line']){
                 alert('pls select the record_line!');
-                operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                public.disableButtons(window.buttons, false);
                 return false;
             }
 
             if (! postdata['value']){
                 alert('content can\'t be empty!');
-                operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                public.disableButtons(window.buttons, false);
                 return false;
             }
 
             if (postdata['type'] == 'A') {
                 if (! operate.isIp(postdata['value'])){
                     alert('Content for A record is invalid.');
-                    operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                    public.disableButtons(window.buttons, false);
                     return false;
                 }
             }else if (postdata['type'] == 'CNAME'){
                 if (! operate.isDomain(postdata['value'], 'true')){
                     alert('Content for CNAME record is invalid.');
-                    operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                    public.disableButtons(window.buttons, false);
                     return false;
                 }
             }
@@ -616,33 +621,26 @@ var operate = {
             success = 0;
             failed = 0;
 
-            var socket = new WebSocket("ws://" + window.location.host + "/dns/dnspod/create_records");
-            socket.onopen = function () {
-                //console.log('WebSocket open');//成功连接上Websocket
-                socket.send(JSON.stringify(postdata));
-            };
-            //$('#runprogress').modal('show');
-            socket.onerror = function (){
-                toastr.error('后端服务不响应', '错误');
-                operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
-            };
-            socket.onclose = function () {
-                //setTimeout(function(){$('#confirmaddModal').modal('hide');}, 1000);
-                toastr.info('连接已关闭...');
-                operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
-            };
-            socket.onmessage = function (e) {
+            if (! window.s){
+                toastr.error('socket 未连接，请重新修改！', '错误');
+                public.disableButtons(window.buttons, false);
+                return false;
+            }else {
+                window.s.send(JSON.stringify(postdata));
+            }
+
+            window.s.onmessage = function (e) {
 
                 if (e.data == 'userNone'){
                     toastr.error('未获取用户名，请重新登陆！', '错误');
-                    operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                    public.disableButtons(window.buttons, false);
                     socket.close();
                     return false;
                 }
 
                 if (e.data == 'noPermission'){
                     toastr.error('抱歉，您没有权限！', '错误');
-                    operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                    public.disableButtons(window.buttons, false);
                     socket.close();
                     return false;
                 }
@@ -660,8 +658,7 @@ var operate = {
                 $("#progress_bar_add_record").css("width", width);
                 if (data.step == count){
                     tableInit.myViewModel.refresh();
-                    socket.close();
-                    operate.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                    public.disableButtons(window.buttons, false);
                 }
             };
             return false;
