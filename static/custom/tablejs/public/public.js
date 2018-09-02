@@ -115,4 +115,27 @@ var public = {
         }
     },
 
+    socketConn: function (uri, buttons) {
+        if (! buttons){
+            buttons = []
+        }
+        var socket = new WebSocket("ws://" + window.location.host + uri);
+        socket.onopen = function () {
+            //console.log('WebSocket open');//成功连接上Websocket
+        };
+        //$('#runprogress').modal('show');
+        socket.onerror = function (){
+            toastr.error('后端服务响应出现错误', '错误');
+            public.disableButtons(buttons, false);
+        };
+        socket.onclose = function () {
+            //setTimeout(function(){$('#confirmEditModal').modal('hide');}, 1000);
+            toastr.info('连接已关闭...');
+            public.disableButtons(buttons, false);
+        };
+        window.s = socket;
+
+    },
+
+
 };

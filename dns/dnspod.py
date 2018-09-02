@@ -366,8 +366,8 @@ def UpdateDnspodRecords(request):
                         return_info['result'])
 
                 request.websocket.send(json.dumps(return_info))
-            ### close websocket ###
-            request.websocket.close()
+            #### close websocket ###
+            #request.websocket.close()
 
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')

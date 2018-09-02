@@ -246,6 +246,7 @@ def UpdateRecords(request):
         for postdata in request.websocket:
             #logger.info(type(postdata))
             if not postdata:
+                logger.info('this is test!')
                 break
             data = json.loads(postdata)
             step = 0
@@ -290,7 +291,6 @@ def UpdateRecords(request):
 
                 request.websocket.send(json.dumps(return_info))
 
-        else:
             ### close websocket ###
             request.websocket.close()
 
