@@ -299,6 +299,7 @@ choices_customer = (
 
             #Java
             (31, u'恒隆[henglong]'),
+            (35, u'迪拜吧[dibaiba]'),
 
             )
 
