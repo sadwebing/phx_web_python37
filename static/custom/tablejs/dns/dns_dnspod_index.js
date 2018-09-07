@@ -460,8 +460,9 @@ var operate = {
                 //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
                 ko.cleanNode(document.getElementById("confirmEditModal"));
                 if (window.s) {
-                    window.s.close();
+                    window.s.close(1000, '正常关闭');
                 }
+                tableInit.myViewModel.refresh();
             });
         });
     },
@@ -511,12 +512,12 @@ var operate = {
             success = 0;
             failed = 0;
 
-            if (! window.s){
-                toastr.error('socket 未连接，请重新修改！', '错误');
+            if (window.s.readyState ==1) {
+                window.s.send(JSON.stringify(postdata));
+            }else {
+                toastr.error('socket 为连接成功，请重新打开！' + err.message, '错误');
                 public.disableButtons(window.buttons, false);
                 return false;
-            }else {
-                window.s.send(JSON.stringify(postdata));
             }
 
             window.s.onmessage = function (e) {
@@ -621,12 +622,12 @@ var operate = {
             success = 0;
             failed = 0;
 
-            if (! window.s){
-                toastr.error('socket 未连接，请重新修改！', '错误');
+            try {
+                window.s.send(JSON.stringify(postdata));
+            }catch (err){
+                toastr.error('socket 请求发送失败，请重新打开！' + err.message, '错误');
                 public.disableButtons(window.buttons, false);
                 return false;
-            }else {
-                window.s.send(JSON.stringify(postdata));
             }
 
             window.s.onmessage = function (e) {

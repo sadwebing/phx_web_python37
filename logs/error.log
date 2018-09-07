@@ -22773,3 +22773,7 @@ Traceback (most recent call last):
   File "J:\arno\test\lib\site-packages\dwebsocket\backends\default\protocols.py", line 210, in _write_frame
     l = len(data)
 TypeError: object of type 'NoneType' has no len()
+2018-09-03 16:18:33,029 dnspod_api.py [django:53] [ERROR]- @arno
+Attention: Dnspod域名[test1.lebocdn.com]解析修改 失败，请检查:
+URL:  + https://dnsapi.cn/Record.Modify
+{u'message': u'Record id invalid', u'code': u'8', u'created_at': u'2018-09-03 16:18:30'}

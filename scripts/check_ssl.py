@@ -209,4 +209,5 @@ if __name__ == "__main__":
             continue
 
         for group in alert['chat_group']:
+            message['group'] = group
             sendTelegram(message)

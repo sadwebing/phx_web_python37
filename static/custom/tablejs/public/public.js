@@ -125,8 +125,10 @@ var public = {
         };
         //$('#runprogress').modal('show');
         socket.onerror = function (){
-            toastr.error('后端服务响应出现错误', '错误');
-            public.disableButtons(buttons, false);
+            if (! e.wasClean){
+                toastr.error('后端服务响应出现错误', '错误');
+                public.disableButtons(buttons, false);
+            }
         };
         socket.onclose = function () {
             //setTimeout(function(){$('#confirmEditModal').modal('hide');}, 1000);
