@@ -7,7 +7,7 @@ var public = {
     //初始化按钮事件
     operateInit: function () {
         this.selectpicker();
-        //this.showSelectedValue();
+        //this.socketConn();
     },
 
     ViewModel: function() {
@@ -116,26 +116,38 @@ var public = {
     },
 
     socketConn: function (uri, buttons) {
+        if (! uri){
+            return false;
+        }
         if (! buttons){
-            buttons = []
+            buttons = [];
         }
         var socket = new WebSocket("ws://" + window.location.host + uri);
-        socket.onopen = function () {
+        window.s = socket;
+        socket.onopen = function (e) {
             //console.log('WebSocket open');//成功连接上Websocket
+        };
+        socket.onmessage = function (e) {
+            //console.log('WebSocket open');//成功连接上Websocket
+
+            if (e.data == 'userNone'){
+                toastr.error('未获取用户名，请重新登陆！', '错误');
+                public.disableButtons(window.buttons, false);
+                window.s.close();
+                return false;
+            }
         };
         //$('#runprogress').modal('show');
         socket.onerror = function (){
-            if (! e.wasClean){
-                toastr.error('后端服务响应出现错误', '错误');
-                public.disableButtons(buttons, false);
-            }
+            toastr.error('后端服务响应出现错误', '错误');
+            public.disableButtons(buttons, false);
         };
         socket.onclose = function () {
             //setTimeout(function(){$('#confirmEditModal').modal('hide');}, 1000);
             toastr.info('连接已关闭...');
             public.disableButtons(buttons, false);
         };
-        window.s = socket;
+        
 
     },
 

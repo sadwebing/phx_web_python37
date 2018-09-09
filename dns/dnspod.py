@@ -71,7 +71,6 @@ def GetDnspodZoneRecords(request):
         except:
             role = 'none'
         if not username:
-            request.websocket.send('userNone')
             logger.info('user: 用户名未知 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
             return HttpResponseServerError("用户名未知！")
 
@@ -254,7 +253,6 @@ def UpdateDnspodRecords(request):
         except:
             role = 'none'
         if not username:
-            request.websocket.send('userNone')
             logger.info('user: 用户名未知 | [POST]%s is requesting. %s' %(clientip, request.get_full_path()))
             return HttpResponseServerError("用户名未知！")
             

@@ -246,7 +246,6 @@ var operate = {
             $("#progress_bar_update_record").css("width", "0%");
             document.getElementById('update_record_finished_count').innerHTML="finished: 0  &emsp;  success: 0  &emsp;  failed: 0";
             document.getElementById('password').value = "";
-            public.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
             var arrselectedData = tableInit.myViewModel.getSelections();
             if (arrselectedData.length <= 0){
                 alert("请至少选择一行数据");
@@ -260,6 +259,10 @@ var operate = {
             $("#confirmEditModal").modal().on("shown.bs.modal", function () {
                 //ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData));
                 //ko.applyBindings(operate.DepartmentModel, document.getElementById("confirmEditModal"));
+                window.buttons = ['btn_close_edit', 'btn_commit_edit'];
+                public.socketConn('/servers/update', window.buttons)
+                public.disableButtons(window.buttons, false);
+
                 ko.applyBindings(vm, document.getElementById("confirmEditModal"));
                 //datas = ko.mapping.fromJS(arrselectedData)
                 var html = "";
@@ -276,6 +279,9 @@ var operate = {
             }).on('hidden.bs.modal', function () {
                 //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
                 ko.cleanNode(document.getElementById("confirmEditModal"));
+                if (window.s) {
+                    window.s.close();
+                }
             });
         });
     },
@@ -284,14 +290,14 @@ var operate = {
         $('#btn_commit_edit').on("click", function () {
             $("#progress_bar_update_record").css("width", "0%");
             document.getElementById('update_record_finished_count').innerHTML="finished: 0  &emsp;  success: 0  &emsp;  failed: 0";
-            public.disableButtons(['btn_close_edit', 'btn_commit_edit'], true);
+            public.disableButtons(window.buttons, true);
             var arrselectedData = tableInit.myViewModel.getSelections();
             var postdata = {};
 
             postdata['password'] = document.getElementById('password').value.replace(/(^\s*)|(\s*$)/g, "");
             if (postdata['password'].length < 6){
                 alert('password is too short.');
-                public.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
+                public.disableButtons(window.buttons, false);
                 return false;
             }
 
@@ -300,29 +306,15 @@ var operate = {
             success = 0;
             failed = 0;
 
-            var socket = new WebSocket("ws://" + window.location.host + "/servers/update");
-            socket.onopen = function () {
-                //console.log('WebSocket open');//成功连接上Websocket
-                socket.send(JSON.stringify(postdata));
-            };
-            socket.onclose = function () {
-                //setTimeout(function(){$('#confirmEditModal').modal('hide');}, 1000);
-                toastr.info('连接已关闭...');
-                public.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
-            };
-            //$('#runprogress').modal('show');
-            socket.onerror = function (){
-                toastr.error('后端服务不响应', '错误');
-                public.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
-            };
-            socket.onmessage = function (e) {
+            if (window.s.readyState == 1) {
+                window.s.send(JSON.stringify(postdata));
+            }else {
+                toastr.error('socket 未连接成功，请重新打开！', '错误');
+                public.disableButtons(window.buttons, false);
+                return false;
+            }
 
-                if (e.data == 'userNone'){
-                    toastr.error('未获取用户名，请重新登陆！', '错误');
-                    public.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
-                    socket.close();
-                    return false;
-                }
+            window.s.onmessage = function (e) {
 
                 data = eval('('+ e.data +')');
 
@@ -344,8 +336,8 @@ var operate = {
                 document.getElementById('update_record_finished_count').innerHTML="finished: "+data.step+"  &emsp;  success: "+success+"  &emsp;  failed: "+failed+"";
                 $("#progress_bar_update_record").css("width", width);
                 if (data.step == count){
-                    socket.close();
-                    public.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
+                    window.s.close();
+                    public.disableButtons(window.buttons, false);
                 }
             };
             return false;

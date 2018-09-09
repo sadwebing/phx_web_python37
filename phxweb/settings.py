@@ -29,7 +29,7 @@ SECRET_KEY = 'm1!&%(kha(g04bl7ek*hh@ly$ibnm8@2zrnkmxxkzcf6jjc4d@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['58.64.145.50', 'sa.l510881.com']
+ALLOWED_HOSTS = ['127.0.0.1', '58.64.145.50', 'sa.l510881.com']
 
 
 LOGIN_REDIRECT_URL = '/home'
@@ -110,7 +110,16 @@ INSTALLED_APPS = (
     'dns',
     'detect',
     'servers',
+    'channels',
 )
+
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "asgiref.inmemory.ChannelLayer",
+        "ROUTING": "phxweb.routing.channel_routing",
+    },
+}
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

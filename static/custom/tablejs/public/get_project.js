@@ -194,6 +194,12 @@ var gp = {
             };
             
             socket.onmessage = function (e) {
+                if (e.data == 'userNone'){
+                    toastr.error('未获取用户名，请重新登陆！', '错误');
+                    socket.close();
+                    return false;
+                }
+
                 //return false;
                 data = eval('('+ e.data +')')
                 //console.log('message: ' + data);//打印服务端返回的数据

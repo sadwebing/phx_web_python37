@@ -60,7 +60,8 @@ def home(request):
     )
 
 def logout(request):
-    redirect_to = request.REQUEST.get('url', '/')
+    #redirect_to = request.REQUEST.get('url', '/')
+    redirect_to = '/'
     auth_logout(request)
     
     return HttpResponseRedirect(redirect_to)

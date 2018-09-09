@@ -276,7 +276,7 @@ window.operateStatusEvents = {
         options[0].selected=true;
 
         $("#confirmAddModal").modal().on("shown.bs.modal", function () {
-            public.socketConn('/dns/dnspod/create_records', window.buttons)
+            public.socketConn('/dns/dnspod/record/add', window.buttons)
             operate.operateCommitAdd(row);
             //vm.datas.valueHasMutated();
         }).on('hidden.bs.modal', function () {
@@ -453,14 +453,15 @@ var operate = {
                 }); 
                 $("#EditDatas").html(html);
                 window.buttons = ['btn_close_edit', 'btn_commit_edit'];
-                public.socketConn('/dns/dnspod/update_records', window.buttons)
+                public.socketConn('/dns/dnspod/record/update', window.buttons)
+                //public.socketConn('/dns/dnspod/update_records', window.buttons)
                 operate.operateCommitEdit();
                 //vm.datas.valueHasMutated();
             }).on('hidden.bs.modal', function () {
                 //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
                 ko.cleanNode(document.getElementById("confirmEditModal"));
                 if (window.s) {
-                    window.s.close(1000, '正常关闭');
+                    window.s.close();
                 }
                 tableInit.myViewModel.refresh();
             });
@@ -512,23 +513,15 @@ var operate = {
             success = 0;
             failed = 0;
 
-            if (window.s.readyState ==1) {
+            if (window.s.readyState == 1) {
                 window.s.send(JSON.stringify(postdata));
             }else {
-                toastr.error('socket 为连接成功，请重新打开！' + err.message, '错误');
+                toastr.error('socket 未连接成功，请重新打开！', '错误');
                 public.disableButtons(window.buttons, false);
                 return false;
             }
 
             window.s.onmessage = function (e) {
-
-                if (e.data == 'userNone'){
-                    toastr.error('未获取用户名，请重新登陆！', '错误');
-                    public.disableButtons(window.buttons, false);
-                    socket.close();
-                    return false;
-                }
-
                 data = eval('('+ e.data +')');
 
                 if (! data.permission){
@@ -546,7 +539,7 @@ var operate = {
                 document.getElementById('update_record_finished_count').innerHTML="finished: "+data.step+"  &emsp;  success: "+success+"  &emsp;  failed: "+failed+"";
                 $("#progress_bar_update_record").css("width", width);
                 if (data.step == count){
-                    //socket.close();
+                    //window.s.close();
                     //tableInit.myViewModel.refresh();
                     public.disableButtons(window.buttons, false);
                 }
@@ -622,31 +615,24 @@ var operate = {
             success = 0;
             failed = 0;
 
-            try {
+            if (window.s.readyState == 1) {
                 window.s.send(JSON.stringify(postdata));
-            }catch (err){
-                toastr.error('socket 请求发送失败，请重新打开！' + err.message, '错误');
+            }else {
+                toastr.error('socket 未连接成功，请重新打开！', '错误');
                 public.disableButtons(window.buttons, false);
                 return false;
             }
 
             window.s.onmessage = function (e) {
+                data = eval('('+ e.data +')');
 
-                if (e.data == 'userNone'){
-                    toastr.error('未获取用户名，请重新登陆！', '错误');
-                    public.disableButtons(window.buttons, false);
-                    socket.close();
-                    return false;
-                }
-
-                if (e.data == 'noPermission'){
+                if (! data.permission){
                     toastr.error('抱歉，您没有权限！', '错误');
                     public.disableButtons(window.buttons, false);
-                    socket.close();
+                    window.s.close();
                     return false;
                 }
 
-                data = eval('('+ e.data +')');
                 var width = 100*(data.step)/count + "%";
                 if (data.result){
                     success = success + 1;

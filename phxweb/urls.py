@@ -5,6 +5,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.http import HttpResponseRedirect
 from accounts.views import home
+from django.views.static import serve
+from django.conf.urls.static import static
 
 urlpatterns = [
     # Examples:
@@ -22,5 +24,5 @@ urlpatterns = [
     url(r'^servers/', include('servers.urls')),
 
     url(r'^favicon$', lambda x: HttpResponseRedirect(settings.STATIC_URL+'images/favicon.ico')),
-    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+    url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

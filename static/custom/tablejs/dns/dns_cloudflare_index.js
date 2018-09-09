@@ -212,7 +212,8 @@ window.operateStatusEvents = {
 
         //document.getElementById('add_record_content').value = "";
         document.getElementById('add_domain_zone').value = row.zone;
-        dns.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+        window.buttons = ['btn_close_add', 'btn_commit_add'];
+        public.disableButtons(window.buttons, false);
 
         var options = document.getElementById('add_record_type').children;
         options[0].selected=true;
@@ -221,11 +222,15 @@ window.operateStatusEvents = {
         options[0].selected=true;
 
         $("#confirmAddModal").modal().on("shown.bs.modal", function () {
+            public.socketConn('/dns/cloudflare/record/add', window.buttons)
             operate.operateCommitAdd(row);
             //vm.datas.valueHasMutated();
         }).on('hidden.bs.modal', function () {
             //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
             ko.cleanNode(document.getElementById("confirmAddModal"));
+            if (window.s) {
+                window.s.close();
+            }
         });
 
         return false;
@@ -350,11 +355,17 @@ var operate = {
                     html = html + html_record
                 }); 
                 $("#EditDatas").html(html);
+                window.buttons = ['btn_close_edit', 'btn_commit_edit'];
+                public.socketConn('/dns/cloudflare/record/update', window.buttons)
                 operate.operateCommitEdit();
                 //vm.datas.valueHasMutated();
             }).on('hidden.bs.modal', function () {
                 //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
                 ko.cleanNode(document.getElementById("confirmEditModal"));
+                if (window.s) {
+                    window.s.close();
+                }
+                tableInit.myViewModel.refresh();
             });
         });
     },
@@ -404,27 +415,15 @@ var operate = {
             success = 0;
             failed = 0;
 
-            var socket = new WebSocket("ws://" + window.location.host + "/dns/cloudflare/update_records");
-            socket.onopen = function () {
-                //console.log('WebSocket open');//成功连接上Websocket
-                socket.send(JSON.stringify(postdata));
-            };
-            //$('#runprogress').modal('show');
-            socket.onerror = function (){
-                toastr.error('后端服务不响应', '错误');
-                dns.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
-            };
-            socket.onmessage = function (e) {
+            if (window.s.readyState == 1) {
+                window.s.send(JSON.stringify(postdata));
+            }else {
+                toastr.error('socket 未连接成功，请重新打开！', '错误');
+                public.disableButtons(window.buttons, false);
+                return false;
+            }
 
-                //console.log(e.data);
-
-                if (e.data == 'userNone'){
-                    toastr.error('未获取用户名，请重新登陆！', '错误');
-                    dns.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
-                    socket.close();
-                    return false;
-                }
-
+            window.s.onmessage = function (e) {
                 data = eval('('+ e.data +')');
 
                 if (! data.permission){
@@ -442,7 +441,7 @@ var operate = {
                 document.getElementById('update_record_finished_count').innerHTML="finished: "+data.step+"  &emsp;  success: "+success+"  &emsp;  failed: "+failed+"";
                 $("#progress_bar_update_record").css("width", width);
                 if (data.step == count){
-                    socket.close();
+                    //window.s.close();
                     //tableInit.myViewModel.refresh();
                     dns.disableButtons(['btn_close_edit', 'btn_commit_edit'], false);
                 }
@@ -454,7 +453,7 @@ var operate = {
     operateCommitAdd: function (row) {
         $('#btn_commit_add').on("click", function () {
             $("#progress_bar_add_record").css("width", "0%");
-            dns.disableButtons(['btn_close_add', 'btn_commit_add'], true);
+            public.disableButtons(window.buttons, true);
 
             var postdata = {
                 'zone':    row.zone,
@@ -472,45 +471,45 @@ var operate = {
                     postdata['sub_domain'].splice(i, 1);
                 }else if (! public.isSubDomain(postdata['sub_domain'][i])) {
                     alert(postdata['sub_domain'][i] + "格式不正确！");
-                    dns.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                    public.disableButtons(window.buttons, false);
                     return false;
                 }
             }
 
             if (postdata['sub_domain'].length == 0){
                 alert('sub_domain can\'t be empty!');
-                dns.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                public.disableButtons(window.buttons, false);
                 return false;
             }
 
             if (! postdata['type']){
                 alert('pls select the type!');
-                dns.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                public.disableButtons(window.buttons, false);
                 return false;
             }
 
             if (! postdata['proxied']){
                 alert('pls select the proxied!');
-                dns.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                public.disableButtons(window.buttons, false);
                 return false;
             }
 
             if (! postdata['content']){
                 alert('content can\'t be empty!');
-                dns.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                public.disableButtons(window.buttons, false);
                 return false;
             }
 
             if (postdata['type'] == 'A') {
                 if (! dns.isIp(postdata['content'])){
                     alert('Content for A record is invalid.');
-                    dns.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                    public.disableButtons(window.buttons, false);
                     return false;
                 }
             }else if (postdata['type'] == 'CNAME'){
                 if (! dns.isDomain(postdata['content'], postdata['proxied'])){
                     alert('Content for CNAME record is invalid.');
-                    dns.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                    public.disableButtons(window.buttons, false);
                     return false;
                 }
             }
@@ -519,38 +518,24 @@ var operate = {
             success = 0;
             failed = 0;
 
-            var socket = new WebSocket("ws://" + window.location.host + "/dns/cloudflare/create_records");
-            socket.onopen = function () {
-                //console.log('WebSocket open');//成功连接上Websocket
-                socket.send(JSON.stringify(postdata));
-            };
-            //$('#runprogress').modal('show');
-            socket.onerror = function (){
-                toastr.error('后端服务不响应', '错误');
-                dns.disableButtons(['btn_close_add', 'btn_commit_add'], false);
-            };
-            socket.onclose = function () {
-                //setTimeout(function(){$('#confirmaddModal').modal('hide');}, 1000);
-                toastr.info('连接已关闭...');
-                dns.disableButtons(['btn_close_add', 'btn_commit_add'], false);
-            };
-            socket.onmessage = function (e) {
+            if (window.s.readyState == 1) {
+                window.s.send(JSON.stringify(postdata));
+            }else {
+                toastr.error('socket 未连接成功，请重新打开！', '错误');
+                public.disableButtons(window.buttons, false);
+                return false;
+            }
 
-                if (e.data == 'userNone'){
-                    toastr.error('未获取用户名，请重新登陆！', '错误');
-                    dns.disableButtons(['btn_close_add', 'btn_commit_add'], false);
-                    socket.close();
-                    return false;
-                }
-
-                if (e.data == 'noPermission'){
-                    toastr.error('抱歉，您没有权限！', '错误');
-                    dns.disableButtons(['btn_close_add', 'btn_commit_add'], false);
-                    socket.close();
-                    return false;
-                }
-
+            window.s.onmessage = function (e) {
                 data = eval('('+ e.data +')');
+
+                if (! data.permission){
+                    toastr.error('抱歉，您没有权限！', '错误');
+                    public.disableButtons(window.buttons, false);
+                    window.s.close();
+                    return false;
+                }
+
                 var width = 100*(data.step)/count + "%";
                 if (data.result){
                     success = success + 1;
@@ -563,8 +548,8 @@ var operate = {
                 $("#progress_bar_add_record").css("width", width);
                 if (data.step == count){
                     tableInit.myViewModel.refresh();
-                    socket.close();
-                    dns.disableButtons(['btn_close_add', 'btn_commit_add'], false);
+                    //window.s.close();
+                    public.disableButtons(window.buttons, false);
                 }
             };
             return false;

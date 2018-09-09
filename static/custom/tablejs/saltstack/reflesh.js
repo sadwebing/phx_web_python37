@@ -275,7 +275,7 @@ var operate = {
 
         if (submit == 'cdn') {
             var postData = operate.getcdnSubmitpostData();
-            var posturi  = "/saltstack/reflesh/execute_cdn";
+            var posturi  = "/saltstack/reflesh/execute/cdn";
         }else if (submit == 'cdn_proj') {
             var postData = operate.getcdnprojSubmitpostData();
             var posturi  = "/saltstack/reflesh/execute";
@@ -287,34 +287,39 @@ var operate = {
             return false;
         }
         
+        $('#runprogress').modal('show');
+
         //alert("获取到的表单数据为:"+JSON.stringify(postData));
         modal_results.innerHTML = "";
         modal_footer.innerHTML = "";
         $("#progress_bar").css("width", "30%");
         modal_head.innerHTML = "操作进行中，请勿刷新页面......";
         $('#OperateRestartresults').append('<p>连接中......</p>' );
-        var socket = new WebSocket("ws://" + window.location.host + posturi);
 
-        socket.onerror = function (){
+        public.socketConn(posturi, [])
+
+        window.s.onopen = function (e) {
+            window.s.send(JSON.stringify(postData));
+        };
+        
+        window.s.onerror = function (){
             modal_head.innerHTML = "与服务器连接失败...";
             $('#OperateRestartresults').append('<p>连接失败......</p>' );
             $("#commandresults").append('<p>执行失败！</p>');
             setTimeout(function(){$('#runprogress').modal('hide');}, 1000);
         };
 
-        socket.onopen = function () {
-            //console.log('WebSocket open');//成功连接上Websocket
-            //socket.send($('#message').val());//发送数据到服务端
-            socket.send(JSON.stringify(postData))
-        };
-
-        socket.onclose = function () {
-            
+        window.s.onclose = function () {
             setTimeout(function(){$('#runprogress').modal('hide');}, 1000);
         };
-        
-        $('#runprogress').modal('show');
-        socket.onmessage = function (e) {
+
+        window.s.onmessage = function (e) {
+            if (e.data == 'userNone'){
+                toastr.error('未获取用户名，请重新登陆！', '错误');
+                window.s.close();
+                return false;
+            }
+
             //return false;
             data = eval('('+ e.data +')')
             //console.log('message: ' + data['target']);//打印服务端返回的数据
@@ -342,7 +347,7 @@ var operate = {
             }else if (data.step == 'final'){
                 $("#progress_bar").css("width", "100%");
                 $('#OperateRestartresults').append('<p>执行完成......</p>' );
-                socket.close();
+                window.s.close();
                 setTimeout(function(){$('#runprogress').modal('hide');}, 1000);
             }
         }; 

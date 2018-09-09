@@ -12,7 +12,7 @@
 						</ul>
 					</li>
 					{% endcomment %}
-					{% if role = 'sa' %}
+					{% if role == 'sa' %}
 					<li id='monitor_saltstack'>
 						<i class="glyphicon glyphicon-list-alt text-primary"> <span> 监控与部署 </span></i>
 						<ul>
@@ -78,7 +78,7 @@
 					{% endcomment %}
 					{% endif %}
 					
-					{% if role = 'notsa' %}
+					{% if role == 'notsa' %}
 					<li id='monitor_saltstack'>
 						<i class="glyphicon glyphicon-list-alt text-primary"> <span> 监控与部署 </span></i>
 						<ul>

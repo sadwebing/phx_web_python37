@@ -344,8 +344,6 @@ var operate = {
         });
     },
 
-    
-    
     operateMonitorPorjectSelect: function(){
         $('#btn_query').on("click", function () {
             var group    = public.showSelectedValue('txt_group', true);
