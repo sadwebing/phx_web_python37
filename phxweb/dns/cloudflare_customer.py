@@ -98,7 +98,7 @@ class DnsCloudflareRecordAdd(DefConsumer):
             self.role = 'none'
 
         #判断是否有权限
-        if not HasDnsPermission(self.message, "dnspod", data['product'], "add"):
+        if not HasDnsPermission(self.message, "cf", data['product'], "add"):
             return_info['permission'] = False
             return_info['result'] = False
             self.message.reply_channel.send({'text': json.dumps(return_info)})
