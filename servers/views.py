@@ -81,15 +81,19 @@ def decryptPasswd(request, project, passwd):
 
     try:
         data = json.loads(request.body)
-        privatekey = data['privkey'][item]
-        if not privatekey:
+        if request.user.is_superuser:
+            privatekey = project.privatekey
             setcookieV[item] = False
-            try:
-                privatekey = request.COOKIES[item]
-            except:
-                logger.error("failed to get cookies for %s" %item_display)
         else:
-            setcookieV[item] = True
+            privatekey = data['privkey'][item]
+            if not privatekey:
+                setcookieV[item] = False
+                try:
+                    privatekey = request.COOKIES[item]
+                except:
+                    logger.error("failed to get cookies for %s" %item_display)
+            else:
+                setcookieV[item] = True
     except Exception, e:
         logger.error(str(e))
         setcookieV[item] = False
