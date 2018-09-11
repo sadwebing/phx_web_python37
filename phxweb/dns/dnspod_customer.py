@@ -110,6 +110,7 @@ class DnsDnspodRecordAdd(DefConsumer):
             return_info['result'] = False
             self.message.reply_channel.send({'text': json.dumps(return_info)})
             self.close()
+            return False
 
         step = 0
 

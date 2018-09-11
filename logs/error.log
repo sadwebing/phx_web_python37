@@ -23563,3 +23563,41 @@ UnboundLocalError: local variable 'domains_ft' referenced before assignment
 2018-09-11 12:50:07,750 views.py [django:108] [ERROR]- 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]: Incorrect padding
 2018-09-11 12:50:07,772 views.py [django:108] [ERROR]- 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]: Incorrect padding
 2018-09-11 12:50:07,792 views.py [django:108] [ERROR]- 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_后端源服务器[backend]: Incorrect padding
+2018-09-11 14:50:13,665 exception.py [django.request:135] [ERROR]- Internal Server Error: /dns/cloudflare/delete_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "J:\arno\test\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 304, in DeleteRecords
+    manage   = request.user.userprofile.manage
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 239, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'userprofile'
+2018-09-11 14:50:16,210 exception.py [django.request:135] [ERROR]- Internal Server Error: /dns/cloudflare/delete_records
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "J:\arno\test\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\dns\cf.py", line 304, in DeleteRecords
+    manage   = request.user.userprofile.manage
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 239, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'userprofile'
