@@ -23395,3 +23395,104 @@ URL:  + https://api.cloudflare.com/client/v4/zones/9058249e67e662f75172ceb02541a
 2018-09-09 16:43:27,618 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
 2018-09-09 16:43:27,644 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
 2018-09-09 16:43:27,665 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
+2018-09-09 20:08:47,029 cf_api.py [django:172] [ERROR]- @arno
+Attention: CF域名缓存清理失败，请检查:
+URL:  + https://api.cloudflare.com/client/v4/zones/bde5eb363d0f9bac40dbb0209aaaec83/purge_cache
+{'errors': "global name 'datas' is not defined", 'result': None, 'success': False}
+2018-09-09 20:08:48,645 exception.py [django.request:135] [ERROR]- Internal Server Error: /saltstack/reflesh/purgecfdomain
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view saltstack.reflesh.purgeCfDomain didn't return an HttpResponse object. It returned None instead.
+2018-09-09 20:09:53,697 cf_api.py [django:172] [ERROR]- @arno
+Attention: CF域名缓存清理失败，请检查:
+URL:  + https://api.cloudflare.com/client/v4/zones/bde5eb363d0f9bac40dbb0209aaaec83/purge_cache
+{'errors': "global name 'datas' is not defined", 'result': None, 'success': False}
+2018-09-10 14:12:10,084 exception.py [django.request:135] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "J:\arno\test\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    if test_func(request.user):
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\decorators.py", line 46, in <lambda>
+    lambda u: u.is_authenticated,
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 238, in inner
+    self._setup()
+  File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 385, in _setup
+    self._wrapped = self._setupfunc()
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\__init__.py", line 206, in get_user
+    user_id = _get_user_session_key(request)
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\__init__.py", line 61, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\base.py", line 57, in __getitem__
+    return self._session[key]
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\base.py", line 207, in _get_session
+    self._session_cache = self.load()
+  File "J:\arno\test\lib\site-packages\django\contrib\sessions\backends\db.py", line 35, in load
+    expire_date__gt=timezone.now()
+  File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 373, in get
+    num = len(clone)
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 232, in __len__
+    self._fetch_all()
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 1102, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 874, in execute_sql
+    cursor = self.connection.cursor()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 254, in cursor
+    return self._cursor()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 229, in _cursor
+    self.ensure_connection()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 213, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 213, in ensure_connection
+    self.connect()
+  File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 189, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 274, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "J:\arno\test\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2013, "Lost connection to MySQL server at 'waiting for initial communication packet', system error: 0")
+2018-09-10 15:53:46,707 exception.py [django.request:135] [ERROR]- Internal Server Error: /monitor/domains/Query
+Traceback (most recent call last):
+  File "J:\arno\test\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "J:\arno\test\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "J:\arno\test\phx_web\monitor\domains.py", line 51, in DomainsQuery
+    domains_ft = domains_ft.objects.filter(cf__in=cf)
+UnboundLocalError: local variable 'domains_ft' referenced before assignment

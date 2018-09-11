@@ -337,7 +337,7 @@ var operate = {
                 var html = "";
 
                 for(var i = 0; i < data.result.length; i++) { 
-                    html = html + data.cdn +": "+ data.result[i]+"<br/>";
+                    html = html + data.result[i]+"<br/>";
                 }
                 
                 $("#commandresults").append(html);

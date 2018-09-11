@@ -145,6 +145,35 @@ class CfApi(object):
 
         return result
 
+    def purge(self, zone_id):
+        '''
+            清理缓存："purge_everything":true
+        '''
+        result = {}
+        data = {"purge_everything": True}
+        url  = self.__url + '/%s/' %zone_id + 'purge_cache'
+
+        self.__warning = "\r\n".join([ 
+                '@arno',
+                'Attention: CF域名缓存清理失败，请检查:',
+                'URL:  + %s' %url,
+                #'%s : %s' %(secretid, secretkey)
+              ])
+
+        try:
+            ret = requests.post(url, data=json.dumps(data), headers=self.__headers, verify=False)
+            result = ret.json()
+
+        except Exception, e:
+            result = {'result': None, 'errors': str(e), 'success': False}
+
+        if not result['success']:
+            message['text'] = self.__warning + '\n' + str(result)
+            logger.error(message['text'].replace('\r\n', '\n'))
+            sendTelegram(message).send()
+
+        return result
+
 
 if __name__ == '__main__':
     print 'no'

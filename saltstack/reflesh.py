@@ -5,6 +5,8 @@ from phxweb          import settings
 from accounts.views  import getIp
 from tencent_api     import tcApi
 from ws_api          import wsApi
+from dns.cf_api      import CfApi
+from phxweb.settings import CF_URL
 from detect.models   import domains
 from monitor.models  import cdn_proj_t
 from detect.models   import cdn_account_t as cdn_t
@@ -38,6 +40,21 @@ def GetCdnMiddleSourceList(request):
         return HttpResponse('You get nothing!')
     else:
         return HttpResponse('nothing!')
+
+@csrf_exempt
+def purgeCfDomain(request):
+    if request.method == 'POST':
+        email = "le1.tech001@gmail.com"
+        key   = "29697a07614e03226eb4d32e08b0c2e337cf2"
+
+        data  = json.loads(request.body)
+
+        cfapi = CfApi(CF_URL, email, key)
+        result = cfapi.purge(data["zone_id"])
+        logger.info(result)
+        return HttpResponse(json.dumps(result))
+
+
 
 @csrf_exempt
 def refleshGetDomains(request):

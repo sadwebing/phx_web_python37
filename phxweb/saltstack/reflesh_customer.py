@@ -4,10 +4,13 @@ from phxweb                import settings
 from accounts.views        import getIp
 from saltstack.tencent_api import tcApi
 from saltstack.ws_api      import wsApi
+from dns.cf_api            import CfApi
+from phxweb.settings       import CF_URL
 from saltstack.reflesh     import sendTelegramRe
 from detect.models         import domains
 from monitor.models        import cdn_proj_t
 from detect.models         import cdn_account_t as cdn_t
+from monitor.models        import cf_account as cf_t
 from detect.telegram       import sendTelegram
 
 import json, logging, time, urlparse
@@ -58,7 +61,7 @@ class SaltstackRefleshExecuteCdn(DefConsumer):
             'secretid': str(cdn.secretid),
             'secretkey': str(cdn.secretkey),
             'failed': [],
-            'sccess': [],
+            'success': [],
         }
 
         #logger.info(cdn_d)
@@ -84,7 +87,7 @@ class SaltstackRefleshExecuteCdn(DefConsumer):
                         result, status = req.purge(domains_c, uri)
                         if status:
                             info['result'] = [ domain+uri+": 清缓存成功。" for domain in domains_c ]
-                            cdn_d[cdn]['sccess'] += [ domain+uri for domain in domains_c ]
+                            cdn_d[cdn]['success'] += [ domain+uri for domain in domains_c ]
                         else:
                             info['result'] = [ domain+uri+": 清缓存失败！" for domain in domains_c ]
                             cdn_d[cdn]['failed'] += [ domain+uri for domain in domains_c ]
@@ -96,8 +99,8 @@ class SaltstackRefleshExecuteCdn(DefConsumer):
                 message["text"] = cdn_d[cdn]['failed']
                 message['caption'] = cdn + ': 域名缓存清理失败!'
                 sendTelegramRe(message)
-            if cdn_d[cdn]['sccess']:
-                message["text"] = cdn_d[cdn]['sccess']
+            if cdn_d[cdn]['success']:
+                message["text"] = cdn_d[cdn]['success']
                 message['caption'] = cdn + ': 域名缓存清理成功。'
                 sendTelegramRe(message)
         self.close()
@@ -128,6 +131,7 @@ class SaltstackRefleshExecute(DefConsumer):
 
         ### step one ##
         info = {}
+        info['result'] = []
         info['step'] = 'one'
         self.message.reply_channel.send({'text': json.dumps(info)})
         #time.sleep(2)
@@ -142,7 +146,18 @@ class SaltstackRefleshExecute(DefConsumer):
                 'secretid': str(cdn.secretid),
                 'secretkey': str(cdn.secretkey),
                 'failed': [],
-                'sccess': [],
+                'success': [],
+            }
+        cf_d = {}
+        cfs  = cf_t.objects.all()
+        for cf in cfs:
+            cf_d[cf.name] = {
+                'name': cf.name,
+                'domain': [],
+                'email': str(cf.email),
+                'key': str(cf.key),
+                'failed': [],
+                'success': [],
             }
 
         domain_l = domains.objects.filter(id__in=data['domain']).all()
@@ -150,6 +165,8 @@ class SaltstackRefleshExecute(DefConsumer):
         for domain in domain_l:
             for cdn in domain.cdn.all():
                 cdn_d[cdn.get_name_display()+"_"+cdn.account]['domain'].append(urlparse.urlsplit(domain.name).scheme+"://"+urlparse.urlsplit(domain.name).netloc)
+            for cf in domain.cf.all():
+                cf_d[cf.name]['domain'].append(urlparse.urlsplit(domain.name).scheme+"://"+urlparse.urlsplit(domain.name).netloc)
         #logger.info(cdn_d)
         for cdn in cdn_d:
             info['cdn'] = cdn
@@ -172,12 +189,35 @@ class SaltstackRefleshExecute(DefConsumer):
                     for uri in data['uri']:
                         result, status = req.purge(domains_c, uri)
                         if status:
-                            info['result'] = [ domain+uri+": 清缓存成功。" for domain in domains_c ]
-                            cdn_d[cdn]['sccess'] += [ domain+uri for domain in domains_c ]
+                            info['result'] = [ cdn+": "+domain+uri+": 清缓存成功。" for domain in domains_c ]
+                            cdn_d[cdn]['success'] += [ domain+uri for domain in domains_c ]
                         else:
-                            info['result'] = [ domain+uri+": 清缓存失败！" for domain in domains_c ]
+                            info['result'] = [ cdn+": "+domain+uri+": 清缓存失败！" for domain in domains_c ]
                             cdn_d[cdn]['failed'] += [ domain+uri for domain in domains_c ]
                         self.message.reply_channel.send({'text': json.dumps(info)})
+
+        for cf in cf_d:
+            info['cf'] = cf
+            if cf_d[cf]['domain']:
+                #开始清CF缓存
+                req = CfApi(CF_URL, cf_d[cf]['email'], cf_d[cf]['key'])
+
+                for domain in cf_d[cf]['domain']:
+                    zone = ".".join(domain.split(".")[-2:])
+                    zone_id = req.GetZoneId(zone)['zone_id']
+                    if not zone_id:
+                        info['result'] = ["CloudFlare_"+cf+": "+domain+": 清缓存失败！"]
+                        cf_d[cf]['failed'] += [domain]
+
+                    result = req.purge(zone_id)
+                    if result['success']:
+                        info['result'] = ["CloudFlare_"+cf+": "+domain+": 清缓存成功。"]
+                        cf_d[cf]['success'] += [domain]
+                    else:
+                        info['result'] = ["CloudFlare_"+cf+": "+domain+": 清缓存失败！"]
+                        cf_d[cf]['failed'] += [domain]
+                    self.message.reply_channel.send({'text': json.dumps(info)})
+
         info['step'] = 'final'
         self.message.reply_channel.send({'text': json.dumps(info)})
         for cdn in cdn_d:
@@ -185,8 +225,17 @@ class SaltstackRefleshExecute(DefConsumer):
                 message["text"] = cdn_d[cdn]['failed']
                 message['caption'] = cdn + ': 域名缓存清理失败!'
                 sendTelegramRe(message)
-            if cdn_d[cdn]['sccess']:
-                message["text"] = cdn_d[cdn]['sccess']
+            if cdn_d[cdn]['success']:
+                message["text"] = cdn_d[cdn]['success']
                 message['caption'] = cdn + ': 域名缓存清理成功。'
+                sendTelegramRe(message)
+        for cf in cf_d:
+            if cf_d[cf]['failed']:
+                message["text"] = cf_d[cf]['failed']
+                message['caption'] = "CloudFlare_"+cf + ': 域名缓存清理失败!'
+                sendTelegramRe(message)
+            if cf_d[cf]['success']:
+                message["text"] = cf_d[cf]['success']
+                message['caption'] = "CloudFlare_"+cf + ': 域名缓存清理成功。'
                 sendTelegramRe(message)
         self.close()

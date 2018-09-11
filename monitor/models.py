@@ -146,11 +146,11 @@ class project_t(models.Model):
 
 class cdn_proj_t(models.Model):
     choices_proj = (
-        (0, 'fh_app'),
-        (1, 'fh_cp_static'),
-        (3, 'fh_sp_static'),
-        (2, 'ry_sp_static'),
-        (4, 'java_cp_static'),
+        (0, 'APP下载专用域名'),
+        (1, '凤凰彩票静态域名'),
+        (3, '凤凰体育静态域名'),
+        (2, '瑞银体育静态域名'),
+        (4, 'JAVA彩票静态域名'),
         )
 
     project = models.IntegerField(choices=choices_proj, unique=True)

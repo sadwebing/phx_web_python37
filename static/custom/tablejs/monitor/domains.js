@@ -73,6 +73,19 @@ var tableInit = {
                     //width:'9%',
                     //align: 'center'
                 },{
+                    field: 'cf',
+                    title: 'CloudFlare',
+                    sortable: true,
+                    formatter: function (value, row, index) {
+                        var list = [];
+                        for (var i = row.cf.length - 1; i >= 0; i--) {
+                            list.push(row.cf[i].name+"_"+row.cf[i].account)
+                        }
+                        return list.join('<br>');
+                    }
+                    //width:'9%',
+                    //align: 'center'
+                },{
                     field: 'status',
                     title: '状态',
                     sortable: true,
@@ -314,6 +327,7 @@ var operate = {
                 selects['cdn']      = "";
                 selects['status']   = "<option value=1>启用</option><option value=0>禁用</option>";
                 selects['edit_cdn_bool'] = "<option value=1>更新CDN</option><option value=0 selected>不更新CDN</option>";
+                selects['edit_cf_bool'] = "<option value=1>更新CF</option><option value=0 selected>不更新CF</option>";
                 $.each(data['group_l'], function (index, item) { 
                     selects['group'] = selects['group'] + "<option value="+item.id+" data-subtext='"+item.client+" | "+item.method+" | "+item.ssl+" | "+item.retry+"'>"+item.group+"</option>"
                 }); 
@@ -326,10 +340,14 @@ var operate = {
                 $.each(data['cdn_l'], function (index, item) { 
                     selects['cdn'] = selects['cdn'] + "<option value="+item.id+" data-subtext="+item.name+">"+item.account+"</option>"
                 }); 
+                $.each(data['cf_l'], function (index, item) { 
+                    selects['cf'] = selects['cf'] + "<option value="+item.id+" data-subtext="+item.name+">"+item.account+"</option>"
+                }); 
                 document.getElementById("txt_group").innerHTML=selects['group'];
                 document.getElementById("txt_customer").innerHTML=selects['customer'];
                 document.getElementById("txt_product").innerHTML=selects['product'];
                 document.getElementById("txt_cdn").innerHTML=selects['cdn'];
+                document.getElementById("txt_cf").innerHTML=selects['cf'];
                 
                 //document.getElementById("txt_edit2_cdn").innerHTML=selects['cdn'];
                 $('.selectpicker').selectpicker('refresh');
@@ -350,6 +368,7 @@ var operate = {
             var customer = public.showSelectedValue('txt_customer', true);
             var product  = public.showSelectedValue('txt_product', true);
             var cdn      = public.showSelectedValue('txt_cdn', false);
+            var cf       = public.showSelectedValue('txt_cf', false);
             
             var params = {
                 url: '/monitor/domains/Query',
@@ -363,6 +382,7 @@ var operate = {
                         'customer': customer,
                         'product': product,
                         'cdn': cdn,
+                        'cf':  cf,
                         };
                 },
             }
@@ -477,6 +497,7 @@ var operate = {
             document.getElementById("txt_add_customer").innerHTML=data_all['customer'];
             document.getElementById("txt_add_product").innerHTML=data_all['product'];
             document.getElementById("txt_add_cdn").innerHTML=data_all['cdn'];
+            document.getElementById("txt_add_cf").innerHTML=data_all['cf'];
             $('.selectpicker').selectpicker('refresh');
 
             $("#myModal").modal().on("shown.bs.modal", function () {
@@ -499,6 +520,7 @@ var operate = {
                 'domains' : document.getElementById('textarea_add_domain').value,
                 'content' : document.getElementById('textarea_add_content').value,
                 'cdn'     : public.showSelectedValue('txt_add_cdn', false),
+                'cf'      : public.showSelectedValue('txt_add_cf', false),
             }
 
             if (! postData['group']){
@@ -582,7 +604,9 @@ var operate = {
             document.getElementById("txt_edit_product").innerHTML=data_all['product'];
             document.getElementById("txt_edit_customer").innerHTML=data_all['customer'];
             document.getElementById("txt_edit_cdn").innerHTML=data_all['cdn'];
+            document.getElementById("txt_edit_cf").innerHTML=data_all['cf'];
             document.getElementById("txt_edit_cdn_bool").innerHTML=data_all['edit_cdn_bool'];
+            document.getElementById("txt_edit_cf_bool").innerHTML=data_all['edit_cf_bool'];
             document.getElementById("textarea_edit_domain").value="";
             document.getElementById("textarea_edit_content").value="";
             $('.selectpicker').selectpicker('refresh');
@@ -612,6 +636,9 @@ var operate = {
                 }
                 for(var i = 0; i < data['cdn'].length; i++) { 
                     operate.operateSelected(data['cdn'][i]['id'], 'txt_edit_cdn');
+                }
+                for(var i = 0; i < data['cf'].length; i++) { 
+                    operate.operateSelected(data['cf'][i]['id'], 'txt_edit_cf');
                 }
                 
                 if (document.getElementById(data['id']).checked){
@@ -745,7 +772,9 @@ var operate = {
                     'domains'  : document.getElementById('textarea_edit_domain').value,
                     'content'  : document.getElementById('textarea_edit_content').value,
                     'cdn'      : public.showSelectedValue('txt_edit_cdn', false),
+                    'cf'       : public.showSelectedValue('txt_edit_cf', false),
                     'edit_cdn_bool' : public.showSelectedValue('txt_edit_cdn_bool', false),
+                    'edit_cf_bool'  : public.showSelectedValue('txt_edit_cf_bool', false),
                 }
                 if (arrselectedData.length == 1){
                     if (! postData['group']){

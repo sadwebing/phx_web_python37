@@ -6,6 +6,7 @@ from dwebsocket                     import require_websocket
 from django.views.decorators.csrf   import csrf_exempt, csrf_protect
 from models                         import project_t, minion_t
 from detect.models                  import domains, groups, cdn_account_t
+from dns.models                     import cf_account
 from saltstack.command              import Command
 from accounts.views                 import HasPermission, getIp
 from phxweb                         import settings
@@ -39,14 +40,22 @@ def DomainsQuery(request):
             product  = data['product'] if data.has_key('product') else []
             customer = data['customer'] if data.has_key('customer') else []
             cdn      = data['cdn'] if data.has_key('cdn') else []
+            cf       = data['cf'] if data.has_key('cf') else []
             #logger.info(data)
         except:
             status = None
         if status:
-            if len(cdn) == 0:
-                datas = domains.objects.filter(status__in=status, group__id__in=group, product__in=product, customer__in=customer).all().order_by('-id')[:num]
-            else:
-                datas = domains.objects.filter(status__in=status, group__id__in=group, product__in=product, customer__in=customer, cdn__in=cdn).all().order_by('-id')[:num]
+            domains_ft = domains.objects.filter(status__in=status, group__id__in=group, product__in=product, customer__in=customer)
+            if len(cdn) != 0:
+                domains_ft = domains_ft.filter(cdn__in=cdn)
+            if len(cf) != 0:
+                domains_ft = domains_ft.filter(cf__in=cf)
+            datas = domains_ft.all().order_by('-id')[:num]
+
+            #if len(cdn) == 0:
+            #    datas = domains.objects.filter(status__in=status, group__id__in=group, product__in=product, customer__in=customer).all().order_by('-id')[:num]
+            #else:
+            #    datas = domains.objects.filter(status__in=status, group__id__in=group, product__in=product, customer__in=customer, cdn__in=cdn, cf__in=cf).all().order_by('-id')[:num]
         else:
             return HttpResponseServerError(u"参数错误！")
 
@@ -66,6 +75,11 @@ def DomainsQuery(request):
                     'name':    cdn.get_name_display(),
                     'account': cdn.account,
                 } for cdn in domain.cdn.all()]
+            tmp_dict['cf']       = [{
+                    'id':      cf.id,
+                    'name':    "cloudflare",
+                    'account': cf.name,
+                } for cf in domain.cf.all()]
 
             domain_list.append(tmp_dict)
         #logger.info(domain_list)
@@ -89,7 +103,10 @@ def GetGroups(request):
                 'product_l' : settings.choices_product,
                 'group_l'   : [],
                 'cdn_l'     : [],
+                'cf_l'      : [],
             }
+
+        cf_ac  = cf_account.objects.all()
 
         for cdn in cdns:
             tmp_dict = {
@@ -99,6 +116,15 @@ def GetGroups(request):
             }
 
             items['cdn_l'].append(tmp_dict)
+
+        for cf in cf_ac:
+            tmp_dict = {
+                'id':      cf.id,
+                'name':    "cloudflare",
+                'account': cf.name,
+            }
+            items['cf_l'].append(tmp_dict)
+
         for item in group:
             tmp_dict = {}
             tmp_dict['id']     = item.id
@@ -180,6 +206,9 @@ def DomainsAdd(request):
                 for id in datas['cdn']:
                     info.cdn.add(cdn_account_t.objects.get(id=id))
                     info.save()
+                for id in datas['cf']:
+                    info.cf.add(cf_account.objects.get(id=id))
+                    info.save()
         if exist:
             return HttpResponse(str(exist)+'已存在，其余的新增成功！')
         else:
@@ -213,6 +242,14 @@ def DomainsUpdate(request):
                     #info.cdn.all().delete()
                 for id in datas['cdn']:
                     info.cdn.add(cdn_account_t.objects.get(id=id))
+                    info.save()
+            if int(datas['edit_cf_bool'][0]) == 1:
+                for cf in info.cf.all():
+                    info.cf.remove(cf)
+                    info.save()
+                    #info.cf.all().delete()
+                for id in datas['cf']:
+                    info.cf.add(cf_account.objects.get(id=id))
                     info.save()
             info.name     = datas['domain_l'][i]
             info.product  = datas['product'] if datas['product'] else prod_d[line['product']]

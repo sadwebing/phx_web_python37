@@ -25,5 +25,6 @@ urlpatterns = [
     url('^reflesh/execute$', views.refleshExecute),
     url('^reflesh/execute_cdn$', views.refleshExecuteCdn),
     url('^reflesh/purge$', views.refleshPurge),
+    url('^reflesh/purgecfdomain$', views.purgeCfDomain),
     
 ]
