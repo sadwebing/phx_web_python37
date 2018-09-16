@@ -84,9 +84,12 @@ var gp = {
                                                     '<optgroup label="勇士[yongshi]">',
                                                         html_dict['勇士[yongshi]2'],
                                                     '</optgroup>',
-                                                        '<optgroup label="JAVA">',
+                                                    '<optgroup label="JAVA">',
                                                     html_dict['JAVA2'],
-                                            '</optgroup>',
+                                                    '</optgroup>',
+                                                    '<optgroup label="瑞银[ruiyin|UBS]">',
+                                                    html_dict['瑞银[ruiyin|UBS]2'],
+                                                    '</optgroup>',
                                                     ].join("")
                 if (document.getElementById('project_active')){
                     document.getElementById('project_active').innerHTML=html_project_active;
