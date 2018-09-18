@@ -152,7 +152,10 @@ def getProjects(request, value, data={}):
     user = User.objects.get(username=request.user.username) #获取用户信息
     permission = permission_t.objects.get(permission=value) #权限
     if request.user.is_superuser:
-        projects = project_t.objects.filter(status=1).all()
+        if data:
+            projects = project_t.objects.filter(status=1, envir__in=data['envir'], product__in=data['product'], project__in=data['project'], customer__in=data['customer'], server_type__in=data['server_type']).all()
+        else:
+            projects = project_t.objects.filter(status=1).all()
     else:
         try:
             authoritys = user_project_authority_t.objects.filter(user=user, permission__in=[permission]).all()

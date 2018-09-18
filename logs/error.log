@@ -23601,3 +23601,18 @@ Traceback (most recent call last):
   File "J:\arno\test\lib\site-packages\django\utils\functional.py", line 239, in inner
     return func(self._wrapped, *args)
 AttributeError: 'AnonymousUser' object has no attribute 'userprofile'
+2018-09-18 15:25:26,276 views.py [django:94] [ERROR]- failed to get cookies for 测试环境[TEST]_JAVA_彩票[caipiao]_后端源服务器[backend]
+2018-09-18 15:25:26,305 views.py [django:94] [ERROR]- failed to get cookies for 测试环境[TEST]_JAVA_彩票[caipiao]_后端源服务器[backend]
+2018-09-18 15:25:26,326 views.py [django:94] [ERROR]- failed to get cookies for 测试环境[TEST]_JAVA_彩票[caipiao]_后端源服务器[backend]
+2018-09-18 15:25:26,348 views.py [django:94] [ERROR]- failed to get cookies for 测试环境[TEST]_JAVA_彩票[caipiao]_后端源服务器[backend]
+2018-09-18 15:25:26,371 views.py [django:94] [ERROR]- failed to get cookies for 运营环境[ONLINE]_JAVA_彩票[caipiao]_反代服务器[front]
+2018-09-18 15:25:26,394 views.py [django:94] [ERROR]- failed to get cookies for 运营环境[ONLINE]_JAVA_彩票[caipiao]_反代服务器[front]
+2018-09-18 15:25:26,421 views.py [django:94] [ERROR]- failed to get cookies for 运营环境[ONLINE]_JAVA_彩票[caipiao]_反代服务器[front]
+2018-09-18 15:25:40,566 views.py [django:94] [ERROR]- failed to get cookies for 测试环境[TEST]_JAVA_彩票[caipiao]_后端源服务器[backend]
+2018-09-18 15:25:40,589 views.py [django:94] [ERROR]- failed to get cookies for 测试环境[TEST]_JAVA_彩票[caipiao]_后端源服务器[backend]
+2018-09-18 15:25:40,612 views.py [django:94] [ERROR]- failed to get cookies for 测试环境[TEST]_JAVA_彩票[caipiao]_后端源服务器[backend]
+2018-09-18 15:25:40,634 views.py [django:94] [ERROR]- failed to get cookies for 测试环境[TEST]_JAVA_彩票[caipiao]_后端源服务器[backend]
+2018-09-18 15:27:30,451 views.py [django:94] [ERROR]- failed to get cookies for 测试环境[TEST]_JAVA_彩票[caipiao]_后端源服务器[backend]
+2018-09-18 15:27:30,479 views.py [django:94] [ERROR]- failed to get cookies for 测试环境[TEST]_JAVA_彩票[caipiao]_后端源服务器[backend]
+2018-09-18 15:27:30,500 views.py [django:94] [ERROR]- failed to get cookies for 测试环境[TEST]_JAVA_彩票[caipiao]_后端源服务器[backend]
+2018-09-18 15:27:30,523 views.py [django:94] [ERROR]- failed to get cookies for 测试环境[TEST]_JAVA_彩票[caipiao]_后端源服务器[backend]
