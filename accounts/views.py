@@ -147,7 +147,7 @@ def getIp(request):
         clientip = request.META['REMOTE_ADDR']
     return clientip
 
-def getProjects(request, value):
+def getProjects(request, value, data={}):
     projects = []
     user = User.objects.get(username=request.user.username) #获取用户信息
     permission = permission_t.objects.get(permission=value) #权限
@@ -157,7 +157,10 @@ def getProjects(request, value):
         try:
             authoritys = user_project_authority_t.objects.filter(user=user, permission__in=[permission]).all()
             for authority in authoritys:
-                projects += [ project for project in authority.project.filter(status=1).all().order_by('product')]
+                if data:
+                    projects += [ project for project in authority.project.filter(status=1, envir__in=data['envir'], product__in=data['product'], project__in=data['project'], customer__in=data['customer'], server_type__in=data['server_type']).all().order_by('product')]
+                else:
+                    projects += [ project for project in authority.project.filter(status=1).all().order_by('product')]
         except:
             projects = []
     return projects

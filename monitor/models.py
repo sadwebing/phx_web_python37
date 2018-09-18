@@ -15,6 +15,9 @@ sys.setdefaultencoding('utf8')
 choices_st = (
         ('nginx',  'nginx'), 
         ('apache', 'apache'),
+        ('mysql',  'mysql'),
+        ('tomcat', 'tomcat'),
+        ('nodejs', 'nodejs'),
         ('vpn',    'vpn'),
         ('flask',  'flask'),
         ('logstash', 'logstash'),
