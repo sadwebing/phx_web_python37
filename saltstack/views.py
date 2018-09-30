@@ -176,6 +176,10 @@ def CommandDeploy(request):
         clientip = request.META['REMOTE_ADDR']
         #logger.info(dir(request.websocket))
         #message = request.websocket.wait()
+
+        #配置文件目录
+        conf_dir = "/srv/salt/nginx/files"
+
         for postdata in request.websocket:
             if not postdata:
                 break
@@ -194,7 +198,12 @@ def CommandDeploy(request):
             info_final['step'] = 'final'
 
             commandexe = Command(data['minion_id'], 'state.sls', expr_form='list')
+
+            #同步配置文件
+
             info_final['results'] = commandexe.StateSls('nginx.conf')
+
+            #reload服务
             info_final['results'] = commandexe.StateSls('nginx.reload')
             #info_final['results'] = dict(info_final['results'], **commandexe.StateSls('nginx.reload'))
 

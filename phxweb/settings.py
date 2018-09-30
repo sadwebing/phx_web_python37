@@ -88,7 +88,7 @@ message_TEST = {
 
 message_ONLINE = {
     'doc': False,
-    'bot': "AuraAlertBot", #AuraAlertBot: 大魔王
+    'bot': "sa_monitor_bot", #AuraAlertBot: 大魔王
     'text': "",
     'group': "kindergarten",
     'parse_mode': "HTML",

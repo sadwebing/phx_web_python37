@@ -54,8 +54,8 @@ class SaltstackCommandDeploy(DefConsumer):
         info['step'] = 'final'
 
         commandexe = Command(data['minion_id'], 'state.sls', expr_form='list')
-        info['results'] = commandexe.StateSls('nginx.conf')
-        info['results'] = commandexe.StateSls('nginx.reload')
+        info['results'] = commandexe.StateSls('nginx.conf_dev')
+        #info['results'] = commandexe.StateSls('nginx.reload')
         #info['results'] = dict(info['results'], **commandexe.StateSls('nginx.reload'))
 
         self.message.reply_channel.send({'text': json.dumps(info)})
