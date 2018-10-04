@@ -29,7 +29,7 @@ SECRET_KEY = 'm1!&%(kha(g04bl7ek*hh@ly$ibnm8@2zrnkmxxkzcf6jjc4d@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '58.64.145.50', 'sa.l510881.com']
+ALLOWED_HOSTS = ['127.0.0.1', '182.16.117.186', '182.16.117.187', '182.16.117.188', '182.16.117.189', '182.16.117.190', 'sa.l510881.com']
 
 
 LOGIN_REDIRECT_URL = '/home'
@@ -51,7 +51,7 @@ DnsPod_URL = 'https://dnsapi.cn/'
 
 #saltstack api
 SALT_API = {
-    'url':"https://58.64.145.50:8000/",
+    'url':"https://182.16.117.187:8000/",
     #'url_glb':"https://172.20.10.109:8000/",
     'user':"api",
     'password':"phexus666",
@@ -164,7 +164,7 @@ DATABASES = {
         # The following settings are not used with sqlite3:
         'USER': 'phxweb',
         'PASSWORD': 'phexus666',
-        'HOST': '58.64.145.50',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'HOST': '182.16.117.187',            # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
         'OPTIONS': {
             #'init_command': 'SET sql_mode=STRICT_TRANS_TABLES',
