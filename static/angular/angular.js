@@ -10982,9 +10982,9 @@ function $$IsDocumentHiddenProvider() {
  *   angular.
  *     module('exceptionOverwrite', []).
  *     factory('$exceptionHandler', ['$log', 'logErrorsToBackend', function($log, logErrorsToBackend) {
- *       return function myExceptionHandler(exception, cause) {
- *         logErrorsToBackend(exception, cause);
- *         $log.warn(exception, cause);
+ *       return function myExceptionHandler(Exception as cause) {
+ *         logErrorsToBackend(Exception as cause);
+ *         $log.warn(Exception as cause);
  *       };
  *     }]);
  * ```
@@ -11004,7 +11004,7 @@ function $$IsDocumentHiddenProvider() {
  */
 function $ExceptionHandlerProvider() {
   this.$get = ['$log', function($log) {
-    return function(exception, cause) {
+    return function(Exception as cause) {
       $log.error.apply($log, arguments);
     };
   }];

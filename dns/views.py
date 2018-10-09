@@ -2,10 +2,10 @@
 from django.shortcuts import render
 from django.http      import HttpResponse, HttpResponseForbidden
 from dwebsocket       import require_websocket
-from models           import cf_account, dnspod_account
-from cf_api           import CfApi
-from dnspod           import *
-from cf               import *
+from dns.models       import cf_account, dnspod_account
+from dns.cf_api       import CfApi
+from dns.dnspod       import *
+from dns.cf           import *
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf   import csrf_exempt, csrf_protect
 

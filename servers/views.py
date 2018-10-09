@@ -94,7 +94,7 @@ def decryptPasswd(request, project, passwd):
                     logger.error("failed to get cookies for %s" %item_display)
             else:
                 setcookieV[item] = True
-    except Exception, e:
+    except Exception as e:
         logger.error(str(e))
         setcookieV[item] = False
         privatekey       = None
@@ -104,7 +104,7 @@ def decryptPasswd(request, project, passwd):
             private_key = rsa.PrivateKey.load_pkcs1(privatekey) #获取私钥
             #private_key = rsa.PrivateKey.load_pkcs1(project.privatekey) #获取私钥
             password = rsa.decrypt(base64.decodestring(passwd), private_key).decode() #用私钥解密
-        except Exception, e:
+        except Exception as e:
             logger.error(item_display+": "+str(e))
             password = error
     else:
@@ -120,7 +120,7 @@ def encryptPasswd(password, record):
         public_key = rsa.PublicKey.load_pkcs1_openssl_pem(pubkey)
         crypto     = base64.encodestring(rsa.encrypt(password.encode(), public_key))
         return crypto, True
-    except Exception, e:
+    except Exception as e:
         return str(e), False
 
 def setCookies(request, response, setcookieV):
@@ -129,7 +129,7 @@ def setCookies(request, response, setcookieV):
         for key in data['privkey']:
             if setcookieV.has_key(key) and setcookieV[key]:
                 response.set_cookie(key, data['privkey'][key], max_age=604800)
-    except Exception, e:
+    except Exception as e:
         logger.error(e)
 
 def isStrinList(strA, listB):
@@ -172,7 +172,7 @@ def GetServersRecords(request):
             #authoritys = request.user.userprofile.servers.filter(read=1).all()
             #for authority in authoritys:
             #    projects += [ project for project in authority.project.filter(envir__in=data['envir'], product__in=data['product'], project__in=data['project'], customer__in=data['customer'], server_type__in=data['server_type']).all().order_by('product')]
-        except Exception, e:
+        except Exception as e:
             logger.error(str(e))
             projects = []
 
@@ -309,7 +309,7 @@ def UpdateServers(request):
                     update = minion_t.objects.get(minion_id=record['minion_id'])
                     update.password = crypto
                     update.save()
-                except Exception, e:
+                except Exception as e:
                     sendTelegram(message).send()
                     return_info['result'] = False
                     return_info['info']   = "密码修改成功，但是密码存入失败：" + str(e)

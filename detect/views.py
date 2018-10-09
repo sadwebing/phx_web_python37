@@ -4,10 +4,10 @@ from django.contrib.auth.decorators import login_required
 from django.http                    import HttpResponse
 from django.views.decorators.csrf   import csrf_exempt, csrf_protect
 from dwebsocket                     import require_websocket, accept_websocket
-from models                         import domains
+from detect.models                  import domains
 from monitor.models                 import telegram_ssl_alert_t
 from accounts.limit                 import LimitAccess
-from telegram                       import sendTelegram
+from detect.telegram                import sendTelegram
 from phxweb                         import settings
 import json, logging, requests, re
 
@@ -32,7 +32,7 @@ def GetDomains(request):
                 domain_l = domains.objects.filter(status=1, product=product).all()
 
             alert_l  = telegram_ssl_alert_t.objects.filter(status=1).all()
-        except Exception, e:
+        except Exception as e:
             logger.error(e.message)
             domain_l = []
             alert_l  = []
@@ -86,7 +86,7 @@ def SendTelegram(request):
                     return HttpResponse(content='参数错误！', status=500)
                 else: 
                     return HttpResponse(content='telegram 发送失败！', status=502)
-        except Exception, e:
+        except Exception as e:
             logger.error(e.message)
             s = sendTelegram({'text': clientip + ': 发送telegram信息失败！\r\n' + e.message, 'bot': 'sa_monitor_bot', 'group': 'arno_test'}) #arno_test
             if s.send():

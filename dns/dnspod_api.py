@@ -41,7 +41,7 @@ class DpApi(object):
         #logger.info(self.__data)
         try:
             ret = requests.post(url, data=self.__data, verify=False)
-        except Exception, e:
+        except Exception as e:
             message['text'] = self.__warning + '\nException: ' + e.message
             logger.error(message['text'])
             sendTelegram(message).send()
@@ -117,4 +117,4 @@ class DpApi(object):
         return self.ExePost('/Record.Modify', "Dnspod域名[%s]解析修改" %(sub_domain+'.'+domain))
         
 if __name__ == '__main__':
-    print 'no'
+    print ('no')

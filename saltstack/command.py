@@ -1,7 +1,4 @@
 # coding: utf8
-import sys
-reload(sys)
-sys.setdefaultencoding('utf8')
 from phxweb import settings
 from saltstack.saltapi import SaltAPI
 import json, logging, yaml

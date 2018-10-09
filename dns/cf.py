@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.http                    import HttpResponse, HttpResponseForbidden, HttpResponseServerError
 from dwebsocket                     import require_websocket, accept_websocket
 from django.views.decorators.csrf   import csrf_exempt, csrf_protect
-from models                         import cf_account, domain_info, alter_history
-from cf_api                         import CfApi
+from dns.models                     import cf_account, domain_info, alter_history
+from dns.cf_api                         import CfApi
 from accounts.views                 import HasDnsPermission, HasPermission, getIp, insert_ah
 from phxweb.settings                import CF_URL
 from pypinyin                       import lazy_pinyin
@@ -132,7 +132,7 @@ def CreateRecords(request):
 
             try:
                 cfapi = CfApi(CF_URL, cf_acc.email, cf_acc.key)
-            except Exception, e:
+            except Exception as e:
                 info  = "新增 %s 域名失败: %s" %(record_name, str(e))
                 logger.error(info)
                 result = {'result': None, 'errors': str(e), 'success': False}
@@ -193,7 +193,7 @@ def CreateRecords(request):
                 cf_acc = cf_account.objects.get(name=data['product'])
                 try:
                     cfapi = CfApi(CF_URL, cf_acc.email, cf_acc.key)
-                except Exception, e:
+                except Exception as e:
                     logger.error("新增 %s 域名失败！" %return_info['domain'])
                     return_info['result'] = False
                 else:
@@ -323,7 +323,7 @@ def DeleteRecords(request):
 
             try:
                 cfapi  = CfApi(CF_URL, cf_acc.email, cf_acc.key)
-            except Exception, e:
+            except Exception as e:
                 logger.error("删除 %s 域名失败！%s" %(zone['name'], str(e)))
                 return HttpResponseServerError("删除 %s 域名失败！" %zone['name'])
             else:

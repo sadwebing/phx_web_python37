@@ -4,14 +4,14 @@ from django.contrib.auth.decorators import login_required
 from django.http                    import HttpResponse
 from django.views.decorators.csrf   import csrf_exempt, csrf_protect
 from accounts.limit                 import LimitAccess
-from project                        import *
-from domains                        import *
+from monitor.project                import *
+from monitor.domains                import *
 import json, logging
 logger = logging.getLogger('django')
 
 
 @csrf_protect
-@login_required
+#@login_required
 def index(request):
     title = u'管理中心-主页'
     global username, role, clientip

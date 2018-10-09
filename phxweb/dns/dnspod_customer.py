@@ -52,7 +52,7 @@ class DnsDnspodRecordUpdate(DefConsumer):
             dp_acc = dnspod_account.objects.get(name=record['product'])
             try:
                 dpapi = DpApi(DnsPod_URL, dp_acc.key)
-            except Exception, e:
+            except Exception as e:
                 logger.error("修改 %s 域名失败！" %record['name'])
                 return_info['result'] = False
             else:
@@ -121,7 +121,7 @@ class DnsDnspodRecordAdd(DefConsumer):
             dp_acc = dnspod_account.objects.get(name=data['product'])
             try:
                 dpapi = DpApi(DnsPod_URL, dp_acc.key)
-            except Exception, e:
+            except Exception as e:
                 logger.error("新增 %s 域名失败！" %return_info['domain'])
                 return_info['result'] = False
             else:

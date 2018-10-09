@@ -17,8 +17,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('permission', models.CharField(max_length=10, choices=[('read', '\u8bfb\u6743\u9650'), ('change', '\u6539\u6743\u9650'), ('delete', '\u5220\u6743\u9650'), ('add', '\u589e\u6743\u9650')])),
-                ('cf_account', models.ForeignKey(to='dns.cf_account', blank=True)),
-                ('dnspod_account', models.ForeignKey(to='dns.dnspod_account', blank=True)),
+                ('cf_account', models.ForeignKey(to='dns.cf_account', blank=True, on_delete=models.CASCADE)),
+                ('dnspod_account', models.ForeignKey(to='dns.dnspod_account', blank=True, on_delete=models.CASCADE)),
             ],
         ),
     ]

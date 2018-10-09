@@ -6,7 +6,7 @@
 
 import requests, sys, os
 import datetime, json, logging, re
-from models import telegram_user_id_t, telegram_chat_group_t
+from detect.models import telegram_user_id_t, telegram_chat_group_t
 from phxweb import settings
 
 logger = logging.getLogger('django')
@@ -100,7 +100,7 @@ class sendTelegram(object):
                 self.__files = {'document': open(self.__message['doc_name'], 'rb')}
                 ret = requests.post(self.__url+'sendDocument', data=self.__message, files=self.__files, timeout=self.__timeout)
                 
-        except Exception, e:
+        except Exception as e:
             logger.error('Attention: send message failed!')
             logger.error(e.message)
             return False

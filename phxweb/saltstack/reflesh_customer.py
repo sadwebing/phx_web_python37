@@ -13,7 +13,11 @@ from detect.models         import cdn_account_t as cdn_t
 from monitor.models        import cf_account as cf_t
 from detect.telegram       import sendTelegram
 
-import json, logging, time, urlparse
+import json, logging, time
+try:
+    import urlparse
+except ImportError:
+    import urllib.parse as urlparse
 
 logger = logging.getLogger('django')
 

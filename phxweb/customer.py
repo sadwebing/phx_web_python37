@@ -1,9 +1,9 @@
 # coding: utf8
-from channels          import Channel, Group
-from channels.sessions import channel_session
-from channels.auth     import channel_session_user, channel_session_user_from_http
-from channels.generic.websockets import WebsocketConsumer
+#from channels          import Channel, Group
+#from channels.sessions import channel_session
+#from channels.auth     import channel_session_user, channel_session_user_from_http
 
+from channels.generic.websocket import WebsocketConsumer
 import json, logging
 
 logger = logging.getLogger('django')

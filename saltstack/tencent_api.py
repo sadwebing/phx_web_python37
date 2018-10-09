@@ -6,7 +6,7 @@
 #version: 1.0 20180626 实现基本功能
 #version: 1.1 20180822 新增获取中间源IP列表
 
-import requests, sys, commands, os, random, operator
+import requests, sys, os, random, operator
 import datetime, json, time, logging, urllib
 from phxweb          import settings
 from detect.telegram import sendTelegram
@@ -91,7 +91,7 @@ class tcApi(object):
         url = "https://" + tencent_url
         try:
             ret = requests.post(url, data=self.__params, verify=False)
-        except Exception, e:
+        except Exception as e:
             message['text'] = self.__warning + '\nException: ' + e.message
             logger.error(message['text'])
             sendTelegram(message).send()
@@ -120,7 +120,7 @@ class tcApi(object):
         #logger.info(self.__params)
         try:
             ret = requests.post(url, data=self.__params, verify=False)
-        except Exception, e:
+        except Exception as e:
             message['text'] = self.__warning + '\n%s | Exception: ' %url + e.message
             logger.error(message['text'])
             sendTelegram(message).send()
@@ -154,7 +154,7 @@ class tcApi(object):
         #logger.info(self.__params)
         try:
             ret = requests.post(url, data=self.__params, verify=False)
-        except Exception, e:
+        except Exception as e:
             message['text'] = self.__warning + '\n%s | Exception: ' %url + e.message
             logger.error(message['text'])
             sendTelegram(message).send()
@@ -173,4 +173,4 @@ class tcApi(object):
 
 
 if __name__ == '__main__':
-    print "腾讯云"
+    print ("腾讯云")

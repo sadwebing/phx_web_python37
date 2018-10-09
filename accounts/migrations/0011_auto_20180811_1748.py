@@ -19,8 +19,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('permission', models.ManyToManyField(to='monitor.permission_t')),
-                ('project', models.ForeignKey(to='monitor.project_t')),
-                ('user', models.ForeignKey(to=settings.AUTH_USER_MODEL)),
+                ('project', models.ForeignKey(to='monitor.project_t', on_delete=models.CASCADE)),
+                ('user', models.ForeignKey(to=settings.AUTH_USER_MODEL, on_delete=models.CASCADE)),
             ],
         ),
         migrations.AlterUniqueTogether(

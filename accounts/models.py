@@ -9,7 +9,7 @@ class UserProfile(models.Model):
                 (1, '管理'), 
                 (0, '普通'),
                 )
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     role = models.CharField(max_length=200, default='', blank=True)
     manage  = models.IntegerField(choices=choices_mg, default=0)
     #project = models.ManyToManyField(project_t, blank=True)
@@ -28,7 +28,7 @@ def create_user_profile(sender, instance, created, **kwargs):
         profile.save()
 
 class user_project_authority_t(models.Model):
-    user       = models.ForeignKey(User, blank=False, null=False)
+    user       = models.ForeignKey(User, on_delete=models.CASCADE, blank=False, null=False)
     project    = models.ManyToManyField(project_t, blank=False)
     permission = models.ManyToManyField(permission_t, blank=False)
 

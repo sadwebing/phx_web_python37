@@ -75,7 +75,7 @@ class domains(models.Model):
     name       = models.CharField(max_length=128, unique=True, null=False)
     product    = models.IntegerField(choices=choices_product, default=12)
     customer   = models.IntegerField(choices=choices_customer)
-    group      = models.ForeignKey(groups)
+    group      = models.ForeignKey(groups, on_delete=models.CASCADE)
     #chat_group = models.ManyToManyField(telegram_chat_group_t, blank=True)
     content    = models.CharField(max_length=128, blank=True)
     status     = models.IntegerField(choices=choices_s, default=1)

@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='domains',
             name='group',
-            field=models.ForeignKey(to='detect.groups'),
+            field=models.ForeignKey(on_delete=models.CASCADE, to='detect.groups'),
         ),
     ]

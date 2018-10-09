@@ -3,8 +3,8 @@ from django.http     import HttpResponse, HttpResponseForbidden, HttpResponseSer
 from accounts.limit  import LimitAccess
 from phxweb          import settings
 from accounts.views  import getIp
-from tencent_api     import tcApi
-from ws_api          import wsApi
+from saltstack.tencent_api     import tcApi
+from saltstack.ws_api          import wsApi
 from dns.cf_api      import CfApi
 from phxweb.settings import CF_URL
 from detect.models   import domains
@@ -13,7 +13,12 @@ from detect.models   import cdn_account_t as cdn_t
 from dwebsocket      import require_websocket, accept_websocket
 from detect.telegram import sendTelegram
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
-import json, logging, time, urlparse
+import json, logging, time
+try:
+    import urlparse
+except ImportError:
+    import urllib.parse as urlparse
+
 logger = logging.getLogger('django')
 
 #telegram 参数
@@ -178,7 +183,7 @@ def refleshPurge(request):
                 if not isinstance(data['uri'], list):
                     return HttpResponseServerError("uri错误！")
 
-        except Exception, e:
+        except Exception as e:
             logger.error("执行清缓存失败: %s" %str(e))
             return HttpResponseServerError("执行清缓存失败: %s" %str(e))
 

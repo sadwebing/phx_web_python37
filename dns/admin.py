@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import cf_account, dnspod_account, domain_info, alter_history
+from dns.models import cf_account, dnspod_account, domain_info, alter_history
 # Register your models here.
 
 admin.site.register(cf_account)

@@ -9,7 +9,11 @@ from accounts.views    import getIp, getProjects
 from accounts.models   import user_project_authority_t
 from saltstack.reflesh import *
 
-import json, logging, time, urlparse
+import json, logging, time
+try:
+    import urlparse
+except ImportError:
+    import urllib.parse as urlparse
 
 logger = logging.getLogger('django')
 

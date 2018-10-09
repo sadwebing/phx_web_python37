@@ -1048,7 +1048,7 @@ Traceback (most recent call last):
   File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
     response = self.process_exception_by_middleware(e, request)
   File "J:\arno\test\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
-    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+    return super(AsgiHandler, self).process_exception_by_middleware(Exception as request)
   File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
   File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
@@ -1067,7 +1067,7 @@ Traceback (most recent call last):
   File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
     response = self.process_exception_by_middleware(e, request)
   File "J:\arno\test\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
-    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+    return super(AsgiHandler, self).process_exception_by_middleware(Exception as request)
   File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
   File "J:\arno\test\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
@@ -3443,3 +3443,819 @@ Traceback (most recent call last):
 VariableDoesNotExist: Failed lookup for key [can_delete_related] in u'[{\'False\': False, \'None\': None, \'True\': True}, {u\'url_params\': u\'_to_field=id&_popup=1\', \'add_related_url\': u\'/admin/monitor/minion_t/add/\', u\'name\': \'minion_id\', \'can_add_related\': True, u\'model\': \'minion_t\', u\'rendered_widget\': u\'<select name="minion_id" required multiple="multiple" id="id_minion_id">\\n  <option value="1">HT_NG_HK_84_74 - fent - \\u542f\\u7528</option>\\n\\n  <option value="2">HT_NG_HK_55_50 - fent - \\u542f\\u7528</option>\\n\\n  <option value="4">CP_NG_HK_83_36 - fent - \\u542f\\u7528</option>\\n\\n  <option value="5">CP_NG_HK_8_82 - fent - \\u542f\\u7528</option>\\n\\n  <option value="6">CP_NG_HK_85_10 - fent - \\u542f\\u7528</option>\\n\\n  <option value="9">CP_NG_HK_179_204 - \\u4f18\\u4e0e\\u4e91[youyucloud] - \\u542f\\u7528</option>\\n\\n  <option value="28">CP_NG_HK_137_13 - \\u4e45\\u901f[jiusu] - \\u542f\\u7528</option>\\n\\n  <option value="11">SP_NG_HK_173_3 - \\u4e45\\u901f[jiusu] - \\u542f\\u7528</option>\\n\\n  <option value="12">SP_NG_HK_55_122 - fent - \\u542f\\u7528</option>\\n\\n  <option value="13">SP_NG_HK_91_122 - fent - \\u542f\\u7528</option>\\n\\n  <option value="14">JAVATEST_TOMCAT_HK_153_113 - \\u661f\\u8054[xinglian] - \\u542f\\u7528</option>\\n\\n  <option value="15">SA-VPN-SH-101-236 - \\u53f0\\u6e7e\\u673a\\u623f[taiwan] - \\u542f\\u7528</option>\\n\\n  <option value="16">SA-VPN-BJ-35-62 - \\u53f0\\u6e7e\\u673a\\u623f[taiwan] - \\u542f\\u7528</option>\\n\\n  <option value="17">SA-VPN-HK-4-12 - \\u53f0\\u6e7e\\u673a\\u623f[taiwan] - \\u542f\\u7528</option>\\n\\n  <option value="19">YS_NG_HK_44_202 - \\u7f51\\u65f6[wangshi] - \\u542f\\u7528</option>\\n\\n  <option value="21">YS_NG_HK_40_76 - \\u4e45\\u901f[jiusu] - \\u542f\\u7528</option>\\n\\n  <option value="34">CP_NG_HK_42_48 - \\u4e45\\u901f[jiusu] - \\u542f\\u7528</option>\\n\\n  <option value="23">YS_NG_HK_84_110 - \\u7f51\\u65f6[wangshi] - \\u542f\\u7528</option>\\n\\n  <option value="24">YS_NG_HK_94_40 - fent - \\u542f\\u7528</option>\\n\\n  <option value="25">YS_NG_HK_8_92 - \\u7f51\\u65f6[wangshi] - \\u542f\\u7528</option>\\n\\n  <option value="26">YSHT_NG_HK_169_9 - \\u4e45\\u901f[jiusu] - \\u542f\\u7528</option>\\n\\n  <option value="27">YSHT_NG_HK_77_181 - fent - \\u542f\\u7528</option>\\n\\n  <option value="29">JAVA_NG_HK_228_97 - \\u53f0\\u6e7e\\u673a\\u623f[taiwan] - \\u7981\\u7528</option>\\n\\n  <option value="30">JAVA_NG_HK_33_71 - fent - \\u542f\\u7528</option>\\n\\n  <option value="31">JAVA_NG_HK_48_196 - \\u53f0\\u6e7e\\u673a\\u623f[taiwan] - \\u7981\\u7528</option>\\n\\n  <option value="32">JAVA_NG_HK_83_86 - fent - \\u542f\\u7528</option>\\n\\n  <option value="35">IMAGE_NG_HK_33_76 - \\u4e45\\u901f[jiusu] - \\u542f\\u7528</option>\\n\\n  <option value="36">PUB_DNS_HK_181_165 - \\u675c\\u675c[dudu] - \\u542f\\u7528</option>\\n\\n  <option value="37">DXGGZ_NG_HK_153_74 - \\u661f\\u8054[xinglian] - \\u542f\\u7528</option>\\n\\n  <option value="38">SPGGZ_NG_US_254_108 - fent - \\u542f\\u7528</option>\\n\\n  <option value="39">RYHT_NG_HK_2_194 - \\u675c\\u675c[dudu] - \\u542f\\u7528</option>\\n\\n  <option value="40">RYHT_NG_HK_83_53 - fent - \\u542f\\u7528</option>\\n\\n  <option value="41">RYCP_NG_HK_97_82 - \\u661f\\u8054[xinglian] - \\u7981\\u7528</option>\\n\\n  <option value="42">RYCP_NG_HK_8_90 - \\u661f\\u8054[xinglian] - \\u7981\\u7528</option>\\n\\n  <option value="43">RYCP_NG_HK_136_171 - \\u963f\\u91cc\\u4e91[alicloud] - \\u542f\\u7528</option>\\n\\n  <option value="44">RYCP_NG_HK_100_71 - \\u963f\\u91cc\\u4e91[alicloud] - \\u542f\\u7528</option>\\n\\n  <option value="45">RYCP_NG_HK_79_130 - fent - \\u542f\\u7528</option>\\n\\n  <option value="46">RYPAY_NG_HK_174_92 - \\u661f\\u8054[xinglian] - \\u7981\\u7528</option>\\n\\n  <option value="47">RYPAY_NG_HK_153_108 - \\u963f\\u91cc\\u4e91[alicloud] - \\u542f\\u7528</option>\\n\\n  <option value="48">RY_NG_HK_62_31 - fent - \\u542f\\u7528</option>\\n\\n  <option value="49">RY_NG_HK_77_83 - \\u661f\\u8054[xinglian] - \\u7981\\u7528</option>\\n\\n  <option value="50">RY_NG_HK_50_34 - fent - \\u7981\\u7528</option>\\n\\n  <option value="51">RY_NG_HK_33_146 - fent - \\u542f\\u7528</option>\\n\\n  <option value="52">RY_NG_HK_46_105 - fent - \\u542f\\u7528</option>\\n\\n  <option value="53">RY_NG_HK_179_5 - \\u661f\\u8054[xinglian] - \\u542f\\u7528</option>\\n\\n  <option value="54">RY_NG_HK_33_161 - fent - \\u542f\\u7528</option>\\n\\n  <option value="55">RY_NG_HK_187_122 - fent - \\u542f\\u7528</option>\\n\\n  <option value="56">RY_NG_HK_33_56 - fent - \\u542f\\u7528</option>\\n\\n  <option value="57">SPTEST_NG_HK_40_94 - \\u4e45\\u901f[jiusu] - \\u542f\\u7528</option>\\n\\n  <option value="58">YSGGZ_APA_HK_5_34 - \\u675c\\u675c[dudu] - \\u542f\\u7528</option>\\n\\n  <option value="59" selected>YSGGZ_NG_HK_64_71 - \\u675c\\u675c[dudu] - \\u542f\\u7528</option>\\n\\n  <option value="60">DX_APA_TW_148_197 - \\u53f0\\u6e7e\\u673a\\u623f[taiwan] - \\u542f\\u7528</option>\\n\\n  <option value="61">DX_APA_TW_148_211 - \\u53f0\\u6e7e\\u673a\\u623f[taiwan] - \\u542f\\u7528</option>\\n\\n  <option value="62">DX_DBS_TW_148_215 - \\u53f0\\u6e7e\\u673a\\u623f[taiwan] - \\u542f\\u7528</option>\\n\\n  <option value="63">LE7_DBS_TW_148_199 - \\u53f0\\u6e7e\\u673a\\u623f[taiwan] - \\u542f\\u7528</option>\\n\\n  <option value="64">YJF_DB_HK_47_154 - fent - \\u542f\\u7528</option>\\n\\n  <option value="65">YJF_APA_HK_239_10 - fent - \\u542f\\u7528</option>\\n\\n  <option value="66">PUB_LOG_HK_22_96 - fent - \\u542f\\u7528</option>\\n\\n  <option value="67">RY_NG_HK_62_172 - \\u661f\\u8054[xinglian] - \\u542f\\u7528</option>\\n\\n  <option value="68" selected>YSGGZ_NG_HK_146_89 - \\u4e45\\u901f[jiusu] - \\u542f\\u7528</option>\\n\\n  <option value="69">JAVATEST_DBS_HK_5_218 - fent - \\u542f\\u7528</option>\\n\\n  <option value="70">JAVATEST_DBM_HK_6_10 - fent - \\u542f\\u7528</option>\\n\\n  <option value="71">JAVA_NODEJS_HK_77_146 - fent - \\u542f\\u7528</option>\\n\\n  <option value="72">JAVA_TOMCAT_HK_231_114 - fent - \\u542f\\u7528</option>\\n\\n  <option value="73">JAVA_DBS_HK_79_98 - fent - \\u542f\\u7528</option>\\n\\n  <option value="74">JAVA_DBM_HK_3_130 - fent - \\u542f\\u7528</option>\\n\\n  <option value="75">RY_NG_HK_242_82 - fent - \\u542f\\u7528</option>\\n\\n  <option value="76">RY_NG_HK_27_170 - fent - \\u542f\\u7528</option>\\n\\n  <option value="77">RYPAY_NG_HK_62_82 - fent - \\u542f\\u7528</option>\\n\\n  <option value="78">RYPAY_NG_HK_112_122 - fent - \\u542f\\u7528</option>\\n\\n  <option value="79">CP_NG_HK_43_240 - \\u4e45\\u901f[jiusu] - \\u542f\\u7528</option>\\n\\n  <option value="80">CP_NG_HK_86_181 - \\u661f\\u8054[xinglian] - \\u542f\\u7528</option>\\n\\n  <option value="81">CP_NG_HK_153_89 - fent - \\u542f\\u7528</option>\\n\\n  <option value="82">CP_NG_HK_54_119 - fent - \\u542f\\u7528</option>\\n\\n  <option value="83">CP_NG_HK_43_219 - \\u4e45\\u901f[jiusu] - \\u542f\\u7528</option>\\n\\n  <option value="84" selected>YSGGZ_NG_HK_43_158 - \\u4e45\\u901f[jiusu] - \\u542f\\u7528</option>\\n\\n</select>\'}, {\'block\': <Block Node: links. Contents: [<TextNode: u\'\\n        \'>, <django.template.defaulttags.SpacelessNode object at 0x0713BD10>, <TextNode: u\'\\n    \'>]>}]'
 2018-10-04 23:30:23,973 utils.py [django.db.backends:91] [DEBUG]- (0.027) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'm3mervx60se4npbeffhvfquwt7jcu48o' AND `django_session`.`expire_date` > '2018-10-04 23:30:23'); args=('m3mervx60se4npbeffhvfquwt7jcu48o', u'2018-10-04 23:30:23')
 2018-10-04 23:30:24,000 utils.py [django.db.backends:91] [DEBUG]- (0.026) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-10-05 08:38:34,703 utils.py [django.db.backends:91] [DEBUG]- (0.026) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-05 08:38:34,730 utils.py [django.db.backends:91] [DEBUG]- (0.026) SELECT VERSION(); args=None
+2018-10-05 08:38:37,576 utils.py [django.db.backends:91] [DEBUG]- (0.027) SHOW FULL TABLES; args=None
+2018-10-05 08:38:37,634 utils.py [django.db.backends:91] [DEBUG]- (0.025) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 06:08:56,981 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:08:57,008 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:08:57,028 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT VERSION(); args=None
+2018-10-07 06:09:29,723 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:09:29,744 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:09:29,768 utils.py [django.db.backends:111] [DEBUG]- (0.023) SELECT VERSION(); args=None
+2018-10-07 06:09:50,358 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:09:50,380 utils.py [django.db.backends:111] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:09:50,401 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:15:02,746 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:15:02,767 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:15:02,790 utils.py [django.db.backends:111] [DEBUG]- (0.023) SELECT VERSION(); args=None
+2018-10-07 06:15:33,771 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:15:33,792 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:15:33,813 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:16:49,626 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:16:49,647 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:16:49,668 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:17:27,974 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:17:27,995 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:17:28,017 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:17:35,712 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:17:35,736 utils.py [django.db.backends:111] [DEBUG]- (0.024) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:17:35,757 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:17:55,430 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:17:55,452 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:17:55,473 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT VERSION(); args=None
+2018-10-07 06:18:02,039 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:18:02,060 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:18:02,082 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:18:19,105 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:18:19,127 utils.py [django.db.backends:111] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:18:19,151 utils.py [django.db.backends:111] [DEBUG]- (0.023) SELECT VERSION(); args=None
+2018-10-07 06:19:43,429 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:19:43,450 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:19:43,471 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:20:11,839 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:20:11,863 utils.py [django.db.backends:111] [DEBUG]- (0.023) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:20:11,884 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:21:05,546 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:21:05,568 utils.py [django.db.backends:111] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:21:05,590 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT VERSION(); args=None
+2018-10-07 06:21:54,172 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:21:54,193 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:21:54,214 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:22:24,184 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:22:24,205 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:22:24,226 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:23:23,262 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:23:23,284 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:23:23,308 utils.py [django.db.backends:111] [DEBUG]- (0.024) SELECT VERSION(); args=None
+2018-10-07 06:23:29,766 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:23:29,787 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:23:29,809 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT VERSION(); args=None
+2018-10-07 06:25:11,022 utils.py [django.db.backends:111] [DEBUG]- (0.027) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:25:11,043 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:25:11,065 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:26:34,956 utils.py [django.db.backends:111] [DEBUG]- (0.023) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:26:34,978 utils.py [django.db.backends:111] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:26:34,999 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:27:01,451 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:27:01,472 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:27:01,493 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:27:33,671 utils.py [django.db.backends:111] [DEBUG]- (0.028) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:27:33,694 utils.py [django.db.backends:111] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:27:33,718 utils.py [django.db.backends:111] [DEBUG]- (0.024) SELECT VERSION(); args=None
+2018-10-07 06:28:07,538 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:28:07,560 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:28:07,586 utils.py [django.db.backends:111] [DEBUG]- (0.024) SELECT VERSION(); args=None
+2018-10-07 06:28:28,199 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:28:28,221 utils.py [django.db.backends:111] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:28:28,242 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:28:39,380 utils.py [django.db.backends:111] [DEBUG]- (0.026) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:28:39,401 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:28:39,430 utils.py [django.db.backends:111] [DEBUG]- (0.028) SELECT VERSION(); args=None
+2018-10-07 06:28:54,330 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:28:54,351 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:28:54,372 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:29:08,945 utils.py [django.db.backends:111] [DEBUG]- (0.026) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:29:08,967 utils.py [django.db.backends:111] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:29:08,989 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:29:13,961 utils.py [django.db.backends:111] [DEBUG]- (0.026) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:29:13,983 utils.py [django.db.backends:111] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:29:14,005 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT VERSION(); args=None
+2018-10-07 06:30:23,437 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:30:23,458 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:30:23,480 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:30:46,261 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:30:46,282 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:30:46,304 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT VERSION(); args=None
+2018-10-07 06:33:09,780 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:33:09,802 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:33:09,823 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:35:12,254 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:35:12,275 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:35:12,296 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:35:44,955 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:35:44,975 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:35:44,998 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT VERSION(); args=None
+2018-10-07 06:36:24,359 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:36:24,380 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:36:24,401 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:38:22,237 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:38:22,258 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:38:22,279 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:38:59,064 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:38:59,086 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:38:59,108 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT VERSION(); args=None
+2018-10-07 06:39:19,883 utils.py [django.db.backends:111] [DEBUG]- (0.026) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:39:19,904 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:39:19,926 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT VERSION(); args=None
+2018-10-07 06:39:38,687 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:39:38,708 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:39:38,729 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:40:08,702 utils.py [django.db.backends:111] [DEBUG]- (0.024) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:40:08,723 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:40:08,745 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:40:33,114 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:40:33,143 utils.py [django.db.backends:111] [DEBUG]- (0.029) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:40:33,174 utils.py [django.db.backends:111] [DEBUG]- (0.031) SELECT VERSION(); args=None
+2018-10-07 06:41:42,180 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:41:42,201 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:41:42,222 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT VERSION(); args=None
+2018-10-07 06:42:14,709 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:42:14,730 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:42:14,750 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT VERSION(); args=None
+2018-10-07 06:43:24,775 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:43:24,796 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:43:24,817 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT VERSION(); args=None
+2018-10-07 06:44:01,752 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:44:01,773 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:44:01,794 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:44:20,917 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:44:20,938 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:44:20,959 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:44:22,072 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:44:22,094 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 06:44:22,153 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 06:44:45,083 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:44:45,104 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:44:45,127 utils.py [django.db.backends:111] [DEBUG]- (0.023) SELECT @@sql_mode; args=None
+2018-10-07 06:44:45,149 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:44:45,734 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 06:44:45,759 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 06:44:45,783 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 06:44:45,805 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 06:44:45,873 utils.py [django.db.backends:111] [DEBUG]- (0.023) SHOW FULL TABLES; args=None
+2018-10-07 06:44:45,981 utils.py [django.db.backends:111] [DEBUG]- (0.023) SHOW FULL TABLES; args=None
+2018-10-07 06:44:46,024 utils.py [django.db.backends:111] [DEBUG]- (0.022) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('accounts', '0022_auto_20181007_0644', '2018-10-07 06:44:45'); args=['accounts', '0022_auto_20181007_0644', '2018-10-07 06:44:45']
+2018-10-07 06:44:46,074 schema.py [django.db.backends.schema:108] [DEBUG]- ALTER TABLE `auth_user` MODIFY `last_name` varchar(150) NOT NULL; (params [])
+2018-10-07 06:44:46,159 utils.py [django.db.backends:111] [DEBUG]- (0.086) ALTER TABLE `auth_user` MODIFY `last_name` varchar(150) NOT NULL; args=[]
+2018-10-07 06:44:46,181 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 06:44:46,224 utils.py [django.db.backends:111] [DEBUG]- (0.021) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('auth', '0009_alter_user_last_name_max_length', '2018-10-07 06:44:46'); args=['auth', '0009_alter_user_last_name_max_length', '2018-10-07 06:44:46']
+2018-10-07 06:44:46,291 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 06:44:46,333 utils.py [django.db.backends:111] [DEBUG]- (0.021) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('detect', '0033_auto_20181007_0644', '2018-10-07 06:44:46'); args=['detect', '0033_auto_20181007_0644', '2018-10-07 06:44:46']
+2018-10-07 06:44:46,413 utils.py [django.db.backends:111] [DEBUG]- (0.025) SHOW FULL TABLES; args=None
+2018-10-07 06:44:46,470 utils.py [django.db.backends:111] [DEBUG]- (0.028) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('monitor', '0067_auto_20181007_0644', '2018-10-07 06:44:46'); args=['monitor', '0067_auto_20181007_0644', '2018-10-07 06:44:46']
+2018-10-07 06:44:46,535 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 06:44:46,557 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 06:44:46,599 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'admin' AND `django_content_type`.`model` = 'logentry'); args=('admin', 'logentry')
+2018-10-07 06:44:46,622 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,)
+2018-10-07 06:44:46,643 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',)
+2018-10-07 06:44:46,665 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'permission'); args=('auth', 'permission')
+2018-10-07 06:44:46,687 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'group'); args=('auth', 'group')
+2018-10-07 06:44:46,709 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'user'); args=('auth', 'user')
+2018-10-07 06:44:46,731 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4)
+2018-10-07 06:44:46,752 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',)
+2018-10-07 06:44:46,774 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'contenttypes' AND `django_content_type`.`model` = 'contenttype'); args=('contenttypes', 'contenttype')
+2018-10-07 06:44:46,796 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,)
+2018-10-07 06:44:46,818 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',)
+2018-10-07 06:44:46,840 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'sessions' AND `django_content_type`.`model` = 'session'); args=('sessions', 'session')
+2018-10-07 06:44:46,863 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,)
+2018-10-07 06:44:46,885 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',)
+2018-10-07 06:44:46,908 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'accounts' AND `django_content_type`.`model` = 'userprofile'); args=('accounts', 'userprofile')
+2018-10-07 06:44:46,930 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'accounts' AND `django_content_type`.`model` = 'user_project_authority_t'); args=('accounts', 'user_project_authority_t')
+2018-10-07 06:44:46,953 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (38, 7) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(38, 7)
+2018-10-07 06:44:46,975 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'accounts'; args=('accounts',)
+2018-10-07 06:44:46,997 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'monitor' AND `django_content_type`.`model` = 'minion_ip_t'); args=('monitor', 'minion_ip_t')
+2018-10-07 06:44:47,019 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'monitor' AND `django_content_type`.`model` = 'project_t'); args=('monitor', 'project_t')
+2018-10-07 06:44:47,041 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'monitor' AND `django_content_type`.`model` = 'minion_t'); args=('monitor', 'minion_t')
+2018-10-07 06:44:47,064 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'monitor' AND `django_content_type`.`model` = 'cdn_proj_t'); args=('monitor', 'cdn_proj_t')
+2018-10-07 06:44:47,085 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'monitor' AND `django_content_type`.`model` = 'project_authority_t'); args=('monitor', 'project_authority_t')
+2018-10-07 06:44:47,107 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'monitor' AND `django_content_type`.`model` = 'telegram_domain_alert_t'); args=('monitor', 'telegram_domain_alert_t')
+2018-10-07 06:44:47,129 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'monitor' AND `django_content_type`.`model` = 'telegram_ssl_alert_t'); args=('monitor', 'telegram_ssl_alert_t')
+2018-10-07 06:44:47,151 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'monitor' AND `django_content_type`.`model` = 'dns_authority_t'); args=('monitor', 'dns_authority_t')
+2018-10-07 06:44:47,174 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'monitor' AND `django_content_type`.`model` = 'permission_t'); args=('monitor', 'permission_t')
+2018-10-07 06:44:47,196 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (33, 36, 37, 39, 8, 19, 20, 23, 29) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(33, 36, 37, 39, 8, 19, 20, 23, 29)
+2018-10-07 06:44:47,219 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'monitor'; args=('monitor',)
+2018-10-07 06:44:47,243 utils.py [django.db.backends:111] [DEBUG]- (0.023) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'dns' AND `django_content_type`.`model` = 'cf_account'); args=('dns', 'cf_account')
+2018-10-07 06:44:47,264 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'dns' AND `django_content_type`.`model` = 'domain_info'); args=('dns', 'domain_info')
+2018-10-07 06:44:47,286 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'dns' AND `django_content_type`.`model` = 'alter_history'); args=('dns', 'alter_history')
+2018-10-07 06:44:47,308 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'dns' AND `django_content_type`.`model` = 'dnspod_account'); args=('dns', 'dnspod_account')
+2018-10-07 06:44:47,331 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (26, 12, 13, 14) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(26, 12, 13, 14)
+2018-10-07 06:44:47,353 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'dns'; args=('dns',)
+2018-10-07 06:44:47,374 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'detect' AND `django_content_type`.`model` = 'domains'); args=('detect', 'domains')
+2018-10-07 06:44:47,396 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'detect' AND `django_content_type`.`model` = 'groups'); args=('detect', 'groups')
+2018-10-07 06:44:47,418 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'detect' AND `django_content_type`.`model` = 'cdn_account_t'); args=('detect', 'cdn_account_t')
+2018-10-07 06:44:47,440 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'detect' AND `django_content_type`.`model` = 'telegram_chat_group_t'); args=('detect', 'telegram_chat_group_t')
+2018-10-07 06:44:47,462 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'detect' AND `django_content_type`.`model` = 'telegram_user_id_t'); args=('detect', 'telegram_user_id_t')
+2018-10-07 06:44:47,484 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (34, 35, 15, 16, 28) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(34, 35, 15, 16, 28)
+2018-10-07 06:44:47,507 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'detect'; args=('detect',)
+2018-10-07 06:44:47,531 utils.py [django.db.backends:111] [DEBUG]- (0.023) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'servers' AND `django_content_type`.`model` = 'rsa_key_t'); args=('servers', 'rsa_key_t')
+2018-10-07 06:44:47,554 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (27) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(27,)
+2018-10-07 06:44:47,575 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'servers'; args=('servers',)
+2018-10-07 06:44:55,960 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:44:55,981 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:44:56,002 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:44:56,748 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:44:56,774 utils.py [django.db.backends:111] [DEBUG]- (0.021) SHOW FULL TABLES; args=None
+2018-10-07 06:44:56,799 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 06:45:04,095 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:45:04,117 utils.py [django.db.backends:111] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:45:04,138 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:45:04,811 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:45:04,833 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 06:45:04,858 utils.py [django.db.backends:111] [DEBUG]- (0.023) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 06:53:49,293 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:53:49,315 utils.py [django.db.backends:111] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:53:49,337 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:53:50,241 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:53:50,263 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 06:53:50,290 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 06:54:55,389 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:54:55,410 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:54:55,431 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:54:56,144 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:54:56,166 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 06:54:56,193 utils.py [django.db.backends:111] [DEBUG]- (0.023) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 06:56:23,302 utils.py [django.db.backends:111] [DEBUG]- (0.025) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:56:23,323 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:56:23,345 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:56:24,042 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:56:24,071 utils.py [django.db.backends:111] [DEBUG]- (0.029) SHOW FULL TABLES; args=None
+2018-10-07 06:56:24,095 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 06:58:08,122 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 06:58:08,148 utils.py [django.db.backends:111] [DEBUG]- (0.026) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:58:08,169 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 06:58:08,840 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 06:58:08,862 utils.py [django.db.backends:111] [DEBUG]- (0.021) SHOW FULL TABLES; args=None
+2018-10-07 06:58:08,887 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:03:21,150 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "j:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "j:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'
+2018-10-07 08:03:23,400 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "j:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "j:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'
+2018-10-07 08:03:23,828 base.py [django.template:878] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "j:\arno\test37\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLPattern '^home$'>], [<URLResolver <URLPattern list> (admin:admin) '^admin/'>], [<URLResolver <module 'accounts.urls' from '.\\accounts\\urls.py'> (None:None) '^accounts/'>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^$' [name='index']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^services$' [name='Services']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/Query$' [name='ProjectQuery']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/UpdateStatus$' [name='ProjectUpdateStatus']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/CheckServer$' [name='ProjectCheckServer']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains$' [name='Domains']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/getGroups$' [name='GetGroups']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Query$' [name='DomainsQuery']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Delete$' [name='DomainsDelete']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Add$' [name='DomainsAdd']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Update$' [name='DomainsUpdate']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/UpdateStatus$' [name='DomainsUpdateStatus']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^monitor/'>], [<URLResolver <module 'dns.urls' from '.\\dns\\urls.py'> (None:None) '^dns/'>], [<URLResolver <module 'detect.urls' from '.\\detect\\urls.py'> (None:None) '^detect/'>], [<URLResolver <module 'saltstack.urls' from '.\\saltstack\\urls.py'> (None:None) '^saltstack/'>], [<URLResolver <module 'servers.urls' from '.\\servers\\urls.py'> (None:None) '^servers/'>], [<URLPattern '^favicon$'>], [<URLPattern '^static/(?P<path>.*)$'>], [<URLPattern '^static/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) '^admin/'>
+2018-10-07 08:03:23,873 base.py [django.template:878] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "j:\arno\test37\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLPattern '^home$'>], [<URLResolver <URLPattern list> (admin:admin) '^admin/'>], [<URLResolver <module 'accounts.urls' from '.\\accounts\\urls.py'> (None:None) '^accounts/'>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^$' [name='index']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^services$' [name='Services']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/Query$' [name='ProjectQuery']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/UpdateStatus$' [name='ProjectUpdateStatus']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/CheckServer$' [name='ProjectCheckServer']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains$' [name='Domains']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/getGroups$' [name='GetGroups']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Query$' [name='DomainsQuery']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Delete$' [name='DomainsDelete']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Add$' [name='DomainsAdd']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Update$' [name='DomainsUpdate']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/UpdateStatus$' [name='DomainsUpdateStatus']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^monitor/'>], [<URLResolver <module 'dns.urls' from '.\\dns\\urls.py'> (None:None) '^dns/'>], [<URLResolver <module 'detect.urls' from '.\\detect\\urls.py'> (None:None) '^detect/'>], [<URLResolver <module 'saltstack.urls' from '.\\saltstack\\urls.py'> (None:None) '^saltstack/'>], [<URLResolver <module 'servers.urls' from '.\\servers\\urls.py'> (None:None) '^servers/'>], [<URLPattern '^favicon$'>], [<URLPattern '^static/(?P<path>.*)$'>], [<URLPattern '^static/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'accounts.urls' from '.\\accounts\\urls.py'> (None:None) '^accounts/'>
+2018-10-07 08:03:23,877 base.py [django.template:878] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "j:\arno\test37\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLPattern '^home$'>], [<URLResolver <URLPattern list> (admin:admin) '^admin/'>], [<URLResolver <module 'accounts.urls' from '.\\accounts\\urls.py'> (None:None) '^accounts/'>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^$' [name='index']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^services$' [name='Services']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/Query$' [name='ProjectQuery']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/UpdateStatus$' [name='ProjectUpdateStatus']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/CheckServer$' [name='ProjectCheckServer']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains$' [name='Domains']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/getGroups$' [name='GetGroups']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Query$' [name='DomainsQuery']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Delete$' [name='DomainsDelete']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Add$' [name='DomainsAdd']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Update$' [name='DomainsUpdate']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/UpdateStatus$' [name='DomainsUpdateStatus']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^monitor/'>], [<URLResolver <module 'dns.urls' from '.\\dns\\urls.py'> (None:None) '^dns/'>], [<URLResolver <module 'detect.urls' from '.\\detect\\urls.py'> (None:None) '^detect/'>], [<URLResolver <module 'saltstack.urls' from '.\\saltstack\\urls.py'> (None:None) '^saltstack/'>], [<URLResolver <module 'servers.urls' from '.\\servers\\urls.py'> (None:None) '^servers/'>], [<URLPattern '^favicon$'>], [<URLPattern '^static/(?P<path>.*)$'>], [<URLPattern '^static/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^monitor/'>
+2018-10-07 08:03:23,879 base.py [django.template:878] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "j:\arno\test37\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLPattern '^home$'>], [<URLResolver <URLPattern list> (admin:admin) '^admin/'>], [<URLResolver <module 'accounts.urls' from '.\\accounts\\urls.py'> (None:None) '^accounts/'>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^$' [name='index']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^services$' [name='Services']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/Query$' [name='ProjectQuery']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/UpdateStatus$' [name='ProjectUpdateStatus']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/CheckServer$' [name='ProjectCheckServer']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains$' [name='Domains']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/getGroups$' [name='GetGroups']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Query$' [name='DomainsQuery']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Delete$' [name='DomainsDelete']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Add$' [name='DomainsAdd']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Update$' [name='DomainsUpdate']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/UpdateStatus$' [name='DomainsUpdateStatus']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^monitor/'>], [<URLResolver <module 'dns.urls' from '.\\dns\\urls.py'> (None:None) '^dns/'>], [<URLResolver <module 'detect.urls' from '.\\detect\\urls.py'> (None:None) '^detect/'>], [<URLResolver <module 'saltstack.urls' from '.\\saltstack\\urls.py'> (None:None) '^saltstack/'>], [<URLResolver <module 'servers.urls' from '.\\servers\\urls.py'> (None:None) '^servers/'>], [<URLPattern '^favicon$'>], [<URLPattern '^static/(?P<path>.*)$'>], [<URLPattern '^static/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'dns.urls' from '.\\dns\\urls.py'> (None:None) '^dns/'>
+2018-10-07 08:03:23,882 base.py [django.template:878] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "j:\arno\test37\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLPattern '^home$'>], [<URLResolver <URLPattern list> (admin:admin) '^admin/'>], [<URLResolver <module 'accounts.urls' from '.\\accounts\\urls.py'> (None:None) '^accounts/'>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^$' [name='index']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^services$' [name='Services']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/Query$' [name='ProjectQuery']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/UpdateStatus$' [name='ProjectUpdateStatus']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/CheckServer$' [name='ProjectCheckServer']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains$' [name='Domains']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/getGroups$' [name='GetGroups']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Query$' [name='DomainsQuery']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Delete$' [name='DomainsDelete']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Add$' [name='DomainsAdd']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Update$' [name='DomainsUpdate']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/UpdateStatus$' [name='DomainsUpdateStatus']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^monitor/'>], [<URLResolver <module 'dns.urls' from '.\\dns\\urls.py'> (None:None) '^dns/'>], [<URLResolver <module 'detect.urls' from '.\\detect\\urls.py'> (None:None) '^detect/'>], [<URLResolver <module 'saltstack.urls' from '.\\saltstack\\urls.py'> (None:None) '^saltstack/'>], [<URLResolver <module 'servers.urls' from '.\\servers\\urls.py'> (None:None) '^servers/'>], [<URLPattern '^favicon$'>], [<URLPattern '^static/(?P<path>.*)$'>], [<URLPattern '^static/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'detect.urls' from '.\\detect\\urls.py'> (None:None) '^detect/'>
+2018-10-07 08:03:23,884 base.py [django.template:878] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "j:\arno\test37\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLPattern '^home$'>], [<URLResolver <URLPattern list> (admin:admin) '^admin/'>], [<URLResolver <module 'accounts.urls' from '.\\accounts\\urls.py'> (None:None) '^accounts/'>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^$' [name='index']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^services$' [name='Services']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/Query$' [name='ProjectQuery']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/UpdateStatus$' [name='ProjectUpdateStatus']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/CheckServer$' [name='ProjectCheckServer']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains$' [name='Domains']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/getGroups$' [name='GetGroups']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Query$' [name='DomainsQuery']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Delete$' [name='DomainsDelete']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Add$' [name='DomainsAdd']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Update$' [name='DomainsUpdate']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/UpdateStatus$' [name='DomainsUpdateStatus']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^monitor/'>], [<URLResolver <module 'dns.urls' from '.\\dns\\urls.py'> (None:None) '^dns/'>], [<URLResolver <module 'detect.urls' from '.\\detect\\urls.py'> (None:None) '^detect/'>], [<URLResolver <module 'saltstack.urls' from '.\\saltstack\\urls.py'> (None:None) '^saltstack/'>], [<URLResolver <module 'servers.urls' from '.\\servers\\urls.py'> (None:None) '^servers/'>], [<URLPattern '^favicon$'>], [<URLPattern '^static/(?P<path>.*)$'>], [<URLPattern '^static/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'saltstack.urls' from '.\\saltstack\\urls.py'> (None:None) '^saltstack/'>
+2018-10-07 08:03:23,886 base.py [django.template:878] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "j:\arno\test37\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLPattern '^home$'>], [<URLResolver <URLPattern list> (admin:admin) '^admin/'>], [<URLResolver <module 'accounts.urls' from '.\\accounts\\urls.py'> (None:None) '^accounts/'>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^$' [name='index']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^services$' [name='Services']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/Query$' [name='ProjectQuery']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/UpdateStatus$' [name='ProjectUpdateStatus']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^project/CheckServer$' [name='ProjectCheckServer']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains$' [name='Domains']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/getGroups$' [name='GetGroups']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Query$' [name='DomainsQuery']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Delete$' [name='DomainsDelete']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Add$' [name='DomainsAdd']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/Update$' [name='DomainsUpdate']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^'>, <URLPattern '^domains/UpdateStatus$' [name='DomainsUpdateStatus']>], [<URLResolver <module 'monitor.urls' from '.\\monitor\\urls.py'> (None:None) '^monitor/'>], [<URLResolver <module 'dns.urls' from '.\\dns\\urls.py'> (None:None) '^dns/'>], [<URLResolver <module 'detect.urls' from '.\\detect\\urls.py'> (None:None) '^detect/'>], [<URLResolver <module 'saltstack.urls' from '.\\saltstack\\urls.py'> (None:None) '^saltstack/'>], [<URLResolver <module 'servers.urls' from '.\\servers\\urls.py'> (None:None) '^servers/'>], [<URLPattern '^favicon$'>], [<URLPattern '^static/(?P<path>.*)$'>], [<URLPattern '^static/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'servers.urls' from '.\\servers\\urls.py'> (None:None) '^servers/'>
+2018-10-07 08:03:23,889 base.py [django.request:93] [WARNING]- Not Found: /favicon.ico
+2018-10-07 08:04:53,650 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "j:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "j:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'
+2018-10-07 08:05:07,230 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "j:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "j:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'
+2018-10-07 08:11:36,575 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "j:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "j:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'
+2018-10-07 08:14:15,499 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "j:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "j:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'
+2018-10-07 08:18:31,100 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:18:31,121 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:18:31,142 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 08:18:31,831 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:18:31,854 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 08:18:31,879 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:19:36,120 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:19:36,142 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:19:36,162 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 08:19:36,859 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:19:36,881 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 08:19:36,909 utils.py [django.db.backends:111] [DEBUG]- (0.024) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:20:04,763 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:20:04,785 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:20:04,806 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT VERSION(); args=None
+2018-10-07 08:20:05,495 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:20:05,517 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 08:20:05,543 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:21:00,961 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:21:00,984 utils.py [django.db.backends:111] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:21:01,005 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 08:21:06,478 utils.py [django.db.backends:111] [DEBUG]- (0.023) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:21:06,504 utils.py [django.db.backends:111] [DEBUG]- (0.026) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:21:06,527 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT VERSION(); args=None
+2018-10-07 08:21:07,232 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:21:07,254 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 08:21:07,278 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:23:17,668 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:23:17,694 utils.py [django.db.backends:111] [DEBUG]- (0.026) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:23:17,714 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT VERSION(); args=None
+2018-10-07 08:23:18,435 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:23:18,458 utils.py [django.db.backends:111] [DEBUG]- (0.023) SHOW FULL TABLES; args=None
+2018-10-07 08:23:18,482 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:40:40,335 utils.py [django.db.backends:111] [DEBUG]- (0.150) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:40:40,356 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:40:40,399 utils.py [django.db.backends:111] [DEBUG]- (0.027) SELECT VERSION(); args=None
+2018-10-07 08:40:41,146 utils.py [django.db.backends:111] [DEBUG]- (0.028) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:40:43,871 utils.py [django.db.backends:111] [DEBUG]- (2.725) SHOW FULL TABLES; args=None
+2018-10-07 08:40:44,100 utils.py [django.db.backends:111] [DEBUG]- (0.224) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:41:07,641 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:41:07,662 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:41:07,683 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 08:41:08,397 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:41:08,419 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 08:41:08,443 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:43:33,391 utils.py [django.db.backends:111] [DEBUG]- (0.023) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:43:33,412 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:43:33,433 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 08:43:34,176 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:43:34,198 utils.py [django.db.backends:111] [DEBUG]- (0.021) SHOW FULL TABLES; args=None
+2018-10-07 08:43:34,225 utils.py [django.db.backends:111] [DEBUG]- (0.023) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:43:47,508 utils.py [django.db.backends:111] [DEBUG]- (0.023) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:43:47,529 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:43:47,555 utils.py [django.db.backends:111] [DEBUG]- (0.026) SELECT VERSION(); args=None
+2018-10-07 08:43:48,320 utils.py [django.db.backends:111] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:43:48,342 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 08:43:48,368 utils.py [django.db.backends:111] [DEBUG]- (0.023) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:44:43,347 utils.py [django.db.backends:111] [DEBUG]- (0.024) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:44:43,369 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:44:43,390 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 08:44:44,159 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:44:44,181 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 08:44:44,205 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:44:46,826 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'
+2018-10-07 08:44:48,800 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'
+2018-10-07 08:45:07,373 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:45:07,394 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:45:07,416 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 08:45:08,132 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:45:08,155 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 08:45:08,179 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:46:25,629 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:46:25,650 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:46:25,674 utils.py [django.db.backends:111] [DEBUG]- (0.024) SELECT VERSION(); args=None
+2018-10-07 08:46:26,364 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:46:26,385 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 08:46:26,410 utils.py [django.db.backends:111] [DEBUG]- (0.023) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:47:11,189 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:47:11,211 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:47:11,236 utils.py [django.db.backends:111] [DEBUG]- (0.024) SELECT VERSION(); args=None
+2018-10-07 08:47:11,955 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:47:11,977 utils.py [django.db.backends:111] [DEBUG]- (0.021) SHOW FULL TABLES; args=None
+2018-10-07 08:47:12,002 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:47:26,493 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:47:26,518 utils.py [django.db.backends:111] [DEBUG]- (0.026) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:47:26,538 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT VERSION(); args=None
+2018-10-07 08:47:27,235 utils.py [django.db.backends:111] [DEBUG]- (0.024) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:47:27,258 utils.py [django.db.backends:111] [DEBUG]- (0.024) SHOW FULL TABLES; args=None
+2018-10-07 08:47:27,284 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:48:52,957 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:48:52,979 utils.py [django.db.backends:111] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:48:53,000 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 08:48:53,665 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:48:53,687 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 08:48:53,712 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:52:17,417 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:52:17,438 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:52:17,459 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 08:52:18,344 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:52:18,367 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 08:52:18,393 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:52:21,733 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:52:21,754 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:52:21,776 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 08:52:22,506 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:52:22,528 utils.py [django.db.backends:111] [DEBUG]- (0.021) SHOW FULL TABLES; args=None
+2018-10-07 08:52:22,551 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:53:27,803 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:53:27,824 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:53:27,845 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 08:53:28,644 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:53:28,669 utils.py [django.db.backends:111] [DEBUG]- (0.025) SHOW FULL TABLES; args=None
+2018-10-07 08:53:28,695 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:54:10,000 utils.py [django.db.backends:111] [DEBUG]- (0.025) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:54:10,024 utils.py [django.db.backends:111] [DEBUG]- (0.024) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:54:10,045 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 08:54:10,810 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:54:10,833 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 08:54:10,859 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:57:08,974 utils.py [django.db.backends:111] [DEBUG]- (0.023) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:57:08,995 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:57:09,024 utils.py [django.db.backends:111] [DEBUG]- (0.026) SELECT VERSION(); args=None
+2018-10-07 08:57:09,703 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:57:09,735 utils.py [django.db.backends:111] [DEBUG]- (0.032) SHOW FULL TABLES; args=None
+2018-10-07 08:57:09,761 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:58:31,959 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:58:31,989 utils.py [django.db.backends:111] [DEBUG]- (0.029) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:58:32,031 utils.py [django.db.backends:111] [DEBUG]- (0.040) SELECT VERSION(); args=None
+2018-10-07 08:58:33,041 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:58:33,063 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 08:58:33,090 utils.py [django.db.backends:111] [DEBUG]- (0.024) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:58:41,213 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:58:41,234 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:58:41,255 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 08:58:41,976 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:58:41,999 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 08:58:42,025 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 08:59:29,149 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 08:59:29,170 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:59:29,191 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 08:59:29,891 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 08:59:29,915 utils.py [django.db.backends:111] [DEBUG]- (0.023) SHOW FULL TABLES; args=None
+2018-10-07 08:59:29,941 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 09:00:48,398 utils.py [django.db.backends:111] [DEBUG]- (0.029) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 09:00:48,430 utils.py [django.db.backends:111] [DEBUG]- (0.032) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 09:00:48,455 utils.py [django.db.backends:111] [DEBUG]- (0.025) SELECT VERSION(); args=None
+2018-10-07 09:00:49,162 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 09:00:49,184 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 09:00:49,211 utils.py [django.db.backends:111] [DEBUG]- (0.024) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 09:00:54,737 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 09:00:54,758 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 09:00:54,778 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 09:00:55,490 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 09:00:55,523 utils.py [django.db.backends:111] [DEBUG]- (0.034) SHOW FULL TABLES; args=None
+2018-10-07 09:00:55,549 utils.py [django.db.backends:111] [DEBUG]- (0.023) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 09:08:29,204 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 09:08:29,227 utils.py [django.db.backends:111] [DEBUG]- (0.023) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 09:08:29,249 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT VERSION(); args=None
+2018-10-07 09:08:29,952 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 09:08:29,974 utils.py [django.db.backends:111] [DEBUG]- (0.023) SHOW FULL TABLES; args=None
+2018-10-07 09:08:30,000 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 09:08:32,741 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'
+2018-10-07 09:08:43,049 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 09:08:43,069 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 09:08:43,091 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 09:08:44,117 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 09:08:44,139 utils.py [django.db.backends:111] [DEBUG]- (0.021) SHOW FULL TABLES; args=None
+2018-10-07 09:08:44,178 utils.py [django.db.backends:111] [DEBUG]- (0.034) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 09:10:45,382 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 09:10:45,403 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 09:10:45,424 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 09:10:46,361 utils.py [django.db.backends:111] [DEBUG]- (0.025) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 09:10:46,383 utils.py [django.db.backends:111] [DEBUG]- (0.022) SHOW FULL TABLES; args=None
+2018-10-07 09:10:46,409 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 09:11:00,831 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 09:11:00,853 utils.py [django.db.backends:111] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 09:11:00,873 utils.py [django.db.backends:111] [DEBUG]- (0.020) SELECT VERSION(); args=None
+2018-10-07 09:11:01,555 utils.py [django.db.backends:111] [DEBUG]- (0.021) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 09:11:01,577 utils.py [django.db.backends:111] [DEBUG]- (0.021) SHOW FULL TABLES; args=None
+2018-10-07 09:11:01,602 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 09:15:25,663 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 09:15:25,694 utils.py [django.db.backends:111] [DEBUG]- (0.031) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 09:15:25,727 utils.py [django.db.backends:111] [DEBUG]- (0.033) SELECT VERSION(); args=None
+2018-10-07 09:15:26,407 utils.py [django.db.backends:111] [DEBUG]- (0.023) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 09:15:26,430 utils.py [django.db.backends:111] [DEBUG]- (0.023) SHOW FULL TABLES; args=None
+2018-10-07 09:15:26,456 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-07 09:23:59,427 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-07 09:23:59,450 utils.py [django.db.backends:111] [DEBUG]- (0.023) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 09:23:59,471 utils.py [django.db.backends:111] [DEBUG]- (0.021) SELECT VERSION(); args=None
+2018-10-07 09:24:00,324 utils.py [django.db.backends:111] [DEBUG]- (0.020) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-07 09:24:00,351 utils.py [django.db.backends:111] [DEBUG]- (0.026) SHOW FULL TABLES; args=None
+2018-10-07 09:24:00,377 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-10-08 01:14:43,579 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-10-08 01:14:43,614 utils.py [django.db.backends:111] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-08 01:14:43,699 utils.py [django.db.backends:111] [DEBUG]- (0.022) SELECT VERSION(); args=None
+2018-10-08 01:14:46,374 utils.py [django.db.backends:111] [DEBUG]- (0.022) SET SQL_AUTO_IS_NULL = 0; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-10-08 01:14:46,398 utils.py [django.db.backends:111] [DEBUG]- (0.023) SHOW FULL TABLES; args=None
+2018-10-08 01:14:46,455 utils.py [django.db.backends:111] [DEBUG]- (0.045) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()

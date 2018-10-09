@@ -7,9 +7,6 @@ from django.core                import exceptions
 from phxweb.settings            import choices_customer, choices_product, choices_permission
 from detect.models              import domains, telegram_chat_group_t, telegram_user_id_t
 from dns.models                 import cf_account, dnspod_account
-import sys
-reload(sys)
-sys.setdefaultencoding('utf8')
 
 #domain_D = domains.objects.get(id=1)
 choices_st = (
@@ -42,7 +39,7 @@ choices_proj = (
 
 class telegram_domain_alert_t(models.Model):
     name       = models.CharField(max_length=32, null=False)
-    chat_group = models.ManyToManyField(telegram_chat_group_t, null=False)
+    chat_group = models.ManyToManyField(telegram_chat_group_t, blank=False)
     user_id    = models.ManyToManyField(telegram_user_id_t, blank=True)
     product    = models.IntegerField(choices=choices_product)
     customer   = models.IntegerField(choices=choices_customer, default=29)
@@ -56,7 +53,7 @@ class telegram_domain_alert_t(models.Model):
 
 class telegram_ssl_alert_t(models.Model):
     name       = models.CharField(max_length=32, null=False)
-    chat_group = models.ManyToManyField(telegram_chat_group_t, null=False)
+    chat_group = models.ManyToManyField(telegram_chat_group_t, blank=False)
     user_id    = models.ManyToManyField(telegram_user_id_t, blank=True)
     product    = models.IntegerField(choices=choices_product)
     customer   = models.IntegerField(choices=choices_customer, default=29)
@@ -133,7 +130,7 @@ class project_t(models.Model):
     password    = models.TextField(null=False, default='/')
     server_type = models.CharField(max_length=10, choices=choices_servert, default='front')
     role        = models.CharField(max_length=10, choices=choices_role, default='main')
-    #domain      = models.ForeignKey(domains, default=domain_D.id)
+    #domain      = models.ForeignKey(domains, default=domain_D.id, on_delete=models.CASCADE)
     url         = models.CharField(max_length=128, default='https://arno.com')
     alive       = models.IntegerField(choices=choices_s, default=1)
     status      = models.IntegerField(choices=choices_s, default=1)
@@ -173,8 +170,8 @@ class project_authority_t(models.Model):
         return self.name +" | 读权限: "+ self.get_read_display() +" | 写权限: "+ self.get_write_display()
 
 class dns_authority_t(models.Model):
-    cf_account     = models.ForeignKey(cf_account, blank=True, null=True)
-    dnspod_account = models.ForeignKey(dnspod_account, blank=True, null=True)
+    cf_account     = models.ForeignKey(cf_account, on_delete=models.CASCADE, blank=True, null=True)
+    dnspod_account = models.ForeignKey(dnspod_account, on_delete=models.CASCADE, blank=True, null=True)
     permission     = models.CharField(max_length=10, choices=choices_permission, blank=False)
 
     def __str__(self):

@@ -4,9 +4,9 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseForbidden
 from dwebsocket import require_websocket
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
-from cf_api import CfApi
-from cf import *
-from models import cf_account
+from dns.cf_api import CfApi
+from dns.cf import *
+from dns.models import cf_account
 import json, logging, requests, re, datetime
 logger = logging.getLogger('django')
 

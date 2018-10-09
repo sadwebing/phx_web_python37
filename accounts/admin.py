@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import UserProfile, user_project_authority_t
+from accounts.models import UserProfile, user_project_authority_t
 from django.contrib.auth.models import User
 from django.contrib.auth.admin import UserAdmin  
 

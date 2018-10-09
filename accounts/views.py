@@ -13,7 +13,7 @@ from accounts.limit                 import LimitAccess
 from django.contrib.auth.models     import User
 from dns.models      import alter_history
 from monitor.models  import project_t, permission_t
-from models          import user_project_authority_t
+from accounts.models          import user_project_authority_t
 
 from django.contrib.auth import (
                                 REDIRECT_FIELD_NAME, get_user_model, login as auth_login,

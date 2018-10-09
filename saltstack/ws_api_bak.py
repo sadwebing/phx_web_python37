@@ -46,16 +46,16 @@ def getWsdomains(username, apikey):
     try:
         ret = requests.get(url, headers=headers, auth=(username, signed_apikey))
 
-    except Exception, e:
+    except Exception as e:
         text = warning + '\nException: ' + e.message
-        print text
+        print (text)
         sendTelegram(text)
         return False
 
     else:
         if ret.status_code != 200:
             text = warning + '\n' + ret.content
-            print text
+            print (text)
             sendTelegram(text)
             return False
 
@@ -100,16 +100,16 @@ def purgeWsdomains(domains, uri='/'):
     try:
         ret = requests.post(url, headers=headers, auth=(username, signed_apikey), data=json.dumps(data))
 
-    except Exception, e:
+    except Exception as e:
         text = warning + '\nException: ' + e.message
-        print text
+        print (text)
         sendTelegram(text)
         return data[type_f], False
 
     else:
         if ret.json()['Message'] != 'handle success':
             text = warning + '\n' + ret.content
-            print text
+            print (text)
             sendTelegram(text)
             return data[type_f], False
 
@@ -119,4 +119,4 @@ def purgeWsdomains(domains, uri='/'):
 
 
 if __name__ == '__main__':
-    print "网宿"
+    print ("网宿")

@@ -14032,10 +14032,12 @@ Traceback (most recent call last):
     info['sccess'] += [ cdn+": "domain+uri for domain in domains_c ]
                                      ^
 SyntaxError: invalid syntax
-2018-07-05 22:15:16,546 ws_api.py [django:116] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+2018-07-05 22:15:16,546 ws_api.py [django:116] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+
 speedfeng : 9nJCIUoon6yUKYBr5DeKRRZHvHwYpHvKPJzRFbeWJMg=
 {u'Message': u'running url or dir[https://app.fanyingsh.com/yiteng/a.img,https://app.hhy988.com/yiteng/a.img], please try again after one minute.\r\n', u'Code': 0}
-2018-07-05 22:15:18,069 ws_api.py [django:116] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+2018-07-05 22:15:18,069 ws_api.py [django:116] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+
 speedfeng : 6EDiGeughjA7wIJrkju1f3CH0VznIpgq0fY5uRFDg4k=
 {u'Message': u'running url or dir[https://app.hhy988.com/yiteng/b.img,https://app.fanyingsh.com/yiteng/b.img], please try again after one minute.\r\n', u'Code': 0}
 2018-07-07 23:28:58,382 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/get_domains
@@ -14118,7 +14120,8 @@ Traceback (most recent call last):
   File "c:\python27\Lib\json\decoder.py", line 382, in raw_decode
     raise ValueError("No JSON object could be decoded")
 ValueError: No JSON object could be decoded
-2018-07-07 23:55:35,721 ws_api.py [django:70] [ERROR]- Attention: 网宿域名获取失败，请检查:网宿URL:  + https://open.chinanetcenter.com/api/domain
+2018-07-07 23:55:35,721 ws_api.py [django:70] [ERROR]- Attention: 网宿域名获取失败，请检查:网宿URL:  + https://open.chinanetcenter.com/api/domain
+
 speedfeng@123 : U87nYrewNOYFzlQkx8C0SnXlwAAHbGclMx1I67MeKYQ=
 <?xml version="1.0" encoding="UTF-8"?>
 <response><code>WPLUS_InvalidHTTPAuthHeader</code>
@@ -14145,7 +14148,8 @@ Traceback (most recent call last):
   File "c:\python27\Lib\json\decoder.py", line 382, in raw_decode
     raise ValueError("No JSON object could be decoded")
 ValueError: No JSON object could be decoded
-2018-07-07 23:56:43,638 ws_api.py [django:70] [ERROR]- Attention: 网宿域名获取失败，请检查:网宿URL:  + https://open.chinanetcenter.com/api/domain
+2018-07-07 23:56:43,638 ws_api.py [django:70] [ERROR]- Attention: 网宿域名获取失败，请检查:网宿URL:  + https://open.chinanetcenter.com/api/domain
+
 speedfeng@123 : uV1ygMJ3AiUujIUyLP0GBKxSs8w+r2ixPOdirtCFRVw=
 <?xml version="1.0" encoding="UTF-8"?>
 <response><code>WPLUS_InvalidHTTPAuthHeader</code>
@@ -14153,7 +14157,8 @@ speedfeng@123 : uV1ygMJ3AiUujIUyLP0GBKxSs8w+r2ixPOdirtCFRVw=
 2018-07-07 23:56:46,963 telegram.py [django:108] [ERROR]- Attention: send message failed!
 2018-07-07 23:56:46,963 telegram.py [django:109] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: can't parse entities: Unsupported start tag \"?xml\" at byte offset 167"}
 2018-07-07 23:56:46,964 telegram.py [django:110] [ERROR]- {'disable_web_page_preview': True, 'text': 'Attention: \xe7\xbd\x91\xe5\xae\xbf\xe5\x9f\x9f\xe5\x90\x8d\xe8\x8e\xb7\xe5\x8f\x96\xe5\xa4\xb1\xe8\xb4\xa5\xef\xbc\x8c\xe8\xaf\xb7\xe6\xa3\x80\xe6\x9f\xa5:\xe7\xbd\x91\xe5\xae\xbfURL:  + https://open.chinanetcenter.com/api/domain\r\nspeedfeng@123 : uV1ygMJ3AiUujIUyLP0GBKxSs8w+r2ixPOdirtCFRVw=\n<?xml version="1.0" encoding="UTF-8"?>\n<response><code>WPLUS_InvalidHTTPAuthHeader</code>\n<message>The HTTP authorization header is bad</message></response>', 'doc_name': 'message.txt_20180707235643', 'caption': '', 'chat_id': '-186348806', 'parse_mode': 'HTML'}
-2018-07-08 00:04:59,257 ws_api.py [django:70] [ERROR]- Attention: 网宿域名获取失败，请检查:网宿URL:  + https://open.chinanetcenter.com/api/domain
+2018-07-08 00:04:59,257 ws_api.py [django:70] [ERROR]- Attention: 网宿域名获取失败，请检查:网宿URL:  + https://open.chinanetcenter.com/api/domain
+
 speedfeng@123 : WVYjHzkAgBpebQtF4jujduDQOZpk0c0M+YFWiVtMR1A=
 <?xml version="1.0" encoding="UTF-8"?>
 <response><code>WPLUS_InvalidHTTPAuthHeader</code>
@@ -14161,7 +14166,8 @@ speedfeng@123 : WVYjHzkAgBpebQtF4jujduDQOZpk0c0M+YFWiVtMR1A=
 2018-07-08 00:05:02,063 telegram.py [django:108] [ERROR]- Attention: send message failed!
 2018-07-08 00:05:02,063 telegram.py [django:109] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: can't parse entities: Unsupported start tag \"?xml\" at byte offset 167"}
 2018-07-08 00:05:02,065 telegram.py [django:110] [ERROR]- {'disable_web_page_preview': True, 'text': 'Attention: \xe7\xbd\x91\xe5\xae\xbf\xe5\x9f\x9f\xe5\x90\x8d\xe8\x8e\xb7\xe5\x8f\x96\xe5\xa4\xb1\xe8\xb4\xa5\xef\xbc\x8c\xe8\xaf\xb7\xe6\xa3\x80\xe6\x9f\xa5:\xe7\xbd\x91\xe5\xae\xbfURL:  + https://open.chinanetcenter.com/api/domain\r\nspeedfeng@123 : WVYjHzkAgBpebQtF4jujduDQOZpk0c0M+YFWiVtMR1A=\n<?xml version="1.0" encoding="UTF-8"?>\n<response><code>WPLUS_InvalidHTTPAuthHeader</code>\n<message>The HTTP authorization header is bad</message></response>', 'doc_name': 'message.txt_20180708000459', 'caption': '', 'chat_id': '-186348806', 'parse_mode': 'HTML'}
-2018-07-08 00:11:01,395 ws_api.py [django:70] [ERROR]- Attention: 网宿域名获取失败，请检查:网宿URL:  + https://open.chinanetcenter.com/api/domain
+2018-07-08 00:11:01,395 ws_api.py [django:70] [ERROR]- Attention: 网宿域名获取失败，请检查:网宿URL:  + https://open.chinanetcenter.com/api/domain
+
 speedfeng@123 : ePhAY8acVqwYHFuB31g6JhrEOGnvM3+OnjynIsd02Tg=
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;response&gt;&lt;code&gt;WPLUS_InvalidHTTPAuthHeader&lt;/code&gt;
@@ -14169,7 +14175,8 @@ speedfeng@123 : ePhAY8acVqwYHFuB31g6JhrEOGnvM3+OnjynIsd02Tg=
 2018-07-08 00:11:04,332 telegram.py [django:108] [ERROR]- Attention: send message failed!
 2018-07-08 00:11:04,332 telegram.py [django:109] [ERROR]- 400: {"ok":false,"error_code":400,"description":"Bad Request: can't parse entities: Unsupported start tag \"?xml\" at byte offset 167"}
 2018-07-08 00:11:04,332 telegram.py [django:110] [ERROR]- {'disable_web_page_preview': True, 'text': 'Attention: \xe7\xbd\x91\xe5\xae\xbf\xe5\x9f\x9f\xe5\x90\x8d\xe8\x8e\xb7\xe5\x8f\x96\xe5\xa4\xb1\xe8\xb4\xa5\xef\xbc\x8c\xe8\xaf\xb7\xe6\xa3\x80\xe6\x9f\xa5:\xe7\xbd\x91\xe5\xae\xbfURL:  + https://open.chinanetcenter.com/api/domain\r\nspeedfeng@123 : ePhAY8acVqwYHFuB31g6JhrEOGnvM3+OnjynIsd02Tg=\n<?xml version="1.0" encoding="UTF-8"?>\n<response><code>WPLUS_InvalidHTTPAuthHeader</code>\n<message>The HTTP authorization header is bad</message></response>', 'doc_name': 'message.txt_20180708001101', 'caption': '', 'chat_id': '-204952096', 'parse_mode': 'HTML'}
-2018-07-08 00:13:24,819 ws_api.py [django:70] [ERROR]- Attention: 网宿域名获取失败，请检查:网宿URL:  + https://open.chinanetcenter.com/api/domain
+2018-07-08 00:13:24,819 ws_api.py [django:70] [ERROR]- Attention: 网宿域名获取失败，请检查:网宿URL:  + https://open.chinanetcenter.com/api/domain
+
 speedfeng@123 : rEYBTkfaPCDIXp7lXPxwOYW2I7uDiVEQ/+195r2WT/Y=
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;response&gt;&lt;code&gt;WPLUS_InvalidHTTPAuthHeader&lt;/code&gt;
@@ -14309,7 +14316,8 @@ Traceback (most recent call last):
   File "c:\python27\Lib\json\decoder.py", line 382, in raw_decode
     raise ValueError("No JSON object could be decoded")
 ValueError: No JSON object could be decoded
-2018-07-10 20:08:38,684 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+2018-07-10 20:08:38,684 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+
 speedfeng2 : CmDqO91JP3zSG0TN1SwvueASr16X8R58CTR6AN0e9kQ=
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;response&gt;&lt;code&gt;WPLUS_ApiPrivilegeError&lt;/code&gt;
@@ -14348,17 +14356,20 @@ Traceback (most recent call last):
   File "c:\python27\Lib\json\decoder.py", line 364, in decode
     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
 TypeError: expected string or buffer
-2018-07-10 20:18:08,786 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+2018-07-10 20:18:08,786 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+
 speedfeng2 : 7STDAEFD2ENYKrJdurI7+3K4M82SWzBuyMHY4EbXjfM=
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;response&gt;&lt;code&gt;WPLUS_ApiPrivilegeError&lt;/code&gt;
 &lt;message&gt;the account used is not authenticated using this api.&lt;/message&gt;&lt;/response&gt;
-2018-07-10 21:00:01,838 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+2018-07-10 21:00:01,838 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+
 speedfeng2 : d4Eh0N9GTpA/ZRt6qHwaZuns/oSK+MW8cieDkfhgE10=
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;response&gt;&lt;code&gt;WPLUS_ApiPrivilegeError&lt;/code&gt;
 &lt;message&gt;the account used is not authenticated using this api.&lt;/message&gt;&lt;/response&gt;
-2018-07-10 21:02:18,562 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+2018-07-10 21:02:18,562 ws_api.py [django:117] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+
 speedfeng2 : nFD3rc2mdMZYTzID331AtLmtA8W0czDhThaimBnwAoM=
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;response&gt;&lt;code&gt;WPLUS_ApiPrivilegeError&lt;/code&gt;
@@ -14650,16 +14661,20 @@ Traceback (most recent call last):
     'domain':         record['zone'],
             ^
 SyntaxError: invalid syntax
-2018-07-19 16:11:54,690 dnspod_api.py [django:51] [ERROR]- Attention: Dnspod域名[lebocdn.com]解析修改 失败，请检查:
+2018-07-19 16:11:54,690 dnspod_api.py [django:51] [ERROR]- Attention: Dnspod域名[lebocdn.com]解析修改 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Modify
 {u'message': u'Record line invalid', u'code': u'26', u'created_at': u'2018-07-19 16:11:28'}
-2018-07-19 16:13:27,946 dnspod_api.py [django:51] [ERROR]- Attention: Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 失败，请检查:
+2018-07-19 16:13:27,946 dnspod_api.py [django:51] [ERROR]- Attention: Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Modify
 {u'message': u'Record line invalid', u'code': u'26', u'created_at': u'2018-07-19 16:13:01'}
-2018-07-19 16:16:36,194 dnspod_api.py [django:51] [ERROR]- Attention: Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 失败，请检查:
+2018-07-19 16:16:36,194 dnspod_api.py [django:51] [ERROR]- Attention: Dnspod域名[app.hhy988.com.lebocdn.com]解析修改 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Modify
 {u'message': u'Record line invalid', u'code': u'26', u'created_at': u'2018-07-19 16:16:09'}
-2018-07-19 21:37:05,417 dnspod_api.py [django:52] [ERROR]- Attention: Dnspod域名[@.hgb168.com]解析修改 失败，请检查:
+2018-07-19 21:37:05,417 dnspod_api.py [django:52] [ERROR]- Attention: Dnspod域名[@.hgb168.com]解析修改 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Modify
 {u'message': u'NS \u8bb0\u5f55\u7684\u5b50\u57df\u540d\u4e0d\u80fd\u4e3a @', u'code': u'31', u'created_at': u'2018-07-19 21:36:38'}
 2018-07-19 22:58:29,811 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
@@ -15150,7 +15165,8 @@ Traceback (most recent call last):
   File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
     raise errorclass, errorvalue
 OperationalError: (2013, 'Lost connection to MySQL server during query')
-2018-07-20 00:33:17,608 dnspod_api.py [django:52] [ERROR]- Attention: Dnspod域名[cloud.l5668.com]删除 失败，请检查:
+2018-07-20 00:33:17,608 dnspod_api.py [django:52] [ERROR]- Attention: Dnspod域名[cloud.l5668.com]删除 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Remove
 {u'message': u'Domain name invalid, please input tld domain', u'code': u'8', u'created_at': u'2018-07-20 00:33:17'}
 2018-07-20 00:33:21,483 dnspod.py [django:243] [ERROR]- 删除 cloud.l5668.com 域名失败！{u'status': {u'message': u'Domain name invalid, please input tld domain', u'code': u'8', u'created_at': u'2018-07-20 00:33:17'}}
@@ -19590,107 +19606,158 @@ Traceback (most recent call last):
   File "J:\arno\test\phx_web\dns\dnspod.py", line 395, in insert_ah
     logger.info("req_ip: %s | user: %s | updaterecord: { 'type':%s, 'name': %s, 'content': %s, 'enabled':%s } ---> { 'type':%s, 'name': %s, 'content': %s, 'enabled':%s } {result: %s}" %(clientip, username, type_before, name_before, value_before, status_before, type_after, name_after, value_after, status_after, result))
 NameError: global name 'type_before' is not defined
-2018-08-05 18:47:07,428 dnspod_api.py [django:52] [ERROR]- Attention: Dnspod域名记录[test.phexus.net]新增 失败，请检查:
+2018-08-05 18:47:07,428 dnspod_api.py [django:52] [ERROR]- Attention: Dnspod域名记录[test.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-08-05 18:47:05'}
-2018-08-05 18:57:03,265 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test2.phexus.net]新增 失败，请检查:
+2018-08-05 18:57:03,265 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[test2.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-08-05 18:57:01'}
-2018-08-05 19:07:46,040 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test2.phexus.net]新增 失败，请检查:
+2018-08-05 19:07:46,040 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[test2.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-08-05 19:07:44'}
-2018-08-05 22:22:59,660 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+2018-08-05 22:22:59,660 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-08-05 22:22:58'}
-2018-08-05 22:24:10,937 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+2018-08-05 22:24:10,937 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-08-05 22:24:09'}
-2018-08-05 22:28:19,191 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www2.phexus.net]新增 失败，请检查:
+2018-08-05 22:28:19,191 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www2.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-05 22:28:17'}
-2018-08-05 22:29:25,375 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www2.phexus.net]新增 失败，请检查:
+2018-08-05 22:29:25,375 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www2.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-05 22:29:23'}
-2018-08-05 22:31:30,377 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www2.phexus.net]新增 失败，请检查:
+2018-08-05 22:31:30,377 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www2.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-05 22:31:28'}
-2018-08-05 22:40:44,867 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+2018-08-05 22:40:44,867 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-05 22:40:43'}
-2018-08-05 22:44:16,513 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+2018-08-05 22:44:16,513 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-05 22:44:14'}
-2018-08-05 22:48:27,944 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+2018-08-05 22:48:27,944 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-05 22:48:26'}
-2018-08-05 22:49:24,292 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+2018-08-05 22:49:24,292 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-05 22:49:22'}
-2018-08-05 22:53:55,006 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+2018-08-05 22:53:55,006 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-05 22:53:53'}
-2018-08-05 22:54:49,568 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+2018-08-05 22:54:49,568 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-05 22:54:48'}
-2018-08-05 22:58:51,243 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+2018-08-05 22:58:51,243 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-05 22:58:49'}
-2018-08-05 23:02:22,319 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+2018-08-05 23:02:22,319 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-05 23:02:20'}
-2018-08-05 23:03:15,470 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+2018-08-05 23:03:15,470 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-05 23:03:13'}
-2018-08-05 23:03:41,788 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+2018-08-05 23:03:41,788 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-05 23:03:40'}
-2018-08-05 23:07:34,971 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+2018-08-05 23:07:34,971 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-05 23:07:33'}
-2018-08-05 23:58:38,174 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+2018-08-05 23:58:38,174 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-05 23:58:36'}
-2018-08-06 00:00:39,650 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+2018-08-06 00:00:39,650 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-06 00:00:38'}
-2018-08-06 00:02:52,871 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+2018-08-06 00:02:52,871 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www1.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-06 00:02:51'}
-2018-08-06 00:03:37,394 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www2.phexus.net]新增 失败，请检查:
+2018-08-06 00:03:37,394 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www2.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-06 00:03:35'}
-2018-08-06 00:05:03,813 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www3.phexus.net]新增 失败，请检查:
+2018-08-06 00:05:03,813 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www3.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-06 00:05:02'}
-2018-08-06 00:05:13,220 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www3.phexus.net]新增 失败，请检查:
+2018-08-06 00:05:13,220 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www3.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-06 00:05:11'}
-2018-08-06 00:05:18,665 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[www3.phexus.net]新增 失败，请检查:
+2018-08-06 00:05:18,665 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[www3.phexus.net]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Subdomain roll record is limited', u'code': u'500026', u'created_at': u'2018-08-06 00:05:17'}
 2018-08-06 00:10:33,237 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/delete_records
@@ -20698,8 +20765,10 @@ Traceback (most recent call last):
   File "J:\arno\test\phx_web\dns\cf.py", line 124, in CreateRecords
     proxied        = data['proxied'],
 KeyError: 'proxied'
-2018-08-08 17:02:52,819 cf_api.py [django:93] [ERROR]- @arno
-Attention: CF域名解析新增失败，请检查:
+2018-08-08 17:02:52,819 cf_api.py [django:93] [ERROR]- @arno
+
+Attention: CF域名解析新增失败，请检查:
+
 URL:  + https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records
 None
 2018-08-08 17:02:52,819 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
@@ -20713,8 +20782,10 @@ Traceback (most recent call last):
   File "J:\arno\test\phx_web\dns\cf_api.py", line 94, in CreateDnsRecords
     sendTelegram(message).send()
 NameError: global name 'sendTelegram' is not defined
-2018-08-08 17:03:20,862 cf_api.py [django:94] [ERROR]- @arno
-Attention: CF域名解析新增失败，请检查:
+2018-08-08 17:03:20,862 cf_api.py [django:94] [ERROR]- @arno
+
+Attention: CF域名解析新增失败，请检查:
+
 URL:  + https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records
 None
 2018-08-08 17:03:22,693 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
@@ -20726,8 +20797,10 @@ Traceback (most recent call last):
   File "J:\arno\test\phx_web\dns\cf.py", line 130, in CreateRecords
     "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %(data['type'], sub_domain+'.'+data['zone'], data['value'], '1'),
 KeyError: 'value'
-2018-08-08 17:04:42,000 cf_api.py [django:94] [ERROR]- @arno
-Attention: CF域名解析新增失败，请检查:
+2018-08-08 17:04:42,000 cf_api.py [django:94] [ERROR]- @arno
+
+Attention: CF域名解析新增失败，请检查:
+
 URL:  + https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records
 None
 2018-08-08 17:04:43,786 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
@@ -20764,8 +20837,10 @@ Traceback (most recent call last):
   File "J:\arno\test\phx_web\accounts\views.py", line 13, in <module>
     from monitor.models import alter_history
 ImportError: cannot import name alter_history
-2018-08-08 17:07:20,392 cf_api.py [django:94] [ERROR]- @arno
-Attention: CF域名解析新增失败，请检查:
+2018-08-08 17:07:20,392 cf_api.py [django:94] [ERROR]- @arno
+
+Attention: CF域名解析新增失败，请检查:
+
 URL:  + https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records
 None
 2018-08-08 17:07:22,161 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
@@ -20779,8 +20854,10 @@ Traceback (most recent call last):
   File "J:\arno\test\phx_web\accounts\views.py", line 137, in insert_ah
     time    = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
 NameError: global name 'datetime' is not defined
-2018-08-08 17:07:48,220 cf_api.py [django:94] [ERROR]- @arno
-Attention: CF域名解析新增失败，请检查:
+2018-08-08 17:07:48,220 cf_api.py [django:94] [ERROR]- @arno
+
+Attention: CF域名解析新增失败，请检查:
+
 URL:  + https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records
 None
 2018-08-08 17:07:50,417 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/cloudflare/create_records
@@ -20792,8 +20869,10 @@ Traceback (most recent call last):
   File "J:\arno\test\phx_web\dns\cf.py", line 132, in CreateRecords
     return HttpResponseServerError(result['result'])
 NameError: global name 'HttpResponseServerError' is not defined
-2018-08-08 17:08:14,048 cf_api.py [django:94] [ERROR]- @arno
-Attention: CF域名解析新增失败，请检查:
+2018-08-08 17:08:14,048 cf_api.py [django:94] [ERROR]- @arno
+
+Attention: CF域名解析新增失败，请检查:
+
 URL:  + https://api.cloudflare.com/client/v4/zones/490973e47c762e755b944931cb774dc4/dns_records
 None
 2018-08-08 17:17:17,121 cf_api.py [django:94] [ERROR]- @arno
@@ -22492,7 +22571,8 @@ OperationalError: (1130, "Host '193.112.126.99' is not allowed to connect to thi
 2018-08-28 19:58:03,417 reflesh.py [django:157] [ERROR]- 执行清缓存失败: Cannot resolve keyword 'name_icontains' into field. Choices are: cdn, cdn_proj_t, content, customer, group, group_id, id, name, product, status
 2018-08-28 19:59:02,257 reflesh.py [django:157] [ERROR]- 执行清缓存失败: 'domains' object is not iterable
 2018-08-28 19:59:33,943 reflesh.py [django:156] [ERROR]- 执行清缓存失败: local variable 'domain' referenced before assignment
-2018-08-28 20:00:34,921 ws_api.py [django:122] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+2018-08-28 20:00:34,921 ws_api.py [django:122] [ERROR]- Attention: 网宿域名缓存清理失败，请检查:网宿URL:  + http://open.chinanetcenter.com/ccm/purge/ItemIdReceiver
+
 speedfeng2 : yV2aDzQeFoaSCw83mGTNbs/ATO4/M141ApdUXcmvpTU=
 {"Message":"error channel [www.cdn3721.comali].","Code":0}
 2018-08-30 20:34:06,023 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/reflesh/purge
@@ -22756,7 +22836,7 @@ Traceback (most recent call last):
 TypeError: object of type 'NoneType' has no len()
 2018-09-02 20:00:16,755 base.py [django.request:256] [ERROR]- Internal Server Error: /dns/dnspod/update_records
 Traceback (most recent call last):
-  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+  File "J:\arno\test\lib\site-packages\django\core\handlers\base.py"Exception as, in get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
   File "J:\arno\test\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
     response = view_func(request, *args, **kwargs)
@@ -22773,8 +22853,10 @@ Traceback (most recent call last):
   File "J:\arno\test\lib\site-packages\dwebsocket\backends\default\protocols.py", line 210, in _write_frame
     l = len(data)
 TypeError: object of type 'NoneType' has no len()
-2018-09-03 16:18:33,029 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名[test1.lebocdn.com]解析修改 失败，请检查:
+2018-09-03 16:18:33,029 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名[test1.lebocdn.com]解析修改 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Modify
 {u'message': u'Record id invalid', u'code': u'8', u'created_at': u'2018-09-03 16:18:30'}
 2018-09-08 04:47:32,855 exception.py [django.security.DisallowedHost:80] [ERROR]- Invalid HTTP_HOST header: '127.0.0.1:5000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
@@ -22819,7 +22901,7 @@ Traceback (most recent call last):
     contents, origin, origin.template_name, self.engine,
   File "J:\arno\test\lib\site-packages\django\template\base.py", line 191, in __init__
     self.nodelist = self.compile_nodelist()
-  File "J:\arno\test\lib\site-packages\django\template\base.py", line 230, in compile_nodelist
+  File "J:\arno\test\lib\site-packages\django\template\base.py", linException ascompile_nodelist
     return parser.parse()
   File "J:\arno\test\lib\site-packages\django\template\base.py", line 515, in parse
     raise self.error(token, e)
@@ -22884,7 +22966,7 @@ Traceback (most recent call last):
   File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 213, in ensure_connection
     self.connect()
   File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 189, in connect
-    self.connection = self.get_new_connection(conn_params)
+    self.connection = self.get_new_connection(conn_params)Exception as
   File "J:\arno\test\lib\site-packages\django\db\backends\mysql\base.py", line 274, in get_new_connection
     conn = Database.connect(**conn_params)
   File "J:\arno\test\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
@@ -22899,7 +22981,7 @@ Traceback (most recent call last):
   File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
     response = self._get_response(request)
   File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
-    response = self.process_exception_by_middleware(e, request)
+    response = self.process_exception_by_middleware(e, request)Exception as
   File "J:\arno\test\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
     return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
   File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
@@ -22914,7 +22996,7 @@ Traceback (most recent call last):
     self._wrapped = self._setupfunc()
   File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 24, in <lambda>
     request.user = SimpleLazyObject(lambda: get_user(request))
-  File "J:\arno\test\lib\site-packages\django\contrib\auth\middleware.py", line 12, in get_user
+  File "J:\arno\test\lib\site-packages\django\contrib\auth\middlewarException ase 12, in get_user
     request._cached_user = auth.get_user(request)
   File "J:\arno\test\lib\site-packages\django\contrib\auth\__init__.py", line 206, in get_user
     user_id = _get_user_session_key(request)
@@ -22929,7 +23011,7 @@ Traceback (most recent call last):
   File "J:\arno\test\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
     return getattr(self.get_queryset(), name)(*args, **kwargs)
   File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 373, in get
-    num = len(clone)
+    num = len(clone)Exception as
   File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 232, in __len__
     self._fetch_all()
   File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 1102, in _fetch_all
@@ -22944,7 +23026,7 @@ Traceback (most recent call last):
     self.ensure_connection()
   File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 213, in ensure_connection
     self.connect()
-  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 94, in __exit__
+  File "J:\arno\test\lib\site-packages\django\db\utils.py", line 94,Exception as__
     six.reraise(dj_exc_type, dj_exc_value, traceback)
   File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 213, in ensure_connection
     self.connect()
@@ -22983,7 +23065,7 @@ Traceback (most recent call last):
   File "J:\arno\test\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
     return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
   File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+    response = wrapped_callback(request, *callback_args, **callback_Exception as
   File "J:\arno\test\phx_web\accounts\views.py", line 63, in logout
     redirect_to = request.REQUEST.get('url', '/')
 AttributeError: 'AsgiRequest' object has no attribute 'REQUEST'
@@ -23022,7 +23104,7 @@ Traceback (most recent call last):
   File "J:\arno\test\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
     response = get_response(request)
   File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
-    response = self._get_response(request)
+    response = self._get_response(request)Exception as
   File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
     response = self.process_exception_by_middleware(e, request)
   File "J:\arno\test\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
@@ -23061,7 +23143,7 @@ Traceback (most recent call last):
   File "J:\arno\test\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
     response = get_response(request)
   File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
-    response = self._get_response(request)
+    response = self._get_response(request)Exception as
   File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
     response = self.process_exception_by_middleware(e, request)
   File "J:\arno\test\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
@@ -23100,7 +23182,7 @@ Traceback (most recent call last):
   File "J:\arno\test\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
     response = get_response(request)
   File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
-    response = self._get_response(request)
+    response = self._get_response(request)Exception as
   File "J:\arno\test\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
     response = self.process_exception_by_middleware(e, request)
   File "J:\arno\test\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
@@ -23117,7 +23199,7 @@ Traceback (most recent call last):
     content = loader.render_to_string(template_name, context, request, using=using)
   File "J:\arno\test\lib\site-packages\django\template\loader.py", line 67, in render_to_string
     template = get_template(template_name, using=using)
-  File "J:\arno\test\lib\site-packages\django\template\loader.py", line 21, in get_template
+  File "J:\arno\test\lib\site-packages\django\template\loader.py", lException as get_template
     return engine.get_template(template_name)
   File "J:\arno\test\lib\site-packages\django\template\backends\django.py", line 39, in get_template
     return Template(self.engine.get_template(template_name), self)
@@ -23211,60 +23293,88 @@ AttributeError: 'AsgiRequest' object has no attribute 'websocket'
 2018-09-08 12:20:21,221 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_反代服务器[front]
 2018-09-08 12:20:21,243 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_反代服务器[front]
 2018-09-08 12:20:47,411 views.py [django:104] [ERROR]- 运营环境[ONLINE]_凤凰[fenghuang]_体育[sport]_反代服务器[front]: Incorrect padding
-2018-09-09 09:26:15,042 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test.hyqpzf.com]新增 失败，请检查:
+2018-09-09 09:26:15,042 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[test.hyqpzf.com]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-09-09 09:26:14'}
-2018-09-09 09:27:28,114 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test.hyqpzf.com]新增 失败，请检查:
+2018-09-09 09:27:28,114 dnspod_api.py [django:53] [ERROR]- @arno
+Exception as
+Attention: Dnspod域名记录[test.hyqpzf.com]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-09-09 09:27:27'}
-2018-09-09 09:28:47,040 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+2018-09-09 09:28:47,040 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-09-09 09:28:46'}
-2018-09-09 09:32:37,022 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+2018-09-09 09:32:37,022 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-09-09 09:32:36'}
-2018-09-09 09:33:56,989 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
-URL:  + https://dnsapi.cn/Record.Create
+2018-09-09 09:33:56,989 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+
+URL:  + https://dnsapi.cn/Record.CreateException as
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-09-09 09:33:56'}
-2018-09-09 09:51:46,964 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+2018-09-09 09:51:46,964 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-09-09 09:51:46'}
-2018-09-09 09:52:38,694 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+2018-09-09 09:52:38,694 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-09-09 09:52:38'}
-2018-09-09 09:53:35,950 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+2018-09-09 09:53:35,950 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-09-09 09:53:35'}
-2018-09-09 09:53:55,757 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+2018-09-09 09:53:55,757 dnspod_api.py [django:53] [ERROR]- @arno
+Exception as
+Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-09-09 09:53:55'}
-2018-09-09 09:55:57,311 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+2018-09-09 09:55:57,311 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-09-09 09:55:57'}
-2018-09-09 09:56:45,499 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+2018-09-09 09:56:45,499 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-09-09 09:56:45'}
-2018-09-09 09:57:06,319 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+2018-09-09 09:57:06,319 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[test1.hyqpzf.com]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-09-09 09:57:06'}
-2018-09-09 10:02:07,484 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test2.hyqpzf.com]新增 失败，请检查:
+2018-09-09 10:02:07,484 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[test2.hyqpzf.com]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-09-09 10:02:07'}
-2018-09-09 11:05:24,862 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test2.hyqpzf.com]新增 失败，请检查:
+2018-09-09 11:05:24,862 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[test2.hyqpzf.com]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-09-09 11:05:24'}
 2018-09-09 12:06:15,479 cf_api.py [django:93] [ERROR]- @arno
@@ -23311,7 +23421,7 @@ Traceback (most recent call last):
     return getattr(self.get_queryset(), name)(*args, **kwargs)
   File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 379, in get
     self.model._meta.object_name
-DoesNotExist: dnspod_account matching query does not exist.
+DoesNotExist: dnspod_account matching query does not exist.Exception as
 2018-09-09 13:25:52,582 exception.py [django.request:135] [ERROR]- Internal Server Error: /dns/dnspod/get_zone_records
 Traceback (most recent call last):
   File "J:\arno\test\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
@@ -23354,12 +23464,16 @@ Traceback (most recent call last):
   File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 379, in get
     self.model._meta.object_name
 DoesNotExist: dnspod_account matching query does not exist.
-2018-09-09 13:30:21,686 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test3.hyqpzf.com]新增 失败，请检查:
+2018-09-09 13:30:21,686 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[test3.hyqpzf.com]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-09-09 13:30:21'}
-2018-09-09 13:30:46,861 dnspod_api.py [django:53] [ERROR]- @arno
-Attention: Dnspod域名记录[test3.hyqpzf.com]新增 失败，请检查:
+2018-09-09 13:30:46,861 dnspod_api.py [django:53] [ERROR]- @arno
+
+Attention: Dnspod域名记录[test3.hyqpzf.com]新增 失败，请检查:
+
 URL:  + https://dnsapi.cn/Record.Create
 {u'message': u'Domain record already exists', u'code': u'104', u'created_at': u'2018-09-09 13:30:46'}
 2018-09-09 13:45:03,638 cf_api.py [django:93] [ERROR]- @arno
@@ -23374,7 +23488,7 @@ URL:  + https://api.cloudflare.com/client/v4/zones/9058249e67e662f75172ceb02541a
 2018-09-09 16:12:34,145 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
 2018-09-09 16:12:34,167 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
 2018-09-09 16:38:42,982 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_其他[other]_其他服务器[other]
-2018-09-09 16:38:43,003 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_其他[other]_其他服务器[other]
+2018-09-09 16:38:43,003 views.py [django:90] [ERROR]- failed to get Exception asr 运营环境[ONLINE]_公共产品[pub]_其他[other]_其他服务器[other]
 2018-09-09 16:38:43,026 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_其他[other]_其他服务器[other]
 2018-09-09 16:38:43,049 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
 2018-09-09 16:38:43,073 views.py [django:90] [ERROR]- failed to get cookies for 运营环境[ONLINE]_公共产品[pub]_vpn_反代服务器[front]
@@ -23458,7 +23572,7 @@ Traceback (most recent call last):
     self._result_cache = list(self._iterable_class(self))
   File "J:\arno\test\lib\site-packages\django\db\models\query.py", line 53, in __iter__
     results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
-  File "J:\arno\test\lib\site-packages\django\db\models\sql\compiler.py", line 874, in execute_sql
+  File "J:\arno\test\lib\site-packages\django\db\models\sql\compilerException as 874, in execute_sql
     cursor = self.connection.cursor()
   File "J:\arno\test\lib\site-packages\django\db\backends\base\base.py", line 254, in cursor
     return self._cursor()
@@ -23477,7 +23591,7 @@ Traceback (most recent call last):
   File "J:\arno\test\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
     return Connection(*args, **kwargs)
   File "J:\arno\test\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
-    super(Connection, self).__init__(*args, **kwargs2)
+    super(Connection, self).__init__(*args, **kwargs2)Exception as
 OperationalError: (2013, "Lost connection to MySQL server at 'waiting for initial communication packet', system error: 0")
 2018-09-10 15:53:46,707 exception.py [django.request:135] [ERROR]- Internal Server Error: /monitor/domains/Query
 Traceback (most recent call last):
@@ -23625,3 +23739,120 @@ AttributeError: 'AnonymousUser' object has no attribute 'userprofile'
 2018-09-18 16:19:11,029 views.py [django:108] [ERROR]- 运营环境[ONLINE]_瑞银[ruiyin|UBS]_支付[pay]_反代服务器[front]: Incorrect padding
 2018-09-18 16:19:11,155 views.py [django:108] [ERROR]- 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]: Incorrect padding
 2018-09-18 16:19:37,950 views.py [django:108] [ERROR]- 运营环境[ONLINE]_瑞银[ruiyin|UBS]_体育[sport]_反代服务器[front]: Incorrect padding
+2018-10-07 08:03:21,150 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "j:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "j:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'
+2018-10-07 08:03:23,400 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "j:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "j:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'
+2018-10-07 08:04:53,650 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "j:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "j:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'
+2018-10-07 08:05:07,230 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "j:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "j:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'
+2018-10-07 08:11:36,575 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "j:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "j:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'
+2018-10-07 08:14:15,499 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "j:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "j:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "j:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'
+2018-10-07 08:44:46,826 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'
+2018-10-07 08:44:48,800 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'
+2018-10-07 09:08:32,741 exception.py [django.request:118] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "J:\arno\test37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "J:\arno\test37\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "J:\arno\test37\lib\site-packages\django\contrib\auth\decorators.py", line 20, in _wrapped_view
+    if test_func(request.user):
+AttributeError: 'AsgiRequest' object has no attribute 'user'

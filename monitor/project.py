@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseForbidden
 from dwebsocket import require_websocket
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
-from models import project_t, minion_t
+from monitor.models import project_t, minion_t
 from saltstack.command import Command
 from accounts.views import HasPermission
 import json, logging, requests, re, datetime

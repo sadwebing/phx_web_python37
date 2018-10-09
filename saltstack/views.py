@@ -7,12 +7,12 @@ from phxweb                         import settings
 from saltstack.saltapi              import SaltAPI
 from dwebsocket                     import require_websocket, accept_websocket
 from monitor.models                 import project_t, minion_t, minion_ip_t
-from command                        import Command
+from saltstack.command              import Command
 from django.contrib.auth.models     import User
-from accounts.limit  import LimitAccess
-from accounts.views  import getIp, getProjects
-from accounts.models import user_project_authority_t
-from reflesh         import *
+from accounts.limit    import LimitAccess
+from accounts.views    import getIp, getProjects
+from accounts.models   import user_project_authority_t
+from saltstack.reflesh import *
 import json, logging, time
 logger = logging.getLogger('django')
 
@@ -105,7 +105,7 @@ def CheckMinion(request):
         request.websocket.close()
     else:
         if request.method == 'POST':
-            #print request.body
+            #print (request.body)
             #return HttpResponse("%s" %request.body)
             data = json.loads(request.body)
             result = {}

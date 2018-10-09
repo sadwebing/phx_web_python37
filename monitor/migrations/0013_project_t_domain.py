@@ -15,6 +15,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='project_t',
             name='domain',
-            field=models.ForeignKey(default=1L, to='detect.domains'),
+            field=models.ForeignKey(default=1, to='detect.domains', on_delete=models.CASCADE),
         ),
     ]

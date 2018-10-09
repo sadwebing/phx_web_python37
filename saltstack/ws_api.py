@@ -5,7 +5,7 @@
 #    调用网宿API，刷新网宿域名静态文件缓存
 #version: 1.0 20180626 实现基本功能
 
-import requests, sys, commands, os, logging
+import requests, sys, os, logging
 import datetime, hmac, base64, json
 from hashlib import sha256
 from phxweb  import settings
@@ -58,7 +58,7 @@ class wsApi(object):
         try:
             ret = requests.get(url, headers=headers, auth=(self.__username, signed_apikey))
     
-        except Exception, e:
+        except Exception as e:
             message['text'] = self.__warning + '\nException: ' + e.message
             logger.error(message['text'])
             sendTelegram(message).send()
@@ -105,7 +105,7 @@ class wsApi(object):
             ret = requests.post(url, headers=headers, auth=(self.__username, signed_apikey), data=json.dumps(data))
             logger.info(str(ret.status_code)+': '+ret.content)
     
-        except Exception, e:
+        except Exception as e:
             message['text'] = self.__warning + '\nException: ' + e.message
             logger.error(message['text'])
             sendTelegram(message).send()
@@ -127,4 +127,4 @@ class wsApi(object):
                 #return data[type_f], str(ret.status_code) + ' : ' + ret.content
 
 if __name__ == '__main__':
-    print "网宿"
+    print ("网宿")

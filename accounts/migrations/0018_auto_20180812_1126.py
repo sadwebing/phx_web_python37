@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='user_project_authority_t',
             name='user',
-            field=models.OneToOneField(to=settings.AUTH_USER_MODEL),
+            field=models.OneToOneField(to=settings.AUTH_USER_MODEL, on_delete=models.CASCADE),
         ),
         migrations.AlterUniqueTogether(
             name='user_project_authority_t',

@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='project_t',
             name='domain',
-            field=models.ForeignKey(to='detect.domains'),
+            field=models.ForeignKey(on_delete=models.CASCADE, to='detect.domains'),
         ),
         migrations.AlterField(
             model_name='project_t',

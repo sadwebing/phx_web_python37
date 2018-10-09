@@ -85,7 +85,7 @@ class CfApi(object):
             ret = requests.post(url, data=json.dumps(datas), headers=self.__headers, verify=False)
             result = ret.json()
 
-        except Exception, e:
+        except Exception as e:
             result = {'result': None, 'errors': str(e), 'success': False}
 
         if not result['success']:
@@ -135,7 +135,7 @@ class CfApi(object):
             ret = requests.delete(url, headers=self.__headers, verify=False)
             result = ret.json()
 
-        except Exception, e:
+        except Exception as e:
             result = {'result': None, 'errors': str(e), 'success': False}
 
         if not result['success']:
@@ -164,7 +164,7 @@ class CfApi(object):
             ret = requests.post(url, data=json.dumps(data), headers=self.__headers, verify=False)
             result = ret.json()
 
-        except Exception, e:
+        except Exception as e:
             result = {'result': None, 'errors': str(e), 'success': False}
 
         if not result['success']:
@@ -176,4 +176,4 @@ class CfApi(object):
 
 
 if __name__ == '__main__':
-    print 'no'
+    print ('no')

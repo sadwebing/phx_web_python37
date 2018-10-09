@@ -81,7 +81,7 @@ class ServersUpdate(DefConsumer):
                 update = minion_t.objects.get(minion_id=record['minion_id'])
                 update.password = crypto
                 update.save()
-            except Exception, e:
+            except Exception as e:
                 sendTelegram(message).send()
                 return_info['result'] = False
                 return_info['info']   = "密码修改成功，但是密码存入失败：" + str(e)

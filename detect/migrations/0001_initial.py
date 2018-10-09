@@ -33,6 +33,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='domains',
             name='group',
-            field=models.ForeignKey(related_name='name', to='detect.groups'),
+            field=models.ForeignKey(on_delete=models.CASCADE, related_name='name', to='detect.groups'),
         ),
     ]

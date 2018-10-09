@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.http                    import HttpResponse, HttpResponseForbidden, HttpResponseServerError
 from dwebsocket                     import require_websocket, accept_websocket
 from django.views.decorators.csrf   import csrf_exempt, csrf_protect
-from models                         import dnspod_account, domain_info, alter_history
-from dnspod_api                     import DpApi
+from dns.models                     import dnspod_account, domain_info, alter_history
+from dns.dnspod_api                 import DpApi
 from accounts.views                 import HasDnsPermission, HasPermission, getIp, insert_ah
 from phxweb.settings                import DnsPod_URL
 from pypinyin                       import lazy_pinyin
@@ -41,7 +41,7 @@ def GetDnspodProductRecords(request):
         for product in products:
             try:
                 dpapi  = DpApi(DnsPod_URL, product.key)
-            except Exception, e:
+            except Exception as e:
                 logger.error("查询 %s 账号失败！" %product.name)
                 return HttpResponseServerError("查询 %s 账号失败！" %product.name)
             else:
@@ -83,7 +83,7 @@ def GetDnspodZoneRecords(request):
 
             try:
                 dpapi = DpApi(DnsPod_URL, dp_acc.key)
-            except Exception, e:
+            except Exception as e:
                 logger.error("查询 %s 域名失败！%s" %(zone['name'], str(e)))
                 return HttpResponseServerError("查询 %s 域名失败！" %zone['name'])
             else:
@@ -142,7 +142,7 @@ def CreateDnspodRecords(request):
 
             try:
                 dpapi = DpApi(DnsPod_URL, dp_acc.key)
-            except Exception, e:
+            except Exception as e:
                 info = "新增 %s 域名失败！" %record_name
                 logger.error(info)
                 insert_ah(clientip, username, 
@@ -210,7 +210,7 @@ def CreateDnspodRecords(request):
                 dp_acc = dnspod_account.objects.get(name=data['product'])
                 try:
                     dpapi = DpApi(DnsPod_URL, dp_acc.key)
-                except Exception, e:
+                except Exception as e:
                     logger.error("新增 %s 域名失败！" %return_info['domain'])
                     return_info['result'] = False
                 else:
@@ -268,7 +268,7 @@ def UpdateDnspodRecords(request):
 
             try:
                 dpapi = DpApi(DnsPod_URL, dp_acc.key)
-            except Exception, e:
+            except Exception as e:
                 logger.error("修改 %s 域名失败！" %record['name'])
                 insert_ah(clientip, username, 
                         "'type':%s, 'name': %s, 'content': %s, 'enabled':%s" %('null', 'null', 'null', 'null'), 
@@ -339,7 +339,7 @@ def UpdateDnspodRecords(request):
                 dp_acc = dnspod_account.objects.get(name=record['product'])
                 try:
                     dpapi = DpApi(DnsPod_URL, dp_acc.key)
-                except Exception, e:
+                except Exception as e:
                     logger.error("修改 %s 域名失败！" %record['name'])
                     return_info['result'] = False
                 else:
@@ -405,7 +405,7 @@ def DeleteDnspodRecords(request):
 
             try:
                 dpapi = DpApi(DnsPod_URL, dp_acc.key)
-            except Exception, e:
+            except Exception as e:
                 logger.error("删除 %s 域名失败！%s" %(zone['name'], str(e)))
                 return HttpResponseServerError("删除 %s 域名失败！" %zone['name'])
             else:

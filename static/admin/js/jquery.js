@@ -5871,7 +5871,7 @@ jQuery.fn.extend({
 
 					elem = 0;
 
-				// If using innerHTML throws an exception, use the fallback method
+				// If using innerHTML throws an Exception as use the fallback method
 				} catch(e) {}
 			}
 

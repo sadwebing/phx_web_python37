@@ -14,11 +14,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='dns_authority_t',
             name='cf_account',
-            field=models.ForeignKey(blank=True, to='dns.cf_account', null=True),
+            field=models.ForeignKey(on_delete=models.CASCADE, blank=True, to='dns.cf_account', null=True),
         ),
         migrations.AlterField(
             model_name='dns_authority_t',
             name='dnspod_account',
-            field=models.ForeignKey(blank=True, to='dns.dnspod_account', null=True),
+            field=models.ForeignKey(on_delete=models.CASCADE, blank=True, to='dns.dnspod_account', null=True),
         ),
     ]

@@ -101,7 +101,7 @@ class sslExpiry(object):
                 else:
                     logger.error('%s 443 ssl error' %(self.__domain))
                     return SSLError
-            except Exception, e:
+            except Exception as e:
                 logger.error('%s 443 connection error: \n %s' %(self.__domain, e))
                 return e
             else:

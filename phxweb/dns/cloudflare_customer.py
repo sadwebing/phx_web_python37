@@ -114,7 +114,7 @@ class DnsCloudflareRecordAdd(DefConsumer):
             cf_acc = cf_account.objects.get(name=data['product'])
             try:
                 cfapi = CfApi(CF_URL, cf_acc.email, cf_acc.key)
-            except Exception, e:
+            except Exception as e:
                 logger.error("新增 %s 域名失败！" %return_info['domain'])
                 return_info['result'] = False
             else:
